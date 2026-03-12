@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://nictiz.nl/fhir/StructureDefinition/GB-Practitioner" />
+  <name value="GBPractitioner" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.identifier:big">
+      <path value="Practitioner.identifier" />
+      <sliceName value="big" />
+    </element>
+    <element id="Practitioner.identifier:big.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/big" />
+    </element>
+    <element id="Practitioner.identifier:agb">
+      <path value="Practitioner.identifier" />
+      <sliceName value="agb" />
+    </element>
+    <element id="Practitioner.identifier:agb.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+    </element>
+    <element id="Practitioner.identifier:dezi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="dezi" />
+    </element>
+    <element id="Practitioner.identifier:dezi.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/dezi" />
+    </element>
+    <element id="Practitioner.identifier:uzi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="uzi" />
+    </element>
+    <element id="Practitioner.identifier:uzi.system">
+      <path value="Practitioner.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
+    </element>
+    <element id="Practitioner.gender">
+      <path value="Practitioner.gender" />
+      <definition value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
+    </element>
+  </differential>
+</StructureDefinition>
