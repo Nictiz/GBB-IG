@@ -1,0 +1,47 @@
+main branch: origin/main
+ignored issues: known-issues.yml
+igs:
+  - GB
+  - util/qa
+script dir: util/qa
+
+patterns:
+  GB profiles: GB/StructureDefinitions/GB-*.xml
+  conceptmaps:
+  - GB/vocabulary/**/ConceptMap-*.xml
+  codesystems:
+  - GB/vocabulary/**/CodeSystem-*.xml
+  valuesets:
+  - GB/vocabulary/**/ValueSet-*.xml
+  other terminology:
+  - GB/vocabulary/**/*.xml
+  SearchParameters: GB/SearchParameters/*.xml
+  examples: examples/*.xml
+
+steps:
+  validate GB profiles:
+    description: Validate the GB profiles using the profile for zib profiles
+    patterns: GB profiles
+    profile:
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+  validate ConceptMaps:
+    description: Validate the ConceptMaps using the profile for ConceptMaps
+    patterns: conceptmaps
+    profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-ConceptMaps"
+  validate CodeSystems:
+    description: Validate CodeSystem resources
+    patterns: codesystems
+  validate ValueSets:
+    description: Validate ValueSet resources
+    patterns: valuesets
+  validate other terminology:
+    description: Validate the other terminology resources
+    patterns: other terminology
+  validate SearchParameters:
+    description: Validate SearchParameters
+    patterns: SearchParameters
+    profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-SearchParameters"
+  validate examples:
+    description: Validate examples using the generic FHIR validation rules
+    patterns: examples
+
