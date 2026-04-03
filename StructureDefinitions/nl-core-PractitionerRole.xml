@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://nictiz.nl/fhir/StructureDefinition/GB-PractitionerRole" />
-  <name value="GBPractitionerRole" />
+  <url value="https://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+  <name value="NlcorePractitionerRole" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://nictiz.nl/fhir/StructureDefinition/GB-Patient" />
-  <name value="GBPatient" />
+  <url value="https://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+  <name value="NlcorePatient" />
   <status value="draft" />
   <contact>
     <name value="Nictiz" />

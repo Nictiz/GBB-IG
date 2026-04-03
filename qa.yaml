@@ -1,29 +1,30 @@
 main branch: origin/main
 ignored issues: known-issues.yml
 igs:
-  - GB
+  - StructureDefinitions
+  # - vocabulary
   - util/qa
 script dir: util/qa
 
 patterns:
-  GB profiles: GB/StructureDefinitions/GB-*.xml
+  nl-core profiles: StructureDefinitions/nl-core-*.xml
   conceptmaps:
-  - GB/vocabulary/**/ConceptMap-*.xml
+  - vocabulary/**/ConceptMap-*.xml
   codesystems:
-  - GB/vocabulary/**/CodeSystem-*.xml
+  - vocabulary/**/CodeSystem-*.xml
   valuesets:
-  - GB/vocabulary/**/ValueSet-*.xml
+  - vocabulary/**/ValueSet-*.xml
   other terminology:
-  - GB/vocabulary/**/*.xml
-  SearchParameters: GB/SearchParameters/*.xml
+  - vocabulary/**/*.xml
+  SearchParameters: SearchParameters/*.xml
   examples: examples/*.xml
 
 steps:
-  validate GB profiles:
-    description: Validate the GB profiles using the profile for zib profiles
-    patterns: GB profiles
+  validate nl-core profiles:
+    description: Validate the nl-core profiles using the profile for nl-core profiles
+    patterns: nl-core profiles
     profile:
-    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-Zib-Profiles
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-NlCore-Profiles
   validate ConceptMaps:
     description: Validate the ConceptMaps using the profile for ConceptMaps
     patterns: conceptmaps
