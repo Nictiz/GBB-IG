@@ -3,7 +3,7 @@
   <id value="nl-core-PractitionerRole"/>
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="https://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
   <name value="NlcorePractitionerRole" />
   <title value="nl core PractitionerRole" />
   <status value="draft" />
@@ -16,6 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
+  <purpose value="This profile is the FHIR implementation of the general building block [PractitionerRole]()."/>
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
