@@ -24,7 +24,7 @@ steps:
     description: Validate the nl-core profiles using the profile for nl-core profiles
     patterns: nl-core profiles
     profile:
-    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-NlCore-Profiles
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-NlCore-GBB-Profiles
   validate ConceptMaps:
     description: Validate the ConceptMaps using the profile for ConceptMaps
     patterns: conceptmaps
@@ -45,4 +45,3 @@ steps:
   validate examples:
     description: Validate examples using the generic FHIR validation rules
     patterns: examples
-
