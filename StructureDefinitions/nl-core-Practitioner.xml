@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Practitioner"/>
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+  <name value="NlcorePractitioner" />
+  <title value="nl core Practitioner" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <purpose value="This profile is the FHIR implementation of the general building block [Practitioner]()."/>
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.identifier:big">
+      <path value="Practitioner.identifier" />
+      <sliceName value="big" />
+    </element>
+    <element id="Practitioner.identifier:big.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/big" />
+    </element>
+    <element id="Practitioner.identifier:agb">
+      <path value="Practitioner.identifier" />
+      <sliceName value="agb" />
+    </element>
+    <element id="Practitioner.identifier:agb.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+    </element>
+    <element id="Practitioner.identifier:dezi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="dezi" />
+    </element>
+    <element id="Practitioner.identifier:dezi.system">
+      <path value="Practitioner.identifier.system" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/dezi" />
+    </element>
+    <element id="Practitioner.identifier:uzi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="uzi" />
+    </element>
+    <element id="Practitioner.identifier:uzi.system">
+      <path value="Practitioner.identifier.system" />
+      <min value="1" />
+      <patternUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
+    </element>
+    <element id="Practitioner.gender">
+      <path value="Practitioner.gender" />
+      <definition value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes." />
+    </element>
+  </differential>
+</StructureDefinition>
