@@ -43,33 +43,8 @@
         <comment value="AddressInformation" />
       </mapping>
     </element>
-    <element id="Address.extension:addressType">
-      <path value="Address.extension" />
-      <sliceName value="addressType" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType" />
-      </type>
-    </element>
-    <element id="Address.extension:addressType.url">
-      <path value="Address.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType" />
-    </element>
     <element id="Address.use">
       <path value="Address.use" />
-      <short value="AddressType" />
-      <definition value="The type of address in question, such as a home address or mailing address." />
-      <alias value="AdresSoort" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap AdresSoortCodelijst-to-AddressUse to translate terminology from the functional model to profile terminology in ValueSet AddressUse." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/address-use|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressUse" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
@@ -78,18 +53,6 @@
     </element>
     <element id="Address.type">
       <path value="Address.type" />
-      <short value="AddressType" />
-      <definition value="The type of address in question, such as a home address or mailing address." />
-      <alias value="AdresSoort" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap AdresSoortCodelijst-to-AddressType to translate terminology from the functional model to profile terminology in ValueSet AddressType." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/address-type|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AdresSoortCodelijst-to-AddressType" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
