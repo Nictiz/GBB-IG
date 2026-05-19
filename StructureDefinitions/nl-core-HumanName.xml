@@ -69,6 +69,7 @@
     <element id="HumanName.text">
       <path value="HumanName.text" />
       <comment value="A representation of the full name, including given names and the family name.\n\nWhen implementing zib NameInformation, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept." />
+      <min value="1" />
       <condition value="nl-core-NameInformation-01" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
