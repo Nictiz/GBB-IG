@@ -176,6 +176,16 @@
         <comment value="AdditionalInformation" />
       </mapping>
     </element>
+    <element id="Address.line.extension:postBox">
+      <path value="Address.line.extension" />
+      <sliceName value="postBox" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Address.city">
       <path value="Address.city" />
       <short value="PlaceOfResidence" />
