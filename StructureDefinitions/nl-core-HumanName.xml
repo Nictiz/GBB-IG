@@ -39,12 +39,6 @@
       <alias value="nl-core-NameInformation" />
       <alias value="Naamgegevens" />
       <constraint>
-        <key value="nl-core-NameInformation-01" />
-        <severity value="warning" />
-        <human value="If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name. This ensures compatibility with common FHIR usage." />
-        <expression value="(family.exists() or given.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').where(value != 'IN').exists()) implies text.hasValue()" />
-      </constraint>
-      <constraint>
         <key value="zib-NameInformation-1" />
         <severity value="error" />
         <human value="If a prefix for a family name is specified, the family name is expected as well" />
@@ -237,19 +231,6 @@
         <map value="NL-CM:20.4.5" />
         <comment value="Initials" />
       </mapping>
-    </element>
-    <element id="HumanName.given.extension">
-      <path value="HumanName.given.extension" />
-      <min value="1" />
-    </element>
-    <element id="HumanName.given.extension:givenOrInitial">
-      <path value="HumanName.given.extension" />
-      <sliceName value="givenOrInitial" />
-      <min value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
-      </type>
     </element>
     <element id="HumanName.prefix">
       <path value="HumanName.prefix" />
