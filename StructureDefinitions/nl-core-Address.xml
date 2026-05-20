@@ -19,7 +19,7 @@
     </telecom>
   </contact>
   <description value="Address information includes data where a person resides (temporarily, permanently) or where a building is located." />
-  <purpose value="This profile is the FHIR implementation of the general building block Address" />
+  <purpose value="This profile is the FHIR implementation of the general building block [Address](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Address)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
