@@ -1,10 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-NameInformation" />
   <text>
-    <status value="empty" />
-  </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation" />
-  <name value="ZibNameInformation" />
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
+  <name value="NlCoreHumanName" />
   <title value="zib NameInformation" />
   <status value="draft" />
   <publisher value="Nictiz" />
@@ -17,7 +16,7 @@
     </telecom>
   </contact>
   <description value="A person's official name information, including given names, last name and possibly the partner's last name." />
-  <purpose value="This HumanName datatype represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) NameInformation v1.1 (2020)](https://zibs.nl/wiki/NameInformation-v1.1(2020EN)), except for the GivenName concept.\n\nFor the entire zib, the complementary profile [zib-NameInformation.GivenName](http://nictiz.nl/fhir/StructureDefinition/zib-NameInformation.GivenName) should be used. Both profiles can be added in a slice with the discriminator set to `value`/`use`." />
+  <purpose value="This profile is the FHIR implementation of the general building block [HumanName](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/HumanName)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -33,9 +32,6 @@
   <differential>
     <element id="HumanName">
       <path value="HumanName" />
-      <short value="NameInformation" />
-      <definition value="This slice represents the person's official name information, including given names, last name and possibly the partner's last name." />
-      <comment value="This `.name` element accomodates the official parts of a Dutch name according to common international usage and optionally to the [zib NameInformation v1.1 (2020)](https://zibs.nl/wiki/NameInformation-v1.1(2020EN)). An official Dutch name is represented in FHIR as an ordinary international name, optionally augmented using extensions to specify how the last name is built up according to the Dutch rules if conformance to the zib is required. See the guidance on `.family` and on `.extension:nameUsage` for more information.\n\nSystems that need to work in a Dutch context SHOULD support the extensions as specified in `.given`, `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:\n* If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.\n* If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name.\n\n**Note 1**: The zib cannot be represented straightforward in FHIR. Especially note the guidance on `.given` on how to map the FirstNames and Initials concepts, and on `.prefix`/`.suffix` on how to map the Titles concept.\n\n**Note 2**: This element should only contain a person's _official_ names. The GivenName concept is represented in another `.name` element with `.name.use` = _usual_.\n\n**Note 3**: The examples illustrate how the zib is mapped to FHIR." />
       <alias value="nl-core-NameInformation" />
       <alias value="Naamgegevens" />
       <constraint>
