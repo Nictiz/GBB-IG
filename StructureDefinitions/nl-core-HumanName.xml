@@ -52,7 +52,16 @@
         <comment value="NameInformation" />
       </mapping>
     </element>
-    <element id="HumanName.extension.value[x]">
+    <element id="HumanName.extension:nameUsage">
+      <path value="HumanName.extension" />
+      <sliceName value="nameUsage" />
+      <max value="1"/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
+      </type>
+    </element>
+    <element id="HumanName.extension:nameUsage.value[x]">
       <path value="HumanName.extension.value[x]" />
       <short value="NameUsage" />
       <definition value="This concept indicates the last name or order of last names with which the person is to be addressed." />
