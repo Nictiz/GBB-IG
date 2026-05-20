@@ -280,13 +280,5 @@
         <comment value="Titles" />
       </mapping>
     </element>
-    <element id="HumanName.extension">
-      <path value="HumanName.extension" />
-      <sliceName value="nameUsage" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
-      </type>
-    </element>
   </differential>
 </StructureDefinition>
