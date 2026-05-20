@@ -1,10 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="zib-NameInformation" />
+  <id value="nl-core-HumanName" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
   <name value="NlCoreHumanName" />
-  <title value="zib NameInformation" />
+  <title value="nl.core HumanName" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
