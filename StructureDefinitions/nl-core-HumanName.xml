@@ -130,15 +130,7 @@
     <element id="HumanName.use">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-      </extension>
-      <extension url="actor">
-        <valueCanonical value="Registering system" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="Serving or sending system" />
@@ -146,14 +138,13 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="processing system" />
         </extension>
       </extension>
       <path value="HumanName.use" />
-      <min value="1" />
     </element>
     <element id="HumanName.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
