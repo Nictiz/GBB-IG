@@ -129,9 +129,9 @@
     </element>
     <element id="HumanName.use">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-      <extension url="code">
-        <valueCode value="SHALL:able-to-populate" />
-      </extension>
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
       </extension>
       <extension url="actor">
         <valueCanonical value="Registering system" />
