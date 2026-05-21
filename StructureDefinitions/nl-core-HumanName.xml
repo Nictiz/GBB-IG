@@ -1,7 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-HumanName" />
   <text>
-    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
+      human-readable rendering can be found in the implementation guide(s) where this resource is
+      used.</div>
+  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
   <name value="NlCoreHumanName" />
   <title value="nl.core HumanName" />
@@ -15,9 +19,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A person's official name information, including given names, last name and possibly the partner's last name." />
-  <purpose value="This profile is the FHIR implementation of the general building block [HumanName](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/HumanName)." />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <description
+    value="A person's official name information, including given names, last name and possibly the partner's last name." />
+  <purpose
+    value="This profile is the FHIR implementation of the general building block [HumanName](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/HumanName)." />
+  <copyright
+    value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -37,14 +44,18 @@
       <constraint>
         <key value="zib-NameInformation-1" />
         <severity value="error" />
-        <human value="If a prefix for a family name is specified, the family name is expected as well" />
-        <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
+        <human
+          value="If a prefix for a family name is specified, the family name is expected as well" />
+        <expression
+          value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
       </constraint>
       <constraint>
         <key value="zib-NameInformation-2" />
         <severity value="error" />
-        <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
-        <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
+        <human
+          value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
+        <expression
+          value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
       </constraint>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -53,25 +64,60 @@
       </mapping>
     </element>
     <element id="HumanName.extension:nameUsage">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.extension" />
       <sliceName value="nameUsage" />
-      <max value="1"/>
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
       </type>
     </element>
     <element id="HumanName.extension:nameUsage.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.extension.value[x]" />
       <short value="NameUsage" />
-      <definition value="This concept indicates the last name or order of last names with which the person is to be addressed." />
+      <definition
+        value="This concept indicates the last name or order of last names with which the person is to be addressed." />
       <alias value="Naamgebruik" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap NaamgebruikCodelijst-to-HumanNameAssemblyOrder to translate terminology from the functional model to profile terminology in ValueSet HumanNameAssemblyOrder." />
+        <description
+          value="Use ConceptMap NaamgebruikCodelijst-to-HumanNameAssemblyOrder to translate terminology from the functional model to profile terminology in ValueSet HumanNameAssemblyOrder." />
         <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NaamgebruikCodelijst-to-HumanNameAssemblyOrder" />
+            <valueCanonical
+              value="http://nictiz.nl/fhir/ConceptMap/NaamgebruikCodelijst-to-HumanNameAssemblyOrder" />
           </extension>
         </valueSet>
       </binding>
@@ -82,12 +128,53 @@
       </mapping>
     </element>
     <element id="HumanName.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+      <extension url="code">
+        <valueCode value="SHALL:able-to-populate" />
+      </extension>
+      </extension>
+      <extension url="actor">
+        <valueCanonical value="Registering system" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.use" />
       <min value="1" />
     </element>
     <element id="HumanName.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.text" />
-      <comment value="A representation of the full name, including given names and the family name.\n\nWhen implementing zib NameInformation, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept." />
+      <comment
+        value="A representation of the full name, including given names and the family name.\n\nWhen implementing zib NameInformation, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept." />
       <condition value="nl-core-NameInformation-01" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -117,23 +204,44 @@
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.9" />
-        <comment value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
+        <comment
+          value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
       </mapping>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.8" />
-        <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
+        <comment
+          value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
       </mapping>
     </element>
     <element id="HumanName.family">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family" />
-      <comment value="When implementing zib NameInformation, this representation should be constrcuted from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept." />
+      <comment
+        value="When implementing zib NameInformation, this representation should be constrcuted from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept." />
       <condition value="nl-core-NameInformation-01" />
       <constraint>
         <key value="nl-core-NameInformation-02" />
         <severity value="warning" />
-        <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
-        <expression value="(extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
+        <human
+          value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
+        <expression
+          value="(extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
       </constraint>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -153,15 +261,33 @@
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.9" />
-        <comment value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
+        <comment
+          value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
       </mapping>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.8" />
-        <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
+        <comment
+          value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
       </mapping>
     </element>
     <element id="HumanName.family.extension:prefix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="prefix" />
       <type>
@@ -170,6 +296,22 @@
       </type>
     </element>
     <element id="HumanName.family.extension:prefix.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension.value[x]" />
       <short value="Prefix" />
       <definition value="Prefix to the person’s own last name." />
@@ -181,6 +323,22 @@
       </mapping>
     </element>
     <element id="HumanName.family.extension:lastName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="lastName" />
       <type>
@@ -189,6 +347,22 @@
       </type>
     </element>
     <element id="HumanName.family.extension:lastName.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension.value[x]" />
       <short value="LastName" />
       <definition value="The person’s official last name" />
@@ -200,6 +374,22 @@
       </mapping>
     </element>
     <element id="HumanName.family.extension:partnerPrefix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="partnerPrefix" />
       <type>
@@ -208,6 +398,22 @@
       </type>
     </element>
     <element id="HumanName.family.extension:partnerPrefix.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension.value[x]" />
       <short value="PartnerPrefix" />
       <definition value="Prefix to the partner’s last name." />
@@ -219,6 +425,22 @@
       </mapping>
     </element>
     <element id="HumanName.family.extension:partnerLastName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="partnerLastName" />
       <type>
@@ -227,6 +449,22 @@
       </type>
     </element>
     <element id="HumanName.family.extension:partnerLastName.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.family.extension.value[x]" />
       <short value="PartnerLastName" />
       <definition value="Partner’s official last name." />
@@ -238,10 +476,28 @@
       </mapping>
     </element>
     <element id="HumanName.given">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.given" />
       <short value="FirstName / Initial" />
-      <definition value="One of a person’s official first names or the initial if the full name is not known." />
-      <comment value="This element can be used to represent full given names or initials. `extension:givenOrInitial` SHALL be used on each repretition to specifiy if it's a full name (_BR_) or an initial (_IN_).\n\n## Zib compatibility\n\nTthis element is used to represent the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.\n\nTherefore, the zib concepts are implemented here in the following way:\n\n* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).\n* Each of these elements:\n * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.\n * As noted, it SHALL be augmented with `extension:givenOrInitial`.\n\nInitials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.\n\nIf a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.\n\n**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.\n\n**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces." />
+      <definition
+        value="One of a person’s official first names or the initial if the full name is not known." />
+      <comment
+        value="This element can be used to represent full given names or initials. `extension:givenOrInitial` SHALL be used on each repretition to specifiy if it's a full name (_BR_) or an initial (_IN_).\n\n## Zib compatibility\n\nTthis element is used to represent the FirstNames and Initials concepts of zib NameInformation, but the FHIR implementation deviates from the zib model. The zib defines these concepts as a list of official first names (as a single string) and a list of initials (as a single string), both optional. They both represent the official name(s) of a person and thus represent the same concept. In FHIR however, each first name is either a complete name or an initial, but not both. In addition, each name may be defined separately.\n\nTherefore, the zib concepts are implemented here in the following way:\n\n* Systems SHOULD use a `.given` element for each official first name that they know of (either as a full name or an initial), in order of appearance (as specified by FHIR).\n* Each of these elements:\n * SHOULD be populated with the complete name if it is known, or with the initial if no more information is available.\n * As noted, it SHALL be augmented with `extension:givenOrInitial`.\n\nInitials should thus not be communicated for each complete first name that is known, in contrast to what is specified by the zib. Receiving systems can recreate initials from the full names if needed.\n\nIf a system _does_ however only have a list of official first names and a separate list of official initials, without knowing the relationship between these two, only the full names SHOULD be communicated, while an additional `.name` instance MAY be used to communicate the initials. It is expected that the second instance just contains the initials and no other information from the zib. Receiving systems MAY ignore the second instance.\n\n**Note 1:** The GivenName concept should not be included here but in a separate `.name` instance where `.use` = _usual_.\n\n**Note 2**: As specified by FHIR, multiple official first names MAY be combined in a single `.given` element (separated by spaces), as long as the `.given` elements can be concatenated to form the full first name representation, and the 'extension:givenOrInitial` is used to mark the element as containing either full names or the initials. This pattern is strongly discouraged as it is hard to determine if the value pertains multiple names or a single combined name containing spaces." />
       <alias value="Voornaam" />
       <alias value="Initiaal" />
       <condition value="nl-core-NameInformation-01" />
@@ -257,10 +513,28 @@
       </mapping>
     </element>
     <element id="HumanName.prefix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.prefix" />
       <short value="Titles" />
-      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
-      <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
+      <definition
+        value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <comment
+        value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -269,10 +543,28 @@
       </mapping>
     </element>
     <element id="HumanName.suffix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.suffix" />
       <short value="Titles" />
-      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
-      <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
+      <definition
+        value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <comment
+        value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
