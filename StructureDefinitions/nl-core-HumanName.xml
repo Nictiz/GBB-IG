@@ -55,8 +55,22 @@
       </mapping>
     </element>
     <element id="HumanName.extension:nameUsage">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.extension" />
       <sliceName value="nameUsage" />
       <type>
@@ -227,7 +241,7 @@
         <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
       </mapping>
     </element>
-    <element id="HumanName.family.extension:humannameOwnPrefix">
+    <element id="HumanName.family.extension:humanNameOwnPrefix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -245,13 +259,13 @@
         </extension>
       </extension>
       <path value="HumanName.family.extension" />
-      <sliceName value="humannameOwnPrefix" />
+      <sliceName value="humanNameOwnPrefix" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
       </type>
     </element>
-    <element id="HumanName.family.extension:humannameOwnPrefix.value[x]">
+    <element id="HumanName.family.extension:humanNameOwnPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -278,7 +292,7 @@
         <comment value="Prefix" />
       </mapping>
     </element>
-    <element id="HumanName.family.extension:humannameOwnName">
+    <element id="HumanName.family.extension:humanNameOwnName">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -296,13 +310,13 @@
         </extension>
       </extension>
       <path value="HumanName.family.extension" />
-      <sliceName value="humannameOwnName" />
+      <sliceName value="humanNameOwnName" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
       </type>
     </element>
-    <element id="HumanName.family.extension:humannameOwnName.value[x]">
+    <element id="HumanName.family.extension:humanNameOwnName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -380,7 +394,7 @@
         <comment value="PartnerPrefix" />
       </mapping>
     </element>
-    <element id="HumanName.family.extension:humannamePartnerName">
+    <element id="HumanName.family.extension:humanNamePartnerName">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -398,13 +412,13 @@
         </extension>
       </extension>
       <path value="HumanName.family.extension" />
-      <sliceName value="humannamePartnerName" />
+      <sliceName value="humanNamePartnerName" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
       </type>
     </element>
-    <element id="HumanName.family.extension:humannamePartnerName.value[x]">
+    <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -468,12 +482,28 @@
     </element>
     <element id="HumanName.given.extension">
       <path value="HumanName.given.extension" />
-      <min value="1" />
+      <max value="1" />
     </element>
-    <element id="HumanName.given.extension:givenOrInitial">
+    <element id="HumanName.given.extension:humanNameGivenQualifiers">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="HumanName.given.extension" />
-      <sliceName value="givenOrInitial" />
-      <min value="1" />
+      <sliceName value="humanNameGivenQualifiers" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
