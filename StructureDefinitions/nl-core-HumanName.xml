@@ -537,6 +537,14 @@
         <comment value="Titles" />
       </mapping>
     </element>
+    <element id="HumanName.prefix.extension:humanNamePrefixQualifier">
+      <path value="HumanName.prefix.extension" />
+      <sliceName value="humanNamePrefixQualifier" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
+      </type>
+    </element>
     <element id="HumanName.suffix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -564,6 +572,14 @@
         <map value="NL-CM:20.4.12" />
         <comment value="Titles" />
       </mapping>
+    </element>
+    <element id="HumanName.suffix.extension:humanNameSuffixQualifier">
+      <path value="HumanName.suffix.extension" />
+      <sliceName value="humanNameSuffixQualifier" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
