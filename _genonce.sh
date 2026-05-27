@@ -14,6 +14,8 @@ fi
 
 echo "$txoption"
 
+node scripts/excel-to-requirements.js input/requirements generated/requirements
+
 export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
 
 publisher=$input_cache_path/$publisher_jar

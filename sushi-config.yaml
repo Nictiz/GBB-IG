@@ -62,8 +62,12 @@ publisher:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
-#   excludettl: true
+parameters:
+  excludettl: true
+  path-resource:
+  - 'generated/requirements'
+  #no-narrative: "Requirements/*" # Narrative generation for requirements ends in NPE
+
 #   validation: [allow-any-extensions, no-broken-links]
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

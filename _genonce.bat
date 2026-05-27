@@ -13,6 +13,8 @@ GOTO igpublish
 ECHO We're online
 SET txoption=
 
+node scripts\excel-to-requirements.js input\requirements generated\requirements
+
 :igpublish
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
