@@ -90,22 +90,48 @@ class ExcelConvertor {
     fs.writeFileSync(outputFile, JSON.stringify(requirements, null, 2), "utf8");
     console.log(`Wrote ${outputFile}`);
   }
+
+  convertConceptPage(outputFolder) {
+    const sheet = this.workbook.Sheets["Concept"];
+    if (!sheet) {
+      console.warn(`Skipping ${this.inputFile.name}: sheet "Concept" not found`);
+      return;
+    }
+
+    const rows = XLSX.utils.sheet_to_json(sheet, {
+      defval: "",
+      range: 1     // The header row is the second row in the template (row 1)
+    });
+
+    const markdown = rows
+    .map(row => { return this.clean(row["Veld"]) + "\n: " + this.clean(row["Beschrijving"]); })
+    .join("\n\n");
+
+    const outputFile = path.join(outputFolder, this.fileRoot + ".md");
+    fs.writeFileSync(outputFile, markdown, "utf8");
+    console.log(`Wrote ${outputFile}`);
+  }
 }
 
 const inputFolder = process.argv[2];
-const outputFolder = process.argv[3];
+const requirementsFolder = process.argv[3];
+const pageFolder = process.argv[4];
 
-if (!inputFolder || !outputFolder) {
-  console.error("Usage: node excel-to-requirements.js input-folder output-folder");
+if (!inputFolder || !requirementsFolder || !pageFolder) {
+  console.error("Usage: node excel-to-requirements.js input-folder requirements-folder markdown-folder");
   process.exit(1);
 }
 
-if (!fs.existsSync(outputFolder)) {
-  fs.mkdirSync(outputFolder, { recursive: true });
+if (!fs.existsSync(requirementsFolder)) {
+  fs.mkdirSync(requirementsFolder, { recursive: true });
+}
+if (!fs.existsSync(pageFolder)) {
+  fs.mkdirSync(pageFolder, { recursive: true });
 }
 
 for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name))) {
   const convertor = new ExcelConvertor(excelFile);
-  convertor.convertRequirements(outputFolder);
+  convertor.convertRequirements(requirementsFolder);
+  convertor.convertConceptPage(pageFolder);
 }
 
