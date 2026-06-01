@@ -1,0 +1,11 @@
+{
+  "name": "nictizrgb",
+  "version": "0.1.0",
+  "description": "Put a description here",
+  "dependencies": {
+    "hl7.fhir.uv.extensions.r4": "5.3.0"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ]
+}
