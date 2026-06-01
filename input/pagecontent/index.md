@@ -1,3 +1,3 @@
-# GenericBuildingBlocks
+# Generieke bouwblokken
 
-Feel free to modify this index page with your own awesome content!
+Deze FHIR IG bevat de generieke bouwblokken.

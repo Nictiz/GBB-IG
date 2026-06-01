@@ -38,10 +38,7 @@ class ExcelConvertor {
     const requirements = {
       resourceType: "Requirements",
       id: id,
-      text: {
-        status: "empty",
-        div: "<div xml:lang=\"en\" lang=\"en\"></div>"
-      },
+      language: "nl",
       url: canonical,
       status: "active",
       statement: rows

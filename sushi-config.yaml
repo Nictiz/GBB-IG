@@ -68,6 +68,11 @@ parameters:
   - 'generated/requirements'
   path-pages:
   - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
+  i18n-default-lang: nl
+  i18n-lang: en
+  translation-sources:
+    - 'input/translations/en'
+    - 'input/translations/nl'
 
   #no-narrative: "Requirements/*" # Narrative generation for requirements ends in NPE
 
