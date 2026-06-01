@@ -107,7 +107,7 @@ class ExcelConvertor {
     .map(row => { return this.clean(row["Veld"]) + "\n: " + this.clean(row["Beschrijving"]); })
     .join("\n\n");
 
-    const outputFile = path.join(outputFolder, this.fileRoot + ".md");
+    const outputFile = path.join(outputFolder, this.fileRoot + "-Concept.md");
     fs.writeFileSync(outputFile, markdown, "utf8");
     console.log(`Wrote ${outputFile}`);
   }

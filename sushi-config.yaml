@@ -66,6 +66,9 @@ parameters:
   excludettl: true
   path-resource:
   - 'generated/requirements'
+  path-pages:
+  - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
+
   #no-narrative: "Requirements/*" # Narrative generation for requirements ends in NPE
 
 #   validation: [allow-any-extensions, no-broken-links]
