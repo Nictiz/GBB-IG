@@ -47,26 +47,6 @@
         <comment value="EmailAddresses" />
       </mapping>
     </element>
-    <element id="ContactPoint.extension:comment">
-      <path value="ContactPoint.extension" />
-      <sliceName value="comment" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Comment" />
-      </type>
-    </element>
-    <element id="ContactPoint.extension:comment.value[x]">
-      <path value="ContactPoint.extension.value[x]" />
-      <short value="Comment" />
-      <definition value="Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day." />
-      <alias value="Toelichting" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.9" />
-        <comment value="Comment" />
-      </mapping>
-    </element>
     <element id="ContactPoint.system">
       <path value="ContactPoint.system" />
       <short value="TelecomType" />
