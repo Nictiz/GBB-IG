@@ -1,0 +1,9 @@
+{
+  "updated": "2026-06-02T15:21:43.6480917+02:00",
+  "dependencies": {
+    "hl7.fhir.uv.extensions.r4": "5.3.0",
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.terminology.r4": "7.1.0"
+  },
+  "missing": {}
+}

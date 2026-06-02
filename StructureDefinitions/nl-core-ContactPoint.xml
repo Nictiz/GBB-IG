@@ -88,30 +88,6 @@
         <comment value="TelecomType" />
       </mapping>
     </element>
-    <element id="ContactPoint.system.extension:telecomType">
-      <path value="ContactPoint.system.extension" />
-      <sliceName value="telecomType" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
-      </type>
-    </element>
-    <element id="ContactPoint.system.extension:telecomType.value[x]">
-      <path value="ContactPoint.system.extension.value[x]" />
-      <short value="TelecomType" />
-      <definition value="The telecom or device type that the telephone number is connected to." />
-      <alias value="TelecomType" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.5" />
-        <comment value="TelecomType" />
-      </mapping>
-    </element>
     <element id="ContactPoint.value">
       <path value="ContactPoint.value" />
       <short value="TelephoneNumber / EmailAddress" />
