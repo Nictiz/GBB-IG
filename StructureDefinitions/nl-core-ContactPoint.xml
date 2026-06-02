@@ -50,6 +50,14 @@
     <element id="ContactPoint.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="recording system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
