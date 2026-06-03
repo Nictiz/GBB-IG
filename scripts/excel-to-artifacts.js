@@ -29,6 +29,18 @@ class TargetFolders {
 class ExcelConvertor {
   static sheetConcept      = "Concept";
   static sheetRequirements = "Informatiebehoefte";
+  
+  static colNumber         = "Nummer";
+  static colName           = "Naam";
+  static colDescription    = "Omschrijving";
+  static colVariability    = "Variabiliteit";
+  static colPresence       = "Aanwezigheid";
+  static colTemp           = "Verleden/heden/toekomst";
+  static colSource         = "Herkomst";
+  static colField          = "Veld";
+  static colDefinition     = "Beschrijving";
+  
+  static textADId          = "ART-DECOR-id";
 
   constructor(inputFile, targetFolders) {
     this.inputFile = inputFile;
@@ -38,12 +50,12 @@ class ExcelConvertor {
     this.targetFolders = targetFolders;
   }
 
-  clean(value) {
+  #cell(row, colName) {
+    const value = row[colName];
     return String(value ?? "").trim();
   }
-
+  
   paragraph(label, value) {
-    value = this.clean(value);
     return value ? `**${label}**: ${value}` : null;
   }
 
@@ -61,22 +73,23 @@ class ExcelConvertor {
       url: canonical,
       status: "active",
       statement: rows
-        .filter(row => this.clean(row["Nummer"]) || this.clean(row["Naam"]))
+        .filter(row => this.#cell(row, ExcelConvertor.colNumber) || this.#cell(row, ExcelConvertor.colName))
         .map(row => {
-          const nummer = this.clean(row["Nummer"]);
+          const number = this.#cell(row, ExcelConvertor.colNumber);
 
-          const parentNumber = nummer.includes(".")
-            ? nummer.split(".").slice(0, -1).join(".")
+          const parentNumber = number.includes(".")
+            ? number.split(".").slice(0, -1).join(".")
             : null;
 
-          const label = nummer + " " + this.clean(row["Naam"]);
+          const label = number + " " + this.#cell(row, ExcelConvertor.colName);
 
           const requirementText = [
-            this.paragraph("Omschrijving", row["Omschrijving"]),
-            this.paragraph("Variabiliteit", row["Variabiliteit"]),
-            this.paragraph("Aanwezigheid", row["Aanwezigheid"]),
-            this.paragraph("Verleden/heden/toekomst", row["Verleden/heden/toekomst"])
+            this.paragraph(ExcelConvertor.colDescription, this.#cell(row, ExcelConvertor.colDescription)),
+            this.paragraph(ExcelConvertor.colVariability, this.#cell(row, ExcelConvertor.colVariability)),
+            this.paragraph(ExcelConvertor.colPresence,    this.#cell(row, ExcelConvertor.colPresence)),
+            this.paragraph(ExcelConvertor.colTemp,        this.#cell(row, ExcelConvertor.colTemp))
           ].filter(Boolean).join("\n\n");
+          console.log(this.#cell(row, ExcelConvertor.colDescription))
 
           const statement = {
             extension: [
@@ -85,7 +98,7 @@ class ExcelConvertor {
                 valueBoolean: false
               }
             ],
-            key: nummer,
+            key: number,
             label: label,
             requirement: requirementText || "(geen requirementtekst)"
           };
@@ -94,9 +107,9 @@ class ExcelConvertor {
             statement.parent = `${canonical}#${parentNumber}`;
           }
 
-          const herkomst = this.clean(row["Herkomst"]);
-          if (herkomst) {
-            statement.source = [{ display: herkomst }];
+          const source = this.#cell(row, ExcelConvertor.colSource);
+          if (source) {
+            statement.source = [{ display: source }];
           }
 
           return statement;
@@ -113,8 +126,8 @@ class ExcelConvertor {
     if (rows == null) return;
 
     const markdown = rows
-      .filter(row => this.clean(row["Veld"]) != "ART-DECOR-id")
-      .map(row => { return this.clean(row["Veld"]) + "\n: " + this.clean(row["Beschrijving"]); })
+      .filter(row => this.#cell(row, ExcelConvertor.colField) != ExcelConvertor.textADId)
+      .map(row => { return this.#cell(row, ExcelConvertor.colField) + "\n: " + this.#cell(row, ExcelConvertor.colDefinition); })
       .join("\n\n");
 
     const outputFile = path.join(this.targetFolders.get("PageContent"), this.fileRoot + "-Concept.md");
@@ -126,13 +139,13 @@ class ExcelConvertor {
     let rows = this.#getRows(ExcelConvertor.sheetConcept);
     if (rows == null) return;
     
-    rows = rows.filter(row => this.clean(row["Veld"]) == "ART-DECOR-id");
+    rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
     let ad_id = "";
     if (rows.length == 1) {
-      ad_id = this.clean(rows[0]["Beschrijving"]);
+      ad_id = this.#cell(rows[0], ExcelConvertor.colDefinition);
     }
     if (ad_id == "") {
-      console.warn(`Skipping logical model for ${this.inputFile.name}: "ART-DECOR-id" is empty or absent`);
+      console.warn(`Skipping logical model for ${this.inputFile.name}: "${ExcelConvertor.textADId}" is empty or absent`);
       return;
     } 
     
