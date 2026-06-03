@@ -66,6 +66,7 @@ parameters:
   excludettl: true
   path-resource:
   - 'generated/requirements'
+  - 'generated/logicalmodels'
   path-pages:
   - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
   i18n-default-lang: nl

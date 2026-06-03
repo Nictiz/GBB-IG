@@ -101,6 +101,7 @@ class ExcelConvertor {
     });
 
     const markdown = rows
+    .filter(row => this.clean(row["Veld"]) != "ART-DECOR-id")
     .map(row => { return this.clean(row["Veld"]) + "\n: " + this.clean(row["Beschrijving"]); })
     .join("\n\n");
 
@@ -108,11 +109,48 @@ class ExcelConvertor {
     fs.writeFileSync(outputFile, markdown, "utf8");
     console.log(`Wrote ${outputFile}`);
   }
+
+  async getLogicalModel(outputFolder) {
+    const sheet = this.workbook.Sheets["Concept"];
+    if (!sheet) {
+      console.warn(`Skipping ${this.inputFile.name}: sheet "Concept" not found`);
+      return;
+    }
+
+    const rows = XLSX.utils.sheet_to_json(sheet, {
+      defval: "",
+      range: 1     // The header row is the second row in the template (row 1)
+    }).filter(row => this.clean(row["Veld"]) == "ART-DECOR-id");
+
+    let ad_id = "";
+    if (rows.length == 1) {
+      ad_id = this.clean(rows[0]["Beschrijving"]);
+    }
+    if (ad_id == "") {
+      console.warn(`Skipping logical model for ${this.inputFile.name}: "ART-DECOR-id" is empty or absent`);
+      return;
+    } 
+    
+    try {
+      const id_parts = ad_id.split("/");
+      const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
+      const response = await fetch(`https://decor.nictiz.nl/fhir/4.0/zib2020bbr-/StructureDefinition/${id_parts[0]}--${id_date}?_format=json`);
+      const body = await response.json();
+      
+      const outputFile = path.join(outputFolder, this.fileRoot + ".json");
+      fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
+      console.log(`Saved JSON to ${outputFile}`);
+    } catch (error) {
+      console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR, "${error.message}"`);
+      return;
+    }
+  }
 }
 
 const inputFolder = process.argv[2];
 const requirementsFolder = process.argv[3];
 const pageFolder = process.argv[4];
+const logicalModelFolder = process.argv[5];
 
 if (!inputFolder || !requirementsFolder || !pageFolder) {
   console.error("Usage: node excel-to-requirements.js input-folder requirements-folder markdown-folder");
@@ -125,10 +163,14 @@ if (!fs.existsSync(requirementsFolder)) {
 if (!fs.existsSync(pageFolder)) {
   fs.mkdirSync(pageFolder, { recursive: true });
 }
+if (!fs.existsSync(logicalModelFolder)) {
+  fs.mkdirSync(logicalModelFolder, { recursive: true });
+}
 
 for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name))) {
   const convertor = new ExcelConvertor(excelFile);
   convertor.convertRequirements(requirementsFolder);
   convertor.convertConceptPage(pageFolder);
+  convertor.getLogicalModel(logicalModelFolder);
 }
 

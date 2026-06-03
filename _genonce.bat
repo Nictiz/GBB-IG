@@ -13,7 +13,7 @@ GOTO igpublish
 ECHO We're online
 SET txoption=
 
-node scripts\excel-to-requirements.js input\requirements generated\requirements generated\pagecontent
+node scripts\excel-to-artifacts.js input\requirements generated\requirements generated\pagecontent generated\logicalmodels
 
 :igpublish
 
