@@ -53,7 +53,7 @@
           <valueCode value="SHALL:able-to-populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="recording system" />
+          <valueCanonical value="registering system" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -61,7 +61,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="serving or sending system" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -98,7 +98,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="serving or sending system" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -130,7 +130,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="serving or sending system" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
