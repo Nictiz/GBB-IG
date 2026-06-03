@@ -48,6 +48,18 @@
         <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
       </constraint>
+      <constraint>
+        <key value="nl-core-NameInformation-01" />
+        <severity value="warning" />
+        <human value="If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name. This ensures compatibility with common FHIR usage." />
+        <expression value="(family.exists() or given.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier').where(value != 'IN').exists()) implies text.hasValue()" />
+      </constraint>
+      <constraint>
+        <key value="nl-core-NameInformation-02" />
+        <severity value="warning" />
+        <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
+        <expression value="(extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
+      </constraint>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.1" />
@@ -209,12 +221,7 @@
       <path value="HumanName.family" />
       <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:\n* If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.\n* If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
       <condition value="nl-core-NameInformation-01" />
-      <constraint>
-        <key value="nl-core-NameInformation-02" />
-        <severity value="warning" />
-        <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
-        <expression value="(extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
-      </constraint>
+      <condition value="nl-core-NameInformation-02" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.7" />
