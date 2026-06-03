@@ -343,7 +343,7 @@
         <comment value="LastName" />
       </mapping>
     </element>
-    <element id="HumanName.family.extension:humannamePartnerPrefix">
+    <element id="HumanName.family.extension:humanNamePartnerPrefix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -361,13 +361,13 @@
         </extension>
       </extension>
       <path value="HumanName.family.extension" />
-      <sliceName value="humannamePartnerPrefix" />
+      <sliceName value="humanNamePartnerPrefix" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
       </type>
     </element>
-    <element id="HumanName.family.extension:humannamePartnerPrefix.value[x]">
+    <element id="HumanName.family.extension:humanNamePartnerPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
