@@ -220,7 +220,6 @@
       </extension>
       <path value="HumanName.family" />
       <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:\n* If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.\n* If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
-      <condition value="nl-core-NameInformation-01" />
       <condition value="nl-core-NameInformation-02" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -322,6 +321,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
       </type>
+      <condition value="zib-NameInformation-1" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -424,6 +424,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
       </type>
+      <condition value="zib-NameInformation-2" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -475,7 +476,6 @@
       <alias value="Voornaam" />
       <alias value="Initiaal" />
       <alias value="Roepnaam" />
-      <condition value="nl-core-NameInformation-01" />
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
         <map value="NL-CM:20.4.4" />
