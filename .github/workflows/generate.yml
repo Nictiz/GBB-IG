@@ -17,6 +17,7 @@ jobs:
           cd scripts
           npm install
           cd ..
+          ls
           node scripts/excel-to-artifacts.json input/requirements generated
       - name: Commit generated artifacts
         run: |
