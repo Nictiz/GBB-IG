@@ -1,0 +1,16 @@
+name: Build IG for branch
+on: [push]
+jobs:
+  generate artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+      - name: Checkout branch for generated artifacts
+        run: |
+          current_branch=$(git branch --show-current)
+          generated_branch="_generated_${current_branch}"
+          git branch -f "$generated_branch" "$current_branch"
+          git switch "$generated_branch"
+          node scripts/excel-to-artifacts.json input/requirements generated
+          git add -f generated && git commit -m "Check in generated artifacts"
