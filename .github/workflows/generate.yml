@@ -1,7 +1,7 @@
 name: Build IG for branch
 on: [push]
 jobs:
-  generate artifacts:
+  GenerateArtifacts:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -12,5 +12,9 @@ jobs:
           generated_branch="_generated_${current_branch}"
           git branch -f "$generated_branch" "$current_branch"
           git switch "$generated_branch"
-          node scripts/excel-to-artifacts.json input/requirements generated
-          git add -f generated && git commit -m "Check in generated artifacts"
+      - name: Generate artifacts
+        run: node scripts/excel-to-artifacts.json input/requirements generated
+      - name: Commit generated artifacts
+        run: |
+          git add -f generated
+          git commit -m "Check in generated artifacts"
