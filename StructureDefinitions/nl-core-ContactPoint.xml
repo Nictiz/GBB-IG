@@ -50,15 +50,7 @@
     <element id="ContactPoint.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="serving or sending system" />
@@ -66,7 +58,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="processing system" />
@@ -76,7 +68,6 @@
       <short value="TelecomType" />
       <definition value="The telecom or device type that the telephone number is connected to." />
       <alias value="TelecomType" />
-      <min value="1" />
       <binding>
         <strength value="required" />
         <description value="Use ConceptMap TelecomType-to-ContactInformation-TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersSystem." />
@@ -113,6 +104,7 @@
       <short value="TelephoneNumber / EmailAddress" />
       <definition value="The person's telephone number." />
       <alias value="Telefoonnummer / EmailAdres" />
+      <min value="1" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.4" />
