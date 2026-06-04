@@ -27,3 +27,7 @@ jobs:
           git add -f generated
           git commit -m "Check in generated artifacts"
           git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}
+      - name: Start IG Build
+        run: |
+          curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" H "Content-type: application/json" --data '{"ref": "refs/heads/${{ steps.create-branch.outputs.generated_branch }}", "repository": {"full_name": "Nictiz/GBB-IG"}}'
+
