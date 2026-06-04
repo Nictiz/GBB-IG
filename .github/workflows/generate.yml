@@ -26,4 +26,4 @@ jobs:
           git config --global user.email 'github@noreply.github.com'
           git add -f generated
           git commit -m "Check in generated artifacts"
-          git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}"
+          git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}
