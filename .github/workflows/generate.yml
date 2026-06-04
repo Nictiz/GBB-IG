@@ -6,12 +6,14 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
-      - name: Checkout branch for generated artifacts
+      - name: Create and checkout branch for generated artifacts
+        id: create-branch
         run: |
           current_branch=$(git branch --show-current)
           generated_branch="_generated_${current_branch}"
           git branch -f "$generated_branch" "$current_branch"
           git switch "$generated_branch"
+          echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
       - name: Generate artifacts
         run: |
           cd scripts
@@ -24,4 +26,4 @@ jobs:
           git config --global user.email 'github@noreply.github.com'
           git add -f generated
           git commit -m "Check in generated artifacts"
-          git push
+          git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}"
