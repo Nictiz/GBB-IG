@@ -20,11 +20,16 @@ jobs:
           npm install
           cd ..
           node scripts/excel-to-artifacts.js input/requirements generated
+      - name: Run sushi
+        run: |
+          npm -g install fsh-sushi
+          sushi .
       - name: Commit generated artifacts
         run: |
           git config --global user.name 'Github Action'
           git config --global user.email 'github@noreply.github.com'
           git add -f generated
+          git add -f fsh-generated
           git commit -m "Check in generated artifacts"
           git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}
       - name: Start IG Build
