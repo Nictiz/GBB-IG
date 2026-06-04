@@ -1,0 +1,44 @@
+# This is a bit of a hack to leverage the auto-ig-builder functionality of hl7 while also using
+# the custom script to assemble information from their source-of-truths on the fly -- the normal
+# auto-ig-builder service does not support custom scripting for security considerations.
+# The hack is pretty crude; for each branch a shadow branch is created with the prefix _generated_,
+# generated content is committed to this branch and the IG build is started on this branch.
+
+name: Build IG for branch
+on: [push]
+jobs:
+  CommitArtifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+      - name: Create and checkout branch for generated artifacts
+        id: create-branch
+        run: |
+          current_branch=$(git branch --show-current)
+          generated_branch="_generated_${current_branch}"
+          git branch -f "$generated_branch" "$current_branch"
+          git switch "$generated_branch"
+          echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
+      - name: Generate artifacts
+        run: |
+          cd scripts
+          npm install
+          cd ..
+          node scripts/excel-to-artifacts.js input/requirements generated
+      - name: Run sushi
+        run: |
+          npm -g install fsh-sushi
+          sushi .
+      - name: Commit generated artifacts
+        run: |
+          git config --global user.name 'Github Action'
+          git config --global user.email 'github@noreply.github.com'
+          git add -f generated
+          git add -f fsh-generated
+          git commit -m "Check in generated artifacts"
+          git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}
+      - name: Start IG Build
+        run: |
+          curl -X POST  "https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger" -H "Content-type: application/json" --data '{"ref": "refs/heads/${{ steps.create-branch.outputs.generated_branch }}", "repository": {"full_name": "Nictiz/GBB-IG"}}'
+
