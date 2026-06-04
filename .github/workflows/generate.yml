@@ -13,7 +13,11 @@ jobs:
           git branch -f "$generated_branch" "$current_branch"
           git switch "$generated_branch"
       - name: Generate artifacts
-        run: node scripts/excel-to-artifacts.json input/requirements generated
+        run: |
+          cd scripts
+          npm install
+          cd ..
+          node scripts/excel-to-artifacts.json input/requirements generated
       - name: Commit generated artifacts
         run: |
           git add -f generated
