@@ -487,35 +487,6 @@
         <comment value="Initials" />
       </mapping>
     </element>
-    <element id="HumanName.given.extension">
-      <path value="HumanName.given.extension" />
-      <max value="1" />
-    </element>
-    <element id="HumanName.given.extension:humanNameGivenQualifiers">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="HumanName.given.extension" />
-      <sliceName value="humanNameGivenQualifiers" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
-      </type>
-    </element>
     <element id="HumanName.prefix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
