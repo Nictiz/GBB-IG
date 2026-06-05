@@ -90,7 +90,7 @@
       <path value="Patient.extension.value[x]" />
       <type>
         <code value="Address" />
-        <profile value="http://hl7.eu/fhir/base/StructureDefinition/Address-eu" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
       </type>
     </element>
     <element id="Patient.extension:sex-for-clinical-use">
@@ -278,8 +278,7 @@
       <sliceName value="telephoneNumbers" />
       <type>
         <code value="ContactPoint" />
-        <profile 
-          value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
       </type>
     </element>
     <element id="Patient.telecom:emailAddresses">
@@ -287,8 +286,7 @@
       <sliceName value="emailAddresses" />
       <type>
         <code value="ContactPoint" />
-        <profile 
-          value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
       </type>
     </element>
     <element id="Patient.gender">
@@ -319,6 +317,10 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
       </type>
+    </element>
+    <element id="Patient.gender.extension:genderCodelist.url">
+      <path value="Patient.gender.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
     </element>
     <element id="Patient.gender.extension:genderCodelist.value[x]">
       <path value="Patient.gender.extension.value[x]" />
@@ -456,8 +458,7 @@
     <element id="Patient.contact">
       <path value="Patient.contact" />
       <short value="Contact" />
-      <comment 
-        value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
+      <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
       <alias value="Contactpersoon" />
       <mapping>
         <identity value="zib-contactperson-v3.4-2020EN" />
@@ -477,8 +478,7 @@
     <element id="Patient.contact.extension:contactPerson.value[x]">
       <path value="Patient.contact.extension.value[x]" />
       <short value="Contact" />
-      <definition 
-        value="Reference to a [nl-core-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson) instance containing the full details for the current contact." />
+      <definition value="Reference to a [nl-core-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson) instance containing the full details for the current contact." />
       <alias value="Contactpersoon" />
       <type>
         <code value="Reference" />
@@ -578,8 +578,7 @@
       <sliceName value="telephoneNumbers" />
       <type>
         <code value="ContactPoint" />
-        <profile 
-          value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
       </type>
     </element>
     <element id="Patient.contact.telecom:emailAddresses">
@@ -587,15 +586,13 @@
       <sliceName value="emailAddresses" />
       <type>
         <code value="ContactPoint" />
-        <profile 
-          value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
       </type>
     </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <definition value="Contact’s address information." />
-      <comment 
-        value="This element can and should not completely capture the AddressInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [nl-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
+      <comment value="This element can and should not completely capture the AddressInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [nl-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AddressInformation" />
@@ -675,6 +672,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
       </type>
     </element>
+    <element id="Patient.communication.extension:communicationDetails.url">
+      <path value="Patient.communication.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
+    </element>
     <element id="Patient.communication.extension:comment">
       <path value="Patient.communication.extension" />
       <sliceName value="comment" />
@@ -683,6 +684,10 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Comment" />
       </type>
+    </element>
+    <element id="Patient.communication.extension:comment.url">
+      <path value="Patient.communication.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-Comment" />
     </element>
     <element id="Patient.communication.extension:comment.value[x]">
       <path value="Patient.communication.extension.value[x]" />
@@ -713,15 +718,13 @@
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
-      <comment
-        value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\n\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
+      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\n\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile
-          value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
     </element>
   </differential>
