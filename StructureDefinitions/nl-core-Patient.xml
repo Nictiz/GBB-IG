@@ -71,6 +71,76 @@
         <comment value="Patient" />
       </mapping>
     </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthPlace" />
+      </type>
+    </element>
+    <element id="Patient.extension:birthPlace.value[x]">
+      <path value="Patient.extension.value[x]" />
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.eu/fhir/base/StructureDefinition/Address-eu" />
+      </type>
+    </element>
+    <element id="Patient.extension:sex-for-clinical-use">
+      <path value="Patient.extension" />
+      <sliceName value="sex-for-clinical-use" />
+      <short value="Sex for clinical use" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse" />
+      </type>
+    </element>
+    <element id="Patient.extension:sex-for-clinical-use.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:gender-identity">
+      <path value="Patient.extension" />
+      <sliceName value="gender-identity" />
+      <short value="Gender identity" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
+      </type>
+    </element>
+    <element id="Patient.extension:gender-identity.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:pronouns">
+      <path value="Patient.extension" />
+      <sliceName value="pronouns" />
+      <short value="Pronouns" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns" />
+      </type>
+    </element>
+    <element id="Patient.extension:pronouns.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:patient-citizenship">
+      <path value="Patient.extension" />
+      <sliceName value="patient-citizenship" />
+      <short value="Citizenship" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-citizenship" />
+      </type>
+    </element>
     <element id="Patient.extension:nationality">
       <path value="Patient.extension" />
       <sliceName value="nationality" />
@@ -98,6 +168,15 @@
         <map value="NL-CM:7.6.3" />
         <comment value="Nationality" />
       </mapping>
+    </element>
+    <element id="Patient.extension:birthTime">
+      <path value="Patient.extension" />
+      <sliceName value="birthTime" />
+      <short value="Birth time" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-birthTime" />
+      </type>
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
