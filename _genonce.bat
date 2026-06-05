@@ -14,6 +14,7 @@ ECHO We're online
 SET txoption=
 
 node scripts\excel-to-artifacts.js input\requirements generated
+if errorlevel 1 exit /b %errorlevel%
 
 :igpublish
 
