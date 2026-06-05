@@ -79,6 +79,22 @@
       </slicing>
     </element>
     <element id="Patient.extension:birthPlace">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="birthPlace" />
       <type>
@@ -87,6 +103,22 @@
       </type>
     </element>
     <element id="Patient.extension:birthPlace.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension.value[x]" />
       <type>
         <code value="Address" />
@@ -94,6 +126,22 @@
       </type>
     </element>
     <element id="Patient.extension:sex-for-clinical-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="sex-for-clinical-use" />
       <short value="Sex for clinical use" />
@@ -107,6 +155,22 @@
       <min value="1" />
     </element>
     <element id="Patient.extension:gender-identity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="gender-identity" />
       <short value="Gender identity" />
@@ -120,6 +184,22 @@
       <min value="1" />
     </element>
     <element id="Patient.extension:pronouns">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="pronouns" />
       <short value="Pronouns" />
@@ -133,6 +213,22 @@
       <min value="1" />
     </element>
     <element id="Patient.extension:patient-citizenship">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="patient-citizenship" />
       <short value="Citizenship" />
@@ -142,6 +238,22 @@
       </type>
     </element>
     <element id="Patient.extension:nationality">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="nationality" />
       <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at `0..*` instead of the zib cardinality of `0..1`." />
@@ -170,6 +282,22 @@
       </mapping>
     </element>
     <element id="Patient.extension:birthTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="birthTime" />
       <short value="Birth time" />
@@ -179,6 +307,22 @@
       </type>
     </element>
     <element id="Patient.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.identifier" />
       <slicing>
         <discriminator>
@@ -197,13 +341,65 @@
       </mapping>
     </element>
     <element id="Patient.identifier:bsn">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.identifier" />
       <sliceName value="bsn" />
       <patternIdentifier>
         <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
       </patternIdentifier>
     </element>
+    <element id="Patient.active">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Patient.active" />
+      <label value="test" />
+    </element>
     <element id="Patient.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.name" />
       <slicing>
         <discriminator>
@@ -228,6 +424,22 @@
       </mapping>
     </element>
     <element id="Patient.name:nameInformation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.name" />
       <sliceName value="nameInformation" />
       <max value="2" />
@@ -245,6 +457,22 @@
       </type>
     </element>
     <element id="Patient.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.telecom" />
       <slicing>
         <discriminator>
@@ -274,6 +502,22 @@
       </mapping>
     </element>
     <element id="Patient.telecom:telephoneNumbers">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.telecom" />
       <sliceName value="telephoneNumbers" />
       <type>
@@ -282,6 +526,22 @@
       </type>
     </element>
     <element id="Patient.telecom:emailAddresses">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.telecom" />
       <sliceName value="emailAddresses" />
       <type>
@@ -290,6 +550,22 @@
       </type>
     </element>
     <element id="Patient.gender">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.gender" />
       <short value="Gender" />
       <definition value="Patient’s administrative gender." />
@@ -310,6 +586,22 @@
       </mapping>
     </element>
     <element id="Patient.gender.extension:genderCodelist">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.gender.extension" />
       <sliceName value="genderCodelist" />
       <max value="1" />
@@ -339,6 +631,22 @@
       </mapping>
     </element>
     <element id="Patient.birthDate">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.birthDate" />
       <short value="DateOfBirth" />
       <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
@@ -350,6 +658,22 @@
       </mapping>
     </element>
     <element id="Patient.deceased[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.deceased[x]" />
       <slicing>
         <discriminator>
@@ -360,6 +684,22 @@
       </slicing>
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.deceased[x]" />
       <sliceName value="deceasedBoolean" />
       <short value="DeathIndicator" />
@@ -375,6 +715,22 @@
       </mapping>
     </element>
     <element id="Patient.deceased[x]:deceasedDateTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.deceased[x]" />
       <sliceName value="deceasedDateTime" />
       <short value="DateOfDeath" />
@@ -397,6 +753,22 @@
       </mapping>
     </element>
     <element id="Patient.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.address" />
       <definition value="Patient's address information." />
       <type>
@@ -415,6 +787,22 @@
       </mapping>
     </element>
     <element id="Patient.maritalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.maritalStatus" />
       <short value="MaritalStatus" />
       <definition value="A person’s marital status according to the terms and definition in the Dutch civil code." />
@@ -431,6 +819,22 @@
       </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.multipleBirth[x]" />
       <slicing>
         <discriminator>
@@ -441,6 +845,22 @@
       </slicing>
     </element>
     <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.multipleBirth[x]" />
       <sliceName value="multipleBirthBoolean" />
       <short value="MultipleBirthIndicator" />
@@ -455,7 +875,42 @@
         <comment value="MultipleBirthIndicator" />
       </mapping>
     </element>
+    <element id="Patient.photo">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Patient.photo" />
+    </element>
     <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact" />
       <short value="Contact" />
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
@@ -467,6 +922,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.extension:contactPerson">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.extension" />
       <sliceName value="contactPerson" />
       <max value="1" />
@@ -492,6 +963,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.relationship">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.relationship" />
       <slicing>
         <discriminator>
@@ -502,6 +989,22 @@
       </slicing>
     </element>
     <element id="Patient.contact.relationship:role">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.relationship" />
       <sliceName value="role" />
       <short value="Role" />
@@ -519,6 +1022,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.relationship:relationship">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.relationship" />
       <sliceName value="relationship" />
       <short value="Relationship" />
@@ -536,6 +1055,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.name" />
       <definition value="Full name of the contact." />
       <comment value="This element can and should not completely capture the NameInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full name information should instead be captured using an instance of [zib-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
@@ -550,6 +1085,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.telecom" />
       <slicing>
         <discriminator>
@@ -574,6 +1125,22 @@
       </mapping>
     </element>
     <element id="Patient.contact.telecom:telephoneNumbers">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.telecom" />
       <sliceName value="telephoneNumbers" />
       <type>
@@ -582,6 +1149,22 @@
       </type>
     </element>
     <element id="Patient.contact.telecom:emailAddresses">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.telecom" />
       <sliceName value="emailAddresses" />
       <type>
@@ -590,6 +1173,22 @@
       </type>
     </element>
     <element id="Patient.contact.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.contact.address" />
       <definition value="Contact’s address information." />
       <comment value="This element can and should not completely capture the AddressInformation concept from zib ContactPerson; it should just be used for the information that is needed for contacting the person in relation to care of the patient. The full address information should instead be captured using an instance of [nl-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson), which can then be referenced from this resource. See the comment on `Patient.contact` for more information." />
@@ -604,6 +1203,22 @@
       </mapping>
     </element>
     <element id="Patient.communication">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.communication" />
       <short value="LanguageProficiency" />
       <alias value="Taalvaardigheid" />
@@ -614,6 +1229,22 @@
       </mapping>
     </element>
     <element id="Patient.communication.extension:languageControl">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.communication.extension" />
       <sliceName value="languageControl" />
       <short value="LanguageControlListening / LanguageControlSpeaking / LanguageControlReading" />
@@ -665,6 +1296,22 @@
       <max value="1" />
     </element>
     <element id="Patient.communication.extension:communicationDetails">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.communication.extension" />
       <sliceName value="communicationDetails" />
       <type>
@@ -677,6 +1324,22 @@
       <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-LanguageProficiency.CommunicationDetails" />
     </element>
     <element id="Patient.communication.extension:comment">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.communication.extension" />
       <sliceName value="comment" />
       <max value="1" />
@@ -701,6 +1364,22 @@
       </mapping>
     </element>
     <element id="Patient.communication.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.communication.language" />
       <short value="CommunicationLanguage" />
       <definition value="The language of communication." />
@@ -717,6 +1396,22 @@
       </mapping>
     </element>
     <element id="Patient.generalPractitioner">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.generalPractitioner" />
       <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\n\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile." />
       <type>
@@ -726,6 +1421,44 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
+    </element>
+    <element id="Patient.managingOrganization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Patient.managingOrganization" />
+    </element>
+    <element id="Patient.link">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Patient.link" />
     </element>
   </differential>
 </StructureDefinition>
