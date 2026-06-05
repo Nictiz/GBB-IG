@@ -1,7 +1,13 @@
+# This is a bit of a hack to leverage the auto-ig-builder functionality of hl7 while also using
+# the custom script to assemble information from their source-of-truths on the fly -- the normal
+# auto-ig-builder service does not support custom scripting for security considerations.
+# The hack is pretty crude; for each branch a shadow branch is created with the prefix _generated_,
+# generated content is committed to this branch and the IG build is started on this branch.
+
 name: Build IG for branch
 on: [push]
 jobs:
-  GenerateArtifacts:
+  CommitArtifacts:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
