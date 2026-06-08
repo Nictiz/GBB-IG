@@ -363,26 +363,6 @@
         <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
       </patternIdentifier>
     </element>
-    <element id="Patient.active">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="Patient.active" />
-      <label value="test" />
-    </element>
     <element id="Patient.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
