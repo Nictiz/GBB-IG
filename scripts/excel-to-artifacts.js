@@ -42,6 +42,8 @@ class ExcelConvertor {
   
   static textADId          = "ART-DECOR-id";
 
+  static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
+
   constructor(inputFile, targetFolders) {
     this.inputFile = inputFile;
     this.fileRoot = path.basename(inputFile.name, path.extname(inputFile.name));
@@ -89,7 +91,6 @@ class ExcelConvertor {
             this.paragraph(ExcelConvertor.colPresence,    this.#cell(row, ExcelConvertor.colPresence)),
             this.paragraph(ExcelConvertor.colTemp,        this.#cell(row, ExcelConvertor.colTemp))
           ].filter(Boolean).join("\n\n");
-          console.log(this.#cell(row, ExcelConvertor.colDescription))
 
           const statement = {
             extension: [
@@ -152,7 +153,7 @@ class ExcelConvertor {
     try {
       const id_parts = ad_id.split("/");
       const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
-      const response = await fetch(`https://decor.nictiz.nl/fhir/4.0/zib2020bbr-/StructureDefinition/${id_parts[0]}--${id_date}?_format=json`);
+      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
       const body = await response.json();
       
       const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");

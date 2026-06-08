@@ -72,9 +72,8 @@ parameters:
   i18n-default-lang: nl
   i18n-lang: en
   translation-sources:
-    - 'input/translations/en'
-    - 'input/translations/nl'
-
+  - 'input/translations/en'
+  - 'input/translations/nl'
   #no-narrative: "Requirements/*" # Narrative generation for requirements ends in NPE
 
 #   validation: [allow-any-extensions, no-broken-links]
@@ -89,6 +88,20 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  
+  # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+  # | Each building block gets a heading within "Building blocks". Within each building block, the   |
+  # | following entries should normally be added:                                                    |
+  # | Building blocks:                                                                               |
+  # |   [Building block name]:                                                                       |
+  # |     Overview: [building block name].html (from pagecontent/[building blovk name].md            |
+  # |     Requirements: Requirements-[building block name].html                                      |
+  # |     Agreement model: StructureDefinition-[building-block-name]-model.html                      |
+  # |     FHIR resource: StructureDefinition-nl-core-[building-block-name].html                      |
+  # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
+  # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+  # Building blocks:
+
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
