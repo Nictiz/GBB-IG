@@ -80,3 +80,33 @@ Translations can come from different sources:
 * Content in ART-DECOR should be translated in ART-DECOR itself. Translations will be exported together with the content.
 * All narrative content in Markdown can be translated by adding a file with the same name as the original to "input/translations/en/pagecontent".
 * Translations of the requirements are still to be determined.
+
+### Menu
+The menu is maintained from the file `sushi-config.yaml`. It contains an entry called "menu", and underneath that and entry called "Building blocks".
+
+To add a new building block to the menu, create and entry with the name of the building block and populate it like this:
+```yaml
+menu:
+  ...
+  Building blocks:
+    [Building block name]:
+      Overview: [building block name].html (from pagecontent/[building blovk name].md
+      Requirements: Requirements-[building block name].html
+      Agreement model: StructureDefinition-[building-block-name]-model.html
+      FHIR resource: StructureDefinition-nl-core-[building-block-name].html
+  ...
+```
+
+So e.g. the entry for a Patient building block might look like:
+```yaml
+menu:
+  ...
+  Building blocks:
+    Patient:
+      Overview: Patient.html
+      Requirements: Requirements-Patient.html
+      Agreement model: StructureDefinition-Patient-model.html
+      FHIR resource: StructureDefinition-nl-core-Patient.html
+  ...
+```
+Other entries may be added if desired, or entries may be left out if they are not ready yet.
