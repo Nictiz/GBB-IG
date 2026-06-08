@@ -1,0 +1,676 @@
+{
+  "resourceType": "Requirements",
+  "id": "Procedure",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Procedure",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1",
+      "label": "1 Datum en tijd",
+      "requirement": "**Omschrijving**: Er is behoefte om de procedure te kunnen plaatsen in de tijd\n\n**Variabiliteit**: Zie hieronder\n\n**Aanwezigheid**: Zie hieronder",
+      "source": [
+        {
+          "display": "Zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.1",
+      "label": "1.1 Datum en tijd van uitgevoerde verrichting",
+      "requirement": "**Omschrijving**: Er is behoefte om de procedure te kunnen plaatsen in de tijd\n\n**Variabiliteit**: Zie hieronder\n\n**Aanwezigheid**: Zie hieronder",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1",
+      "source": [
+        {
+          "display": "Zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.1.1",
+      "label": "1.1.1 Datum/tijd uitvoering",
+      "requirement": "**Omschrijving**: Het tijdstip waarop de procedure is uitgevoerd. Bv. \"het verband is dinsdagmiddag om drie uur vervangen\".\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan\n\n**Aanwezigheid**: Alleen bedoeld voor uitgevoerde verrichtingen. Niet te gebruiken als startdatum of einddatum zijn ingevuld.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), XtEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.1.2",
+      "label": "1.1.2 Periode uitvoering",
+      "requirement": "**Omschrijving**: De periode waarin de verrichting is uitgevoerd, dus van begindatum/tijd tot einddatum/tijd.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan voor zowel het begin als het eind\n\n**Aanwezigheid**: Alleen relevant uitgevoerde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), XtEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.1.3",
+      "label": "1.1.3 Einddatum",
+      "requirement": "**Omschrijving**: De einddatum (en eventueel eindtijd) van de verrichting wanneer het om anamnistische registraties gaat (bv. \"patiënt wat tot twee jaar geleden onder behandeling\").\n\n**Variabiliteit**: Dit zal doorgaans een datum zonder tijd of een vage daum zijn.\n\n**Aanwezigheid**: Alleen aanwezig bij afgeronde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is of als er een periode is.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.2",
+      "label": "1.2 Datum en tijd van gestarte verrichting die nog niet is afgerond",
+      "requirement": "**Omschrijving**: Dit kan een exacte datum en tijd zijn, of voor langdurige verrichtingen een datum of een vage datum\n\n**Variabiliteit**: Doorgaans aanwezig bij gestarte verrichtingen\n\n**Aanwezigheid**: Hier moeten we wel aan denken bij elke informatiebehoefte maar hebben we nu geen bron voor",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.3",
+      "label": "1.3 Geplande startdatum/tijd",
+      "requirement": "**Omschrijving**: De geplande startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd of alleen een datum\n\n**Aanwezigheid**: Alleen relevant voor geplande verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1.4",
+      "label": "1.4 Gewenste datum/tijd",
+      "requirement": "**Omschrijving**: De gewenste startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan\n\n**Aanwezigheid**: Alleen relevant voor gewenste/geadviseerde verrichten",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#1",
+      "source": [
+        {
+          "display": "zib 2024 -- we vermoeden dat dit een foutje is in het taalgebruik van de zib"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2",
+      "label": "2 De persoon of personen die de verrichting heeft uitgevoerd of zal uitvoeren.",
+      "requirement": "**Variabiliteit**: Zie hieronder\n\n**Aanwezigheid**: Zie hieronder",
+      "source": [
+        {
+          "display": "Zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2.1",
+      "label": "2.1 Zorgverlener als uitvoerder",
+      "requirement": "**Omschrijving**: De identiteit van de uitvoerende zorgverlener(s), doorgaans met bijbehorend specialisme\n\n**Variabiliteit**: Is een referentie naar één of meerdere zorgproffesional(s)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen, kan één persoon zijn of meerdere personen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#2",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), zibVerpleegkundigeInterventie(2024), XtEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2.2",
+      "label": "2.2 Specialisme zorgverlener als uitvoerder",
+      "requirement": "**Omschrijving**: Specialisme van de zorgverlener die de verrichting heeft uitgevoerd of zal uitvoeren. In de meeste gevallen wordt alleen het specialisme en niet de identiteit van de zorgverlener doorgegeven voor geplande verrichtingen.\n\n**Variabiliteit**: Specialisme zorgverlener\n\n**Aanwezigheid**: Relevant voor geplande verrichtingen. Niet te gebruiken als ook de volledige zorgverlener bekend is, deze omvat ook het specialisme.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#2",
+      "source": [
+        {
+          "display": "zibVerrichting(2024) en zibVerpleegkundigeInterventie(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2.3",
+      "label": "2.3 Patiënt als uitvoerder",
+      "requirement": "**Omschrijving**: Indicatie dat de patiënt de uitvoerder is van de verrichting\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#2",
+      "source": [
+        {
+          "display": "zibVerpleegkundigeInterventie(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2.4",
+      "label": "2.4 Contactperso(o)n(en) als uitvoerder",
+      "requirement": "**Omschrijving**: De identiteit van de contactpersoon of contactpersonen die de verrichting uitvoeren\n\n**Variabiliteit**: Identificatie van de contactpersonen\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn.",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#2",
+      "source": [
+        {
+          "display": "zibVerpleegkundigeInterventie(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3",
+      "label": "3 Verrichting gecodeerde naam",
+      "requirement": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor Nederlandse registratie is codering verplicht, maar verouderde of ontvangen data kan ook niet gecodeerd zijn. Waardelijsten voor verrichting vallen onder het SNOMED-besluit.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), XtEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1",
+      "label": "3.1 Verrichting naam/code in specifieke codelijst",
+      "requirement": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: --",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.1",
+      "label": "3.1.1 Verrichting naam/code in VerrichtingTypeCBVCodelijst",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeCBVCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.2",
+      "label": "3.1.2 Verrichting naam/code in VerrichtingTypeCodelijst",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType...\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.3",
+      "label": "3.1.3 Verrichting naam/code in VerrichtingType...",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType...\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.4",
+      "label": "3.1.4 Verrichting naam/code in VerrichtingType...",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType...\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.5",
+      "label": "3.1.5 Verrichting naam/code in VerrichtingType...",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType...\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.1.6",
+      "label": "3.1.6 Verrichting naam/code in VerrichtingType...",
+      "requirement": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType...\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3.1",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3.2",
+      "label": "3.2 Verrichting naam/code ongecodeerd en in andere codestelsels",
+      "requirement": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor historische registraties en registraties buiten Nederland kan de naam alleen in vrije tekst beschikbaar zijn of in andere codestelsels dan SNOMED.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#3",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "4",
+      "label": "4 Locatie",
+      "requirement": "**Omschrijving**: De fysieke locatie waar de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Het zou een naam en/of omschrijving en/of land en/of adres kunnen zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "5",
+      "label": "5 Anatomische locatie",
+      "requirement": "**Omschrijving**: Anatomische locatie die de focus is van de verrichting.\n\n**Variabiliteit**: Kan één of meerdere directe locaties zijn, is een referentie naar\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), Identiteit van de zorgverlener, doorgaans met bijbehorend specialisme."
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "6",
+      "label": "6 Inidcatie/reden",
+      "requirement": "**Omschrijving**: Zie hieronder\n\n**Variabiliteit**: Zie hieronder\n\n**Aanwezigheid**: Zie hieronder",
+      "source": [
+        {
+          "display": "Zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "6.1",
+      "label": "6.1 Indicatie",
+      "requirement": "**Omschrijving**: Een diagnose, reactie of symptoom die als indicatie geldt voor de verrichting.\n\n**Variabiliteit**: Kan een diagnose, reactie of symptoom zijn (meerdere kan ook)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#6",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "6.2",
+      "label": "6.2 Reden",
+      "requirement": "**Omschrijving**: Reden waarom een verrichting uitgevoerd is/wordt\n\n**Variabiliteit**: Kan gecodeerd zijn, of een referentie naar een bestaande aandoening, waarneming of verrichting (meerdere kan ook)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "parent": "http://nictiz.nl/gbb/Requirements/Procedure#6",
+      "source": [
+        {
+          "display": "XtEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "7",
+      "label": "7 Verrichting naam /code",
+      "requirement": "**Omschrijving**: Hoe de verrichting wordt geidentificeerd\n\n**Variabiliteit**: Voor Nederlandse registratie is codering verplicht, maar verouderde of ontvangen data kan ook niet gecodeerd zijn. Waardelijsten voor verrichting vallen onder het SNOMED-besluit.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), openEHRProcedure(v1.4.10)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "8",
+      "label": "8 Categorie",
+      "requirement": "**Omschrijving**: VerrichtingCategorie is een classificatie van de verrichting. Bijvoorbeeld categorie \"\"Operatieve verrichting\"\". Het is een code die wordt gebruikt om de verrichting te classificeren voor het zoeken, sorteren en visualisatie doeleinden. Voor verrichtingen die niet nuttig worden geacht (geven van een pleister, vervangen van infuus) kan zo geregeld worden dat ze ook niet uitgewisseld hoeven te worden.\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "BgZ 2017(v2.0 beta)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "9",
+      "label": "9 Status",
+      "requirement": "**Omschrijving**: preparation, in-progress, not-done, on-hold, stopped, completed, entered-in-error, unknown\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "FHIRProcedure(R5)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "10",
+      "label": "10 Subject",
+      "requirement": "**Omschrijving**: Het individu of de entiteit waarop de verrichting uitgevoerd is, wordt of zal worden\n\n**Variabiliteit**: ---\n\n**Aanwezigheid**: ---",
+      "source": [
+        {
+          "display": "FHIRProcedure(R5)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "11",
+      "label": "11 Contact",
+      "requirement": "**Omschrijving**: Contact waarbinnen de verrichting uitgevoerd is, wordt of zal worden\n\n**Variabiliteit**: Referentie naar contact\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en afgeornde verrichtingen",
+      "source": [
+        {
+          "display": "Eerstelijnszorg(v.)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "12",
+      "label": "12 Zorgepisode",
+      "requirement": "**Omschrijving**: Zorgepisode waarbinnen de verrichting uitgevoerd is, wordt of zal worden\n\n**Variabiliteit**: Referentie naar zorgepisode\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en afgeronde verrichtingen",
+      "source": [
+        {
+          "display": "Eerstelijnszorg(v.)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "13",
+      "label": "13 Verrichting details",
+      "requirement": "**Omschrijving**: Uitgebreide en gesturdtureerde informatie over een verrichting (bijvoorbeeld anatomische locatie, methode, bevindingen, complicatie). Hiermee kan onderscheid gemaakt worden tussen varainten van dezelfde procedure\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "Geboortezorg?"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "14",
+      "label": "14 Verrichting methode",
+      "requirement": "**Omschrijving**: De methode of de techniek die is of wordt toegepast bij het uitvoeren van de verrichting, zoals toegangsmethode, lavage, pressuring, etc\n\n**Variabiliteit**: Kunnen er meerdere zijn, kan gecondeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "15",
+      "label": "15 Focus medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Het product waarvan het plaatsen in of aan het lichaam, verwijderen van het lichaam of een andere manipulatie het doel is van de verrichting. Bijvoorbeeld het plaatsen van een implantaat, kalibratie, batterijvervanging, aanbrengen van een prothese, bevestigen van een wondzuigapparaat, etc.\n\n**Variabiliteit**: Kunnen er meerdere zijn\n\n**Aanwezigheid**: Relevant voor geplande gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "zibVerrichting(2024), XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "16",
+      "label": "16 Gebruikt medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Identificeert hulpmiddelen die worden gebruikt (verbruikt) als onderdeel van de verrichting. Wordt gebruikt voor het opsporen van besmettingen, enz.\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "17",
+      "label": "17 Uitkomst",
+      "requirement": "**Omschrijving**: De uitkomst van een uitgevoerde verrichting\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "18",
+      "label": "18 Complicatie",
+      "requirement": "**Omschrijving**: Een onbedoelde of ongewenste gebeurtenis die is opgetreden als gevolg van de verrichting\n\n**Variabiliteit**: In principe gecodeerd, alleen simpele complicaties\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "19",
+      "label": "19 Notitie/commentaar",
+      "requirement": "**Omschrijving**: Additionele informatie\n\n**Variabiliteit**: Tekst, optioneel, maximaal 1\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen",
+      "source": [
+        {
+          "display": "XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "20",
+      "label": "20 Metagegevens over de record",
+      "requirement": "**Omschrijving**: Metadata over de record zoals gespecificeerd in submodel x\n\n**Variabiliteit**: ---\n\n**Aanwezigheid**: Altijd aanwezig",
+      "source": [
+        {
+          "display": "XTEHRProcedure(v0.2.1)"
+        }
+      ]
+    }
+  ]
+}

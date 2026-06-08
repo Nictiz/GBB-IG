@@ -1,0 +1,595 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.4.2--20260603000000",
+  "language": "nl-NL",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-03T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.4.2--20260603000000",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.2"
+    }
+  ],
+  "version": "2026-06-03T00:00:00",
+  "name": "Registratie",
+  "title": "Registratie",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://decor.nictiz.nl/fhir/StructureDefinition/Contactgegevens",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115",
+        "path": "Contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.92--20260602124424",
+        "path": "Contactgegevens.telefoonnummers",
+        "short": "Telefoonnummers",
+        "definition": "Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.93--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.telefoonnummer",
+        "short": "Telefoonnummer",
+        "definition": "Een telefoonnummer van de persoon.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.telefoonnummer",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueString": "+31612341234"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.94--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.telecomType",
+        "short": "TelecomType",
+        "definition": "Het type netwerk of apparaat waar het telefoonummer aan verbonden is",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.telecomType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "TelecomTypeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.95--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.nummerSoort",
+        "short": "NummerSoort",
+        "definition": "Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.nummerSoort",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "text": "Mobiel telefoonnummer"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "NummerSoortCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.96--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.toelichting",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "48767-8",
+            "display": "Annotation comment Imp"
+          }
+        ],
+        "short": "Toelichting",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Comment"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.toelichting",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.97--20260602124424",
+        "path": "Contactgegevens.emailAdressen",
+        "short": "EmailAdressen",
+        "definition": "Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens.emailAdressen",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.98--20260602124424",
+        "path": "Contactgegevens.emailAdressen.emailAdres",
+        "short": "EmailAdres",
+        "definition": "Een e-mailadres van de persoon",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.emailAdressen.emailAdres",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.99--20260602124424",
+        "path": "Contactgegevens.emailAdressen.emailSoort",
+        "short": "EmailSoort",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EmailAddressType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "E-mailAddressType indicates whether it is a private or business e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.emailAdressen.emailSoort",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "text": "Zakelijk e-mailadres"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "EmailSoortCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20200901000000"
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115",
+        "path": "Contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.92--20260602124424",
+        "path": "Contactgegevens.telefoonnummers",
+        "short": "Telefoonnummers",
+        "definition": "Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.93--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.telefoonnummer",
+        "short": "Telefoonnummer",
+        "definition": "Een telefoonnummer van de persoon.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.telefoonnummer",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueString": "+31612341234"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.94--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.telecomType",
+        "short": "TelecomType",
+        "definition": "Het type netwerk of apparaat waar het telefoonummer aan verbonden is",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.telecomType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "TelecomTypeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.95--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.nummerSoort",
+        "short": "NummerSoort",
+        "definition": "Met NummerSoort kan aangegeven worden of het om een vast, tijdelijk, werk nummer gaat.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.nummerSoort",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "text": "Mobiel telefoonnummer"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "NummerSoortCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.96--20260602124424",
+        "path": "Contactgegevens.telefoonnummers.toelichting",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "48767-8",
+            "display": "Annotation comment Imp"
+          }
+        ],
+        "short": "Toelichting",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Comment"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Toelichting over het telefoonnummer en over het gebruik ervan. Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Explanation about the telephone number and how to use it. It can be indicated, for example, that it is a department number (for healthcare professionnels) or that availability by phone is only possible during a specified part of the day."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.telefoonnummers.toelichting",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.97--20260602124424",
+        "path": "Contactgegevens.emailAdressen",
+        "short": "EmailAdressen",
+        "definition": "Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Contactgegevens.emailAdressen",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.98--20260602124424",
+        "path": "Contactgegevens.emailAdressen.emailAdres",
+        "short": "EmailAdres",
+        "definition": "Een e-mailadres van de persoon",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.emailAdressen.emailAdres",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.99--20260602124424",
+        "path": "Contactgegevens.emailAdressen.emailSoort",
+        "short": "EmailSoort",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "EmailAddressType"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Met EmailSoort kan aangegeven worden of het om een prive of zakelijk e-mail adres gaat.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "E-mailAddressType indicates whether it is a private or business e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Contactgegevens.emailAdressen.emailSoort",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "text": "Zakelijk e-mailadres"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "EmailSoortCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20200901000000"
+        }
+      }
+    ]
+  }
+}
