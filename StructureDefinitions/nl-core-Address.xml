@@ -25,6 +25,11 @@
     <uri value="https://zibs.nl/wiki/AddressInformation-v1.1(2020EN)" />
     <name value="zib AddressInformation-v1.1(2020EN)" />
   </mapping>
+  <mapping>
+    <identity value="gbb-address-2026" />
+    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.2/2026-06-01T13:47:10" />
+    <name value="zib 2.0 Address" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="true" />
   <type value="Address" />
