@@ -26,9 +26,9 @@
     <name value="zib AddressInformation-v1.1(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="gbb-address-2026" />
+    <identity value="GBB-Address-v0.1" />
     <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.2/2026-06-01T13:47:10" />
-    <name value="zib 2.0 Address" />
+    <name value="GBB-Dataset-Address-v0.1" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="true" />
@@ -375,8 +375,8 @@
     <element id="Address.line.extension:postBox.value[x]">
       <path value="Address.line.extension.value[x]" />
       <mapping>
-        <identity value="gbb-address-2026" />
-        <map value="gbb-address-87" />
+        <identity value="GBB-Address-v0.1" />
+        <map value="gbb-dataelement-87" />
         <comment value="PostBox" />
       </mapping>
     </element>
