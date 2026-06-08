@@ -372,6 +372,14 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Address.line.extension:postBox.value[x]">
+      <path value="Address.line.extension.value[x]" />
+      <mapping>
+        <identity value="gbb-address-2026" />
+        <map value="gbb-address-87" />
+        <comment value="PostBox" />
+      </mapping>
+    </element>
     <element id="Address.city">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
