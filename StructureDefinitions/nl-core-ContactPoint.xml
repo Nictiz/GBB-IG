@@ -68,6 +68,7 @@
       <short value="TelecomType" />
       <definition value="The telecom or device type that the telephone number is connected to." />
       <alias value="TelecomType" />
+      <min value="1" />
       <binding>
         <strength value="required" />
         <description value="Use ConceptMap TelecomType-to-ContactInformation-TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersSystem." />
