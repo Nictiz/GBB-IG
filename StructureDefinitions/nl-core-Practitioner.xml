@@ -199,8 +199,36 @@
       <definition value="Health professional’s address information." />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AddressInformation" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
       </type>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="Address" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="ORC-24, STF-11, ROL-11, PRT-14" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./addr" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./Addresses" />
+      </mapping>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.7" />
