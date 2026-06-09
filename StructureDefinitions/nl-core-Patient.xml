@@ -66,57 +66,6 @@
         <comment value="Patient" />
       </mapping>
     </element>
-    <element id="Patient.extension">
-      <path value="Patient.extension" />
-      <slicing>
-        <ordered value="false" />
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.extension:patient-nationality">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="Patient.extension" />
-      <sliceName value="patient-nationality" />
-      <comment value="Due to the nature of the nationality core extension (which allows for a period to be placed next to the nationality and thus allows for different nationalities over time), the cardinality of the extension is left at `0..*` instead of the zib cardinality of `0..1`." />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/patient-nationality" />
-      </type>
-    </element>
-    <element id="Patient.extension:patient-nationality.extension:code">
-      <path value="Patient.extension.extension" />
-      <sliceName value="code" />
-    </element>
-    <element id="Patient.extension:patient-nationality.extension:code.value[x]">
-      <path value="Patient.extension.extension.value[x]" />
-      <short value="Nationality" />
-      <definition value="Indicates the country of nationality." />
-      <alias value="Nationaliteit" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-nationality-v3.0-2020EN" />
-        <map value="NL-CM:7.6.3" />
-        <comment value="Nationality" />
-      </mapping>
-    </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
