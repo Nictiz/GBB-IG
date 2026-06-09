@@ -112,14 +112,6 @@
     <element id="Patient.identifier:bsn">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
