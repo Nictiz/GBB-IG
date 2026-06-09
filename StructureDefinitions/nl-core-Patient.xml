@@ -69,6 +69,14 @@
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
+          <valueCode value="SHALL able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Registering system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
@@ -92,7 +100,7 @@
         <rules value="open" />
       </slicing>
       <short value="PatientIdentificationNumber" />
-      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example." />
+      <definition value="An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR). Other number systems can be used, such as internal hospital patient numbers for example. Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z)." />
       <alias value="Identificatienummer" />
       <min value="1" />
       <mapping>
