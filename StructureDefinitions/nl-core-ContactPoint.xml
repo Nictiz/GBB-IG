@@ -50,7 +50,7 @@
     <element id="ContactPoint.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="serving or sending system" />
@@ -58,7 +58,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="processing system" />
@@ -87,7 +87,7 @@
     <element id="ContactPoint.value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="serving or sending system" />
@@ -95,7 +95,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="processing system" />
