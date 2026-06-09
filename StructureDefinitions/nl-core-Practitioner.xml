@@ -82,6 +82,9 @@
     <element id="Practitioner.identifier:dezi">
       <path value="Practitioner.identifier" />
       <sliceName value="dezi" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/dezi" />
+      </patternIdentifier>
     </element>
     <element id="Practitioner.identifier:dezi.system">
       <path value="Practitioner.identifier.system" />
