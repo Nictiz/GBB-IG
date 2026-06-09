@@ -40,6 +40,22 @@
       </mapping>
     </element>
     <element id="Practitioner.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Practitioner.identifier" />
       <slicing>
         <discriminator>
@@ -103,6 +119,22 @@
       <patternUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
     </element>
     <element id="Practitioner.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Practitioner.name" />
       <short value="NameInformation" />
       <definition value="Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center." />
@@ -112,40 +144,28 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
       </type>
       <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XPN" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="EN (actually, PN)" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="ProviderName" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XCN Components" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="./name" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="./PreferredName (GivenNames, FamilyName, TitleCode)" />
-      </mapping>
-      <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.3" />
         <comment value="NameInformation" />
       </mapping>
     </element>
     <element id="Practitioner.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Practitioner.telecom" />
       <short value="ContactInformation" />
       <definition value="Health professional’s telephone number(s) or e-mail address(es)." />
@@ -155,34 +175,6 @@
         <code value="ContactPoint" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XTN" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="TEL" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="ContactPoint" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="PRT-15, STF-10, ROL-12" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="./telecom" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="./ContactPoints" />
-      </mapping>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.8" />
@@ -195,6 +187,22 @@
       </mapping>
     </element>
     <element id="Practitioner.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Practitioner.address" />
       <definition value="Health professional’s address information." />
       <type>
@@ -202,40 +210,28 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
       </type>
       <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XAD" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="AD" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="Address" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="ORC-24, STF-11, ROL-11, PRT-14" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="./addr" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="./Addresses" />
-      </mapping>
-      <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.7" />
         <comment value="AddressInformation" />
       </mapping>
     </element>
     <element id="Practitioner.gender">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Practitioner.gender" />
       <short value="Gender" />
       <definition value="Patient’s administrative gender." />
