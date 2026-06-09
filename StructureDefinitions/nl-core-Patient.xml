@@ -428,14 +428,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-NameInformation" />
       </type>
     </element>
-    <element id="Patient.name:nameInformation-GivenName">
-      <path value="Patient.name" />
-      <sliceName value="nameInformation-GivenName" />
-      <type>
-        <code value="HumanName" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-NameInformation.GivenName" />
-      </type>
-    </element>
     <element id="Patient.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
