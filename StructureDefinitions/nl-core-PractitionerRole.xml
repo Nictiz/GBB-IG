@@ -48,6 +48,22 @@
       </mapping>
     </element>
     <element id="PractitionerRole.practitioner">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="PractitionerRole.practitioner" />
       <type>
         <code value="Reference" />
@@ -56,6 +72,22 @@
       </type>
     </element>
     <element id="PractitionerRole.organization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="PractitionerRole.organization" />
       <short value="HealthcareProvider" />
       <definition value="The organization the health professional works for." />
@@ -73,6 +105,22 @@
       </mapping>
     </element>
     <element id="PractitionerRole.specialty">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="PractitionerRole.specialty" />
       <slicing>
         <discriminator>
@@ -101,6 +149,22 @@
       </mapping>
     </element>
     <element id="PractitionerRole.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="PractitionerRole.telecom" />
       <short value="ContactInformation" />
       <definition value="Health professional’s telephone number(s) or e-mail address(es) that are specific to the role/location/service." />
@@ -110,26 +174,6 @@
         <code value="ContactPoint" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XTN" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="TEL" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="ContactPoint" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value=".telecom" />
-      </mapping>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.8" />
