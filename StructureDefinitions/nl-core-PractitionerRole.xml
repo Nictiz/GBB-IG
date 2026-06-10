@@ -185,5 +185,29 @@
         <comment value="ContactInformation" />
       </mapping>
     </element>
+    <element id="PractitionerRole.availableTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="PractitionerRole.availableTime" />
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.9" />
+        <comment value="Comment" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
