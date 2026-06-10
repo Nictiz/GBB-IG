@@ -912,11 +912,6 @@
       <short value="CommunicationLanguage" />
       <definition value="The language of communication." />
       <alias value="CommunicatieTaal" />
-      <binding>
-        <strength value="extensible" />
-        <description value="CommunicatieTaalCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.12.2--20200901000000" />
-      </binding>
       <mapping>
         <identity value="zib-languageproficiency-v3.2-2020EN" />
         <map value="NL-CM:7.12.3" />
