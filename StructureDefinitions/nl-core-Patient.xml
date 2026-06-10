@@ -26,6 +26,11 @@
     <name value="zib Patient-v3.2(2020EN)" />
   </mapping>
   <mapping>
+    <identity value="zib-patient-v4.3-2026EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v4.3(2026-1EN)" />
+    <name value="zib Patient-v4.3(2026EN)" />
+  </mapping>
+  <mapping>
     <identity value="zib-nationality-v3.0-2020EN" />
     <uri value="https://zibs.nl/wiki/Nationality-v3.0(2020EN)" />
     <name value="zib Nationality-v3.0(2020EN)" />
@@ -569,6 +574,35 @@
         <identity value="zib-patient-v3.2-2020EN" />
         <map value="NL-CM:0.1.31" />
         <comment value="MultipleBirthIndicator" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthInteger" />
+      <alias value="Meerlingvolgorde" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mapping>
+        <identity value="zib-patient-v4.3-2026EN" />
+        <map value="NL-CM:0.1.35" />
+        <comment value="MultipleBirthSequence" />
       </mapping>
     </element>
     <element id="Patient.contact">
