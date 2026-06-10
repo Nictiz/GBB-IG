@@ -506,14 +506,7 @@
     </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
-      <short value="MaritalStatus" />
-      <definition value="A person’s marital status according to the terms and definition in the Dutch civil code." />
       <alias value="BurgerlijkeStaat" />
-      <binding>
-        <strength value="required" />
-        <description value="BurgerlijkeStaatCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.9.1--20200901000000" />
-      </binding>
       <mapping>
         <identity value="zib-maritalstatus-v3.1-2020EN" />
         <map value="NL-CM:7.9.2" />
