@@ -71,6 +71,31 @@
         <comment value="Patient" />
       </mapping>
     </element>
+    <element id="Patient.extension:genderIdentity">
+      <path value="Patient.extension" />
+      <sliceName value="genderIdentity" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value">
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value.value[x]">
+      <path value="Patient.extension.extension.value[x]" />
+      <mapping>
+        <identity value="zib-patient-v4.3-2026EN" />
+        <map value="NL-CM:0.1.34" />
+        <comment value="GenderIdentity" />
+      </mapping>
+    </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
