@@ -321,51 +321,6 @@
         <comment value="Gender" />
       </mapping>
     </element>
-    <element id="Patient.gender.extension:genderCodelist">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="Patient.gender.extension" />
-      <sliceName value="genderCodelist" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
-      </type>
-    </element>
-    <element id="Patient.gender.extension:genderCodelist.url">
-      <path value="Patient.gender.extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification" />
-    </element>
-    <element id="Patient.gender.extension:genderCodelist.value[x]">
-      <path value="Patient.gender.extension.value[x]" />
-      <short value="Gender" />
-      <definition value="Patient’s administrative gender." />
-      <alias value="Geslacht" />
-      <binding>
-        <strength value="required" />
-        <description value="GeslachtCodelijst" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000" />
-      </binding>
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.9" />
-        <comment value="Gender" />
-      </mapping>
-    </element>
     <element id="Patient.birthDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
