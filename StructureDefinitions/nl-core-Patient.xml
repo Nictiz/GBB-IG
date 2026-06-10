@@ -530,22 +530,6 @@
       </mapping>
     </element>
     <element id="Patient.contact.relationship">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
       <path value="Patient.contact.relationship" />
       <slicing>
         <discriminator>
@@ -556,22 +540,6 @@
       </slicing>
     </element>
     <element id="Patient.contact.relationship:role">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
       <path value="Patient.contact.relationship" />
       <sliceName value="role" />
       <short value="Role" />
@@ -589,22 +557,6 @@
       </mapping>
     </element>
     <element id="Patient.contact.relationship:relationship">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
       <path value="Patient.contact.relationship" />
       <sliceName value="relationship" />
       <short value="Relationship" />
