@@ -72,6 +72,22 @@
       </mapping>
     </element>
     <element id="Patient.extension:genderIdentity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Patient.extension" />
       <sliceName value="genderIdentity" />
       <type>
@@ -188,34 +204,6 @@
         <code value="HumanName" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XPN" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="EN (actually, PN)" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="ProviderName" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="PID-5, PID-9" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="name" />
-      </mapping>
-      <mapping>
-        <identity value="cda" />
-        <map value=".patient.name" />
-      </mapping>
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
         <map value="NL-CM:0.1.6" />
@@ -621,34 +609,6 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
       </type>
       <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XPN" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="EN (actually, PN)" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="ProviderName" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="NK1-2" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="name" />
-      </mapping>
-      <mapping>
-        <identity value="cda" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
         <identity value="zib-contactperson-v3.4-2020EN" />
         <map value="NL-CM:3.1.4" />
         <comment value="NameInformation" />
@@ -707,34 +667,6 @@
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
       </type>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="XAD" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="AD" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="Address" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="NK1-4" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="addr" />
-      </mapping>
-      <mapping>
-        <identity value="cda" />
-        <map value="n/a" />
-      </mapping>
       <mapping>
         <identity value="zib-contactperson-v3.4-2020EN" />
         <map value="NL-CM:3.1.5" />
