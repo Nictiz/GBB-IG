@@ -907,9 +907,6 @@
     </element>
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />
-      <short value="CommunicationLanguage" />
-      <definition value="The language of communication." />
-      <alias value="CommunicatieTaal" />
       <mapping>
         <identity value="zib-languageproficiency-v3.2-2020EN" />
         <map value="NL-CM:7.12.3" />
