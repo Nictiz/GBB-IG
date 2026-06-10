@@ -128,6 +128,7 @@
       </extension>
       <path value="Patient.identifier" />
       <sliceName value="bsn" />
+      <max value="1" />
       <patternIdentifier>
         <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
       </patternIdentifier>
