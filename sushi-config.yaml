@@ -101,6 +101,13 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
+  
+Building blocks:
+    Patient:
+      Overview: Patient.html
+      Requirements: Requirements-Patient.html
+      Agreement model: StructureDefinition-Patient-model.html
+      FHIR resource: StructureDefinition-nl-core-Patient.html 
 
   Artifacts: artifacts.html
 
