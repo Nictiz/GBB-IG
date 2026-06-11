@@ -100,8 +100,11 @@ menu:
   # |     FHIR resource: StructureDefinition-nl-core-[building-block-name].html                      |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  # Building blocks:
-
+  Building blocks:
+    HumanName:
+      Overview: HumanName.html
+      Requirements: Requirements-HumanName.html
+      Agreement model: StructureDefinition-HumanName-model.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
