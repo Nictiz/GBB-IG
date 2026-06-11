@@ -1,0 +1,297 @@
+{
+  "resourceType": "Requirements",
+  "id": "Patient",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Patient",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-01",
+      "label": "PAT-01 identifier",
+      "requirement": "**Omschrijving**: An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR). Other number systems can be used, such as internal hospital patient numbers for example. Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z).\n\n**Variabiliteit**: sting + codesystem",
+      "source": [
+        {
+          "display": "Xt-EHR en zib Patient"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-02",
+      "label": "PAT-02 identifier - BSN",
+      "requirement": "**Omschrijving**: Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z).\n\n**Variabiliteit**: string van BSN met exact aantal cijfers + juiste codesystem",
+      "source": [
+        {
+          "display": "Wbsn-z"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-03",
+      "label": "PAT-03 identifier - others",
+      "requirement": "**Omschrijving**: Other number systems can be used, such as internal hospital patient numbers for example.\n\n**Variabiliteit**: string +  codesystem",
+      "source": [
+        {
+          "display": "Xt-EHR en"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-04",
+      "label": "PAT-04 name",
+      "requirement": "**Omschrijving**: A name associated with the patient. Need to be able to track the patient by multiple names. Examples are your official name and a partner name. A patient may have multiple names with different uses or applicable periods.\n\n**Variabiliteit**: GBB NL-core HumanName",
+      "source": [
+        {
+          "display": "R4 Patient + zib patient"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-05",
+      "label": "PAT-05 name",
+      "requirement": "**Omschrijving**: EHDS eis: Constraints: eu-pat-1  given, family, text or a data-absent-reason extension SHALL be present\n\n**Variabiliteit**: GBB NL-core HumanName",
+      "source": [
+        {
+          "display": "EU-CORE"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-06",
+      "label": "PAT-06 telecom",
+      "requirement": "**Omschrijving**: A contact detail for the individual\n\n**Variabiliteit**: GBB NL-core Telecom",
+      "source": [
+        {
+          "display": "zibs"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-07",
+      "label": "PAT-07 gender",
+      "requirement": "**Omschrijving**: Patient's administrative gender.\n\n**Variabiliteit**: FHIR valueset Administrative gender: male | female | other | unknown\r\nZib heeft een andere waardelijst hiervoor. Hoe mee om te gaan?",
+      "source": [
+        {
+          "display": "zibs en Xt-EHR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-08",
+      "label": "PAT-08 gender.identity",
+      "requirement": "**Omschrijving**: The gender with which the person identifies. An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else.\n\n**Variabiliteit**: http://terminology.hl7.org/ValueSet/gender-identity\r\nVan zib 2026 is er ook nog: GenderIdentityCodelist Valueset OID: 2.16.840.1.113883.2.4.3.11.60.40.2.0.1.2",
+      "source": [
+        {
+          "display": "zins 2026 en EU-Core"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-09",
+      "label": "PAT-09 birthdate",
+      "requirement": "**Omschrijving**: Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.\n\n**Variabiliteit**: alleen jaar, jaar+maand, jaar+maand+dag. Tijd kan er niet bij.",
+      "source": [
+        {
+          "display": "zibs en base FHIR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-10",
+      "label": "PAT-10 deceased",
+      "requirement": "**Omschrijving**: An indication stating whether the patient has died. OR The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.\n\n**Variabiliteit**: Wanneer bekend is wat tijdstip overlijden is, wordt deceasedDateTime gevuld. Indien patient overleden en tijdstip onbekend gebruik deceasedBoolean met \"true\". Patiënt in leven gebruik deceasedBoolean met 'false'. Indien geen value gegeven betekent het dat er geen uitspraak gedaan is of de patient in leven is of niet.",
+      "source": [
+        {
+          "display": "zibs en Base FHIR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-11",
+      "label": "PAT-11 address",
+      "requirement": "**Variabiliteit**: GBB NL-core Address",
+      "source": [
+        {
+          "display": "zibs"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-12",
+      "label": "PAT-12 multipleBirth.boolean",
+      "requirement": "**Omschrijving**: An indication stating whether the patient is of a multiple birth.\n\n**Variabiliteit**: Alleen Boolean wordt gebruikt",
+      "source": [
+        {
+          "display": "zibs"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-13",
+      "label": "PAT-13 multipleBirth.integer",
+      "requirement": "**Omschrijving**: The birthnumber of a multiple birth\n\n**Variabiliteit**: integer",
+      "source": [
+        {
+          "display": "zibs 2026 en base FHIR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14",
+      "label": "PAT-14 contact (party)",
+      "requirement": "**Omschrijving**: A contact party (e.g. guardian, partner, friend) for the patient",
+      "source": [
+        {
+          "display": "base FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-15",
+      "label": "PAT-15 name",
+      "requirement": "**Omschrijving**: A name associated with the contact person\n\n**Variabiliteit**: GBB NL-core HumanName",
+      "source": [
+        {
+          "display": "base FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-16",
+      "label": "PAT-16 telecom",
+      "requirement": "**Omschrijving**: A contact detail for the person\n\n**Variabiliteit**: GBB NL-core Telecom",
+      "source": [
+        {
+          "display": "base FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-17",
+      "label": "PAT-17 address",
+      "requirement": "**Omschrijving**: Address for the contact person\n\n**Variabiliteit**: GBB NL-core Address",
+      "source": [
+        {
+          "display": "base FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-18",
+      "label": "PAT-18 organization",
+      "requirement": "**Omschrijving**: Organization that is associated with the contact\n\n**Variabiliteit**: referentie naar organization",
+      "source": [
+        {
+          "display": "base FHIR R4"
+        }
+      ]
+    }
+  ]
+}
