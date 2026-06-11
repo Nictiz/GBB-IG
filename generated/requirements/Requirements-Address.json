@@ -1,0 +1,188 @@
+{
+  "resourceType": "Requirements",
+  "id": "Address",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Address",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-01",
+      "label": "ADD-01 use",
+      "requirement": "**Omschrijving**: home | work | temp | old | billing - purpose of this address\n\n**Variabiliteit**: code (required)",
+      "source": [
+        {
+          "display": "Basismodel"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-02",
+      "label": "ADD-02 type",
+      "requirement": "**Omschrijving**: The type of address in question, such as a home address or mailing address.\n\n**Variabiliteit**: code (required)",
+      "source": [
+        {
+          "display": "Basismodel"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-03",
+      "label": "ADD-03 text/FullAddress",
+      "requirement": "**Omschrijving**: Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "https://nictiz.atlassian.net/browse/ZIB-3032"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-04",
+      "label": "ADD-04 line",
+      "requirement": "**Omschrijving**: (Human-readable representatie van de onderliggende elementen) This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "addressEU"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-05",
+      "label": "ADD-05 streetName",
+      "requirement": "**Omschrijving**: This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-06",
+      "label": "ADD-06 houseNumber",
+      "requirement": "**Omschrijving**: The number of a building, house or lot alongside the street. Also known as \"primary street number\". This does not number the street but rather the building.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-07",
+      "label": "ADD-07 buildingNumberSuffix",
+      "requirement": "**Omschrijving**: Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-08",
+      "label": "ADD-08 additionalLocator",
+      "requirement": "**Omschrijving**: This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., \"3rd floor, Appt. 342\"). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch \"t.o.\" means \"opposite to\" for house boats located across the street facing houses).\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-09",
+      "label": "ADD-09 unitID/AdditionalInformation",
+      "requirement": "**Omschrijving**: The number or name of a specific unit contained within a building or complex, as assigned by that building or complex.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-10",
+      "label": "ADD-10 postBox",
+      "requirement": "**Omschrijving**: A numbered box located in a post station.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "Xt-EHR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-11",
+      "label": "ADD-11 city/PlaceOfRecidency",
+      "requirement": "**Omschrijving**: The name of the city, town, suburb, village or other community or delivery center.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-12",
+      "label": "ADD-12 district/Municipality",
+      "requirement": "**Omschrijving**: The name of the administrative area (county). In the netherlands this refers to Municipality.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-13",
+      "label": "ADD-13 postalCode",
+      "requirement": "**Omschrijving**: A postal code designating a region defined by the postal service.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-13",
+      "label": "ADD-13 country",
+      "requirement": "**Omschrijving**: Country - a nation as commonly understood or generally accepted.\n\n**Variabiliteit**: code (required)"
+    }
+  ]
+}
