@@ -101,7 +101,7 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Building blocks:
-    Patient:
+    ContactPoint:
       Overview: ContactPoint.html
       Requirements: Requirements-ContactPoint.html
       Agreement model: StructureDefinition-ContactPoint-model.html
