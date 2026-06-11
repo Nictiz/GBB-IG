@@ -88,12 +88,12 @@ To add a new building block to the menu, create and entry with the name of the b
 ```yaml
 menu:
   ...
-  Building blocks:
-    [Building block name]:
-      Overview: [building block name].html (from pagecontent/[building blovk name].md
+  Bouwblokken:
+    [Dutch building block name]:
+      Overzicht: [English building block name].html (from pagecontent/[building block name].md
       Requirements: Requirements-[building block name].html
-      Agreement model: StructureDefinition-[building-block-name]-model.html
-      FHIR resource: StructureDefinition-nl-core-[building-block-name].html
+      Afsprakenmodel: StructureDefinition-[English building block name]-model.html
+      FHIR-resource: StructureDefinition-nl-core-[English building block name].html
   ...
 ```
 
@@ -101,12 +101,12 @@ So e.g. the entry for a Patient building block might look like:
 ```yaml
 menu:
   ...
-  Building blocks:
+  Bouwblokken:
     Patient:
-      Overview: Patient.html
+      Overzicht: Patient.html
       Requirements: Requirements-Patient.html
-      Agreement model: StructureDefinition-Patient-model.html
-      FHIR resource: StructureDefinition-nl-core-Patient.html
+      Afsprakenmodel: StructureDefinition-Patient-model.html
+      FHIR-resource: StructureDefinition-nl-core-Patient.html
   ...
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.
