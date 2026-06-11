@@ -100,8 +100,27 @@ menu:
   # |     FHIR resource: StructureDefinition-nl-core-[building-block-name].html                      |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  # Building blocks:
-
+  Building blocks:
+    Address:
+      Overview: Address.html
+      Requirements: Requirements-Address.html
+      Agreement model: StructureDefinition-Address-model.html
+    ContactPoint:
+      Overview: ContactPoint.html
+      Requirements: Requirements-ContactPoint.html
+      Agreement model: StructureDefinition-ContactPoint-model.html
+    HumanName:
+      Overview: HumanName.html
+      Requirements: Requirements-HumanName.html
+      Agreement model: StructureDefinition-HumanName-model.html
+    Patient:
+      Overview: Patient.html
+      Requirements: Requirements-Patient.html
+      Agreement model: StructureDefinition-Patient-model.html
+    Practitioner:
+      Overview: Practitioner.html
+      Requirements: Requirements-Practitioner.html
+      Agreement model: StructureDefinition-Practitioner-model.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
