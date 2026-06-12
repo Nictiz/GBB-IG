@@ -96,7 +96,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider-Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
