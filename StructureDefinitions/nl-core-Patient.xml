@@ -21,6 +21,11 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
+    <identity value="GBB-Patient-v0.1" />
+    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.1/2026-05-29T09:00:58" />
+    <name value="Dataset GBB-Patient-v0.1" />
+  </mapping>
+  <mapping>
     <identity value="zib-patient-v3.2-2020EN" />
     <uri value="https://zibs.nl/wiki/Patient-v3.2(2020EN)" />
     <name value="zib Patient-v3.2(2020EN)" />
@@ -718,6 +723,11 @@
         </extension>
       </extension>
       <path value="Patient.contact.organization" />
+      <mapping>
+        <identity value="GBB-Patient-v0.1" />
+        <map value="gbb-dataelement-351" />
+        <comment value="Organisatie" />
+      </mapping>
     </element>
     <element id="Patient.communication">
       <path value="Patient.communication" />
