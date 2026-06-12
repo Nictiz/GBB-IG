@@ -90,10 +90,10 @@ menu:
   ...
   Bouwblokken:
     [Dutch building block name]:
-      Overzicht: [English building block name].html (from pagecontent/[building block name].md
+      Overzicht: [English building block name].html (from pagecontent/[building block name]).md
       Requirements: Requirements-[building block name].html
       Afsprakenmodel: StructureDefinition-[English building block name]-model.html
-      FHIR-resource: StructureDefinition-nl-core-[English building block name].html
+      FHIR-profiel: StructureDefinition-nl-core-[English building block name].html
   ...
 ```
 
@@ -106,7 +106,7 @@ menu:
       Overzicht: Patient.html
       Requirements: Requirements-Patient.html
       Afsprakenmodel: StructureDefinition-Patient-model.html
-      FHIR-resource: StructureDefinition-nl-core-Patient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
   ...
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.

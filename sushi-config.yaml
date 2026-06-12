@@ -92,17 +92,17 @@ menu:
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
   # | following entries should normally be added:                                                    |
-  # | Building blocks:                                                                               |
-  # |   [Building block name]:                                                                       |
-  # |     Overview: [building block name].html (from pagecontent/[building blovk name].md            |
+  # | Bouwblokken:                                                                                   |
+  # |   [Dutch building block name]:                                                                 |
+  # |     Overzicht: [English building block name].html (from pagecontent/[building block name]).md  |
   # |     Requirements: Requirements-[building block name].html                                      |
-  # |     Agreement model: StructureDefinition-[building-block-name]-model.html                      |
-  # |     FHIR resource: StructureDefinition-nl-core-[building-block-name].html                      |
+  # |     Afsprakenmodel: StructureDefinition-[English building block name]-model.html               |
+  # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
 
-  Artifacts: artifacts.html
+  Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
