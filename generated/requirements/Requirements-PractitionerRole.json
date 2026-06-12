@@ -1,0 +1,244 @@
+{
+  "resourceType": "Requirements",
+  "id": "PractitionerRole",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/PractitionerRole",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-001",
+      "label": "ZVL-001 ZorgverlenerIdentificatienummer",
+      "requirement": "**Omschrijving**: Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.\r\nIn de Nederlandse situatie worden de volgende nummers gebruikt:\r\n1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.\r\n2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties\r\n3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.\r\n\r\nVoor buitenlandse zorgverleners zijn deze gegevens niet voorhanden.\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-002",
+      "label": "ZVL-002 Naamgegevens",
+      "requirement": "**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-003",
+      "label": "ZVL-003 Naamgegevens",
+      "requirement": "**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "EU-Core"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-004",
+      "label": "ZVL-004 Specialisme",
+      "requirement": "**Omschrijving**: Erkende medische specialismen ->AGB of UZI(DEZI) specialismecodes \r\nHet betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog.\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-005",
+      "label": "ZVL-005 Specialisme",
+      "requirement": "**Omschrijving**: Andere codes dan AGB of UZI(DEZI) specialismecodes\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Nictiz Sharepoint | Afwijkingenregister eOverdracht"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-006",
+      "label": "ZVL-006 Geslacht",
+      "requirement": "**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-007",
+      "label": "ZVL-007 Adresgegevens",
+      "requirement": "**Omschrijving**: Van de zorgverlener\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-008",
+      "label": "ZVL-008 Contactgegevens",
+      "requirement": "**Omschrijving**: Voor een specifieke rol e.g., werknemer email \r\nTelefoonnummer(s) of e-mailadres(sen), kan ook intercollegiaal telefoonnummer\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-009",
+      "label": "ZVL-009 Zorgaanbieder",
+      "requirement": "**Omschrijving**: Organisatie waarbij de zorgverlener werkzaam is\n\n**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-010",
+      "label": "ZVL-010 ZorgverlenerRol",
+      "requirement": "**Omschrijving**: Het concept ZorgverlenerRol kan op twee manieren worden tot uiting worden gebracht, als element in de bouwsteen en als definitiecode bij een verwijzing in een andere bouwsteen (Uitvoerder::Zorgverlener). In beide gevallen wordt voor de code uit dezelfde codelijst geput. Als beide mogelijkheden benut worden, mogen zij niet met elkaar in strijd zijn.\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "https://www.zibs.nl/images/9/9b/Nl.zorg.Zorgverlener-v3.2%282017NL%29.pdf"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-011",
+      "label": "ZVL-011 Zorgverlener(huisarts)",
+      "requirement": "**Omschrijving**: \"Indien beschikbaar de gegevens van de huisarts van de patiënt\"\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Kwaliteitsstandaard Uitwisseling Basisgegevensset Zorg tussen instellingen waar medisch-specialistische zorg wordt verleend"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-012",
+      "label": "ZVL-012 availableTime",
+      "requirement": "**Omschrijving**: Uit zib2020 Contactgegevens.Toelichting (NL-CM:20.6.9) -> \"Aangegeven kan bijvoorbeeld worden dat het een afdelingsnummer is (bij zorgverleners) of dat de bereikbaarheid slecht gedurende een aangegeven deel van de dag mogelijk is.\"\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "https://zibs.nl/wiki/Contactgegevens-v1.2(2020NL)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-013",
+      "label": "ZVL-013 ProfessionalRole.Role",
+      "requirement": "**Omschrijving**: Health professional role. Multiple roles could be provided.\r\nBinding Description: (preferred): ISCO, SNOMED CT. De ISCO waardenlijst bevat \"occupations\" e.g. Nursing professional, Specialist Medical Practitioners.",
+      "source": [
+        {
+          "display": "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/StructureDefinition-EHDSHealthProfessional.html"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-014",
+      "label": "ZVL-014 Practitioner",
+      "requirement": "**Omschrijving**: Practitioner that provides services for the organization\n\n**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "Zib2020 PractitionerRole profiel"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-015",
+      "label": "ZVL-015 ",
+      "requirement": "(geen requirementtekst)"
+    }
+  ]
+}
