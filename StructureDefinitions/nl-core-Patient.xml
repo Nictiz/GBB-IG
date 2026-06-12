@@ -31,11 +31,6 @@
     <name value="zib Patient-v4.3(2026EN)" />
   </mapping>
   <mapping>
-    <identity value="zib-nationality-v3.0-2020EN" />
-    <uri value="https://zibs.nl/wiki/Nationality-v3.0(2020EN)" />
-    <name value="zib Nationality-v3.0(2020EN)" />
-  </mapping>
-  <mapping>
     <identity value="zib-maritalstatus-v3.1-2020EN" />
     <uri value="https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)" />
     <name value="zib MaritalStatus-v3.1(2020EN)" />
