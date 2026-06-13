@@ -121,6 +121,10 @@ menu:
       Overview: Practitioner.html
       Requirements: Requirements-Practitioner.html
       Agreement model: StructureDefinition-Practitioner-model.html
+    PractitionerRole:
+      Overview: PractitionerRole.html
+      Requirements: Requirements-PractitionerRole.html
+      Agreement model: StructureDefinition-PractitionerRole-model.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
