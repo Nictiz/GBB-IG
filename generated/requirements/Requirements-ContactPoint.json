@@ -1,0 +1,42 @@
+{
+  "resourceType": "Requirements",
+  "id": "ContactPoint",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/ContactPoint",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CTP-01",
+      "label": "CTP-01 system",
+      "requirement": "**Omschrijving**: We willen weten of het contact point een van de volgende type is: phone | fax | email | pager | url | sms | other\n\n**Variabiliteit**: code (required)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CTP-02",
+      "label": "CTP-02 value",
+      "requirement": "**Omschrijving**: The actual contact point details\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CTP-03",
+      "label": "CTP-03 use",
+      "requirement": "**Omschrijving**: Purpose of this contact point: home | work | temp | old | mobile\n\n**Variabiliteit**: code (required)"
+    }
+  ]
+}

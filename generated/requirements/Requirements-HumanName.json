@@ -1,0 +1,227 @@
+{
+  "resourceType": "Requirements",
+  "id": "HumanName",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/HumanName",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-01",
+      "label": "NAA-01 extension:Nameuseage / humanNameAssemblyOrder",
+      "requirement": "**Omschrijving**: A code that represents the preferred display order of the components of this human name.\n\n**Variabiliteit**: NL1, NL2, NL3, NL4 (eigen naam, eerst partner dan eigen etc.)",
+      "source": [
+        {
+          "display": "Base FHIR extension"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-02",
+      "label": "NAA-02 use",
+      "requirement": "**Omschrijving**: Identifies the purpose for this name. Allows the appropriate name for a particular context of use to be selected from among a set of names.\n\n**Variabiliteit**: usual | official | temp | nickname | anonymous | old | maiden",
+      "source": [
+        {
+          "display": "FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-03",
+      "label": "NAA-03 use",
+      "requirement": "**Omschrijving**: NL-core wil alleen gebruik maken van official of usual. Hier zijn twee losse humanname profielen voor geschreven. Deze behoefte is nu niet ingeperkt tot deze twee waarden\n\n**Variabiliteit**: Usual OF official"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-04",
+      "label": "NAA-04 tekst (volledige naam)",
+      "requirement": "**Omschrijving**: Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "obligation uit NLcore-zib2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-05",
+      "label": "NAA-05 family (volledige achtenaam)",
+      "requirement": "**Omschrijving**: (gewoon de volledige achternaam) The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-06",
+      "label": "NAA-06 family.ownPrefix",
+      "requirement": "**Omschrijving**: The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-07",
+      "label": "NAA-07 family.ownName",
+      "requirement": "**Omschrijving**: The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-08",
+      "label": "NAA-08 family.partnerPrefix",
+      "requirement": "**Omschrijving**: The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09",
+      "label": "NAA-09 family.partnerName",
+      "requirement": "**Omschrijving**: The portion of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own name.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10",
+      "label": "NAA-10 given",
+      "requirement": "**Omschrijving**: Given names (not always 'first'). Includes middle names and/or initials. Optionally in case of \"usual\" name, also the name normally used to address the person.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "https://nictiz.atlassian.net/browse/ZIB-1435 \"Relatie initialen en voornamen\""
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10-1",
+      "label": "NAA-10-1 given",
+      "requirement": "**Omschrijving**: in combination with name.use = usual, the given name may include \"The name normally used to address the person.\". (Additionaly, the extension on given may be used to qualify this given name as CL (callme name))\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10-2",
+      "label": "NAA-10-2 given",
+      "requirement": "**Omschrijving**: in combination with name.use = official, the given name may include \"given, first and middle names.\" (Additionally, the extension on given may be used to qualify this given name as BR)\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10-3",
+      "label": "NAA-10-3 given",
+      "requirement": "**Omschrijving**: in combination with name.use = official, the given name may include \"initials\" (Additionally, the extension on given may be used to qualify this given name as IN)\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10-4",
+      "label": "NAA-10-4 given",
+      "requirement": "**Omschrijving**: all given names: first and middle names may be entered together in one .given entry, seperated by spaces.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10-5",
+      "label": "NAA-10-5 given",
+      "requirement": "**Omschrijving**: Initials may only be communicated if the first name is not known. Because initials can be derived from the full name\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-11",
+      "label": "NAA-11 given. Onderscheidbaar",
+      "requirement": "**Omschrijving**: Het is mogelijk om onderscheid te kunnen maken tussen voornamen, initialen en roepnamen. Mogelijk zou dit ment Entity Name Qualifier kunnen. \"A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.\"\n\n**Variabiliteit**: coded, EN-qualifiers? \"A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.\""
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-12",
+      "label": "NAA-12 prefix",
+      "requirement": "**Omschrijving**: Noble and scientific titles. These can assist in formulating oral and formal addressing titles.\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-13",
+      "label": "NAA-13 suffix",
+      "requirement": "**Omschrijving**: Noble and scientific titles. These can assist in formulating oral and formal addressing titles.\n\n**Variabiliteit**: string"
+    }
+  ]
+}

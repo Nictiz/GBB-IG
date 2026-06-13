@@ -1,0 +1,1687 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.4.12--20260604000000",
+  "language": "nl-NL",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-04T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.4.12--20260604000000",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.12"
+    }
+  ],
+  "version": "2026-06-04T00:00:00",
+  "name": "Patient_registratie",
+  "title": "Patient registratie",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://decor.nictiz.nl/fhir/StructureDefinition/Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.18--20260529090112",
+        "path": "Patient",
+        "short": "Patient",
+        "definition": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.52--20260529090131",
+        "path": "Patient.identificatienummer",
+        "short": "Identificatienummer",
+        "definition": "Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.identificatienummer",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueIdentifier": {
+              "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+              "value": "111222333"
+            }
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.330--20260612082556",
+        "path": "Patient.naamgegevens",
+        "short": "Naamgegevens",
+        "definition": "Naamgegevens",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.naamgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.352--20260612084307",
+        "path": "Patient.naamgegevens.naamgegevens",
+        "short": "Naamgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HumanName"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Naam van een mens of andere levende entiteit - naamdelen en gebruik",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Name of a human or other living entity - parts and usage"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.naamgegevens.naamgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.331--20260612082650",
+        "path": "Patient.contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Contactgegevens",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.353--20260612084323",
+        "path": "Patient.contactgegevens.contactInformatie",
+        "short": "ContactInformatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ContactPoint"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The contact’s telephone number and/or e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactgegevens.contactInformatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.54--20260529090131",
+        "path": "Patient.geslacht",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "46098-0",
+            "display": "Sex"
+          }
+        ],
+        "short": "Geslacht",
+        "definition": "Administratief geslacht van de patiënt.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.geslacht",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "46098-0",
+                  "display": "Sex"
+                }
+              ],
+              "text": "Female"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "GeslachtCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.17--20260529090058",
+        "path": "Patient.genderIdentiteit",
+        "short": "GenderIdentiteit",
+        "definition": "GenderIdentiteit\n\nRelatie naar zib 2026 Patient: NL-CM:0.1.34 Genderidentiteit Het gender waar de persoon zich mee identificeert. 33821000087103 Gender identity, GenderidentiteitCodelijst\n\nFHIR codelist http://terminology.hl7.org/ValueSet/gender-identity",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.genderIdentiteit",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.53--20260529090131",
+        "path": "Patient.geboortedatum",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8",
+            "display": "Birth date"
+          }
+        ],
+        "short": "Geboortedatum",
+        "definition": "Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.geboortedatum",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.333--20260612082814",
+        "path": "Patient.overleden",
+        "short": "Overleden",
+        "definition": "Overleden",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.56--20260529090131",
+        "path": "Patient.overleden.overlijdensIndicator",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "397709008",
+            "display": "patiënt overleden"
+          }
+        ],
+        "short": "OverlijdensIndicator",
+        "definition": "Indicator die aangeeft of de patiënt overleden is.",
+        "comment": "* 0..1R Als DatumOverlijden niet bekend is\n* 0..0 If DateOfDeath is known",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden.overlijdensIndicator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueBoolean": false
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.57--20260529090131",
+        "path": "Patient.overleden.datumOverlijden",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "81954-0",
+            "display": "Date of death [Date]"
+          }
+        ],
+        "short": "DatumOverlijden",
+        "definition": "De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden.datumOverlijden",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.332--20260612082715",
+        "path": "Patient.adres",
+        "short": "Adres",
+        "definition": "Adres",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.adres",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.354--20260612084351",
+        "path": "Patient.adres.adresgegevens",
+        "short": "Adresgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Address"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.adres.adresgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.334--20260612083132",
+        "path": "Patient.meerling",
+        "short": "Meerling",
+        "definition": "Meerling",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.55--20260529090131",
+        "path": "Patient.meerling.meerlingIndicator",
+        "short": "MeerlingIndicator",
+        "definition": "Indicator die aangeeft of de patiënt één van een meerling is.",
+        "comment": "* 0..1R Als MeerlingVolgorde niet bekend\n* 0..0 Als MeerlingVolgorde bekend",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling.meerlingIndicator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueBoolean": false
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.335--20260612083156",
+        "path": "Patient.meerling.meerlingvolgorde",
+        "short": "Meerlingvolgorde",
+        "definition": "Meerlingvolgorde. Het geboortenummer in de reeks bij de geboorte van een meerling. De eerstgeborene krijgt waarde 1. De middelste geboorte in een drieling zou bijvoorbeeld de waarde 2 krijgen en de derde geboorte zou de waarde 3 hebben. Als meerlingvolgorde is gevuld dan kan de waarde van de MeerlingIndicator als \"Waar\" beschouwd worden maar hoeft niet uitgewisseld te worden.\n\nRelatie naar zib 2026 Patient NL-CM:0.1.35 Meerlingvolgorde",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling.meerlingvolgorde",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Count"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.325--20260611074313",
+        "path": "Patient.contactPersoon",
+        "short": "ContactPersoon",
+        "definition": "contact",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactPersoon",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.337--20260612083636",
+        "path": "Patient.contactPersoon.naam",
+        "short": "Naam",
+        "definition": "Adres",
+        "comment": "* 1..1R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1R Anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.naam",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.350--20260612084134",
+        "path": "Patient.contactPersoon.naam.naamgegevens",
+        "short": "Naamgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HumanName"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Naam van een mens of andere levende entiteit - naamdelen en gebruik",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Name of a human or other living entity - parts and usage"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.naam.naamgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.336--20260612083611",
+        "path": "Patient.contactPersoon.contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Contactgegevens",
+        "comment": "* 1..*R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..*R Anders",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactPersoon.contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.348--20260612084015",
+        "path": "Patient.contactPersoon.contactgegevens.contactInformatie",
+        "short": "ContactInformatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ContactPoint"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The contact’s telephone number and/or e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.contactgegevens.contactInformatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.328--20260612072912",
+        "path": "Patient.contactPersoon.address",
+        "short": "Address",
+        "definition": "Address",
+        "comment": "* 1..1R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1R Anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.349--20260612084050",
+        "path": "Patient.contactPersoon.address.adresgegevens",
+        "short": "Adresgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Address"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.address.adresgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.338--20260612083706",
+        "path": "Patient.contactPersoon.organisatie",
+        "short": "Organisatie",
+        "definition": "Organisatie",
+        "comment": "* 1..1 Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1 anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.organisatie",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.351--20260612084217",
+        "path": "Patient.contactPersoon.organisatie.organisatie",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "Organisatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organization"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.organisatie.organisatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.281--20260611062640"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.18--20260529090112",
+        "path": "Patient",
+        "short": "Patient",
+        "definition": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.52--20260529090131",
+        "path": "Patient.identificatienummer",
+        "short": "Identificatienummer",
+        "definition": "Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.identificatienummer",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueIdentifier": {
+              "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+              "value": "111222333"
+            }
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.330--20260612082556",
+        "path": "Patient.naamgegevens",
+        "short": "Naamgegevens",
+        "definition": "Naamgegevens",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.naamgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.352--20260612084307",
+        "path": "Patient.naamgegevens.naamgegevens",
+        "short": "Naamgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HumanName"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Naam van een mens of andere levende entiteit - naamdelen en gebruik",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Name of a human or other living entity - parts and usage"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.naamgegevens.naamgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.331--20260612082650",
+        "path": "Patient.contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Contactgegevens",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.353--20260612084323",
+        "path": "Patient.contactgegevens.contactInformatie",
+        "short": "ContactInformatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ContactPoint"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The contact’s telephone number and/or e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactgegevens.contactInformatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.54--20260529090131",
+        "path": "Patient.geslacht",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "46098-0",
+            "display": "Sex"
+          }
+        ],
+        "short": "Geslacht",
+        "definition": "Administratief geslacht van de patiënt.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.geslacht",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "46098-0",
+                  "display": "Sex"
+                }
+              ],
+              "text": "Female"
+            }
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "GeslachtCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.17--20260529090058",
+        "path": "Patient.genderIdentiteit",
+        "short": "GenderIdentiteit",
+        "definition": "GenderIdentiteit\n\nRelatie naar zib 2026 Patient: NL-CM:0.1.34 Genderidentiteit Het gender waar de persoon zich mee identificeert. 33821000087103 Gender identity, GenderidentiteitCodelijst\n\nFHIR codelist http://terminology.hl7.org/ValueSet/gender-identity",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.genderIdentiteit",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.53--20260529090131",
+        "path": "Patient.geboortedatum",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8",
+            "display": "Birth date"
+          }
+        ],
+        "short": "Geboortedatum",
+        "definition": "Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.geboortedatum",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.333--20260612082814",
+        "path": "Patient.overleden",
+        "short": "Overleden",
+        "definition": "Overleden",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.56--20260529090131",
+        "path": "Patient.overleden.overlijdensIndicator",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "397709008",
+            "display": "patiënt overleden"
+          }
+        ],
+        "short": "OverlijdensIndicator",
+        "definition": "Indicator die aangeeft of de patiënt overleden is.",
+        "comment": "* 0..1R Als DatumOverlijden niet bekend is\n* 0..0 If DateOfDeath is known",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden.overlijdensIndicator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueBoolean": false
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.57--20260529090131",
+        "path": "Patient.overleden.datumOverlijden",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "81954-0",
+            "display": "Date of death [Date]"
+          }
+        ],
+        "short": "DatumOverlijden",
+        "definition": "De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.overleden.datumOverlijden",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.332--20260612082715",
+        "path": "Patient.adres",
+        "short": "Adres",
+        "definition": "Adres",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.adres",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.354--20260612084351",
+        "path": "Patient.adres.adresgegevens",
+        "short": "Adresgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Address"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.adres.adresgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.334--20260612083132",
+        "path": "Patient.meerling",
+        "short": "Meerling",
+        "definition": "Meerling",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.55--20260529090131",
+        "path": "Patient.meerling.meerlingIndicator",
+        "short": "MeerlingIndicator",
+        "definition": "Indicator die aangeeft of de patiënt één van een meerling is.",
+        "comment": "* 0..1R Als MeerlingVolgorde niet bekend\n* 0..0 Als MeerlingVolgorde bekend",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling.meerlingIndicator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "example": [
+          {
+            "label": "example 1",
+            "valueBoolean": false
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.335--20260612083156",
+        "path": "Patient.meerling.meerlingvolgorde",
+        "short": "Meerlingvolgorde",
+        "definition": "Meerlingvolgorde. Het geboortenummer in de reeks bij de geboorte van een meerling. De eerstgeborene krijgt waarde 1. De middelste geboorte in een drieling zou bijvoorbeeld de waarde 2 krijgen en de derde geboorte zou de waarde 3 hebben. Als meerlingvolgorde is gevuld dan kan de waarde van de MeerlingIndicator als \"Waar\" beschouwd worden maar hoeft niet uitgewisseld te worden.\n\nRelatie naar zib 2026 Patient NL-CM:0.1.35 Meerlingvolgorde",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.meerling.meerlingvolgorde",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Count"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.325--20260611074313",
+        "path": "Patient.contactPersoon",
+        "short": "ContactPersoon",
+        "definition": "contact",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactPersoon",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.337--20260612083636",
+        "path": "Patient.contactPersoon.naam",
+        "short": "Naam",
+        "definition": "Adres",
+        "comment": "* 1..1R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1R Anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.naam",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.350--20260612084134",
+        "path": "Patient.contactPersoon.naam.naamgegevens",
+        "short": "Naamgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "HumanName"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Naam van een mens of andere levende entiteit - naamdelen en gebruik",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Name of a human or other living entity - parts and usage"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.naam.naamgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.336--20260612083611",
+        "path": "Patient.contactPersoon.contactgegevens",
+        "short": "Contactgegevens",
+        "definition": "Contactgegevens",
+        "comment": "* 1..*R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..*R Anders",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactPersoon.contactgegevens",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.348--20260612084015",
+        "path": "Patient.contactPersoon.contactgegevens.contactInformatie",
+        "short": "ContactInformatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "ContactPoint"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telefoonnummer en/of e-mailadres van contactpersoon.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The contact’s telephone number and/or e-mail address."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.contactgegevens.contactInformatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.328--20260612072912",
+        "path": "Patient.contactPersoon.address",
+        "short": "Address",
+        "definition": "Address",
+        "comment": "* 1..1R Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1R Anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.349--20260612084050",
+        "path": "Patient.contactPersoon.address.adresgegevens",
+        "short": "Adresgegevens",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Address"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.address.adresgegevens",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.338--20260612083706",
+        "path": "Patient.contactPersoon.organisatie",
+        "short": "Organisatie",
+        "definition": "Organisatie",
+        "comment": "* 1..1 Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie \n* 0..1 anders",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.organisatie",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.351--20260612084217",
+        "path": "Patient.contactPersoon.organisatie.organisatie",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "Organisatie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organization"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Root concept of the Healthcare Provider information model. This root concept contains all data elements of the Healthcare Provider information model."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactPersoon.organisatie.organisatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.281--20260611062640"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

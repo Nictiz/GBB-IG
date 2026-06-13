@@ -1,0 +1,202 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nictiz.nl.gbb",
+  "url": "http://nictiz.nl/gbb/ImplementationGuide/nictiz.nl.gbb",
+  "version": "0.1.0",
+  "name": "GenericBuildingBlocks",
+  "status": "draft",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "packageId": "nictiz.nl.gbb",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Requirements/Address"
+        },
+        "exampleBoolean": false,
+        "name": "Address"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/ContactPoint"
+        },
+        "exampleBoolean": false,
+        "name": "ContactPoint"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/HumanName"
+        },
+        "exampleBoolean": false,
+        "name": "HumanName"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-Address"
+        },
+        "description": "Address information includes data where a person resides (temporarily, permanently) or where a building is located.",
+        "exampleBoolean": false,
+        "name": "nl core Address"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-ContactPoint"
+        },
+        "description": "Contact information includes a person's telephone numbers and e-mail addresses.",
+        "exampleBoolean": false,
+        "name": "nl core ContactPoint"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-Patient"
+        },
+        "description": "A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.\r\nNationality is used as an indication of the country of citizenship. \r\nMarital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.\r\nLinguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication.",
+        "exampleBoolean": false,
+        "name": "nl core Patient"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-Practitioner"
+        },
+        "exampleBoolean": false,
+        "name": "nl core Practitioner"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-PractitionerRole"
+        },
+        "exampleBoolean": false,
+        "name": "nl core PractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-HumanName"
+        },
+        "description": "A person's official name information, including given names, last name and possibly the partner's last name.",
+        "exampleBoolean": false,
+        "name": "nl.core HumanName"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/Patient"
+        },
+        "exampleBoolean": false,
+        "name": "Patient"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.4.12--20260604000000"
+        },
+        "exampleBoolean": false,
+        "name": "Patient registratie"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/Practitioner"
+        },
+        "exampleBoolean": false,
+        "name": "Practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/PractitionerRole"
+        },
+        "exampleBoolean": false,
+        "name": "PractitionerRole"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Address.html",
+          "title": "Address",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ContactPoint.html",
+          "title": "Contact Point",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "HumanName.html",
+          "title": "Human Name",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Patient.html",
+          "title": "Patient",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Practitioner.html",
+          "title": "Practitioner",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/requirements"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/logicalmodels"
+      },
+      {
+        "code": "path-pages",
+        "value": "generated/pagecontent"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "nl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/nl"
+      }
+    ]
+  }
+}

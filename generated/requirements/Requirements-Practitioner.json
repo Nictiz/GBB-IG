@@ -1,0 +1,105 @@
+{
+  "resourceType": "Requirements",
+  "id": "Practitioner",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Practitioner",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-001",
+      "label": "ZVL-001 ZorgverlenerIdentificatienummer",
+      "requirement": "**Omschrijving**: Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.\r\nIn de Nederlandse situatie worden de volgende nummers gebruikt:\r\n1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.\r\n2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties\r\n3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.\r\n\r\nVoor buitenlandse zorgverleners zijn deze gegevens niet voorhanden.\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-002",
+      "label": "ZVL-002 Naamgegevens",
+      "requirement": "**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-003",
+      "label": "ZVL-003 Naamgegevens",
+      "requirement": "**Variabiliteit**: 0..1",
+      "source": [
+        {
+          "display": "EU-Core"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-004",
+      "label": "ZVL-004 Geslacht",
+      "requirement": "**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-005",
+      "label": "ZVL-005 Adresgegevens",
+      "requirement": "**Omschrijving**: Van de zorgverlener\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Richtlijn Verslaglegging"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-006",
+      "label": "ZVL-006 Zorgverlener(huisarts)",
+      "requirement": "**Omschrijving**: \"Indien beschikbaar de gegevens van de huisarts van de patiënt\"\n\n**Variabiliteit**: 0..*",
+      "source": [
+        {
+          "display": "Kwaliteitsstandaard Uitwisseling Basisgegevensset Zorg tussen instellingen waar medisch-specialistische zorg wordt verleend"
+        }
+      ]
+    }
+  ]
+}

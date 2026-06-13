@@ -1,0 +1,13 @@
+[Address]: Requirements-Address.html
+[ContactPoint]: Requirements-ContactPoint.html
+[HumanName]: Requirements-HumanName.html
+[NlcoreAddress]: StructureDefinition-nl-core-Address.html
+[NlCoreContactPoint]: StructureDefinition-nl-core-ContactPoint.html
+[NlcorePatient]: StructureDefinition-nl-core-Patient.html
+[NlcorePractitioner]: StructureDefinition-nl-core-Practitioner.html
+[NlcorePractitionerRole]: StructureDefinition-nl-core-PractitionerRole.html
+[NlCoreHumanName]: StructureDefinition-nl-core-HumanName.html
+[Patient]: Requirements-Patient.html
+[Patient_registratie]: StructureDefinition-2.16.840.1.113883.2.4.3.11.60.153.4.12--20260604000000.html
+[Practitioner]: Requirements-Practitioner.html
+[PractitionerRole]: Requirements-PractitionerRole.html
