@@ -7,7 +7,8 @@ class TargetFolders {
   static subfolders = {
     "RequirementResources": "requirements",
     "PageContent":          "pagecontent",
-    "LogicalModels":        "logicalmodels"
+    "LogicalModels":        "logicalmodels",
+    "ValueSets":            "valuesets",
   }
 
   constructor(baseFolder) {
@@ -23,6 +24,122 @@ class TargetFolders {
 
   get(subfolderType) {
     return path.join(this.baseFolder, TargetFolders.subfolders[subfolderType]);
+  }
+}
+
+class ValueSetDownloader {
+  static skippedCanonicalPrefixes = [
+    "http://hl7.org",
+    "http://terminology.hl7.org"
+  ];
+
+  constructor(outputFolder) {
+    this.outputFolder = outputFolder;
+    this.downloadedCanonicals = new Set();
+    this.pendingDownloads = new Map();
+  }
+
+  async downloadAll(canonicals) {
+    for (const canonical of canonicals) {
+      await this.download(canonical);
+    }
+  }
+
+  async download(canonical) {
+    const normalizedCanonical = this.#normalizeCanonical(canonical);
+    if (
+      !normalizedCanonical ||
+      this.#shouldSkipCanonical(normalizedCanonical) ||
+      this.downloadedCanonicals.has(normalizedCanonical)
+    ) return;
+
+    if (this.pendingDownloads.has(normalizedCanonical)) {
+      await this.pendingDownloads.get(normalizedCanonical);
+      return;
+    }
+
+    const download = this.#download(normalizedCanonical)
+      .finally(() => this.pendingDownloads.delete(normalizedCanonical));
+
+    this.pendingDownloads.set(normalizedCanonical, download);
+    await download;
+  }
+
+  async #download(canonical) {
+    this.downloadedCanonicals.add(canonical);
+
+    try {
+      const response = await fetch(this.#toDownloadUrl(canonical), {
+        headers: {
+          "Accept": "application/fhir+json, application/json; fhirVersion=4.0"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+
+      const valueSet = await response.json();
+      if (valueSet.resourceType != "ValueSet") {
+        throw new Error(`Expected ValueSet, got ${valueSet.resourceType ?? "unknown resource"}`);
+      }
+
+      const outputFile = path.join(
+        this.outputFolder,
+        `${this.#safeFileName(valueSet.name || valueSet.id || this.#fallbackName(canonical))}.json`
+      );
+
+      fs.writeFileSync(outputFile, JSON.stringify(valueSet, null, 2), "utf8");
+      console.log(`Saved ValueSet to ${outputFile}`);
+
+      await this.downloadAll(this.#getIncludedValueSetCanonicals(valueSet));
+    } catch (error) {
+      console.warn(`Couldn't download ValueSet ${canonical}, "${error.message}"`);
+    }
+  }
+
+  #getIncludedValueSetCanonicals(valueSet) {
+    const canonicals = new Set();
+
+    for (const include of valueSet.compose?.include ?? []) {
+      this.#addCanonicals(canonicals, include.valueSet);
+    }
+
+    return Array.from(canonicals);
+  }
+
+  #addCanonicals(canonicals, value) {
+    if (Array.isArray(value)) {
+      value.forEach(canonical => this.#addCanonicals(canonicals, canonical));
+      return;
+    }
+
+    const canonical = this.#normalizeCanonical(value);
+    if (canonical) {
+      canonicals.add(canonical);
+    }
+  }
+
+  #normalizeCanonical(canonical) {
+    return typeof canonical == "string" ? canonical.trim() : "";
+  }
+
+  #shouldSkipCanonical(canonical) {
+    return ValueSetDownloader.skippedCanonicalPrefixes.some(prefix => canonical.startsWith(prefix));
+  }
+
+  #toDownloadUrl(canonical) {
+    const resourceUrl = new URL(canonical.split("|")[0]);
+    resourceUrl.searchParams.set("_format", "json");
+    return resourceUrl.toString();
+  }
+
+  #fallbackName(canonical) {
+    return canonical.split("|")[0].split("/").filter(Boolean).pop() || "ValueSet";
+  }
+
+  #safeFileName(fileName) {
+    return fileName.replace(/[<>:"/\\|?*\x00-\x1F]/g, "_");
   }
 }
 
@@ -44,12 +161,13 @@ class ExcelConvertor {
 
   static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
 
-  constructor(inputFile, targetFolders) {
+  constructor(inputFile, targetFolders, valueSetDownloader) {
     this.inputFile = inputFile;
     this.fileRoot = path.basename(inputFile.name, path.extname(inputFile.name));
     this.workbook = XLSX.readFile(path.join(inputFile.parentPath, inputFile.name));
 
     this.targetFolders = targetFolders;
+    this.valueSetDownloader = valueSetDownloader;
   }
 
   #cell(row, colName) {
@@ -154,14 +272,50 @@ class ExcelConvertor {
       const id_parts = ad_id.split("/");
       const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
       const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+
       const body = await response.json();
       
       const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
       fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
       console.log(`Saved LogicalModel to ${outputFile}`);
+
+      await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
     } catch (error) {
       console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR, "${error.message}"`);
       return;
+    }
+  }
+
+  #getBindingValueSetCanonicals(structureDefinition) {
+    const canonicals = new Set();
+
+    for (const element of [
+      ...(structureDefinition.snapshot?.element ?? []),
+      ...(structureDefinition.differential?.element ?? [])
+    ]) {
+      const binding = element.binding;
+      if (!binding) continue;
+
+      this.#addCanonicals(canonicals, binding.valueSet);
+      this.#addCanonicals(canonicals, binding.valueSetCanonical);
+      this.#addCanonicals(canonicals, binding.valueSetUri);
+      this.#addCanonicals(canonicals, binding.valueSetReference?.reference);
+    }
+
+    return Array.from(canonicals);
+  }
+
+  #addCanonicals(canonicals, value) {
+    if (Array.isArray(value)) {
+      value.forEach(canonical => this.#addCanonicals(canonicals, canonical));
+      return;
+    }
+
+    if (typeof value == "string" && value.trim()) {
+      canonicals.add(value.trim());
     }
   }
 
@@ -193,11 +347,19 @@ if (!inputFolder || !outputFolder) {
   process.exit(1);
 }
 
-const targetFolders = new TargetFolders(outputFolder);
-for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
-  const convertor = new ExcelConvertor(excelFile, targetFolders);
-  convertor.convertRequirements();
-  convertor.convertConceptPage();
-  convertor.getLogicalModel();
+async function main() {
+  const targetFolders = new TargetFolders(outputFolder);
+  const valueSetDownloader = new ValueSetDownloader(targetFolders.get("ValueSets"));
+
+  for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
+    const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
+    convertor.convertRequirements();
+    convertor.convertConceptPage();
+    await convertor.getLogicalModel();
+  }
 }
 
+main().catch(error => {
+  console.error(error);
+  process.exit(1);
+});
