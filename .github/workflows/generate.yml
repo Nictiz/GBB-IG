@@ -8,6 +8,7 @@ name: Build IG for branch
 on: [push]
 jobs:
   CommitArtifacts:
+    if: ${{ !startsWith(github.ref_name, '_generated_') }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -15,7 +16,7 @@ jobs:
       - name: Create and checkout branch for generated artifacts
         id: create-branch
         run: |
-          current_branch=$(git branch --show-current)
+          current_branch="${GITHUB_REF_NAME}"
           generated_branch="_generated_${current_branch}"
           git branch -f "$generated_branch" "$current_branch"
           git switch "$generated_branch"
