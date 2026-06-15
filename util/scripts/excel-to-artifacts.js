@@ -8,7 +8,7 @@ class TargetFolders {
     "RequirementResources": "requirements",
     "PageContent":          "pagecontent",
     "LogicalModels":        "logicalmodels",
-    "ValueSets":            "valuesets",
+    "Vocabulary":           "vocabulary",
   }
 
   constructor(baseFolder) {
@@ -350,7 +350,7 @@ if (!inputFolder || !outputFolder) {
 
 async function main() {
   const targetFolders = new TargetFolders(outputFolder);
-  const valueSetDownloader = new ValueSetDownloader(targetFolders.get("ValueSets"));
+  const valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
 
   for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
