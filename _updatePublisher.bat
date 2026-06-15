@@ -136,7 +136,9 @@ GOTO done
 
 
 ECHO.
-ECHO Updating scripts
+ECHO Not updating scripts
+GOTO end
+
 IF "%skipPrompts%"=="y" (
 	SET updateScripts=Y
 ) ELSE (
