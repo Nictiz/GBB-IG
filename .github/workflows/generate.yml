@@ -23,9 +23,9 @@ jobs:
           echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
       - name: Generate artifacts
         run: |
-          cd scripts
+          cd util/scripts
           npm install
-          cd ..
+          cd ../..
           node util/scripts/excel-to-artifacts.js input/requirements generated
       - name: Run sushi
         run: |
