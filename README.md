@@ -110,3 +110,10 @@ menu:
   ...
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.
+
+### FHIR quality control
+
+The FHIR IG Publisher famously creates a qa.html page that shows all kinds of qa problems in the FHIR materials. In addition to this, the [Nictiz custom tooling](https://github.com/Nictiz/Nictiz-tooling-R4-QA) is installed here. These tools are used in the configured Github actions (configured in `.github/actions/*.yml` from the root of this repo). To use them manually:
+* Make sure Docker or Podman is running (when using Podman, enable Docker compatibility mode and install the Podman Compose extension).
+* Start the batch scripts "_qa.bat"
+* Point your webbrowser at http://localhost:9000. This will give you a menu of the checks that you can perform.
