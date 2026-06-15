@@ -15,7 +15,7 @@ fi
 
 echo "$txoption"
 
-node scripts/excel-to-artifacts.js input/requirements generated
+node util/scripts/excel-to-artifacts.js input/requirements generated
 
 export JAVA_TOOL_OPTIONS="$JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8"
 
