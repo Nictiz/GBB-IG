@@ -72,6 +72,12 @@ The "afsprakenmodel" is authored using ART-DECOR. The id of the relevant transac
 
 Upon building, the logical model will be downloaded and added to the guide.
 
+### FHIR materials
+FHIR materials can be added manually, using the following folders:
+* input/profiles: for profiles and extensions
+* input/vocabulary: for ValueSet, CodeSystem, NamingSystem and ConceptMap resources
+* input/resources: for example materials and other resources
+
 ### Translations
 The IG is a multilingual IG, in both Dutch and English. The primary language is Dutch, all English content is seen as a translation.
 
