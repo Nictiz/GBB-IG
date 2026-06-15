@@ -104,6 +104,25 @@
         <comment value="HealthcareProvider" />
       </mapping>
     </element>
+    <element id="PractitionerRole.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="PractitionerRole.code" />
+    </element>
     <element id="PractitionerRole.specialty">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
