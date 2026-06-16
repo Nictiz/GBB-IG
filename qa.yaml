@@ -1,0 +1,47 @@
+main branch: origin/main
+ignored issues: known-issues.yml
+igs:
+  - input/
+  # - vocabulary
+  - util/qa
+script dir: util/qa
+
+patterns:
+  nl-core profiles: input/profiles/nl-core-*.xml
+  conceptmaps:
+  - input/vocabulary/**/ConceptMap-*.xml
+  codesystems:
+  - input/vocabulary/**/CodeSystem-*.xml
+  valuesets:
+  - input/vocabulary/**/ValueSet-*.xml
+  other terminology:
+  - input/vocabulary/**/*.xml
+  SearchParameters: input/resources/*.xml
+  examples: input/examples/*.xml
+
+steps:
+  validate nl-core profiles:
+    description: Validate the nl-core profiles using the profile for nl-core profiles
+    patterns: nl-core profiles
+    profile:
+    - http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions-NlCore-GBB-Profiles
+  validate ConceptMaps:
+    description: Validate the ConceptMaps using the profile for ConceptMaps
+    patterns: conceptmaps
+    profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-ConceptMaps"
+  validate CodeSystems:
+    description: Validate CodeSystem resources
+    patterns: codesystems
+  validate ValueSets:
+    description: Validate ValueSet resources
+    patterns: valuesets
+  validate other terminology:
+    description: Validate the other terminology resources
+    patterns: other terminology
+  validate SearchParameters:
+    description: Validate SearchParameters
+    patterns: SearchParameters
+    profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-SearchParameters"
+  validate examples:
+    description: Validate examples using the generic FHIR validation rules
+    patterns: examples

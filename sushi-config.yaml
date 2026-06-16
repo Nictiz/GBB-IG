@@ -17,7 +17,7 @@ releaseLabel: ci-build
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: Nictiz
-  url: http://nictiz.nl
+  url: https://nictiz.nl
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -67,6 +67,7 @@ parameters:
   path-resource:
   - 'generated/requirements'
   - 'generated/logicalmodels'
+  - 'generated/vocabulary'
   path-pages:
   - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
   i18n-default-lang: nl
@@ -92,12 +93,12 @@ menu:
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
   # | following entries should normally be added:                                                    |
-  # | Building blocks:                                                                               |
-  # |   [Building block name]:                                                                       |
-  # |     Overview: [building block name].html (from pagecontent/[building blovk name].md            |
+  # | Bouwblokken:                                                                                   |
+  # |   [Dutch building block name]:                                                                 |
+  # |     Overzicht: [English building block name].html (from pagecontent/[building block name]).md  |
   # |     Requirements: Requirements-[building block name].html                                      |
-  # |     Agreement model: StructureDefinition-[building-block-name]-model.html                      |
-  # |     FHIR resource: StructureDefinition-nl-core-[building-block-name].html                      |
+  # |     Afsprakenmodel: StructureDefinition-[English building block name]-model.html               |
+  # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Building blocks:
@@ -105,7 +106,7 @@ menu:
       Overview: Patient.html
       Requirements: Requirements-Patient.html
       Agreement model: StructureDefinition-Patient-model.html
-  Artifacts: artifacts.html
+  Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

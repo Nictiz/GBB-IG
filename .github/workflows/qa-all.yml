@@ -1,0 +1,22 @@
+name: Profile QA - full repository
+on:
+  pull_request:
+    types: [ready_for_review, synchronize]
+
+jobs:
+  nictiz-r4-qa-full:
+    name: Loose QA on the entire repo
+    if: ${{ github.event.pull_request.action == 'ready_for_review' || github.event.pull_request.draft == false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: GB QA
+        uses: Nictiz/Nictiz-tooling-R4-QA@6.4.0
+        with:
+          changed-only: false
+          verbosity-level: warning
+          best-practice-warnings: false
+          suppress-display-issues: true
