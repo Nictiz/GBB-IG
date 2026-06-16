@@ -1,0 +1,595 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Procedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure" />
+  <name value="NlcoreProcedure" />
+  <title value="nl core Procedure" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-Procedure" />
+    <uri value="http://nictiz.nl/gbb/Requirements/Procedure" />
+    <name value="Information requirements for Procedure" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.extension:method">
+      <path value="Procedure.extension" />
+      <sliceName value="method" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/procedure-method" />
+      </type>
+      <isModifier value="false" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://VerrichtingMethodeCodeLijst" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://VerrichtingMethodeCodelijst" />
+      </binding>
+    </element>
+    <element id="Procedure.extension:method.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.extension.value[x]" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="13" />
+      </mapping>
+    </element>
+    <element id="Procedure.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.status" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="9.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="9.2" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="9.3" />
+      </mapping>
+    </element>
+    <element id="Procedure.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.category" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="8" />
+      </mapping>
+    </element>
+    <element id="Procedure.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.code" />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current-extensible" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="TBD - ref sets van rij 2-7?" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://snomed-verrichting-valueset" />
+      </binding>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="4.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="4.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.subject" />
+      <mustSupport value="false" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="10.1" />
+        <comment value="Who the procedure was performed on" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="10.2" />
+        <comment value="Subject of care" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="10.3" />
+        <comment value="Patient/subject information" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.performed[x]:performedDateTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.1" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod">
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.start">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.performed[x].start" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.2" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.3" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.end">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.performed[x].end" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.3" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedString">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedString" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.3" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.1.2" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="3.1" />
+        <comment value="Zorgverlener als uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="3.3" />
+        <comment value="Patiënt als uitvoerder" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="3.4" />
+        <comment value="Contactperso(o)n(en) als uitvoerder" />
+      </mapping>
+    </element>
+    <element id="Procedure.location">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.location" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="5.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="5.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.reasonCode" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current-extensible" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://DiagnoseNaamCodeLijst" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://waardelijst-SNOMED-ICD10-Orphacode" />
+      </binding>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="7.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="7.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonReference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.reasonReference" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="7.1" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="7.2" />
+      </mapping>
+    </element>
+    <element id="Procedure.bodySite">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.bodySite" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="6" />
+      </mapping>
+    </element>
+    <element id="Procedure.outcome">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.outcome" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="16" />
+      </mapping>
+    </element>
+    <element id="Procedure.complication">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.complication" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="17" />
+      </mapping>
+    </element>
+    <element id="Procedure.note.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.note.text" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="18" />
+      </mapping>
+    </element>
+    <element id="Procedure.focalDevice.manipulated">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.focalDevice.manipulated" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="14" />
+      </mapping>
+    </element>
+    <element id="Procedure.usedReference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Ontsluitend systeem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Verwerkend systeem" />
+        </extension>
+      </extension>
+      <path value="Procedure.usedReference" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="15" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
