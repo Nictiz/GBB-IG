@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-ContactPoint" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
+  <name value="NlCoreContactPoint" />
+  <title value="nl core ContactPoint" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Contact information includes a person's telephone numbers and e-mail addresses." />
+  <purpose value="This profile is the FHIR implementation of the general building block [ContactPoint](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/ContactPoint)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="zib-contactinformation-v1.2-2020EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
+    <name value="zib ContactInformation-v1.2(2020EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="true" />
+  <type value="ContactPoint" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactPoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ContactPoint">
+      <path value="ContactPoint" />
+      <short value="TelephoneNumbers / EmailAddresses" />
+      <comment value="Implementation of the &quot;TelephoneNumbers&quot; concept of zib ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that, although the zib concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively, a mismatch occurs on the concept of mobile phone numbers; the zib uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the zib code will need to be communicated using the ext-CodeSpecification extension." />
+      <alias value="Telefoonnummers / EmailAdressen" />
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.2" />
+        <comment value="TelephoneNumbers" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.3" />
+        <comment value="EmailAddresses" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.system">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="ContactPoint.system" />
+      <short value="TelecomType" />
+      <definition value="The telecom or device type that the telephone number is connected to." />
+      <alias value="TelecomType" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap TelecomType-to-ContactInformation-TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersSystem." />
+        <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersSystem">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/TelecomType-to-ContactInformation-TelephoneNumbersSystem" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.5" />
+        <comment value="TelecomType" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="ContactPoint.value" />
+      <short value="TelephoneNumber / EmailAddress" />
+      <definition value="The person's telephone number." />
+      <alias value="Telefoonnummer / EmailAdres" />
+      <min value="1" />
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.4" />
+        <comment value="TelephoneNumber" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.7" />
+        <comment value="EmailAddress" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="ContactPoint.use" />
+      <short value="NumberType / EmailAddressType" />
+      <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number." />
+      <alias value="NummerSoort / EmailSoort" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersUse." />
+        <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersUse">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.6" />
+        <comment value="NumberType" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
