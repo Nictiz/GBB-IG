@@ -72,6 +72,12 @@ The "afsprakenmodel" is authored using ART-DECOR. The id of the relevant transac
 
 Upon building, the logical model will be downloaded and added to the guide.
 
+### FHIR materials
+FHIR materials can be added manually, using the following folders:
+* input/profiles: for profiles and extensions
+* input/vocabulary: for ValueSet, CodeSystem, NamingSystem and ConceptMap resources
+* input/resources: for example materials and other resources
+
 ### Translations
 The IG is a multilingual IG, in both Dutch and English. The primary language is Dutch, all English content is seen as a translation.
 
@@ -90,10 +96,10 @@ menu:
   ...
   Bouwblokken:
     [Dutch building block name]:
-      Overzicht: [English building block name].html (from pagecontent/[building block name].md
+      Overzicht: [English building block name].html (from pagecontent/[building block name]).md
       Requirements: Requirements-[building block name].html
       Afsprakenmodel: StructureDefinition-[English building block name]-model.html
-      FHIR-resource: StructureDefinition-nl-core-[English building block name].html
+      FHIR-profiel: StructureDefinition-nl-core-[English building block name].html
   ...
 ```
 
@@ -106,7 +112,14 @@ menu:
       Overzicht: Patient.html
       Requirements: Requirements-Patient.html
       Afsprakenmodel: StructureDefinition-Patient-model.html
-      FHIR-resource: StructureDefinition-nl-core-Patient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
   ...
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.
+
+### FHIR quality control
+
+The FHIR IG Publisher famously creates a qa.html page that shows all kinds of qa problems in the FHIR materials. In addition to this, the [Nictiz custom tooling](https://github.com/Nictiz/Nictiz-tooling-R4-QA) is installed here. These tools are used in the configured Github actions (configured in `.github/actions/*.yml` from the root of this repo). To use them manually:
+* Make sure Docker or Podman is running (when using Podman, enable Docker compatibility mode and install the Podman Compose extension).
+* Start the batch scripts "_qa.bat"
+* Point your webbrowser at http://localhost:9000. This will give you a menu of the checks that you can perform.
