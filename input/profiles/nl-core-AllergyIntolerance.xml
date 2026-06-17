@@ -1,0 +1,46 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-AllergyIntolerance" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/NlcoreAllergyIntolerance" />
+  <version value="1.0.0-alpha.1" />
+  <name value="NlcoreAllergyIntolerance" />
+  <title value="nl core AllergyIntolerance" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites." />
+  <purpose value="This profile is the FHIR implementation of the general building block [AllergyIntolerance](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.8)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-AllergyIntolerance" />
+    <uri value="http://nictiz.nl/gbb/Requirements/AllergyIntolerance" />
+    <name value="Information requirements for AllergyIntolerance" />
+  </mapping>
+  <mapping>
+    <identity value="lm-AllergyIntolerance" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance" />
+    <name value="Logical model for AllergyIntolerance" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance.recorder">
+      <path value="AllergyIntolerance.recorder" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="1" />
+        <comment value="header.author" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
