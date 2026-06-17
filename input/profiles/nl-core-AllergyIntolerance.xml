@@ -34,12 +34,159 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
   <derivation value="constraint" />
   <differential>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <path value="AllergyIntolerance.clinicalStatus" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="2" />
+        <comment value="header.status" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="2.1" />
+        <comment value="Status van de allergie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="6" />
+        <comment value="certainty" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="6.1" />
+        <comment value="ZekerheidStatus" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="6.3" />
+        <comment value="Diagnosestatus" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <path value="AllergyIntolerance.criticality" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="5" />
+        <comment value="criticality" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="5.1" />
+        <comment value="Mate van kritiek zijn" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="5.2" />
+        <comment value="VerwachtRisicoBijBlootstelling" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code" />
+      <min value="1" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3" />
+        <comment value="agentOrAllergen" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3.1" />
+        <comment value="Allergeen voor niet medicamenteuze allergieën of intoleranties" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3.2" />
+        <comment value="Allergeen voor medicamenteuze allergieën of intoleranties" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3.3" />
+        <comment value="Straling als allergeen" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3.4" />
+        <comment value="Ongecodeerde allergeen" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="3.5" />
+        <comment value="Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen" />
+      </mapping>
+    </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="1" />
         <comment value="header.author" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="1.1" />
+        <comment value="Diagnosesteller" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="1.2" />
+        <comment value="Vastlegger van de geneesmiddelovergevoeligheid" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.note.text">
+      <path value="AllergyIntolerance.note.text" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4" />
+        <comment value="note" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.1" />
+        <comment value="Vrije tekst over overgevoeligheid/intolerantie" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.2" />
+        <comment value="Tekstuele beschrijving van de reactie" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.3" />
+        <comment value="Tekstuele toevoeging voor andere informatie" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.4" />
+        <comment value="Vrije tekst over reactie" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.5" />
+        <comment value="Reden voor afsluiten allergie of overgevoeligheid" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.extension:certainty">
+      <path value="AllergyIntolerance.reaction.extension" />
+      <sliceName value="certainty" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.reaction.extension:certainty.value[x]">
+      <path value="AllergyIntolerance.reaction.extension.value[x]" />
+      <binding>
+        <strength value="required" />
+        <description value="The degree of clinical certainty that the manifestation in this reaction event was caused by exposure to the identified substance." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="6.2" />
+        <comment value="Mate zekerheid over reactie (ZekerheidStatus)" />
       </mapping>
     </element>
   </differential>
