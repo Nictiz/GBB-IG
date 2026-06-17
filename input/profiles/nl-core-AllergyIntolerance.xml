@@ -34,6 +34,33 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
   <derivation value="constraint" />
   <differential>
+    <element id="AllergyIntolerance.extension:abatement">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement" />
+      <short value="When the allergy or intolerance resolved" />
+      <definition value="Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.url">
+      <path value="AllergyIntolerance.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.value[x]">
+      <path value="AllergyIntolerance.extension.value[x]" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="8" />
+        <comment value="endDate" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="8.1" />
+        <comment value="Datum voor afsluiten allergie of overgevoeligheid" />
+      </mapping>
+    </element>
     <element id="AllergyIntolerance.clinicalStatus">
       <path value="AllergyIntolerance.clinicalStatus" />
       <mapping>
@@ -63,6 +90,14 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="6.3" />
         <comment value="Diagnosestatus" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.category">
+      <path value="AllergyIntolerance.category" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="14" />
+        <comment value="Groepering (Categorie)" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.criticality">
@@ -117,6 +152,19 @@
         <comment value="Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen" />
       </mapping>
     </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="7" />
+        <comment value="onsetDate" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="7.1" />
+        <comment value="DiagnostischInzichtDatum" />
+      </mapping>
+    </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder" />
       <mapping>
@@ -133,6 +181,14 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="1.2" />
         <comment value="Vastlegger van de geneesmiddelovergevoeligheid" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.lastOccurrence">
+      <path value="AllergyIntolerance.lastOccurrence" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="13.1" />
+        <comment value="Datum/tijdstip dat de laatste ongewenste reactie heeft plaatsgevonden" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.note.text">
@@ -168,6 +224,19 @@
         <comment value="Reden voor afsluiten allergie of overgevoeligheid" />
       </mapping>
     </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="9" />
+        <comment value="reaction" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="9.1" />
+        <comment value="De omschreven reactie op een stof/groep stoffen of straling (Reactie container)" />
+      </mapping>
+    </element>
     <element id="AllergyIntolerance.reaction.extension:certainty">
       <path value="AllergyIntolerance.reaction.extension" />
       <sliceName value="certainty" />
@@ -187,6 +256,68 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="6.2" />
         <comment value="Mate zekerheid over reactie (ZekerheidStatus)" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.substance">
+      <path value="AllergyIntolerance.reaction.substance" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="10" />
+        <comment value="reaction.agentOrAllergen" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="10.1" />
+        <comment value="Hetgeen wat de reactie veroorzaakt (Veroorzaker)" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="11" />
+        <comment value="reaction.manifestation" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="11.1" />
+        <comment value="Omschrijving van een diagnose" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="11.2" />
+        <comment value="Symptomen van de reactie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.onset">
+      <path value="AllergyIntolerance.reaction.onset" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="13" />
+        <comment value="reaction.onset" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="13.2" />
+        <comment value="Datum/tijdstip dat een reactie heeft plaatsgevonden" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="12" />
+        <comment value="reaction.severity" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="12.1" />
+        <comment value="Ernst van de reactie" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="12.2" />
+        <comment value="Ernst van de reactie (Ernst)" />
       </mapping>
     </element>
   </differential>
