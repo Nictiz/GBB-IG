@@ -97,11 +97,12 @@ else
 	echo cancelled publisher update
 fi
 
-if [[ $skipPrompts != true ]]; then
-    message="Update scripts? (enter 'y' or 'Y' to continue, any other key to cancel)?"
-    read -r -p "$message" response
-  fi
-
+#if [[ $skipPrompts != true ]]; then
+#    message="Update scripts? (enter 'y' or 'Y' to continue, any other key to cancel)?"
+#    read -r -p "$message" response
+#fi
+echo Not updating scripts
+response=N
 if [[ $skipPrompts == true ]] || [[ $response =~ ^[yY].*$ ]]; then
   echo "Downloading most recent scripts "
 
