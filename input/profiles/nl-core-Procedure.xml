@@ -58,6 +58,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="13" />
+        <comment value="VerrichtingMethode" />
       </mapping>
     </element>
     <element id="Procedure.status">
@@ -81,14 +82,17 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="9.1" />
+        <comment value="VerrichtingStatus" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="9.2" />
+        <comment value="VerrichtingStatusEHDS" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="9.3" />
+        <comment value="VerrichtingStatusOpenEHR" />
       </mapping>
     </element>
     <element id="Procedure.category">
@@ -112,6 +116,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="8" />
+        <comment value="Categorie" />
       </mapping>
     </element>
     <element id="Procedure.code">
@@ -148,10 +153,12 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="4.1" />
+        <comment value="VerrichtingNaam" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="4.2" />
+        <comment value="VerrichtingNaamAnders" />
       </mapping>
     </element>
     <element id="Procedure.subject">
@@ -176,17 +183,17 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="10.1" />
-        <comment value="Who the procedure was performed on" />
+        <comment value="VerrichtingSubject" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="10.2" />
-        <comment value="Subject of care" />
+        <comment value="VerrichtingSubjectOpenEHR" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="10.3" />
-        <comment value="Patient/subject information" />
+        <comment value="VerrichtingSubjectEHDS" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]">
@@ -224,6 +231,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.1" />
+        <comment value="DatumTijdUitvoering" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod">
@@ -235,6 +243,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.2" />
+        <comment value="PeriodeUitvoering" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod.start">
@@ -258,10 +267,12 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.2" />
+        <comment value="StartdatumTijdNietAfgerondeVerrichting" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.3" />
+        <comment value="GeplandeStartdatumTijd" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod.end">
@@ -285,6 +296,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.3" />
+        <comment value="Einddatum" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedString">
@@ -312,18 +324,22 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.3" />
+        <comment value="Einddatum" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.1" />
+        <comment value="DatumTijdUitvoering" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.1.2" />
+        <comment value="PeriodeUitvoering" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="1.2" />
+        <comment value="StartdatumTijdNietAfgerondeVerrichting" />
       </mapping>
     </element>
     <element id="Procedure.performer.actor">
@@ -347,17 +363,17 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="3.1" />
-        <comment value="Zorgverlener als uitvoerder" />
+        <comment value="ZorgverlenerAlsUitvoerder" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="3.3" />
-        <comment value="Patiënt als uitvoerder" />
+        <comment value="PatientAlsUitvoerder" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="3.4" />
-        <comment value="Contactperso(o)n(en) als uitvoerder" />
+        <comment value="ContactpersoonAlsUitvoerder" />
       </mapping>
     </element>
     <element id="Procedure.location">
@@ -381,10 +397,12 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="5.1" />
+        <comment value="ZorginstellingAlsLocatie" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="5.2" />
+        <comment value="AdresAlsLocatie" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode">
@@ -420,10 +438,12 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="7.1" />
+        <comment value="Indicatie" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="7.2" />
+        <comment value="Reden" />
       </mapping>
     </element>
     <element id="Procedure.reasonReference">
@@ -447,10 +467,12 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="7.1" />
+        <comment value="Indicatie" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="7.2" />
+        <comment value="Reden" />
       </mapping>
     </element>
     <element id="Procedure.bodySite">
@@ -474,6 +496,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="6" />
+        <comment value="AnatomischeLocatie" />
       </mapping>
     </element>
     <element id="Procedure.outcome">
@@ -497,6 +520,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="16" />
+        <comment value="Uitkomst" />
       </mapping>
     </element>
     <element id="Procedure.complication">
@@ -520,6 +544,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="17" />
+        <comment value="Complicatie" />
       </mapping>
     </element>
     <element id="Procedure.note.text">
@@ -543,6 +568,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="18" />
+        <comment value="Toelichting" />
       </mapping>
     </element>
     <element id="Procedure.focalDevice.manipulated">
@@ -566,6 +592,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="14" />
+        <comment value="FocusMedischHulpmiddel" />
       </mapping>
     </element>
     <element id="Procedure.usedReference">
@@ -589,6 +616,7 @@
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="15" />
+        <comment value="GebruiktMedischHulpmiddel" />
       </mapping>
     </element>
   </differential>
