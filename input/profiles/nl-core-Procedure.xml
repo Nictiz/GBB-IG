@@ -55,6 +55,18 @@
         </extension>
       </extension>
       <path value="Procedure.extension.value[x]" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221" />
+      </binding>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="13" />
@@ -113,6 +125,18 @@
         </extension>
       </extension>
       <path value="Procedure.category" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637" />
+      </binding>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="8" />
@@ -144,11 +168,11 @@
             <valueCode value="current-extensible" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="TBD - ref sets van rij 2-7?" />
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.6--20260619092106" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://snomed-verrichting-valueset" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7--20260619092503" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -429,11 +453,11 @@
             <valueCode value="current-extensible" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://DiagnoseNaamCodeLijst" />
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.19--20260619T114014" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://waardelijst-SNOMED-ICD10-Orphacode" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27--20260619114424" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -517,6 +541,10 @@
         </extension>
       </extension>
       <path value="Procedure.outcome" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22--20260619103341" />
+      </binding>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="16" />
@@ -541,6 +569,10 @@
         </extension>
       </extension>
       <path value="Procedure.complication" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28--20260619115050" />
+      </binding>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="17" />
