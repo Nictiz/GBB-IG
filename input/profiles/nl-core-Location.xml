@@ -53,7 +53,42 @@
         <comment value="OrganizationLocation" />
       </mapping>
     </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+    </element>
     <element id="Location.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Location.name" />
       <short value="LocationName" />
       <definition value="Name of the location." />
@@ -64,7 +99,61 @@
         <comment value="LocationName" />
       </mapping>
     </element>
+    <element id="Location.description">
+      <path value="Location.description" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+    </element>
     <element id="Location.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Location.telecom" />
       <slicing>
         <discriminator>
@@ -105,6 +194,22 @@
       </type>
     </element>
     <element id="Location.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Location.address" />
       <definition value="The physical address of the healthcare provider’s location." />
       <comment value="The cardinality mismatch with the zib (`0..1` versus `0..*`) is explained by the restriction of FHIR to limit the `Location.address` to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in `Organization.address` which is referenced by `Location.managingOrganization`." />
@@ -120,11 +225,46 @@
     </element>
     <element id="Location.managingOrganization">
       <path value="Location.managingOrganization" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider-Organization" />
       </type>
+    </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
     </element>
   </differential>
 </StructureDefinition>
