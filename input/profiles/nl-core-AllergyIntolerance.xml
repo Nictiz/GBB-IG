@@ -30,7 +30,7 @@
   </mapping>
   <mapping>
     <identity value="lm-AllergyIntolerance" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance-model" />
     <name value="Logical model for AllergyIntolerance" />
   </mapping>
   <kind value="resource" />
@@ -67,8 +67,43 @@
       </mapping>
     </element>
     <element id="AllergyIntolerance.clinicalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Registering system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.clinicalStatus" />
+      <short value="Active/inactive status" />
+      <alias value="ActieveInactieveStatus" />
       <min value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap AllergieStatusCodelijst_to_AllergyIntoleranceClinicalStatusCodes to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceClinicalStatusCodes." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-AllergyIntoleranceClinicalStatusCodes" />
+          </extension>
+        </valueSet>
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="2" />
@@ -79,9 +114,41 @@
         <map value="2.1" />
         <comment value="Status van de allergie" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-5" />
+        <comment value="ActieveInactieveStatus" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.verificationStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.verificationStatus" />
+      <short value="Verification status" />
+      <alias value="VerificatieStatus" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap AllergieStatusCodelijst_to_AllergyIntoleranceVerificationStatus to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceVerificationStatusCodes." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-AllergyIntoleranceVerificationStatus" />
+          </extension>
+        </valueSet>
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="6" />
@@ -97,17 +164,82 @@
         <map value="6.3" />
         <comment value="Diagnosestatus" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-360" />
+        <comment value="VerificatieStatus" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.category" />
+      <short value="Category" />
+      <alias value="Categorie" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap AllergieCategorieCodelijst_to_AllergyIntoleranceCategory to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceCategory." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieCategorieCodelijst-to-AllergyIntoleranceCategory" />
+          </extension>
+        </valueSet>
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="14" />
         <comment value="Groepering (Categorie)" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-4" />
+        <comment value="Categorie" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.criticality">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.criticality" />
+      <short value="Criticality" />
+      <alias value="MateVanKritiekZijn" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap MateVanKritiekZijnCodelijst_to_AllergyIntoleranceCriticality to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceCriticality." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/MateVanKritiekZijnCodelijst-to-AllergyIntoleranceCriticality" />
+          </extension>
+        </valueSet>
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="5" />
@@ -123,9 +255,44 @@
         <map value="5.2" />
         <comment value="VerwachtRisicoBijBlootstelling" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-7" />
+        <comment value="MateVanKritiekZijn" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Registering system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.code" />
+      <short value="Substance" />
+      <alias value="VeroorzakendeStof" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+      </binding>
       <min value="1" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -157,11 +324,16 @@
         <map value="3.5" />
         <comment value="Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-2" />
+        <comment value="VeroorzakendeStof" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL: able-to-populate" />
+          <valueCode value="SHALL:able-to-populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="Registering system" />
@@ -180,7 +352,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="Processing system" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.patient" />
@@ -234,10 +406,20 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="Processing system" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.recorder" />
+      <short value="Author" />
+      <alias value="Zorgverlener" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+      </type>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="1" />
@@ -260,15 +442,60 @@
       </mapping>
     </element>
     <element id="AllergyIntolerance.lastOccurrence">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.lastOccurrence" />
+      <short value="Onset of last reaction" />
+      <alias value="LaatsteReactieDatumTijd" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="13.1" />
         <comment value="Datum/tijdstip dat de laatste ongewenste reactie heeft plaatsgevonden" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-8" />
+        <comment value="LaatsteReactieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.note">
+      <path value="AllergyIntolerance.note" />
+      <max value="1" />
     </element>
     <element id="AllergyIntolerance.note.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.note.text" />
+      <short value="Comment" />
+      <alias value="Toelichting" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="4" />
@@ -299,9 +526,32 @@
         <map value="4.5" />
         <comment value="Reden voor afsluiten allergie of overgevoeligheid" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-9" />
+        <comment value="Toelichting" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.reaction">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction" />
+      <short value="Reaction event summary" />
+      <alias value="Reactie" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="9" />
@@ -311,6 +561,11 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="9.1" />
         <comment value="De omschreven reactie op een stof/groep stoffen of straling (Reactie container)" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-10" />
+        <comment value="Reactie" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.extension:certainty">
@@ -322,7 +577,25 @@
       </type>
     </element>
     <element id="AllergyIntolerance.reaction.extension:certainty.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction.extension.value[x]" />
+      <short value="Certainty" />
+      <alias value="MateVanZekerheid" />
       <binding>
         <strength value="required" />
         <description value="The degree of clinical certainty that the manifestation in this reaction event was caused by exposure to the identified substance." />
@@ -333,9 +606,36 @@
         <map value="6.2" />
         <comment value="Mate zekerheid over reactie (ZekerheidStatus)" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-361" />
+        <comment value="MateVanZekerheid" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.substance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction.substance" />
+      <short value="Specific substance" />
+      <alias value="SpecifiekeStof" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="10" />
@@ -346,9 +646,44 @@
         <map value="10.1" />
         <comment value="Hetgeen wat de reactie veroorzaakt (Veroorzaker)" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-12" />
+        <comment value="SpecifiekeStof" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Registering system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction.manifestation" />
+      <short value="Manifestation" />
+      <alias value="ManifestatieVanReactie" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.5--20200901000000" />
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="11" />
@@ -364,9 +699,71 @@
         <map value="11.2" />
         <comment value="Symptomen van de reactie" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-11" />
+        <comment value="ManifestatieVanReactie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.description">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.description" />
+      <short value="Reaction description" />
+      <alias value="ReactieBeschrijving" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.2" />
+        <comment value="Tekstuele beschrijving van de reactie" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-13" />
+        <comment value="ReactieBeschrijving" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.onset">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:able-to-populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Registering system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction.onset" />
+      <short value="Onset of reaction" />
+      <alias value="ReactieDatumTijd" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="13" />
@@ -377,9 +774,41 @@
         <map value="13.2" />
         <comment value="Datum/tijdstip dat een reactie heeft plaatsgevonden" />
       </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-17" />
+        <comment value="ReactieDatumTijd" />
+      </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
       <path value="AllergyIntolerance.reaction.severity" />
+      <short value="Severity of reaction" />
+      <alias value="Ernst" />
+      <binding>
+        <strength value="required" />
+        <description value="Use ConceptMap ErnstCodelijst_to_AllergyIntoleranceSeverity to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceSeverity." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/reaction-event-severity|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity" />
+          </extension>
+        </valueSet>
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="12" />
@@ -394,6 +823,81 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="12.2" />
         <comment value="Ernst van de reactie (Ernst)" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-14" />
+        <comment value="Ernst" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <short value="Route of exposure" />
+      <alias value="WijzeVanBlootstelling" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="20" />
+        <comment value="Wijze van blootstelling die de allergie of intolerantie heeft veroorzaakt" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-15" />
+        <comment value="WijzeVanBlootstelling" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.note">
+      <path value="AllergyIntolerance.reaction.note" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.note.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="Processing system" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.note.text" />
+      <short value="Comment" />
+      <alias value="Opmerking" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="4.4" />
+        <comment value="Vrije tekst over reactie" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="gbb-dataelement-362" />
+        <comment value="Opmerking" />
       </mapping>
     </element>
   </differential>
