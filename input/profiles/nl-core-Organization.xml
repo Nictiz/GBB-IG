@@ -26,7 +26,7 @@
     <name value="zib HealthcareProvider-v3.4(2020EN)" />
   </mapping>
   <kind value="resource" />
-  <abstract value="true" />
+  <abstract value="false" />
   <type value="Organization" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
@@ -128,6 +128,87 @@
         <map value="NL-CM:17.2.3" />
         <comment value="OrganizationName" />
       </mapping>
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.telecom:telephoneNumbers">
+      <path value="Organization.telecom" />
+      <sliceName value="telephoneNumbers" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
+      </type>
+    </element>
+    <element id="Organization.telecom:emailAddresses">
+      <path value="Organization.telecom" />
+      <sliceName value="emailAddresses" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
+      </type>
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AddressInformation" />
+      </type>
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+      </type>
+    </element>
+    <element id="Organization.contact.name">
+      <path value="Organization.contact.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-NameInformation" />
+      </type>
+    </element>
+    <element id="Organization.contact.telecom">
+      <path value="Organization.contact.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.contact.telecom:telephoneNumbers">
+      <path value="Organization.contact.telecom" />
+      <sliceName value="telephoneNumbers" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-TelephoneNumbers" />
+      </type>
+    </element>
+    <element id="Organization.contact.telecom:emailAddresses">
+      <path value="Organization.contact.telecom" />
+      <sliceName value="emailAddresses" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactInformation-EmailAddresses" />
+      </type>
+    </element>
+    <element id="Organization.contact.address">
+      <path value="Organization.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AddressInformation" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
