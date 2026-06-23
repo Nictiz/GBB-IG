@@ -43,6 +43,22 @@
       </mapping>
     </element>
     <element id="Organization.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.identifier" />
       <slicing>
         <discriminator>
@@ -85,6 +101,22 @@
       </slicing>
     </element>
     <element id="Organization.type:departmentSpecialty">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.type" />
       <sliceName value="departmentSpecialty" />
       <short value="DepartmentSpecialty" />
@@ -102,6 +134,22 @@
       </mapping>
     </element>
     <element id="Organization.type:organizationType">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.type" />
       <sliceName value="organizationType" />
       <short value="OrganizationType" />
@@ -119,6 +167,22 @@
       </mapping>
     </element>
     <element id="Organization.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.name" />
       <short value="OrganizationName" />
       <definition value="Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number." />
@@ -163,6 +227,22 @@
       </type>
     </element>
     <element id="Organization.partOf">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.partOf" />
       <type>
         <code value="Reference" />
@@ -178,6 +258,22 @@
       </type>
     </element>
     <element id="Organization.contact.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.contact.telecom" />
       <slicing>
         <discriminator>
@@ -204,6 +300,22 @@
       </type>
     </element>
     <element id="Organization.contact.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.contact.address" />
       <type>
         <code value="Address" />
