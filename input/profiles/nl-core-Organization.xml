@@ -242,13 +242,6 @@
         </extension>
       </extension>
       <path value="Organization.contact.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Organization.contact.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
