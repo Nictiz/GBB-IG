@@ -54,7 +54,6 @@
       </mapping>
     </element>
     <element id="Location.identifier">
-      <path value="Location.identifier" />
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate" />
@@ -71,6 +70,7 @@
           <valueCanonical value="processing system" />
         </extension>
       </extension>
+      <path value="Location.identifier" />
     </element>
     <element id="Location.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -100,7 +100,6 @@
       </mapping>
     </element>
     <element id="Location.description">
-      <path value="Location.description" />
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate" />
@@ -117,9 +116,9 @@
           <valueCanonical value="processing system" />
         </extension>
       </extension>
+      <path value="Location.description" />
     </element>
     <element id="Location.type">
-      <path value="Location.type" />
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate" />
@@ -136,6 +135,7 @@
           <valueCanonical value="processing system" />
         </extension>
       </extension>
+      <path value="Location.type" />
     </element>
     <element id="Location.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -201,7 +201,6 @@
       </mapping>
     </element>
     <element id="Location.managingOrganization">
-      <path value="Location.managingOrganization" />
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate" />
@@ -218,6 +217,7 @@
           <valueCanonical value="processing system" />
         </extension>
       </extension>
+      <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
@@ -225,7 +225,6 @@
       </type>
     </element>
     <element id="Location.partOf">
-      <path value="Location.partOf" />
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate" />
@@ -242,6 +241,7 @@
           <valueCanonical value="processing system" />
         </extension>
       </extension>
+      <path value="Location.partOf" />
     </element>
   </differential>
 </StructureDefinition>
