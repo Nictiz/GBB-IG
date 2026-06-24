@@ -140,15 +140,6 @@
       <path value="AllergyIntolerance.verificationStatus" />
       <short value="Verification status" />
       <alias value="VerificatieStatus" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap AllergieStatusCodelijst_to_AllergyIntoleranceVerificationStatus to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceVerificationStatusCodes." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-AllergyIntoleranceVerificationStatus" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="6" />
@@ -508,18 +499,8 @@
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.2" />
-        <comment value="Tekstuele beschrijving van de reactie" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
         <map value="4.3" />
         <comment value="Tekstuele toevoeging voor andere informatie" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="4.4" />
-        <comment value="Vrije tekst over reactie" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
