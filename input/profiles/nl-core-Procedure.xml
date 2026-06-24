@@ -16,6 +16,12 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+        <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
+      </extension>
+      <path value="Procedure" />
+    </element>
     <element id="Procedure.extension:method">
       <path value="Procedure.extension" />
       <sliceName value="method" />
@@ -403,7 +409,7 @@
     <element id="Procedure.location">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="Ontsluitend systeem" />
@@ -411,7 +417,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="Verwerkend systeem" />
