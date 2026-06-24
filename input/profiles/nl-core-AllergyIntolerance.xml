@@ -384,23 +384,6 @@
       </mapping>
     </element>
     <element id="AllergyIntolerance.recorder">
-      <path value="AllergyIntolerance.recorder" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-    </element>
-    <element id="AllergyIntolerance.recorder:recorderPractitioner">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -418,11 +401,14 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.recorder" />
-      <sliceName value="recorderPractitioner" />
       <short value="Author" />
       <alias value="Zorgverlener" />
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
       </type>
       <mapping>
