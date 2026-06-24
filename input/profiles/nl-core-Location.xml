@@ -38,10 +38,6 @@
   <differential>
     <element id="Location">
       <path value="Location" />
-      <short value="HealthcareProvider / OrganizationLocation" />
-      <comment value="The zib HealthcareProvider is mapped to this Location profile and a profile on Organization (&lt;http://nictiz.nl/fhir/StructureDefinition/zib-HealthcareProvider-Organization&gt;). This Location profile acts as the focal resource of the HealthcareProvider because most references to this zib are concerned about the recording of the physical location where the care to patient/client takes place rather than the organizational information. For the latter, the profile on Organization is used which is referenced using the `managingOrganization` element.&#xD;&#xA;&#xD;&#xA;Healthcare providers usually consist of multiple organizational levels and physical locations. The hierarchical structure may be captured by using multiple instances of this HealthcareProvider profile using the `Location.partOf` element to refer to their parent Location. Each instance refers the zib-HealthcareProvider-Organization at the appropriate level in the hierarchy. &#xD;&#xA;&#xD;&#xA;In consultation with 'Registratie aan de Bron', it is agreed to not include the zib concept LocationNumber (NL-CM:17.2.10) due to several reasons. Firstly, its use in the Dutch realm is unclear as this concept was initiated for the Belgium realm with specific requirements. Secondly, it cannot be mapped neatly in the FHIR model which would require the use of an extension. To avoid implementation of specific and not-used FHIR requirements, it is advised to create and use an extension at the use case level where this concept is deemed necessary." />
-      <alias value="OrganisatieLocatie" />
-      <alias value="Zorgaanbieder" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.1" />
@@ -90,9 +86,6 @@
         </extension>
       </extension>
       <path value="Location.name" />
-      <short value="LocationName" />
-      <definition value="Name of the location." />
-      <alias value="LocatieNaam" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.8" />
@@ -155,10 +148,6 @@
         </extension>
       </extension>
       <path value="Location.telecom" />
-      <short value="ContactInformation" />
-      <definition value="The information needed to contact the healthcare organization via telephone and/or e-mail." />
-      <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
-      <alias value="Contactgegevens" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.6" />
@@ -188,8 +177,6 @@
         </extension>
       </extension>
       <path value="Location.address" />
-      <definition value="The physical address of the healthcare provider’s location." />
-      <comment value="The cardinality mismatch with the zib (`0..1` versus `0..*`) is explained by the restriction of FHIR to limit the `Location.address` to a physical address while the zib allows for other types of addresses (e.g. a postal address). Other types of addresses than a physical address are given in `Organization.address` which is referenced by `Location.managingOrganization`." />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
