@@ -197,6 +197,10 @@
         </extension>
       </extension>
       <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
       <mustSupport value="false" />
       <mapping>
         <identity value="requirements-Procedure" />
@@ -223,6 +227,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Procedure.performed[x]:performedDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -378,6 +383,10 @@
         </extension>
       </extension>
       <path value="Procedure.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="3.1" />
@@ -393,6 +402,13 @@
         <map value="3.4" />
         <comment value="ContactpersoonAlsUitvoerder" />
       </mapping>
+    </element>
+    <element id="Procedure.performer.onBehalfOf">
+      <path value="Procedure.performer.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
     </element>
     <element id="Procedure.location">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -482,6 +498,14 @@
         </extension>
       </extension>
       <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+      </type>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="7.1" />
@@ -511,6 +535,13 @@
         </extension>
       </extension>
       <path value="Procedure.bodySite" />
+      <constraint>
+        <key value="eu-bodysite-1" />
+        <severity value="error" />
+        <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both." />
+        <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()" />
+        <source value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
+      </constraint>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="6" />
@@ -572,6 +603,13 @@
         <map value="17" />
         <comment value="Complicatie" />
       </mapping>
+    </element>
+    <element id="Procedure.complicationDetail">
+      <path value="Procedure.complicationDetail" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
+      </type>
     </element>
     <element id="Procedure.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -639,6 +677,12 @@
         </extension>
       </extension>
       <path value="Procedure.usedReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+      </type>
       <mapping>
         <identity value="requirements-Procedure" />
         <map value="15" />
