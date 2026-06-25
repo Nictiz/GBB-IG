@@ -30,18 +30,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/procedure-method" />
       </type>
       <isModifier value="false" />
-      <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="purpose">
-            <valueCode value="current" />
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical value="http://VerrichtingMethodeCodeLijst" />
-          </extension>
-        </extension>
-        <strength value="preferred" />
-        <valueSet value="http://VerrichtingMethodeCodelijst" />
-      </binding>
     </element>
     <element id="Procedure.extension:method.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
