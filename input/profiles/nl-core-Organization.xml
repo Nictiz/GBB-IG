@@ -85,6 +85,22 @@
       </patternIdentifier>
     </element>
     <element id="Organization.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
       <path value="Organization.type" />
       <slicing>
         <discriminator>
@@ -93,6 +109,9 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <binding>
+        <strength value="preferred" />
+      </binding>
     </element>
     <element id="Organization.type:departmentSpecialty">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
