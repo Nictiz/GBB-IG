@@ -228,6 +228,10 @@
         </extension>
       </extension>
       <path value="Location.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
