@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Procedure-02" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>Procedure</b> (status: completed)</p>
+      <ul>
+        <li><b>Categorie</b>: chirurgische ingreep (SNOMED 387713003)</li>
+        <li><b>Verrichting</b>: appendectomie (SNOMED 80146002)</li>
+        <li><b>Methode</b>: excisie - handeling (SNOMED 129304002)</li>
+        <li><b>Anatomische locatie</b>: appendix (SNOMED 66754008)</li>
+        <li><b>Subject</b>: Voorbeeldpati&#235;nt (nl-core-Patient-01)</li>
+        <li><b>Periode uitvoering</b>: 2024-09-12 09:15 &#8211; 10:05</li>
+        <li><b>Uitvoerder</b>: zorgverlener (PractitionerRole), namens Zorginstelling Voorbeeld</li>
+        <li><b>Locatie</b>: OK 3</li>
+        <li><b>Reden / indicatie</b>: appendicitis (SNOMED 74400008)</li>
+        <li><b>Uitkomst</b>: geslaagd (SNOMED 385669000)</li>
+        <li><b>Toelichting</b>: Ongecompliceerde laparoscopische appendectomie.</li>
+      </ul>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/procedure-method">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="129304002" />
+        <display value="excisie - handeling" />
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="completed" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="387713003" />
+      <display value="chirurgische ingreep" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="80146002" />
+      <display value="appendectomie" />
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/nl-core-Patient-01" />
+    <display value="Voorbeeldpati&#235;nt" />
+  </subject>
+  <performedPeriod>
+    <start value="2024-09-12T09:15:00+02:00" />
+    <end value="2024-09-12T10:05:00+02:00" />
+  </performedPeriod>
+  <performer>
+    <actor>
+      <reference value="PractitionerRole/nl-core-HealthProfessional-PractitionerRole-01" />
+      <display value="Dr. Voorbeeld, chirurg" />
+    </actor>
+    <onBehalfOf>
+      <reference value="Organization/nl-core-HealthcareProvider-Organization-01" />
+      <display value="Zorginstelling Voorbeeld" />
+    </onBehalfOf>
+  </performer>
+  <location>
+    <reference value="Location/nl-core-Location-01" />
+    <display value="OK 3" />
+  </location>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="74400008" />
+      <display value="appendicitis" />
+    </coding>
+  </reasonCode>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="66754008" />
+      <display value="appendix" />
+    </coding>
+  </bodySite>
+  <outcome>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="385669000" />
+      <display value="geslaagd" />
+    </coding>
+  </outcome>
+  <note>
+    <text value="Ongecompliceerde laparoscopische appendectomie." />
+  </note>
+</Procedure>
