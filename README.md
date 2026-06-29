@@ -16,7 +16,7 @@ These materials are never checked in to git, to prevent managing duplicates.
 ### Local
 Local building is done using the `_genonce.bat` or `_genonce.sh` scripts in the root dir, like any other FHIR IG build.
 
-This requires Node and Java to be installed.
+This requires Node and Java to be installed. 
 
 In addition, it requires [Sushi](https://github.com/FHIR/sushi) to be installed using:
 
