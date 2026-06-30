@@ -95,15 +95,6 @@
       <short value="Active/inactive status" />
       <alias value="ActieveInactieveStatus" />
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap AllergieStatusCodelijst_to_AllergyIntoleranceClinicalStatusCodes to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceClinicalStatusCodes." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieStatusCodelijst-to-AllergyIntoleranceClinicalStatusCodes" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="2" />
@@ -182,15 +173,6 @@
       <short value="Category" />
       <alias value="Categorie" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap AllergieCategorieCodelijst_to_AllergyIntoleranceCategory to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceCategory." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/AllergieCategorieCodelijst-to-AllergyIntoleranceCategory" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="14" />
@@ -222,15 +204,6 @@
       <path value="AllergyIntolerance.criticality" />
       <short value="Criticality" />
       <alias value="MateVanKritiekZijn" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap MateVanKritiekZijnCodelijst_to_AllergyIntoleranceCriticality to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceCriticality." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/MateVanKritiekZijnCodelijst-to-AllergyIntoleranceCriticality" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="5" />
@@ -776,15 +749,6 @@
       <path value="AllergyIntolerance.reaction.severity" />
       <short value="Severity of reaction" />
       <alias value="Ernst" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap ErnstCodelijst_to_AllergyIntoleranceSeverity to translate terminology from the functional model to profile terminology in ValueSet AllergyIntoleranceSeverity." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/reaction-event-severity|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/ErnstCodelijst-to-AllergyIntoleranceSeverity" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="12" />
