@@ -31,7 +31,7 @@
     <name value="GBB-Dataset-Address-v0.1" />
   </mapping>
   <kind value="complex-type" />
-  <abstract value="true" />
+  <abstract value="false" />
   <type value="Address" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
   <derivation value="constraint" />
