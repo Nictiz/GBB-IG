@@ -49,7 +49,7 @@
   </code>
   <subject>
     <reference value="Patient/nl-core-Patient-01" />
-    <display value="Voorbeeldpati&#235;nt" />
+    <display value="Voorbeeldpatient" />
   </subject>
   <performedPeriod>
     <start value="2024-09-12T09:15:00+02:00" />
@@ -61,7 +61,7 @@
       <display value="Dr. Voorbeeld, chirurg" />
     </actor>
     <onBehalfOf>
-      <reference value="Organization/nl-core-HealthcareProvider-Organization-01" />
+      <reference value="Organization/nl-core-HealthcareProvider-Organization-02" />
       <display value="Zorginstelling Voorbeeld" />
     </onBehalfOf>
   </performer>
