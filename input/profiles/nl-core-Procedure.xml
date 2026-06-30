@@ -159,7 +159,7 @@
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
-            <valueCode value="current-extensible" />
+            <valueCode value="extensible" />
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.6--20260619092106" />
@@ -460,7 +460,7 @@
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
-            <valueCode value="current-extensible" />
+            <valueCode value="extensible" />
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.19--20260619T114014" />
