@@ -259,7 +259,6 @@ class ExcelConvertor {
     if (rows == null) return;
     
     rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
-    console.log(rows);
     let ad_id = "";
     if (rows.length == 1) {
       ad_id = this.#cell(rows[0], ExcelConvertor.colDefinition);
@@ -278,6 +277,7 @@ class ExcelConvertor {
       }
 
       const body = await response.json();
+      body.id = body.url.split("/").at(-1); // Set the id to the last part of the canonical url
       
       const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
       fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
