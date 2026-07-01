@@ -107,10 +107,22 @@
         </extension>
       </extension>
       <path value="Organization.type" />
-      <definition value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="zib-organizationType" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="required" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
+          </extension>
+        </extension>
+        <strength value="preferred" />
       </binding>
       <mapping>
         <identity value="GBB-Organization-v0.1" />
