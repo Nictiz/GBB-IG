@@ -107,9 +107,6 @@
         </extension>
       </extension>
       <path value="Organization.type" />
-      <binding>
-        <strength value="preferred" />
-      </binding>
       <definition value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
       <binding>
         <strength value="required" />
