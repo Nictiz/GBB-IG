@@ -150,35 +150,6 @@
         <comment value="Type" />
       </mapping>
     </element>
-    <element id="Location.telecom">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="Location.telecom" />
-      <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.6" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
-      </mapping>
-    </element>
     <element id="Location.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
