@@ -102,30 +102,36 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Building blocks:
-    Address:
-      Overview: Address.html
+    Adresgegevens:
+      Overzicht: Address.html
       Requirements: Requirements-Address.html
-      Agreement model: StructureDefinition-Address-model.html
-    ContactPoint:
-      Overview: ContactPoint.html
+      Afsprakenmodel: StructureDefinition-Address-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Address.html
+    Contactgegevens:
+      Overzicht: ContactPoint.html
       Requirements: Requirements-ContactPoint.html
-      Agreement model: StructureDefinition-ContactPoint-model.html
-    HumanName:
-      Overview: HumanName.html
+      Afsprakenmodel: StructureDefinition-ContactPoint-model.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
+    Naamgegevens:
+      Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
-      Agreement model: StructureDefinition-HumanName-model.html
-    Patient:
-      Overview: Patient.html
+      Afsprakenmodel: StructureDefinition-HumanName-model.html
+      FHIR-profiel: StructureDefinition-nl-core-HumanName.html
+    Patiënt:
+      Overzicht: Patient.html
       Requirements: Requirements-Patient.html
-      Agreement model: StructureDefinition-Patient-model.html
-    Practitioner:
-      Overview: Practitioner.html
+      Afsprakenmodel: StructureDefinition-Patient-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
+    Zorgverlener:
+      Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html
-      Agreement model: StructureDefinition-Practitioner-model.html
-    PractitionerRole:
-      Overview: PractitionerRole.html
+      Afsprakenmodel: StructureDefinition-Practitioner-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
+    ZorgverlenerRol:
+      Overzicht: PractitionerRole.html
       Requirements: Requirements-PractitionerRole.html
-      Agreement model: StructureDefinition-PractitionerRole-model.html
+      Afsprakenmodel: StructureDefinition-PractitionerRole-model.html
+      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
