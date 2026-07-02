@@ -153,7 +153,6 @@
         </extension>
       </extension>
       <path value="Organization.name" />
-      <definition value="Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number." />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.3" />
