@@ -5,6 +5,7 @@ const path = require("path");
 
 class TargetFolders {
   static subfolders = {
+    "ActorDefinitions":     "logicalmodels",
     "RequirementResources": "requirements",
     "PageContent":          "pagecontent",
     "LogicalModels":        "logicalmodels",
@@ -24,6 +25,81 @@ class TargetFolders {
 
   get(subfolderType) {
     return path.join(this.baseFolder, TargetFolders.subfolders[subfolderType]);
+  }
+}
+
+class ActorDefinitionDownloader {
+  static actorDefinitionsUrl = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/ActorDefinition?publisher=gbb2026bbr-&_format=json";
+
+  constructor(targetFolders) {
+    this.targetFolders = targetFolders;
+  }
+
+  async downloadAll() {
+    try {
+      const body = await this.#fetchJson(ActorDefinitionDownloader.actorDefinitionsUrl);
+      const usedFileNames = new Set();
+
+      for (const actorDefinition of this.#getActorDefinitions(body)) {
+        const outputFile = path.join(
+          this.targetFolders.get("ActorDefinitions"),
+          this.#getFileName(actorDefinition, usedFileNames)
+        );
+
+        fs.writeFileSync(outputFile, JSON.stringify(actorDefinition, null, 2), "utf8");
+        console.log(`Saved ActorDefinition to ${outputFile}`);
+      }
+    } catch (error) {
+      console.warn(`Couldn't download ActorDefinitions from ART-DECOR, "${error.message}"`);
+    }
+  }
+
+  async #fetchJson(url) {
+    const response = await fetch(url, {
+      headers: {
+        "Accept": "application/fhir+json, application/json; fhirVersion=4.0"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    }
+
+    return response.json();
+  }
+
+  #getActorDefinitions(body) {
+    if (body.resourceType == "ActorDefinition") {
+      return [body];
+    }
+
+    if (body.resourceType != "Bundle") {
+      throw new Error(`Expected Bundle, got ${body.resourceType ?? "unknown resource"}`);
+    }
+
+    return (body.entry ?? [])
+      .map(entry => entry.resource)
+      .filter(resource => resource?.resourceType == "ActorDefinition");
+  }
+
+  #getFileName(actorDefinition, usedFileNames) {
+    const actorDefinitionName = actorDefinition.name || actorDefinition.id || "ActorDefinition";
+    const baseFileName = `ActorDefinition-${this.#safeFileName(actorDefinitionName)}.json`;
+
+    if (!usedFileNames.has(baseFileName)) {
+      usedFileNames.add(baseFileName);
+      return baseFileName;
+    }
+
+    const fallbackName = actorDefinition.id || actorDefinition.url?.split("/").filter(Boolean).pop() || "duplicate";
+    const duplicateFileName = `ActorDefinition-${this.#safeFileName(actorDefinitionName)}-${this.#safeFileName(fallbackName)}.json`;
+    usedFileNames.add(duplicateFileName);
+    console.warn(`Duplicate ActorDefinition name "${actorDefinitionName}"; saved duplicate as ${duplicateFileName}`);
+    return duplicateFileName;
+  }
+
+  #safeFileName(fileName) {
+    return fileName.replace(/[<>:"/\\|?*\x00-\x1F]/g, "_");
   }
 }
 
@@ -350,7 +426,10 @@ if (!inputFolder || !outputFolder) {
 
 async function main() {
   const targetFolders = new TargetFolders(outputFolder);
+  const actorDefinitionDownloader = new ActorDefinitionDownloader(targetFolders);
   const valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
+
+  await actorDefinitionDownloader.downloadAll();
 
   for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
