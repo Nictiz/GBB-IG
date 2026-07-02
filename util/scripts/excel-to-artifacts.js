@@ -45,7 +45,11 @@ class ActorDefinitionDownloader {
           this.targetFolders.get("ActorDefinitions"),
           this.#getFileName(actorDefinition, usedFileNames)
         );
-
+        
+        if (typeof actorDefinition.language === "string") {
+          actorDefinition.language = actorDefinition.language.slice(0, 2);
+        }
+        
         fs.writeFileSync(outputFile, JSON.stringify(actorDefinition, null, 2), "utf8");
         console.log(`Saved ActorDefinition to ${outputFile}`);
       }
@@ -164,6 +168,10 @@ class ValueSetDownloader {
         this.outputFolder,
         `${this.#safeFileName(valueSet.name || valueSet.id || this.#fallbackName(canonical))}.json`
       );
+      
+      if (typeof valueSet.language === "string") {
+        valueSet.language = valueSet.language.slice(0, 2);
+      }
 
       fs.writeFileSync(outputFile, JSON.stringify(valueSet, null, 2), "utf8");
       console.log(`Saved ValueSet to ${outputFile}`);
@@ -353,7 +361,10 @@ class ExcelConvertor {
       }
 
       const body = await response.json();
-      body.id = body.url.split("/").at(-1); // Set the id to the last part of the canonical url
+      //body.id = body.url.split("/").at(-1); // Set the id to the last part of the canonical url
+      if (typeof body.language === "string") {
+        body.language = body.language.slice(0, 2);
+      }
       
       const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
       fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
