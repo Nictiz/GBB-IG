@@ -1,5 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Procedure" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
+  </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure" />
   <name value="NlcoreProcedure" />
   <title value="nl core Procedure" />
@@ -16,12 +19,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
-    <element id="Procedure">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-        <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
-      </extension>
-      <path value="Procedure" />
-    </element>
     <element id="Procedure.extension:method">
       <path value="Procedure.extension" />
       <sliceName value="method" />
