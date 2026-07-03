@@ -112,11 +112,21 @@ menu:
       Requirements: Requirements-ContactPoint.html
       Afsprakenmodel: StructureDefinition-ContactPoint-model.html
       FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
+    Locatie:
+      Overzicht: Location.html
+      Requirements: Requirements-Location.html
+      Afsprakenmodel: StructureDefinition-Location-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Location.html      
     Naamgegevens:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
       Afsprakenmodel: StructureDefinition-HumanName-model.html
       FHIR-profiel: StructureDefinition-nl-core-HumanName.html
+    Organisatie:
+      Overzicht: Organization.html
+      Requirements: Requirements-Organization.html
+      Afsprakenmodel: StructureDefinition-Organization-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Organization.html
     Patiënt:
       Overzicht: Patient.html
       Requirements: Requirements-Patient.html
