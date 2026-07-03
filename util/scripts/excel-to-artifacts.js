@@ -5,11 +5,11 @@ const path = require("path");
 
 class TargetFolders {
   static subfolders = {
-    "ActorDefinitions":     "logicalmodels",
     "RequirementResources": "requirements",
     "PageContent":          "pagecontent",
     "LogicalModels":        "logicalmodels",
     "Vocabulary":           "vocabulary",
+    "Resources":            "resources"
   }
 
   constructor(baseFolder) {
@@ -31,8 +31,8 @@ class TargetFolders {
 class ActorDefinitionDownloader {
   static actorDefinitionsUrl = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/ActorDefinition?publisher=gbb2026bbr-&_format=json";
 
-  constructor(targetFolders) {
-    this.targetFolders = targetFolders;
+  constructor(outputFolder) {
+    this.outputFolder = outputFolder;
   }
 
   async downloadAll() {
@@ -41,10 +41,7 @@ class ActorDefinitionDownloader {
       const usedFileNames = new Set();
 
       for (const actorDefinition of this.#getActorDefinitions(body)) {
-        const outputFile = path.join(
-          this.targetFolders.get("ActorDefinitions"),
-          this.#getFileName(actorDefinition, usedFileNames)
-        );
+        const outputFile = path.join(this.outputFolder, this.#getFileName(actorDefinition, usedFileNames));
         
         if (typeof actorDefinition.language === "string") {
           actorDefinition.language = actorDefinition.language.slice(0, 2);
@@ -436,7 +433,7 @@ if (!inputFolder || !outputFolder) {
 
 async function main() {
   const targetFolders = new TargetFolders(outputFolder);
-  const actorDefinitionDownloader = new ActorDefinitionDownloader(targetFolders);
+  const actorDefinitionDownloader = new ActorDefinitionDownloader(targetFolders.get("Resources"));
   const valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
 
   await actorDefinitionDownloader.downloadAll();
