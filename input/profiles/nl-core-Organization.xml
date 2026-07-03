@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Organization" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+  <name value="NlCoreOrganization" />
+  <title value="nl core Organization" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Organization](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Organization)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="GBB-Organization-v0.1" />
+    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.7/2026-06-11T06:26:24" />
+    <name value="Dataset GBB-Organization-v0.1" />
+  </mapping>
+  <mapping>
+    <identity value="zib-healthcareprovider-v3.4-2020EN" />
+    <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.4(2020EN)" />
+    <name value="zib HealthcareProvider-v3.4(2020EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization">
+      <path value="Organization" />
+      <mapping>
+        <identity value="zib-healthcareprovider-v3.4-2020EN" />
+        <map value="NL-CM:17.2.1" />
+      </mapping>
+    </element>
+    <element id="Organization.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization." />
+      <mapping>
+        <identity value="zib-healthcareprovider-v3.4-2020EN" />
+        <map value="NL-CM:17.2.2" />
+        <comment value="HealthcareProviderIdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Organization.identifier:ura">
+      <path value="Organization.identifier" />
+      <sliceName value="ura" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/ura" />
+      </patternIdentifier>
+    </element>
+    <element id="Organization.identifier:agb">
+      <path value="Organization.identifier" />
+      <sliceName value="agb" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+      </patternIdentifier>
+    </element>
+    <element id="Organization.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.type" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="zib-organizationType" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="current" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+      </binding>
+      <mapping>
+        <identity value="GBB-Organization-v0.1" />
+        <map value="gbb-dataelement-306" />
+        <comment value="Type" />
+      </mapping>
+      <mapping>
+        <identity value="zib-healthcareprovider-v3.4-2020EN" />
+        <map value="NL-CM:17.2.4" />
+        <comment value="OrganizationType" />
+      </mapping>
+    </element>
+    <element id="Organization.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.name" />
+      <mapping>
+        <identity value="zib-healthcareprovider-v3.4-2020EN" />
+        <map value="NL-CM:17.2.3" />
+        <comment value="OrganizationName" />
+      </mapping>
+    </element>
+    <element id="Organization.partOf">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+      </type>
+      <mapping>
+        <identity value="GBB-Organization-v0.1" />
+        <map value="gbb-dataelement-378" />
+        <comment value="partOf" />
+      </mapping>
+    </element>
+    <element id="Organization.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.contact" />
+      <mapping>
+        <identity value="GBB-Organization-v0.1" />
+        <map value="gbb-dataelement-369" />
+        <comment value="contact person" />
+      </mapping>
+    </element>
+    <element id="Organization.contact.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.contact.telecom" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
+      </type>
+      <mapping>
+        <identity value="GBB-Organization-v0.1" />
+        <map value="gbb-dataelement-372" />
+        <comment value="contact.telecom" />
+      </mapping>
+    </element>
+    <element id="Organization.contact.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="serving or sending system" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="processing system" />
+        </extension>
+      </extension>
+      <path value="Organization.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
+      </type>
+      <mapping>
+        <identity value="GBB-Organization-v0.1" />
+        <map value="gbb-dataelement-371" />
+        <comment value="contact.address" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
