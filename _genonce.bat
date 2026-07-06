@@ -13,7 +13,7 @@ GOTO igpublish
 ECHO We're online
 SET txoption=
 
-node util\scripts\excel-to-artifacts.js input\requirements generated
+REM node util\scripts\excel-to-artifacts.js input\requirements generated
 if errorlevel 1 exit /b %errorlevel%
 
 :igpublish

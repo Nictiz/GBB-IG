@@ -1,0 +1,22 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <table class="grid">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Naam</th>
+        <th>Omschrijving</th>
+        <th>Bronnen</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in Requirements.statement %}
+        <tr id="{{i.key}}" >
+        <td><a href="#{{i.key}}">{{i.key}}</a></td>
+        <td>{{i.label}}</td>
+        <td>{{i.requirement | markdownify}}</td>
+        <td>{{i.source.display}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
