@@ -3,6 +3,44 @@ const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 
+const translationExtensionUrl = "http://hl7.org/fhir/StructureDefinition/translation";
+
+function normalizeLanguageCode(languageCode) {
+  return typeof languageCode === "string" ? languageCode.slice(0, 2) : languageCode;
+}
+
+function normalizeResourceLanguages(resource) {
+  if (!resource || typeof resource !== "object") return resource;
+
+  if (typeof resource.language === "string") {
+    resource.language = normalizeLanguageCode(resource.language);
+  }
+
+  normalizeTranslationExtensionLanguages(resource);
+  return resource;
+}
+
+function normalizeTranslationExtensionLanguages(value) {
+  if (Array.isArray(value)) {
+    value.forEach(item => normalizeTranslationExtensionLanguages(item));
+    return;
+  }
+
+  if (!value || typeof value !== "object") return;
+
+  if (value.url === translationExtensionUrl) {
+    for (const extension of value.extension ?? []) {
+      if (extension?.url === "lang" && typeof extension.valueCode === "string") {
+        extension.valueCode = normalizeLanguageCode(extension.valueCode);
+      }
+    }
+  }
+
+  for (const nestedValue of Object.values(value)) {
+    normalizeTranslationExtensionLanguages(nestedValue);
+  }
+}
+
 class TargetFolders {
   static subfolders = {
     "RequirementResources": "requirements",
@@ -43,9 +81,7 @@ class ActorDefinitionDownloader {
       for (const actorDefinition of this.#getActorDefinitions(body)) {
         const outputFile = path.join(this.outputFolder, this.#getFileName(actorDefinition, usedFileNames));
         
-        if (typeof actorDefinition.language === "string") {
-          actorDefinition.language = actorDefinition.language.slice(0, 2);
-        }
+        normalizeResourceLanguages(actorDefinition);
         
         fs.writeFileSync(outputFile, JSON.stringify(actorDefinition, null, 2), "utf8");
         console.log(`Saved ActorDefinition to ${outputFile}`);
@@ -166,9 +202,7 @@ class ValueSetDownloader {
         `${this.#safeFileName(valueSet.name || valueSet.id || this.#fallbackName(canonical))}.json`
       );
       
-      if (typeof valueSet.language === "string") {
-        valueSet.language = valueSet.language.slice(0, 2);
-      }
+      normalizeResourceLanguages(valueSet);
 
       fs.writeFileSync(outputFile, JSON.stringify(valueSet, null, 2), "utf8");
       console.log(`Saved ValueSet to ${outputFile}`);
@@ -358,9 +392,7 @@ class ExcelConvertor {
       }
 
       const body = await response.json();
-      if (typeof body.language === "string") {
-        body.language = body.language.slice(0, 2);
-      }
+      normalizeResourceLanguages(body);
       
       const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
       fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
