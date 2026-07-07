@@ -179,7 +179,7 @@
       <path value="Location.address" />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AddressInformation" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
       </type>
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -207,7 +207,7 @@
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
       </type>
     </element>
     <element id="Location.partOf">
@@ -230,7 +230,7 @@
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location" />
       </type>
     </element>
   </differential>
