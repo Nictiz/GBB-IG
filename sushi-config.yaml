@@ -71,8 +71,8 @@ parameters:
   - 'generated/resources'
   path-pages:
   - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
-  i18n-default-lang: nl
-  i18n-lang: en
+  i18n-default-lang: nl-NL
+  i18n-lang: en-US
   translation-sources:
   - 'input/translations/en'
   - 'input/translations/nl'
