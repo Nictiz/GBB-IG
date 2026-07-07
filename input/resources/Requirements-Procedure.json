@@ -42,7 +42,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om de verrichting te kunnen plaatsen in de tijd\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan\n\n**Aanwezigheid**: Alleen bedoeld voor uitgevoerde verrichtingen. Niet te gebruiken als startdatum of einddatum zijn ingevuld."
+                "valueMarkdown": "**Description**: There is a need to place a procedure in time\n\n**Variability**: An exact date and time, a date, and a vague date, are all allowed\n\n**Presence**: Only needed for performed procedures. Not to be used when start date or end date are populated."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -92,7 +92,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om de verrichting te kunnen plaatsen in de tijd\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om de verrichting te kunnen plaatsen in de tijd\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -143,7 +143,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Het tijdstip waarop de verrichting is uitgevoerd. Bv. \"het verband is dinsdagmiddag om drie uur vervangen\".\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven"
+                "valueMarkdown": "**Omschrijving**: Het tijdstip waarop de verrichting is uitgevoerd. Bv. \"het verband is dinsdagmiddag om drie uur vervangen\".\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -194,7 +194,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De periode waarin de verrichting is uitgevoerd, dus van begindatum/tijd tot einddatum/tijd.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan voor zowel het begin als het eind\n\n**Aanwezigheid**: Alleen relevant uitgevoerde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is."
+                "valueMarkdown": "**Omschrijving**: De periode waarin de verrichting is uitgevoerd, dus van begindatum/tijd tot einddatum/tijd.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan voor zowel het begin als het eind\n\n**Aanwezigheid**: Alleen relevant uitgevoerde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -245,7 +245,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De einddatum (en eventueel eindtijd) van de verrichting wanneer het om anamnistische registraties gaat (bv. \"patiënt wat tot twee jaar geleden onder behandeling\").\n\n**Variabiliteit**: Dit zal doorgaans een datum zonder tijd of een vage daum zijn.\n\n**Aanwezigheid**: Alleen aanwezig bij afgeronde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is of als er een periode is."
+                "valueMarkdown": "**Omschrijving**: De einddatum (en eventueel eindtijd) van de verrichting wanneer het om anamnistische registraties gaat (bv. \"patiënt wat tot twee jaar geleden onder behandeling\").\n\n**Variabiliteit**: Dit zal doorgaans een datum zonder tijd of een vage daum zijn.\n\n**Aanwezigheid**: Alleen aanwezig bij afgeronde verrichtingen. Niet te gebruiken als er alleen een datum/tijd van uitvoering gewenst is of als er een periode is."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -296,7 +296,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Dit kan een exacte datum en tijd zijn, of voor langdurige verrichtingen een datum of een vage datum\n\n**Variabiliteit**: Doorgaans aanwezig bij gestarte verrichtingen\n\n**Aanwezigheid**: Hier moeten we wel aan denken bij elke informatiebehoefte maar hebben we nu geen bron voor"
+                "valueMarkdown": "**Omschrijving**: Dit kan een exacte datum en tijd zijn, of voor langdurige verrichtingen een datum of een vage datum\n\n**Variabiliteit**: Doorgaans aanwezig bij gestarte verrichtingen\n\n**Aanwezigheid**: Hier moeten we wel aan denken bij elke informatiebehoefte maar hebben we nu geen bron voor"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -342,7 +342,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De geplande startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd of alleen een datum\n\n**Aanwezigheid**: Alleen relevant voor geplande verrichtingen"
+                "valueMarkdown": "**Omschrijving**: De geplande startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd of alleen een datum\n\n**Aanwezigheid**: Alleen relevant voor geplande verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -393,7 +393,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De gewenste startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan\n\n**Aanwezigheid**: Alleen relevant voor gewenste/geadviseerde verrichten"
+                "valueMarkdown": "**Omschrijving**: De gewenste startdatum (en eventueel starttijd) van de verrichting.\n\n**Variabiliteit**: Een exacte datum en tijd, een datum, en een vage datum zijn allemaal toegestaan\n\n**Aanwezigheid**: Alleen relevant voor gewenste/geadviseerde verrichten"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -444,7 +444,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Time of the action.\n\n**Variabiliteit**: DateTime\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Time of the action.\n\n**Variabiliteit**: DateTime\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -495,7 +495,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om een planning aan te geven waarbij het startpunt nog niet is bepaald\n\n**Variabiliteit**: Een exacte periode bestaande uit een aantal met een tijdseenheid (dag, maand, jaar, uur, minuut, seconde)\n\n**Aanwezigheid**: Relevant als er een planning gemaakt moet worden waarbij het referentiepunt nog niet is bepaald"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om een planning aan te geven waarbij het startpunt nog niet is bepaald\n\n**Variabiliteit**: Een exacte periode bestaande uit een aantal met een tijdseenheid (dag, maand, jaar, uur, minuut, seconde)\n\n**Aanwezigheid**: Relevant als er een planning gemaakt moet worden waarbij het referentiepunt nog niet is bepaald"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -545,7 +545,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om het minimum interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een minimum interval is"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om het minimum interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een minimum interval is"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -596,7 +596,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om het gewenste interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een gewenste interval is"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om het gewenste interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een gewenste interval is"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -647,7 +647,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om het maximum interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een maximum interval is"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om het maximum interval aan te geven\n\n**Variabiliteit**: Zie hierboven\n\n**Aanwezigheid**: Zie hierboven, wanneer er een maximum interval is"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -698,7 +698,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om een uitvoerend persoon te kunnen koppelen aan de verrichting"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om een uitvoerend persoon te kunnen koppelen aan de verrichting"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -748,7 +748,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De identiteit van de uitvoerende zorgverlener(s), doorgaans met bijbehorend specialisme\n\n**Variabiliteit**: Is een referentie naar één of meerdere zorgproffesional(s)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen, kan één persoon zijn of meerdere personen"
+                "valueMarkdown": "**Omschrijving**: De identiteit van de uitvoerende zorgverlener(s), doorgaans met bijbehorend specialisme\n\n**Variabiliteit**: Is een referentie naar één of meerdere zorgproffesional(s)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen, kan één persoon zijn of meerdere personen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -799,7 +799,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Specialisme van de zorgverlener die de verrichting heeft uitgevoerd of zal uitvoeren. In de meeste gevallen wordt alleen het specialisme en niet de identiteit van de zorgverlener doorgegeven voor geplande verrichtingen.\n\n**Variabiliteit**: Is een referentie naar één of meerdere specialismes van zorgverlener(s)\n\n**Aanwezigheid**: Relevant voor geplande verrichtingen. Niet te gebruiken als ook de volledige zorgverlener bekend is, deze omvat ook het specialisme."
+                "valueMarkdown": "**Omschrijving**: Specialisme van de zorgverlener die de verrichting heeft uitgevoerd of zal uitvoeren. In de meeste gevallen wordt alleen het specialisme en niet de identiteit van de zorgverlener doorgegeven voor geplande verrichtingen.\n\n**Variabiliteit**: Is een referentie naar één of meerdere specialismes van zorgverlener(s)\n\n**Aanwezigheid**: Relevant voor geplande verrichtingen. Niet te gebruiken als ook de volledige zorgverlener bekend is, deze omvat ook het specialisme."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -850,7 +850,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Indicatie dat de patiënt de uitvoerder is van de verrichting\n\n**Variabiliteit**: Is een referentie naar patiënt\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn."
+                "valueMarkdown": "**Omschrijving**: Indicatie dat de patiënt de uitvoerder is van de verrichting\n\n**Variabiliteit**: Is een referentie naar patiënt\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -901,7 +901,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De identiteit van de contactpersoon of contactpersonen die de verrichting uitvoeren\n\n**Variabiliteit**: Is een referentie naar één of meerdere contactperso(o)n(en)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn."
+                "valueMarkdown": "**Omschrijving**: De identiteit van de contactpersoon of contactpersonen die de verrichting uitvoeren\n\n**Variabiliteit**: Is een referentie naar één of meerdere contactperso(o)n(en)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen. Kan in combinatie met andere uitvoerders zijn."
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -952,7 +952,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor Nederlandse registratie is codering verplicht, maar verouderde of ontvangen data kan ook niet gecodeerd zijn. Waardelijsten voor verrichting vallen onder het SNOMED-besluit.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor Nederlandse registratie is codering verplicht, maar verouderde of ontvangen data kan ook niet gecodeerd zijn. Waardelijsten voor verrichting vallen onder het SNOMED-besluit.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1002,7 +1002,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1048,7 +1048,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeCBVCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeCBVCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1099,7 +1099,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeDHDCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeDHDCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1150,7 +1150,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeGeboortezorgCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde obstetrische verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeGeboortezorgCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde obstetrische verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1201,7 +1201,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeGGZCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende geestelijke gezondheidszorg"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeGGZCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende geestelijke gezondheidszorg"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1252,7 +1252,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeNHGCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeNHGCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1303,7 +1303,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeNZaCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingTypeNZaCodelijst\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1354,7 +1354,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_AlgemeneAnamnese\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende algemene anamnese"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_AlgemeneAnamnese\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende algemene anamnese"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1405,7 +1405,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Zwangerschap\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij moeder/foetus tijdens de zwangerschap"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Zwangerschap\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij moeder/foetus tijdens de zwangerschap"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1456,7 +1456,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Maternaal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde maternale verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Maternaal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde maternale verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1507,7 +1507,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Kindspecifiek\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind tijdens de uitdrijvingsfase"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Kindspecifiek\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind tijdens de uitdrijvingsfase"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1558,7 +1558,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Perineum\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende het perineum"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Perineum\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende het perineum"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1609,7 +1609,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Placenta\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende de placenta"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Placenta\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen betreffende de placenta"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1660,7 +1660,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_OndersteuningOpvang\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind direct na de geboorte"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_OndersteuningOpvang\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind direct na de geboorte"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1711,7 +1711,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_ChirurgischeIngrepen_3.2\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind mbt aangeboren aandoeningen"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_ChirurgischeIngrepen_3.2\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind mbt aangeboren aandoeningen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1762,7 +1762,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_ProblematiekKind\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind mbt problematiek"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_ProblematiekKind\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind mbt problematiek"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1813,7 +1813,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in Ondersteuning_Ontslag_Huis\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind ter ondersteuning van ontslag naar huis"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in Ondersteuning_Ontslag_Huis\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij het kind ter ondersteuning van ontslag naar huis"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1864,7 +1864,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in Onderzoektype\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de moeder tbv medisch onderzoek"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in Onderzoektype\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de moeder tbv medisch onderzoek"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1915,7 +1915,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in Onderzoektype_neonataal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de neonaat tbv medisch onderzoek"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in Onderzoektype_neonataal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de neonaat tbv medisch onderzoek"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -1966,7 +1966,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Postnataal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de moeder mbt postpartum complicaties"
+                "valueMarkdown": "**Omschrijving**: Identificeren van verrichting naam/code in VerrichtingType_Postnataal\n\n**Variabiliteit**: --\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen bij de moeder mbt postpartum complicaties"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2017,7 +2017,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor historische registraties en registraties buiten Nederland kan de naam alleen in vrije tekst beschikbaar zijn of in andere codestelsels dan SNOMED.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Hoe de verrichting wordt geïdentificeerd\n\n**Variabiliteit**: Voor historische registraties en registraties buiten Nederland kan de naam alleen in vrije tekst beschikbaar zijn of in andere codestelsels dan SNOMED.\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2068,7 +2068,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identification of the procedure by name.\n\n**Variabiliteit**: Kan gecodeerd zijn (DV_TEXT)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Identification of the procedure by name.\n\n**Variabiliteit**: Kan gecodeerd zijn (DV_TEXT)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2119,7 +2119,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Concept code and display name identifying the type of procedure\n\n**Variabiliteit**: Kan gecodeerd zijn (codeableconcept)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Concept code and display name identifying the type of procedure\n\n**Variabiliteit**: Kan gecodeerd zijn (codeableconcept)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2170,7 +2170,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De fysieke locatie waar de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een refentie naar een locatie\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: De fysieke locatie waar de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een refentie naar een locatie\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2220,7 +2220,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De zorginstelling waar de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een zorginstelling\n\n**Aanwezigheid**: Zie hierboven"
+                "valueMarkdown": "**Omschrijving**: De zorginstelling waar de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een zorginstelling\n\n**Aanwezigheid**: Zie hierboven"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2271,7 +2271,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De adresgegevens waar de verrichting is, wordt of zal worden uitgevoerd als de verrichting buiten de zorginstelling is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een adres of adresgegevens invullen\n\n**Aanwezigheid**: Zie hierboven"
+                "valueMarkdown": "**Omschrijving**: De adresgegevens waar de verrichting is, wordt of zal worden uitgevoerd als de verrichting buiten de zorginstelling is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een adres of adresgegevens invullen\n\n**Aanwezigheid**: Zie hierboven"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2322,7 +2322,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Anatomische locatie die de focus is van de verrichting.\n\n**Variabiliteit**: Kan één of meerdere directe locaties zijn, is een referentie naar de anatomische locatie\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Anatomische locatie die de focus is van de verrichting.\n\n**Variabiliteit**: Kan één of meerdere directe locaties zijn, is een referentie naar de anatomische locatie\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2400,7 +2400,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Een diagnose, reactie of symptoom die als indicatie geldt voor de verrichting.\n\n**Variabiliteit**: Kan een diagnose, reactie of symptoom zijn (meerdere kan ook) of een referentie hiernaar\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Een diagnose, reactie of symptoom die als indicatie geldt voor de verrichting.\n\n**Variabiliteit**: Kan een diagnose, reactie of symptoom zijn (meerdere kan ook) of een referentie hiernaar\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2451,7 +2451,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Reden waarom een verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Kan gecodeerd zijn, of een referentie naar een bestaande aandoening, waarneming of verrichting (meerdere kan ook)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Reden waarom een verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Kan gecodeerd zijn, of een referentie naar een bestaande aandoening, waarneming of verrichting (meerdere kan ook)\n\n**Aanwezigheid**: Relevant voor geplande, gestarte of uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2502,7 +2502,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: VerrichtingCategorie is een classificatie van de verrichting op grond waarvan gefilterd kan worden welke verrichtingen uitgewisseld/beschikbaargesteld moeten worden.\n\n**Variabiliteit**: Is een codering\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: VerrichtingCategorie is een classificatie van de verrichting op grond waarvan gefilterd kan worden welke verrichtingen uitgewisseld/beschikbaargesteld moeten worden.\n\n**Variabiliteit**: Is een codering\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2552,7 +2552,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Er is behoefte om de status van de verrichting weer te kunnen geven/ uit te wisselen\n\n**Variabiliteit**: 0\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Er is behoefte om de status van de verrichting weer te kunnen geven/ uit te wisselen\n\n**Variabiliteit**: 0\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2602,7 +2602,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: A code specifying the state of the procedure. Generally, this will be the in-progress or completed state. For example: preparation, in-progress, not-done, on-hold, stopped, completed, entered-in-error, unknown\n\n**Variabiliteit**: Moet gecodeerd zijn\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen: \"This resource is used to record the details of current and historical procedures performed on or for a patient.\""
+                "valueMarkdown": "**Omschrijving**: A code specifying the state of the procedure. Generally, this will be the in-progress or completed state. For example: preparation, in-progress, not-done, on-hold, stopped, completed, entered-in-error, unknown\n\n**Variabiliteit**: Moet gecodeerd zijn\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen: \"This resource is used to record the details of current and historical procedures performed on or for a patient.\""
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2653,7 +2653,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Status of the procedure (e.g. completed, on hold, stopped)\n\n**Variabiliteit**: Kan gecodeerd zijn (codeableconcept)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Status of the procedure (e.g. completed, on hold, stopped)\n\n**Variabiliteit**: Kan gecodeerd zijn (codeableconcept)\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2704,7 +2704,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Workflow state transition.\n\n**Variabiliteit**: ISM_TRANSITION\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Workflow state transition.\n\n**Variabiliteit**: ISM_TRANSITION\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2755,7 +2755,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Het individu of de entiteit waarop de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een individu, een groep individuen, zorgaanbieders, organisaties, locaties en apparatuur\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Het individu of de entiteit waarop de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Is een referentie naar een individu, een groep individuen, zorgaanbieders, organisaties, locaties en apparatuur\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2805,7 +2805,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Who the procedure was performed on\n\n**Variabiliteit**: Referentie kan een Patient of een Group resource zijn\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Who the procedure was performed on\n\n**Variabiliteit**: Referentie kan een Patient of een Group resource zijn\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2856,7 +2856,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Subject of care\n\n**Variabiliteit**: PARTY_PROXY\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Subject of care\n\n**Variabiliteit**: PARTY_PROXY\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2907,7 +2907,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Patient/subject information\n\n**Variabiliteit**: Referentie naar EHDSPatient\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Patient/subject information\n\n**Variabiliteit**: Referentie naar EHDSPatient\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -2958,7 +2958,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Contact waarbinnen de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Referentie naar contact\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Contact waarbinnen de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Referentie naar contact\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3008,7 +3008,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Zorgepisode waarbinnen de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Referentie naar zorgepisode\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Zorgepisode waarbinnen de verrichting is, wordt of zal worden uitgevoerd.\n\n**Variabiliteit**: Referentie naar zorgepisode\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3058,7 +3058,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De methode of de techniek die is of wordt toegepast bij het uitvoeren van de verrichting, zoals toegangsmethode, lavage, pressuring, etc\n\n**Variabiliteit**: Kunnen er meerdere zijn, kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: De methode of de techniek die is of wordt toegepast bij het uitvoeren van de verrichting, zoals toegangsmethode, lavage, pressuring, etc\n\n**Variabiliteit**: Kunnen er meerdere zijn, kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3108,7 +3108,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Het product waarvan het plaatsen in of aan het lichaam, verwijderen van het lichaam of een andere manipulatie het doel is van de verrichting. Bijvoorbeeld het plaatsen van een implantaat, kalibratie, batterijvervanging, aanbrengen van een prothese, bevestigen van een wondzuigapparaat, etc.\n\n**Variabiliteit**: Kunnen er meerdere zijn, referentie naar medisch hulpmiddel\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Het product waarvan het plaatsen in of aan het lichaam, verwijderen van het lichaam of een andere manipulatie het doel is van de verrichting. Bijvoorbeeld het plaatsen van een implantaat, kalibratie, batterijvervanging, aanbrengen van een prothese, bevestigen van een wondzuigapparaat, etc.\n\n**Variabiliteit**: Kunnen er meerdere zijn, referentie naar medisch hulpmiddel\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3158,7 +3158,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Identificeert hulpmiddelen die worden gebruikt (verbruikt) als onderdeel van de verrichting. Wordt gebruikt voor het opsporen van besmettingen, enz.\n\n**Variabiliteit**: Referentie naar medisch hulpmiddel\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Identificeert hulpmiddelen die worden gebruikt (verbruikt) als onderdeel van de verrichting. Wordt gebruikt voor het opsporen van besmettingen, enz.\n\n**Variabiliteit**: Referentie naar medisch hulpmiddel\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3208,7 +3208,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: De uitkomst van een uitgevoerde verrichting (bijv. succesvol, niet succesvol)\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: De uitkomst van een uitgevoerde verrichting (bijv. succesvol, niet succesvol)\n\n**Variabiliteit**: Kan gecodeerd zijn\n\n**Aanwezigheid**: Relevant voor uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3258,7 +3258,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Een onbedoelde of ongewenste gebeurtenis die is opgetreden als gevolg van de verrichting\n\n**Variabiliteit**: Referentie naar probleem\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Een onbedoelde of ongewenste gebeurtenis die is opgetreden als gevolg van de verrichting\n\n**Variabiliteit**: Referentie naar probleem\n\n**Aanwezigheid**: Relevant voor gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3308,7 +3308,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Additionele informatie\n\n**Variabiliteit**: Tekst, optioneel, maximaal 1\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
+                "valueMarkdown": "**Omschrijving**: Additionele informatie\n\n**Variabiliteit**: Tekst, optioneel, maximaal 1\n\n**Aanwezigheid**: Relevant voor geplande, gestarte en uitgevoerde verrichtingen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3358,7 +3358,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Metadata over de record zoals gespecificeerd in submodel x\n\n**Variabiliteit**: ---\n\n**Aanwezigheid**: Altijd aanwezig"
+                "valueMarkdown": "**Omschrijving**: Metadata over de record zoals gespecificeerd in submodel x\n\n**Variabiliteit**: ---\n\n**Aanwezigheid**: Altijd aanwezig"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
@@ -3408,7 +3408,7 @@
               },
               {
                 "url": "content",
-                "valueString": "**Omschrijving**: Basic metadata for this information\n\n**Variabiliteit**: Container; iets om informatie te bundelen\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
+                "valueMarkdown": "**Omschrijving**: Basic metadata for this information\n\n**Variabiliteit**: Container; iets om informatie te bundelen\n\n**Aanwezigheid**: Altijd aanwezig\n\n**Verleden/heden/toekomst**: Relevant voor alle typen"
               }
             ],
             "url": "http://hl7.org/fhir/StructureDefinition/translation"
