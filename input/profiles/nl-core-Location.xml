@@ -21,6 +21,11 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
+    <identity value="GBB-Location-v0.1" />
+    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.9/2026-06-25T09:34:17" />
+    <name value="Dataset GBB-Patient-v0.1" />
+  </mapping>
+  <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
     <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.4(2020EN)" />
     <name value="zib HealthcareProvider-v3.4(2020EN)" />
@@ -67,6 +72,11 @@
         </extension>
       </extension>
       <path value="Location.identifier" />
+      <mapping>
+        <identity value="GBB-Location-v0.1" />
+        <map value="gbb-dataelement-380" />
+        <comment value="LocationIdentifier" />
+      </mapping>
     </element>
     <element id="Location.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -110,6 +120,11 @@
         </extension>
       </extension>
       <path value="Location.description" />
+      <mapping>
+        <identity value="GBB-Location-v0.1" />
+        <map value="gbb-dataelement-382" />
+        <comment value="Description" />
+      </mapping>
     </element>
     <element id="Location.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -129,34 +144,10 @@
         </extension>
       </extension>
       <path value="Location.type" />
-    </element>
-    <element id="Location.telecom">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="serving or sending system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="processing system" />
-        </extension>
-      </extension>
-      <path value="Location.telecom" />
       <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.6" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
+        <identity value="GBB-Location-v0.1" />
+        <map value="gbb-dataelement-383" />
+        <comment value="Type" />
       </mapping>
     </element>
     <element id="Location.address">
@@ -209,6 +200,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
       </type>
+      <mapping>
+        <identity value="GBB-Location-v0.1" />
+        <map value="gbb-dataelement-389" />
+        <comment value="ManagingOrganization" />
+      </mapping>
     </element>
     <element id="Location.partOf">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -232,6 +228,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location" />
       </type>
+      <mapping>
+        <identity value="GBB-Location-v0.1" />
+        <map value="gbb-dataelement-391" />
+        <comment value="PartOf (Organization)" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
