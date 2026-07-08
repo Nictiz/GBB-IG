@@ -35,5 +35,31 @@
       <path value="Composition.identifier" />
       <min value="1" />
     </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="mode" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.attester:validator">
+      <path value="Composition.attester" />
+      <sliceName value="validator" />
+    </element>
+    <element id="Composition.attester:validator.mode">
+      <path value="Composition.attester.mode" />
+      <patternCode value="professional" />
+    </element>
+    <element id="Composition.attester:legalAuthenticator">
+      <path value="Composition.attester" />
+      <sliceName value="legalAuthenticator" />
+    </element>
+    <element id="Composition.attester:legalAuthenticator.mode">
+      <path value="Composition.attester.mode" />
+      <patternCode value="legal" />
+    </element>
   </differential>
 </StructureDefinition>
