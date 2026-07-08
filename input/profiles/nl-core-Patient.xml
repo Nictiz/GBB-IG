@@ -22,7 +22,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="GBB-Patient-v0.1" />
-    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.1/2026-05-29T09:00:58" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/Patient-model" />
     <name value="Dataset GBB-Patient-v0.1" />
   </mapping>
   <mapping>

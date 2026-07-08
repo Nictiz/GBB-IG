@@ -23,7 +23,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="GBB-HumanName-v0.1" />
-    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.40.3.20.4/2026-05-01T00:00:00/concept/2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1/2026-05-01T00:00:00" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/HumanName-model" />
     <name value="Dataset GBB-HumanName-v0.1" />
   </mapping>
   <mapping>
