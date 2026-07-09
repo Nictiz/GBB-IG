@@ -35,6 +35,23 @@
       <path value="Composition.identifier" />
       <min value="1" />
     </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+    </element>
     <element id="Composition.attester">
       <path value="Composition.attester" />
       <slicing>
@@ -53,6 +70,15 @@
       <path value="Composition.attester.mode" />
       <patternCode value="professional" />
     </element>
+    <element id="Composition.attester:validator.party">
+      <path value="Composition.attester.party" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://hl7.com/fhir/StructureDefinition/Device" />
+      </type>
+    </element>
     <element id="Composition.attester:legalAuthenticator">
       <path value="Composition.attester" />
       <sliceName value="legalAuthenticator" />
@@ -60,6 +86,22 @@
     <element id="Composition.attester:legalAuthenticator.mode">
       <path value="Composition.attester.mode" />
       <patternCode value="legal" />
+    </element>
+    <element id="Composition.attester:legalAuthenticator.party">
+      <path value="Composition.attester.party" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+      </type>
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
