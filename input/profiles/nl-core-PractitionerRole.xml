@@ -196,7 +196,7 @@
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
