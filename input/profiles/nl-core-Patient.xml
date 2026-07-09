@@ -77,7 +77,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -85,7 +85,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.extension" />
@@ -106,7 +106,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -114,7 +114,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.extension.extension" />
@@ -126,7 +126,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -134,7 +134,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.extension.extension.value[x]" />
@@ -158,7 +158,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -166,7 +166,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.identifier" />
@@ -193,7 +193,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -201,7 +201,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.identifier" />
@@ -217,7 +217,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -225,7 +225,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.name" />
@@ -248,7 +248,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -256,7 +256,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.telecom" />
@@ -278,7 +278,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -286,7 +286,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.gender" />
@@ -314,7 +314,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -322,7 +322,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.birthDate" />
@@ -341,7 +341,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -349,7 +349,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.deceased[x]" />
@@ -367,7 +367,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -375,7 +375,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.deceased[x]" />
@@ -398,7 +398,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -406,7 +406,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.deceased[x]" />
@@ -429,7 +429,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -437,7 +437,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.address" />
@@ -467,7 +467,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -475,7 +475,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.multipleBirth[x]" />
@@ -493,7 +493,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -501,7 +501,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.multipleBirth[x]" />
@@ -524,7 +524,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -532,7 +532,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.multipleBirth[x]" />
@@ -553,7 +553,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -561,7 +561,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.contact" />
@@ -624,7 +624,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -632,7 +632,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.contact.name" />
@@ -652,7 +652,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -660,7 +660,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.contact.telecom" />
@@ -682,7 +682,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -690,7 +690,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.contact.address" />
@@ -711,7 +711,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/AvailableMakingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -719,7 +719,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ProcessingSystem" />
+          <valueCanonical value="http://nictiz.nl/fhir/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Patient.contact.organization" />
