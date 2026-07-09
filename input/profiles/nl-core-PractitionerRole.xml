@@ -72,7 +72,7 @@
       <path value="PractitionerRole.practitioner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
     </element>
@@ -101,7 +101,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />

@@ -198,7 +198,7 @@
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
         <identity value="GBB-Location-v0.1" />
@@ -226,7 +226,7 @@
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
       </type>
       <mapping>
         <identity value="GBB-Location-v0.1" />

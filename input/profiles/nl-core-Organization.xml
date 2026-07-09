@@ -179,7 +179,7 @@
       <path value="Organization.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
         <identity value="GBB-Organization-v0.1" />
