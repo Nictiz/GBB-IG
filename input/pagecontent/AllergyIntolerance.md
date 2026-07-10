@@ -1,0 +1,1 @@
+{% include_relative AllergyIntolerance-Concept.md %}
