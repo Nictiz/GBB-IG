@@ -69,18 +69,10 @@
     <element id="AllergyIntolerance.clinicalStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -88,7 +80,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.clinicalStatus" />
@@ -117,7 +109,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -125,7 +117,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.verificationStatus" />
@@ -158,7 +150,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -166,7 +158,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.category" />
@@ -190,7 +182,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -198,7 +190,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.criticality" />
@@ -228,18 +220,10 @@
     <element id="AllergyIntolerance.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -247,7 +231,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.code" />
@@ -297,18 +281,10 @@
     <element id="AllergyIntolerance.patient">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -316,7 +292,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.patient" />
@@ -361,7 +337,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -369,7 +345,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.recorder" />
@@ -406,7 +382,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -414,7 +390,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.lastOccurrence" />
@@ -441,7 +417,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -449,7 +425,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.note.text" />
@@ -487,7 +463,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -495,7 +471,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction" />
@@ -531,7 +507,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -539,7 +515,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.extension.value[x]" />
@@ -567,7 +543,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -575,7 +551,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.substance" />
@@ -604,18 +580,10 @@
     <element id="AllergyIntolerance.reaction.manifestation">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -623,7 +591,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.manifestation" />
@@ -660,7 +628,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -668,7 +636,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.description" />
@@ -688,18 +656,10 @@
     <element id="AllergyIntolerance.reaction.onset">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="Registering system" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -707,7 +667,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.onset" />
@@ -735,7 +695,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -743,7 +703,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.severity" />
@@ -776,7 +736,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -784,7 +744,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.exposureRoute" />
@@ -815,7 +775,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -823,7 +783,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="Processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.note.text" />
