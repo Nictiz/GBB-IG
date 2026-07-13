@@ -3,7 +3,7 @@
   <id value="nl-core-Location" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
   <name value="NlCoreLocation" />
   <title value="nl core Location" />
   <status value="draft" />
@@ -22,8 +22,8 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="GBB-Location-v0.1" />
-    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.9/2026-06-25T09:34:17" />
-    <name value="Dataset GBB-Patient-v0.1" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/Location-model" />
+    <name value="Dataset GBB-Location-v0.1" />
   </mapping>
   <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -36,7 +36,7 @@
     <name value="zib ContactInformation-v1.2(2020EN)" />
   </mapping>
   <kind value="resource" />
-  <abstract value="true" />
+  <abstract value="false" />
   <type value="Location" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
   <derivation value="constraint" />
@@ -60,7 +60,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -68,7 +68,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.identifier" />
@@ -84,7 +84,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -92,7 +92,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.name" />
@@ -108,7 +108,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -116,7 +116,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.description" />
@@ -132,7 +132,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -140,7 +140,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.type" />
@@ -156,7 +156,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -164,13 +164,13 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.address" />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -184,7 +184,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -192,13 +192,13 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
         <identity value="GBB-Location-v0.1" />
@@ -212,7 +212,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -220,13 +220,13 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
       </type>
       <mapping>
         <identity value="GBB-Location-v0.1" />

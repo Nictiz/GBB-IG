@@ -3,7 +3,7 @@
   <id value="nl-core-ContactPoint" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
   <name value="NlCoreContactPoint" />
   <title value="nl core ContactPoint" />
   <status value="draft" />
@@ -20,6 +20,11 @@
   <purpose value="This profile is the FHIR implementation of the general building block [ContactPoint](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/ContactPoint)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="GBB-ContactPoint-v0.1" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/ContactPoint-model" />
+    <name value="Dataset GBB-ContactPoint-v0.1" />
+  </mapping>
   <mapping>
     <identity value="zib-contactinformation-v1.2-2020EN" />
     <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
@@ -53,7 +58,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -61,7 +66,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.system" />
@@ -90,7 +95,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -98,7 +103,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.value" />
@@ -123,7 +128,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -131,7 +136,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.use" />
