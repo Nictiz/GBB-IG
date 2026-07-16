@@ -31,6 +31,19 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.extension:version">
+      <path value="Composition.extension" />
+      <sliceName value="version" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
+      </type>
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-413" />
+        <comment value="Version" />
+      </mapping>
+    </element>
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
