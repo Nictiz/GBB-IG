@@ -126,14 +126,6 @@
         <comment value="Subject" />
       </mapping>
     </element>
-    <element id="Composition.date">
-      <path value="Composition.date" />
-      <mapping>
-        <identity value="GBB-Composition-v0.1" />
-        <map value="gbb-dataelement-419" />
-        <comment value="Period" />
-      </mapping>
-    </element>
     <element id="Composition.author">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
