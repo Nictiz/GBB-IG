@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Document" />
+  <id value="nl-core-Composition" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Document" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Composition" />
   <version value="0.0.1" />
-  <name value="NLCoreDocument" />
-  <title value="nl core Document" />
+  <name value="NLCoreComposition" />
+  <title value="nl core Composition" />
   <status value="draft" />
   <contact>
     <name value="Nictiz" />
@@ -17,13 +17,13 @@
     </telecom>
   </contact>
   <description value="This is a &quot;framework&quot; building block to create a document with." />
-  <purpose value="This profile is the FHIR implementation of the general building block [Document](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Document)." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Composition](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Composition)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Document-v0.1" />
+    <identity value="GBB-Composition-v0.1" />
     <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.10/2026-07-06T13:55:11" />
-    <name value="GBB-Dataset-Document-v0.1" />
+    <name value="GBB-Dataset-Composition-v0.1" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
