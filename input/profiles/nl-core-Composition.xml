@@ -56,6 +56,22 @@
         <comment value="Identifier" />
       </mapping>
     </element>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-409" />
+        <comment value="Status" />
+      </mapping>
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-411" />
+        <comment value="Type" />
+      </mapping>
+    </element>
     <element id="Composition.category">
       <path value="Composition.category" />
       <mapping>
@@ -97,6 +113,14 @@
         <comment value="Subject" />
       </mapping>
     </element>
+    <element id="Composition.date">
+      <path value="Composition.date" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-419" />
+        <comment value="Period" />
+      </mapping>
+    </element>
     <element id="Composition.author">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -126,6 +150,14 @@
         <identity value="GBB-Composition-v0.1" />
         <map value="gbb-dataelement-403" />
         <comment value="Author[x]" />
+      </mapping>
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-412" />
+        <comment value="Title" />
       </mapping>
     </element>
     <element id="Composition.attester">
