@@ -63,7 +63,7 @@
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -71,7 +71,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -88,7 +88,7 @@
     <element id="Composition.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -96,7 +96,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -112,7 +112,7 @@
     <element id="Composition.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -120,7 +120,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -248,7 +248,7 @@
     <element id="Composition.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -256,7 +256,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -323,7 +323,7 @@
     <element id="Composition.attester:validator.mode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -331,7 +331,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -433,7 +433,7 @@
     <element id="Composition.attester:legalAuthenticator.mode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -441,7 +441,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
