@@ -190,10 +190,10 @@
         <comment value="Subject" />
       </mapping>
     </element>
-    <element id="Composition.author">
+    <element id="Composition.date">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -201,7 +201,31 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.date" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-408" />
+        <comment value="Date" />
+      </mapping>
+    </element>
+    <element id="Composition.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
