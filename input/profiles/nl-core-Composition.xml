@@ -316,6 +316,30 @@
       <path value="Composition.attester.mode" />
       <patternCode value="professional" />
     </element>
+    <element id="Composition.attester:validator.time">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.time" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-418" />
+        <comment value="Attestation DateTime" />
+      </mapping>
+    </element>
     <element id="Composition.attester:validator.party">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -401,6 +425,30 @@
       </extension>
       <path value="Composition.attester.mode" />
       <patternCode value="legal" />
+    </element>
+    <element id="Composition.attester:legalAuthenticator.time">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.time" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-425" />
+        <comment value="LegalAuthentication DateTime" />
+      </mapping>
     </element>
     <element id="Composition.attester:legalAuthenticator.party">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
