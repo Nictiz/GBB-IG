@@ -114,6 +114,11 @@ menu:
       Requirements: Requirements-ContactPoint.html
       Afsprakenmodel: StructureDefinition-ContactPoint-model.html
       FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
+    Composition:
+      Overzicht: Composition.html
+      Requirements: Requirements-Composition.html
+      Afsprakenmodel: StructureDefinition-Composition-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Composition.html
     Locatie:
       Overzicht: Location.html
       Requirements: Requirements-Location.html
