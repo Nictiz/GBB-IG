@@ -400,9 +400,9 @@
           </extension>
         </extension>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://hl7.com/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://hl7.com/gbb/StructureDefinition/Device" />
       </type>
     </element>
     <element id="Composition.attester:legalAuthenticator">
@@ -494,9 +494,9 @@
       <path value="Composition.attester.party" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
     </element>
     <element id="Composition.custodian">
