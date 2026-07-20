@@ -8,7 +8,8 @@ const OBLIGATION_URL =
 function printUsage() {
   console.log(`
 Usage:
-  node copy-obligations.js \\
+  node sync-obligations.js \\
+    [--copy] \\
     --actor <canonical> [--actor <canonical> ...] \\
     <profile.xml> <logical-model.json>
 
@@ -21,7 +22,7 @@ Arguments:
 
 Required options:
   --actor <canonical>
-      Only copy obligations that apply to this ActorDefinition.
+      Check obligations that apply to this ActorDefinition.
 
       At least one --actor option is required. The option may be repeated.
 
@@ -33,19 +34,28 @@ Required options:
 
         https://example.org/ActorDefinition/sender
 
-      Obligations without an actor are not copied.
+      Obligations without an actor are ignored.
 
 Other options:
+  --copy
+      Copy matching obligation extensions from the logical model to the
+      profile and update the profile XML file in place.
+
+      Without --copy, the profile is not modified. The script reports:
+
+      - an obligation exists in the logical model but not in the profile;
+      - the obligation codes for an actor differ;
+      - an obligation exists in the profile but not in the logical model.
+
   --help, -h
       Show this help.
-
-The profile XML file is updated in place.
 `.trim());
 }
 
 function parseArguments(argumentsList) {
   const options = {
     actors: [],
+    copy: false,
     profileFilename: undefined,
     logicalModelFilename: undefined,
   };
@@ -66,6 +76,10 @@ function parseArguments(argumentsList) {
         options.actors.push(actor);
         break;
       }
+
+      case "--copy":
+        options.copy = true;
+        break;
 
       case "--help":
       case "-h":
@@ -174,9 +188,9 @@ function buildLogicalModelIndex(logicalModel) {
   // differential, this should be flagged by other tools.
   let elements = [];
   if (logicalModel.snapshot) {
-    elements = logicalModel.snapshot.element;
+    elements = logicalModel.snapshot.element ?? [];
   } else if (logicalModel.differential) {
-    elements = logicalModel.differential.element;
+    elements = logicalModel.differential.element ?? [];
   }
 
   for (const element of elements) {
@@ -208,7 +222,7 @@ function resolveMapTargetToPath(mapping, logicalModelIndex) {
     mapping.replace(/\s+\([^)]*\)\s*$/, "").trim(),
   ];
 
-  return candidates.find((candidate) => logicalModelIndex.has(candidate));
+  return candidates.find(candidate => logicalModelIndex.has(candidate));
 }
 
 function getObligations(element) {
@@ -224,13 +238,20 @@ function getObligationActors(obligation) {
         extension.url === "actor" &&
         typeof extension.valueCanonical === "string"
     )
-    .map((extension) => extension.valueCanonical);
+    .map(extension => stripVersionFromCanonical(extension.valueCanonical));
 }
 
-function obligationAppliesToActors(
-  obligation,
-  selectedActorUrls
-) {
+function getObligationCodes(obligation) {
+  return (obligation.extension ?? [])
+    .filter(
+      (extension) =>
+        extension.url === "code" &&
+        typeof extension.valueCode === "string"
+    )
+    .map(extension => extension.valueCode);
+}
+
+function obligationAppliesToActors(obligation, selectedActorUrls) {
   const obligationActors = getObligationActors(obligation);
 
   /*
@@ -240,9 +261,7 @@ function obligationAppliesToActors(
     return false;
   }
 
-  return obligationActors.some((actorUrl) =>
-    selectedActorUrls.has(stripVersionFromCanonical(actorUrl))
-  );
+  return obligationActors.some(actorUrl => selectedActorUrls.has(actorUrl));
 }
 
 function canonicalJson(value) {
@@ -262,7 +281,6 @@ function canonicalJson(value) {
 
 function copyObligations(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
   for (const profileElement of elements) {
-
     const mappings = getMappingTargets(profileElement, mappingIdentity);
     if (mappings.length === 0) {
       continue;
@@ -314,6 +332,168 @@ function copyObligations(elements, logicalModelIndex, mappingIdentity, selectedA
   }
 }
 
+function getActorObligations(element, selectedActorUrls) {
+  const obligationsByActor = new Map();
+
+  for (const actor of selectedActorUrls) {
+    obligationsByActor.set(actor, {
+      present: false,
+      codes: new Set(),
+    });
+  }
+
+  for (const obligation of getObligations(element)) {
+    const obligationActors = getObligationActors(obligation);
+    if (obligationActors.length === 0) {
+      continue;
+    }
+
+    const obligationCodes = getObligationCodes(obligation);
+
+    for (const actor of obligationActors) {
+      if (!selectedActorUrls.has(actor)) {
+        continue;
+      }
+
+      const actorObligations = obligationsByActor.get(actor);
+
+      actorObligations.present = true;
+
+      for (const code of obligationCodes) {
+        actorObligations.codes.add(code);
+      }
+    }
+  }
+
+  return obligationsByActor;
+}
+
+function setsAreEqual(left, right) {
+  if (left.size !== right.size) {
+    return false;
+  }
+
+  return [...left].every(
+    (value) => right.has(value)
+  );
+}
+
+function formatCodes(codes) {
+  if (codes.size === 0) {
+    return "(no code)";
+  }
+
+  return [...codes].sort().join(", ");
+}
+
+function reportDiscrepancy(
+  type,
+  profileElement,
+  modelPath,
+  actor,
+  modelCodes,
+  profileCodes
+) {
+  console.log();
+
+  switch (type) {
+    case "missing-in-profile":
+      console.log("OBLIGATION MISSING IN PROFILE");
+      console.log(
+        "  The logical model contains an obligation for this actor, " +
+          "but the profile does not."
+      );
+      break;
+
+    case "different-codes":
+      console.log("OBLIGATION CODES DIFFER");
+      console.log(
+        "  The logical model and profile contain obligations for this " +
+          "actor, but their obligation codes differ."
+      );
+      break;
+
+    case "missing-in-model":
+      console.log("OBLIGATION MISSING IN LOGICAL MODEL");
+      console.log(
+        "  The profile contains an obligation for this actor, " +
+          "but the logical model does not."
+      );
+      break;
+
+    default:
+      throw new Error(
+        `Unknown discrepancy type "${type}".`
+      );
+  }
+
+  console.log(
+    `  Profile element: ` +
+      `${profileElement.path ?? profileElement.id}`
+  );
+  console.log(`  Logical model element: ${modelPath}`);
+  console.log(`  Actor: ${actor}`);
+  console.log(
+    `  Logical model codes: ${formatCodes(modelCodes)}`
+  );
+  console.log(
+    `  Profile codes: ${formatCodes(profileCodes)}`
+  );
+}
+
+function reportObligationDiscrepancies(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
+  let discrepancyCount = 0;
+
+  for (const profileElement of elements) {
+    const mappings = getMappingTargets(profileElement, mappingIdentity);
+    if (mappings.length === 0) {
+      continue;
+    }
+
+    const resolvedTargetPaths = new Set();
+    for (const mapping of mappings) {
+      const modelPath = resolveMapTargetToPath(mapping, logicalModelIndex);
+
+      if (!modelPath) {
+        console.warn(`Mapping target not found in logical model: ${mapping} (from ${profileElement.path ?? profileElement.id})`);
+        continue;
+      }
+
+      resolvedTargetPaths.add(modelPath);
+    }
+
+    for (const targetPath of resolvedTargetPaths) {
+      const logicalModelElement = logicalModelIndex.get(targetPath);
+      const modelObligationsByActor = getActorObligations(logicalModelElement, selectedActorUrls);
+      const profileObligationsByActor = getActorObligations(profileElement, selectedActorUrls);
+
+      for (const actor of selectedActorUrls) {
+        const modelObligations = modelObligationsByActor.get(actor);
+        const profileObligations = profileObligationsByActor.get(actor);
+
+        if (modelObligations.present && !profileObligations.present) {
+          discrepancyCount += 1;
+          reportDiscrepancy("missing-in-profile", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
+          continue;
+        }
+
+        if (!modelObligations.present && profileObligations.present) {
+          discrepancyCount += 1;
+          reportDiscrepancy("missing-in-model", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
+          continue;
+        }
+
+        if (modelObligations.present && profileObligations.present && !setsAreEqual(modelObligations.codes, profileObligations.codes)) {
+          discrepancyCount += 1;
+          reportDiscrepancy("different-codes", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
+        }
+      }
+    }
+  }
+
+  return discrepancyCount;
+}
+
 function addXmlDeclaration(xml) {
   if (/^\s*<\?xml\b/.test(xml)) {
     return xml;
@@ -353,23 +533,52 @@ function main() {
   }
 
   console.log(`Mapping identity: ${mappingIdentity}`);
-  console.log("Actor filter:");
+  console.log("Actors:");
   for (const actorUrl of selectedActorUrls) {
     console.log(`  ${actorUrl}`);
   }
 
-  // We simply copy both to the snapshot and the differential and assume they
-  // are in sync. Other tools will check this.
-  if (profile.snapshot) {
-    copyObligations(profile.snapshot.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
-  }
-  if (profile.differential) {
-    copyObligations(profile.differential.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
+  if (options.copy) {
+    console.log("Mode: copy");
+
+    // We simply copy both to the snapshot and the differential and assume
+    // they are in sync. Other tools will check this.
+    if (profile.snapshot) {
+      copyObligations(profile.snapshot.element ?? [], logicalModelIndex, mappingIdentity, selectedActorUrls);
+    }
+    if (profile.differential) {
+      copyObligations(profile.differential.element ?? [], logicalModelIndex, mappingIdentity, selectedActorUrls);
+    }
+
+    const profileXml = addXmlDeclaration(fhir.objToXml(profile));
+    fs.writeFileSync(profileFilename, `${profileXml.trimEnd()}\n`, "utf8");
+    console.log(`Updated: ${path.resolve(profileFilename)}`);
+
+    return;
   }
 
-  const profileXml = addXmlDeclaration(fhir.objToXml(profile));
-  fs.writeFileSync(profileFilename, `${profileXml.trimEnd()}\n`, "utf8");
-  console.log(`Updated: ${path.resolve(profileFilename)}`);
+  console.log("Mode: report");
+
+  let discrepancyCount = 0;
+
+  // As in copy mode, check both sections independently.
+  if (profile.snapshot) {
+    discrepancyCount += reportObligationDiscrepancies(profile.snapshot.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
+  }
+  if (profile.differential) {
+    discrepancyCount += reportObligationDiscrepancies(profile.differential.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
+  }
+
+  console.log();
+
+  if (discrepancyCount === 0) {
+    console.log("No obligation discrepancies found for the specified actors.");
+  } else {
+    console.log(`Found ${discrepancyCount} obligation ${discrepancyCount === 1 ? "discrepancy" : "discrepancies"}.`);
+
+    // Useful when the script is used as a CI validation step.
+    process.exitCode = 2;
+  }
 }
 
 main();
