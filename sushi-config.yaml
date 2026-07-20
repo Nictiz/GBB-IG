@@ -110,6 +110,12 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
+  Bouwblokken:
+    Procedure:
+      Overzicht: Procedure.html
+      Requirements: Requirements-Procedure.html
+      Afsprakenmodel: StructureDefinition-Procedure-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Procedure.html
 
   Artefacten: artifacts.html
 
