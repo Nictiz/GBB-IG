@@ -186,7 +186,7 @@
       </type>
       <mapping>
         <identity value="GBB-Composition-v0.1" />
-        <map value="gbb-dataelement-401" />
+        <map value="gbb-dataelement-400" />
         <comment value="Subject" />
       </mapping>
     </element>
@@ -316,8 +316,8 @@
       <sliceName value="validator" />
       <mapping>
         <identity value="GBB-Composition-v0.1" />
-        <map value="gbb-dataelement-415" />
-        <comment value="Attester[x]" />
+        <map value="gbb-dataelement-414" />
+        <comment value="Attestation" />
       </mapping>
     </element>
     <element id="Composition.attester:validator.mode">
@@ -404,6 +404,11 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://hl7.com/gbb/StructureDefinition/Device" />
       </type>
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-415" />
+        <comment value="Attester[x]" />
+      </mapping>
     </element>
     <element id="Composition.attester:legalAuthenticator">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -426,8 +431,8 @@
       <sliceName value="legalAuthenticator" />
       <mapping>
         <identity value="GBB-Composition-v0.1" />
-        <map value="gbb-dataelement-422" />
-        <comment value="LegalAuthenticator" />
+        <map value="gbb-dataelement-420" />
+        <comment value="LegalAuthentication" />
       </mapping>
     </element>
     <element id="Composition.attester:legalAuthenticator.mode">
@@ -498,6 +503,11 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-422" />
+        <comment value="LegalAuthenticator[x]" />
+      </mapping>
     </element>
     <element id="Composition.custodian">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -523,7 +533,7 @@
       </type>
       <mapping>
         <identity value="GBB-Composition-v0.1" />
-        <map value="gbb-dataelement-429" />
+        <map value="gbb-dataelement-428" />
         <comment value="Custodian" />
       </mapping>
     </element>
