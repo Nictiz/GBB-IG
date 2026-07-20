@@ -127,18 +127,6 @@ function validateStructureDefinition(resource, filename) {
   }
 }
 
-function getElements(structureDefinition) {
-  // Prefer snapshot over differential as it is more complete.
-  // We don't bother if there are any differences between the snapshot and the
-  // differential, this should be flagged by other tools.
-  if (structureDefinition.snapshot) {
-    return structureDefinition.snapshot.element;
-  } else if (structureDefinition.differential) {
-    return structureDefinition.differential.element;
-  }
-  return [];
-}
-
 function stripVersionFromCanonical(canonical) {
   return canonical.trim().split("|")[0];
 }
@@ -180,16 +168,24 @@ function determineMappingIdentity(profile, logicalModel) {
 function buildLogicalModelIndex(logicalModel) {
   const index = new Map();
 
-  for (const element of getElements(logicalModel)) {
+  // Prefer snapshot over differential. It shouldn't matter for the ART-DECOR
+  // exports, but just err on the safe side.
+  // We don't bother if there are any differences between the snapshot and the
+  // differential, this should be flagged by other tools.
+  let elements = [];
+  if (logicalModel.snapshot) {
+    elements = logicalModel.snapshot.element;
+  } else if (logicalModel.differential) {
+    elements = logicalModel.differential.element;
+  }
+
+  for (const element of elements) {
     if (!element.path) {
       continue;
     }
 
     if (index.has(element.path)) {
-      throw new Error(
-        `The logical model contains duplicate element path ` +
-          `"${element.path}".`
-      );
+      throw new Error(`The logical model contains duplicate element path "${element.path}".`);
     }
 
     index.set(element.path, element);
@@ -264,40 +260,24 @@ function canonicalJson(value) {
   return JSON.stringify(value);
 }
 
-function copyObligations(profile, logicalModelIndex, mappingIdentity, selectedActorUrls) {
-  const statistics = {
-    profileElements: 0,
-    mappedElements: 0,
-    resolvedMappingTargets: 0,
-    unresolvedMappings: 0,
-    matchingObligations: 0,
-    filteredObligations: 0,
-    copiedObligations: 0,
-    skippedDuplicates: 0,
-  };
-
-  for (const profileElement of getElements(profile)) {
-    statistics.profileElements += 1;
+function copyObligations(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
+  for (const profileElement of elements) {
 
     const mappings = getMappingTargets(profileElement, mappingIdentity);
     if (mappings.length === 0) {
       continue;
     }
 
-    statistics.mappedElements += 1;
-
     const resolvedTargetPaths = new Set();
     for (const mapping of mappings) {
       const modelPath = resolveMapTargetToPath(mapping, logicalModelIndex);
 
       if (!modelPath) {
-        statistics.unresolvedMappings += 1;
         console.warn(`Mapping target not found in logical model: ${mapping} (from ${profileElement.path ?? profileElement.id})`);
         continue;
       }
 
       resolvedTargetPaths.add(modelPath);
-      statistics.resolvedMappingTargets += 1;
     }
 
     if (resolvedTargetPaths.size === 0) {
@@ -312,21 +292,17 @@ function copyObligations(profile, logicalModelIndex, mappingIdentity, selectedAc
 
       for (const obligation of getObligations(logicalModelElement)) {
         if (!obligationAppliesToActors(obligation, selectedActorUrls)) {
-          statistics.filteredObligations += 1;
           continue;
         }
-        statistics.matchingObligations += 1;
 
         const canonicalObligation = canonicalJson(obligation);
 
         if (existingObligations.has(canonicalObligation)) {
-          statistics.skippedDuplicates += 1;
           continue;
         }
 
         profileElement.extension.push(structuredClone(obligation));
         existingObligations.add(canonicalObligation);
-        statistics.copiedObligations += 1;
 
         console.log(`Copied obligation from ${targetPath} to ${profileElement.path ?? profileElement.id}`);
       }
@@ -336,8 +312,6 @@ function copyObligations(profile, logicalModelIndex, mappingIdentity, selectedAc
       delete profileElement.extension;
     }
   }
-
-  return statistics;
 }
 
 function addXmlDeclaration(xml) {
@@ -384,38 +358,18 @@ function main() {
     console.log(`  ${actorUrl}`);
   }
 
-  const statistics = copyObligations(
-    profile,
-    logicalModelIndex,
-    mappingIdentity,
-    selectedActorUrls
-  );
+  // We simply copy both to the snapshot and the differential and assume they
+  // are in sync. Other tools will check this.
+  if (profile.snapshot) {
+    copyObligations(profile.snapshot.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
+  }
+  if (profile.differential) {
+    copyObligations(profile.differential.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
+  }
 
-  const profileXml = addXmlDeclaration(
-    fhir.objToXml(profile)
-  );
-
-  fs.writeFileSync(
-    profileFilename,
-    `${profileXml.trimEnd()}\n`,
-    "utf8"
-  );
-
-  console.log();
-  console.log(`Profile elements: ${statistics.profileElements}`);
-  console.log(`Mapped elements: ${statistics.mappedElements}`);
-  console.log(`Resolved mappings: ${statistics.resolvedMappingTargets}`);
-  console.log(`Unresolved mappings: ${statistics.unresolvedMappings}`);
-  console.log(`Matching obligations: ${statistics.matchingObligations}`);
-  console.log(`Obligations filtered out: ${statistics.filteredObligations}`);
-  console.log(`Obligations copied: ${statistics.copiedObligations}`);
-  console.log(`Duplicates skipped: ${statistics.skippedDuplicates}`);
+  const profileXml = addXmlDeclaration(fhir.objToXml(profile));
+  fs.writeFileSync(profileFilename, `${profileXml.trimEnd()}\n`, "utf8");
   console.log(`Updated: ${path.resolve(profileFilename)}`);
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(`Error: ${getErrorMessage(error)}`);
-  process.exitCode = 1;
-}
+main();
