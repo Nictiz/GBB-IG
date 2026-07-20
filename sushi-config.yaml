@@ -109,16 +109,16 @@ menu:
       Requirements: Requirements-Address.html
       Afsprakenmodel: StructureDefinition-Address-model.html
       FHIR-profiel: StructureDefinition-nl-core-Address.html
-    Contactgegevens:
-      Overzicht: ContactPoint.html
-      Requirements: Requirements-ContactPoint.html
-      Afsprakenmodel: StructureDefinition-ContactPoint-model.html
-      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
     Composition:
       Overzicht: Composition.html
       Requirements: Requirements-Composition.html
       Afsprakenmodel: StructureDefinition-Composition-model.html
       FHIR-profiel: StructureDefinition-nl-core-Composition.html
+    Contactgegevens:
+      Overzicht: ContactPoint.html
+      Requirements: Requirements-ContactPoint.html
+      Afsprakenmodel: StructureDefinition-ContactPoint-model.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html   
     Locatie:
       Overzicht: Location.html
       Requirements: Requirements-Location.html
