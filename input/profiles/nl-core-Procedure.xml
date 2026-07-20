@@ -25,6 +25,11 @@
         <uri value="http://nictiz.nl/gbb/Requirements/Procedure"/>
         <name value="Information requirements for Procedure"/>
     </mapping>
+    <mapping>
+      <identity value="GBB-Procedure-0.1.0"/>
+      <uri value="http://nictiz.nl/gbb/StructureDefinition/Procedure-model"/>
+      <name value="Dataset GBB-Procedure-0.1.0"/>
+    </mapping>
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Procedure"/>
@@ -78,6 +83,11 @@
                 <map value="13"/>
                 <comment value="VerrichtingMethode"/>
             </mapping>
+            <mapping>
+                <identity value="GBB-Procedure-0.1.0"/>
+                <map value="NL-CM-14.1.12"/>
+                <comment value="Methode"/>
+            </mapping>
         </element>
         <element id="Procedure.status">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -111,6 +121,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="9.3"/>
                 <comment value="VerrichtingStatusOpenEHR"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-443"/>
+              <comment value="VerrichtingStatus"/>
             </mapping>
         </element>
         <element id="Procedure.category">
@@ -150,6 +165,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="8"/>
                 <comment value="Categorie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-439"/>
+              <comment value="VerrichtingCategorie"/>
             </mapping>
         </element>
         <element id="Procedure.code">
@@ -196,6 +216,11 @@
                 <map value="4.2"/>
                 <comment value="VerrichtingNaamAnders"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-436"/>
+              <comment value="VerrichtingNaam"/>
+            </mapping>
         </element>
         <element id="Procedure.subject">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -236,6 +261,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="10.3"/>
                 <comment value="VerrichtingSubjectEHDS"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-445"/>
+              <comment value="Patient"/>
             </mapping>
         </element>
         <element id="Procedure.performed[x]">
@@ -317,6 +347,16 @@
                 <map value="1.3"/>
                 <comment value="GeplandeStartdatumTijd"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="NL-CM-14.1.2"/>
+              <comment value="StartDatumTijd"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-438"/>
+              <comment value="GeplandeStartDatumTijd"/>
+            </mapping>
         </element>
         <element id="Procedure.performed[x]:performedPeriod.end">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -340,6 +380,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="1.1.3"/>
                 <comment value="Einddatum"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="NL-CM-14.1.3"/>
+              <comment value="EindDatumTijd"/>
             </mapping>
         </element>
         <element id="Procedure.performed[x]:performedString">
@@ -428,6 +473,16 @@
                 <map value="3.4"/>
                 <comment value="ContactpersoonAlsUitvoerder"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-446"/>
+              <comment value="Patient"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-447"/>
+              <comment value="Zorgverlener"/>
+            </mapping>
         </element>
         <element id="Procedure.performer.onBehalfOf">
             <path value="Procedure.performer.onBehalfOf"/>
@@ -469,6 +524,16 @@
                 <identity value="requirements-Procedure"/>
                 <map value="5.2"/>
                 <comment value="AdresAlsLocatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-448"/>
+              <comment value="Organisatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-449"/>
+              <comment value="Adresgegevens"/>
             </mapping>
         </element>
         <element id="Procedure.reasonCode">
@@ -514,6 +579,11 @@
                 <map value="7.2"/>
                 <comment value="Reden"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-445"/>
+              <comment value="Indicatie"/>
+            </mapping>
         </element>
         <element id="Procedure.reasonReference">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -553,6 +623,11 @@
                 <map value="7.2"/>
                 <comment value="Reden"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-445"/>
+              <comment value="Indicatie"/>
+            </mapping>
         </element>
         <element id="Procedure.bodySite">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -584,6 +659,11 @@
                 <map value="6"/>
                 <comment value="AnatomischeLocatie"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="NL-CM-14.1.13"/>
+              <comment value="AnatomischeLocatie"/>
+            </mapping>
         </element>
         <element id="Procedure.outcome">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -612,6 +692,11 @@
                 <map value="16"/>
                 <comment value="Uitkomst"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-437"/>
+              <comment value="Uitkomst"/>
+      </mapping>
         </element>
         <element id="Procedure.complication">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -639,6 +724,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="17"/>
                 <comment value="Complicatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-460"/>
+              <comment value="Complicatie"/>
             </mapping>
         </element>
         <element id="Procedure.complicationDetail">
@@ -672,6 +762,11 @@
                 <map value="18"/>
                 <comment value="Toelichting"/>
             </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="gbb2026bbr-dataelement-440"/>
+              <comment value="Toelichting"/>
+            </mapping>
         </element>
         <element id="Procedure.focalDevice.manipulated">
             <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -700,6 +795,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="14"/>
                 <comment value="FocusMedischHulpmiddel"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="NL-CM-14.1.7"/>
+              <comment value="VerrichtingDetail"/>
             </mapping>
         </element>
         <element id="Procedure.usedReference">
@@ -731,6 +831,11 @@
                 <identity value="requirements-Procedure"/>
                 <map value="15"/>
                 <comment value="GebruiktMedischHulpmiddel"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="NL-CM-14.1.7"/>
+              <comment value="VerrichtingDetail"/>
             </mapping>
         </element>
     </differential>
