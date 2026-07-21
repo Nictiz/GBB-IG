@@ -1,3 +1,8 @@
+
+:root {
+  --ig-header-color: #ffffff; /* 21. Header color (sides) */
+}
+
 .dropdown-menu>li {
   position: relative;
 }
