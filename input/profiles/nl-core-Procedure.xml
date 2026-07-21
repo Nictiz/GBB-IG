@@ -85,8 +85,7 @@
             </mapping>
             <mapping>
                 <identity value="GBB-Procedure-0.1.0"/>
-                <map value="NL-CM-14.1.12"/>
-                <comment value="Methode"/>
+                <map value="Procedure.Method"/>
             </mapping>
         </element>
         <element id="Procedure.status">
@@ -124,8 +123,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-443"/>
-              <comment value="VerrichtingStatus"/>
+              <map value="Procedure.CurrentState"/>
             </mapping>
         </element>
         <element id="Procedure.category">
@@ -168,8 +166,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-439"/>
-              <comment value="VerrichtingCategorie"/>
+              <map value="Procedure.ProcedureType"/>
             </mapping>
         </element>
         <element id="Procedure.code">
@@ -218,8 +215,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-436"/>
-              <comment value="VerrichtingNaam"/>
+              <map value="Procedure.ProcedureName"/>
             </mapping>
         </element>
         <element id="Procedure.subject">
@@ -264,8 +260,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-445"/>
-              <comment value="Patient"/>
+              <map value="Procedure.Subject.Patient"/>
             </mapping>
         </element>
         <element id="Procedure.performed[x]">
@@ -349,13 +344,11 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="NL-CM-14.1.2"/>
-              <comment value="StartDatumTijd"/>
+              <map value="Procedure.StartDateTime"/>
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-438"/>
-              <comment value="GeplandeStartDatumTijd"/>
+              <map value="Procedure.ScheduledStartDateTime"/>
             </mapping>
         </element>
         <element id="Procedure.performed[x]:performedPeriod.end">
@@ -383,8 +376,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="NL-CM-14.1.3"/>
-              <comment value="EindDatumTijd"/>
+              <map value="Procedure.EndDateTime"/>
             </mapping>
         </element>
         <element id="Procedure.performed[x]:performedString">
@@ -475,13 +467,11 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-446"/>
-              <comment value="Patient"/>
+              <map value="Procedure.OtherParticipations.Patient"/>
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-447"/>
-              <comment value="Zorgverlener"/>
+              <map value="Procedure.OtherParticipations.Practitioner"/>
             </mapping>
         </element>
         <element id="Procedure.performer.onBehalfOf">
@@ -527,13 +517,11 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-448"/>
-              <comment value="Organisatie"/>
+              <map value="Procedure.HealthcareFacility.Organization"/>
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-449"/>
-              <comment value="Adresgegevens"/>
+              <map value="Procedure.HealthcareFacility.AddressInformation"/>
             </mapping>
         </element>
         <element id="Procedure.reasonCode">
@@ -581,8 +569,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-445"/>
-              <comment value="Indicatie"/>
+              <map value="Procedure.Indication"/>
             </mapping>
         </element>
         <element id="Procedure.reasonReference">
@@ -625,8 +612,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-445"/>
-              <comment value="Indicatie"/>
+              <map value="Procedure.Indication"/>
             </mapping>
         </element>
         <element id="Procedure.bodySite">
@@ -661,8 +647,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="NL-CM-14.1.13"/>
-              <comment value="AnatomischeLocatie"/>
+              <map value="Procedure.ProcedureBodySite"/>
             </mapping>
         </element>
         <element id="Procedure.outcome">
@@ -694,8 +679,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-437"/>
-              <comment value="Uitkomst"/>
+              <map value="Procedure.Outcome"/>
       </mapping>
         </element>
         <element id="Procedure.complication">
@@ -727,8 +711,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-460"/>
-              <comment value="Complicatie"/>
+              <map value="Procedure.Complication"/>
             </mapping>
         </element>
         <element id="Procedure.complicationDetail">
@@ -764,7 +747,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="gbb2026bbr-dataelement-440"/>
+              <map value="Procedure.Comment"/>
               <comment value="Toelichting"/>
             </mapping>
         </element>
@@ -798,8 +781,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="NL-CM-14.1.7"/>
-              <comment value="VerrichtingDetail"/>
+              <map value="Procedure.ProcedureDetail.Device"/>
             </mapping>
         </element>
         <element id="Procedure.usedReference">
@@ -834,8 +816,7 @@
             </mapping>
             <mapping>
               <identity value="GBB-Procedure-0.1.0"/>
-              <map value="NL-CM-14.1.7"/>
-              <comment value="VerrichtingDetail"/>
+              <map value="Procedure.ProcedureDetail.Device"/>
             </mapping>
         </element>
     </differential>
