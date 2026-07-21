@@ -1,4 +1,0 @@
-# FeedbackLink
-#: FeedbackLink
-msgid "Questions and change requests"
-msgstr "Vragen en wijzigingsverzoeken"
