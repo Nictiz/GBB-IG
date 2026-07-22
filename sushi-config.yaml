@@ -103,7 +103,13 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+  Functional design:
+  Requirements:
+  Specification:
+  Testing:
+  Validation:
   Building blocks:
+  Artefacts: artifacts.html
     Adresgegevens:
       Overzicht: Address.html
       Requirements: Requirements-Address.html
@@ -148,8 +154,7 @@ menu:
       Overzicht: PractitionerRole.html
       Requirements: Requirements-PractitionerRole.html
       Afsprakenmodel: StructureDefinition-PractitionerRole-model.html
-      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
-  Artefacten: artifacts.html
+      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html  
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
