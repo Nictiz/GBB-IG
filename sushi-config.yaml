@@ -1,8 +1,6 @@
 id: nictiz.nl.gbb
 canonical: http://nictiz.nl/gbb
 name: PatientSummary
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
@@ -32,22 +30,16 @@ parameters:
 
 menu:
   Home: index.html
-
   Functional Design: functionaldesign.html
-
   Requirements:
-    Overview:
-    Requirements:
-
+    Overview: overview.html
+    Requirements: requirements.html
   Specification:
-    Logical model:
-    FHIR profile:
-    Dependencies:
-
+    Logical model: logicalmodel.html
+    FHIR profile: fhirprofile.html
+    Dependencies: depenecies.html
   Testing: testing.html
-
   Validation: validation.html
-
   Artefacts: artifacts.html
 
 instanceOptions:
