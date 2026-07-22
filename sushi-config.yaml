@@ -91,23 +91,11 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  
-  # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-  # | Each building block gets a heading within "Building blocks". Within each building block, the   |
-  # | following entries should normally be added:                                                    |
-  # | Bouwblokken:                                                                                   |
-  # |   [Dutch building block name]:                                                                 |
-  # |     Overzicht: [English building block name].html (from pagecontent/[building block name]).md  |
-  # |     Requirements: Requirements-[building block name].html                                      |
-  # |     Afsprakenmodel: StructureDefinition-[English building block name]-model.html               |
-  # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
-  # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
-  # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  Functional design:
-  Requirements:
-  Specification:
-  Testing:
-  Validation:
+  Functional design: functionaldesign.html
+  Requirements: requirements.html
+  Specification: specifications.html
+  Testing: testing.html
+  Validation: validation.html
   Building blocks:
   Artefacts: artifacts.html
     Adresgegevens:
