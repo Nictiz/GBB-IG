@@ -33,7 +33,7 @@ parameters:
 menu:
   Home: index.html
 
-  Functional Design:
+  Functional Design: functionaldesign.html
 
   Requirements:
     Overview:
@@ -44,9 +44,9 @@ menu:
     FHIR profile:
     Dependencies:
 
-  Testing:
+  Testing: testing.html
 
-  Validation:
+  Validation: validation.html
 
   Artefacts: artifacts.html
 
