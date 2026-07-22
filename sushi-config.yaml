@@ -96,8 +96,8 @@ menu:
   Specification: specifications.html
   Testing: testing.html
   Validation: validation.html
-  Building blocks:
   Artefacts: artifacts.html
+  Building blocks:  
     Adresgegevens:
       Overzicht: Address.html
       Requirements: Requirements-Address.html
