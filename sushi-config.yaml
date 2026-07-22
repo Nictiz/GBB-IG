@@ -103,17 +103,17 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  Functional Design:
-  Requirements:
-    Overview:
-    Requirements:
-  Specification:
-    Logical model:
-    FHIR profile:
-    Dependencies:
-  Testing:
-  Validation:
-  Artefacts: artifacts.html
+   Functional Design:
+   Requirements:
+      Overview:
+      Requirements:
+   Specification:
+      Logical model:
+      FHIR profile:
+      Dependencies:
+    Testing:
+    Validation:
+   Artefacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
