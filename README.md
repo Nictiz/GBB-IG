@@ -24,7 +24,7 @@ In addition, it requires [Sushi](https://github.com/FHIR/sushi) to be installed 
 
 And it requires that the dependencies for the custom script are installed using:
 
-    $ cd scripts
+    $ cd util/scripts
     $ npm install
 
 ### Remote
