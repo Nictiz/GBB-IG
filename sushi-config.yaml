@@ -111,8 +111,8 @@ menu:
       Logical model:
       FHIR profile:
       Dependencies:
-    Testing:
-    Validation:
+   Testing:
+   Validation:
    Artefacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
