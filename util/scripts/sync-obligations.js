@@ -98,15 +98,11 @@ function parseArguments(argumentsList) {
   }
 
   if (positionalArguments.length !== 2) {
-    throw new Error(
-      "Expected a profile XML file and a logical-model JSON file."
-    );
+    throw new Error("Expected a profile XML file and a logical-model JSON file.");
   }
 
   if (options.actors.length === 0) {
-    throw new Error(
-      "At least one --actor option is required."
-    );
+    throw new Error("At least one --actor option is required.");
   }
 
   [
@@ -427,18 +423,11 @@ function reportDiscrepancy(
       );
   }
 
-  console.log(
-    `  Profile element: ` +
-      `${profileElement.path ?? profileElement.id}`
-  );
+  console.log(`  Profile element: ${profileElement.path ?? profileElement.id}`);
   console.log(`  Logical model element: ${modelPath}`);
   console.log(`  Actor: ${actor}`);
-  console.log(
-    `  Logical model codes: ${formatCodes(modelCodes)}`
-  );
-  console.log(
-    `  Profile codes: ${formatCodes(profileCodes)}`
-  );
+  console.log(`  Logical model codes: ${formatCodes(modelCodes)}`);
+  console.log(`  Profile codes: ${formatCodes(profileCodes)}`);
 }
 
 function reportObligationDiscrepancies(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
