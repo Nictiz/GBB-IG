@@ -1,12 +1,24 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const { Fhir } = require("fhir-tool");
+const { parse: parseYaml } = require("yaml");
 
-const OBLIGATION_URL =
-  "http://hl7.org/fhir/StructureDefinition/obligation";
+const OBLIGATION_URL = "http://hl7.org/fhir/StructureDefinition/obligation";
 
-function printUsage() {
-  console.log(`
+class CliParser {
+  YAML_FORMAT = `
+...
+[profile id]:
+  unmatched obligations:
+    [path of the element]:
+      - actor: [canonical url for the actor that doesn't match]
+        reason: [explanation for the mismatch]
+      - actor: [canonical url for another actor that doesn't match]
+        reason: [explanation for the mismatch]
+...
+`
+
+  USAGE = `
 Usage:
   node sync-obligations.js \\
     [--copy] \\
@@ -47,217 +59,163 @@ Other options:
       - the obligation codes for an actor differ;
       - an obligation exists in the profile but not in the logical model.
 
+  --suppressions <file.yaml>
+      Suppress known discrepancies in check mode.
+
+      The format for the YAML file is:      
+      
+      ${this.YAML_FORMAT.split("\n").map(line => "      " + line).join("\n")}
+
+      This option cannot be combined with --copy.
+
   --help, -h
       Show this help.
-`.trim());
+`
+
+  printUsage() {
+    console.log(this.USAGE.trim());
+  }
+
+  parse() {
+    this.options = {
+      actors: [],
+      copy: false,
+      suppressionsFilename: undefined,
+      profileFilename: undefined,
+      logicalModelFilename: undefined,
+    };
+
+    const positionalArguments = [];
+
+    for (let index = 2; index < process.argv.length; index += 1) {
+      const argument = process.argv[index];
+
+      switch (argument) {
+        case "--actor": {
+          const actor = process.argv[++index];
+
+          if (!actor || actor.startsWith("--")) {
+            throw new Error("--actor requires a canonical URL.");
+          }
+
+          this.options.actors.push(actor);
+          break;
+        }
+
+        case "--copy":
+          this.options.copy = true;
+          break;
+
+        case "--suppressions": {
+          const filename = argumentsList[++index];
+
+          if (!filename || filename.startsWith("--")) {
+            throw new Error("--suppressions requires a YAML filename.");
+          }
+
+          this.options.suppressionsFilename = filename;
+          break;
+        }
+
+        case "--help":
+        case "-h":
+          this.printUsage();
+          process.exit(0);
+          break;
+
+        default:
+          if (argument.startsWith("--")) {
+            throw new Error(`Unknown option "${argument}".`);
+          }
+
+          positionalArguments.push(argument);
+          break;
+      }
+    }
+
+    if (positionalArguments.length !== 2) {
+      throw new Error("Expected a profile XML file and a logical-model JSON file.");
+    }
+
+    if (this.options.actors.length === 0) {
+      throw new Error("At least one --actor option is required.");
+    }
+
+    if (this.options.copy && options.suppressionsFilename) {
+      throw new Error("--suppressions can only be used in check mode, without --copy.");
+    }
+
+    [
+      this.options.profileFilename,
+      this.options.logicalModelFilename,
+    ] = positionalArguments;
+  }
 }
 
-function parseArguments(argumentsList) {
-  const options = {
-    actors: [],
-    copy: false,
-    profileFilename: undefined,
-    logicalModelFilename: undefined,
-  };
+class Suppressions {
+  #suppressions = new Map();
 
-  const positionalArguments = [];
+  constructor(filename) {
+  
+    let document;
+    try {
+      document = parseYaml(fs.readFileSync(filename, "utf8"));
+    } catch (error) {
+      throw new Error(`Cannot read YAML file "${filename}": ${getErrorMessage(error)}`);
+    }
+    if (document === null || typeof document !== "object" || Array.isArray(document)) {
+      throw new Error(`Suppression file "${filename}" must contain a YAML object.`);
+    }
 
-  for (let index = 0; index < argumentsList.length; index += 1) {
-    const argument = argumentsList[index];
-
-    switch (argument) {
-      case "--actor": {
-        const actor = argumentsList[++index];
-
-        if (!actor || actor.startsWith("--")) {
-          throw new Error("--actor requires a canonical URL.");
+    for (const profileId of document) {
+      if ("unmatched obligations" in document[profileId]) {
+        const unmatchedObligations = document[profileId]["unmatched obligations"];
+        if (unmatchedObligations === null || typeof unmatchedObligations !== "object" || Array.isArray(unmatchedObligations)) {
+          throw new Error(`"unmatched obligations" for profile "${profile.id}" must be an object keyed by profile path:\n${CliParser.YAML_FORMAT}`);
         }
 
-        options.actors.push(actor);
-        break;
+        const profilePaths = new Map();
+        for (const [profilePath, entries] of Object.entries(unmatchedObligations)) {
+          if (!Array.isArray(entries)) {
+            throw new Error(`Suppressions for path "${profilePath}" must be a list:\n${CliParser.YAML_FORMAT}`);
+          }
+
+          const actors = [];
+          for (const entry of entries) {
+            if (entry === null || typeof entry !== "object" || Array.isArray(entry)) {
+              throw new Error(`Each suppression for path "${profilePath}" must be an object:\n${CliParser.YAML_FORMAT}`);
+            }
+
+            if (typeof entry.actor !== "string" || entry.actor.trim() === "" ) {
+              throw new Error(`The suppression for path "${profilePath}" must have an actor:\n${CliParser.YAML_FORMAT}`);
+            }
+
+            if (typeof entry.reason !== "string") {
+              throw new Error(`The suppression reason for path "${profilePath}" and actor "${entry.actor}" must be provided as a string:\n${CliParser.YAML_FORMAT}`);
+            }
+
+            actors.push(stripVersionFromCanonical);
+          }
+          profilePaths.set(profilePath, actors);
+        }
+        this.#suppressions.set(profileId, profilePaths);
       }
-
-      case "--copy":
-        options.copy = true;
-        break;
-
-      case "--help":
-      case "-h":
-        printUsage();
-        process.exit(0);
-        break;
-
-      default:
-        if (argument.startsWith("--")) {
-          throw new Error(`Unknown option "${argument}".`);
-        }
-
-        positionalArguments.push(argument);
-        break;
     }
   }
 
-  if (positionalArguments.length !== 2) {
-    throw new Error("Expected a profile XML file and a logical-model JSON file.");
-  }
-
-  if (options.actors.length === 0) {
-    throw new Error("At least one --actor option is required.");
-  }
-
-  [
-    options.profileFilename,
-    options.logicalModelFilename,
-  ] = positionalArguments;
-
-  return options;
-}
-
-function readJson(filename) {
-  try {
-    return JSON.parse(fs.readFileSync(filename, "utf8"));
-  } catch (error) {
-    throw new Error(
-      `Cannot read JSON file "${filename}": ${getErrorMessage(error)}`
-    );
+  get(profileId, path, actor) {
+    return (profileId in this.#suppressions) && 
+      (path in this.#suppressions.profileId) &&
+      (actor in this.#suppressions.profileId.path)
   }
 }
 
 function getErrorMessage(error) {
-  return error instanceof Error
-    ? error.message
-    : String(error);
-}
-
-function validateStructureDefinition(resource, filename) {
-  if (resource?.resourceType !== "StructureDefinition") {
-    throw new Error(
-      `"${filename}" does not contain a FHIR StructureDefinition.`
-    );
-  }
+  return error instanceof Error ? error.message : String(error);
 }
 
 function stripVersionFromCanonical(canonical) {
   return canonical.trim().split("|")[0];
-}
-
-function determineMappingIdentity(profile, logicalModel) {
-  if (!logicalModel.url) {
-    throw new Error(
-      "The logical model has no canonical URL."
-    );
-  }
-
-  const logicalModelUrl = stripVersionFromCanonical(logicalModel.url);
-
-  const matchingMappings = (profile.mapping ?? []).filter(
-    (mapping) =>
-      mapping.identity &&
-      mapping.uri &&
-      stripVersionFromCanonical(mapping.uri) === logicalModelUrl
-  );
-
-  if (matchingMappings.length === 1) {
-    return matchingMappings[0].identity;
-  }
-
-  if (matchingMappings.length === 0) {
-    throw new Error(
-      `No profile mapping refers to "${logicalModel.url}".`
-    );
-  }
-
-  throw new Error(
-    "Multiple profile mappings refer to the logical model: " +
-      matchingMappings
-        .map((mapping) => mapping.identity)
-        .join(", ")
-  );
-}
-
-function buildLogicalModelIndex(logicalModel) {
-  const index = new Map();
-
-  // Prefer snapshot over differential. It shouldn't matter for the ART-DECOR
-  // exports, but just err on the safe side.
-  // We don't bother if there are any differences between the snapshot and the
-  // differential, this should be flagged by other tools.
-  let elements = [];
-  if (logicalModel.snapshot) {
-    elements = logicalModel.snapshot.element ?? [];
-  } else if (logicalModel.differential) {
-    elements = logicalModel.differential.element ?? [];
-  }
-
-  for (const element of elements) {
-    if (!element.path) {
-      continue;
-    }
-
-    if (index.has(element.path)) {
-      throw new Error(`The logical model contains duplicate element path "${element.path}".`);
-    }
-
-    index.set(element.path, element);
-  }
-
-  return index;
-}
-
-function getMappingTargets(profileElement, mappingIdentity) {
-  return (profileElement.mapping ?? [])
-    .filter(mapping => mapping.identity === mappingIdentity && typeof mapping.map === "string")
-    .map(mapping => mapping.map.trim())
-    .filter(Boolean);
-}
-
-function resolveMapTargetToPath(mapping, logicalModelIndex) {
-  const candidates = [
-    mapping,
-    mapping.split("|")[0].trim(),
-    mapping.replace(/\s+\([^)]*\)\s*$/, "").trim(),
-  ];
-
-  return candidates.find(candidate => logicalModelIndex.has(candidate));
-}
-
-function getObligations(element) {
-  return (element.extension ?? []).filter(
-    (extension) => extension.url === OBLIGATION_URL
-  );
-}
-
-function getObligationActors(obligation) {
-  return (obligation.extension ?? [])
-    .filter(
-      (extension) =>
-        extension.url === "actor" &&
-        typeof extension.valueCanonical === "string"
-    )
-    .map(extension => stripVersionFromCanonical(extension.valueCanonical));
-}
-
-function getObligationCodes(obligation) {
-  return (obligation.extension ?? [])
-    .filter(
-      (extension) =>
-        extension.url === "code" &&
-        typeof extension.valueCode === "string"
-    )
-    .map(extension => extension.valueCode);
-}
-
-function obligationAppliesToActors(obligation, selectedActorUrls) {
-  const obligationActors = getObligationActors(obligation);
-
-  /*
-   * Obligations without an actor are deliberately excluded.
-   */
-  if (obligationActors.length === 0) {
-    return false;
-  }
-
-  return obligationActors.some(actorUrl => selectedActorUrls.has(actorUrl));
 }
 
 function canonicalJson(value) {
@@ -275,272 +233,375 @@ function canonicalJson(value) {
   return JSON.stringify(value);
 }
 
-function copyObligations(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
-  for (const profileElement of elements) {
-    const mappings = getMappingTargets(profileElement, mappingIdentity);
-    if (mappings.length === 0) {
-      continue;
+class ObligationComparator {
+  constructor(profile, logicalModel, actors, suppressions) {
+    this.profile      = profile;
+    this.logicalModel = logicalModel;
+    this.actors       = actors;
+    this.suppressions = suppressions;
+    this.#determineMappingIdentity();
+    this.#buildLogicalModelIndex();
+  }
+
+  copy() {
+    // We simply copy both to the snapshot and the differential and assume
+    // they are in sync. Other tools will check this.
+    if (this.profile.differential) {
+      this.#copyObligations(this.profile.differential.element);
+    }
+    if (this.profile.snapshot) {
+      this.#copyObligations(this.profile.snapshot.element);
+    }
+  }
+
+  report() {
+    if (this.profile.differential) {
+      this.#reportDiscrepancies(this.profile.differential.element);
+    }
+    if (this.profile.snapshot) {
+      this.#reportDiscrepancies(this.profile.snapshot.element);
+    }
+  }
+  
+  #copyObligations(elements) {
+    for (const profileElement of elements) {
+      const resolvedTargetElements = this.#resolveTargetElements(profileElement);
+      if (resolvedTargetElements.size === 0) continue;
+
+      profileElement.extension ??= [];
+      const existingObligations = new Set(this.#getObligations(profileElement).map(canonicalJson));
+
+      for (const targetElement of resolvedTargetElements) {
+        for (const obligation of this.#getObligations(targetElement)) {
+          if (!this.#obligationAppliesToActors(obligation)) {
+            continue;
+          }
+
+          const canonicalObligation = canonicalJson(obligation);
+
+          if (existingObligations.has(canonicalObligation)) {
+            continue;
+          }
+
+          profileElement.extension.push(structuredClone(obligation));
+          existingObligations.add(canonicalObligation);
+
+          console.log(`Copied obligation from ${targetElement} to ${profileElement.path ?? profileElement.id}`);
+        }
+      }
+
+      if (profileElement.extension.length === 0) {
+        delete profileElement.extension;
+      }
+    }
+  }
+
+  #reportDiscrepancies(elements) {
+    const result = {
+      discrepancyCount: 0,
+      suppressedCount: 0,
+    };
+
+    for (const profileElement of elements) {
+      for (const lmElement of this.#resolveTargetElements(profileElement)) {
+        const profileObligationsByActor = this.#getActorObligations(profileElement);
+        const modelObligationsByActor = this.#getActorObligations(lmElement);
+
+        for (const actor of this.actors) {
+          const profileObligations = profileObligationsByActor.get(actor);
+          const modelObligations = modelObligationsByActor.get(actor);
+
+          let discrepancyType;
+          if (modelObligations.present && !profileObligations.present) {
+            discrepancyType = "missing-in-profile";
+          } else if (!modelObligations.present && profileObligations.present) {
+            discrepancyType = "missing-in-model";
+          } else if (modelObligations.present && profileObligations.present && !this.#setsAreEqual(modelObligations.codes, profileObligations.codes)) {
+            discrepancyType = "different-codes";
+          }
+
+          if (!discrepancyType) continue;
+          if (suppressions.get(this.profile.id, profileElement.path, actor)) {
+            result.suppressedCount += 1;
+            continue;
+          }
+          result.discrepancyCount += 1;
+
+          this.#reportDiscrepancy(discrepancyType, profileElement, targetPath, actor,
+            modelObligations.codes, profileObligations.codes);
+        }
+      }
     }
 
-    const resolvedTargetPaths = new Set();
-    for (const mapping of mappings) {
-      const modelPath = resolveMapTargetToPath(mapping, logicalModelIndex);
+    return result;
+  }
 
-      if (!modelPath) {
-        console.warn(`Mapping target not found in logical model: ${mapping} (from ${profileElement.path ?? profileElement.id})`);
+  #reportDiscrepancy(type, profileElement, modelPath, actor, modelCodes, profileCodes) {
+    console.log();
+
+    switch (type) {
+      case "missing-in-profile":
+        console.log("OBLIGATION MISSING IN PROFILE");
+        console.log(
+          "  The logical model contains an obligation for this actor, " +
+            "but the profile does not."
+        );
+        break;
+
+      case "different-codes":
+        console.log("OBLIGATION CODES DIFFER");
+        console.log(
+          "  The logical model and profile contain obligations for this " +
+            "actor, but their obligation codes differ."
+        );
+        break;
+
+      case "missing-in-model":
+        console.log("OBLIGATION MISSING IN LOGICAL MODEL");
+        console.log(
+          "  The profile contains an obligation for this actor, " +
+            "but the logical model does not."
+        );
+        break;
+
+      default:
+        throw new Error(
+          `Unknown discrepancy type "${type}".`
+        );
+    }
+
+    console.log(`  Profile element: ${profileElement.path ?? profileElement.id}`);
+    console.log(`  Logical model element: ${modelPath}`);
+    console.log(`  Actor: ${actor}`);
+    console.log(`  Logical model codes: ${this.#formatCodes(modelCodes)}`);
+    console.log(`  Profile codes: ${this.#formatCodes(profileCodes)}`);
+  }
+
+
+  #determineMappingIdentity() {
+    const logicalModelUrl = stripVersionFromCanonical(this.logicalModel.url);
+
+    const matchingMappings = (this.profile.mapping ?? [])
+      .filter(mapping => mapping.identity && mapping.uri && stripVersionFromCanonical(mapping.uri) === logicalModelUrl);
+
+    if (matchingMappings.length === 1) {
+      this.mappingIdentity = matchingMappings[0].identity;
+    }
+
+    if (matchingMappings.length === 0) {
+      throw new Error(`No profile mapping refers to "${logicalModel.url}".`);
+    }
+
+    throw new Error(
+      "Multiple profile mappings refer to the logical model: " +
+        matchingMappings
+          .map((mapping) => mapping.identity)
+          .join(", ")
+    );
+
+  }
+
+  #buildLogicalModelIndex() {
+    this.lmIndex = new Map();
+
+    // Prefer snapshot over differential. It shouldn't matter for the ART-DECOR
+    // exports, but just err on the safe side.
+    // We don't bother if there are any differences between the snapshot and the
+    // differential, this should be flagged by other tools.
+    let elements = [];
+    if (logicalModel.snapshot) {
+      elements = logicalModel.snapshot.element ?? [];
+    } else if (logicalModel.differential) {
+      elements = logicalModel.differential.element ?? [];
+    }
+
+    for (const element of elements) {
+      if (!element.path) {
         continue;
       }
 
+      if (this.lmIndex.has(element.path)) {
+        throw new Error(`The logical model contains duplicate element path "${element.path}".`);
+      }
+
+      this.lmIndex.set(element.path, element);
+    }
+  }
+
+  #resolveTargetElements(profileElement) {
+    const targets = this.#getMappingTargets(profileElement);
+    const resolvedTargetPaths = new Set();
+    for (const target of targets) {
+      const modelPath = this.#resolveMapTargetToPath(target);
+      if (!modelPath) {
+        console.warn(`Mapping target not found in logical model: ${target} (from ${profileElement.path ?? profileElement.id})`);
+        continue;
+      }
       resolvedTargetPaths.add(modelPath);
     }
 
-    if (resolvedTargetPaths.size === 0) {
-      continue;
-    }
-
-    profileElement.extension ??= [];
-    const existingObligations = new Set(getObligations(profileElement).map(canonicalJson));
-
-    for (const targetPath of resolvedTargetPaths) {
-      const logicalModelElement = logicalModelIndex.get(targetPath);
-
-      for (const obligation of getObligations(logicalModelElement)) {
-        if (!obligationAppliesToActors(obligation, selectedActorUrls)) {
-          continue;
-        }
-
-        const canonicalObligation = canonicalJson(obligation);
-
-        if (existingObligations.has(canonicalObligation)) {
-          continue;
-        }
-
-        profileElement.extension.push(structuredClone(obligation));
-        existingObligations.add(canonicalObligation);
-
-        console.log(`Copied obligation from ${targetPath} to ${profileElement.path ?? profileElement.id}`);
-      }
-    }
-
-    if (profileElement.extension.length === 0) {
-      delete profileElement.extension;
-    }
-  }
-}
-
-function getActorObligations(element, selectedActorUrls) {
-  const obligationsByActor = new Map();
-
-  for (const actor of selectedActorUrls) {
-    obligationsByActor.set(actor, {
-      present: false,
-      codes: new Set(),
-    });
+    return resolvedTargetPaths;
   }
 
-  for (const obligation of getObligations(element)) {
+  #getMappingTargets(profileElement) {
+    return (profileElement.mapping ?? [])
+      .filter(mapping => mapping.identity === this.mappingIdentity && typeof mapping.map === "string")
+      .map(mapping => mapping.map.trim())
+      .filter(Boolean);
+  }
+
+  #resolveMapTargetToPath(mapping) {
+    const candidates = [
+      mapping,
+      mapping.split("|")[0].trim(),
+      mapping.replace(/\s+\([^)]*\)\s*$/, "").trim(),
+    ];
+    const resolved = candidates.find(candidate => this.lmIndex.has(candidate));
+    if (resolved) {
+      return this.lmIndex[resolved];
+    }
+    return undefined;
+  }
+
+  #getObligations(element) {
+    return (element.extension ?? [])
+      .filter(extension => extension.url === OBLIGATION_URL);
+  }
+
+  #obligationAppliesToActors(obligation) {
     const obligationActors = getObligationActors(obligation);
+
+    // Obligations without an actor are deliberately excluded.
     if (obligationActors.length === 0) {
-      continue;
+      return false;
     }
-
-    const obligationCodes = getObligationCodes(obligation);
-
-    for (const actor of obligationActors) {
-      if (!selectedActorUrls.has(actor)) {
-        continue;
-      }
-
-      const actorObligations = obligationsByActor.get(actor);
-
-      actorObligations.present = true;
-
-      for (const code of obligationCodes) {
-        actorObligations.codes.add(code);
-      }
-    }
+    return obligationActors.some(actor => this.actors.has(actor));
   }
 
-  return obligationsByActor;
-}
+  #getActorObligations(element) {
+    const obligationsByActor = new Map();
 
-function setsAreEqual(left, right) {
-  if (left.size !== right.size) {
-    return false;
-  }
-
-  return [...left].every(
-    (value) => right.has(value)
-  );
-}
-
-function formatCodes(codes) {
-  if (codes.size === 0) {
-    return "(no code)";
-  }
-
-  return [...codes].sort().join(", ");
-}
-
-function reportDiscrepancy(
-  type,
-  profileElement,
-  modelPath,
-  actor,
-  modelCodes,
-  profileCodes
-) {
-  console.log();
-
-  switch (type) {
-    case "missing-in-profile":
-      console.log("OBLIGATION MISSING IN PROFILE");
-      console.log(
-        "  The logical model contains an obligation for this actor, " +
-          "but the profile does not."
-      );
-      break;
-
-    case "different-codes":
-      console.log("OBLIGATION CODES DIFFER");
-      console.log(
-        "  The logical model and profile contain obligations for this " +
-          "actor, but their obligation codes differ."
-      );
-      break;
-
-    case "missing-in-model":
-      console.log("OBLIGATION MISSING IN LOGICAL MODEL");
-      console.log(
-        "  The profile contains an obligation for this actor, " +
-          "but the logical model does not."
-      );
-      break;
-
-    default:
-      throw new Error(
-        `Unknown discrepancy type "${type}".`
-      );
-  }
-
-  console.log(`  Profile element: ${profileElement.path ?? profileElement.id}`);
-  console.log(`  Logical model element: ${modelPath}`);
-  console.log(`  Actor: ${actor}`);
-  console.log(`  Logical model codes: ${formatCodes(modelCodes)}`);
-  console.log(`  Profile codes: ${formatCodes(profileCodes)}`);
-}
-
-function reportObligationDiscrepancies(elements, logicalModelIndex, mappingIdentity, selectedActorUrls) {
-  let discrepancyCount = 0;
-
-  for (const profileElement of elements) {
-    const mappings = getMappingTargets(profileElement, mappingIdentity);
-    if (mappings.length === 0) {
-      continue;
+    for (const actor of this.actors) {
+      obligationsByActor.set(actor, {
+        present: false,
+        codes: new Set(),
+      });
     }
 
-    const resolvedTargetPaths = new Set();
-    for (const mapping of mappings) {
-      const modelPath = resolveMapTargetToPath(mapping, logicalModelIndex);
+    for (const obligation of this.#getObligations(element)) {
+      const obligationActors = (obligation.extension ?? [])
+        .filter(extension => extension.url === "actor" && typeof extension.valueCanonical === "string")
+        .map(extension => stripVersionFromCanonical(extension.valueCanonical));
+      for (const actor of obligationActors) {
+        if (!this.actors.has(actor)) continue;
+        const actorObligations = obligationsByActor.get(actor);
+        actorObligations.present = true;
 
-      if (!modelPath) {
-        console.warn(`Mapping target not found in logical model: ${mapping} (from ${profileElement.path ?? profileElement.id})`);
-        continue;
-      }
-
-      resolvedTargetPaths.add(modelPath);
-    }
-
-    for (const targetPath of resolvedTargetPaths) {
-      const logicalModelElement = logicalModelIndex.get(targetPath);
-      const modelObligationsByActor = getActorObligations(logicalModelElement, selectedActorUrls);
-      const profileObligationsByActor = getActorObligations(profileElement, selectedActorUrls);
-
-      for (const actor of selectedActorUrls) {
-        const modelObligations = modelObligationsByActor.get(actor);
-        const profileObligations = profileObligationsByActor.get(actor);
-
-        if (modelObligations.present && !profileObligations.present) {
-          discrepancyCount += 1;
-          reportDiscrepancy("missing-in-profile", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
-          continue;
-        }
-
-        if (!modelObligations.present && profileObligations.present) {
-          discrepancyCount += 1;
-          reportDiscrepancy("missing-in-model", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
-          continue;
-        }
-
-        if (modelObligations.present && profileObligations.present && !setsAreEqual(modelObligations.codes, profileObligations.codes)) {
-          discrepancyCount += 1;
-          reportDiscrepancy("different-codes", profileElement, targetPath, actor, modelObligations.codes, profileObligations.codes);
+        const obligationCodes = (obligation.extension ?? [])
+          .filter(extension => extension.url === "code" && typeof extension.valueCode === "string")
+          .map(extension => extension.valueCode);
+        for (const code of obligationCodes) {
+          actorObligations.codes.add(code);
         }
       }
     }
+
+    return obligationsByActor;
   }
 
-  return discrepancyCount;
+  #setsAreEqual(left, right) {
+    if (left.size !== right.size) {
+      return false;
+    }
+
+    return [...left].every(
+      (value) => right.has(value)
+    );
+  }
+
+  #formatCodes(codes) {
+    if (codes.size === 0) {
+      return "(no code)";
+    }
+
+    return [...codes].sort().join(", ");
+  }
 }
 
-function addXmlDeclaration(xml) {
-  if (/^\s*<\?xml\b/.test(xml)) {
-    return xml;
+class StructureDefinitionHandler {
+  fhir = new Fhir();
+
+  readXML(filename) {
+    const sd = this.fhir.xmlToObj(fs.readFileSync(filename, "utf8"))
+    this.validate(sd, filename);
+    return sd;
   }
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n${xml}`;
+  readJson(filename) {
+    let sd;
+    try {
+      sj = JSON.parse(fs.readFileSync(filename, "utf8"));
+    } catch (error) {
+      throw new Error(`Cannot read JSON file "${filename}": ${getErrorMessage(error)}`);
+    }
+    this.validate(sd, filename);
+    return sd;
+  }
+
+  writeXML(sd, filename) {
+    const xml = this.#addXmlDeclaration(this.fhir.objToXml(sd));
+    fs.writeFileSync(filename, `${xml.trimEnd()}\n`, "utf8");
+  }
+
+  validate(resource, filename) {
+    if (resource?.resourceType !== "StructureDefinition") {
+      throw new Error(`"${filename}" does not contain a FHIR StructureDefinition.`);
+    }
+    if (!resource.id) {
+      throw new Error(`"${filename}" does not have a StructureDefintion.id`);
+    }
+    if (!resource.url) {
+      throw new Error(`"${filename}" does not have a StructureDefintion.url`);
+    }
+  }
+
+  #addXmlDeclaration(xml) {
+    if (/^\s*<\?xml\b/.test(xml)) {
+      return xml;
+    }
+    return `<?xml version="1.0" encoding="UTF-8"?>\n${xml}`;
+  }
 }
 
 function main() {
-  const options = parseArguments(
-    process.argv.slice(2)
-  );
+  const cliParser = new CliParser()
+  cliParser.parse()
 
   const {
     profileFilename,
     logicalModelFilename,
-  } = options;
+  } = cliParser.options;
 
   const selectedActorUrls = new Set(
-    options.actors.map(stripVersionFromCanonical)
+    cliParser.options.actors.map(stripVersionFromCanonical)
   );
 
-  const fhir = new Fhir();
+  const sdHandler = new StructureDefinitionHandler();
+  const profile = sdHandler.readXML(profileFilename);
+  const logicalModel = sdHandler.readJson(logicalModelFilename);
+  const suppressions = new Suppressions(cliParser.options.suppressionsFilename);
+  const comparator = new ObligationComparator(profile, logicalModel, selectedActorUrls, suppressions);
 
-  const profile = fhir.xmlToObj(fs.readFileSync(profileFilename, "utf8"));
-  const logicalModel = readJson(logicalModelFilename);
-
-  validateStructureDefinition(profile, profileFilename);
-  validateStructureDefinition(logicalModel, logicalModelFilename);
-
-  // Get the identity that is used for element mappings to the logical model
-  const mappingIdentity = determineMappingIdentity(profile, logicalModel);
-
-  const logicalModelIndex = buildLogicalModelIndex(logicalModel);
-  if (logicalModelIndex.size === 0) {
-    throw new Error("The logical model has no snapshot or differential elements.");
-  }
-
-  console.log(`Mapping identity: ${mappingIdentity}`);
   console.log("Actors:");
   for (const actorUrl of selectedActorUrls) {
     console.log(`  ${actorUrl}`);
   }
 
-  if (options.copy) {
+  if (cliParser.options.copy) {
     console.log("Mode: copy");
 
-    // We simply copy both to the snapshot and the differential and assume
-    // they are in sync. Other tools will check this.
-    if (profile.snapshot) {
-      copyObligations(profile.snapshot.element ?? [], logicalModelIndex, mappingIdentity, selectedActorUrls);
-    }
-    if (profile.differential) {
-      copyObligations(profile.differential.element ?? [], logicalModelIndex, mappingIdentity, selectedActorUrls);
-    }
-
-    const profileXml = addXmlDeclaration(fhir.objToXml(profile));
-    fs.writeFileSync(profileFilename, `${profileXml.trimEnd()}\n`, "utf8");
+    comparator.copy();
+    sdHandler.writeXML(comparator.profile, profileFilename);
     console.log(`Updated: ${path.resolve(profileFilename)}`);
 
     return;
@@ -548,25 +609,21 @@ function main() {
 
   console.log("Mode: report");
 
-  let discrepancyCount = 0;
-
-  // As in copy mode, check both sections independently.
-  if (profile.snapshot) {
-    discrepancyCount += reportObligationDiscrepancies(profile.snapshot.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
-  }
-  if (profile.differential) {
-    discrepancyCount += reportObligationDiscrepancies(profile.differential.element, logicalModelIndex, mappingIdentity, selectedActorUrls);
-  }
+  const result = comparator.report();
+  const discrepancyCount = result.discrepancyCount;
+  const suppressedCount = result.suppressedCount;
 
   console.log();
 
   if (discrepancyCount === 0) {
-    console.log("No obligation discrepancies found for the specified actors.");
+    console.log("No unsuppressed obligation discrepancies found for the specified actors.");
   } else {
-    console.log(`Found ${discrepancyCount} obligation ${discrepancyCount === 1 ? "discrepancy" : "discrepancies"}.`);
-
-    // Useful when the script is used as a CI validation step.
+    console.log(`Found ${discrepancyCount} unsuppressed obligation ${discrepancyCount === 1 ? "discrepancy" : "discrepancies"}.`);
     process.exitCode = 2;
+  }
+
+  if (suppressedCount > 0) {
+    console.log(`Suppressed ${suppressedCount} obligation ${suppressedCount === 1 ? "discrepancy" : "discrepancies"}.`);
   }
 }
 
