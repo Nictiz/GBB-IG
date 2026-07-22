@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: nictiz.nl.gbb
 canonical: http://nictiz.nl/gbb
-name: GenericBuildingBlocks
+name: PatientSummary
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
