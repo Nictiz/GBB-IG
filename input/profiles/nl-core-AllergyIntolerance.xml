@@ -57,13 +57,11 @@
       <path value="AllergyIntolerance.extension.value[x]" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="8" />
-        <comment value="endDate" />
+        <map value="EU-08" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="8.1" />
-        <comment value="Datum voor afsluiten allergie of overgevoeligheid" />
+        <map value="NL-08-01" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.clinicalStatus">
@@ -89,18 +87,15 @@
       <min value="1" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="2" />
-        <comment value="header.status" />
+        <map value="EU-02" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="2.1" />
-        <comment value="Status van de allergie" />
+        <map value="NL-02-01" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-5" />
-        <comment value="ActieveInactieveStatus" />
+        <map value="AllergieIntolerantie.actieveInactieveStatus" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.verificationStatus">
@@ -125,23 +120,19 @@
       <alias value="VerificatieStatus" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="6" />
-        <comment value="certainty" />
+        <map value="EU-06" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="6.1" />
-        <comment value="ZekerheidStatus" />
+        <map value="NL-06-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="6.3" />
-        <comment value="Diagnosestatus" />
+        <map value="NL-06-03" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-360" />
-        <comment value="VerificatieStatus" />
+        <map value="AllergieIntolerantie.verificatieStatus" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.category">
@@ -167,13 +158,11 @@
       <max value="1" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="14" />
-        <comment value="Groepering (Categorie)" />
+        <map value="NL-14" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-4" />
-        <comment value="Categorie" />
+        <map value="AllergieIntolerantie.categorie" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.criticality">
@@ -198,23 +187,19 @@
       <alias value="MateVanKritiekZijn" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="5" />
-        <comment value="criticality" />
+        <map value="EU-05" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="5.1" />
-        <comment value="Mate van kritiek zijn" />
+        <map value="NL-05-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="5.2" />
-        <comment value="VerwachtRisicoBijBlootstelling" />
+        <map value="NL-05-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-7" />
-        <comment value="MateVanKritiekZijn" />
+        <map value="AllergieIntolerantie.mateVanKritiekZijn" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.code">
@@ -244,38 +229,31 @@
       <min value="1" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3" />
-        <comment value="agentOrAllergen" />
+        <map value="EU-03" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3.1" />
-        <comment value="Allergeen voor niet medicamenteuze allergieën of intoleranties" />
+        <map value="NL-03-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3.2" />
-        <comment value="Allergeen voor medicamenteuze allergieën of intoleranties" />
+        <map value="NL-03-02" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3.3" />
-        <comment value="Straling als allergeen" />
+        <map value="NL-03-03" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3.4" />
-        <comment value="Ongecodeerde allergeen" />
+        <map value="NL-03-04" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="3.5" />
-        <comment value="Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen" />
+        <map value="NL-03-05" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-2" />
-        <comment value="VeroorzakendeStof" />
+        <map value="AllergieIntolerantie.veroorzakendeStof" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
@@ -304,31 +282,26 @@
       </type>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="16" />
-        <comment value="header.subject" />
+        <map value="EU-16" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="16.1" />
-        <comment value="Patient die de allergie of overgevoeligheid heeft" />
+        <map value="NL-16-01" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-358" />
-        <comment value="Patient" />
+        <map value="AllergieIntolerantie.patient" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.onset[x]">
       <path value="AllergyIntolerance.onset[x]" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="7" />
-        <comment value="onsetDate" />
+        <map value="EU-07" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="7.1" />
-        <comment value="DiagnostischInzichtDatum" />
+        <map value="NL-07-01" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.recorder">
@@ -357,23 +330,19 @@
       </type>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="1" />
-        <comment value="header.author" />
+        <map value="EU-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="1.1" />
-        <comment value="Diagnosesteller" />
+        <map value="NL-01-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="1.2" />
-        <comment value="Vastlegger van de geneesmiddelovergevoeligheid" />
+        <map value="NL-01-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-359" />
-        <comment value="Zorgverlener" />
+        <map value="AllergieIntolerantie.zorgverlener" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.lastOccurrence">
@@ -398,13 +367,11 @@
       <alias value="LaatsteReactieDatumTijd" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="13.1" />
-        <comment value="Datum/tijdstip dat de laatste ongewenste reactie heeft plaatsgevonden" />
+        <map value="NL-13-01" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-8" />
-        <comment value="LaatsteReactieDatumTijd" />
+        <map value="AllergieIntolerantie.laatsteReactieDatumTijd" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.note">
@@ -433,28 +400,23 @@
       <alias value="Toelichting" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4" />
-        <comment value="note" />
+        <map value="EU-04" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.1" />
-        <comment value="Vrije tekst over overgevoeligheid/intolerantie" />
+        <map value="NL-04-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.3" />
-        <comment value="Tekstuele toevoeging voor andere informatie" />
+        <map value="NL-04-03" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.5" />
-        <comment value="Reden voor afsluiten allergie of overgevoeligheid" />
+        <map value="NL-04-05" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-9" />
-        <comment value="Toelichting" />
+        <map value="AllergieIntolerantie.toelichting" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction">
@@ -479,18 +441,15 @@
       <alias value="Reactie" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="9" />
-        <comment value="reaction" />
+        <map value="EU-09" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="9.1" />
-        <comment value="De omschreven reactie op een stof/groep stoffen of straling (Reactie container)" />
+        <map value="NL-09-01" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-10" />
-        <comment value="Reactie" />
+        <map value="AllergieIntolerantie.reactie" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.extension:certainty">
@@ -528,13 +487,11 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="6.2" />
-        <comment value="Mate zekerheid over reactie (ZekerheidStatus)" />
+        <map value="NL-06-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-361" />
-        <comment value="MateVanZekerheid" />
+        <map value="AllergieIntolerantie.reactie.mateVanZekerheid" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.substance">
@@ -563,18 +520,15 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="10" />
-        <comment value="reaction.agentOrAllergen" />
+        <map value="EU-10" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="10.1" />
-        <comment value="Hetgeen wat de reactie veroorzaakt (Veroorzaker)" />
+        <map value="NL-10-01" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-12" />
-        <comment value="SpecifiekeStof" />
+        <map value="AllergieIntolerantie.reaction.specifiekeStof" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
@@ -603,23 +557,19 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="11" />
-        <comment value="reaction.manifestation" />
+        <map value="EU-11" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="11.1" />
-        <comment value="Omschrijving van een diagnose" />
+        <map value="NL-11-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="11.2" />
-        <comment value="Symptomen van de reactie" />
+        <map value="NL-11-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-11" />
-        <comment value="ManifestatieVanReactie" />
+        <map value="AllergieIntolerantie.reactie.manifestatieVanReactie" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.description">
@@ -644,13 +594,11 @@
       <alias value="ReactieBeschrijving" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.2" />
-        <comment value="Tekstuele beschrijving van de reactie" />
+        <map value="NL-04-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-13" />
-        <comment value="ReactieBeschrijving" />
+        <map value="AllergieIntolerantie.reactie.reactieBeschrijving" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.onset">
@@ -675,18 +623,15 @@
       <alias value="ReactieDatumTijd" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="13" />
-        <comment value="reaction.onset" />
+        <map value="EU-13" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="13.2" />
-        <comment value="Datum/tijdstip dat een reactie heeft plaatsgevonden" />
+        <map value="NL-13-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-17" />
-        <comment value="ReactieDatumTijd" />
+        <map value="AllergieIntolerantie.reactie.reactieDatumTijd" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity">
@@ -711,23 +656,19 @@
       <alias value="Ernst" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="12" />
-        <comment value="reaction.severity" />
+        <map value="EU-12" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="12.1" />
-        <comment value="Ernst van de reactie" />
+        <map value="NL-12-01" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="12.2" />
-        <comment value="Ernst van de reactie (Ernst)" />
+        <map value="NL-12-02" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-14" />
-        <comment value="Ernst" />
+        <map value="AllergieIntolerantie.reactie.ernst" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute">
@@ -756,13 +697,11 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="20" />
-        <comment value="Wijze van blootstelling die de allergie of intolerantie heeft veroorzaakt" />
+        <map value="NL-20" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-15" />
-        <comment value="WijzeVanBlootstelling" />
+        <map value="AllergieIntolerantie.reactie.wijzeVanBlootstelling" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.note">
@@ -791,13 +730,11 @@
       <alias value="Opmerking" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="4.4" />
-        <comment value="Vrije tekst over reactie" />
+        <map value="NL-04-04" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="gbb-dataelement-362" />
-        <comment value="Opmerking" />
+        <map value="AllergieIntolerantie.reactie.opmerking" />
       </mapping>
     </element>
   </differential>
