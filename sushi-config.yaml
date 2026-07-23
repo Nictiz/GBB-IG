@@ -1,6 +1,6 @@
 id: nictiz.nl.gbb
 canonical: http://nictiz.nl/gbb
-name: GenericBuildingBlocks
+name: PatientSummary
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
