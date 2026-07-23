@@ -39,12 +39,12 @@ menu:
 
   Requirements:
     Overview: overview.html
-    Requirements: Requirements-PatientSummary.html
+    Requirements: requirements.html
 
   Specification:
     Specifications: specifications.html
-    Logical Model: StructureDefinition-PatientSummary-model.html
-    FHIR Profile: StructureDefinition-nl-core-PatientSummary.html
+    Logical Model: logicalmodel.html
+    FHIR Profile: fhirprofile.html
     Dependencies: dependencies.html
 
   Testing: testing.html
