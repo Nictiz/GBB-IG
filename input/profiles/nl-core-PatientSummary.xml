@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-patient-summary" />
-  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-patient-summary" />
-  <name value="NlpatientSummary" />
-  <title value="nl patient Summary" />
+  <id value="nl-core-summary" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PatientSummary" />
+  <name value="NlcorePatientSummary" />
+  <title value="nl core PatientSummary" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
