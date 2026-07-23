@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const { Fhir } = require("fhir-tool");
-const { parse: parseYaml } = require("yaml");
+const { parseAllDocuments, isMap, isSeq } = require("yaml");
 
 const OBLIGATION_URL = "http://hl7.org/fhir/StructureDefinition/obligation";
 
@@ -179,49 +179,63 @@ class Suppressions {
   constructor(filename) {
     if (!filename) return;
 
-    let document;
+    let documents = [];
     try {
-      document = parseYaml(fs.readFileSync(filename, "utf8"));
+      documents = parseAllDocuments(fs.readFileSync(filename, "utf8"));
     } catch (error) {
       throw new Error(`Cannot read YAML file "${filename}": ${getErrorMessage(error)}`);
     }
+    for (const document of documents) {
+      this.#parseYAMLDocument(document);
+    }
+  }
+
+  #parseYAMLDocument(document) {
     if (document === null || typeof document !== "object" || Array.isArray(document)) {
-      throw new Error(`Suppression file "${filename}" must contain a YAML object.`);
+      throw new Error(`Suppression file must contain a YAML object.`);
     }
 
-    for (const [profileId, profileConfiguration] of Object.entries(document)) {
-      if (profileConfiguration === null || typeof profileConfiguration !== "object" || Array.isArray(profileConfiguration)) {
-        throw new Error(`Suppression configuration for profile "${profileId}" must be an object.`);
-      }
+    for (const pair of document.contents.items) {
+      const profileId = pair.key.value;
+      const profileConfiguration = pair.value;
 
-      const unmatchedObligations = profileConfiguration["unmatched obligations"];
+      if (!isMap(profileConfiguration)) continue;
+
+      const unmatchedObligations = profileConfiguration.get("unmatched obligations");
       if (unmatchedObligations === undefined) continue;
 
       if (unmatchedObligations === null || typeof unmatchedObligations !== "object" || Array.isArray(unmatchedObligations)) {
         throw new Error(`"unmatched obligations" for profile "${profileId}" must be an object keyed by profile path:\n${CliParser.YAML_FORMAT}`);
       }
 
-      const profilePaths = new Map();
-      for (const [profilePath, entries] of Object.entries(unmatchedObligations)) {
-        if (!Array.isArray(entries)) {
+      let profilePaths = new Map();
+      if (this.#suppressions.has(profileId)) {
+        profilePaths = this.#suppressions.get(profileId); // Merge with the suppressions from another YAML document
+      }
+      for (const pair of unmatchedObligations.items) {
+        const profilePath = pair.key.value;
+        const entries = pair.value;
+        if (!isSeq(entries)) {
           throw new Error(`Suppressions for path "${profilePath}" must be a list:\n${CliParser.YAML_FORMAT}`);
         }
 
-        const actors = [];
-        for (const entry of entries) {
-          if (entry === null || typeof entry !== "object" || Array.isArray(entry)) {
+        let actors = new Set();
+        if (profilePaths.has(profilePath)) {
+          actors = profilePaths.get(profilePath);
+        }
+        for (const entry of entries.items) {
+          if (!isMap(entry)) {
             throw new Error(`Each suppression for path "${profilePath}" must be an object:\n${CliParser.YAML_FORMAT}`);
           }
 
-          if (typeof entry.actor !== "string" || entry.actor.trim() === "") {
+          if (!entry.get("actor")) {
             throw new Error(`The suppression for path "${profilePath}" must have an actor:\n${CliParser.YAML_FORMAT}`);
           }
 
-          if (typeof entry.reason !== "string") {
+          if (!entry.get("reason")) {
             throw new Error(`The suppression reason for path "${profilePath}" and actor "${entry.actor}" must be provided as a string:\n${CliParser.YAML_FORMAT}`);
           }
-
-          actors.push(entry.actor);
+          actors.add(entry.get("actor"));
         }
         profilePaths.set(profilePath, actors);
       }
@@ -230,7 +244,7 @@ class Suppressions {
   }
 
   get(profileId, profilePath, actor) {
-    return this.#suppressions.get(profileId)?.get(profilePath)?.includes(stripVersionFromCanonical(actor));
+    return this.#suppressions.get(profileId)?.get(profilePath)?.has(stripVersionFromCanonical(actor));
   }
 }
 
@@ -773,12 +787,4 @@ function main() {
   }
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(
-    `Error: ${getErrorMessage(error)}`
-  );
-
-  process.exitCode = 1;
-}
+main()
