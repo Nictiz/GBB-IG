@@ -41,7 +41,7 @@ if [[ ! -f $so_dir/sync-obligations.js ]]; then
 fi
 
 cd $work_dir
-node $so_dir/sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated/logicalmodels $@
+node $so_dir/sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated/logicalmodels --suppressions known-issues.yml $@
 if [ $? -ne 0 ]; then
     exit_code=1
 fi

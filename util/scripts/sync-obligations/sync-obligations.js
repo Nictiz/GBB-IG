@@ -435,7 +435,7 @@ class ObligationComparator {
       for (const context of this.mappingContexts) {
         const targetElements = this.#resolveTargetElements(profileElement, context);
 
-        for (const logicalModelElement of targetElements) {
+        for (const logicalModelElement of targetElements.filter(el => (el != null))) {
           for (const obligation of this.#getObligations(logicalModelElement)) {
             if (!this.#obligationAppliesToActors(obligation)) {
               continue;
@@ -464,12 +464,18 @@ class ObligationComparator {
   #reportDiscrepancies(elements) {
     const result = {
       discrepancyCount: 0,
+      targetMissingCount: 0,
       suppressedCount: 0,
     };
 
     for (const profileElement of elements) {
       for (const context of this.mappingContexts) {
         for (const logicalModelElement of this.#resolveTargetElements(profileElement, context)) {
+          if (logicalModelElement == null) {
+            result.targetMissingCount += 1;
+            continue;
+          }
+
           const profileObligationsByActor = this.#getActorObligations(profileElement);
           const modelObligationsByActor = this.#getActorObligations(logicalModelElement);
 
@@ -486,7 +492,6 @@ class ObligationComparator {
             } else if (modelObligations.present && profileObligations.present && !this.#setsAreEqual(modelObligations.codes, profileObligations.codes)) {
               discrepancyType = "different-codes";
             }
-
             if (!discrepancyType) continue;
 
             const suppressionReason = this.suppressions.get(this.profile.id, profileElement.path, actor);
@@ -497,7 +502,6 @@ class ObligationComparator {
             }
 
             result.discrepancyCount += 1;
-
             this.#reportDiscrepancy(discrepancyType, profileElement, logicalModelElement, context, actor, modelObligations.codes, profileObligations.codes);
           }
         }
@@ -562,10 +566,10 @@ class ObligationComparator {
       const logicalModelElement = this.#resolveMapTargetToElement(target, context.logicalModelIndex);
       if (!logicalModelElement) {
         console.warn(`Mapping target not found in logical model "${context.logicalModel.url}": ${target} (from ${profileElement.path ?? profileElement.id})`);
-        continue;
+        resolvedElements.add(null);
+      } else {
+        resolvedElements.add(logicalModelElement);
       }
-
-      resolvedElements.add(logicalModelElement);
     }
 
     return resolvedElements;
@@ -732,6 +736,7 @@ function main() {
   const suppressions = new Suppressions(cliParser.options.suppressionsFilename);
 
   let totalDiscrepancyCount = 0;
+  let totalTargetMissingCount = 0;
   let totalSuppressedCount = 0;
   let processedProfileCount = 0;
   let skippedProfileCount = 0;
@@ -761,6 +766,7 @@ function main() {
     console.log("  Mode: report");
     const result = comparator.report();
     totalDiscrepancyCount += result.discrepancyCount;
+    totalTargetMissingCount += result.targetMissingCount;
     totalSuppressedCount += result.suppressedCount;
     if (result.discrepancyCount === 0) {
       console.log("  No unsuppressed obligation discrepancies found.");
@@ -780,8 +786,9 @@ function main() {
   }
   if (!cliParser.options.copy) {
     console.log(`Unsuppressed discrepancies: ${totalDiscrepancyCount}`);
+    console.log(`Mappings to non-existing model elements: ${totalTargetMissingCount}`);
     console.log(`Suppressed discrepancies: ${totalSuppressedCount}`);
-    if (totalDiscrepancyCount > 0) {
+    if (totalDiscrepancyCount > 0 || totalTargetMissingCount > 0) {
       process.exitCode = 2;
     }
   }
