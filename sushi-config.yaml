@@ -38,8 +38,8 @@ menu:
   Functional design: functionaldesign.html
 
   Requirements:
-    Overview: overview.html
-    Requirements: requirements.html
+    Overview: PatientSummary.html
+    Requirements: Requirements-PatientSummary.html
 
   Specification:
     Specifications: specifications.html
