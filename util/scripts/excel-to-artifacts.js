@@ -274,7 +274,7 @@ class ExcelConvertor {
   
   static textADId          = "ART-DECOR-id";
 
-  static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
+  static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/nl-ps-/StructureDefinition";
 
   constructor(inputFile, targetFolders, valueSetDownloader) {
     this.inputFile = inputFile;
