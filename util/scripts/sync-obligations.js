@@ -156,7 +156,8 @@ class Suppressions {
   #suppressions = new Map();
 
   constructor(filename) {
-  
+    if (!filename) return;
+
     let document;
     try {
       document = parseYaml(fs.readFileSync(filename, "utf8"));
@@ -256,10 +257,10 @@ class ObligationComparator {
 
   report() {
     if (this.profile.differential) {
-      this.#reportDiscrepancies(this.profile.differential.element);
+      return this.#reportDiscrepancies(this.profile.differential.element);
     }
     if (this.profile.snapshot) {
-      this.#reportDiscrepancies(this.profile.snapshot.element);
+      return this.#reportDiscrepancies(this.profile.snapshot.element);
     }
   }
   
@@ -321,13 +322,13 @@ class ObligationComparator {
           }
 
           if (!discrepancyType) continue;
-          if (suppressions.get(this.profile.id, profileElement.path, actor)) {
+          if (this.suppressions.get(this.profile.id, profileElement.path, actor)) {
             result.suppressedCount += 1;
             continue;
           }
           result.discrepancyCount += 1;
 
-          this.#reportDiscrepancy(discrepancyType, profileElement, targetPath, actor,
+          this.#reportDiscrepancy(discrepancyType, profileElement, lmElement, actor,
             modelObligations.codes, profileObligations.codes);
         }
       }
@@ -336,7 +337,7 @@ class ObligationComparator {
     return result;
   }
 
-  #reportDiscrepancy(type, profileElement, modelPath, actor, modelCodes, profileCodes) {
+  #reportDiscrepancy(type, profileElement, lmElement, actor, modelCodes, profileCodes) {
     console.log();
 
     switch (type) {
@@ -371,7 +372,7 @@ class ObligationComparator {
     }
 
     console.log(`  Profile element: ${profileElement.path ?? profileElement.id}`);
-    console.log(`  Logical model element: ${modelPath}`);
+    console.log(`  Logical model element: ${lmElement.path ?? lmElement.id}`);
     console.log(`  Actor: ${actor}`);
     console.log(`  Logical model codes: ${this.#formatCodes(modelCodes)}`);
     console.log(`  Profile codes: ${this.#formatCodes(profileCodes)}`);
@@ -386,6 +387,7 @@ class ObligationComparator {
 
     if (matchingMappings.length === 1) {
       this.mappingIdentity = matchingMappings[0].identity;
+      return;
     }
 
     if (matchingMappings.length === 0) {
@@ -409,10 +411,10 @@ class ObligationComparator {
     // We don't bother if there are any differences between the snapshot and the
     // differential, this should be flagged by other tools.
     let elements = [];
-    if (logicalModel.snapshot) {
-      elements = logicalModel.snapshot.element ?? [];
-    } else if (logicalModel.differential) {
-      elements = logicalModel.differential.element ?? [];
+    if (this.logicalModel.snapshot) {
+      elements = this.logicalModel.snapshot.element ?? [];
+    } else if (this.logicalModel.differential) {
+      elements = this.logicalModel.differential.element ?? [];
     }
 
     for (const element of elements) {
@@ -458,7 +460,7 @@ class ObligationComparator {
     ];
     const resolved = candidates.find(candidate => this.lmIndex.has(candidate));
     if (resolved) {
-      return this.lmIndex[resolved];
+      return this.lmIndex.get(resolved);
     }
     return undefined;
   }
@@ -540,7 +542,7 @@ class StructureDefinitionHandler {
   readJson(filename) {
     let sd;
     try {
-      sj = JSON.parse(fs.readFileSync(filename, "utf8"));
+      sd = JSON.parse(fs.readFileSync(filename, "utf8"));
     } catch (error) {
       throw new Error(`Cannot read JSON file "${filename}": ${getErrorMessage(error)}`);
     }
