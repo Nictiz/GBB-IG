@@ -1,5 +1,5 @@
-id: nictiz.nl.gbb
-canonical: http://nictiz.nl/gbb
+id: nictiz.nl.nlps
+canonical: http://nictiz.nl/nlps
 name: PatientSummary
 status: draft
 version: 0.1.0
@@ -43,7 +43,7 @@ menu:
 
   Specification:
     Specifications: specifications.html
-    Logical Model: logicalmodel.html
+    Logical Model: StructureDefinition-PatientSummary-model.html
     FHIR Profile: fhirprofile.html
     Dependencies: dependencies.html
 
