@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-summary" />
+  <id value="nl-core-PatientSummary" />
   <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PatientSummary" />
   <name value="NlcorePatientSummary" />
   <title value="nl core PatientSummary" />
