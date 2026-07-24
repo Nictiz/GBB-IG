@@ -435,7 +435,8 @@ class ObligationComparator {
       for (const context of this.mappingContexts) {
         const targetElements = this.#resolveTargetElements(profileElement, context);
 
-        for (const logicalModelElement of targetElements.filter(el => (el != null))) {
+        for (const logicalModelElement of [...targetElements].filter(el => (el != null))) {
+          console.log(profileElement)
           for (const obligation of this.#getObligations(logicalModelElement)) {
             if (!this.#obligationAppliesToActors(obligation)) {
               continue;
@@ -448,6 +449,7 @@ class ObligationComparator {
             }
 
             profileElement.extension.push(structuredClone(obligation));
+            profileElement.mustSupport = true;
             existingObligations.add(canonicalObligation);
 
             console.log(`Copied obligation from ${context.logicalModel.url}# ${logicalModelElement.path} to ${profileElement.path ?? profileElement.id}`);
