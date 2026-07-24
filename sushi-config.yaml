@@ -112,7 +112,7 @@ menu:
     Composition:
       Overzicht: Composition.html
       Requirements: Requirements-Composition.html
-      Afsprakenmodel: StructureDefinition-Composition-model.html
+      Afsprakenmodel: StructureDefinition-Document-model.html
       FHIR-profiel: StructureDefinition-nl-core-Composition.html
     Contactgegevens:
       Overzicht: ContactPoint.html
