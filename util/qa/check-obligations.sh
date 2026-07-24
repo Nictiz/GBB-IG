@@ -43,7 +43,7 @@ fi
 if [[ $write_github == 1 ]]; then
   echo "::group::Downloading logical models from ART-DECOR"
   lm_folder=$(mktemp -d)
-  ./excel-to-artifacts.sh --lm input/requirements $lm_folder
+  $script_dir/excel-to-artifacts.sh --lm input/requirements $lm_folder
   echo "::endgroup::"
 else
   lm_folder="generated/logicalmodels"
