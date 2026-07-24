@@ -14,7 +14,7 @@ ECHO We're online
 SET txoption=
 
 REM Run the script to convert and download the content based on the Excel input.
-node util\scripts\excel-to-artifacts.js input\requirements generated
+node util\scripts\excel-to-artifacts\excel-to-artifacts.js input\requirements generated
 if errorlevel 1 exit /b %errorlevel%
 
 :igpublish
