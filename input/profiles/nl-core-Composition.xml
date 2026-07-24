@@ -261,7 +261,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
       </type>
       <mapping>
         <identity value="GBB-Composition-v0.1" />
