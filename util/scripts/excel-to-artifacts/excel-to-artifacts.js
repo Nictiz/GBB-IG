@@ -387,7 +387,7 @@ class ExcelConvertor {
     try {
       const id_parts = ad_id.split("/");
       const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
-      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
+      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} ${response.statusText}`);
       }
