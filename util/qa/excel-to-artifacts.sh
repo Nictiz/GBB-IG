@@ -1,6 +1,6 @@
 #!/bin/bash
 
-so_dir=$tools_dir/sync-obligations
+eta_dir=$tools_dir/excel-to-artifacts
 
 # Install our tools, if needed
 which node > /dev/null
@@ -21,7 +21,7 @@ if [[ $has_node != 0 || $has_npm != 0 ]]; then
   fi
 fi
 
-if [[ ! -f $so_dir/sync-obligations.js ]]; then
+if [[ ! -f $eta_dir/syncexcel-to-artifacts.js ]]; then
   # Copy the script to the tools dir, where it can download dependencies
   
   if [[ $write_github == 1 ]]; then
@@ -30,9 +30,9 @@ if [[ ! -f $so_dir/sync-obligations.js ]]; then
     echo -e "\033[1;37mInstalling sync-obligations tool and dependencies\033[0m"
   fi
 
-  cp -r $work_dir/util/scripts/sync-obligations $so_dir
+  cp -r $work_dir/util/scripts/excel-to-artifacts $eta_dir
 
-  cd $so_dir
+  cd $eta_dir
   npm install
 
   if [[ $write_github == 1 ]]; then
@@ -40,17 +40,8 @@ if [[ ! -f $so_dir/sync-obligations.js ]]; then
   fi
 fi
 
-if [[ $write_github == 1 ]]; then
-  echo "::group::Downloading logical models from ART-DECOR"
-  lm_folder=$(mktemp -d)
-  ./excel-to-artifacts.sh --lm input/requirements $lm_folder
-  echo "::endgroup::"
-else
-  lm_folder="generated/logicalmodels"
-fi
-
 cd $work_dir
-node $so_dir/sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder $lm_folder --suppressions known-issues.yml $@
+node $eta_dir/excel-to-artifacts.js $@
 if [ $? -ne 0 ]; then
     exit_code=1
 fi
