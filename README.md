@@ -117,9 +117,50 @@ menu:
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.
 
-### FHIR quality control
+## FHIR quality control
 
 The FHIR IG Publisher famously creates a qa.html page that shows all kinds of qa problems in the FHIR materials. In addition to this, the [Nictiz custom tooling](https://github.com/Nictiz/Nictiz-tooling-R4-QA) is installed here. These tools are used in the configured Github actions (configured in `.github/actions/*.yml` from the root of this repo). To use them manually:
 * Make sure Docker or Podman is running (when using Podman, enable Docker compatibility mode and install the Podman Compose extension).
 * Start the batch scripts "_qa.bat"
 * Point your webbrowser at http://localhost:9000. This will give you a menu of the checks that you can perform.
+
+## Supporting tools
+### sync-obligations
+Obligations for the general actors need to be defined both on the logical model ("afsprakenmodel") and the corresponding FHIR profiles. The logical model is the source of truth for this information, the FHIR profiles implement what's defined functionally.
+
+In order to facilitate this, there's a script called sync-obligations, which can do one of two things:
+
+1. Check wether the obligations in FHIR profiles are applied in accordance to the logical model. This check is part of the [automated quality control](#fhir-quality-control).
+2. Set the obligations in FHIR profiles in accordance to the logical model. This is not configured to run automatically, it is always an explicit, manual action.
+
+The reason that setting obligations needs to be a manual action is that there may be valid reasons for mismatches to occur, for example when the logical model and the FHIR profile don't have a 1-to-1 match (see also the remark below about suppressing errors). So the result of the script has to be manually vetted.
+
+To use the script for checking, use the [quality control web interface](#fhir-quality-control).
+
+To use the script for syncing, you need to use the command line. First, make sure to install the dependencies (adjust slashes according to the OS you're using):
+
+    cd util\scripts\sync-obligations
+    npm install
+    cd ..\..\..
+
+The script than needs to know a few things:
+
+1. Where the logical models reside. This is normally in the folder "generated\logicalmodels". (Run `_genonce.bat/sh` first to populate or refresh this folder.)
+2. Which actors to consider. For FHIR, these are the actors `http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem` and `http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem`.
+3. Which profiles to change.
+
+To full command becomes (adjust slashes according to the OS you're using):
+
+    node util\scripts\sync-obligations\sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated\logicalmodels --suppressions known-issues.yaml input\profiles\[profile 1.xml] input\profiles\[profile 2.xml] ...
+
+As said before, sometimes mismatches between the logical model and the profile are intentional. Once it has been decided that there is a valid reason, the script should not flag these known deviations. This can be done using the `known-issues.yml` file used in the QA tooling. The format for marking deviations here is:
+
+```yml
+[profile id]:
+  unmatched obligations:
+    [path of the element]:
+      - actor: [canonical url for the actor that doesn't match]
+        reason: [explanation for the mismatch]
+      - actor: [canonical url for another actor that doesn't match]
+        reason: [explanation for the mismatch]
+```
