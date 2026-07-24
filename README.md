@@ -151,7 +151,7 @@ The script than needs to know a few things:
 
 To full command becomes (adjust slashes according to the OS you're using):
 
-    node util\scripts\sync-obligations\sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated\logicalmodels --suppressions known-issues.yaml input\profiles\[profile 1.xml] input\profiles\[profile 2.xml] ...
+    node util\scripts\sync-obligations\sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated\logicalmodels --suppressions known-issues.yml input\profiles\[profile 1.xml] input\profiles\[profile 2.xml] ...
 
 As said before, sometimes mismatches between the logical model and the profile are intentional. Once it has been decided that there is a valid reason, the script should not flag these known deviations. This can be done using the `known-issues.yml` file used in the QA tooling. The format for marking deviations here is:
 
