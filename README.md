@@ -133,6 +133,8 @@ In order to facilitate this, there's a script called sync-obligations, which can
 1. Check wether the obligations in FHIR profiles are applied in accordance to the logical model. This check is part of the [automated quality control](#fhir-quality-control).
 2. Set the obligations in FHIR profiles in accordance to the logical model. This is not configured to run automatically, it is always an explicit, manual action.
 
+The script uses the mapping keys in the profiles to match elements to the logical model elements.
+
 The reason that setting obligations needs to be a manual action is that there may be valid reasons for mismatches to occur, for example when the logical model and the FHIR profile don't have a 1-to-1 match (see also the remark below about suppressing errors). So the result of the script has to be manually vetted.
 
 To use the script for checking, use the [quality control web interface](#fhir-quality-control).
