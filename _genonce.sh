@@ -16,7 +16,7 @@ fi
 echo "$txoption"
 
 # Run the script to convert and download the content based on the Excel input.
-node util/scripts/excel-to-artifacts.js input/requirements generated
+node util/scripts/excel-to-artifacts/excel-to-artifacts.js input/requirements generated
 
 # Sushi is run automatically by the publisher if the folder input/fsh exists. We're not guaranteed to have this
 # folder, but Sushi needs to run to handle sushi-config.yaml. So it's called here explicitly, and suppressed from

@@ -2,6 +2,7 @@
 const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
+const commander = require("commander");
 
 const serverSourceUrl = "https://decor.nictiz.nl";
 //const serverSourceUrl = "http://localhost:8877/exist/apps";
@@ -372,7 +373,7 @@ class ExcelConvertor {
     console.log(`Wrote ${outputFile}`);
   }
 
-  async getLogicalModel(outputFolder) {
+  async getLogicalModel() {
     let rows = this.#getRows(ExcelConvertor.sheetConcept);
     if (rows == null) return;
     
@@ -389,7 +390,7 @@ class ExcelConvertor {
     try {
       const id_parts = ad_id.split("/");
       const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
-      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
+      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} ${response.statusText} - ${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
       }
@@ -401,7 +402,9 @@ class ExcelConvertor {
       fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
       console.log(`Saved LogicalModel to ${outputFile}`);
 
-      await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
+      if (this.valueSetDownloader) {
+        await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
+      }
     } catch (error) {
       console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR, "${error.message}"`);
       return;
@@ -458,26 +461,52 @@ class ExcelConvertor {
   }
 }
 
-const inputFolder = process.argv[2];
-const outputFolder = process.argv[3];
-
-if (!inputFolder || !outputFolder) {
-  console.error("Usage: node excel-to-artifacts.js input-folder output-folder");
-  process.exit(1);
-}
-
 async function main() {
-  const targetFolders = new TargetFolders(outputFolder);
-  const actorDefinitionDownloader = new ActorDefinitionDownloader(targetFolders.get("Resources"));
-  const valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
+  commander.program
+    .option("--requirements", "Create Requirements resources from Excel")
+    .option("--actors", "Download ActorDefinitions from ART-DECOR")
+    .option("--lm", "Download logical model StructureDefinitions from ART-DECOR")
+    .option("--dont-descend", "When downloading material from ART-DECOR, don't download materials included from those materials")
+    .argument('<inputFolder>')
+    .argument('<outputFolder>')
+  commander.program.parse()
 
-  await actorDefinitionDownloader.downloadAll();
+  const inputFolder = commander.program.args[0];
+  const outputFolder = commander.program.args[1];
+
+  let createRequirements = commander.program.opts()['requirements'];
+  let downloadActors = commander.program.opts()['actors'];
+  let downloadLogicalModels = commander.program.opts()['lm'];
+  const descend = !(commander.program.opts()['dontDescend'] === true);
+  if (!createRequirements && !downloadActors && !downloadLogicalModels) {
+    // If no explicit action is given, do everything
+    createRequirements = true;
+    downloadActors = true;
+    downloadLogicalModels = true;
+  }
+
+  const targetFolders = new TargetFolders(outputFolder);
+
+  if (downloadActors) {
+    const actorDefinitionDownloader = new ActorDefinitionDownloader(targetFolders.get("Resources"));
+    await actorDefinitionDownloader.downloadAll();
+  }
+
+  let valueSetDownloader = null;
+  if (descend) {
+    valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
+  }
 
   for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
-    convertor.convertRequirements();
-    convertor.convertConceptPage();
-    await convertor.getLogicalModel();
+    if (createRequirements) {
+      convertor.convertRequirements();
+      convertor.convertConceptPage();
+    }
+
+    if (downloadLogicalModels) {
+      await convertor.getLogicalModel();
+    }
   }
 }
 
