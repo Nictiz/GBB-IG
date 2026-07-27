@@ -22,6 +22,16 @@
   <purpose value="This profile is the FHIR implementation of the general building block [Condition](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Condition)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-Condition" />
+    <uri value="http://nictiz.nl/gbb/Requirements/Condition" />
+    <name value="Information requirements for Condition" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Condition" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/Condition-model" />
+    <name value="Logical model for Condition" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Condition" />
@@ -31,6 +41,10 @@
     <element id="Condition.language">
       <path value="Condition.language" />
       <short value="Language of the condition content" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-7" />
+      </mapping>
     </element>
     <element id="Condition.text">
       <path value="Condition.text" />
@@ -62,11 +76,19 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-18" />
+      </mapping>
     </element>
     <element id="Condition.identifier">
       <path value="Condition.identifier" />
       <definition value="Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server." />
       <min value="1" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-2" />
+      </mapping>
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
@@ -75,6 +97,10 @@
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-clinical" />
       </binding>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-5" />
+      </mapping>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />
@@ -82,10 +108,29 @@
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
       </binding>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-5" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-16" />
+      </mapping>
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
       <short value="Category" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-11" />
+      </mapping>
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-13" />
+      </mapping>
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
@@ -110,6 +155,17 @@
         <description value="Valueset to describe the actual problem experienced by the patient" />
         <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips" />
       </binding>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-8" />
+      </mapping>
+    </element>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-20" />
+      </mapping>
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
@@ -138,6 +194,10 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-14" />
+      </mapping>
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
@@ -146,6 +206,10 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-1" />
+      </mapping>
     </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
@@ -166,6 +230,10 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-9" />
+      </mapping>
     </element>
     <element id="Condition.abatement[x]">
       <path value="Condition.abatement[x]" />
@@ -185,11 +253,19 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-10" />
+      </mapping>
     </element>
     <element id="Condition.recordedDate">
       <path value="Condition.recordedDate" />
       <short value="Date when the condition record was created" />
       <min value="1" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-4" />
+      </mapping>
     </element>
     <element id="Condition.recorder">
       <path value="Condition.recorder" />
@@ -200,6 +276,10 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-3" />
+      </mapping>
     </element>
     <element id="Condition.asserter">
       <path value="Condition.asserter" />
@@ -211,10 +291,18 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-6" />
+      </mapping>
     </element>
     <element id="Condition.stage">
       <path value="Condition.stage" />
       <short value="Stage/grade" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-15" />
+      </mapping>
     </element>
     <element id="Condition.stage.summary">
       <path value="Condition.stage.summary" />
@@ -231,6 +319,21 @@
     <element id="Condition.note">
       <path value="Condition.note" />
       <definition value="Comment by the one who determined or updated the Problem." />
+    </element>
+    <element id="Condition.note.text">
+      <path value="Condition.note.text" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-12" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-17" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-19" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
