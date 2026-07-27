@@ -30,10 +30,10 @@ jobs:
           echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
       - name: Generate artifacts
         run: |
-          cd util/scripts
+          cd util/scripts/excel-to-artifacts
           npm install
-          cd ../..
-          node util/scripts/excel-to-artifacts.js input/requirements generated
+          cd ../../..
+          node util/scripts/excel-to-artifacts/excel-to-artifacts.js input/requirements generated
       - name: Run sushi
         run: |
           npm -g install fsh-sushi
