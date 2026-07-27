@@ -61,6 +61,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-7" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -176,6 +180,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-18" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -200,6 +208,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-2" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus">
@@ -228,6 +240,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-5" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.verificationStatus">
@@ -260,6 +276,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-16" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition" />
+        <map value="Gezondheidstoestand." />
+      </mapping>
     </element>
     <element id="Condition.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -284,12 +304,20 @@
         <identity value="requirements-Condition" />
         <map value="CON-11" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.severity">
       <path value="Condition.severity" />
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-13" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.severity">
@@ -354,12 +382,20 @@
         <identity value="requirements-Condition" />
         <map value="CON-8" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.code.text">
       <path value="Condition.code.text" />
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-20" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.code.text">
@@ -460,6 +496,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-14" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -487,6 +527,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-1" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.onset[x]">
@@ -544,6 +588,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-9" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.abatement[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -599,6 +647,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-10" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.recordedDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -623,6 +675,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-4" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.recorder">
@@ -653,6 +709,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-3" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.asserter">
@@ -685,6 +745,10 @@
         <identity value="requirements-Condition" />
         <map value="CON-6" />
       </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.stage">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -708,6 +772,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-15" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
     <element id="Condition.stage.summary">
@@ -803,6 +871,10 @@
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-19" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
   </differential>
