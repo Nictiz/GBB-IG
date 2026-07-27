@@ -143,7 +143,8 @@
       <path value="Condition.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
     </element>
     <element id="Condition.onset[x]">
@@ -192,9 +193,9 @@
       <path value="Condition.recorder" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu" />
-        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu" />
-        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-practitionerRole" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
     </element>
