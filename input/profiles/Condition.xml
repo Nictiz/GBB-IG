@@ -1,0 +1,225 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Condition" />
+  <language value="en" />
+  <text>
+    <status value="empty" />
+  </text>
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+  <version value="0.1.0" />
+  <name value="NlcoreCondition" />
+  <title value="nl core Condition" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2026-07-27T07:12:05+00:00" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://nictiz.nl" />
+    </telecom>
+  </contact>
+  <purpose value="This profile is the FHIR implementation of the general building block [Condition](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Condition)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition.language">
+      <path value="Condition.language" />
+      <short value="Language of the condition content" />
+    </element>
+    <element id="Condition.text">
+      <path value="Condition.text" />
+      <definition value="Human readable specification of the problem. This is a general notes/comments entry for description of the problem, its diagnosis and prognosis." />
+    </element>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.extension:assertedDate">
+      <path value="Condition.extension" />
+      <sliceName value="assertedDate" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate" />
+      </type>
+    </element>
+    <element id="Condition.extension:assertedDate.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <short value="Date and time of the diagnosis assertion" />
+    </element>
+    <element id="Condition.extension:relatedArtifact">
+      <path value="Condition.extension" />
+      <sliceName value="relatedArtifact" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact" />
+      </type>
+    </element>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <definition value="Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server." />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <definition value="The problem status describes the condition of the problem:                                       1. Active problems are problems of which the patient experiences symptoms or for which evidence exists.                                       2. If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.                                        3. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore." />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/condition-clinical" />
+      </binding>
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
+      </binding>
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <short value="Category" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <definition value="The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems." />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="preferred" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder" />
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="Additional conformance binding to a problem code when ICD-10 or Orphanet codes are used." />
+          </extension>
+          <extension url="shortDoco">
+            <valueString value="For cross border data exchange" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <description value="Valueset to describe the actual problem experienced by the patient" />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <constraint>
+        <key value="eu-bodysite-1" />
+        <severity value="error" />
+        <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both." />
+        <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()" />
+        <source value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core" />
+      </constraint>
+      <binding>
+        <strength value="preferred" />
+      </binding>
+    </element>
+    <element id="Condition.bodySite.extension:bodySite">
+      <path value="Condition.bodySite.extension" />
+      <sliceName value="bodySite" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
+    </element>
+    <element id="Condition.bodySite.extension:bodySite.value[x]">
+      <path value="Condition.bodySite.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core" />
+      </type>
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <definition value="Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.abatement[x]:abatementDateTime">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementDateTime" />
+      <definition value="The date or estimated date that the condition resolved or went into remission. A ‘vague’ date, such as only the year or the month and the year, is permitted" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate" />
+      <short value="Date when the condition record was created" />
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu" />
+        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu" />
+        <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <short value="Who asserted the condition" />
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <short value="Stage/grade" />
+    </element>
+    <element id="Condition.stage.summary">
+      <path value="Condition.stage.summary" />
+      <short value="Most recent Stage Group" />
+    </element>
+    <element id="Condition.stage.assessment">
+      <path value="Condition.stage.assessment" />
+      <definition value="Reference to the evidence on which the staging assessment is based." />
+    </element>
+    <element id="Condition.stage.type">
+      <path value="Condition.stage.type" />
+      <short value="Staging system used." />
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <definition value="Comment by the one who determined or updated the Problem." />
+    </element>
+  </differential>
+</StructureDefinition>
