@@ -203,6 +203,13 @@
     <element id="Condition.asserter">
       <path value="Condition.asserter" />
       <short value="Who asserted the condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-practitionerRole" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
     </element>
     <element id="Condition.stage">
       <path value="Condition.stage" />
