@@ -45,6 +45,7 @@ menu:
     Logical Model: StructureDefinition-PatientSummary-model.html
     FHIR Profile: StructureDefinition-nl-core-PatientSummary.html
     Dependencies: dependencies.html
+    Technical Design: technicaldesign.html
 
   Testing: testing.html
   Validation: validation.html
