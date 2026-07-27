@@ -66,6 +66,7 @@
     <element id="Condition.identifier">
       <path value="Condition.identifier" />
       <definition value="Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server." />
+      <min value="1" />
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
