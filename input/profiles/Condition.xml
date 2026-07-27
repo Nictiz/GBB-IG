@@ -157,6 +157,7 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
       <path value="Condition.onset[x]" />
