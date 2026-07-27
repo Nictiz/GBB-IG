@@ -188,6 +188,7 @@
     <element id="Condition.recordedDate">
       <path value="Condition.recordedDate" />
       <short value="Date when the condition record was created" />
+      <min value="1" />
     </element>
     <element id="Condition.recorder">
       <path value="Condition.recorder" />
