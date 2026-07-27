@@ -769,14 +769,6 @@
       </extension>
       <path value="Condition.stage" />
       <short value="Stage/grade" />
-      <mapping>
-        <identity value="requirements-Condition" />
-        <map value="CON-15" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
-      </mapping>
     </element>
     <element id="Condition.stage.summary">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -797,6 +789,14 @@
       </extension>
       <path value="Condition.stage.summary" />
       <short value="Most recent Stage Group" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-15" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand."/>
+      </mapping>
     </element>
     <element id="Condition.stage.assessment">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
