@@ -382,10 +382,6 @@
         <map value="AllergieIntolerantie.laatsteReactieDatumTijd" />
       </mapping>
     </element>
-    <element id="AllergyIntolerance.note">
-      <path value="AllergyIntolerance.note" />
-      <max value="1" />
-    </element>
     <element id="AllergyIntolerance.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -711,10 +707,6 @@
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergieIntolerantie.reactie.wijzeVanBlootstelling" />
       </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.note">
-      <path value="AllergyIntolerance.reaction.note" />
-      <max value="1" />
     </element>
     <element id="AllergyIntolerance.reaction.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
