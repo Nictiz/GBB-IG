@@ -261,7 +261,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
       </type>
       <mapping>
         <identity value="GBB-Composition-v0.1" />
@@ -559,6 +559,23 @@
         <identity value="GBB-Composition-v0.1" />
         <map value="gbb-dataelement-428" />
         <comment value="Custodian" />
+      </mapping>
+    </element>
+    <element id="Composition.section.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/note" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section.extension:note.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <mapping>
+        <identity value="GBB-Composition-v0.1" />
+        <map value="gbb-dataelement-484" />
+        <comment value="Note" />
       </mapping>
     </element>
   </differential>

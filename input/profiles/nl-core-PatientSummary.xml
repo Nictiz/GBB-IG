@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-PatientSummary" />
-  <url value="http://nictiz.nl/nlps/StructureDefinition/nl-core-PatientSummary" />
+  <url value="http://nictiz.org/nlps/StructureDefinition/nl-core-PatientSummary" />
   <name value="NlcorePatientSummary" />
-  <title value="nl core PatientSummary" />
   <status value="draft" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="Patient Summary" />
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="GBB-PatientSummary-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/PatientSummary-model" />
-    <name value="Dataset GBB-PatientSummary-v0.1" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
   <baseDefinition value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Composition" />
   <derivation value="constraint" />
   <differential>
-    <element id="Composition">
-      <path value="Composition" />
-      <short value="test" />
+    <element id="Composition.section">
+      <path value="Composition.section" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:sectionProblems">
+      <path value="Composition.section" />
+      <sliceName value="sectionProblems" />
+    </element>
+    <element id="Composition.section:sectionAllergies">
+      <path value="Composition.section" />
+      <sliceName value="sectionAllergies" />
+    </element>
+    <element id="Composition.section:sectionMedications">
+      <path value="Composition.section" />
+      <sliceName value="sectionMedications" />
+    </element>
+    <element id="Composition.section:sectionProceduresHx">
+      <path value="Composition.section" />
+      <sliceName value="sectionProceduresHx" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices">
+      <path value="Composition.section" />
+      <sliceName value="sectionMedicalDevices" />
     </element>
   </differential>
 </StructureDefinition>
