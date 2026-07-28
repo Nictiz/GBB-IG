@@ -91,6 +91,10 @@
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-06" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
         <map value="NL-02-01" />
       </mapping>
       <mapping>
