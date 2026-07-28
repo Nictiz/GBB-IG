@@ -396,6 +396,7 @@
       </extension>
       <path value="AllergyIntolerance.note.text" />
       <short value="Comment" />
+      <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
       <alias value="Toelichting" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -722,6 +723,7 @@
       </extension>
       <path value="AllergyIntolerance.reaction.note.text" />
       <short value="Comment" />
+      <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
       <alias value="Opmerking" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
