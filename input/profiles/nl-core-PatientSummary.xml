@@ -3,8 +3,26 @@
   <id value="nl-core-PatientSummary" />
   <url value="http://nictiz.org/nlps/StructureDefinition/nl-core-PatientSummary" />
   <name value="NlcorePatientSummary" />
+  <title value="nl core PatientSummary" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Patient Summary Profile" />
+  <purpose value="This profile is the FHIR implementation of the Patient Summary[Composition](https://decor.nictiz.nl/ad/#/nl-ps-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.149.1.1/2025-09-01T12:11:54)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="GBB-PatientSummary-v0.1" />
+    <uri value="http://nictiz.nl/nlps/StructureDefinition/PatientSummary-model" />
+    <name value="Dataset GBB-PatientSummary-v0.1" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
@@ -25,9 +43,33 @@
       <path value="Composition.section" />
       <sliceName value="sectionProblems" />
     </element>
+    <element id="Composition.section:sectionProblems.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-472" />
+        <comment value="Condition" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionAllergies">
       <path value="Composition.section" />
       <sliceName value="sectionAllergies" />
+    </element>
+    <element id="Composition.section:sectionAllergies.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-1" />
+        <comment value="AllergyIntolerance" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedications">
       <path value="Composition.section" />
@@ -37,9 +79,33 @@
       <path value="Composition.section" />
       <sliceName value="sectionProceduresHx" />
     </element>
+    <element id="Composition.section:sectionProceduresHx.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-1" />
+        <comment value="Procedure" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionMedicalDevices">
       <path value="Composition.section" />
       <sliceName value="sectionMedicalDevices" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-469" />
+        <comment value="DeviceUse" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
