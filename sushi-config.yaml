@@ -1,9 +1,10 @@
 id: nictiz.nl.nlps
 canonical: http://nictiz.nl/nlps
 name: PatientSummary
+title: "Patient Summary"
 status: draft
 version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 4.0.1
 copyrightYear: 2026+
 releaseLabel: ci-build
 
