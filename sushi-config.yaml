@@ -37,6 +37,7 @@ parameters:
 menu:
   Home: index.html
   Functional design: functionaldesign.html
+  Technical Design: technicaldesign.html
 
   Requirements:
     Overview: PatientSummary.html
@@ -45,8 +46,7 @@ menu:
   Specification:
     Logical Model: StructureDefinition-PatientSummary-model.html
     FHIR Profile: StructureDefinition-nl-core-PatientSummary.html
-    Dependencies: dependencies.html
-    Technical Design: technicaldesign.html
+    Dependencies: dependencies.html   
 
   Testing: testing.html
   Validation: validation.html
