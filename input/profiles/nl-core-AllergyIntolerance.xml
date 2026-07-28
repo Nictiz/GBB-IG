@@ -344,10 +344,6 @@
         <map value="NL-01-01" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-01-02" />
-      </mapping>
-      <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergieIntolerantie.zorgverlener" />
       </mapping>
