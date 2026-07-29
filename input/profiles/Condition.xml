@@ -66,26 +66,6 @@
         <map value="Gezondheidstoestand."/>
       </mapping>
     </element>
-    <element id="Condition.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Condition.text" />
-      <definition value="Human readable specification of the problem. This is a general notes/comments entry for description of the problem, its diagnosis and prognosis." />
-    </element>
     <element id="Condition.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
