@@ -162,7 +162,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.GerelateerdArtefact"/>
       </mapping>
     </element>
     <element id="Condition.identifier">
@@ -191,7 +191,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Identificatienummer"/>
       </mapping>
     </element>
     <element id="Condition.clinicalStatus">
@@ -223,7 +223,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.KlinischeStatus"/>
       </mapping>
     </element>
     <element id="Condition.verificationStatus">
@@ -258,7 +258,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition" />
-        <map value="Gezondheidstoestand." />
+        <map value="Gezondheidstoestand.VerificatieStatus" />
       </mapping>
     </element>
     <element id="Condition.category">
@@ -286,7 +286,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition" />
-        <map value="Gezondheidstoestand." />
+        <map value="Gezondheidstoestand.Categorie" />
       </mapping>
     </element>
     <element id="Condition.severity">
@@ -307,6 +307,14 @@
         </extension>
       </extension>
       <path value="Condition.severity" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-13" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand.Ernst"/>
+      </mapping>
     </element>
     <element id="Condition.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -353,18 +361,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
-      </mapping>
-    </element>
-    <element id="Condition.code.text">
-      <path value="Condition.code.text" />
-      <mapping>
-        <identity value="requirements-Condition" />
-        <map value="CON-20" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Code"/>
       </mapping>
     </element>
     <element id="Condition.code.text">
@@ -385,6 +382,14 @@
         </extension>
       </extension>
       <path value="Condition.code.text" />
+      <mapping>
+        <identity value="requirements-Condition" />
+        <map value="CON-20" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Condition"/>
+        <map value="Gezondheidstoestand.Code"/>
+      </mapping>
     </element>
     <element id="Condition.bodySite">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -467,7 +472,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.AnatomischeLocatie"/>
       </mapping>
     </element>
     <element id="Condition.subject">
@@ -499,7 +504,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Subject.Patient"/>
       </mapping>
     </element>
     <element id="Condition.onset[x]">
@@ -559,7 +564,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.StartDatum"/>
       </mapping>
     </element>
     <element id="Condition.abatement[x]">
@@ -618,7 +623,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.EindDatum"/>
       </mapping>
     </element>
     <element id="Condition.recordedDate">
@@ -647,7 +652,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.RegistratieDatum"/>
       </mapping>
     </element>
     <element id="Condition.recorder">
@@ -681,7 +686,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Auteur[x]"/>
       </mapping>
     </element>
     <element id="Condition.asserter">
@@ -716,7 +721,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Asserter"/>
       </mapping>
     </element>
     <element id="Condition.stage">
@@ -764,7 +769,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.StadiumOfGraad.Samenvatting"/>
       </mapping>
     </element>
     <element id="Condition.stage.assessment">
@@ -843,7 +848,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Toelichting"/>
       </mapping>
     </element>
   </differential>
