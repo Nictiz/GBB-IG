@@ -42,6 +42,20 @@
     <element id="Composition.section:sectionProblems">
       <path value="Composition.section" />
       <sliceName value="sectionProblems" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:sectionProblems.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+    </element>
+    <element id="Composition.section:sectionProblems.extension:note.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-19" />
+        <comment value="Note" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.entry">
       <path value="Composition.section.entry" />
@@ -55,9 +69,31 @@
         <comment value="Condition" />
       </mapping>
     </element>
+    <element id="Composition.section:sectionProblems.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-18" />
+        <comment value="EmptyReason" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionAllergies">
       <path value="Composition.section" />
       <sliceName value="sectionAllergies" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:sectionAllergies.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+    </element>
+    <element id="Composition.section:sectionAllergies.extension:note.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-17" />
+        <comment value="Note" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.entry">
       <path value="Composition.section.entry" />
@@ -71,13 +107,25 @@
         <comment value="AllergyIntolerance" />
       </mapping>
     </element>
+    <element id="Composition.section:sectionAllergies.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-16" />
+        <comment value="EmptyReason" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionMedications">
       <path value="Composition.section" />
       <sliceName value="sectionMedications" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:sectionProceduresHx">
       <path value="Composition.section" />
       <sliceName value="sectionProceduresHx" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <path value="Composition.section.entry" />
@@ -94,6 +142,8 @@
     <element id="Composition.section:sectionMedicalDevices">
       <path value="Composition.section" />
       <sliceName value="sectionMedicalDevices" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <path value="Composition.section.entry" />
