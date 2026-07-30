@@ -26,7 +26,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
-  <baseDefinition value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
     <element id="Composition.section">
@@ -48,6 +48,10 @@
     <element id="Composition.section:sectionProblems.extension:note">
       <path value="Composition.section.extension" />
       <sliceName value="note" />
+    </element>
+    <element id="Composition.section:sectionProblems.extension:note.url">
+      <path value="Composition.section.extension.url" />
+      <fixedUri value="note" />
     </element>
     <element id="Composition.section:sectionProblems.extension:note.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -86,6 +90,10 @@
     <element id="Composition.section:sectionAllergies.extension:note">
       <path value="Composition.section.extension" />
       <sliceName value="note" />
+    </element>
+    <element id="Composition.section:sectionAllergies.extension:note.url">
+      <path value="Composition.section.extension.url" />
+      <fixedUri value="note" />
     </element>
     <element id="Composition.section:sectionAllergies.extension:note.value[x]">
       <path value="Composition.section.extension.value[x]" />
