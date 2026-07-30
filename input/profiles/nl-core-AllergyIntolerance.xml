@@ -1,0 +1,738 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-AllergyIntolerance" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
+    </div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AllergyIntolerance" />
+  <name value="NlcoreAllergyIntolerance" />
+  <title value="nl core AllergyIntolerance" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites." />
+  <purpose value="This profile is the FHIR implementation of the general building block [AllergyIntolerance](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.8)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-AllergyIntolerance" />
+    <uri value="http://nictiz.nl/gbb/Requirements/AllergyIntolerance" />
+    <name value="Information requirements for AllergyIntolerance" />
+  </mapping>
+  <mapping>
+    <identity value="lm-AllergyIntolerance" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance-model" />
+    <name value="Logical model for AllergyIntolerance" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance.extension:abatement">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement" />
+      <short value="When the allergy or intolerance resolved" />
+      <definition value="Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.url">
+      <path value="AllergyIntolerance.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.value[x]">
+      <path value="AllergyIntolerance.extension.value[x]" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-08" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-08-01" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.clinicalStatus" />
+      <short value="Active/inactive status" />
+      <alias value="ActieveInactieveStatus" />
+      <min value="1" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-02" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-06" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-02-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.actieveInactieveStatus" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.verificationStatus" />
+      <short value="Verification status" />
+      <alias value="VerificatieStatus" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-06" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-06-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-06-03" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.verificatieStatus" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.category" />
+      <short value="Category" />
+      <alias value="Categorie" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-14" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.categorie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.criticality" />
+      <short value="Criticality" />
+      <alias value="MateVanKritiekZijn" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-05" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-05-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-05-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.mateVanKritiekZijn" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.code" />
+      <short value="Substance" />
+      <alias value="VeroorzakendeStof" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+      </binding>
+      <min value="1" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-03" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-03-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-03-02" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-03-03" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-03-04" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-03-05" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.veroorzakendeStof" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.patient" />
+      <short value="Patient" />
+      <alias value="Patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-16" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-16-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.patient" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-07" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-07-01" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.recorder">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.recorder" />
+      <short value="Author" />
+      <alias value="Zorgverlener" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-01-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.zorgverlener" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.lastOccurrence">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.lastOccurrence" />
+      <short value="Onset of last reaction" />
+      <alias value="LaatsteReactieDatumTijd" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-13-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.laatsteReactieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.note.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.note.text" />
+      <short value="Comment" />
+      <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-04" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-04-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-04-03" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-04-05" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.toelichting" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction" />
+      <short value="Reaction event summary" />
+      <alias value="Reactie" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-09" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-09-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.extension:certainty">
+      <path value="AllergyIntolerance.reaction.extension" />
+      <sliceName value="certainty" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.reaction.extension:certainty.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.extension.value[x]" />
+      <short value="Certainty" />
+      <alias value="MateVanZekerheid" />
+      <binding>
+        <strength value="required" />
+        <description value="The degree of clinical certainty that the manifestation in this reaction event was caused by exposure to the identified substance." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-06-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.mateVanZekerheid" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.substance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.substance" />
+      <short value="Specific substance" />
+      <alias value="SpecifiekeStof" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-10" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-10-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reaction.specifiekeStof" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <short value="Manifestation" />
+      <alias value="ManifestatieVanReactie" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-11" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-11-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-11-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.manifestatieVanReactie" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.description">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.description" />
+      <short value="Reaction description" />
+      <alias value="ReactieBeschrijving" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-04-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.reactieBeschrijving" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.onset">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.onset" />
+      <short value="Onset of reaction" />
+      <alias value="ReactieDatumTijd" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-13" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-13-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.reactieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.severity" />
+      <short value="Severity of reaction" />
+      <alias value="Ernst" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-12" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-12-01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-12-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.ernst" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <short value="Route of exposure" />
+      <alias value="WijzeVanBlootstelling" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000" />
+      </binding>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-20" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.wijzeVanBlootstelling" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.reaction.note.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.reaction.note.text" />
+      <short value="Comment" />
+      <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
+      <alias value="Opmerking" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="NL-04-04" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.reactie.opmerking" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
