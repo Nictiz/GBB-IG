@@ -11,9 +11,6 @@ releaseLabel: Alpha
 publisher:
   name: Nictiz
   url: https://nictiz.nl
-  
-dependencies:
-  nictiz.nl.gbb: 0.1.0
 
 parameters:
   excludettl: true
