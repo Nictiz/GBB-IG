@@ -342,6 +342,12 @@
       </extension>
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="11450-4" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionProblems.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -511,6 +517,12 @@
       </extension>
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="48765-2" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionAllergies.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -609,9 +621,6 @@
     <element id="Composition.section:sectionMedications.extension:note">
       <path value="Composition.section.extension" />
       <sliceName value="note" />
-      <type>
-        <code value="Extension" />
-      </type>
       <isModifier value="false" />
     </element>
     <element id="Composition.section:sectionMedications.extension:note.url">
@@ -684,6 +693,12 @@
       </extension>
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="10160-0" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionMedications.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -801,6 +816,12 @@
       </extension>
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="47519-4" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionProceduresHx.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -966,6 +987,12 @@
       </extension>
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="46264-8" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionMedicalDevices.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
