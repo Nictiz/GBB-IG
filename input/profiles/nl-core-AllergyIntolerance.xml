@@ -226,8 +226,20 @@
       <short value="Substance" />
       <alias value="VeroorzakendeStof" />
       <binding>
-        <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="extensible"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000"/>
+          </extension>
+        </extension>
+        <strength value="preferred"/>
+        <description
+          value="Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy."/>
+        <valueSet
+          value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"/>
       </binding>
       <min value="1" />
       <mapping>
@@ -515,8 +527,18 @@
       <short value="Specific substance" />
       <alias value="SpecifiekeStof" />
       <binding>
-        <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="extensible"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000"/>
+          </extension>
+        </extension>
+        <strength value="example"/>
+        <valueSet
+                  value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug"/>
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -552,8 +574,20 @@
       <short value="Manifestation" />
       <alias value="ManifestatieVanReactie" />
       <binding>
-        <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="extensible"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754"/>
+          </extension>
+        </extension>
+        <strength value="preferred"/>
+        <description
+          value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU"/>
+        <valueSet
+          value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -692,8 +726,18 @@
       <short value="Route of exposure" />
       <alias value="WijzeVanBlootstelling" />
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="purpose">
+            <valueCode value="current"/>
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"/>
+          </extension>
+        </extension>
+        <strength value="required"/>
+        <valueSet
+          value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"/>
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
