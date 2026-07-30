@@ -6,7 +6,7 @@
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AllergyIntolerance" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
   <name value="NlcoreAllergyIntolerance" />
   <title value="nl core AllergyIntolerance" />
   <status value="draft" />
@@ -25,12 +25,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-AllergyIntolerance" />
-    <uri value="http://nictiz.nl/gbb/Requirements/AllergyIntolerance" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/AllergyIntolerance" />
     <name value="Information requirements for AllergyIntolerance" />
   </mapping>
   <mapping>
     <identity value="lm-AllergyIntolerance" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance-model" />
+    <uri value="http://nictiz.nl/ig/gbb/StructureDefinition/AllergyIntolerance-model" />
     <name value="Logical model for AllergyIntolerance" />
   </mapping>
   <kind value="resource" />
@@ -281,7 +281,7 @@
       <alias value="Patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -329,9 +329,9 @@
       <alias value="Zorgverlener" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
