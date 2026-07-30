@@ -55,6 +55,9 @@
     </element>
     <element id="Composition.section:sectionProblems.extension:note.value[x]">
       <path value="Composition.section.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-19" />
@@ -97,6 +100,9 @@
     </element>
     <element id="Composition.section:sectionAllergies.extension:note.value[x]">
       <path value="Composition.section.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-17" />
@@ -135,6 +141,29 @@
       <min value="1" />
       <max value="1" />
     </element>
+    <element id="Composition.section:sectionProceduresHx.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+      <type>
+        <code value="Extension" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sectionProceduresHx.extension:note.url">
+      <path value="Composition.section.extension.url" />
+      <fixedUri value="note" />
+    </element>
+    <element id="Composition.section:sectionProceduresHx.extension:note.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-19" />
+        <comment value="Note" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <path value="Composition.section.entry" />
       <type>
@@ -152,6 +181,29 @@
       <sliceName value="sectionMedicalDevices" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+      <type>
+        <code value="Extension" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.extension:note.url">
+      <path value="Composition.section.extension.url" />
+      <fixedUri value="note" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.extension:note.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-19" />
+        <comment value="Note" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <path value="Composition.section.entry" />
