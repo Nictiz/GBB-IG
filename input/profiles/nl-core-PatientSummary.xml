@@ -47,7 +47,7 @@
         </extension>
       </extension>
       <path value="Composition.language" />
-    </element>    
+    </element>
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -605,6 +605,45 @@
       <sliceName value="sectionMedications" />
       <min value="1" />
       <max value="1" />
+    </element>
+    <element id="Composition.section:sectionMedications.extension:note">
+      <path value="Composition.section.extension" />
+      <sliceName value="note" />
+      <type>
+        <code value="Extension" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sectionMedications.extension:note.url">
+      <path value="Composition.section.extension.url" />
+      <fixedUri value="note" />
+    </element>
+    <element id="Composition.section:sectionMedications.extension:note.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.section.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-test" />
+        <comment value="Note" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedications.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
