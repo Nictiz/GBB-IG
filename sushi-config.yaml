@@ -109,6 +109,11 @@ menu:
       Requirements: Requirements-Address.html
       Afsprakenmodel: StructureDefinition-Address-model.html
       FHIR-profiel: StructureDefinition-nl-core-Address.html
+    AllergieIntolerantie:
+      Overzicht: AllergyIntolerance.html
+      Requirements: Requirements-AllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-AllergyIntolerance-model.html
+      FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
     Composition:
       Overzicht: Composition.html
       Requirements: Requirements-Composition.html
