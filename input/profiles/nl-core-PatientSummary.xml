@@ -29,6 +29,25 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.language" />
+    </element>    
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
