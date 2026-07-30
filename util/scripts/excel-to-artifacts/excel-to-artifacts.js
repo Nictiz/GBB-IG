@@ -297,7 +297,7 @@ class ExcelConvertor {
 
   convertRequirements() {
     const id = this.fileRoot;
-    const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
+    const canonical = "http://nictiz.nl/nlps/Requirements/" + id;
 
     const rows = this.#getRows(ExcelConvertor.sheetRequirements);
     if (rows == null) return;
