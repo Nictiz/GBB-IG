@@ -33,7 +33,7 @@
   </mapping>
   <mapping>
     <identity value="lm-AllergyIntolerance" />
-    <uri value="http://nictiz.nl/ig/gbb/StructureDefinition/AllergyIntolerance-model" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/AllergyIntolerance-model" />
     <name value="Logical model for AllergyIntolerance" />
   </mapping>
   <kind value="resource" />
