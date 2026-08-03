@@ -47,6 +47,27 @@
         </extension>
       </extension>
       <path value="Composition.language" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-32" />
+        <comment value="Language" />
+      </mapping>
+    </element>
+    <element id="Composition.extension:version">
+      <path value="Composition.extension" />
+      <sliceName value="version" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
+      </type>
+    </element>
+    <element id="Composition.extension:version.value[x]">
+      <path value="Composition.extension.value[x]" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-36" />
+        <comment value="Version" />
+      </mapping>
     </element>
     <element id="Composition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -102,6 +123,11 @@
         </extension>
       </extension>
       <path value="Composition.status" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-31" />
+        <comment value="Status" />
+      </mapping>
     </element>
     <element id="Composition.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -121,6 +147,11 @@
         </extension>
       </extension>
       <path value="Composition.type" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-33" />
+        <comment value="Type" />
+      </mapping>
     </element>
     <element id="Composition.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -145,6 +176,11 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
       </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-18" />
+        <comment value="Patient" />
+      </mapping>
     </element>
     <element id="Composition.date">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -164,6 +200,11 @@
         </extension>
       </extension>
       <path value="Composition.date" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-30" />
+        <comment value="Date" />
+      </mapping>
     </element>
     <element id="Composition.author">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -193,6 +234,26 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-235" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-148" />
+        <comment value="Pracititioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-281" />
+        <comment value="Organization" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-432" />
+        <comment value="Device" />
+      </mapping>
     </element>
     <element id="Composition.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -212,6 +273,11 @@
         </extension>
       </extension>
       <path value="Composition.title" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-34" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.custodian">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
