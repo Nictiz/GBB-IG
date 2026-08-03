@@ -184,7 +184,6 @@
       </extension>
       <path value="Condition.identifier" />
       <definition value="Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server." />
-      <min value="1" />
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-2" />
@@ -533,7 +532,6 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -645,7 +643,6 @@
       </extension>
       <path value="Condition.recordedDate" />
       <short value="Date when the condition record was created" />
-      <min value="1" />
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-4" />
