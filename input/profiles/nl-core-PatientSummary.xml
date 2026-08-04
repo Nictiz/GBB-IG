@@ -517,6 +517,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionProblems.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.author" />
       <type>
         <code value="Reference" />
@@ -559,6 +575,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionProblems.focus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.focus" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -590,6 +622,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionProblems.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.mode" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -598,6 +646,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionProblems.orderedBy">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.orderedBy" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -777,6 +841,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.author" />
       <type>
         <code value="Reference" />
@@ -819,6 +899,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.focus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.focus" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -850,6 +946,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.mode" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -858,6 +970,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.orderedBy">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.orderedBy" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -919,22 +1047,6 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionMedications">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Composition.section" />
       <sliceName value="sectionMedications" />
       <min value="1" />
@@ -1156,6 +1268,22 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionProceduresHx.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.author" />
       <type>
         <code value="Reference" />
@@ -1198,6 +1326,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.focus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.focus" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -1224,6 +1368,22 @@
       <path value="Composition.section.text" />
     </element>
     <element id="Composition.section:sectionProceduresHx.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.mode" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -1397,6 +1557,22 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:sectionMedicalDevices.author">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.author" />
       <type>
         <code value="Reference" />
@@ -1439,6 +1615,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.focus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section.focus" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
