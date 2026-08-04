@@ -5,7 +5,7 @@
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
       human-readable rendering can be found in the implementation guide(s) where this resource is
       used.</div></text>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Practitioner" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
   <name value="NlcorePractitioner" />
   <title value="nl core Practitioner" />
   <status value="draft" />
@@ -146,7 +146,7 @@
       <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HumanName" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
@@ -178,7 +178,7 @@
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPoint" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
@@ -212,7 +212,7 @@
       <definition value="Health professional’s address information." />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Address" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
