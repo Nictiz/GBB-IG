@@ -401,7 +401,6 @@
         <severity value="error" />
         <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both." />
         <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()" />
-        <source value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core" />
       </constraint>
       <binding>
         <strength value="preferred" />
