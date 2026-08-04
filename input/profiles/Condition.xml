@@ -27,12 +27,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Condition" />
-    <uri value="http://nictiz.nl/gbb/Requirements/Condition" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Condition" />
     <name value="Information requirements for Condition" />
   </mapping>
   <mapping>
     <identity value="lm-Condition" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Condition-model" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Condition" />
     <name value="Logical model for Condition" />
   </mapping>
   <kind value="resource" />
