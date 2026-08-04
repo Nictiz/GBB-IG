@@ -58,7 +58,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -66,7 +66,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.system" />
@@ -95,7 +95,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -103,7 +103,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.value" />
@@ -128,7 +128,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="serving or sending system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -136,7 +136,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="processing system" />
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="ContactPoint.use" />
