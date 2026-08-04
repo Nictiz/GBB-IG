@@ -153,6 +153,30 @@
         <comment value="Type" />
       </mapping>
     </element>
+    <element id="Composition.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.category" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-50" />
+        <comment value="ServiceSpecialty" />
+      </mapping>
+    </element>
     <element id="Composition.subject">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -360,6 +384,70 @@
       <path value="Composition.attester" />
       <sliceName value="validator" />
     </element>
+    <element id="Composition.attester:validator.time">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.time" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-42" />
+        <comment value="DateTime" />
+      </mapping>
+    </element>
+    <element id="Composition.attester:validator.party">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.party" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-235" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-148" />
+        <comment value="Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-432" />
+        <comment value="Device" />
+      </mapping>
+    </element>
     <element id="Composition.custodian">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -388,6 +476,14 @@
         <comment value="Organization" />
       </mapping>
     </element>
+    <element id="Composition.event.code">
+      <path value="Composition.event.code" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-49" />
+        <comment value="EventType" />
+      </mapping>
+    </element>
     <element id="Composition.section">
       <path value="Composition.section" />
       <slicing>
@@ -397,6 +493,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="5" />
     </element>
     <element id="Composition.section:sectionProblems">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -516,87 +613,6 @@
         <comment value="Code" />
       </mapping>
     </element>
-    <element id="Composition.section:sectionProblems.author">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.author" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
-      </type>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="PractitionerRole" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Practitioner" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Organization" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Device" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="RelatedPerson" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionProblems.focus">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.focus" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-      </mapping>
-    </element>
     <element id="Composition.section:sectionProblems.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -617,56 +633,8 @@
       <path value="Composition.section.text" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Narrative - DRAFT" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionProblems.mode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.mode" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Mode" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionProblems.orderedBy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.orderedBy" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="OrderedBy" />
+        <map value="gbb-dataelement-160" />
+        <comment value="GeneratedNarrative" />
       </mapping>
     </element>
     <element id="Composition.section:sectionProblems.entry">
@@ -805,7 +773,7 @@
       <min value="1" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
+        <map value="gbb-dataelement-76" />
         <comment value="Title" />
       </mapping>
     </element>
@@ -836,89 +804,8 @@
       </patternCodeableConcept>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
+        <map value="gbb-dataelement-77" />
         <comment value="Code" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionAllergies.author">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.author" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
-      </type>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="PractitionerRole" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Practitioner" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Organization" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Device" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="RelatedPerson" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionAllergies.focus">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.focus" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.text">
@@ -941,56 +828,8 @@
       <path value="Composition.section.text" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Narrative - DRAFT" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionAllergies.mode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.mode" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Mode" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionAllergies.orderedBy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.orderedBy" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="OrderedBy" />
+        <map value="gbb-dataelement-87" />
+        <comment value="GeneratedNarrative" />
       </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.entry">
@@ -1267,87 +1106,6 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:sectionProceduresHx.author">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.author" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
-      </type>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="PractitionerRole" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Practitioner" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Organization" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Device" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="RelatedPerson" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionProceduresHx.focus">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.focus" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-      </mapping>
-    </element>
     <element id="Composition.section:sectionProceduresHx.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1366,38 +1124,6 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
-    </element>
-    <element id="Composition.section:sectionProceduresHx.mode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.mode" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Mode" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionProceduresHx.orderedBy">
-      <path value="Composition.section.orderedBy" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="OrderedBy" />
-      </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1556,87 +1282,6 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:sectionMedicalDevices.author">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.author" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
-      </type>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="PractitionerRole" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Practitioner" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Organization" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Device" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Patient" />
-      </mapping>
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="RelatedPerson" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionMedicalDevices.focus">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Composition.section.focus" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-      </mapping>
-    </element>
     <element id="Composition.section:sectionMedicalDevices.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1655,22 +1300,6 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
-    </element>
-    <element id="Composition.section:sectionMedicalDevices.mode">
-      <path value="Composition.section.mode" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="Mode" />
-      </mapping>
-    </element>
-    <element id="Composition.section:sectionMedicalDevices.orderedBy">
-      <path value="Composition.section.orderedBy" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
-        <comment value="OrderedBy" />
-      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
