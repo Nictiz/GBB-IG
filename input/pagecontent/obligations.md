@@ -37,16 +37,16 @@ Op generiek niveau hoeft slechts een kleine subset van de gegevenselementen aanw
 
 Gewoonlijk worden verplichtingen en kardinaliteit als volgt toegepast:
 
-|                                                | Kardinaliteit | Registrerend systeem     | Ontsluitend systeem         | Ontvangend systeem |
-| ---                                            | ---           | ---                      | ---                         | ---                |
-| Element nodig voor correcte interpretatie      | 1..           | SHALL *able to populate* | SHALL *able to populate*    | SHALL *handle*     |
-| Element niet nodig voor correcte interpretatie | 0..           |                          | SHOULLD *populate if known* | SHALL *not-error*  |
+|                                                | Kardinaliteit | Registrerend systeem     | Ontsluitend systeem        | Ontvangend systeem |
+| ---                                            | ---           | ---                      | ---                        | ---                |
+| Element nodig voor correcte interpretatie      | 1..           | SHALL *able to populate* | SHALL *populate*           | SHALL *handle*     |
+| Element niet nodig voor correcte interpretatie | 0..           |                          | SHOULD *populate if known* | SHALL *no error*   |
 
 Dit vertaalt zich als volgt:
 1. Als een gegevenselement nodig is voor een correcte interpretatie van de gegevens, moet het altijd aanwezig zijn en moet een registrerend systeem het op een zinvolle manier kunnen invullen. Het element moet ook in het FHIR-bericht terechtkomen en de ontvanger moet iets met de informatie kunnen doen -- wat precies, is afhankelijk van de situatie.
 2. Wanneer een element niet nodig is voor een correcte interpretatie van de gegevens, hoeft het niet aanwezig te zijn en is registratie niet vereist. Omdat de bouwstenen een nationale overeenkomst vertegenwoordigen, wordt verwacht dat het element in het FHIR-bericht terechtkomt als het is geregistreerd. Om dezelfde reden mogen ontvangers nooit crashen op het element, zelfs als ze het niet nodig hebben voor de usecase waarvoor ze ontworpen zijn.
 
-Deze verplichtingen betekenen ook dat uitwisselende systemen nooit verplicht zijn om informatie in te vullen die niet in eerste instantie is geregistreerd, waardoor op een algemeen niveau de uitwisseling van historische of onjuist geregistreerde informatie mogelijk is. Usecase-specificaties kunnen het gebruik van deze onvolledige informatie inperken.
+Deze verplichtingen betekenen ook dat uitwisselende systemen niet verplicht worden gemaakt om informatie in te vullen als die niet in eerste instantie is geregistreerd. Op het generieke niveau wordt de uitwisseling van historische of onjuist geregistreerde informatie dus niet beperkt. In usecase-specificaties kan dit eventueel wel gedaan worden als daar een aanleiding voor is.
 
 ### Obligations in logische modellen versus FHIR-profielen
 De logische modellen worden gebruikt als basis voor het definiëren van FHIR-profielen. Daarom komen de obligations die in de logische modellen zijn gedefinieerd overeen met die in de FHIR-profielen, behalve wanneer er een indirecte koppeling is tussen het logische model en het FHIR-profiel.
