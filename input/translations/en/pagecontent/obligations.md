@@ -48,7 +48,7 @@ This translates to the following:
 1. If a data element is needed for correct interpretation of the data, it must always be present and a registering system has to be able to populate it in a meaningful way. The element also has to end up in the FHIR message and the receiver has to be able to do something with the information -- what exactly, is situation dependent.
 2. When an element is nog needed for correct intrepretation of the data, it does not need to be present en there is no requirement to register it. Because the building blocks represents a national agreement, there is the expectation that it will be part of the FHIR message if it has been registered. For the same reason, receivers should never crash on the element, even if they don't need it for the use case it operates in.
 
-These obligations also mean that exchanging systems are never required to populate information that is not registered in the first place, allowing on a generic level for the exchange of historical or incorrectly registered information. Use case specifications might restrict the use of this incomplete information.
+These obligations also mean that exchanging systems are not required to populate information if it hasn't been registered in the first place. On a generic level, the exchange of historical or incorrectly registered information is thus not prohibited. In use case specifications this restrictions could be applied if there's a good reason to do so.
 
 ### Obligations on logical models vs FHIR profiles  
 The logical models are used as the basis for defining FHIR profiles. Therefore, the obligations defined in the logical models align to those in the FHIR profiles, except when there's an indirect mapping between the logical model and the FHIR profile.
