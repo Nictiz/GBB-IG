@@ -1,5 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Condition" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+      <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core"/>
+  </extension>
   <language value="en" />
   <text>
     <status value="empty" />
