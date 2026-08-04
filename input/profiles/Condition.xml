@@ -90,6 +90,10 @@
       <path value="Condition.extension" />
       <mustSupport value="true"/>
       <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
         <ordered value="false" />
         <rules value="open" />
       </slicing>
