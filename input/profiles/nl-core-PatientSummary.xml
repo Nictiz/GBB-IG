@@ -516,6 +516,13 @@
       <sliceName value="sectionProblems" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="ips-comp-1" />
+        <severity value="error" />
+        <human value="Either section.entry or emptyReason are present" />
+        <expression value="(entry.reference.exists() or emptyReason.exists())" />
+        <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
+      </constraint>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-147" />
@@ -711,6 +718,13 @@
       <sliceName value="sectionAllergies" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="ips-comp-1" />
+        <severity value="error" />
+        <human value="Either section.entry or emptyReason are present" />
+        <expression value="(entry.reference.exists() or emptyReason.exists())" />
+        <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
+      </constraint>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-74" />
@@ -890,6 +904,13 @@
       <sliceName value="sectionMedications" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="ips-comp-1" />
+        <severity value="error" />
+        <human value="Either section.entry or emptyReason are present" />
+        <expression value="(entry.reference.exists() or emptyReason.exists())" />
+        <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
+      </constraint>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-129" />
@@ -1018,6 +1039,13 @@
       <sliceName value="sectionProceduresHx" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="ips-comp-1" />
+        <severity value="error" />
+        <human value="Either section.entry or emptyReason are present" />
+        <expression value="(entry.reference.exists() or emptyReason.exists())" />
+        <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
+      </constraint>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-93" />
@@ -1194,6 +1222,13 @@
       <sliceName value="sectionMedicalDevices" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="ips-comp-1" />
+        <severity value="error" />
+        <human value="Either section.entry or emptyReason are present" />
+        <expression value="(entry.reference.exists() or emptyReason.exists())" />
+        <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
+      </constraint>
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-111" />
