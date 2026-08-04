@@ -122,22 +122,6 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Composition.status" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -435,6 +419,11 @@
       <sliceName value="sectionProblems" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-147" />
+        <comment value="Problems" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.extension:note">
       <path value="Composition.section.extension" />
@@ -490,6 +479,11 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -516,6 +510,60 @@
           <code value="11450-4" />
         </coding>
       </patternCodeableConcept>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-150" />
+        <comment value="Code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProblems.author">
+      <path value="Composition.section.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Organization" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Device" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="RelatedPerson" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProblems.focus">
+      <path value="Composition.section.focus" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -535,6 +583,27 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Narrative - DRAFT" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProblems.mode">
+      <path value="Composition.section.mode" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Mode" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProblems.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="OrderedBy" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -610,6 +679,11 @@
       <sliceName value="sectionAllergies" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-74" />
+        <comment value="AllergiesAndIntolerances" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.extension:note">
       <path value="Composition.section.extension" />
@@ -665,6 +739,11 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -691,6 +770,60 @@
           <code value="48765-2" />
         </coding>
       </patternCodeableConcept>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Code" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionAllergies.author">
+      <path value="Composition.section.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Organization" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Device" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="RelatedPerson" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionAllergies.focus">
+      <path value="Composition.section.focus" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -710,6 +843,27 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Narrative - DRAFT" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionAllergies.mode">
+      <path value="Composition.section.mode" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Mode" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionAllergies.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="OrderedBy" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -785,6 +939,11 @@
       <sliceName value="sectionMedications" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-129" />
+        <comment value="MedicationSummary" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedications.extension:note">
       <path value="Composition.section.extension" />
@@ -908,6 +1067,11 @@
       <sliceName value="sectionProceduresHx" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-93" />
+        <comment value="Procedures" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.extension:note">
       <path value="Composition.section.extension" />
@@ -991,6 +1155,55 @@
         </coding>
       </patternCodeableConcept>
     </element>
+    <element id="Composition.section:sectionProceduresHx.author">
+      <path value="Composition.section.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Organization" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Device" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="RelatedPerson" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProceduresHx.focus">
+      <path value="Composition.section.focus" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionProceduresHx.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1009,6 +1222,22 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+    </element>
+    <element id="Composition.section:sectionProceduresHx.mode">
+      <path value="Composition.section.mode" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Mode" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionProceduresHx.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="OrderedBy" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1079,6 +1308,11 @@
       <sliceName value="sectionMedicalDevices" />
       <min value="1" />
       <max value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-111" />
+        <comment value="MedicalDevicesAndImplants" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.extension:note">
       <path value="Composition.section.extension" />
@@ -1162,6 +1396,55 @@
         </coding>
       </patternCodeableConcept>
     </element>
+    <element id="Composition.section:sectionMedicalDevices.author">
+      <path value="Composition.section.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRol" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
+      </type>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Organization" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Device" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="RelatedPerson" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.focus">
+      <path value="Composition.section.focus" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionMedicalDevices.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1180,6 +1463,22 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.mode">
+      <path value="Composition.section.mode" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="Mode" />
+      </mapping>
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-" />
+        <comment value="OrderedBy" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
