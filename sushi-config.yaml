@@ -104,6 +104,12 @@ menu:
   # Building blocks:
 
   Artefacten: artifacts.html
+  Bouwblokken:
+    AllergieIntolerantie:
+      Overzicht: AllergyIntolerance.html
+      Requirements: Requirements-AllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-AllergyIntolerance-model.html
+      FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
