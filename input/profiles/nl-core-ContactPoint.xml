@@ -74,15 +74,6 @@
       <definition value="The telecom or device type that the telephone number is connected to." />
       <alias value="TelecomType" />
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap TelecomType-to-ContactInformation-TelephoneNumbersSystem to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersSystem." />
-        <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersSystem">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/TelecomType-to-ContactInformation-TelephoneNumbersSystem" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.5" />
@@ -143,15 +134,6 @@
       <short value="NumberType / EmailAddressType" />
       <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number." />
       <alias value="NummerSoort / EmailSoort" />
-      <binding>
-        <strength value="required" />
-        <description value="Use ConceptMap NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse to translate terminology from the functional model to profile terminology in ValueSet ContactInformation-TelephoneNumbersUse." />
-        <valueSet value="http://nictiz.nl/fhir/ValueSet/ContactInformation-TelephoneNumbersUse">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactInformation-TelephoneNumbersUse" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.6" />
