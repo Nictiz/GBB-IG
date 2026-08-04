@@ -41,8 +41,8 @@ Usually, obligations and cardinality are applied in the following way:
 
 |                                               | Cardinality | Registering system       | Exchanging system           | Receiving system  |
 | ---                                           | ---         | ---                      | ---                         | ---               |
-| Element needed for correct interpretation     | 1..         | SHALL *able to populate* | SHALL *able to populate*    | SHALL *handle*    |
-| Element not needed for correct interpretation | 0..         |                          | SHOULLD *populate if known* | SHALL *not-error* |
+| Element needed for correct interpretation     | 1..         | SHALL *able to populate* | SHALL *populate*            | SHALL *handle*    |
+| Element not needed for correct interpretation | 0..         |                          | SHOULLD *populate if known* | SHALL *no error*  |
 
 This translates to the following:
 1. If a data element is needed for correct interpretation of the data, it must always be present and a registering system has to be able to populate it in a meaningful way. The element also has to end up in the FHIR message and the receiver has to be able to do something with the information -- what exactly, is situation dependent.

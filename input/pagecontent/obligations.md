@@ -37,10 +37,10 @@ Op generiek niveau hoeft slechts een kleine subset van de gegevenselementen aanw
 
 Gewoonlijk worden verplichtingen en kardinaliteit als volgt toegepast:
 
-|                                                | Kardinaliteit | Registrerend systeem     | Ontsluitend systeem         | Ontvangend systeem |
-| ---                                            | ---           | ---                      | ---                         | ---                |
-| Element nodig voor correcte interpretatie      | 1..           | SHALL *able to populate* | SHALL *able to populate*    | SHALL *handle*     |
-| Element niet nodig voor correcte interpretatie | 0..           |                          | SHOULLD *populate if known* | SHALL *not-error*  |
+|                                                | Kardinaliteit | Registrerend systeem     | Ontsluitend systeem        | Ontvangend systeem |
+| ---                                            | ---           | ---                      | ---                        | ---                |
+| Element nodig voor correcte interpretatie      | 1..           | SHALL *able to populate* | SHALL *populate*           | SHALL *handle*     |
+| Element niet nodig voor correcte interpretatie | 0..           |                          | SHOULD *populate if known* | SHALL *no error*   |
 
 Dit vertaalt zich als volgt:
 1. Als een gegevenselement nodig is voor een correcte interpretatie van de gegevens, moet het altijd aanwezig zijn en moet een registrerend systeem het op een zinvolle manier kunnen invullen. Het element moet ook in het FHIR-bericht terechtkomen en de ontvanger moet iets met de informatie kunnen doen -- wat precies, is afhankelijk van de situatie.
