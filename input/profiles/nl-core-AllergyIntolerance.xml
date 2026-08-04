@@ -85,6 +85,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.clinicalStatus" />
+      <mustSupport value="true" />
       <short value="Active/inactive status" />
       <alias value="ActieveInactieveStatus" />
       <min value="1" />
@@ -123,6 +124,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.verificationStatus" />
+      <mustSupport value="true" />
       <short value="Verification status" />
       <alias value="VerificatieStatus" />
       <mapping>
@@ -160,6 +162,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.category" />
+      <mustSupport value="true" />
       <short value="Category" />
       <alias value="Categorie" />
       <mapping>
@@ -189,6 +192,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.criticality" />
+      <mustSupport value="true" />
       <short value="Criticality" />
       <alias value="MateVanKritiekZijn" />
       <mapping>
@@ -226,6 +230,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.code" />
+      <mustSupport value="true" />
       <short value="Substance" />
       <alias value="VeroorzakendeStof" />
       <binding>
@@ -298,6 +303,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-16" />
@@ -340,6 +346,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.recorder" />
+      <mustSupport value="true" />
       <short value="Author" />
       <alias value="Zorgverlener" />
       <type>
@@ -381,6 +388,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.lastOccurrence" />
+      <mustSupport value="true" />
       <short value="Onset of last reaction" />
       <alias value="LaatsteReactieDatumTijd" />
       <mapping>
@@ -410,6 +418,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.note.text" />
+      <mustSupport value="true" />
       <short value="Comment" />
       <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
       <alias value="Toelichting" />
@@ -452,6 +461,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction" />
+      <mustSupport value="true" />
       <short value="Reaction event summary" />
       <alias value="Reactie" />
       <mapping>
@@ -493,6 +503,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.extension.value[x]" />
+      <mustSupport value="true" />
       <short value="Certainty" />
       <alias value="MateVanZekerheid" />
       <binding>
@@ -527,6 +538,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.substance" />
+      <mustSupport value="true" />
       <short value="Specific substance" />
       <alias value="SpecifiekeStof" />
       <binding>
@@ -574,6 +586,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.manifestation" />
+      <mustSupport value="true" />
       <short value="Manifestation" />
       <alias value="ManifestatieVanReactie" />
       <binding>
@@ -627,6 +640,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.description" />
+      <mustSupport value="true" />
       <short value="Reaction description" />
       <alias value="ReactieBeschrijving" />
       <mapping>
@@ -656,6 +670,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.onset" />
+      <mustSupport value="true" />
       <short value="Onset of reaction" />
       <alias value="ReactieDatumTijd" />
       <mapping>
@@ -689,6 +704,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.severity" />
+      <mustSupport value="true" />
       <short value="Severity of reaction" />
       <alias value="Ernst" />
       <mapping>
@@ -726,6 +742,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <mustSupport value="true" />
       <short value="Route of exposure" />
       <alias value="WijzeVanBlootstelling" />
       <binding>
@@ -769,6 +786,7 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.note.text" />
+      <mustSupport value="true" />
       <short value="Comment" />
       <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
       <alias value="Opmerking" />
