@@ -494,6 +494,10 @@ async function main() {
     valueSetDownloader = new ValueSetDownloader(targetFolders.get("Vocabulary"));
   }
 
+  if (!fs.existsSync(inputFolder)) {
+    return;
+  }
+
   for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
     if (createRequirements) {
