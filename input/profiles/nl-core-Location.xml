@@ -22,8 +22,8 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="GBB-Location-v0.1" />
-    <uri value="https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.9/2026-06-25T09:34:17" />
-    <name value="Dataset GBB-Patient-v0.1" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/Location-model" />
+    <name value="Dataset GBB-Location-v0.1" />
   </mapping>
   <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
