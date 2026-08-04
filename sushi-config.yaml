@@ -106,12 +106,12 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
-  # Building blocks:
-  #   Gezondheidstoestand:
-  #     Overzicht: Condition.html
-  #     Requirements: Requirements-Condition.html
-  #     Afsprakenmodel: StructureDefinition-Condition-model.html
-  #     FHIR-profiel: StructureDefinition-nl-core-Condition.html
+  Building blocks:
+    Gezondheidstoestand:
+      Overzicht: Condition.html
+      Requirements: Requirements-Condition.html
+      Afsprakenmodel: StructureDefinition-Condition-model.html
+      FHIR-profiel: StructureDefinition-nl-core-Condition.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
