@@ -529,10 +529,27 @@
       </mapping>
     </element>
     <element id="Composition.event.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.event.code" />
       <short value="EventType" />
       <definition value="Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes." />
       <alias value="EvenementType" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-49" />
@@ -540,10 +557,27 @@
       </mapping>
     </element>
     <element id="Composition.event.period">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.event.period" />
       <short value="Period" />
       <definition value="Time period of information covered in the document." />
       <alias value="Periode" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-35" />
