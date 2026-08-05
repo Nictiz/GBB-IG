@@ -47,6 +47,9 @@
         </extension>
       </extension>
       <path value="Composition.language" />
+      <short value="Language" />
+      <definition value="Language in which the resource is written. Language is expressed by the IETF language tag." />
+      <alias value="Taal" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-32" />
@@ -79,6 +82,9 @@
         </extension>
       </extension>
       <path value="Composition.extension.value[x]" />
+      <short value="Version" />
+      <definition value="Business version of the document. The exact algorithm for versioning is decided by the producer/custodian." />
+      <alias value="Versie" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-36" />
@@ -103,7 +109,15 @@
         </extension>
       </extension>
       <path value="Composition.identifier" />
+      <short value="Identifier" />
+      <definition value="Unique identifier of the document." />
+      <alias value="Identificatie" />
       <min value="1" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-24" />
+        <comment value="Identifier" />
+      </mapping>
     </element>
     <element id="Composition.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -123,6 +137,9 @@
         </extension>
       </extension>
       <path value="Composition.status" />
+      <short value="Status" />
+      <definition value="Status of the document." />
+      <alias value="Status" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-31" />
@@ -147,6 +164,9 @@
         </extension>
       </extension>
       <path value="Composition.type" />
+      <short value="Type" />
+      <definition value="Type of document at hand, in this case always 60591-5 Patient summary document." />
+      <alias value="Type" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-33" />
@@ -171,6 +191,9 @@
         </extension>
       </extension>
       <path value="Composition.category" />
+      <short value="ServiceSpecialty" />
+      <definition value="Additional details about where the content was created (e.g. clinical specialty)." />
+      <alias value="ZorgSpecialisme" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-50" />
@@ -195,6 +218,9 @@
         </extension>
       </extension>
       <path value="Composition.subject" />
+      <short value="Patient" />
+      <definition value="Patient/subject information." />
+      <alias value="Patient" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -224,6 +250,9 @@
         </extension>
       </extension>
       <path value="Composition.date" />
+      <short value="Date" />
+      <definition value="Date of finalizing/issuing the document." />
+      <alias value="Datum" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-30" />
@@ -248,7 +277,9 @@
         </extension>
       </extension>
       <path value="Composition.author" />
-      <definition value="Identifies who is responsible for the informatiogn in the composition, not necessarily who typed it in." />
+      <short value="Author" />
+      <definition value="Author(s) of the document." />
+      <alias value="Auteur" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
@@ -296,6 +327,9 @@
         </extension>
       </extension>
       <path value="Composition.title" />
+      <short value="Title" />
+      <definition value="Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: 'Patient Summary of Jane Green 10.12.2024'." />
+      <alias value="Titel" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-34" />
@@ -466,6 +500,9 @@
         </extension>
       </extension>
       <path value="Composition.custodian" />
+      <short value="Organization" />
+      <definition value="Organisation that is in charge of maintaining the document/report." />
+      <alias value="Organisatie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
@@ -478,10 +515,24 @@
     </element>
     <element id="Composition.event.code">
       <path value="Composition.event.code" />
+      <short value="EventType" />
+      <definition value="Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.). Selection of such tags or labels depends on the use case and agreement between data sharing parties. This meta-data element serves primarily for searching and filtering purposes." />
+      <alias value="EvenementType" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-49" />
         <comment value="EventType" />
+      </mapping>
+    </element>
+    <element id="Composition.event.period">
+      <path value="Composition.event.period" />
+      <short value="Period" />
+      <definition value="Time period of information covered in the document." />
+      <alias value="Periode" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-35" />
+        <comment value="Period" />
       </mapping>
     </element>
     <element id="Composition.section">
@@ -517,7 +568,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="ips-comp-1" />
+        <key value="nl-ps-comp-1" />
         <severity value="error" />
         <human value="Either section.entry or emptyReason are present" />
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
@@ -582,6 +633,9 @@
         </extension>
       </extension>
       <path value="Composition.section.title" />
+      <short value="Title" />
+      <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
+      <alias value="Titel" />
       <min value="1" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -719,7 +773,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="ips-comp-1" />
+        <key value="nl-ps-comp-1" />
         <severity value="error" />
         <human value="Either section.entry or emptyReason are present" />
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
@@ -905,7 +959,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="ips-comp-1" />
+        <key value="nl-ps-comp-1" />
         <severity value="error" />
         <human value="Either section.entry or emptyReason are present" />
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
@@ -1018,6 +1072,14 @@
       </extension>
       <path value="Composition.section.text" />
     </element>
+    <element id="Composition.section:sectionMedications.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-146" />
+        <comment value="EmptyReason" />
+      </mapping>
+    </element>
     <element id="Composition.section:sectionProceduresHx">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1040,7 +1102,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="ips-comp-1" />
+        <key value="nl-ps-comp-1" />
         <severity value="error" />
         <human value="Either section.entry or emptyReason are present" />
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
@@ -1223,7 +1285,7 @@
       <min value="1" />
       <max value="1" />
       <constraint>
-        <key value="ips-comp-1" />
+        <key value="nl-ps-comp-1" />
         <severity value="error" />
         <human value="Either section.entry or emptyReason are present" />
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
