@@ -168,15 +168,14 @@
         </extension>
       </extension>
       <path value="Composition.type" />
-      <short value="Type" />
       <definition value="Type of document at hand, in this case always 60591-5 Patient summary document." />
-      <alias value="Type" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="60591-5" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-33" />
-        <comment value="Type" />
-      </mapping>
     </element>
     <element id="Composition.category">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -360,6 +359,26 @@
       <path value="Composition.attester" />
       <sliceName value="legalAuthenticator" />
     </element>
+    <element id="Composition.attester:legalAuthenticator.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.mode" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.attester:legalAuthenticator.time">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -429,6 +448,26 @@
     <element id="Composition.attester:validator">
       <path value="Composition.attester" />
       <sliceName value="validator" />
+    </element>
+    <element id="Composition.attester:validator.mode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.attester.mode" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.attester:validator.time">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
