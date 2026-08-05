@@ -19,9 +19,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-PatientSummary-v0.1" />
+    <identity value="NLPS-PatientSummary-v0.1" />
     <uri value="http://nictiz.nl/nlps/StructureDefinition/PatientSummary-model" />
-    <name value="Dataset GBB-PatientSummary-v0.1" />
+    <name value="Dataset NLPS-PatientSummary-v0.1" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -52,8 +52,8 @@
       <alias value="Taal" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-32" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-32" />
         <comment value="Language" />
       </mapping>
     </element>
@@ -88,8 +88,8 @@
       <alias value="Versie" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-36" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-36" />
         <comment value="Version" />
       </mapping>
     </element>
@@ -117,8 +117,8 @@
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-24" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-24" />
         <comment value="Identifier" />
       </mapping>
     </element>
@@ -145,8 +145,8 @@
       <alias value="Status" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-31" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-31" />
         <comment value="Status" />
       </mapping>
     </element>
@@ -200,8 +200,8 @@
       <alias value="ZorgSpecialisme" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-50" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-50" />
         <comment value="ServiceSpecialty" />
       </mapping>
     </element>
@@ -233,8 +233,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-18" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-18" />
         <comment value="Patient" />
       </mapping>
     </element>
@@ -261,8 +261,8 @@
       <alias value="Datum" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-30" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-30" />
         <comment value="Date" />
       </mapping>
     </element>
@@ -297,23 +297,23 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-235" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-235" />
         <comment value="PractitionerRole" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-148" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-148" />
         <comment value="Pracititioner" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-281" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-281" />
         <comment value="Organization" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-432" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-432" />
         <comment value="Device" />
       </mapping>
     </element>
@@ -340,8 +340,8 @@
       <alias value="Titel" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-34" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-34" />
         <comment value="Title" />
       </mapping>
     </element>
@@ -399,8 +399,8 @@
       <path value="Composition.attester.time" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-48" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-48" />
         <comment value="DateTime" />
       </mapping>
     </element>
@@ -430,18 +430,18 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-148" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-148" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-235" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-235" />
         <comment value="PractitionerRole" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-281" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-281" />
         <comment value="Organization" />
       </mapping>
     </element>
@@ -489,8 +489,8 @@
       <path value="Composition.attester.time" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-42" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-42" />
         <comment value="DateTime" />
       </mapping>
     </element>
@@ -520,18 +520,18 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-235" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-235" />
         <comment value="PractitionerRole" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-148" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-148" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-432" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-432" />
         <comment value="Device" />
       </mapping>
     </element>
@@ -562,8 +562,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-281" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-281" />
         <comment value="Organization" />
       </mapping>
     </element>
@@ -590,8 +590,8 @@
       <alias value="EvenementType" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-49" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-49" />
         <comment value="EventType" />
       </mapping>
     </element>
@@ -618,8 +618,8 @@
       <alias value="Periode" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-35" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-35" />
         <comment value="Period" />
       </mapping>
     </element>
@@ -664,8 +664,8 @@
       </constraint>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-147" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-147" />
         <comment value="Problems" />
       </mapping>
     </element>
@@ -699,8 +699,8 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-19" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-19" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -728,8 +728,8 @@
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-" />
         <comment value="Title" />
       </mapping>
     </element>
@@ -760,8 +760,8 @@
       </patternCodeableConcept>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-150" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-150" />
         <comment value="Code" />
       </mapping>
     </element>
@@ -788,8 +788,8 @@
       <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-160" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-160" />
         <comment value="GeneratedNarrative" />
       </mapping>
     </element>
@@ -817,8 +817,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-472" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-472" />
         <comment value="Condition" />
       </mapping>
     </element>
@@ -845,8 +845,8 @@
       <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-18" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-18" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -880,8 +880,8 @@
       </constraint>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-74" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-74" />
         <comment value="AllergiesAndIntolerances" />
       </mapping>
     </element>
@@ -915,8 +915,8 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-17" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-17" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -941,8 +941,8 @@
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-76" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-76" />
         <comment value="Title" />
       </mapping>
     </element>
@@ -973,8 +973,8 @@
       </patternCodeableConcept>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-77" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-77" />
         <comment value="Code" />
       </mapping>
     </element>
@@ -1001,8 +1001,8 @@
       <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-87" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-87" />
         <comment value="GeneratedNarrative" />
       </mapping>
     </element>
@@ -1030,8 +1030,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-1" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-1" />
         <comment value="AllergyIntolerance" />
       </mapping>
     </element>
@@ -1058,8 +1058,8 @@
       <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-16" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-16" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -1093,8 +1093,8 @@
       </constraint>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-129" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-129" />
         <comment value="MedicationSummary" />
       </mapping>
     </element>
@@ -1129,8 +1129,8 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-test" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-test" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -1205,8 +1205,8 @@
       <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-142" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-142" />
         <comment value="GeneratedNarrative" />
       </mapping>
     </element>
@@ -1216,8 +1216,8 @@
       <definition value="Use if no medicines are listed." />
       <alias value="RedenAfwezigheid" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-146" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-146" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -1251,8 +1251,8 @@
       </constraint>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-93" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-93" />
         <comment value="Procedures" />
       </mapping>
     </element>
@@ -1287,8 +1287,8 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-19" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-19" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -1387,8 +1387,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-1" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-1" />
         <comment value="Procedure" />
       </mapping>
     </element>
@@ -1415,8 +1415,8 @@
       <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-110" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-110" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -1450,8 +1450,8 @@
       </constraint>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-111" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-111" />
         <comment value="MedicalDevicesAndImplants" />
       </mapping>
     </element>
@@ -1486,8 +1486,8 @@
         <code value="string" />
       </type>
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-19" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-19" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -1562,8 +1562,8 @@
       <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-124" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-124" />
         <comment value="GeneratedNarrative" />
       </mapping>
     </element>
@@ -1591,8 +1591,8 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-469" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-469" />
         <comment value="DeviceUse" />
       </mapping>
     </element>
@@ -1619,8 +1619,8 @@
       <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="GBB-PatientSummary-v0.1" />
-        <map value="gbb-dataelement-128" />
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-128" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
