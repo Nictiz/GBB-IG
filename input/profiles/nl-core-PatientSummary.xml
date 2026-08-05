@@ -113,7 +113,7 @@
       <path value="Composition.identifier" />
       <short value="Identifier" />
       <definition value="Unique identifier of the document." />
-      <alias value="Identificatie" />
+      <alias value="Identificatienummer" />
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
@@ -710,6 +710,9 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <short value="GeneratedNarrative" />
+      <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
+      <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -764,7 +767,9 @@
         </extension>
       </extension>
       <path value="Composition.section.emptyReason" />
-      <definition value="Use if no conditions are listed" />
+      <short value="EmptyReason" />
+      <definition value="Use if no conditions are listed." />
+      <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -918,6 +923,9 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <short value="GeneratedNarrative" />
+      <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
+      <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -972,7 +980,9 @@
         </extension>
       </extension>
       <path value="Composition.section.emptyReason" />
-      <definition value="Use if no Allergies are listed" />
+      <short value="EmptyReason" />
+      <definition value="Use if no Allergies are listed." />
+      <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
@@ -1117,10 +1127,21 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <short value="GeneratedNarrative" />
+      <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
+      <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-142" />
+        <comment value="GeneratedNarrative" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedications.emptyReason">
       <path value="Composition.section.emptyReason" />
+      <short value="EmptyReason" />
+      <definition value="Use if no medicines are listed." />
+      <alias value="RedenAfwezigheid" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-146" />
@@ -1264,6 +1285,9 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <short value="GeneratedNarrative" />
+      <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
+      <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
@@ -1313,8 +1337,15 @@
         </extension>
       </extension>
       <path value="Composition.section.emptyReason" />
-      <definition value="Use if no procedures are listed" />
+      <short value="EmptyReason" />
+      <definition value="Use if no procedures are listed." />
+      <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-110" />
+        <comment value="EmptyReason" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1453,7 +1484,15 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <short value="GeneratedNarrative" />
+      <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
+      <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-124" />
+        <comment value="GeneratedNarrative" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1502,8 +1541,15 @@
         </extension>
       </extension>
       <path value="Composition.section.emptyReason" />
-      <definition value="Use if no medical devices or implants are listed" />
+      <short value="EmptyReason" />
+      <definition value="Use if no medical devices or implants are listed." />
+      <alias value="RedenAfwezigheid" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="GBB-PatientSummary-v0.1" />
+        <map value="gbb-dataelement-128" />
+        <comment value="EmptyReason" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
