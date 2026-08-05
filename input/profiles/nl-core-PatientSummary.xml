@@ -50,6 +50,7 @@
       <short value="Language" />
       <definition value="Language in which the resource is written. Language is expressed by the IETF language tag." />
       <alias value="Taal" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-32" />
@@ -85,6 +86,7 @@
       <short value="Version" />
       <definition value="Business version of the document. The exact algorithm for versioning is decided by the producer/custodian." />
       <alias value="Versie" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-36" />
@@ -113,6 +115,7 @@
       <definition value="Unique identifier of the document." />
       <alias value="Identificatie" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-24" />
@@ -140,6 +143,7 @@
       <short value="Status" />
       <definition value="Status of the document." />
       <alias value="Status" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-31" />
@@ -167,6 +171,7 @@
       <short value="Type" />
       <definition value="Type of document at hand, in this case always 60591-5 Patient summary document." />
       <alias value="Type" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-33" />
@@ -194,6 +199,7 @@
       <short value="ServiceSpecialty" />
       <definition value="Additional details about where the content was created (e.g. clinical specialty)." />
       <alias value="ZorgSpecialisme" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-50" />
@@ -226,6 +232,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-18" />
@@ -253,6 +260,7 @@
       <short value="Date" />
       <definition value="Date of finalizing/issuing the document." />
       <alias value="Datum" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-30" />
@@ -288,6 +296,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-235" />
@@ -330,6 +339,7 @@
       <short value="Title" />
       <definition value="Human readable document title that can be displayed in search results, etc. This can be documentType's display name, or it can be assembled from multiple elements. Examples: 'Patient Summary of Jane Green 10.12.2024'." />
       <alias value="Titel" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-34" />
@@ -368,6 +378,7 @@
         </extension>
       </extension>
       <path value="Composition.attester.time" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-48" />
@@ -398,6 +409,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-148" />
@@ -436,6 +448,7 @@
         </extension>
       </extension>
       <path value="Composition.attester.time" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-42" />
@@ -466,6 +479,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-235" />
@@ -507,6 +521,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-281" />
@@ -574,6 +589,7 @@
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
         <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-147" />
@@ -637,6 +653,7 @@
       <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <alias value="Titel" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-" />
@@ -668,6 +685,7 @@
           <code value="11450-4" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-150" />
@@ -692,6 +710,7 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-160" />
@@ -720,6 +739,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-472" />
@@ -745,6 +765,7 @@
       </extension>
       <path value="Composition.section.emptyReason" />
       <definition value="Use if no conditions are listed" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-18" />
@@ -779,6 +800,7 @@
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
         <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-74" />
@@ -839,6 +861,7 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-76" />
@@ -870,6 +893,7 @@
           <code value="48765-2" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-77" />
@@ -894,6 +918,7 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-87" />
@@ -922,6 +947,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-1" />
@@ -947,6 +973,7 @@
       </extension>
       <path value="Composition.section.emptyReason" />
       <definition value="Use if no Allergies are listed" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-16" />
@@ -954,6 +981,22 @@
       </mapping>
     </element>
     <element id="Composition.section:sectionMedications">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Composition.section" />
       <sliceName value="sectionMedications" />
       <min value="1" />
@@ -965,6 +1008,7 @@
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
         <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-129" />
@@ -1026,6 +1070,7 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedications.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1052,6 +1097,7 @@
           <code value="10160-0" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedications.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1071,6 +1117,7 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedications.emptyReason">
       <path value="Composition.section.emptyReason" />
@@ -1108,6 +1155,7 @@
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
         <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-93" />
@@ -1169,6 +1217,7 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionProceduresHx.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1195,6 +1244,7 @@
           <code value="47519-4" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionProceduresHx.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1214,6 +1264,7 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1237,6 +1288,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-1" />
@@ -1262,6 +1314,7 @@
       </extension>
       <path value="Composition.section.emptyReason" />
       <definition value="Use if no procedures are listed" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedicalDevices">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1291,6 +1344,7 @@
         <expression value="(entry.reference.exists() or emptyReason.exists())" />
         <xpath value="(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-111" />
@@ -1352,6 +1406,7 @@
       </extension>
       <path value="Composition.section.title" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedicalDevices.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1378,6 +1433,7 @@
           <code value="46264-8" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedicalDevices.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1397,6 +1453,7 @@
         </extension>
       </extension>
       <path value="Composition.section.text" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedicalDevices.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1420,6 +1477,7 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUseStatement" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="GBB-PatientSummary-v0.1" />
         <map value="gbb-dataelement-469" />
@@ -1445,6 +1503,7 @@
       </extension>
       <path value="Composition.section.emptyReason" />
       <definition value="Use if no medical devices or implants are listed" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
