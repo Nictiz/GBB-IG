@@ -9,13 +9,13 @@
   <contact>
     <name value="Nictiz" />
     <telecom>
-      <system value="email" />
+      <system value="url" />
       <value value="https://www.nictiz.nl" />
       <use value="work" />
     </telecom>
   </contact>
   <description value="This profile defines how the Composition resource is used to represent a Dutch Patient Summary." />
-  <purpose value="This profile is the FHIR implementation of the Patient Summary[Composition](https://decor.nictiz.nl/ad/#/nl-ps-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.149.1.1/2025-09-01T12:11:54)." />
+  <purpose value="This Composition resource represents the Netherlands Patient Summary." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
