@@ -144,6 +144,32 @@
         <comment value="GenderIdentity" />
       </mapping>
     </element>
+    <element id="Patient.extension:pronouns">
+      <path value="Patient.extension" />
+      <sliceName value="pronouns" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:pronouns.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse">
+      <path value="Patient.extension" />
+      <sliceName value="patSexParameterForClinicalUse" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
