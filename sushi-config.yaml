@@ -45,7 +45,7 @@ menu:
 
   Specification:
     Logical Model: StructureDefinition-PatientSummary-model.html
-    FHIR Profile: StructureDefinition-nl-core-PatientSummary.html
+    FHIR Profile: StructureDefinition-nl-PatientSummary.html
     Dependencies: dependencies.html   
 
   Testing: testing.html
