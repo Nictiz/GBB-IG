@@ -65,6 +65,10 @@
         <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
       </type>
     </element>
+    <element id="Composition.extension:version.url">
+      <path value="Composition.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
+    </element>
     <element id="Composition.extension:version.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">

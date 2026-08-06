@@ -36,7 +36,8 @@ parameters:
 
 menu:
   Home: index.html
-  Functional design: functionaldesign.html
+  Background: background.html
+  Functional Design: functionaldesign.html
   Technical Design: technicaldesign.html
 
   Requirements:
