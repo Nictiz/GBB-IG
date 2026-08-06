@@ -77,6 +77,7 @@ parameters:
   - 'input/translations/en'
   - 'input/translations/nl'
   logging: 'progress'
+  path-liquid-template: 'template/liquid'
 
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -90,6 +91,8 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Achtergrondinformatie:
+    Obligations: obligations.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
