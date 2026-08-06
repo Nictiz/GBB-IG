@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-PatientSummary" />
-  <url value="http://nictiz.org/nlps/StructureDefinition/nl-core-PatientSummary" />
-  <name value="NlcorePatientSummary" />
-  <title value="nl core PatientSummary" />
+  <id value="nl-PatientSummary" />
+  <url value="http://nictiz.org/nlps/StructureDefinition/nl-PatientSummary" />
+  <name value="NlPatientSummary" />
+  <title value="nl PatientSummary" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -234,7 +234,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-18" />
+        <map value="nlps-dataelement-23" />
         <comment value="Patient" />
       </mapping>
     </element>
@@ -294,26 +294,27 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-RelatedPerson" />
       </type>
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-235" />
+        <map value="nlps-dataelement-26" />
         <comment value="PractitionerRole" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-148" />
+        <map value="nlps-dataelement-27" />
         <comment value="Pracititioner" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-281" />
+        <map value="nlps-dataelement-28" />
         <comment value="Organization" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-432" />
+        <map value="nlps-dataelement-29" />
         <comment value="Device" />
       </mapping>
     </element>
@@ -397,6 +398,9 @@
         </extension>
       </extension>
       <path value="Composition.attester.time" />
+      <short value="DateTime" />
+      <definition value="Date and time when the document was authorised." />
+      <alias value="DatumTijd" />
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
@@ -422,6 +426,9 @@
         </extension>
       </extension>
       <path value="Composition.attester.party" />
+      <short value="legalAuthenticator" />
+      <definition value="The person or organisation taking responsibility for the content of the document." />
+      <alias value="JuridischVerantwoordelijke" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -431,17 +438,17 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-148" />
+        <map value="nlps-dataelement-46" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-235" />
+        <map value="nlps-dataelement-45" />
         <comment value="PractitionerRole" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-281" />
+        <map value="nlps-dataelement-47" />
         <comment value="Organization" />
       </mapping>
     </element>
@@ -487,6 +494,9 @@
         </extension>
       </extension>
       <path value="Composition.attester.time" />
+      <short value="DateTime" />
+      <definition value="Date and time of the approval of the document by Attester." />
+      <alias value="DatumTijd" />
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
@@ -512,6 +522,7 @@
         </extension>
       </extension>
       <path value="Composition.attester.party" />
+      <definition value="Attester who validated the document." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -521,17 +532,17 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-235" />
-        <comment value="PractitionerRole" />
-      </mapping>
-      <mapping>
-        <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-148" />
+        <map value="nlps-dataelement-40" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-432" />
+        <map value="nlps-dataelement-39" />
+        <comment value="PractitionerRole" />
+      </mapping>
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-41" />
         <comment value="Device" />
       </mapping>
     </element>
@@ -563,7 +574,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-281" />
+        <map value="nlps-dataelement-52" />
         <comment value="Organization" />
       </mapping>
     </element>
@@ -653,6 +664,9 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sectionProblems" />
+      <short value="Problems" />
+      <definition value="Section: Problems. Human readable denominator to identify the topic of this section." />
+      <alias value="Problemen" />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -695,12 +709,15 @@
         </extension>
       </extension>
       <path value="Composition.section.extension.value[x]" />
+      <short value="Note" />
+      <definition value="Free text notes by the health professional." />
+      <alias value="Notitie" />
       <type>
         <code value="string" />
       </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-19" />
+        <map value="nlps-dataelement-148" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -729,7 +746,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-" />
+        <map value="nlps-dataelement-149" />
         <comment value="Title" />
       </mapping>
     </element>
@@ -759,11 +776,6 @@
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-150" />
-        <comment value="Code" />
-      </mapping>
     </element>
     <element id="Composition.section:sectionProblems.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -811,6 +823,9 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <short value="Condition" />
+      <definition value="Health conditions affecting the health of the patient." />
+      <alias value="Gezondheidstoestand" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
@@ -818,7 +833,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-472" />
+        <map value="nlps-dataelement-167" />
         <comment value="Condition" />
       </mapping>
     </element>
@@ -846,7 +861,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-18" />
+        <map value="nlps-dataelement-164" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -869,6 +884,9 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sectionAllergies" />
+      <short value="AllergiesAndIntolerances" />
+      <definition value="Section: Allergies and Intolerances. Human readable denominator to identify the topic of this section." />
+      <alias value="AllergieEnIntoleranties" />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -911,12 +929,15 @@
         </extension>
       </extension>
       <path value="Composition.section.extension.value[x]" />
+      <short value="Note" />
+      <definition value="Free text notes by the health professional." />
+      <alias value="Notitie" />
       <type>
         <code value="string" />
       </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-17" />
+        <map value="nlps-dataelement-75" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -938,6 +959,9 @@
         </extension>
       </extension>
       <path value="Composition.section.title" />
+      <short value="Title" />
+      <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
+      <alias value="Titel" />
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
@@ -972,11 +996,6 @@
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-77" />
-        <comment value="Code" />
-      </mapping>
     </element>
     <element id="Composition.section:sectionAllergies.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1024,6 +1043,9 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <short value="AllergyIntolerance" />
+      <definition value="List of structured allergies and intolerances." />
+      <alias value="AllergieIntolerantie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
@@ -1031,7 +1053,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-1" />
+        <map value="nlps-dataelement-92" />
         <comment value="AllergyIntolerance" />
       </mapping>
     </element>
@@ -1059,7 +1081,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-16" />
+        <map value="nlps-dataelement-91" />
         <comment value="EmptyReason" />
       </mapping>
     </element>
@@ -1082,6 +1104,9 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sectionMedications" />
+      <short value="MedicationSummary" />
+      <definition value="Section: Medication Summary. Human readable denominator to identify the topic of this section." />
+      <alias value="MedicatieSamenvatting" />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -1125,12 +1150,15 @@
         </extension>
       </extension>
       <path value="Composition.section.extension.value[x]" />
+      <short value="Note" />
+      <definition value="Free text notes by the health professional." />
+      <alias value="Notitie" />
       <type>
         <code value="string" />
       </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-test" />
+        <map value="nlps-dataelement-130" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -1152,8 +1180,16 @@
         </extension>
       </extension>
       <path value="Composition.section.title" />
+      <short value="Title" />
+      <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
+      <alias value="Titel" />
       <min value="1" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-131" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedications.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1256,6 +1292,9 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sectionProceduresHx" />
+      <short value="Procedures" />
+      <definition value="Section: Procedures. Human readable denominator to identify the topic of this section." />
+      <alias value="Verrichtingen" />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -1299,12 +1338,15 @@
         </extension>
       </extension>
       <path value="Composition.section.extension.value[x]" />
+      <short value="Note" />
+      <definition value="Free text notes by the health professional." />
+      <alias value="Notitie" />
       <type>
         <code value="string" />
       </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-19" />
+        <map value="nlps-dataelement-94" />
         <comment value="Note" />
       </mapping>
     </element>
@@ -1326,8 +1368,16 @@
         </extension>
       </extension>
       <path value="Composition.section.title" />
+      <short value="Title" />
+      <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
+      <alias value="Titel" />
       <min value="1" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-95" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1378,6 +1428,11 @@
       <definition value="Narrative, potentially formatted, content of the whole section. Must be automatically generated only; manually written narratives are not allowed. Use the healthcare provider's free-text note for that purpose." />
       <alias value="GegenereerdeSamenvatting" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-106" />
+        <comment value="GeneratedNarrative" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionProceduresHx.entry">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1397,6 +1452,9 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <short value="Procedure" />
+      <definition value="List of structured procedures." />
+      <alias value="Verrichting" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
@@ -1404,7 +1462,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-1" />
+        <map value="nlps-dataelement-165" />
         <comment value="Procedure" />
       </mapping>
     </element>
@@ -1455,6 +1513,9 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sectionMedicalDevices" />
+      <short value="MedicalDevicesAndImplants" />
+      <definition value="Section: Medical devices and implants. Human readable denominator to identify the topic of this section." />
+      <alias value="MedischeHulpmiddelenEnImplantaten" />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -1498,6 +1559,9 @@
         </extension>
       </extension>
       <path value="Composition.section.extension.value[x]" />
+      <short value="Note" />
+      <definition value="Free text notes by the health professional." />
+      <alias value="Notitie" />
       <type>
         <code value="string" />
       </type>
@@ -1525,8 +1589,15 @@
         </extension>
       </extension>
       <path value="Composition.section.title" />
+      <short value="Title" />
+      <alias value="Titel" />
       <min value="1" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-113" />
+        <comment value="Title" />
+      </mapping>
     </element>
     <element id="Composition.section:sectionMedicalDevices.code">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1601,6 +1672,9 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <short value="DeviceUse" />
+      <definition value="Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP." />
+      <alias value="MedischHulpmiddel" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUseStatement" />
@@ -1608,7 +1682,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-469" />
+        <map value="nlps-dataelement-166" />
         <comment value="DeviceUse" />
       </mapping>
     </element>
