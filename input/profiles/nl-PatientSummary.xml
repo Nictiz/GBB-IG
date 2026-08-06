@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-PatientSummary" />
-  <url value="http://nictiz.org/nlps/StructureDefinition/nl-PatientSummary" />
+  <url value="http://nictiz.nl/nlps/StructureDefinition/nl-PatientSummary" />
   <name value="NlPatientSummary" />
   <title value="nl PatientSummary" />
   <status value="draft" />
