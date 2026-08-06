@@ -390,6 +390,8 @@
         </extension>
       </extension>
       <path value="Composition.attester.mode" />
+      <definition value="Indicates the level of authority of the attestation. The type of attestation the authenticator offers." />
+      <patternCode value="legal" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester:legalAuthenticator.time">
@@ -494,6 +496,8 @@
         </extension>
       </extension>
       <path value="Composition.attester.mode" />
+      <definition value="Indicates the level of authority of the attestation. The type of attestation the authenticator offers." />
+      <patternCode value="professional" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester:validator.time">
