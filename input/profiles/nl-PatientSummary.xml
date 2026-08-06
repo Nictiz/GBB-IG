@@ -363,6 +363,14 @@
     <element id="Composition.attester:legalAuthenticator">
       <path value="Composition.attester" />
       <sliceName value="legalAuthenticator" />
+      <short value="legalAuthentication" />
+      <definition value="Document legal authentication details." />
+      <alias value="JuridischeAuthenticatie" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-43" />
+        <comment value="legalAuthentication" />
+      </mapping>
     </element>
     <element id="Composition.attester:legalAuthenticator.mode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -459,6 +467,14 @@
     <element id="Composition.attester:validator">
       <path value="Composition.attester" />
       <sliceName value="validator" />
+      <short value="Validator" />
+      <definition value="Document attestation details." />
+      <alias value="Validator" />
+      <mapping>
+        <identity value="NLPS-PatientSummary-v0.1" />
+        <map value="nlps-dataelement-37" />
+        <comment value="Validator" />
+      </mapping>
     </element>
     <element id="Composition.attester:validator.mode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
