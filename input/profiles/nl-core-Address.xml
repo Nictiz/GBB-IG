@@ -298,12 +298,6 @@
       <definition value="The indication used for addresses which do not consist of the usual street name and house number." />
       <comment value="The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the coded zib HouseNumberIndication concept (CD datatype) is mapped to a FHIR string datatype with a constraint added (the value can only be 'by' or 'to')." />
       <alias value="AanduidingBijNummer" />
-      <constraint>
-        <key value="houseNumberIndication" />
-        <severity value="error" />
-        <human value="Must have value 'by' or 'to'" />
-        <expression value="$this in ('by' | 'to')" />
-      </constraint>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.9" />
