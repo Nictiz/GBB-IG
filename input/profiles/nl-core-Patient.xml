@@ -535,6 +535,22 @@
       </mapping>
     </element>
     <element id="Patient.maritalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Patient.maritalStatus" />
       <alias value="BurgerlijkeStaat" />
       <mapping>
@@ -782,6 +798,32 @@
         <map value="NL-CM:7.12.3" />
         <comment value="CommunicationLanguage" />
       </mapping>
+    </element>
+    <element id="Patient.generalPractitioner">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.generalPractitioner" />
+      <short value="Huisarts" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
