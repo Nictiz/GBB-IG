@@ -818,6 +818,12 @@
       </extension>
       <path value="Patient.generalPractitioner" />
       <short value="Huisarts" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
