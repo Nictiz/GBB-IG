@@ -90,6 +90,7 @@
       <short value="Version" />
       <definition value="Business version of the document. The exact algorithm for versioning is decided by the producer/custodian." />
       <alias value="Versie" />
+      <min value="1" />
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
