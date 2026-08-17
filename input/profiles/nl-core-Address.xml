@@ -133,6 +133,7 @@
       </extension>
       <path value="Address.line" />
       <comment value="When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line." />
+      <max value="1" />
     </element>
     <element id="Address.line.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
