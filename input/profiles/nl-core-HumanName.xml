@@ -42,12 +42,6 @@
       <alias value="nl-core-NameInformation" />
       <alias value="Naamgegevens" />
       <constraint>
-        <key value="zib-NameInformation-1" />
-        <severity value="error" />
-        <human value="If a prefix for a family name is specified, the family name is expected as well" />
-        <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
-      </constraint>
-      <constraint>
         <key value="zib-NameInformation-2" />
         <severity value="error" />
         <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
