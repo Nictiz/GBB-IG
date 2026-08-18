@@ -152,7 +152,7 @@
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
-    </extension>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:no-error" />
@@ -177,7 +177,7 @@
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
-    </extension>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:no-error" />
@@ -197,7 +197,7 @@
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
-    </extension>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:no-error" />
@@ -222,7 +222,7 @@
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
-    </extension>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:no-error" />
@@ -777,6 +777,10 @@
         </extension>
       </extension>
       <path value="Patient.contact.organization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+      </type>
       <mapping>
         <identity value="GBB-Patient-v0.1" />
         <map value="gbb-dataelement-351" />
