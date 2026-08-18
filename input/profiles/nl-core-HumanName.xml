@@ -51,7 +51,7 @@
         <key value="nl-core-NameInformation-02" />
         <severity value="warning" />
         <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
-        <expression value="(extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
+        <expression value="(family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
       </constraint>
       <mapping>
         <identity value="zib-nameinformation-v1.1-2020EN" />
