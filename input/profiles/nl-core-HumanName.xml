@@ -48,12 +48,6 @@
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
       </constraint>
       <constraint>
-        <key value="nl-core-NameInformation-01" />
-        <severity value="warning" />
-        <human value="If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name. This ensures compatibility with common FHIR usage." />
-        <expression value="family.exists() implies text.hasValue()" />
-      </constraint>
-      <constraint>
         <key value="nl-core-NameInformation-02" />
         <severity value="warning" />
         <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
