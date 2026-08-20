@@ -299,7 +299,7 @@ class ExcelConvertor {
     const id = this.fileRoot;
     const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
 
-    const rows = this.#getRows(ExcelConvertor.sheetRequirements);
+    const rows = this.getRows(ExcelConvertor.sheetRequirements);
     if (rows == null) return;
 
     const requirements = {
@@ -357,7 +357,7 @@ class ExcelConvertor {
   }
 
   convertConceptPage(outputFolder) {
-    const rows = this.#getRows(ExcelConvertor.sheetConcept);
+    const rows = this.getRows(ExcelConvertor.sheetConcept);
     if (rows == null) return;
 
     const markdown = rows
@@ -371,7 +371,7 @@ class ExcelConvertor {
   }
 
   async getLogicalModel() {
-    let rows = this.#getRows(ExcelConvertor.sheetConcept);
+    let rows = this.getRows(ExcelConvertor.sheetConcept);
     if (rows == null) return;
     
     rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
@@ -443,7 +443,7 @@ class ExcelConvertor {
    *  The header row is assumed to be the second row, in accordance to the template.
    *  @returns An array of JSON objects, or null if the sheet was not found.
    */
-  #getRows(sheetName) {
+  getRows(sheetName) {
     const sheet = this.workbook.Sheets[sheetName];
     if (!sheet) {
       console.warn(`Skipping ${this.inputFile.name}: sheet "${sheetName}" not found`);
