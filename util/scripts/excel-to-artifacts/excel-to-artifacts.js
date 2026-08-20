@@ -334,7 +334,7 @@ class ExcelConvertor {
               }
             ],
             key: number,
-            label: label,
+            label: label.trim(),
             requirement: requirementText || "(geen requirementtekst)"
           };
 
@@ -384,10 +384,11 @@ class ExcelConvertor {
       return;
     } 
     
+    const id_parts = ad_id.split("/");
+    const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
+    const fetch_url = `${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`;
     try {
-      const id_parts = ad_id.split("/");
-      const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
-      const response = await fetch(`${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`);
+      const response = await fetch(`${fetch_url}`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} ${response.statusText}`);
       }
@@ -403,7 +404,7 @@ class ExcelConvertor {
         await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
       }
     } catch (error) {
-      console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR, "${error.message}"`);
+      console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR using ${fetch_url}, "${error.message}"`);
       return;
     }
   }
