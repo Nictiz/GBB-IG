@@ -98,7 +98,7 @@
     <element id="HumanName.extension:nameUsage.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -294,7 +294,7 @@
     <element id="HumanName.family.extension:humanNameOwnPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -346,7 +346,7 @@
     <element id="HumanName.family.extension:humanNameOwnName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -397,7 +397,7 @@
     <element id="HumanName.family.extension:humanNamePartnerPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -449,7 +449,7 @@
     <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
