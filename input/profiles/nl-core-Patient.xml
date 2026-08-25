@@ -97,13 +97,9 @@
       <isModifier value="false" />
     </element>
     <element id="Patient.extension:genderIdentity.extension">
-      <path value="Patient.extension.extension" />
-      <min value="1" />
-    </element>
-    <element id="Patient.extension:genderIdentity.extension:value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -111,7 +107,27 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -123,7 +139,7 @@
     <element id="Patient.extension:genderIdentity.extension:value.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -131,7 +147,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -172,7 +188,7 @@
     <element id="Patient.extension:pronouns.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -180,7 +196,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -217,7 +233,7 @@
     <element id="Patient.extension:patSexParameterForClinicalUse.extension">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -225,7 +241,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -237,7 +253,7 @@
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
+          <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -245,7 +261,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:no-error" />
+          <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -788,6 +804,22 @@
       </mapping>
     </element>
     <element id="Patient.communication">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Patient.communication" />
       <mapping>
         <identity value="zib-languageproficiency-v3.2-2020EN" />
@@ -796,6 +828,22 @@
       </mapping>
     </element>
     <element id="Patient.communication.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Patient.communication.language" />
       <mapping>
         <identity value="zib-languageproficiency-v3.2-2020EN" />
