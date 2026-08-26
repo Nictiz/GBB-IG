@@ -28,7 +28,7 @@
   <mapping>
     <identity value="lm-Organization" />
     <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Organization" />
-    <name value="Logical Model for Organization" />
+    <name value="Logical model for Organization" />
   </mapping>
   <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
