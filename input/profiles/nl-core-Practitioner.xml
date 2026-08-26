@@ -29,7 +29,7 @@
   <mapping>
     <identity value="lm-Practitioner" />
     <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Practitioner" />
-    <name value="Logical Model for Practitioner" />
+    <name value="Logical model for Practitioner" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
