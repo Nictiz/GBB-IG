@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Device" />
+
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+  <name value="NlcoreDevice" />
+  <title value="nl core Device" />
+  <status value="draft" />
+
+  <publisher value="Nictiz" />
+
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+
+  <description value="The concept contains the properties of a variety of implants, devices and aids that are patient-related and support the healthcare process. It covers medical and non-medical devices, ranging from simple aids and implants to equipment and software." />
+
+  <purpose value="This profile is the FHIR implementation of the general building block [Device]()." />
+
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+
+  <fhirVersion value="4.0.1" />
+
+  <!-- mappings komen hier -->
+     <mapping>
+    <identity value="requirements-Device" />
+    <uri value="http://nictiz.nl/gbb/Requirements/Device" />
+    <name value="Information requirements for Device" />
+  </mapping>
+
+  <mapping>
+    <identity value="lm-Device" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/Device-model" />
+    <name value="Logical model for Device" />
+  </mapping>
+
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <derivation value="constraint" />
+
+  <differential>
+    <element id="Device.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.identifier" />
+      <mustSupport value="true" />
+      <short value="Instance identifier" />
+      <definition value="An identifier used to identify an instance of a Device." />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-01" />
+        <comment value="Business identification number" />
+      </mapping>
+    </element>
+
+        <element id="Device.udiCarrier">
+      <path value="Device.udiCarrier" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-02" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-01" />
+        <comment value="Wereldwijd unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-02" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-03" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+    </element>
+
+    <element id="Device.udiCarrier.deviceIdentifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.udiCarrier.deviceIdentifier" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-02" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-01" />
+        <comment value="Wereldwijd unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-02" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-03" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+    </element>
+
+    <element id="Device.udiCarrier.issuer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.udiCarrier.issuer" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-02" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-01" />
+        <comment value="Wereldwijd unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-02" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-03" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+    </element>
+
+      <element id="Device.manufacturer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.manufacturer" />
+      <mustSupport value="true" />
+  
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-03" />
+        <comment value="Fabrieksnaam" />
+      </mapping>
+    </element>
+      <element id="Device.manufactureDate">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.manufactureDate" />
+      <mustSupport value="true" />
+ 
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-04" />
+        <comment value="Productiedatum/tijd" />
+      </mapping>
+    </element>
+      <element id="Device.expirationDate">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.expirationDate" />
+      <mustSupport value="true" />
+
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-05" />
+        <comment value="Vervaldatum/tijd" />
+      </mapping>
+    </element>
+      <element id="Device.lotNumber">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.lotNumber" />
+      <mustSupport value="true" />
+
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-06" />
+        <comment value="Lotnummer" />
+      </mapping>
+    </element>
+
+      <element id="Device.serialNumber">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.serialNumber" />
+      <mustSupport value="true" />
+
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-01" />
+        <comment value="Wereldwijd unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-02" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-02-03" />
+        <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-07" />
+        <comment value="Serienummer" />
+      </mapping>
+    </element>  
+
+        <element id="Device.deviceName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.deviceName" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-08" />
+        <comment value="Naam en type van het device" />
+      </mapping>
+    </element>
+
+    <element id="Device.deviceName.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.deviceName.name" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-08-01" />
+        <comment value="Naam van het device" />
+      </mapping>
+    </element>
+
+    <element id="Device.deviceName.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.deviceName.type" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-08-03" />
+        <comment value="Type van de devicenaam" />
+      </mapping>
+    </element>
+
+    <element id="Device.modelNumber">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.modelNumber" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-09" />
+        <comment value="Modelnummer van de fabrikant" />
+      </mapping>
+    </element>
+
+       <element id="Device.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.type" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-11" />
+        <comment value="Gecodeerde devicetypes in SNOMED CT of EMDN" />
+      </mapping>
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-11-01" />
+        <comment value="Gecodeerde producttypes in SNOMED" />
+      </mapping>
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-11-02" />
+        <comment value="Gecodeerde producttypes in SNOMED" />
+      </mapping>
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-11-03" />
+        <comment value="Gecodeerde producttypes voor gebruikt hulpmiddel" />
+      </mapping>
+    </element>
+
+        <element id="Device.version">
+      <path value="Device.version" />
+    </element>
+
+    <element id="Device.version.value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.version.value" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EU-10" />
+        <comment value="Versie" />
+      </mapping>
+    </element>
+
+    <element id="Device.note">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+
+      <path value="Device.note" />
+      <mustSupport value="true" />
+
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="NL-08-02" />
+        <comment value="Omschrijving product" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="EUNL-12" />
+        <comment value="Toelichting" />
+      </mapping>
+    </element>
+
+
+  </differential>
+</StructureDefinition>
