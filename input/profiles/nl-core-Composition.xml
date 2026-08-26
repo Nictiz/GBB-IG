@@ -55,7 +55,7 @@
         <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
       </type>
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-413" />
         <comment value="Version" />
       </mapping>
@@ -80,7 +80,7 @@
       <path value="Composition.identifier" />
       <min value="1" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-402" />
         <comment value="Identifier" />
       </mapping>
@@ -104,7 +104,7 @@
       </extension>
       <path value="Composition.status" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-409" />
         <comment value="Status" />
       </mapping>
@@ -128,7 +128,7 @@
       </extension>
       <path value="Composition.type" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-411" />
         <comment value="Type" />
       </mapping>
@@ -152,12 +152,12 @@
       </extension>
       <path value="Composition.category" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-426" />
         <comment value="EventType" />
       </mapping>
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-464" />
         <comment value="ServiceSpecialty" />
       </mapping>
@@ -186,7 +186,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-401" />
         <comment value="Subject" />
       </mapping>
@@ -217,7 +217,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-403" />
         <comment value="Author[x]" />
       </mapping>
@@ -241,7 +241,7 @@
       </extension>
       <path value="Composition.title" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-412" />
         <comment value="Title" />
       </mapping>
@@ -292,7 +292,7 @@
       <path value="Composition.attester" />
       <sliceName value="validator" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-415" />
         <comment value="Attester[x]" />
       </mapping>
@@ -378,7 +378,7 @@
       <path value="Composition.attester" />
       <sliceName value="legalAuthenticator" />
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-422" />
         <comment value="LegalAuthenticator" />
       </mapping>
@@ -451,7 +451,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Composition-v0.1" />
+        <identity value="lm-Document" />
         <map value="gbb-dataelement-429" />
         <comment value="Custodian" />
       </mapping>
