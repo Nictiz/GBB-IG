@@ -28,7 +28,7 @@
   <mapping>
     <identity value="lm-Patient" />
     <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Patient" />
-    <name value="Logical Model for Patient" />
+    <name value="Logical model for Patient" />
   </mapping>
   <mapping>
     <identity value="zib-patient-v3.2-2020EN" />
