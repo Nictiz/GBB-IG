@@ -370,7 +370,7 @@
     <element id="Address.line.extension:postBox.value[x]">
       <path value="Address.line.extension.value[x]" />
       <mapping>
-        <identity value="GBB-Address-v0.1" />
+        <identity value="lm-Address" />
         <map value="gbb-dataelement-87" />
         <comment value="PostBox" />
       </mapping>
