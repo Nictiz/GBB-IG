@@ -93,10 +93,11 @@ menu:
   Home: index.html
   Achtergrondinformatie:
     Obligations: obligations.html
-  Device:
-    Overzicht: device.html
-    Requirements: Requirements-Device.html
-    FHIR-profiel: StructureDefinition-nl-core-Device.html
+  Bouwblokken:
+    Device:
+      Overzicht: device.html
+      Requirements: Requirements-Device.html
+      FHIR-profiel: StructureDefinition-nl-core-Device.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
