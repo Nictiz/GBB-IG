@@ -130,7 +130,7 @@
         <strength value="preferred" />
       </binding>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-306" />
         <comment value="Type" />
       </mapping>
@@ -187,7 +187,7 @@
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-372" />
         <comment value="Telecom" />
       </mapping>
@@ -215,7 +215,7 @@
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
       </type>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-371" />
         <comment value="Address" />
       </mapping>
@@ -243,7 +243,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-378" />
         <comment value="partOf" />
       </mapping>
