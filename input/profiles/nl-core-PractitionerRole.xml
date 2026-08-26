@@ -20,9 +20,14 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-PractitionerRole-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/PractitionerRole-model" />
-    <name value="Dataset GBB-PractitionerRole-v0.1" />
+    <identity value="requirements-PractitionerRole" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/PractitionerRole" />
+    <name value="Information requirements for PractitionerRole" />
+  </mapping>
+  <mapping>
+    <identity value="lm-PractitionerRole" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/PractitionerRole" />
+    <name value="Logical Model for PractitionerRole" />
   </mapping>
   <mapping>
     <identity value="zib-healthprofessional-v3.5-2020EN" />
