@@ -26,9 +26,9 @@
     <name value="zib AddressInformation-v1.1(2020EN)" />
   </mapping>
   <mapping>
-    <identity value="GBB-Address-v0.1" />
+    <identity value="lm-Address" />
     <uri value="http://nictiz.nl/gbb/StructureDefinition/Address-model" />
-    <name value="GBB-Dataset-Address-v0.1" />
+    <name value="Logical model for Address" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
