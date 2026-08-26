@@ -73,7 +73,7 @@
       </extension>
       <path value="Location.identifier" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-380" />
         <comment value="LocationIdentifier" />
       </mapping>
@@ -121,7 +121,7 @@
       </extension>
       <path value="Location.description" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-382" />
         <comment value="Description" />
       </mapping>
@@ -145,7 +145,7 @@
       </extension>
       <path value="Location.type" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-383" />
         <comment value="Type" />
       </mapping>
@@ -201,7 +201,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-389" />
         <comment value="ManagingOrganization" />
       </mapping>
@@ -229,7 +229,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
       </type>
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-391" />
         <comment value="PartOf (Organization)" />
       </mapping>
