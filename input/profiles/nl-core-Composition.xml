@@ -23,7 +23,7 @@
   <mapping>
     <identity value="lm-Document" />
     <uri value="http://nictiz.nl/gbb/StructureDefinition/Document-model" />
-    <name value="Logical Model for Document" />
+    <name value="Logical model for Document" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
