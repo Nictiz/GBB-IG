@@ -21,9 +21,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-ContactPoint-v0.1" />
+    <identity value="lm-ContactPoint" />
     <uri value="http://nictiz.nl/gbb/StructureDefinition/ContactPoint-model" />
-    <name value="Dataset GBB-ContactPoint-v0.1" />
+    <name value="Logical model for ContactPoint" />
   </mapping>
   <mapping>
     <identity value="zib-contactinformation-v1.2-2020EN" />
