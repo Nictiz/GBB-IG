@@ -21,9 +21,14 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Patient-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Patient-model" />
-    <name value="Dataset GBB-Patient-v0.1" />
+    <identity value="requirements-Patient" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Patient" />
+    <name value="Information requirements for Patient" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Patient" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Patient" />
+    <name value="Logical Model for Patient" />
   </mapping>
   <mapping>
     <identity value="zib-patient-v3.2-2020EN" />
