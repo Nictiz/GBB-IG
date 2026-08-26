@@ -1,0 +1,299 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-DeviceUse" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
+  <name value="NlcoreDeviceUse" />
+  <title value="nl core DeviceUse" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="FHIR R4 profile for the generic building block DeviceUse." />
+<purpose value="This profile is the FHIR implementation of the general building block DeviceUse." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-DeviceUse" />
+    <uri value="http://nictiz.nl/gbb/Requirements/DeviceUse" />
+    <name value="Information requirements for DeviceUse" />
+  </mapping>
+  <mapping>
+    <identity value="lm-DeviceUse" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/DeviceUse-model" />
+    <name value="Logical model for DeviceUse" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DeviceUseStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DeviceUseStatement.language">
+      <path value="DeviceUseStatement.language" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-08" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.identifier" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-04" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.status" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-01" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.subject" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-02" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.timing[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.timing[x]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-09, NL-09.01, NL-09.02" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.recordedOn">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.recordedOn" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-06" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.source">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.source" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-07" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.device">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.device" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-NL-03.01, NL-03.02" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.reasonCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.reasonCode" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-NL-11" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.reasonReference">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.reasonReference" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-11.01, NL-11.02, NL-11.03" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.bodySite">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.bodySite" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-NL-10, EU-NL-10.01" />
+      </mapping>
+    </element>
+    <element id="DeviceUseStatement.note">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="DeviceUseStatement.note" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="EU-NL-12" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

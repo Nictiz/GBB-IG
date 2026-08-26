@@ -93,6 +93,8 @@ menu:
   Home: index.html
   Achtergrondinformatie:
     Obligations: obligations.html
+  Bouwblokken:
+    DeviceUse: deviceuse.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
@@ -159,12 +161,11 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
+resources:
+  DeviceUseStatement/deviceuse-example:
+    name: Example DeviceUse
+    description: Example DeviceUseStatement instance conforming to nl-core-DeviceUse.
+    exampleCanonical: http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG
