@@ -27,7 +27,7 @@
   <mapping>
     <identity value="lm-PractitionerRole" />
     <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/PractitionerRole" />
-    <name value="Logical Model for PractitionerRole" />
+    <name value="Logical model for PractitionerRole" />
   </mapping>
   <mapping>
     <identity value="zib-healthprofessional-v3.5-2020EN" />
