@@ -803,7 +803,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Patient-v0.1" />
+        <identity value="lm-Patient" />
         <map value="gbb-dataelement-351" />
         <comment value="Organisatie" />
       </mapping>
