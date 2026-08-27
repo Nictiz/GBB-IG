@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-ContactPoint" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/ContactPoint-model" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/ContactPoint" />
     <name value="Logical model for ContactPoint" />
   </mapping>
   <mapping>
