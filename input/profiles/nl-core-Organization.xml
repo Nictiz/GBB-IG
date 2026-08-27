@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices." />
+  <description value="A grouping of people or organizations with a common purpose." />
   <purpose value="This profile is the FHIR implementation of the general building block [Organization](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Organization)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -44,22 +44,8 @@
       </mapping>
     </element>
     <element id="Organization.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.identifier" />
       <slicing>
         <discriminator>
@@ -90,38 +76,11 @@
       </patternIdentifier>
     </element>
     <element id="Organization.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.type" />
       <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="key">
-            <valueId value="zib-organizationType" />
-          </extension>
-          <extension url="purpose">
-            <valueCode value="current" />
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
-          </extension>
-          <extension url="documentation">
-            <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
-          </extension>
-        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding" />
         <strength value="preferred" />
       </binding>
       <mapping>
@@ -136,22 +95,8 @@
       </mapping>
     </element>
     <element id="Organization.name">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.name" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -160,22 +105,8 @@
       </mapping>
     </element>
     <element id="Organization.telecom">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.telecom" />
       <type>
         <code value="ContactPoint" />
@@ -188,22 +119,8 @@
       </mapping>
     </element>
     <element id="Organization.address">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.address" />
       <type>
         <code value="Address" />
@@ -216,22 +133,8 @@
       </mapping>
     </element>
     <element id="Organization.partOf">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
       <path value="Organization.partOf" />
       <type>
         <code value="Reference" />
