@@ -23,7 +23,7 @@
   <mapping>
     <identity value="requirements-Location" />
     <uri value="http://nictiz.nl/ig/gbb/Requirements/Location" />
-    <name value="Information requirements for Patient" />
+    <name value="Information requirements for Location" />
   </mapping>
   <mapping>
     <identity value="lm-Location" />
