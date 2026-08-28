@@ -21,9 +21,14 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Location-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Location-model" />
-    <name value="Dataset GBB-Location-v0.1" />
+    <identity value="requirements-Location" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Location" />
+    <name value="Information requirements for Location" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Location" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Location" />
+    <name value="Logical model for Location" />
   </mapping>
   <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -55,18 +60,46 @@
       </mapping>
     </element>
     <element id="Location.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.identifier" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-380" />
         <comment value="LocationIdentifier" />
       </mapping>
     </element>
     <element id="Location.name">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.name" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -75,28 +108,70 @@
       </mapping>
     </element>
     <element id="Location.description">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.description" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-382" />
         <comment value="Description" />
       </mapping>
     </element>
     <element id="Location.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.type" />
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-383" />
         <comment value="Type" />
       </mapping>
     </element>
     <element id="Location.address">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.address" />
       <type>
         <code value="Address" />
@@ -109,29 +184,57 @@
       </mapping>
     </element>
     <element id="Location.managingOrganization">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-389" />
         <comment value="ManagingOrganization" />
       </mapping>
     </element>
     <element id="Location.partOf">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation" />
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
       </type>
       <mapping>
-        <identity value="GBB-Location-v0.1" />
+        <identity value="lm-Location" />
         <map value="gbb-dataelement-391" />
         <comment value="PartOf (Organization)" />
       </mapping>
