@@ -204,6 +204,7 @@
         </extension>
       </extension>
       <path value="Composition.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
