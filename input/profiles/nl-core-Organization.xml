@@ -46,6 +46,7 @@
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.1" />
+        <comment value="HealthcareProvider" />
       </mapping>
     </element>
     <element id="Organization.identifier">
