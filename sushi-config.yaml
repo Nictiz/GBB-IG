@@ -109,47 +109,47 @@ menu:
     Adresgegevens:
       Overzicht: Address.html
       Requirements: Requirements-Address.html
-      Afsprakenmodel: StructureDefinition-Address-model.html
+      Afsprakenmodel: StructureDefinition-Address.html
       FHIR-profiel: StructureDefinition-nl-core-Address.html
     Composition:
       Overzicht: Composition.html
       Requirements: Requirements-Composition.html
-      Afsprakenmodel: StructureDefinition-Document-model.html
+      Afsprakenmodel: StructureDefinition-Document.html
       FHIR-profiel: StructureDefinition-nl-core-Composition.html
     Contactgegevens:
       Overzicht: ContactPoint.html
       Requirements: Requirements-ContactPoint.html
-      Afsprakenmodel: StructureDefinition-ContactPoint-model.html
+      Afsprakenmodel: StructureDefinition-ContactPoint.html
       FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html   
     Locatie:
       Overzicht: Location.html
       Requirements: Requirements-Location.html
-      Afsprakenmodel: StructureDefinition-Location-model.html
+      Afsprakenmodel: StructureDefinition-Location.html
       FHIR-profiel: StructureDefinition-nl-core-Location.html      
     Naamgegevens:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
-      Afsprakenmodel: StructureDefinition-HumanName-model.html
+      Afsprakenmodel: StructureDefinition-HumanName.html
       FHIR-profiel: StructureDefinition-nl-core-HumanName.html
     Organisatie:
       Overzicht: Organization.html
       Requirements: Requirements-Organization.html
-      Afsprakenmodel: StructureDefinition-Organization-model.html
+      Afsprakenmodel: StructureDefinition-Organization.html
       FHIR-profiel: StructureDefinition-nl-core-Organization.html
     Patiënt:
       Overzicht: Patient.html
       Requirements: Requirements-Patient.html
-      Afsprakenmodel: StructureDefinition-Patient-model.html
+      Afsprakenmodel: StructureDefinition-Patient.html
       FHIR-profiel: StructureDefinition-nl-core-Patient.html
     Zorgverlener:
       Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html
-      Afsprakenmodel: StructureDefinition-Practitioner-model.html
+      Afsprakenmodel: StructureDefinition-Practitioner.html
       FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
     ZorgverlenerRol:
       Overzicht: PractitionerRole.html
       Requirements: Requirements-PractitionerRole.html
-      Afsprakenmodel: StructureDefinition-PractitionerRole-model.html
+      Afsprakenmodel: StructureDefinition-PractitionerRole.html
       FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
   Artefacten: artifacts.html
 
