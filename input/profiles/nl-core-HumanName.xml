@@ -22,9 +22,14 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-HumanName-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/HumanName-model" />
-    <name value="Dataset GBB-HumanName-v0.1" />
+    <identity value="requirements-HumanName" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/HumanName" />
+    <name value="Information requirements for HumanName" />
+  </mapping>
+  <mapping>
+    <identity value="lm-HumanName" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/HumanName" />
+    <name value="Logical model for HumanName" />
   </mapping>
   <mapping>
     <identity value="zib-nameinformation-v1.1-2020EN" />
@@ -150,7 +155,7 @@
       </extension>
       <path value="HumanName.use" />
       <mapping>
-        <identity value="GBB-HumanName-v0.1" />
+        <identity value="lm-HumanName" />
         <map value="gbb-dataelement-15" />
         <comment value="Use" />
       </mapping>
@@ -211,7 +216,7 @@
         <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
       </mapping>
       <mapping>
-        <identity value="GBB-HumanName-v0.1" />
+        <identity value="lm-HumanName" />
         <map value="gbb-dataelement-2" />
         <comment value="FullName" />
       </mapping>
@@ -262,7 +267,7 @@
         <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
       </mapping>
       <mapping>
-        <identity value="GBB-HumanName-v0.1" />
+        <identity value="lm-HumanName" />
         <map value="gbb-dataelement-3" />
         <comment value="FullFamily" />
       </mapping>
