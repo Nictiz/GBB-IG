@@ -16,7 +16,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A place where services are provided and resources and participants may be stored, found, contained, or accommodated" />
+  <description value="A location includes both temporary locations (a place used for healthcare without prior designation or authorisation) and special, formally designated locations. Locations may be private, public, mobile or fixed, and vary in size from small freezers to entire hospital buildings or multi-storey car parks." />
   <purpose value="This profile is the FHIR implementation of the general building block [Location](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Location)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
