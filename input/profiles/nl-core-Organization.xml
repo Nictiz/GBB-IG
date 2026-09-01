@@ -21,9 +21,14 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Organization-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Organization-model" />
-    <name value="Dataset GBB-Organization-v0.1" />
+    <identity value="requirements-Organization" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Organization" />
+    <name value="Information requirements for Organization" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Organization" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Organization" />
+    <name value="Logical model for Organization" />
   </mapping>
   <mapping>
     <identity value="zib-healthcareprovider-v3.4-2020EN" />
@@ -41,6 +46,7 @@
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.1" />
+        <comment value="HealthcareProvider" />
       </mapping>
     </element>
     <element id="Organization.identifier">
@@ -116,7 +122,7 @@
             <valueCode value="current" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
+            <valueUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000" />
           </extension>
           <extension url="documentation">
             <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
@@ -125,7 +131,7 @@
         <strength value="preferred" />
       </binding>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-306" />
         <comment value="Type" />
       </mapping>
@@ -159,6 +165,62 @@
         <comment value="OrganizationName" />
       </mapping>
     </element>
+    <element id="Organization.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Organization.telecom" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+      </type>
+      <mapping>
+        <identity value="lm-Organization" />
+        <map value="gbb-dataelement-372" />
+        <comment value="Telecom" />
+      </mapping>
+    </element>
+    <element id="Organization.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Organization.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
+      </type>
+      <mapping>
+        <identity value="lm-Organization" />
+        <map value="gbb-dataelement-371" />
+        <comment value="Address" />
+      </mapping>
+    </element>
     <element id="Organization.partOf">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -182,89 +244,9 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Organization-v0.1" />
+        <identity value="lm-Organization" />
         <map value="gbb-dataelement-378" />
         <comment value="partOf" />
-      </mapping>
-    </element>
-    <element id="Organization.contact">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Organization.contact" />
-      <mapping>
-        <identity value="GBB-Organization-v0.1" />
-        <map value="gbb-dataelement-369" />
-        <comment value="contact person" />
-      </mapping>
-    </element>
-    <element id="Organization.contact.telecom">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Organization.contact.telecom" />
-      <type>
-        <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
-      </type>
-      <mapping>
-        <identity value="GBB-Organization-v0.1" />
-        <map value="gbb-dataelement-372" />
-        <comment value="contact.telecom" />
-      </mapping>
-    </element>
-    <element id="Organization.contact.address">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Organization.contact.address" />
-      <type>
-        <code value="Address" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
-      </type>
-      <mapping>
-        <identity value="GBB-Organization-v0.1" />
-        <map value="gbb-dataelement-371" />
-        <comment value="contact.address" />
       </mapping>
     </element>
   </differential>
