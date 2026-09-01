@@ -49,7 +49,7 @@
         <severity value="error"/>
         <human value="identifier or name SHALL be present"/>
         <expression value="identifier.exists() or name.exists()"/>
-        <source value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu"/>
+        <source value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner"/>
       </constraint>
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
