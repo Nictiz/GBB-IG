@@ -18,13 +18,19 @@
       <use value="work" />
     </telecom>
   </contact>
-  <purpose value="This profile is the FHIR implementation of the general building block [Practitioner]()." />
+  <description value="A health professional is a person who is authorized to perform actions in the field of individual healthcare." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Practitioner](http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Practitioner-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Practitioner-model" />
-    <name value="Dataset GBB-Practitioner-v0.1" />
+    <identity value="requirements-Practitioner" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Practitioner" />
+    <name value="Information requirements for Practitioner" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Practitioner" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Practitioner" />
+    <name value="Logical model for Practitioner" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -249,6 +255,7 @@
       <alias value="Geslacht" />
       <binding>
         <strength value="required" />
+        <description value="In addition to a coding from this ValueSet, the corresponding coding from the FHIR base ValueSet SHALL be communicated. The ConceptMap &lt;[http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender]&gt; can be used to relate these two ValueSets" />
         <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
