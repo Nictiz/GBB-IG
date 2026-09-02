@@ -261,8 +261,9 @@ class ValueSetDownloader {
 
 class ExcelConvertor {
   static sheetConcept        = "Concept";
+  static sheetConceptEn      = "Concept (En)";
   static sheetRequirements   = "Informatiebehoefte";
-  static sheetRequirementsEn = "Informatiebehoefte (Eng)";
+  static sheetRequirementsEn = "Informatiebehoefte (En)";
   
   static colNumber         = "Nummer";
   static colName           = "Naam";
@@ -417,16 +418,18 @@ class ExcelConvertor {
     console.log(`Wrote ${outputFile}`);
   }
 
-  convertConceptPage(outputFolder) {
-    const rows = this.#getRows(ExcelConvertor.sheetConcept);
+  convertConceptPage(en = false) {
+    const rows = en ? this.#getRows(ExcelConvertor.sheetConceptEn) : this.#getRows(ExcelConvertor.sheetConcept);
     if (rows == null) return;
 
+    const colField      = en ? ExcelConvertor.colFieldEn      : ExcelConvertor.colField;
+    const colDefinition = en ? ExcelConvertor.colDefinitionEn : ExcelConvertor.colDefinition;
     const markdown = rows
-      .filter(row => this.#cell(row, ExcelConvertor.colField) != ExcelConvertor.textADId)
-      .map(row => { return this.#cell(row, ExcelConvertor.colField) + "\n: " + this.#cell(row, ExcelConvertor.colDefinition); })
+      .filter(row => this.#cell(row, colField) != ExcelConvertor.textADId)
+      .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
       .join("\n\n");
 
-    const outputFile = path.join(this.targetFolders.get("PageContent"), this.fileRoot + "-Concept.md");
+    const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${en ? "en" : "nl"}.md`);
     fs.writeFileSync(outputFile, markdown, "utf8");
     console.log(`Wrote ${outputFile}`);
   }
@@ -564,7 +567,8 @@ async function main() {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
     if (createRequirements) {
       convertor.convertRequirements();
-      convertor.convertConceptPage();
+      convertor.convertConceptPage(false);
+      convertor.convertConceptPage(true);
     }
 
     if (downloadLogicalModels) {

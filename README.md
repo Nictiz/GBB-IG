@@ -52,7 +52,7 @@ For each generic building block, a landing page needs to be created. This is don
 
 In this file, the following line should be created:
 
-> {% include_relative [English building block name]-Concept.md %}
+> {% include_relative [English building block name]-Concept-nl.md %}
 
 This includes the concept definitions authored using the Excel file (see next section). Other narrative content can be placed below.
 
@@ -77,15 +77,6 @@ FHIR materials can be added manually, using the following folders:
 * input/profiles: for profiles and extensions
 * input/vocabulary: for ValueSet, CodeSystem, NamingSystem and ConceptMap resources
 * input/resources: for example materials and other resources
-
-### Translations
-The IG is a multilingual IG, in both Dutch and English. The primary language is Dutch, all English content is seen as a translation.
-
-Translations can come from different sources:
-
-* Content in ART-DECOR should be translated in ART-DECOR itself. Translations will be exported together with the content.
-* All narrative content in Markdown can be translated by adding a file with the same name as the original to "input/translations/en/pagecontent".
-* Translations of the requirements are still to be determined.
 
 ### Menu
 The menu is maintained from the file `sushi-config.yaml`. It contains an entry called "menu", and underneath that and entry called "Building blocks".
@@ -116,6 +107,29 @@ menu:
   ...
 ```
 Other entries may be added if desired, or entries may be left out if they are not ready yet.
+
+## Translations
+The IG is a multilingual IG, in both Dutch and English. The primary language is Dutch, all English content is seen as a translation.
+
+Translations can come from different sources.
+
+### Content in ART-DECOR
+Content in ART-DECOR should be translated in ART-DECOR itself. Translations will be exported together with the content.
+
+### Translations from the Excel file
+The Excel file is used as the source of truth for the concept description ("Concept" tab) and the information requirements ("Informatiebehoefte" tab). The English translations should also come from this Excel file:
+
+* The English version of the concept description should be on a tab named "Concept (en)". All predefined fields should be exactly as they are in the Excel template.
+* The English version of the requirements should be on a tab named "Informatiebehoefte (en)". All header names should be kept exactly as they are in the Excel template. In addition, all requirement numbers should match the numbers on the Dutch tab.
+
+### Narrative content
+All narrative content in Markdown can be translated by adding a file with the same name as the original to "input/translations/en/pagecontent".
+
+For the landing page of the bouwblok, the include at the beginning should be changed to:
+
+> {% include_relative [English building block name]-Concept-en.md %}
+
+This ensures that the English concept page (generated from the Excel) is included.
 
 ## FHIR quality control
 
