@@ -260,8 +260,9 @@ class ValueSetDownloader {
 }
 
 class ExcelConvertor {
-  static sheetConcept      = "Concept";
-  static sheetRequirements = "Informatiebehoefte";
+  static sheetConcept        = "Concept";
+  static sheetRequirements   = "Informatiebehoefte";
+  static sheetRequirementsEn = "Informatiebehoefte (Eng)";
   
   static colNumber         = "Nummer";
   static colName           = "Naam";
@@ -272,7 +273,17 @@ class ExcelConvertor {
   static colSource         = "Herkomst";
   static colField          = "Veld";
   static colDefinition     = "Beschrijving";
-  
+
+  static colNumberEn       = "Number";
+  static colNameEn         = "Name";
+  static colDescriptionEn  = "Description";
+  static colVariabilityEn  = "Variability";
+  static colPresenceEn     = "Presence";
+  static colTempEn         = "History/present/future";
+  static colSourceEn       = "Source";
+  static colFieldEn        = "Field";
+  static colDefinitionEn   = "Description";
+
   static textADId          = "ART-DECOR-id";
 
   static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
@@ -295,12 +306,102 @@ class ExcelConvertor {
     return value ? `**${label}**: ${value}` : null;
   }
 
+  #getStatements(canonical) {
+    const rows = this.#getRows(ExcelConvertor.sheetRequirements);
+    if (rows == null) return;
+
+    const rowsEn = this.#getRows(ExcelConvertor.sheetRequirementsEn);
+
+    let statements = [];
+    for (const row of rows) {
+      const number = this.#cell(row, ExcelConvertor.colNumber);
+      if (!number) continue;
+
+      const rowEn = rowsEn ? rowsEn.find(row => this.#cell(row, ExcelConvertor.colNumberEn) == number) : null;
+            
+      const parentNumber = number.includes(".")
+        ? number.split(".").slice(0, -1).join(".")
+        : null;
+
+      const label = this.#cell(row, ExcelConvertor.colName);
+      const labelEn = rowEn ? this.#cell(rowEn, ExcelConvertor.colNameEn) : "";
+
+      const requirementText = [
+        this.paragraph(ExcelConvertor.colDescription, this.#cell(row, ExcelConvertor.colDescription)),
+        this.paragraph(ExcelConvertor.colVariability, this.#cell(row, ExcelConvertor.colVariability)),
+        this.paragraph(ExcelConvertor.colPresence,    this.#cell(row, ExcelConvertor.colPresence)),
+        this.paragraph(ExcelConvertor.colTemp,        this.#cell(row, ExcelConvertor.colTemp))
+      ].filter(Boolean).join("\n\n");
+
+      let requirementTextEn = null;
+      if (rowEn) {
+        requirementTextEn = [
+          this.paragraph(ExcelConvertor.colDescriptionEn, this.#cell(rowEn, ExcelConvertor.colDescriptionEn)),
+          this.paragraph(ExcelConvertor.colVariabilityEn, this.#cell(rowEn, ExcelConvertor.colVariabilityEn)),
+          this.paragraph(ExcelConvertor.colPresenceEn,    this.#cell(rowEn, ExcelConvertor.colPresenceEn)),
+          this.paragraph(ExcelConvertor.colTempEn,        this.#cell(rowEn, ExcelConvertor.colTempEn))
+        ].filter(Boolean).join("\n\n");       
+      }
+
+      let statement = {
+        extension: [
+          {
+            url: "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+            valueBoolean: false
+          }
+        ],
+        key: number,
+        label: label
+      }
+      statement = this.#addTranslationExtension(statement, "label", "en", "string", labelEn);
+      statement.requirement = requirementText || "(geen requirementtekst)";
+      statement = this.#addTranslationExtension(statement, "requirement", "en", "Markdown", requirementTextEn);
+
+      if (parentNumber) {
+        statement.parent = `${canonical}#${parentNumber}`;
+      }
+
+      const source = this.#cell(row, ExcelConvertor.colSource);
+      if (source) {
+        statement.source = [{ display: source }];
+      }
+
+      statements.push(statement);
+    
+    }
+
+    return statements;
+  }
+
+  #addTranslationExtension(statement, elementName, language, dataType, value) {
+    if (!value) return statement;
+
+    dataType = dataType.charAt(0).toUpperCase() + dataType.slice(1).toLowerCase();
+    let content = {
+      "url": "content",
+    }
+    content["value" + dataType] = value;
+
+    statement["_" + elementName] = {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/translation",
+          "extension": [
+            {
+              "url": "lang",
+              "valueCode": language
+            },
+            content
+          ]
+        }
+      ]
+    }
+    return statement;
+  }
+
   convertRequirements() {
     const id = this.fileRoot;
     const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
-
-    const rows = this.#getRows(ExcelConvertor.sheetRequirements);
-    if (rows == null) return;
 
     const requirements = {
       resourceType: "Requirements",
@@ -308,47 +409,7 @@ class ExcelConvertor {
       language: "nl",
       url: canonical,
       status: "active",
-      statement: rows
-        .filter(row => this.#cell(row, ExcelConvertor.colNumber) || this.#cell(row, ExcelConvertor.colName))
-        .map(row => {
-          const number = this.#cell(row, ExcelConvertor.colNumber);
-
-          const parentNumber = number.includes(".")
-            ? number.split(".").slice(0, -1).join(".")
-            : null;
-
-          const label = number + " " + this.#cell(row, ExcelConvertor.colName);
-
-          const requirementText = [
-            this.paragraph(ExcelConvertor.colDescription, this.#cell(row, ExcelConvertor.colDescription)),
-            this.paragraph(ExcelConvertor.colVariability, this.#cell(row, ExcelConvertor.colVariability)),
-            this.paragraph(ExcelConvertor.colPresence,    this.#cell(row, ExcelConvertor.colPresence)),
-            this.paragraph(ExcelConvertor.colTemp,        this.#cell(row, ExcelConvertor.colTemp))
-          ].filter(Boolean).join("\n\n");
-
-          const statement = {
-            extension: [
-              {
-                url: "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
-                valueBoolean: false
-              }
-            ],
-            key: number,
-            label: label.trim(),
-            requirement: requirementText || "(geen requirementtekst)"
-          };
-
-          if (parentNumber) {
-            statement.parent = `${canonical}#${parentNumber}`;
-          }
-
-          const source = this.#cell(row, ExcelConvertor.colSource);
-          if (source) {
-            statement.source = [{ display: source }];
-          }
-
-          return statement;
-        })
+      statement: this.#getStatements(canonical)
     };
 
     const outputFile = path.join(this.targetFolders.get("RequirementResources"), "Requirements-" + this.fileRoot + ".json");
@@ -446,7 +507,7 @@ class ExcelConvertor {
   #getRows(sheetName) {
     const sheet = this.workbook.Sheets[sheetName];
     if (!sheet) {
-      console.warn(`Skipping ${this.inputFile.name}: sheet "${sheetName}" not found`);
+      console.warn(`Skipping sheet "${sheetName}" in ${this.inputFile.name}: not found`);
       return null;
     }
 
