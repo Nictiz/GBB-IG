@@ -68,6 +68,7 @@ parameters:
   - 'generated/requirements'
   - 'generated/logicalmodels'
   - 'generated/vocabulary'
+  - 'generated/resources'
   path-pages:
   - 'generated/pagecontent' # This doesn't produce any page, but it includes the generated file in the build tree where Jekyll can find it.
   i18n-default-lang: nl
@@ -75,7 +76,8 @@ parameters:
   translation-sources:
   - 'input/translations/en'
   - 'input/translations/nl'
-  #no-narrative: "Requirements/*" # Narrative generation for requirements ends in NPE
+  logging: 'progress'
+  path-liquid-template: 'template/liquid'
 
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -89,6 +91,8 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Achtergrondinformatie:
+    Obligations: obligations.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |

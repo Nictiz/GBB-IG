@@ -45,3 +45,6 @@ steps:
   validate examples:
     description: Validate examples using the generic FHIR validation rules
     patterns: examples
+  check obligations against the logical models:
+    patterns: nl-core profiles
+    script: check-obligations.sh
