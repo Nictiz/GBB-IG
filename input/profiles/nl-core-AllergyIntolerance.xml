@@ -32,9 +32,19 @@
     <name value="Information requirements for AllergyIntolerance" />
   </mapping>
   <mapping>
+    <identity value="requirements-Reaction" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Reaction" />
+    <name value="Information requirements for Reaction" />
+  </mapping>
+  <mapping>
     <identity value="lm-AllergyIntolerance" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/AllergyIntolerance-model" />
+    <uri value="http://nictiz.nl/gbb/StructureDefinition/AllergyIntolerance-model" />
     <name value="Logical model for AllergyIntolerance" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Reaction" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Reaction" />
+    <name value="Logical model for Reaction" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -465,11 +475,11 @@
       <short value="Reaction event summary" />
       <alias value="Reactie" />
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="EU-09" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-09-01" />
       </mapping>
       <mapping>
@@ -512,7 +522,7 @@
         <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1" />
       </binding>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-06-02" />
       </mapping>
       <mapping>
@@ -556,11 +566,11 @@
                   value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug"/>
       </binding>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="EU-10" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-10-01" />
       </mapping>
       <mapping>
@@ -606,15 +616,15 @@
           value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
       </binding>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="EU-11" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-11-01" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-11-02" />
       </mapping>
       <mapping>
@@ -644,7 +654,7 @@
       <short value="Reaction description" />
       <alias value="ReactieBeschrijving" />
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-04-02" />
       </mapping>
       <mapping>
@@ -674,11 +684,11 @@
       <short value="Onset of reaction" />
       <alias value="ReactieDatumTijd" />
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="EU-13" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-13-02" />
       </mapping>
       <mapping>
@@ -708,15 +718,15 @@
       <short value="Severity of reaction" />
       <alias value="Ernst" />
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="EU-12" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-12-01" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-12-02" />
       </mapping>
       <mapping>
@@ -760,7 +770,7 @@
           value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"/>
       </binding>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-20" />
       </mapping>
       <mapping>
@@ -791,7 +801,7 @@
       <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
       <alias value="Opmerking" />
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
+        <identity value="requirements-Reaction" />
         <map value="NL-04-04" />
       </mapping>
       <mapping>
