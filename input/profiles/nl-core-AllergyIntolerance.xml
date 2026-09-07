@@ -526,7 +526,7 @@
         <map value="NL-06-02" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.mateVanZekerheid" />
       </mapping>
     </element>
@@ -628,7 +628,7 @@
         <map value="NL-11-02" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.manifestatieVanReactie" />
       </mapping>
     </element>
@@ -658,7 +658,7 @@
         <map value="NL-04-02" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.reactieBeschrijving" />
       </mapping>
     </element>
@@ -692,7 +692,7 @@
         <map value="NL-13-02" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.reactieDatumTijd" />
       </mapping>
     </element>
@@ -730,7 +730,7 @@
         <map value="NL-12-02" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.ernst" />
       </mapping>
     </element>
@@ -774,7 +774,7 @@
         <map value="NL-20" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.wijzeVanBlootstelling" />
       </mapping>
     </element>
@@ -805,7 +805,7 @@
         <map value="NL-04-04" />
       </mapping>
       <mapping>
-        <identity value="lm-AllergyIntolerance" />
+        <identity value="lm-Reaction" />
         <map value="AllergieIntolerantie.reactie.opmerking" />
       </mapping>
     </element>
