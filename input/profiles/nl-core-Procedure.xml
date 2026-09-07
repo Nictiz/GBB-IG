@@ -1,0 +1,823 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="nl-core-Procedure"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+        <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core"/>
+    </extension>
+    <url value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure"/>
+    <name value="NlcoreProcedure"/>
+    <title value="nl core Procedure"/>
+    <status value="draft"/>
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="url" />
+            <value value="https://www.nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="The concept Procedure describes therapeutic or diagnostic procedure undergone by the patient or which the patient will undergo. The concept can describe in the right context historical, future as well as advised procedures.A procedure can be a simple blood pressure measurement, but also a complex heart surgery.In some care settings, the term treatment t is used instead of the term procedure." />
+    <purpose value="This profile is the FHIR implementation of the general building block [Procedure](https://decor.nictiz.nl/ad/#/gbb2026bbr-/scenarios/scenarios/2.16.840.1.113883.2.4.3.11.60.153.4.28/2026-07-15T00%3A00%3A00)." />
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+    <fhirVersion value="4.0.1"/>
+    <mapping>
+        <identity value="requirements-Procedure"/>
+        <uri value="http://nictiz.nl/gbb/Requirements/Procedure"/>
+        <name value="Information requirements for Procedure"/>
+    </mapping>
+    <mapping>
+      <identity value="GBB-Procedure-0.1.0"/>
+      <uri value="http://nictiz.nl/gbb/StructureDefinition/Procedure-model"/>
+      <name value="Dataset GBB-Procedure-0.1.0"/>
+    </mapping>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Procedure"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Procedure.extension:method">
+            <path value="Procedure.extension"/>
+            <sliceName value="method"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/procedure-method"/>
+            </type>
+            <isModifier value="false"/>
+        </element>
+        <element id="Procedure.extension:method.value[x]">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.extension.value[x]"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+                    <extension url="key">
+                        <valueId value="477fdf7f-990d-4a31-bfdf-7f990dba317c"/>
+                    </extension>
+                    <extension url="purpose">
+                        <valueCode value="current"/>
+                    </extension>
+                    <extension url="valueSet">
+                        <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221"/>
+                    </extension>
+                </extension>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="13"/>
+                <comment value="VerrichtingMethode"/>
+            </mapping>
+            <mapping>
+                <identity value="GBB-Procedure-0.1.0"/>
+                <map value="Procedure.Method"/>
+            </mapping>
+        </element>
+        <element id="Procedure.status">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:populate"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:handle"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.status"/>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="9.1"/>
+                <comment value="VerrichtingStatus"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="9.2"/>
+                <comment value="VerrichtingStatusEHDS"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="9.3"/>
+                <comment value="VerrichtingStatusOpenEHR"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.CurrentState"/>
+            </mapping>
+        </element>
+        <element id="Procedure.category">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.category"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+                    <extension url="key">
+                        <valueId value="25b8168f-28a8-45a7-b816-8f28a8d5a7d2"/>
+                    </extension>
+                    <extension url="purpose">
+                        <valueCode value="current"/>
+                    </extension>
+                    <extension url="valueSet">
+                        <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637"/>
+                    </extension>
+                </extension>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="8"/>
+                <comment value="Categorie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ProcedureType"/>
+            </mapping>
+        </element>
+        <element id="Procedure.code">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:populate"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:handle"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.code"/>
+            <min value="1"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+                    <extension url="key">
+                        <valueId value="0cee0758-4315-4e4a-ae07-584315ce4a9a"/>
+                    </extension>
+                    <extension url="purpose">
+                        <valueCode value="current"/>
+                    </extension>
+                    <extension url="valueSet">
+                        <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.6--20260619092106"/>
+                    </extension>
+                </extension>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7--20260619092503"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="4.1"/>
+                <comment value="VerrichtingNaam"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="4.2"/>
+                <comment value="VerrichtingNaamAnders"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ProcedureName"/>
+            </mapping>
+        </element>
+        <element id="Procedure.subject">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:populate"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:handle"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.subject"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+            </type>
+            <mustSupport value="false"/>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="10.1"/>
+                <comment value="VerrichtingSubject"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="10.2"/>
+                <comment value="VerrichtingSubjectOpenEHR"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="10.3"/>
+                <comment value="VerrichtingSubjectEHDS"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Subject.Patient"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performed[x]">
+            <path value="Procedure.performed[x]"/>
+            <slicing>
+                <discriminator>
+                    <type value="type"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+        </element>
+        <element id="Procedure.performed[x]:performedDateTime">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.performed[x]"/>
+            <sliceName value="performedDateTime"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.1"/>
+                <comment value="DatumTijdUitvoering"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performed[x]:performedPeriod">
+            <path value="Procedure.performed[x]"/>
+            <sliceName value="performedPeriod"/>
+            <type>
+                <code value="Period"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.2"/>
+                <comment value="PeriodeUitvoering"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performed[x]:performedPeriod.start">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.performed[x].start"/>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.2"/>
+                <comment value="StartdatumTijdNietAfgerondeVerrichting"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.3"/>
+                <comment value="GeplandeStartdatumTijd"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.StartDateTime"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ScheduledStartDateTime"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performed[x]:performedPeriod.end">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.performed[x].end"/>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.3"/>
+                <comment value="Einddatum"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.EndDateTime"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performed[x]:performedString">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.performed[x]"/>
+            <sliceName value="performedString"/>
+            <type>
+                <code value="string"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.3"/>
+                <comment value="Einddatum"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.1"/>
+                <comment value="DatumTijdUitvoering"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.1.2"/>
+                <comment value="PeriodeUitvoering"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="1.2"/>
+                <comment value="StartdatumTijdNietAfgerondeVerrichting"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performer.actor">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.performer.actor"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="3.1"/>
+                <comment value="ZorgverlenerAlsUitvoerder"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="3.3"/>
+                <comment value="PatientAlsUitvoerder"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="3.4"/>
+                <comment value="ContactpersoonAlsUitvoerder"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.OtherParticipations.Patient"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.OtherParticipations.Practitioner"/>
+            </mapping>
+        </element>
+        <element id="Procedure.performer.onBehalfOf">
+            <path value="Procedure.performer.onBehalfOf"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+            </type>
+        </element>
+        <element id="Procedure.location">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.location"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Location"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="5.1"/>
+                <comment value="ZorginstellingAlsLocatie"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="5.2"/>
+                <comment value="AdresAlsLocatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.HealthcareFacility.Organization"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.HealthcareFacility.AddressInformation"/>
+            </mapping>
+        </element>
+        <element id="Procedure.reasonCode">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.reasonCode"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+                    <extension url="key">
+                        <valueId value="d89219db-45ea-44eb-9219-db45eab4ebaf"/>
+                    </extension>
+                    <extension url="purpose">
+                        <valueCode value="extensible"/>
+                    </extension>
+                    <extension url="valueSet">
+                        <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.19--20260619T114014"/>
+                    </extension>
+                </extension>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27--20260619114424"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="7.1"/>
+                <comment value="Indicatie"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="7.2"/>
+                <comment value="Reden"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Indication"/>
+            </mapping>
+        </element>
+        <element id="Procedure.reasonReference">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.reasonReference"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="7.1"/>
+                <comment value="Indicatie"/>
+            </mapping>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="7.2"/>
+                <comment value="Reden"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Indication"/>
+            </mapping>
+        </element>
+        <element id="Procedure.bodySite">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.bodySite"/>
+            <constraint>
+                <key value="eu-bodysite-1"/>
+                <severity value="error"/>
+                <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both."/>
+                <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()"/>
+                <source value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core"/>
+            </constraint>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="6"/>
+                <comment value="AnatomischeLocatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ProcedureBodySite"/>
+            </mapping>
+        </element>
+        <element id="Procedure.outcome">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.outcome"/>
+            <binding>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22--20260619103341"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="16"/>
+                <comment value="Uitkomst"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Outcome"/>
+      </mapping>
+        </element>
+        <element id="Procedure.complication">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.complication"/>
+            <binding>
+                <strength value="preferred"/>
+                <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28--20260619115050"/>
+            </binding>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="17"/>
+                <comment value="Complicatie"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Complication"/>
+            </mapping>
+        </element>
+        <element id="Procedure.complicationDetail">
+            <path value="Procedure.complicationDetail"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condtion"/>
+            </type>
+        </element>
+        <element id="Procedure.note.text">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.note.text"/>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="18"/>
+                <comment value="Toelichting"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.Comment"/>
+              <comment value="Toelichting"/>
+            </mapping>
+        </element>
+        <element id="Procedure.focalDevice.manipulated">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.focalDevice.manipulated"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Device"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="14"/>
+                <comment value="FocusMedischHulpmiddel"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ProcedureDetail.Device"/>
+            </mapping>
+        </element>
+        <element id="Procedure.usedReference">
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHOULD:populate-if-known"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem"/>
+                </extension>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+                <extension url="code">
+                    <valueCode value="SHALL:no-error"/>
+                </extension>
+                <extension url="actor">
+                    <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem"/>
+                </extension>
+            </extension>
+            <path value="Procedure.usedReference"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+            </type>
+            <mapping>
+                <identity value="requirements-Procedure"/>
+                <map value="15"/>
+                <comment value="GebruiktMedischHulpmiddel"/>
+            </mapping>
+            <mapping>
+              <identity value="GBB-Procedure-0.1.0"/>
+              <map value="Procedure.ProcedureDetail.Device"/>
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>
