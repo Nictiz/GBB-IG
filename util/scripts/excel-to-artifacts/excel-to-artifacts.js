@@ -303,15 +303,54 @@ class ExcelConvertor {
     },
     "v2": {
       "nl": {
-        "title": "Informatie-requirements"
+        "title": "Informatie-requirements",
+        "col": {
+          "number": "Key",
+          "name": "Titel",
+          "description": "Omschrijving",
+          "rationale": "Omschrijving",
+          "variability": "Variabiliteit",
+          "presence": "Aanwezigheid",
+          "context": "Context voor toepassing",
+          "source": "Bron",
+        }
       },
       "en": {
-        "title": "Information requirements"
+        "title": "Information requirements",
+        "col": {
+          "number": "Key",
+          "name": "Titel",
+          "description": "Omschrijving",
+          "rationale": "Rationale",
+          "variability": "Variabiliteit",
+          "presence": "Aanwezigheid",
+          "context": "Context for use",
+          "source": "Source",
+        }
+      }
+    }
+  }
+
+  static structSources = {
+    "v1": {
+      "nl": {
+        "title": null
+      }
+    },
+    "v2": {
+      "nl": {
+        "title": "Bronnen",
+        "col": {
+          "key": "Afkorting / abbreviation",
+          "name": "Naam / name",
+          "version": "Versie / version",
+          "url": "Verwijzing (URL) / Reference (URL)"
+        }
       }
     }
   }
   
-  static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
+  static adProjectUrl = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
 
   constructor(inputFile, targetFolders, valueSetDownloader) {
     this.inputFile = inputFile;
@@ -324,6 +363,7 @@ class ExcelConvertor {
       console.warn(`Excel file ${inputFile} doesn't conform to the template. Skipping further processing.`)
     }
 
+    this.sources = this.#getSources();
     this.targetFolders = targetFolders;
     this.valueSetDownloader = valueSetDownloader;
   }
@@ -352,6 +392,13 @@ class ExcelConvertor {
       .filter(row => this.#cell(row, colField) != struct["key"]["ADId"])
       .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
       .join("\n\n");
+
+    if (this.templateVersion == "v2" && Object.keys(this.sources).length > 0) {
+      markdown += ExcelConvertor.structSources[this.templateVersion][language]["conceptHeader"] + "\n:";
+      markdown += Object.entrie(this.sources)
+        .map((key, value) => `* [${value.name} ${value.version}](${value.url})${value.remarks ? " (" + value.remarks + ")" : ""}`)
+        .join("\n");
+    }
 
     const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${en ? "en" : "nl"}.md`);
     fs.writeFileSync(outputFile, markdown, "utf8");
@@ -456,10 +503,10 @@ class ExcelConvertor {
   #getStatements(canonical) {
     const structNl = ExcelConvertor.structRequirements[this.templateVersion]["nl"];
     const structEn = ExcelConvertor.structRequirements[this.templateVersion]["en"];
-    const rowsNl = this.#getRows(structNl["title"]);
+    const rowsNl = this.#getRows(structNl.title);
     if (rowsNl == null) return;
 
-    const rowsEn = this.#getRows(structEn["title"]);
+    const rowsEn = this.#getRows(structEn.title);
 
     let statements = [];
     for (const row of rowsNl) {
@@ -475,21 +522,16 @@ class ExcelConvertor {
       const label = this.#cell(row, structNl.col.name);
       const labelEn = rowEn ? this.#cell(rowEn, structEn.col.name) : "";
 
-      const requirementText = [
-        this.paragraph(structNl.col.description, this.#cell(row, structNl.col.description)),
-        this.paragraph(structNl.col.variability, this.#cell(row, structNl.col.variability)),
-        this.paragraph(structNl.col.presence,    this.#cell(row, structNl.col.presence)),
-        this.paragraph(structNl.col.temp,        this.#cell(row, structNl.col.temp))
-      ].filter(Boolean).join("\n\n");
+      let requirementText = "";
+      if (this.templateVersion == "v1") {
+        requirementText = this.#createBodyText(row, [structNl.col.description, structNl.col.variability, structNl.col.presence, structNl.col.temp]);
+      } else {
+        requirementText = this.#createBodyText(row, [structNl.col.description, structNl.col.rationale, structNl.col.variability, structNl.col.presence, structNl.col.context]);
+      }
 
       let requirementTextEn = null;
       if (rowEn) {
-        requirementTextEn = [
-        this.paragraph(structEn.col.description, this.#cell(row, structEn.col.description)),
-        this.paragraph(structEn.col.variability, this.#cell(row, structEn.col.variability)),
-        this.paragraph(structEn.col.presence,    this.#cell(row, structEn.col.presence)),
-        this.paragraph(structEn.col.temp,        this.#cell(row, structEn.col.temp))
-        ].filter(Boolean).join("\n\n");       
+        requirementText = this.#createBodyText(row, [structEn.col.description, structEn.col.rationale, structEn.col.variability, structEn.col.presence, structEn.col.context]);
       }
 
       let statement = {
@@ -503,23 +545,39 @@ class ExcelConvertor {
         label: label
       }
       statement = this.#addTranslationExtension(statement, "label", "en", "string", labelEn);
-      statement.requirement = requirementText || "(geen requirementtekst)";
+      statement.requirement = requirementText;
       statement = this.#addTranslationExtension(statement, "requirement", "en", "Markdown", requirementTextEn);
 
       if (parentNumber) {
         statement.parent = `${canonical}#${parentNumber}`;
       }
 
-      const source = this.#cell(row, ExcelConvertor.colSource);
+      // Source gets abused a bit, as it is not truly a reference of cource
+      const source = this.#cell(row, structNl.col.source);
       if (source) {
-        statement.source = [{ display: source }];
-      }
+        if (this.templateVersion == "v1") {
+          statement.source = [{ display: source }];
+        } else {
+          const reference = this.sources[source];
+          statement.source = [{
+            "reference": reference.url,
+            "display": reference.name + " " + reference.version
+          }]
+        }
+      }   
 
       statements.push(statement);
     
     }
 
     return statements;
+  }
+
+  #createBodyText(row, columns) {
+    return columns
+      .map(col => this.paragraph(col, this.#cell(row, col)))
+      .filter(Boolean)
+      .join("\n\n");
   }
 
   #addTranslationExtension(statement, elementName, language, dataType, value) {
@@ -546,6 +604,33 @@ class ExcelConvertor {
       ]
     }
     return statement;
+  }
+
+  #getSources() {
+    if (this.templateVersion != "v2") return {};
+    const struct = ExcelConvertor.structSources[version]["nl"];
+    const rows = this.#getRows(struct.title);
+    if (rows == null) return {};
+
+    let sources = {};
+
+    for (const row of rows) {
+      const key = this.#cell(row, struct.col.key);
+      if (key == null) continue;
+
+      if (key in sources) {
+        console.log(`Duplicate source "${source}" found!`);
+      }
+
+      sources[key] = {
+        "name": this.#cell(row, struct.col.name),
+        "version": this.#cell(row, struct.col.version),
+        "url": this.#cell(row, struct.col.url),
+        "remarks": this.#cell(row, struct.col.remarks)
+      }
+    }
+
+    return sources;
   }
 
   #getBindingValueSetCanonicals(structureDefinition) {
