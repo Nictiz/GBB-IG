@@ -658,7 +658,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
-        <map value="nlps-dataelement-35" />
+        <map value="nlps-dataelement-172" />
         <comment value="Period" />
       </mapping>
     </element>
