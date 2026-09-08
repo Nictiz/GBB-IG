@@ -261,90 +261,118 @@ class ValueSetDownloader {
 
 class ExcelConvertor {
   static structConcept = {
-    "v1": {
-      "nl": {
-        "title": "Concept",
-        "col": {
-          "field": "Veld",
-          "description": "Beschrijving"
+    v1: {
+      nl: {
+        sheet: "Concept",
+        col: {
+          field: "Veld",
+          description: "Beschrijving"
+        },
+        key: {
+          ADId: "ART-DECOR-id"
         }
       },
-      "en": {
-        "title": null
+      en: {
+        sheet: null
       }
     },
-    "v2": {
-      "nl": {
-        "title": "Concept"
+    v2: {
+      nl: {
+        sheet: "Concept",
+        col: {
+          field: "Veld",
+          description: "Invulling"
+        },
+        key: {
+          ADId: "ART-DECOR-id",
+          code: "Bouwblokcode"
+        },
+        title: {
+          sources: "Bronnen"
+        }
       },
-      "en": {
-        "title": "Concept (ENG)"
+      en: {
+        sheet: "Concept (ENG)",
+        col: {
+          field: "Field",
+          description: "Input"
+        },
+        key: {
+          ADId: "ART-DECOR-id",
+          code: "Building block code"
+        },
+        title: {
+          sources: "Sources"
+        }
       }
     }
   }
 
   static structRequirements = {
-    "v1": {
-      "nl": {
-        "title": "Informatiebehoefte",
-        "col": {
-          "number": "Nummer",
-          "name": "Naam",
-          "description": "Omschrijving",
-          "variability": "Variabiliteit",
-          "presence": "Aanwezigheid",
-          "temp": "Verleden/heden/toekomst",
-          "source": "Herkomst",
+    v1: {
+      nl: {
+        sheet: "Informatiebehoefte",
+        col: {
+          number: "Nummer",
+          name: "Naam",
+          description: "Omschrijving",
+          variability: "Variabiliteit",
+          presence: "Aanwezigheid",
+          temp: "Verleden/heden/toekomst",
+          source: "Herkomst",
         },
-        "key": {
-          "ADId": "ART-DECOR-id"
-        }
-      }
-    },
-    "v2": {
-      "nl": {
-        "title": "Informatie-requirements",
-        "col": {
-          "number": "Key",
-          "name": "Titel",
-          "description": "Omschrijving",
-          "rationale": "Omschrijving",
-          "variability": "Variabiliteit",
-          "presence": "Aanwezigheid",
-          "context": "Context voor toepassing",
-          "source": "Bron",
+        key: {
+          ADId: "ART-DECOR-id"
         }
       },
-      "en": {
-        "title": "Information requirements",
-        "col": {
-          "number": "Key",
-          "name": "Titel",
-          "description": "Omschrijving",
-          "rationale": "Rationale",
-          "variability": "Variabiliteit",
-          "presence": "Aanwezigheid",
-          "context": "Context for use",
-          "source": "Source",
+      en: {
+        sheet: null
+      }
+    },
+    v2: {
+      nl: {
+        sheet: "Informatie-requirements",
+        col: {
+          number: "Key",
+          name: "Titel",
+          description: "Omschrijving",
+          rationale: "Onderbouwing",
+          variability: "Variabiliteit",
+          presence: "Aanwezigheid",
+          context: "Context voor toepassing",
+          source: "Bron",
+        }
+      },
+      en: {
+        sheet: "Information requirements (ENG)",
+        col: {
+          number: "Key",
+          name: "Title",
+          description: "Description",
+          rationale: "Rationale",
+          variability: "Variability",
+          presence: "Presence",
+          context: "Context for use",
+          source: "Source",
         }
       }
     }
   }
 
   static structSources = {
-    "v1": {
-      "nl": {
-        "title": null
+    v1: {
+      nl: {
+        sheet: null
       }
     },
-    "v2": {
-      "nl": {
-        "title": "Bronnen",
-        "col": {
-          "key": "Afkorting / abbreviation",
-          "name": "Naam / name",
-          "version": "Versie / version",
-          "url": "Verwijzing (URL) / Reference (URL)"
+    v2: {
+      nl: {
+        sheet: "Bronnen",
+        col: {
+          key: "Afkorting / abbreviation",
+          name: "Naam / name",
+          version: "Versie / version",
+          url: "Verwijzing (URL) / Reference (URL)"
         }
       }
     }
@@ -377,30 +405,28 @@ class ExcelConvertor {
   }
 
   convertConceptPage(language) {
-    const struct = ExcelConvertor.structConcept[language];
-    const sheetTitle = struct["title"];
-    if (sheetTitle) {
-      const rows = this.#getRows(sheetTitle);
-      if (rows == null) return;
-    } else {
-      return;
-    }
+    const struct = ExcelConvertor.structConcept[this.templateVersion][language];
+    const sheetTitle = struct.sheet;
+    if (!sheetTitle) return;
+    const rows = this.#getRows(sheetTitle);
+    if (rows == null) return;
 
-    const colField      = struct["col"]["field"];
-    const colDefinition = struct["col"]["description"];
-    const markdown = rows
-      .filter(row => this.#cell(row, colField) != struct["key"]["ADId"])
+    const colField      = struct.col.field;
+    const colDefinition = struct.col.description;
+    let markdown = rows
+      .filter(row => this.#cell(row, colField) != struct.key.ADId)
+      .filter(row => this.#cell(row, colField) != struct.key.code)
       .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
       .join("\n\n");
 
     if (this.templateVersion == "v2" && Object.keys(this.sources).length > 0) {
-      markdown += ExcelConvertor.structSources[this.templateVersion][language]["conceptHeader"] + "\n:";
-      markdown += Object.entrie(this.sources)
-        .map((key, value) => `* [${value.name} ${value.version}](${value.url})${value.remarks ? " (" + value.remarks + ")" : ""}`)
+      markdown += "\n\n" + struct.title.sources + "\n:\n";
+      markdown += Object.entries(this.sources)
+        .map(([key, value]) => `* [${value.name} ${value.version}](${value.url})${value.remarks ? " (" + value.remarks + ")" : ""}`)
         .join("\n");
     }
 
-    const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${en ? "en" : "nl"}.md`);
+    const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${language}.md`);
     fs.writeFileSync(outputFile, markdown, "utf8");
     console.log(`Wrote ${outputFile}`);
   }
@@ -464,7 +490,7 @@ class ExcelConvertor {
 
   #getTemplateVersion() {
     for (const version of ["v1", "v2"]) {
-      const sheet = this.workbook.Sheets[ExcelConvertor.StructRequirements[version]["nl"]["title"]];
+      const sheet = this.workbook.Sheets[ExcelConvertor.structRequirements[version]["nl"]["sheet"]];
       if (sheet) {
         return version;
       }
@@ -503,18 +529,19 @@ class ExcelConvertor {
   #getStatements(canonical) {
     const structNl = ExcelConvertor.structRequirements[this.templateVersion]["nl"];
     const structEn = ExcelConvertor.structRequirements[this.templateVersion]["en"];
-    const rowsNl = this.#getRows(structNl.title);
+    const rowsNl = this.#getRows(structNl.sheet);
     if (rowsNl == null) return;
 
-    const rowsEn = this.#getRows(structEn.title);
+    const rowsEn = structEn.sheet ? this.#getRows(structEn.sheet) : null;
 
     let statements = [];
-    for (const row of rowsNl) {
-      const number = this.#cell(row, structNl.row.number);
-      if (!number) continue;
+    for (let i = 0; i < rowsNl.length; i++) {
+      const row = rowsNl[i];
+      const rowEn = rowsEn ? rowsEn[i] : null;
 
-      const rowEn = rowsEn ? rowsEn.find(row => this.#cell(row, structEn.row.number) == number) : null;
-            
+      const number = this.#cell(row, structNl.col.number);
+      if (!number) continue;
+      
       const parentNumber = number.includes(".")
         ? number.split(".").slice(0, -1).join(".")
         : null;
@@ -531,7 +558,7 @@ class ExcelConvertor {
 
       let requirementTextEn = null;
       if (rowEn) {
-        requirementText = this.#createBodyText(row, [structEn.col.description, structEn.col.rationale, structEn.col.variability, structEn.col.presence, structEn.col.context]);
+        requirementTextEn = this.#createBodyText(rowEn, [structEn.col.description, structEn.col.rationale, structEn.col.variability, structEn.col.presence, structEn.col.context]);
       }
 
       let statement = {
@@ -608,8 +635,8 @@ class ExcelConvertor {
 
   #getSources() {
     if (this.templateVersion != "v2") return {};
-    const struct = ExcelConvertor.structSources[version]["nl"];
-    const rows = this.#getRows(struct.title);
+    const struct = ExcelConvertor.structSources[this.templateVersion]["nl"];
+    const rows = this.#getRows(struct.sheet);
     if (rows == null) return {};
 
     let sources = {};
