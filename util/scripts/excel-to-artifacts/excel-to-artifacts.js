@@ -260,33 +260,57 @@ class ValueSetDownloader {
 }
 
 class ExcelConvertor {
-  static sheetConcept        = "Concept";
-  static sheetConceptEn      = "Concept (En)";
-  static sheetRequirements   = "Informatiebehoefte";
-  static sheetRequirementsEn = "Informatiebehoefte (En)";
+  static structConcept = {
+    "v1": {
+      "nl": {
+        "title": "Concept",
+        "col": {
+          "field": "Veld",
+          "description": "Beschrijving"
+        }
+      },
+      "en": {
+        "title": null
+      }
+    },
+    "v2": {
+      "nl": {
+        "title": "Concept"
+      },
+      "en": {
+        "title": "Concept (ENG)"
+      }
+    }
+  }
+
+  static structRequirements = {
+    "v1": {
+      "nl": {
+        "title": "Informatiebehoefte",
+        "col": {
+          "number": "Nummer",
+          "name": "Naam",
+          "description": "Omschrijving",
+          "variability": "Variabiliteit",
+          "presence": "Aanwezigheid",
+          "temp": "Verleden/heden/toekomst",
+          "source": "Herkomst",
+        },
+        "key": {
+          "ADId": "ART-DECOR-id"
+        }
+      }
+    },
+    "v2": {
+      "nl": {
+        "title": "Informatie-requirements"
+      },
+      "en": {
+        "title": "Information requirements"
+      }
+    }
+  }
   
-  static colNumber         = "Nummer";
-  static colName           = "Naam";
-  static colDescription    = "Omschrijving";
-  static colVariability    = "Variabiliteit";
-  static colPresence       = "Aanwezigheid";
-  static colTemp           = "Verleden/heden/toekomst";
-  static colSource         = "Herkomst";
-  static colField          = "Veld";
-  static colDefinition     = "Beschrijving";
-
-  static colNumberEn       = "Number";
-  static colNameEn         = "Name";
-  static colDescriptionEn  = "Description";
-  static colVariabilityEn  = "Variability";
-  static colPresenceEn     = "Presence";
-  static colTempEn         = "History/present/future";
-  static colSourceEn       = "Source";
-  static colFieldEn        = "Field";
-  static colDefinitionEn   = "Description";
-
-  static textADId          = "ART-DECOR-id";
-
   static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
 
   constructor(inputFile, targetFolders, valueSetDownloader) {
@@ -294,8 +318,32 @@ class ExcelConvertor {
     this.fileRoot = path.basename(inputFile.name, path.extname(inputFile.name));
     this.workbook = XLSX.readFile(path.join(inputFile.parentPath, inputFile.name));
 
+    // Figure out the version of the template we're using, as this steers the output
+    this.templateVersion = this.#getTemplateVersion();
+    if (this.templateVersion == null) {
+      console.warn(`Excel file ${inputFile} doesn't conform to the template. Skipping further processing.`)
+    }
+
     this.targetFolders = targetFolders;
     this.valueSetDownloader = valueSetDownloader;
+  }
+
+  createRequirements() {
+    if (this.templateVersion != null) {
+      this.convertConceptPage("nl");
+      this.convertConceptPage("en");
+      this.convertRequirements();
+    }
+  }
+
+  #getTemplateVersion() {
+    for (const version of ["v1", "v2"]) {
+      const sheet = this.workbook.Sheets[ExcelConvertor.StructRequirements[version]["nl"]["title"]];
+      if (sheet) {
+        return version;
+      }
+    }
+    return null;
   }
 
   #cell(row, colName) {
@@ -308,39 +356,41 @@ class ExcelConvertor {
   }
 
   #getStatements(canonical) {
-    const rows = this.#getRows(ExcelConvertor.sheetRequirements);
-    if (rows == null) return;
+    const structNl = ExcelConvertor.structRequirements[this.templateVersion]["nl"];
+    const structEn = ExcelConvertor.structRequirements[this.templateVersion]["en"];
+    const rowsNl = this.#getRows(structNl["title"]);
+    if (rowsNl == null) return;
 
-    const rowsEn = this.#getRows(ExcelConvertor.sheetRequirementsEn);
+    const rowsEn = this.#getRows(structEn["title"]);
 
     let statements = [];
-    for (const row of rows) {
-      const number = this.#cell(row, ExcelConvertor.colNumber);
+    for (const row of rowsNl) {
+      const number = this.#cell(row, structNl.row.number);
       if (!number) continue;
 
-      const rowEn = rowsEn ? rowsEn.find(row => this.#cell(row, ExcelConvertor.colNumberEn) == number) : null;
+      const rowEn = rowsEn ? rowsEn.find(row => this.#cell(row, structEn.row.number) == number) : null;
             
       const parentNumber = number.includes(".")
         ? number.split(".").slice(0, -1).join(".")
         : null;
 
-      const label = this.#cell(row, ExcelConvertor.colName);
-      const labelEn = rowEn ? this.#cell(rowEn, ExcelConvertor.colNameEn) : "";
+      const label = this.#cell(row, structNl.col.name);
+      const labelEn = rowEn ? this.#cell(rowEn, structEn.col.name) : "";
 
       const requirementText = [
-        this.paragraph(ExcelConvertor.colDescription, this.#cell(row, ExcelConvertor.colDescription)),
-        this.paragraph(ExcelConvertor.colVariability, this.#cell(row, ExcelConvertor.colVariability)),
-        this.paragraph(ExcelConvertor.colPresence,    this.#cell(row, ExcelConvertor.colPresence)),
-        this.paragraph(ExcelConvertor.colTemp,        this.#cell(row, ExcelConvertor.colTemp))
+        this.paragraph(structNl.col.description, this.#cell(row, structNl.col.description)),
+        this.paragraph(structNl.col.variability, this.#cell(row, structNl.col.variability)),
+        this.paragraph(structNl.col.presence,    this.#cell(row, structNl.col.presence)),
+        this.paragraph(structNl.col.temp,        this.#cell(row, structNl.col.temp))
       ].filter(Boolean).join("\n\n");
 
       let requirementTextEn = null;
       if (rowEn) {
         requirementTextEn = [
-          this.paragraph(ExcelConvertor.colDescriptionEn, this.#cell(rowEn, ExcelConvertor.colDescriptionEn)),
-          this.paragraph(ExcelConvertor.colVariabilityEn, this.#cell(rowEn, ExcelConvertor.colVariabilityEn)),
-          this.paragraph(ExcelConvertor.colPresenceEn,    this.#cell(rowEn, ExcelConvertor.colPresenceEn)),
-          this.paragraph(ExcelConvertor.colTempEn,        this.#cell(rowEn, ExcelConvertor.colTempEn))
+        this.paragraph(structEn.col.description, this.#cell(row, structEn.col.description)),
+        this.paragraph(structEn.col.variability, this.#cell(row, structEn.col.variability)),
+        this.paragraph(structEn.col.presence,    this.#cell(row, structEn.col.presence)),
+        this.paragraph(structEn.col.temp,        this.#cell(row, structEn.col.temp))
         ].filter(Boolean).join("\n\n");       
       }
 
@@ -418,14 +468,20 @@ class ExcelConvertor {
     console.log(`Wrote ${outputFile}`);
   }
 
-  convertConceptPage(en = false) {
-    const rows = en ? this.#getRows(ExcelConvertor.sheetConceptEn) : this.#getRows(ExcelConvertor.sheetConcept);
-    if (rows == null) return;
+  convertConceptPage(language) {
+    const struct = ExcelConvertor.structConcept[language];
+    const sheetTitle = struct["title"];
+    if (sheetTitle) {
+      const rows = this.#getRows(sheetTitle);
+      if (rows == null) return;
+    } else {
+      return;
+    }
 
-    const colField      = en ? ExcelConvertor.colFieldEn      : ExcelConvertor.colField;
-    const colDefinition = en ? ExcelConvertor.colDefinitionEn : ExcelConvertor.colDefinition;
+    const colField      = struct["col"]["field"];
+    const colDefinition = struct["col"]["description"];
     const markdown = rows
-      .filter(row => this.#cell(row, colField) != ExcelConvertor.textADId)
+      .filter(row => this.#cell(row, colField) != struct["key"]["ADId"])
       .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
       .join("\n\n");
 
@@ -566,9 +622,7 @@ async function main() {
   for (const excelFile of fs.readdirSync(inputFolder, {withFileTypes: true}).filter(file => /\.(xlsx|xlsm|xls)$/i.test(file.name)).filter(file => !file.name.startsWith('~$'))) {
     const convertor = new ExcelConvertor(excelFile, targetFolders, valueSetDownloader);
     if (createRequirements) {
-      convertor.convertRequirements();
-      convertor.convertConceptPage(false);
-      convertor.convertConceptPage(true);
+      convertor.createRequirements();
     }
 
     if (downloadLogicalModels) {
