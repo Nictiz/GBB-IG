@@ -336,6 +336,85 @@ class ExcelConvertor {
     }
   }
 
+  convertConceptPage(language) {
+    const struct = ExcelConvertor.structConcept[language];
+    const sheetTitle = struct["title"];
+    if (sheetTitle) {
+      const rows = this.#getRows(sheetTitle);
+      if (rows == null) return;
+    } else {
+      return;
+    }
+
+    const colField      = struct["col"]["field"];
+    const colDefinition = struct["col"]["description"];
+    const markdown = rows
+      .filter(row => this.#cell(row, colField) != struct["key"]["ADId"])
+      .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
+      .join("\n\n");
+
+    const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${en ? "en" : "nl"}.md`);
+    fs.writeFileSync(outputFile, markdown, "utf8");
+    console.log(`Wrote ${outputFile}`);
+  }
+
+  convertRequirements() {
+    const id = this.fileRoot;
+    const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
+
+    const requirements = {
+      resourceType: "Requirements",
+      id: id,
+      language: "nl",
+      url: canonical,
+      status: "active",
+      statement: this.#getStatements(canonical)
+    };
+
+    const outputFile = path.join(this.targetFolders.get("RequirementResources"), "Requirements-" + this.fileRoot + ".json");
+    fs.writeFileSync(outputFile, JSON.stringify(requirements, null, 2), "utf8");
+    console.log(`Wrote ${outputFile}`);
+  }
+
+  async getLogicalModel() {
+    let rows = this.#getRows(ExcelConvertor.sheetConcept);
+    if (rows == null) return;
+    
+    rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
+    let ad_id = "";
+    if (rows.length == 1) {
+      ad_id = this.#cell(rows[0], ExcelConvertor.colDefinition);
+    }
+    if (ad_id == "") {
+      console.warn(`Skipping logical model for ${this.inputFile.name}: "${ExcelConvertor.textADId}" is empty or absent`);
+      return;
+    } 
+    
+    const id_parts = ad_id.split("/");
+    const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
+    const fetch_url = `${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`;
+    try {
+      const response = await fetch(`${fetch_url}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+
+      const body = await response.json();
+      normalizeResourceLanguages(body);
+      
+      const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
+      fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
+      console.log(`Saved LogicalModel to ${outputFile}`);
+
+      if (this.valueSetDownloader) {
+        await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
+      }
+    } catch (error) {
+      console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR using ${fetch_url}, "${error.message}"`);
+      return;
+    }
+  }
+
   #getTemplateVersion() {
     for (const version of ["v1", "v2"]) {
       const sheet = this.workbook.Sheets[ExcelConvertor.StructRequirements[version]["nl"]["title"]];
@@ -344,6 +423,25 @@ class ExcelConvertor {
       }
     }
     return null;
+  }
+
+  /** Get the rows from the names sheet.
+   *  The header row is assumed to be the second row, in accordance to the template.
+   *  @returns An array of JSON objects, or null if the sheet was not found.
+   */
+  #getRows(sheetName) {
+    const sheet = this.workbook.Sheets[sheetName];
+    if (!sheet) {
+      console.warn(`Skipping sheet "${sheetName}" in ${this.inputFile.name}: not found`);
+      return null;
+    }
+
+    const rows = XLSX.utils.sheet_to_json(sheet, {
+      defval: "",
+      range: 1     // The header row is the second row in the template (row 1)
+    })
+
+    return rows;
   }
 
   #cell(row, colName) {
@@ -450,85 +548,6 @@ class ExcelConvertor {
     return statement;
   }
 
-  convertRequirements() {
-    const id = this.fileRoot;
-    const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
-
-    const requirements = {
-      resourceType: "Requirements",
-      id: id,
-      language: "nl",
-      url: canonical,
-      status: "active",
-      statement: this.#getStatements(canonical)
-    };
-
-    const outputFile = path.join(this.targetFolders.get("RequirementResources"), "Requirements-" + this.fileRoot + ".json");
-    fs.writeFileSync(outputFile, JSON.stringify(requirements, null, 2), "utf8");
-    console.log(`Wrote ${outputFile}`);
-  }
-
-  convertConceptPage(language) {
-    const struct = ExcelConvertor.structConcept[language];
-    const sheetTitle = struct["title"];
-    if (sheetTitle) {
-      const rows = this.#getRows(sheetTitle);
-      if (rows == null) return;
-    } else {
-      return;
-    }
-
-    const colField      = struct["col"]["field"];
-    const colDefinition = struct["col"]["description"];
-    const markdown = rows
-      .filter(row => this.#cell(row, colField) != struct["key"]["ADId"])
-      .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
-      .join("\n\n");
-
-    const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${en ? "en" : "nl"}.md`);
-    fs.writeFileSync(outputFile, markdown, "utf8");
-    console.log(`Wrote ${outputFile}`);
-  }
-
-  async getLogicalModel() {
-    let rows = this.#getRows(ExcelConvertor.sheetConcept);
-    if (rows == null) return;
-    
-    rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
-    let ad_id = "";
-    if (rows.length == 1) {
-      ad_id = this.#cell(rows[0], ExcelConvertor.colDefinition);
-    }
-    if (ad_id == "") {
-      console.warn(`Skipping logical model for ${this.inputFile.name}: "${ExcelConvertor.textADId}" is empty or absent`);
-      return;
-    } 
-    
-    const id_parts = ad_id.split("/");
-    const id_date = id_parts[1].replace(/-/g, "").replace(/:/g, "").replace("T", "");
-    const fetch_url = `${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json&language=en-US`;
-    try {
-      const response = await fetch(`${fetch_url}`);
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
-      }
-
-      const body = await response.json();
-      normalizeResourceLanguages(body);
-      
-      const outputFile = path.join(this.targetFolders.get("LogicalModels"), this.fileRoot + ".json");
-      fs.writeFileSync(outputFile, JSON.stringify(body, null, 2), 'utf8');
-      console.log(`Saved LogicalModel to ${outputFile}`);
-
-      if (this.valueSetDownloader) {
-        await this.valueSetDownloader.downloadAll(this.#getBindingValueSetCanonicals(body));
-      }
-    } catch (error) {
-      console.warn(`Couldn't download logical model for ${this.inputFile.name} from ART-DECOR using ${fetch_url}, "${error.message}"`);
-      return;
-    }
-  }
-
   #getBindingValueSetCanonicals(structureDefinition) {
     const canonicals = new Set();
 
@@ -559,24 +578,6 @@ class ExcelConvertor {
     }
   }
 
-  /** Get the rows from the names sheet.
-   *  The header row is assumed to be the second row, in accordance to the template.
-   *  @returns An array of JSON objects, or null if the sheet was not found.
-   */
-  #getRows(sheetName) {
-    const sheet = this.workbook.Sheets[sheetName];
-    if (!sheet) {
-      console.warn(`Skipping sheet "${sheetName}" in ${this.inputFile.name}: not found`);
-      return null;
-    }
-
-    const rows = XLSX.utils.sheet_to_json(sheet, {
-      defval: "",
-      range: 1     // The header row is the second row in the template (row 1)
-    })
-
-    return rows;
-  }
 }
 
 async function main() {
