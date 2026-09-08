@@ -65,6 +65,10 @@
         <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
       </type>
     </element>
+    <element id="Composition.extension:version.url">
+      <path value="Composition.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version" />
+    </element>
     <element id="Composition.extension:version.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -1269,6 +1273,26 @@
         <map value="nlps-dataelement-142" />
         <comment value="GeneratedNarrative" />
       </mapping>
+    </element>
+    <element id="Composition.section:sectionMedications.entry">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Composition.section.entry" />
+      <comment value="For medication data within NL-PS, the FHIR profiles representing MedicationUse (Medicatiegebruik), including InstructionsForUse (Gebruiksinstructies) and PharmaceuticalProduct (FarmaceutischProduct), from the Medication Process 9 (MP9) information standard, version 3.0.0-rc.x, will be used. These profiles are expected to become EHDS-compliant in the near future and will be incorporated into the NL-PS FHIR specification once available." />
     </element>
     <element id="Composition.section:sectionMedications.emptyReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
