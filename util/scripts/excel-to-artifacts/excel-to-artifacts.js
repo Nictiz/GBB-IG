@@ -450,16 +450,17 @@ class ExcelConvertor {
   }
 
   async getLogicalModel() {
-    let rows = this.#getRows(ExcelConvertor.sheetConcept);
+    const struct = ExcelConvertor.structConcept[this.templateVersion]["nl"];
+    let rows = this.#getRows(struct.sheet);
     if (rows == null) return;
     
-    rows = rows.filter(row => this.#cell(row, ExcelConvertor.colField) == ExcelConvertor.textADId);
+    rows = rows.filter(row => this.#cell(row, struct.col.field) == struct.key.ADId);
     let ad_id = "";
     if (rows.length == 1) {
-      ad_id = this.#cell(rows[0], ExcelConvertor.colDefinition);
+      ad_id = this.#cell(rows[0], struct.col.description);
     }
     if (ad_id == "") {
-      console.warn(`Skipping logical model for ${this.inputFile.name}: "${ExcelConvertor.textADId}" is empty or absent`);
+      console.warn(`Skipping logical model for ${this.inputFile.name}: "${struct.key.ADId}" is empty or absent`);
       return;
     } 
     
