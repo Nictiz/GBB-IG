@@ -5,7 +5,9 @@
   </extension>
   <text>
     <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
+    </div>
   </text>
   <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
   <name value="NlcoreDevice" />
@@ -21,17 +23,17 @@
     </telecom>
   </contact>
   <description value="The concept contains the properties of a variety of implants, devices and aids that are patient-related and support the healthcare process. It covers medical and non-medical devices, ranging from simple aids and implants to equipment and software." />
-  <purpose value="This profile is the FHIR implementation of the general building block [Device]()." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Device](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.11)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Device" />
-    <uri value="http://nictiz.nl/gbb/Requirements/Device" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Device" />
     <name value="Information requirements for Device" />
   </mapping>
   <mapping>
     <identity value="lm-Device" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Device-model" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Device" />
     <name value="Logical model for Device" />
   </mapping>
   <kind value="resource" />
