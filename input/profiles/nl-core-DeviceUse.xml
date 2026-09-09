@@ -46,7 +46,7 @@
       <path value="DeviceUseStatement.language" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-08" />
+        <map value="DEVICEUSE-08" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.identifier">
@@ -70,7 +70,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-04" />
+        <map value="DEVICEUSE-04" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.status">
@@ -94,7 +94,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-01" />
+        <map value="DEVICEUSE-01" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.subject">
@@ -118,7 +118,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-02" />
+        <map value="DEVICEUSE-02" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.timing[x]">
@@ -142,7 +142,15 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-09, NL-09.01, NL-09.02" />
+        <map value="DEVICEUSE-09" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-09.01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-09.02" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.recordedOn">
@@ -166,7 +174,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-06" />
+        <map value="DEVICEUSE-06" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.source">
@@ -190,7 +198,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-07" />
+        <map value="DEVICEUSE-07" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.device">
@@ -214,7 +222,15 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-NL-03.01, NL-03.02" />
+        <map value="DEVICEUSE-03.01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-03.02" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-03.03" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
@@ -238,7 +254,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-NL-11" />
+        <map value="DEVICEUSE-11" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
@@ -262,7 +278,15 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-11.01, NL-11.02, NL-11.03" />
+        <map value="DEVICEUSE-11.01" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-11.02" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-11.03" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
@@ -286,10 +310,14 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-NL-10, EU-NL-10.01" />
+        <map value="DEVICEUSE-10" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-10.01" />
       </mapping>
     </element>
-    <element id="DeviceUseStatement.note">
+    <element id="DeviceUseStatement.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -306,11 +334,11 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
-      <path value="DeviceUseStatement.note" />
+      <path value="DeviceUseStatement.note.text" />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
-        <map value="EU-NL-12" />
+        <map value="DEVICEUSE-12" />
       </mapping>
     </element>
   </differential>
