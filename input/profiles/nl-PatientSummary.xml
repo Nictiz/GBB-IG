@@ -1293,6 +1293,7 @@
       </extension>
       <path value="Composition.section.entry" />
       <comment value="For medication data within NL-PS, the FHIR profiles representing MedicationUse (Medicatiegebruik), including InstructionsForUse (Gebruiksinstructies) and PharmaceuticalProduct (FarmaceutischProduct), from the Medication Process 9 (MP9) information standard, version 3.0.0-rc.x, will be used. These profiles are expected to become EHDS-compliant in the near future and will be incorporated into the NL-PS FHIR specification once available." />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:sectionMedications.emptyReason">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -1315,6 +1316,7 @@
       <short value="EmptyReason" />
       <definition value="Use if no medicines are listed." />
       <alias value="RedenAfwezigheid" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
         <map value="nlps-dataelement-146" />
