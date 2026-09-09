@@ -94,7 +94,11 @@ menu:
   Achtergrondinformatie:
     Obligations: obligations.html
   Bouwblokken:
-    DeviceUse: deviceuse.html
+    MedischHulpmiddel:
+      Overzicht: deviceuse.html
+      Requirements: Requirements-DeviceUse.html
+      Afsprakenmodel: StructureDefinition-DeviceUse-model.html
+      FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
