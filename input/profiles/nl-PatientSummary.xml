@@ -549,7 +549,9 @@
         </extension>
       </extension>
       <path value="Composition.attester.party" />
+      <short value="validator" />
       <definition value="Attester who validated the document." />
+      <alias value="Validator" />
       <min value="1" />
       <type>
         <code value="Reference" />
