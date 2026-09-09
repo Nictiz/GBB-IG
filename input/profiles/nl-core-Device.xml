@@ -65,30 +65,35 @@
       <definition value="An identifier used to identify an instance of a Device." />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-01" />
-        <comment value="Business identification number" />
+        <map value="DEVICE-01" />
+        <comment value="Business identificatienummer" />
       </mapping>
     </element>
     <element id="Device.udiCarrier">
       <path value="Device.udiCarrier" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-02" />
+        <map value="DEVICE-02" />
         <comment value="Unieke identificatie van het device" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-01" />
+        <map value="DEVICE-02.01" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="DEVICE-02.02" />
         <comment value="Wereldwijd unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-02" />
+        <map value="DEVICE-02.03" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-03" />
+        <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
     </element>
@@ -113,22 +118,27 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-02" />
+        <map value="DEVICE-02" />
         <comment value="Unieke identificatie van het device" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-01" />
+        <map value="DEVICE-02.01" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="DEVICE-02.02" />
         <comment value="Wereldwijd unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-02" />
+        <map value="DEVICE-02.03" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-03" />
+        <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
     </element>
@@ -153,22 +163,27 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-02" />
+        <map value="DEVICE-02" />
         <comment value="Unieke identificatie van het device" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-01" />
+        <map value="DEVICE-02.01" />
+        <comment value="Unieke identificatie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="DEVICE-02.02" />
         <comment value="Wereldwijd unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-02" />
+        <map value="DEVICE-02.03" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-03" />
+        <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
     </element>
@@ -193,7 +208,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-03" />
+        <map value="DEVICE-03" />
         <comment value="Fabrieksnaam" />
       </mapping>
     </element>
@@ -218,7 +233,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-04" />
+        <map value="DEVICE-04" />
         <comment value="Productiedatum/tijd" />
       </mapping>
     </element>
@@ -243,8 +258,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-05" />
-        <comment value="Vervaldatum/tijd" />
+        <map value="DEVICE-05" />
+        <comment value="Uiterste gebruiksdatum en -tijd of vervaldatum" />
       </mapping>
     </element>
     <element id="Device.lotNumber">
@@ -268,7 +283,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-06" />
+        <map value="DEVICE-06" />
         <comment value="Lotnummer" />
       </mapping>
     </element>
@@ -293,22 +308,22 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-01" />
+        <map value="DEVICE-02.02" />
         <comment value="Wereldwijd unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-02" />
+        <map value="DEVICE-02.03" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-02-03" />
+        <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-07" />
+        <map value="DEVICE-07" />
         <comment value="Serienummer" />
       </mapping>
     </element>
@@ -333,8 +348,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-08" />
-        <comment value="Naam en type van het device" />
+        <map value="DEVICE-08" />
+        <comment value="Naam van het device" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="DEVICE-09" />
+        <comment value="Universeel herkenbare naam van het device" />
       </mapping>
     </element>
     <element id="Device.deviceName.name">
@@ -358,8 +378,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-08-01" />
-        <comment value="Naam van het device" />
+        <map value="DEVICE-08.01" />
+        <comment value="Herkenbare naam volgens fabrikant of patiënt" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Device" />
+        <map value="DEVICE-08.02" />
+        <comment value="Omschrijving product" />
       </mapping>
     </element>
     <element id="Device.deviceName.type">
@@ -383,8 +408,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-08-03" />
-        <comment value="Type van de devicenaam" />
+        <map value="DEVICE-09" />
+        <comment value="Universeel herkenbare naam van het device" />
       </mapping>
     </element>
     <element id="Device.modelNumber">
@@ -408,7 +433,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-09" />
+        <map value="DEVICE-10" />
         <comment value="Modelnummer van de fabrikant" />
       </mapping>
     </element>
@@ -433,23 +458,23 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-11" />
-        <comment value="Gecodeerde devicetypes in SNOMED CT of EMDN" />
+        <map value="DEVICE-12" />
+        <comment value="Type" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-11-01" />
-        <comment value="Gecodeerde producttypes in SNOMED" />
+        <map value="DEVICE-12.01" />
+        <comment value="Type" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-11-02" />
-        <comment value="Gecodeerde producttypes in SNOMED" />
+        <map value="DEVICE-12.02" />
+        <comment value="Type" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-11-03" />
-        <comment value="Gecodeerde producttypes voor gebruikt hulpmiddel" />
+        <map value="DEVICE-12.03" />
+        <comment value="Type" />
       </mapping>
     </element>
     <element id="Device.version">
@@ -476,11 +501,11 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EU-10" />
-        <comment value="Versie" />
+        <map value="DEVICE-11" />
+        <comment value="Ontwerp- of softwareversie van het device" />
       </mapping>
     </element>
-    <element id="Device.note">
+    <element id="Device.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -497,16 +522,16 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
-      <path value="Device.note" />
+      <path value="Device.note.text" />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
-        <map value="NL-08-02" />
+        <map value="DEVICE-08.02" />
         <comment value="Omschrijving product" />
       </mapping>
       <mapping>
         <identity value="requirements-Device" />
-        <map value="EUNL-12" />
+        <map value="DEVICE-13" />
         <comment value="Toelichting" />
       </mapping>
     </element>
