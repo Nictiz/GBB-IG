@@ -714,6 +714,7 @@
     <element id="Composition.section:sectionProblems.extension:note">
       <path value="Composition.section.extension" />
       <sliceName value="note" />
+      <isModifier value="false" />
     </element>
     <element id="Composition.section:sectionProblems.extension:note.url">
       <path value="Composition.section.extension.url" />
@@ -934,6 +935,7 @@
     <element id="Composition.section:sectionAllergies.extension:note">
       <path value="Composition.section.extension" />
       <sliceName value="note" />
+      <isModifier value="false" />
     </element>
     <element id="Composition.section:sectionAllergies.extension:note.url">
       <path value="Composition.section.extension.url" />
@@ -1640,6 +1642,7 @@
       </extension>
       <path value="Composition.section.title" />
       <short value="Title" />
+      <definition value="The label for this particular section. This will be part of the rendered content for the document, and is often used to build a table of contents." />
       <alias value="Titel" />
       <min value="1" />
       <mustSupport value="true" />
