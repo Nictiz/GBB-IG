@@ -68,6 +68,10 @@
         <map value="DEVICE-01" />
         <comment value="Business identificatienummer" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.identificatienummer" />
+      </mapping>
     </element>
     <element id="Device.udiCarrier">
       <path value="Device.udiCarrier" />
@@ -95,6 +99,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.uniquedeviceidentifierUDI" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.deviceIdentifier">
@@ -141,6 +149,10 @@
         <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.uniquedeviceidentifierUDI.identificatie" />
+      </mapping>
     </element>
     <element id="Device.udiCarrier.issuer">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -186,6 +198,10 @@
         <map value="DEVICE-02.04" />
         <comment value="Unieke identificatie van het product" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie" />
+      </mapping>
     </element>
     <element id="Device.manufacturer">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -210,6 +226,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-03" />
         <comment value="Fabrieksnaam" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.fabrikant" />
       </mapping>
     </element>
     <element id="Device.manufactureDate">
@@ -236,6 +256,10 @@
         <map value="DEVICE-04" />
         <comment value="Productiedatum/tijd" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.productieDatumTijd" />
+      </mapping>
     </element>
     <element id="Device.expirationDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -261,6 +285,10 @@
         <map value="DEVICE-05" />
         <comment value="Uiterste gebruiksdatum en -tijd of vervaldatum" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.vervaldatum" />
+      </mapping>
     </element>
     <element id="Device.lotNumber">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -285,6 +313,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-06" />
         <comment value="Lotnummer" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.lotnummer" />
       </mapping>
     </element>
     <element id="Device.serialNumber">
@@ -326,6 +358,10 @@
         <map value="DEVICE-07" />
         <comment value="Serienummer" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.serienummer" />
+      </mapping>
     </element>
     <element id="Device.deviceName">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -355,6 +391,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-09" />
         <comment value="Universeel herkenbare naam van het device" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.deviceNaamType" />
       </mapping>
     </element>
     <element id="Device.deviceName.name">
@@ -386,6 +426,10 @@
         <map value="DEVICE-08.02" />
         <comment value="Omschrijving product" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.deviceNaamType.naam" />
+      </mapping>
     </element>
     <element id="Device.deviceName.type">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -411,6 +455,10 @@
         <map value="DEVICE-09" />
         <comment value="Universeel herkenbare naam van het device" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.deviceNaamType.type" />
+      </mapping>
     </element>
     <element id="Device.modelNumber">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -435,6 +483,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-10" />
         <comment value="Modelnummer van de fabrikant" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.modelnummer" />
       </mapping>
     </element>
     <element id="Device.type">
@@ -476,9 +528,17 @@
         <map value="DEVICE-12.03" />
         <comment value="Type" />
       </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.type" />
+      </mapping>
     </element>
     <element id="Device.version">
       <path value="Device.version" />
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.versie" />
+      </mapping>
     </element>
     <element id="Device.version.value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -503,6 +563,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-11" />
         <comment value="Ontwerp- of softwareversie van het device" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.versie.versie" />
       </mapping>
     </element>
     <element id="Device.note.text">
@@ -533,6 +597,10 @@
         <identity value="requirements-Device" />
         <map value="DEVICE-13" />
         <comment value="Toelichting" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Device" />
+        <map value="Device.toelichting" />
       </mapping>
     </element>
   </differential>
