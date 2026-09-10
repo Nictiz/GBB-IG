@@ -92,20 +92,12 @@
         <system value="http://fhir.nl/fhir/NamingSystem/big" />
       </patternIdentifier>
     </element>
-    <element id="Practitioner.identifier:big.system">
-      <path value="Practitioner.identifier.system" />
-      <patternUri value="http://fhir.nl/fhir/NamingSystem/big" />
-    </element>
     <element id="Practitioner.identifier:agb">
       <path value="Practitioner.identifier" />
       <sliceName value="agb" />
       <patternIdentifier>
         <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
       </patternIdentifier>
-    </element>
-    <element id="Practitioner.identifier:agb.system">
-      <path value="Practitioner.identifier.system" />
-      <patternUri value="http://fhir.nl/fhir/NamingSystem/agb-z" />
     </element>
     <element id="Practitioner.identifier:dezi">
       <path value="Practitioner.identifier" />
@@ -114,20 +106,12 @@
         <system value="http://fhir.nl/fhir/NamingSystem/dezi" />
       </patternIdentifier>
     </element>
-    <element id="Practitioner.identifier:dezi.system">
-      <path value="Practitioner.identifier.system" />
-      <patternUri value="http://fhir.nl/fhir/NamingSystem/dezi" />
-    </element>
     <element id="Practitioner.identifier:uzi">
       <path value="Practitioner.identifier" />
       <sliceName value="uzi" />
       <patternIdentifier>
         <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
       </patternIdentifier>
-    </element>
-    <element id="Practitioner.identifier:uzi.system">
-      <path value="Practitioner.identifier.system" />
-      <patternUri value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
     </element>
     <element id="Practitioner.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
