@@ -525,6 +525,9 @@
       </extension>
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+            <valueString value="ProductTypeCodelijst"/>
+          </extension>
           <extension url="purpose">
             <valueCode value="minimum"/>
           </extension>
