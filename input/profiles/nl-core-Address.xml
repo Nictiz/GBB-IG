@@ -70,6 +70,9 @@
         </extension>
       </extension>
       <path value="Address.use" />
+      <short value="AddressUse" />
+      <definition value="Purpose of this address."/>
+      <alias value="AdresGebruik"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
@@ -94,6 +97,9 @@
         </extension>
       </extension>
       <path value="Address.type" />
+      <short value="Type" />
+      <definition value="Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres."/>
+      <alias value="AdresSoort"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.8" />
@@ -118,6 +124,9 @@
         </extension>
       </extension>
       <path value="Address.text" />
+      <short value="FullAddress" />
+      <definition value="Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label."/>
+      <alias value="VolledigAdres"/>
     </element>
     <element id="Address.line">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -137,6 +146,9 @@
         </extension>
       </extension>
       <path value="Address.line" />
+      <short value="AddressLine" />
+      <definition value="AddressLine"/>
+      <alias value="Adresregel"/>
       <comment value="When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line." />
       <max value="1" />
     </element>
@@ -177,6 +189,9 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="StreetName" />
+      <definition value="Street name of the address."/>
+      <alias value="Straatnaam"/>
       <sliceName value="streetName" />
       <max value="1" />
       <type>
@@ -213,6 +228,9 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="HouseNumber" />
+      <definition value="House number of the address."/>
+      <alias value="Huisnummer"/>
       <sliceName value="houseNumber" />
       <max value="1" />
       <type>
@@ -249,6 +267,9 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="BuildingNumberSuffix" />
+      <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number."/>
+      <alias value="Huisnummerletter"/>
       <sliceName value="houseNumberSuffix" />
       <max value="1" />
       <type>
@@ -291,6 +312,10 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="AdditionalLocator" />
+      <definition value="The indication used for addresses which do not consist of the usual street name and house number.
+        This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)."/>
+      <alias value="AanduidingBijNummer"/>
       <sliceName value="additionalLocator" />
       <max value="1" />
       <type>
@@ -328,6 +353,9 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="AdditionalInformation" />
+      <definition value="Extra information such as the building name, building number, entrance, route number."/>
+      <alias value="AdditioneleInformatie"/>
       <sliceName value="unitID" />
       <max value="1" />
       <type>
@@ -364,6 +392,9 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
+      <short value="Postbox" />
+      <definition value="A numbered box located in a post station."/>
+      <alias value="Postbus"/>
       <sliceName value="postBox" />
       <max value="1" />
       <type>
@@ -479,6 +510,9 @@
         </extension>
       </extension>
       <path value="Address.country" />
+      <short value="Country" />
+      <definition value="Country in which the address is located."/>
+      <alias value="Land"/>
       <comment value="The FHIR datatype does not properly support coding the country using a CodeableConcept or Coding datatype. If the sender supports coded countries, it SHALL send the coded value using the ext-CodeSpecification extension under `Address.country.extension:countryCode`." />
     </element>
     <element id="Address.country.extension:countryCode">
@@ -540,7 +574,9 @@
         </extension>
       </extension>
       <path value="Address.period" />
-      <short value="Gebruiksperiode" />
+      <short value="UsablePeriod" />
+      <definition value="Time period when address was/is in use"/>
+      <alias value="Gebruiksperiode"/>
     </element>
     <element id="Address.period.start">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
