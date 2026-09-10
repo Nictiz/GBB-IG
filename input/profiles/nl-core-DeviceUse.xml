@@ -9,7 +9,7 @@
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
-  <url value="http://hl7.eu/fhir/eps/StructureDefinition/deviceUseStatement-eu-eps" />
+  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
   <name value="NlcoreDeviceUse" />
   <title value="nl core DeviceUse" />
   <status value="draft" />
@@ -248,6 +248,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.03" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-DeviceUse" />
+        <map value="DEVICEUSE-03.04" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
