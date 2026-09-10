@@ -48,6 +48,9 @@
   <differential>
     <element id="Location">
       <path value="Location" />
+      <short value="Location"/>
+      <definition value="Location"/>
+      <alias value="Locatie" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.1" />
@@ -77,6 +80,9 @@
         </extension>
       </extension>
       <path value="Location.identifier" />
+      <short value="Identifier"/>
+      <definition value="Identifier"/>
+      <alias value="Identificatienummer" />
       <mapping>
         <identity value="lm-Location" />
         <map value="gbb-dataelement-380" />
@@ -101,6 +107,9 @@
         </extension>
       </extension>
       <path value="Location.name" />
+      <short value="Name"/>
+      <definition value="Name of the location as used by humans"/>
+      <alias value="Naam" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.8" />
@@ -125,6 +134,9 @@
         </extension>
       </extension>
       <path value="Location.description" />
+      <short value="Description"/>
+      <definition value="Additional details about the location that could be displayed as further information to identify the location beyond its name"/>
+      <alias value="Omschrijving" />
       <mapping>
         <identity value="lm-Location" />
         <map value="gbb-dataelement-382" />
@@ -149,6 +161,9 @@
         </extension>
       </extension>
       <path value="Location.type" />
+      <short value="Type"/>
+      <definition value="Type of function performed at the location"/>
+      <alias value="Type" />
       <mapping>
         <identity value="lm-Location" />
         <map value="gbb-dataelement-383" />
@@ -173,6 +188,9 @@
         </extension>
       </extension>
       <path value="Location.address" />
+      <short value="Address"/>
+      <definition value="Physical location"/>
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -201,6 +219,9 @@
         </extension>
       </extension>
       <path value="Location.managingOrganization" />
+      <short value="ManagingOrganization"/>
+      <definition value="Organization responsible for provisioning and upkeep of the location"/>
+      <alias value="Beheerorganisatie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
@@ -229,6 +250,9 @@
         </extension>
       </extension>
       <path value="Location.partOf" />
+      <short value="PartOf"/>
+      <definition value="Another location of which this location is physically a part of"/>
+      <alias value="OnderdeelVan" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
