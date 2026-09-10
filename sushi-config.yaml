@@ -95,7 +95,7 @@ menu:
     Obligations: obligations.html
   Bouwblokken:
     Device:
-      Overzicht: device.html
+      Overzicht: Device.html
       Requirements: Requirements-Device.html
       Afsprakenmodel: StructureDefinition-Device.html
       FHIR-profiel: StructureDefinition-nl-core-Device.html
