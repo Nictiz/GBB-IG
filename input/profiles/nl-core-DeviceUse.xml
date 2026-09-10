@@ -89,6 +89,10 @@
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-04" />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.identificatienummer" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -112,6 +116,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-01" />
+      </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.status" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.subject">
@@ -141,6 +149,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-02" />
+      </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.patient" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.timing[x]">
@@ -174,6 +186,10 @@
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09.02" />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.periode" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.recordedOn">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -197,6 +213,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-06" />
+      </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.registratieDatumTijd" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.source">
@@ -269,6 +289,10 @@
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.04" />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.device" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -292,6 +316,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11" />
+      </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.redenvanGebruik" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
@@ -334,6 +362,10 @@
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.03" />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.motivatieVanGebruik[x]" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -362,6 +394,10 @@
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-10.01" />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.anatomischeLocatie" />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.note.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -385,6 +421,10 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-12" />
+      </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="MedischHulpmiddel.toelichting" />
       </mapping>
     </element>
   </differential>
