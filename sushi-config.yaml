@@ -97,7 +97,7 @@ menu:
     MedischHulpmiddel:
       Overzicht: DeviceUse.html
       Requirements: Requirements-DeviceUse.html
-      Afsprakenmodel: StructureDefinition-DeviceUse-model.html
+      Afsprakenmodel: StructureDefinition-DeviceUse.html
       FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
