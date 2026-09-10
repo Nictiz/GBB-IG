@@ -69,6 +69,7 @@
     <element id="Patient">
       <path value="Patient" />
       <short value="Patient" />
+      <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model." />
       <alias value="Patient" />
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -369,7 +370,7 @@
         <rules value="open" />
       </slicing>
       <short value="PatientIdentificationNumber" />
-      <definition value="An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR). Other number systems can be used, such as internal hospital patient numbers for example. Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z)." />
+      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers, foreign identification numbers and passport numbers." />
       <alias value="Identificatienummer" />
       <min value="1" />
       <mapping>
@@ -421,7 +422,7 @@
       </extension>
       <path value="Patient.name" />
       <short value="NameInformation" />
-      <definition value="Patient's full name." />
+      <definition value="Patient name separated in name parts and/or as simple name string" />
       <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
@@ -451,7 +452,8 @@
         </extension>
       </extension>
       <path value="Patient.telecom" />
-      <definition value="Patient’s telephone number(s) or e-mail address(es)." />
+      <short value="ContactInformation"/>
+      <definition value="Patient contact details, such as phone or email." />
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
@@ -544,6 +546,9 @@
         </extension>
       </extension>
       <path value="Patient.deceased[x]" />
+      <short value="Deceased[x]"/>
+      <definition value="Indicates if the individual is deceased or not."/>
+      <alias value="Overleden[x]" />
       <slicing>
         <discriminator>
           <type value="type" />
@@ -632,7 +637,9 @@
         </extension>
       </extension>
       <path value="Patient.address" />
-      <definition value="Patient's address information." />
+      <short value="Address"/>
+      <definition value="Patient address separated in address parts; potentially a simple address string" />
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -661,6 +668,8 @@
         </extension>
       </extension>
       <path value="Patient.maritalStatus" />
+      <short value="MaritalStatus"/>
+      <definition value="Last known marital status"/>
       <alias value="BurgerlijkeStaat" />
       <mapping>
         <identity value="zib-maritalstatus-v3.1-2020EN" />
@@ -686,6 +695,9 @@
         </extension>
       </extension>
       <path value="Patient.multipleBirth[x]" />
+      <short value="MultipleBirth[x]"/>
+      <definition value="Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)."/>
+      <alias value="Meerling[x]" />
       <slicing>
         <discriminator>
           <type value="type" />
@@ -744,6 +756,8 @@
       </extension>
       <path value="Patient.multipleBirth[x]" />
       <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthSequence The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the MultipleIndicator can be assumed 'True' but is not communicated."/>
+      <definition value="MultipleBirthSequence"/>
       <alias value="Meerlingvolgorde" />
       <type>
         <code value="integer" />
@@ -773,6 +787,8 @@
       </extension>
       <path value="Patient.contact" />
       <short value="Contact" />
+      <definition value="A contact party (e.g., guardian, partner, friend) for the patient."/>
+      <alias value="Contactpersoon" />
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
       <alias value="Contactpersoon" />
       <mapping>
@@ -799,6 +815,9 @@
         </extension>
       </extension>
       <path value="Patient.contact.name" />
+      <short value="NameInformation"/>
+      <definition value="Contact person name separated in name parts; potentially a simple name string"/>
+      <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
@@ -827,7 +846,8 @@
         </extension>
       </extension>
       <path value="Patient.contact.telecom" />
-      <definition value="The contact’s telephone number and/or e-mail address." />
+      <short value="ContactInformation"/>
+      <definition value="Contact information" />
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
@@ -857,7 +877,9 @@
         </extension>
       </extension>
       <path value="Patient.contact.address" />
-      <definition value="Contact’s address information." />
+      <short value="Address"/>
+      <definition value="Contact person address separated in address parts; potentially a simple address string." />
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -886,6 +908,9 @@
         </extension>
       </extension>
       <path value="Patient.contact.organization" />
+      <short value="Organization"/>
+      <definition value="Organization"/>
+      <alias value="Organisatie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
@@ -914,7 +939,9 @@
         </extension>
       </extension>
       <path value="Patient.generalPractitioner" />
-      <short value="Huisarts" />
+      <short value="GeneralPractitioner[x]"/>
+      <definition value="General practitioner of the patient."/>
+      <alias value="Huisartsgegevens[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
