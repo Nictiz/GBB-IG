@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: nictiz.nl.gbb
 canonical: http://nictiz.nl/gbb
-name: GenericBuildingBlocks
+name: Generic Building Block DeviceUse
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
@@ -65,7 +65,7 @@ publisher:
 parameters:
   excludettl: true
   path-resource:
-  - 'generated/requirements'
+  - generated/requirements
   - 'generated/logicalmodels'
   - 'generated/vocabulary'
   - 'generated/resources'
@@ -105,8 +105,12 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  # Building blocks:
-
+  Building blocks:
+    MedischHulpmiddel:
+      Overzicht: deviceuse.html
+      Requirements: Requirements-DeviceUse.html
+      Afsprakenmodel: StructureDefinition-DeviceUse.html
+      FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -159,12 +163,11 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
+resources:
+  DeviceUseStatement/deviceuse-example:
+    name: Example DeviceUse
+    description: Example DeviceUseStatement instance conforming to nl-core-DeviceUse.
+    exampleCanonical: http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG

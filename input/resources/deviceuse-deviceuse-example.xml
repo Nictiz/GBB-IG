@@ -1,0 +1,52 @@
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+  <id value="deviceuse-example" />
+
+  <meta>
+    <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
+  </meta>
+
+  <contained>
+    <Patient>
+      <id value="patient-example" />
+    </Patient>
+  </contained>
+
+  <contained>
+    <Device>
+      <id value="device-example" />
+    </Device>
+  </contained>
+
+  <identifier>
+    <system value="http://example.org/device-use-identifiers" />
+    <value value="DU-12345" />
+  </identifier>
+
+  <status value="active" />
+
+  <subject>
+    <reference value="#patient-example" />
+  </subject>
+
+  <timingPeriod>
+    <start value="2026-01-01" />
+  </timingPeriod>
+
+  <recordedOn value="2026-01-01T10:00:00+01:00" />
+
+  <device>
+    <reference value="#device-example" />
+  </device>
+
+  <reasonCode>
+    <text value="Example reason for device use" />
+  </reasonCode>
+
+  <bodySite>
+    <text value="Left upper arm" />
+  </bodySite>
+
+  <note>
+    <text value="Example DeviceUseStatement conforming to nl-core-DeviceUse." />
+  </note>
+</DeviceUseStatement>
