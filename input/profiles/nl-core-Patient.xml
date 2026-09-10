@@ -159,6 +159,9 @@
         </extension>
       </extension>
       <path value="Patient.extension.extension.value[x]" />
+      <short value="GenderIdentity"/>
+      <definition value="The gender with which the person identifies."/>
+      <alias value="GenderIdentiteit" />
       <mapping>
         <identity value="zib-patient-v4.3-2026EN" />
         <map value="NL-CM:0.1.34" />
@@ -210,6 +213,48 @@
       <path value="Patient.extension.extension" />
       <min value="1" />
     </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Pronouns"/>
+      <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html"/>
+      <alias value="Persoonlijke voornaamwoorden" />
+    </element>
     <element id="Patient.extension:patSexParameterForClinicalUse">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -253,7 +298,50 @@
         </extension>
       </extension>
       <path value="Patient.extension.extension" />
+      <sliceName value="patSexParameterForClinicalUse"/>
       <min value="1" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="SexParameterForClinicalUse"/>
+      <definition value="Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html"/>
+      <alias value="GeslachtsparameterVoorKlinischGebruik" />
     </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
