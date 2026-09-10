@@ -319,7 +319,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.redenvanGebruik" />
+        <map value="MedischHulpmiddel.redenVanGebruik" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
