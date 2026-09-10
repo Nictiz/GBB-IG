@@ -95,7 +95,7 @@ menu:
     Obligations: obligations.html
   Bouwblokken:
     MedischHulpmiddel:
-      Overzicht: deviceuse.html
+      Overzicht: DeviceUse.html
       Requirements: Requirements-DeviceUse.html
       Afsprakenmodel: StructureDefinition-DeviceUse-model.html
       FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
