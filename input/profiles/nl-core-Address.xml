@@ -189,9 +189,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="StreetName" />
-      <definition value="Street name of the address."/>
-      <alias value="Straatnaam"/>
       <sliceName value="streetName" />
       <max value="1" />
       <type>
@@ -201,9 +198,9 @@
     </element>
     <element id="Address.line.extension:streetName.value[x]">
       <path value="Address.line.extension.value[x]" />
-      <short value="Street" />
-      <definition value="Street name of the address." />
-      <alias value="Straat" />
+      <short value="StreetName" />
+      <definition value="Street name of the address."/>
+      <alias value="Straatnaam"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.2" />
@@ -228,9 +225,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="HouseNumber" />
-      <definition value="House number of the address."/>
-      <alias value="Huisnummer"/>
       <sliceName value="houseNumber" />
       <max value="1" />
       <type>
@@ -241,8 +235,8 @@
     <element id="Address.line.extension:houseNumber.value[x]">
       <path value="Address.line.extension.value[x]" />
       <short value="HouseNumber" />
-      <definition value="House number of the address." />
-      <alias value="Huisnummer" />
+      <definition value="House number of the address."/>
+      <alias value="Huisnummer"/>>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.12" />
@@ -267,9 +261,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="BuildingNumberSuffix" />
-      <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number."/>
-      <alias value="Huisnummerletter"/>
       <sliceName value="houseNumberSuffix" />
       <max value="1" />
       <type>
@@ -279,10 +270,9 @@
     </element>
     <element id="Address.line.extension:houseNumberSuffix.value[x]">
       <path value="Address.line.extension.value[x]" />
-      <short value="HouseNumberLetter / HouseNumberAddition" />
-      <definition value="Export:\n\n- If a HouseNumberLetter as well as a HouseNumberAddition is known: HouseNumberLetter first, followed by a space and finally the HouseNumberAddition.\n- If only a HouseNumberLetter is known, send just that. No trailing space is required.\n- If only a HouseNumberAddition is known, communicate that with a leading space.\n\nImport\n\n- If the value of buildingNumberSuffix contains no space, then the whole value is considered to be the HouseNumberLetter.\n- If the value of buildingNumberSuffix contains a space, then everything before the first space is considered to be the HouseNumberLetter, and the everything trailing the first space is considered to be the HouseNumberAddition.\n\nNote: While a leading space is allowed in string values in FHIR, the parsing of such space cannot be guaranteed in XML representations. Although aware of this issue, this mapping is not changed because of compatibility reasons. If an implementer cannot parse a leading space, the practical risk of mapping a HouseNumberIndication to a HouseNumberAddition is deemed insignificant." />
-      <alias value="Huisnummerletter" />
-      <alias value="Huisnummertoevoeging" />
+      <short value="BuildingNumberSuffix" />
+      <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number."/>
+      <alias value="Huisnummerletter"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.11" />
@@ -312,10 +302,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="AdditionalLocator" />
-      <definition value="The indication used for addresses which do not consist of the usual street name and house number.
-        This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)."/>
-      <alias value="AanduidingBijNummer"/>
       <sliceName value="additionalLocator" />
       <max value="1" />
       <type>
@@ -325,10 +311,9 @@
     </element>
     <element id="Address.line.extension:additionalLocator.value[x]">
       <path value="Address.line.extension.value[x]" />
-      <short value="HouseNumberIndication" />
-      <definition value="The indication used for addresses which do not consist of the usual street name and house number." />
-      <comment value="The mapping of zib AddressInformation on the FHIR Address datatype is the result of compatibility with HL7v3, which is the format that a lot of healthcare data in the Netherlands is stored in. As a result of this, the coded zib HouseNumberIndication concept (CD datatype) is mapped to a FHIR string datatype with a constraint added (the value can only be 'by' or 'to')." />
-      <alias value="AanduidingBijNummer" />
+      <short value="AdditionalLocator" />
+      <definition value="The indication used for addresses which do not consist of the usual street name and house number. This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)."/>
+      <alias value="AanduidingBijNummer"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.9" />
@@ -353,9 +338,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="AdditionalInformation" />
-      <definition value="Extra information such as the building name, building number, entrance, route number."/>
-      <alias value="AdditioneleInformatie"/>
       <sliceName value="unitID" />
       <max value="1" />
       <type>
@@ -366,8 +348,8 @@
     <element id="Address.line.extension:unitID.value[x]">
       <path value="Address.line.extension.value[x]" />
       <short value="AdditionalInformation" />
-      <definition value="Extra information such as the building name, building number, entrance, route number." />
-      <alias value="AdditioneleInformatie" />
+      <definition value="Extra information such as the building name, building number, entrance, route number."/>
+      <alias value="AdditioneleInformatie"/>
       <mapping>
         <identity value="zib-addressinformation-v1.1-2020EN" />
         <map value="NL-CM:20.5.7" />
@@ -392,9 +374,6 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <short value="Postbox" />
-      <definition value="A numbered box located in a post station."/>
-      <alias value="Postbus"/>
       <sliceName value="postBox" />
       <max value="1" />
       <type>
@@ -405,6 +384,9 @@
     </element>
     <element id="Address.line.extension:postBox.value[x]">
       <path value="Address.line.extension.value[x]" />
+      <short value="Postbox" />
+      <definition value="A numbered box located in a post station."/>
+      <alias value="Postbus"/>
       <mapping>
         <identity value="lm-Address" />
         <map value="gbb-dataelement-87" />
