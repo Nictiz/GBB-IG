@@ -17,13 +17,18 @@
     </telecom>
   </contact>
   <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;Nationality is used as an indication of the country of citizenship. &#xD;&#xA;Marital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.&#xD;&#xA;Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication." />
-  <purpose value="This Patient resource represents the Dutch [zib ('Zorginformatiebouwsteen', i.e. Health and Care Information Model) Patient v3.2 (2020)](https://zibs.nl/wiki/Patient-v3.2(2020EN)). It also includes [zib Nationality v3.0 (2020)](https://zibs.nl/wiki/Nationality-v3.0(2020EN)), [zib MaritalStatus v3.1 (2020)](https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)) and [zib LanguageProficiency v3.2 (2020)](https://zibs.nl/wiki/LanguageProficiency-v3.2(2020EN))." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Patient](http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="GBB-Patient-v0.1" />
-    <uri value="http://nictiz.nl/gbb/StructureDefinition/Patient-model" />
-    <name value="Dataset GBB-Patient-v0.1" />
+    <identity value="requirements-Patient" />
+    <uri value="http://nictiz.nl/ig/gbb/Requirements/Patient" />
+    <name value="Information requirements for Patient" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Patient" />
+    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Patient" />
+    <name value="Logical model for Patient" />
   </mapping>
   <mapping>
     <identity value="zib-patient-v3.2-2020EN" />
@@ -64,6 +69,7 @@
     <element id="Patient">
       <path value="Patient" />
       <short value="Patient" />
+      <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model." />
       <alias value="Patient" />
       <mapping>
         <identity value="zib-patient-v3.2-2020EN" />
@@ -154,6 +160,9 @@
         </extension>
       </extension>
       <path value="Patient.extension.extension.value[x]" />
+      <short value="GenderIdentity"/>
+      <definition value="The gender with which the person identifies."/>
+      <alias value="GenderIdentiteit" />
       <mapping>
         <identity value="zib-patient-v4.3-2026EN" />
         <map value="NL-CM:0.1.34" />
@@ -205,6 +214,48 @@
       <path value="Patient.extension.extension" />
       <min value="1" />
     </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Pronouns"/>
+      <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html"/>
+      <alias value="Persoonlijke voornaamwoorden" />
+    </element>
     <element id="Patient.extension:patSexParameterForClinicalUse">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -248,7 +299,50 @@
         </extension>
       </extension>
       <path value="Patient.extension.extension" />
+      <sliceName value="patSexParameterForClinicalUse"/>
       <min value="1" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="SexParameterForClinicalUse"/>
+      <definition value="Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html"/>
+      <alias value="GeslachtsparameterVoorKlinischGebruik" />
     </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -276,7 +370,7 @@
         <rules value="open" />
       </slicing>
       <short value="PatientIdentificationNumber" />
-      <definition value="An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR). Other number systems can be used, such as internal hospital patient numbers for example. Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z)." />
+      <definition value="The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers, foreign identification numbers and passport numbers." />
       <alias value="Identificatienummer" />
       <min value="1" />
       <mapping>
@@ -328,7 +422,7 @@
       </extension>
       <path value="Patient.name" />
       <short value="NameInformation" />
-      <definition value="Patient's full name." />
+      <definition value="Patient name separated in name parts and/or as simple name string" />
       <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
@@ -358,7 +452,8 @@
         </extension>
       </extension>
       <path value="Patient.telecom" />
-      <definition value="Patient’s telephone number(s) or e-mail address(es)." />
+      <short value="ContactInformation"/>
+      <definition value="Patient contact details, such as phone or email." />
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
@@ -451,6 +546,9 @@
         </extension>
       </extension>
       <path value="Patient.deceased[x]" />
+      <short value="Deceased[x]"/>
+      <definition value="Indicates if the individual is deceased or not."/>
+      <alias value="Overleden[x]" />
       <slicing>
         <discriminator>
           <type value="type" />
@@ -539,7 +637,9 @@
         </extension>
       </extension>
       <path value="Patient.address" />
-      <definition value="Patient's address information." />
+      <short value="Address"/>
+      <definition value="Patient address separated in address parts; potentially a simple address string" />
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -568,6 +668,8 @@
         </extension>
       </extension>
       <path value="Patient.maritalStatus" />
+      <short value="MaritalStatus"/>
+      <definition value="Last known marital status"/>
       <alias value="BurgerlijkeStaat" />
       <mapping>
         <identity value="zib-maritalstatus-v3.1-2020EN" />
@@ -593,6 +695,9 @@
         </extension>
       </extension>
       <path value="Patient.multipleBirth[x]" />
+      <short value="MultipleBirth[x]"/>
+      <definition value="Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)."/>
+      <alias value="Meerling[x]" />
       <slicing>
         <discriminator>
           <type value="type" />
@@ -651,6 +756,8 @@
       </extension>
       <path value="Patient.multipleBirth[x]" />
       <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthSequence The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the MultipleIndicator can be assumed 'True' but is not communicated."/>
+      <definition value="MultipleBirthSequence"/>
       <alias value="Meerlingvolgorde" />
       <type>
         <code value="integer" />
@@ -680,6 +787,8 @@
       </extension>
       <path value="Patient.contact" />
       <short value="Contact" />
+      <definition value="A contact party (e.g., guardian, partner, friend) for the patient."/>
+      <alias value="Contactpersoon" />
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
       <alias value="Contactpersoon" />
       <mapping>
@@ -706,6 +815,9 @@
         </extension>
       </extension>
       <path value="Patient.contact.name" />
+      <short value="NameInformation"/>
+      <definition value="Contact person name separated in name parts; potentially a simple name string"/>
+      <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
@@ -734,7 +846,8 @@
         </extension>
       </extension>
       <path value="Patient.contact.telecom" />
-      <definition value="The contact’s telephone number and/or e-mail address." />
+      <short value="ContactInformation"/>
+      <definition value="Contact information" />
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
@@ -764,7 +877,9 @@
         </extension>
       </extension>
       <path value="Patient.contact.address" />
-      <definition value="Contact’s address information." />
+      <short value="Address"/>
+      <definition value="Contact person address separated in address parts; potentially a simple address string." />
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -793,62 +908,17 @@
         </extension>
       </extension>
       <path value="Patient.contact.organization" />
+      <short value="Organization"/>
+      <definition value="Organization"/>
+      <alias value="Organisatie" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mapping>
-        <identity value="GBB-Patient-v0.1" />
+        <identity value="lm-Patient" />
         <map value="gbb-dataelement-351" />
         <comment value="Organisatie" />
-      </mapping>
-    </element>
-    <element id="Patient.communication">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.communication" />
-      <mapping>
-        <identity value="zib-languageproficiency-v3.2-2020EN" />
-        <map value="NL-CM:7.12.1" />
-        <comment value="LanguageProficiency" />
-      </mapping>
-    </element>
-    <element id="Patient.communication.language">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.communication.language" />
-      <mapping>
-        <identity value="zib-languageproficiency-v3.2-2020EN" />
-        <map value="NL-CM:7.12.3" />
-        <comment value="CommunicationLanguage" />
       </mapping>
     </element>
     <element id="Patient.generalPractitioner">
@@ -869,7 +939,9 @@
         </extension>
       </extension>
       <path value="Patient.generalPractitioner" />
-      <short value="Huisarts" />
+      <short value="GeneralPractitioner[x]"/>
+      <definition value="General practitioner of the patient."/>
+      <alias value="Huisartsgegevens[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
