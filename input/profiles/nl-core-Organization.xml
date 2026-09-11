@@ -43,6 +43,9 @@
   <differential>
     <element id="Organization">
       <path value="Organization" />
+      <short value="Organization"/>
+      <definition value="Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc."/>
+      <alias value="Organisatie" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.1" />
@@ -67,6 +70,9 @@
         </extension>
       </extension>
       <path value="Organization.identifier" />
+      <short value="Identifier"/>
+      <definition value="Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."/>
+      <alias value="Identificatienummer" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -113,6 +119,9 @@
         </extension>
       </extension>
       <path value="Organization.type" />
+      <short value="Type"/>
+      <definition value="Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is."/>
+      <alias value="Type" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="key">
@@ -159,6 +168,9 @@
         </extension>
       </extension>
       <path value="Organization.name" />
+      <short value="Name"/>
+      <definition value="Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."/>
+      <alias value="Naam" />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
         <map value="NL-CM:17.2.3" />
@@ -183,6 +195,9 @@
         </extension>
       </extension>
       <path value="Organization.telecom" />
+      <short value="Telecom"/>
+      <definition value="Telecommunicatie contact informatie (addressen) geassocieerd met een organisatie, zoals telefoonnummer, e-mail of berichtservice. "/>
+      <alias value="Telecom" />
       <type>
         <code value="ContactPoint" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
@@ -211,6 +226,9 @@
         </extension>
       </extension>
       <path value="Organization.address" />
+      <short value="Address"/>
+      <definition value="Mail of kantoor adressen van de organisatie."/>
+      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
@@ -239,6 +257,9 @@
         </extension>
       </extension>
       <path value="Organization.partOf" />
+      <short value="PartOf"/>
+      <definition value="De organisatie waarvan deze organisatie een deel is. Nodig om de hiërarchie van organisaties binnen een organisatie bij te houden."/>
+      <alias value="OnderdeelVan" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
