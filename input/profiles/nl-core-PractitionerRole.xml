@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="A health professional is a person who is authorized to perform actions in the field of individual healthcare." />
-  <purpose value="This profile is the FHIR implementation of the general building block [PractitionerRole](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/PractitionerRole)." /> 
+  <purpose value="This profile is the FHIR implementation of the general building block [PractitionerRole](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/PractitionerRole)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -49,7 +49,6 @@
     <element id="PractitionerRole">
       <path value="PractitionerRole" />
       <short value="PractitionerRole" />
-      <definition value="A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time." />
       <alias value="ZorgverlenerRol" />
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
@@ -75,14 +74,15 @@
         </extension>
       </extension>
       <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner"/>
-      <definition value="Practitioner that provides services for the organization"/>
+      <short value="Practitioner" />
+      <definition value="Practitioner that provides services for the organization" />
       <alias value="Zorgverlener" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -110,6 +110,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.6" />
@@ -134,9 +135,10 @@
         </extension>
       </extension>
       <path value="PractitionerRole.code" />
-      <short value="Code"/>
-      <definition value="Health professional role. Multiple roles could be provided. Binding Description: (preferred): ISCO, SNOMED CT. De ISCO waardenlijst bevat 'occupations' e.g. Nursing professional, Specialist Medical Practitioners."/>
+      <short value="Code" />
+      <definition value="Health professional role. Multiple roles could be provided. Binding Description: (preferred): ISCO, SNOMED CT. De ISCO waardenlijst bevat 'occupations' e.g. Nursing professional, Specialist Medical Practitioners." />
       <alias value="Code" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -163,6 +165,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty:specialty">
       <path value="PractitionerRole.specialty" />
@@ -206,6 +209,7 @@
         <code value="ContactPoint" />
         <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
         <map value="NL-CM:17.1.8" />
@@ -217,6 +221,5 @@
         <comment value="ContactInformation" />
       </mapping>
     </element>
-    
   </differential>
 </StructureDefinition>
