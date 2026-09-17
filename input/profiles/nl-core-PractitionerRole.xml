@@ -49,6 +49,7 @@
     <element id="PractitionerRole">
       <path value="PractitionerRole" />
       <short value="PractitionerRole" />
+      <definition value="Roles/organizations the practitioner is associated with" />
       <alias value="ZorgverlenerRol" />
       <mapping>
         <identity value="zib-healthprofessional-v3.5-2020EN" />
