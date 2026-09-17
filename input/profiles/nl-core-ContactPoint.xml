@@ -44,7 +44,7 @@
     <element id="ContactPoint">
       <path value="ContactPoint" />
       <short value="TelephoneNumbers / EmailAddresses" />
-      <definition value="Contact details for telecommunications."/>
+      <definition value="Contact details for telecommunications." />
       <comment value="Implementation of the &quot;TelephoneNumbers&quot; concept of zib ContactInformation.&#xD;&#xA;&#xD;&#xA;Please note that, although the zib concepts TelecomType and NumberType are functionally equivalent to the FHIR concepts `ContactPoint.system` and `ContactPoint.use` respectively, a mismatch occurs on the concept of mobile phone numbers; the zib uses the first concept and FHIR the second. For this reason, the ValueSet on `ContactPoint.system` is too narrow and the zib code will need to be communicated using the ext-CodeSpecification extension." />
       <alias value="Telefoonnummers / EmailAdressen" />
       <mapping>
@@ -80,6 +80,7 @@
       <definition value="The telecom or device type that the telephone number is connected to." />
       <alias value="TelecomType" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.5" />
@@ -108,6 +109,7 @@
       <definition value="The person's telephone number." />
       <alias value="Telefoonnummer / EmailAdres" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.4" />
@@ -140,6 +142,7 @@
       <short value="NumberType / EmailAddressType" />
       <definition value="NumberType indicates whether the number is a landline, temporary, work telephone number." />
       <alias value="NummerSoort / EmailSoort" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="zib-contactinformation-v1.2-2020EN" />
         <map value="NL-CM:20.6.6" />
