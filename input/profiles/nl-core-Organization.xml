@@ -71,8 +71,6 @@
       </extension>
       <path value="Organization.identifier" />
       <short value="Identifier"/>
-      <definition value="Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."/>
-      <alias value="Identificatienummer" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -80,6 +78,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <alias value="Identificatienummer" />
       <definition value="The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization." />
       <mapping>
         <identity value="zib-healthcareprovider-v3.4-2020EN" />
