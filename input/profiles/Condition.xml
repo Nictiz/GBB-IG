@@ -67,7 +67,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand."/>
+        <map value="Gezondheidstoestand.Taal"/>
       </mapping>
     </element>
     <element id="Condition.extension">
@@ -719,7 +719,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value="Gezondheidstoestand.Asserter"/>
+        <map value="Gezondheidstoestand.Bron"/>
       </mapping>
     </element>
     <element id="Condition.stage">
