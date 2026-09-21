@@ -92,6 +92,7 @@ parameters:
 menu:
   Home: index.html
   Achtergrondinformatie:
+    Leeswijzer: leeswijzer.html
     Obligations: obligations.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
