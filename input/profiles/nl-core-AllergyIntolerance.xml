@@ -52,6 +52,36 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
   <derivation value="constraint" />
   <differential>
+    <element id="AllergyIntolerance.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="AllergyIntolerance.language"/>
+      <mustSupport value="true"/>
+      <short value="Language"/>
+      <alias value="Taal"/>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="EU-19" />
+      </mapping>
+      <mapping>
+        <identity value="lm-AllergyIntolerance" />
+        <map value="AllergieIntolerantie.taal" />
+      </mapping>
+    </element>
     <element id="AllergyIntolerance.extension:abatement">
       <path value="AllergyIntolerance.extension" />
       <sliceName value="abatement" />
@@ -77,7 +107,7 @@
         <map value="NL-08-01" />
       </mapping>
     </element>
-    <element id="Condition.identifier">
+    <element id="AllergyIntolerance.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
