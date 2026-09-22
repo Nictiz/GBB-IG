@@ -113,7 +113,7 @@ menu:
     AllergieIntolerantie:
       Overzicht: AllergyIntolerance.html
       Requirements: Requirements-AllergyIntolerance.html
-      Afsprakenmodel: StructureDefinition-AllergyIntolerance-model.html
+      Afsprakenmodel: StructureDefinition-AllergyIntolerance.html
       FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
