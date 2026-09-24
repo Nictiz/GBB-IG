@@ -107,7 +107,6 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
-
   Artefacten: artifacts.html
   Bouwblokken:
     AllergieIntolerantie:
