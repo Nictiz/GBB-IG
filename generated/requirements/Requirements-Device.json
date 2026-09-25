@@ -1,0 +1,370 @@
+{
+  "resourceType": "Requirements",
+  "id": "Device",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Device",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-01",
+      "label": "DEVICE-01 Business identificatienummer",
+      "requirement": "**Omschrijving**: instanceIdentifier - \r\nIdentifier of the device instance\n\n**Variabiliteit**: ID",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-02",
+      "label": "DEVICE-02 Unieke identificatie van het device",
+      "requirement": "**Omschrijving**: zie hieronder\n\n**Variabiliteit**: zie hieronder",
+      "source": [
+        {
+          "display": "zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-02.01",
+      "label": "DEVICE-02.01 Unieke identificatie van het device",
+      "requirement": "**Omschrijving**: udi\n\n**Variabiliteit**: ID",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-02",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-02.02",
+      "label": "DEVICE-02.02 Wereldwijd unieke identificatie van het product",
+      "requirement": "**Omschrijving**: \"Product.ProductID - Wereldwijd unieke identificatie van het product, bijvoorbeeld het serienummer of een UDI (unique device identifier). Bij sommige producten stelt de wet het gebruik van een UDI verplicht. Veel gebruikte coderingen zijn HIBC en GS1/GTIN.\r\n\r\nEen UDI bevat vaak meer informatie dan alleen een Id, maar ook bijvoorbeeld een vervaldatum. Indien een UDI gebruikt wordt, kan de gehele code als tekst in ProductID opgenomen worden, zodat geen belangrijke informatie verloren gaat\"\n\n**Variabiliteit**: Vrije tekst",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-02",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-02.03",
+      "label": "DEVICE-02.03 Unieke identificatie van het product",
+      "requirement": "**Omschrijving**: \"Product.ProductID - Unieke identificatie van het product, bijvoorbeeld het serienummer.\r\nVeel gebruikte coderingen zijn HIBC en GTIN. Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .\r\n\r\nDe UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10).\"\n\n**Variabiliteit**: Gecodeerd (HIBCProductIDCodelijst en GTINProductIDCodelijst)",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-02",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-02.04",
+      "label": "DEVICE-02.04 Unieke identificatie van het product",
+      "requirement": "**Variabiliteit**: \"Gecodeerd; Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .\r\n\r\nDe UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10).\"",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-02",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-03",
+      "label": "DEVICE-03 Fabrieksnaam",
+      "requirement": "**Omschrijving**: manufacturer - Name of device manufacturer. If the manufacturer code is included in an identifier, manufacturer must correspond to that code.\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-04",
+      "label": "DEVICE-04 Productiedatum/tijd",
+      "requirement": "**Omschrijving**: manufactureDate - The date and time when the device was manufactured\n\n**Variabiliteit**: Datum/tijd",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-05",
+      "label": "DEVICE-05 Uiterste gebruiksdatum en -tijd of vervaldatum",
+      "requirement": "**Omschrijving**: expiryDate - The date and time beyond which this device is no longer valid or should not be used (if applicable)\n\n**Variabiliteit**: Datum/tijd",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-06",
+      "label": "DEVICE-06 Lotnummer",
+      "requirement": "**Omschrijving**: lotNumber - Lot number of device. May be omitted if included in an identifier.\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-07",
+      "label": "DEVICE-07 Serienummer",
+      "requirement": "**Omschrijving**: serialNumber - Serial number assigned by the manufacturer. May be omitted if included in an identifier.\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-08",
+      "label": "DEVICE-08 Naam van het device",
+      "requirement": "**Omschrijving**: name - The name and name type of the device\n\n**Variabiliteit**: zie hieronder",
+      "source": [
+        {
+          "display": "zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-08.01",
+      "label": "DEVICE-08.01 Herkenbare naam volgens fabrikant of patiënt",
+      "requirement": "**Omschrijving**: name.value - The name of the device as known to e.g. the manufacturer and/or patient\n\n**Variabiliteit**: Vrije tekst",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-08",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-08.02",
+      "label": "DEVICE-08.02 Omschrijving product",
+      "requirement": "**Omschrijving**: Productomschrijving\n\n**Variabiliteit**: Vrije tekst",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-08",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-09",
+      "label": "DEVICE-09 Universeel herkenbare naam van het device",
+      "requirement": "**Omschrijving**: name.type - The type of name, e.g. UDI Label name, user friendly name\n\n**Variabiliteit**: \"Code\r\n\r\nBinding onbekend\"",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-10",
+      "label": "DEVICE-10 Modelnummer van de fabrikant",
+      "requirement": "**Omschrijving**: modelNumber - The manufacturer's model number for the device\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-11",
+      "label": "DEVICE-11 Ontwerp- of softwareversie van het device",
+      "requirement": "**Omschrijving**: version - The actual design of the device and/or software version running on the device\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden, toekomst en verleden (in geval van tracken)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-12",
+      "label": "DEVICE-12 Type",
+      "requirement": "**Omschrijving**: zie hieronder\n\n**Variabiliteit**: zie hieronder",
+      "source": [
+        {
+          "display": "zie hieronder"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-12.01",
+      "label": "DEVICE-12.01 Type",
+      "requirement": "**Omschrijving**: type - Device type\r\nBinding Description: (preferred): SNOMED CT, EMDN\n\n**Variabiliteit**: Code\r\nBinding Description: (preferred): SNOMED CT, EMDN",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-12",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-12.02",
+      "label": "DEVICE-12.02 Type",
+      "requirement": "**Omschrijving**: Product.ProductType\n\n**Variabiliteit**: \"Gecodeerd\r\nProductTypeCodelijst SNOMED\r\nProductTypeGeenCodelijst (\tgeen gehoorapparaat en geen visuele hulpmiddelen)\r\nProductTypeImplantatenCodelijst SNOMED\"",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-12",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-12.03",
+      "label": "DEVICE-12.03 Type",
+      "requirement": "**Omschrijving**: Product.ProductType\n\n**Variabiliteit**: Gecodeerd( Alle SNOMED waarden)",
+      "parent": "http://nictiz.nl/gbb/Requirements/Device#DEVICE-12",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICE-13",
+      "label": "DEVICE-13 Toelichting",
+      "requirement": "**Omschrijving**: note - Device note and/or comment\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor het heden"
+        }
+      ]
+    }
+  ]
+}

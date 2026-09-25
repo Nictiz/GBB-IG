@@ -1,0 +1,1941 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Device",
+  "language": "nl",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-08-17T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://nictiz.nl/ig/gbb/model/StructureDefinition/Device",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.33"
+    }
+  ],
+  "version": "2026-08-17T00:00:00",
+  "name": "LogischModelDevice",
+  "title": "LogischModelDevice",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://nictiz.nl/ig/gbb/model/StructureDefinition/Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.432--20260710062216",
+        "path": "Device",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device (placeholder)"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.535--20260817124439",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.identificatienummer",
+        "short": "Om een instantie van een device te identificeren.",
+        "definition": "Om een instantie van een device te identificeren.",
+        "alias": [
+          "Identifier"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.identificatienummer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.551--20260817130211",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI",
+        "short": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device.",
+        "definition": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device. Merk op dat het device meerdere UDI's kan bevatten, aangezien het ofwel alleen de UDI voor het rechtsgebied van verkoop kan omvatten, ofwel UDI voor meerdere rechtsgebieden waar het verkocht had kunnen worden.",
+        "alias": [
+          "Unique device identifier (UDI)"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.552--20260819075654",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI.identificatie",
+        "short": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "definition": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "alias": [
+          "Identifier"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI.identificatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.554--20260819092154",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie",
+        "short": "UitgevendeOrganisatie (string (uri))Organisatie die belast is met de uitgifte van UDI's voor devices.",
+        "definition": "UitgevendeOrganisatie (string (uri))\n\nOrganisatie die belast is met de uitgifte van UDI's voor devices.",
+        "alias": [
+          "Issuer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.536--20260817124629",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.fabrikant",
+        "short": "De naam van de fabrikant.",
+        "definition": "De naam van de fabrikant.",
+        "alias": [
+          "Manufracturer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.fabrikant",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.537--20260817124739",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.productieDatumTijd",
+        "short": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "definition": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "alias": [
+          "ManufracturerDate"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.productieDatumTijd",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.538--20260817124843",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.vervaldatum",
+        "short": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "definition": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "alias": [
+          "ExpirationDate"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.vervaldatum",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.539--20260817124910",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.lotnummer",
+        "short": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "definition": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "alias": [
+          "LotNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.lotnummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.540--20260817124933",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.serienummer",
+        "short": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "definition": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "alias": [
+          "SerialNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.serienummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.541--20260817125008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType",
+        "short": "De naam en het type van het device.",
+        "definition": "De naam en het type van het device.",
+        "alias": [
+          "DeviceName"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.deviceNaamType",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.543--20260817125137",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType.type",
+        "short": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "definition": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.deviceNaamType.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceNameType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-nametype"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.542--20260817125043",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType.naam",
+        "short": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "definition": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "alias": [
+          "Name"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.deviceNaamType.naam",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.544--20260817125218",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.modelnummer",
+        "short": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "definition": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "alias": [
+          "ModelNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.modelnummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.545--20260817125311",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.type",
+        "short": "Het soort of type device.Aanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The kind or type of device."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Het soort of type device.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The kind or type of device."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.547--20260817125557",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.versie",
+        "short": "Ontwerp- of softwareversie",
+        "definition": "Ontwerp- of softwareversie",
+        "alias": [
+          "Version"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.versie",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.548--20260817125842",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.versie.versie",
+        "short": "De ontwerp- of softwareversie van het device",
+        "definition": "De ontwerp- of softwareversie van het device",
+        "alias": [
+          "Value"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.versie.versie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.550--20260817130028",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.toelichting",
+        "short": "Notitie of opmerking over device.",
+        "definition": "Notitie of opmerking over device.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.toelichting",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.432--20260710062216",
+        "path": "Device",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device (placeholder)"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.535--20260817124439",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.identificatienummer",
+        "short": "Om een instantie van een device te identificeren.",
+        "definition": "Om een instantie van een device te identificeren.",
+        "alias": [
+          "Identifier"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.identificatienummer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.551--20260817130211",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI",
+        "short": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device.",
+        "definition": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device. Merk op dat het device meerdere UDI's kan bevatten, aangezien het ofwel alleen de UDI voor het rechtsgebied van verkoop kan omvatten, ofwel UDI voor meerdere rechtsgebieden waar het verkocht had kunnen worden.",
+        "alias": [
+          "Unique device identifier (UDI)"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.552--20260819075654",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI.identificatie",
+        "short": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "definition": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "alias": [
+          "Identifier"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI.identificatie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.554--20260819092154",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie",
+        "short": "UitgevendeOrganisatie (string (uri))Organisatie die belast is met de uitgifte van UDI's voor devices.",
+        "definition": "UitgevendeOrganisatie (string (uri))\n\nOrganisatie die belast is met de uitgifte van UDI's voor devices.",
+        "alias": [
+          "Issuer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.536--20260817124629",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.fabrikant",
+        "short": "De naam van de fabrikant.",
+        "definition": "De naam van de fabrikant.",
+        "alias": [
+          "Manufracturer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.fabrikant",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.537--20260817124739",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.productieDatumTijd",
+        "short": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "definition": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "alias": [
+          "ManufracturerDate"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.productieDatumTijd",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.538--20260817124843",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.vervaldatum",
+        "short": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "definition": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "alias": [
+          "ExpirationDate"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.vervaldatum",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.539--20260817124910",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.lotnummer",
+        "short": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "definition": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "alias": [
+          "LotNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.lotnummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.540--20260817124933",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.serienummer",
+        "short": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "definition": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "alias": [
+          "SerialNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.serienummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.541--20260817125008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType",
+        "short": "De naam en het type van het device.",
+        "definition": "De naam en het type van het device.",
+        "alias": [
+          "DeviceName"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.deviceNaamType",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.543--20260817125137",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType.type",
+        "short": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "definition": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.deviceNaamType.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceNameType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-nametype"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.542--20260817125043",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.deviceNaamType.naam",
+        "short": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "definition": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "alias": [
+          "Name"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.deviceNaamType.naam",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.544--20260817125218",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.modelnummer",
+        "short": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "definition": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "alias": [
+          "ModelNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Device.modelnummer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.545--20260817125311",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.type",
+        "short": "Het soort of type device.Aanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The kind or type of device."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Het soort of type device.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "The kind or type of device."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.547--20260817125557",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.versie",
+        "short": "Ontwerp- of softwareversie",
+        "definition": "Ontwerp- of softwareversie",
+        "alias": [
+          "Version"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.versie",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.548--20260817125842",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.versie.versie",
+        "short": "De ontwerp- of softwareversie van het device",
+        "definition": "De ontwerp- of softwareversie van het device",
+        "alias": [
+          "Value"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Device.versie.versie",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.550--20260817130028",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Device.toelichting",
+        "short": "Notitie of opmerking over device.",
+        "definition": "Notitie of opmerking over device.",
+        "alias": [
+          "Note"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Device.toelichting",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
