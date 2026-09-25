@@ -1,0 +1,1712 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Reaction",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-09-23T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://nictiz.nl/ig/gbb/model/StructureDefinition/Reaction",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.39"
+    }
+  ],
+  "version": "2026-09-23T00:00:00",
+  "name": "LogicalModelpartReaction",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelpartReactie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelpart.Reaction",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelpartReactie"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "Reaction",
+      "uri": "http://nictiz.nl/gbb/Requirements/Reaction",
+      "name": "Reaction"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://nictiz.nl/ig/gbb/model/StructureDefinition/Reaction",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.590--20260923085842",
+        "path": "Reaction",
+        "short": "Root concept of the Reaction sub information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Reaction sub information model. This root concept contains all data elements of the Reaction. This sub building block can solely be used with the general building block AllergyIntolerance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie. Dit rootconcept bevat alle gegevenselementen van de reactie welke horen bij het bovenliggende generieke bouwblok AllergieIntolerantie. Dit subbouwblok mag alleen gebruikt worden in combinatie met het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Reactie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Reaction",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.591--20260923085955",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.specificSubstance",
+        "short": "More specific indication of the substance that caused the reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meer specifieke aanduiding van de stof die de reactie opriep."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.\n\nAdditional bindings of value sets that can be used within the Netherlands are ^42931000146101|Dutch non-drug allergen simple reference set| and, from the G-standard, the HPK, SNK, SKK and thesaurus 122 code lists.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn SNOMED CT ^42931000146101|Dutch non-drug allergen simple reference set| en uit de G-standaard de HPK, SNK, SSK en thesaurus 122 codelijsten"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "SpecifiekeStof"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.specificSubstance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-10"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.592--20260923090107",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.certainty",
+        "short": "The level of clinical certainty that the manifestation in this reaction incident was caused by exposure to the specific substance.This data element can be populated with additional terminology within the Netherlands according to the ZekerheidsStatusCodelijst value list.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De mate van klinische zekerheid dat de manifestatie in dit reactie-incident werd veroorzaakt door blootstelling aan de geïdentificeerde specifieke stof."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The level of clinical certainty that the manifestation in this reaction incident was caused by exposure to the specific substance.\n\nThis data element can be populated with additional terminology within the Netherlands according to the ZekerheidsStatusCodelijst value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De mate van klinische zekerheid dat de manifestatie in dit reactie-incident werd veroorzaakt door blootstelling aan de geïdentificeerde specifieke stof.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst ZekerheidsStatusCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MateVanZekerheid"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "AllergyIntolerance Verification Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-06-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.593--20260923090744",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.manifestation",
+        "short": "Clinical symptoms and/or findings observed with or associated with the adverse reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische symptomen en/of bevindingen die worden waargenomen bij of in verband worden gebracht met de ongewenste reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical symptoms and/or findings observed with or associated with the adverse reaction. The manifestation can be recorded as a single word, a word group, or a brief description. For example: nausea, skin rash.\n\nThis data element can be populated with additional terminology within the Netherlands according to the SymptoomCodelijst value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische symptomen en/of bevindingen die worden waargenomen bij of in verband worden gebracht met de ongewenste reactie. De manifestatie kan worden vastgelegd als één woord, een woordgroep of een korte beschrijving. Bijvoorbeeld: misselijkheid, huiduitslag.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst SymptoomCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ManifestatieVanReactie"
+        ],
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Reaction.manifestation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "ManifestatieVanReactieWaardelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-11"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.594--20260923091004",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.reactionDescription",
+        "short": "Textual description of the response as a whole, including any details about the manifestation.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van de reactie als geheel, inclusief eventuele details over de manifestatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the response as a whole, including any details about the manifestation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van de reactie als geheel, inclusief eventuele details over de manifestatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ReactieBeschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.reactionDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-04-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.595--20260923091042",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.reactionDateTime",
+        "short": "Date and time at which the reaction took place.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop de reactie plaats gevonden heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ReactieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.reactionDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-13"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.596--20260923091107",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.severity",
+        "short": "Clinical assessment of the severity of the reaction incident as a whole, taking into account possible multiple different manifestations.This data element can be populated with additional terminology within the Netherlands according to the ErnstCodelijst value list and table 55 of the NHG",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische beoordeling van de ernst van het reactie-incident als geheel, waarbij mogelijk meerdere verschillende manifestaties worden meegewogen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical assessment of the severity of the reaction incident as a whole, taking into account possible multiple different manifestations.\n\nThis data element can be populated with additional terminology within the Netherlands according to the ErnstCodelijst value list and table 55 of the NHG",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische beoordeling van de ernst van het reactie-incident als geheel, waarbij mogelijk meerdere verschillende manifestaties worden meegewogen.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst ErnstCodelijst en NHG tabel 55"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Ernst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "AllergyIntoleranceSeverity",
+          "valueSet": "http://hl7.org/fhir/ValueSet/reaction-event-severity"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-12"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.597--20260923091212",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.routeOfExposure",
+        "short": "Manner in which the patient was exposed to the identified specific substance.This data element can be populated with additional terminology within the Netherlands according to the WijzeVanBlootstelling value list.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wijze waarop de patiënt is blootgesteld aan de geïdentificeerde specifieke stof."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Manner in which the patient was exposed to the identified specific substance.\n\nThis data element can be populated with additional terminology within the Netherlands according to the WijzeVanBlootstelling value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wijze waarop de patiënt is blootgesteld aan de geïdentificeerde specifieke stof.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst WijzeVanBlootstellingCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "WijzeVanBlootstelling"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.routeOfExposure",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "WijzeVanBlootstellingCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-20"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.598--20260923091410",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.note",
+        "short": "Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de reactie van de allergie of intolerantie, en/of aanvullende vrije tekst over de reactie allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de reactie van de allergie of intolerantie, en/of aanvullende vrije tekst over de reactie allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Opmerking"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Reaction.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-04-04"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.590--20260923085842",
+        "path": "Reaction",
+        "short": "Root concept of the Reaction sub information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Reaction sub information model. This root concept contains all data elements of the Reaction. This sub building block can solely be used with the general building block AllergyIntolerance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie. Dit rootconcept bevat alle gegevenselementen van de reactie welke horen bij het bovenliggende generieke bouwblok AllergieIntolerantie. Dit subbouwblok mag alleen gebruikt worden in combinatie met het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Reactie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Reaction",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.591--20260923085955",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.specificSubstance",
+        "short": "More specific indication of the substance that caused the reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meer specifieke aanduiding van de stof die de reactie opriep."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "More specific indication of the substance that caused the reaction. This can be a specific substance from a group of substances to which the patient is allergic or hypersensitive.\n\nAdditional bindings of value sets that can be used within the Netherlands are ^42931000146101|Dutch non-drug allergen simple reference set| and, from the G-standard, the HPK, SNK, SKK and thesaurus 122 code lists.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn SNOMED CT ^42931000146101|Dutch non-drug allergen simple reference set| en uit de G-standaard de HPK, SNK, SSK en thesaurus 122 codelijsten"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "SpecifiekeStof"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.specificSubstance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-10"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.592--20260923090107",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.certainty",
+        "short": "The level of clinical certainty that the manifestation in this reaction incident was caused by exposure to the specific substance.This data element can be populated with additional terminology within the Netherlands according to the ZekerheidsStatusCodelijst value list.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De mate van klinische zekerheid dat de manifestatie in dit reactie-incident werd veroorzaakt door blootstelling aan de geïdentificeerde specifieke stof."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The level of clinical certainty that the manifestation in this reaction incident was caused by exposure to the specific substance.\n\nThis data element can be populated with additional terminology within the Netherlands according to the ZekerheidsStatusCodelijst value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De mate van klinische zekerheid dat de manifestatie in dit reactie-incident werd veroorzaakt door blootstelling aan de geïdentificeerde specifieke stof.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst ZekerheidsStatusCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MateVanZekerheid"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.certainty",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "AllergyIntolerance Verification Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-06-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.593--20260923090744",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.manifestation",
+        "short": "Clinical symptoms and/or findings observed with or associated with the adverse reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische symptomen en/of bevindingen die worden waargenomen bij of in verband worden gebracht met de ongewenste reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical symptoms and/or findings observed with or associated with the adverse reaction. The manifestation can be recorded as a single word, a word group, or a brief description. For example: nausea, skin rash.\n\nThis data element can be populated with additional terminology within the Netherlands according to the SymptoomCodelijst value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische symptomen en/of bevindingen die worden waargenomen bij of in verband worden gebracht met de ongewenste reactie. De manifestatie kan worden vastgelegd als één woord, een woordgroep of een korte beschrijving. Bijvoorbeeld: misselijkheid, huiduitslag.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst SymptoomCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ManifestatieVanReactie"
+        ],
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Reaction.manifestation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "ManifestatieVanReactieWaardelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-11"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.594--20260923091004",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.reactionDescription",
+        "short": "Textual description of the response as a whole, including any details about the manifestation.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van de reactie als geheel, inclusief eventuele details over de manifestatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the response as a whole, including any details about the manifestation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele beschrijving van de reactie als geheel, inclusief eventuele details over de manifestatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ReactieBeschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.reactionDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-04-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.595--20260923091042",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.1"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.reactionDateTime",
+        "short": "Date and time at which the reaction took place.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop de reactie plaats gevonden heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time at which the reaction took place. This may also be just the date or a partial date, in the event that the exact date is unknown.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ReactieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.reactionDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-13"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.596--20260923091107",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.severity",
+        "short": "Clinical assessment of the severity of the reaction incident as a whole, taking into account possible multiple different manifestations.This data element can be populated with additional terminology within the Netherlands according to the ErnstCodelijst value list and table 55 of the NHG",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische beoordeling van de ernst van het reactie-incident als geheel, waarbij mogelijk meerdere verschillende manifestaties worden meegewogen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical assessment of the severity of the reaction incident as a whole, taking into account possible multiple different manifestations.\n\nThis data element can be populated with additional terminology within the Netherlands according to the ErnstCodelijst value list and table 55 of the NHG",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinische beoordeling van de ernst van het reactie-incident als geheel, waarbij mogelijk meerdere verschillende manifestaties worden meegewogen.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst ErnstCodelijst en NHG tabel 55"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Ernst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "AllergyIntoleranceSeverity",
+          "valueSet": "http://hl7.org/fhir/ValueSet/reaction-event-severity"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "EU-12"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.597--20260923091212",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.routeOfExposure",
+        "short": "Manner in which the patient was exposed to the identified specific substance.This data element can be populated with additional terminology within the Netherlands according to the WijzeVanBlootstelling value list.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wijze waarop de patiënt is blootgesteld aan de geïdentificeerde specifieke stof."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Manner in which the patient was exposed to the identified specific substance.\n\nThis data element can be populated with additional terminology within the Netherlands according to the WijzeVanBlootstelling value list.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wijze waarop de patiënt is blootgesteld aan de geïdentificeerde specifieke stof.\n\nDit data-element kan worden gevuld met aanvullende terminologie binnen Nederland volgens de waardelijst WijzeVanBlootstellingCodelijst"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "WijzeVanBlootstelling"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Reaction.routeOfExposure",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "WijzeVanBlootstellingCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-20"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.598--20260923091410",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.2"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.7.3"
+              }
+            ]
+          }
+        ],
+        "path": "Reaction.note",
+        "short": "Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de reactie van de allergie of intolerantie, en/of aanvullende vrije tekst over de reactie allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de reactie van de allergie of intolerantie, en/of aanvullende vrije tekst over de reactie allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Opmerking"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Reaction.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "Reaction",
+            "map": "NL-04-04"
+          }
+        ]
+      }
+    ]
+  }
+}

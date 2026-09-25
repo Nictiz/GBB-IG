@@ -1,0 +1,189 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nictiz.nl.gbb",
+  "url": "http://nictiz.nl/gbb/ImplementationGuide/nictiz.nl.gbb",
+  "version": "0.1.0",
+  "name": "GenericBuildingBlocks",
+  "status": "draft",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "packageId": "nictiz.nl.gbb",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Requirements/AllergyIntolerance"
+        },
+        "exampleBoolean": false,
+        "name": "AllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AllergyIntolerance"
+        },
+        "exampleBoolean": false,
+        "name": "LogicalModelAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Reaction"
+        },
+        "exampleBoolean": false,
+        "name": "LogicalModelpart.Reaction"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754"
+        },
+        "description": "Waardelijst behorend bij het data-element ManifestatieVanReactie in generieke bouwblok AllergieIntolerantie",
+        "exampleBoolean": false,
+        "name": "ManifestatieVanReactieWaardelijst"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-AllergyIntolerance"
+        },
+        "description": "Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites.",
+        "exampleBoolean": false,
+        "name": "nl core AllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ExchangingSystem"
+        },
+        "description": "Systeem dat gegevens ontsluit aan derden",
+        "exampleBoolean": false,
+        "name": "OntsluitendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/Reaction"
+        },
+        "exampleBoolean": false,
+        "name": "Reaction"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/RegistrationSystem"
+        },
+        "description": "Bronsysteem voor de registratie",
+        "exampleBoolean": false,
+        "name": "RegistrerendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ConsumingSystem"
+        },
+        "description": "Systeem dat gegevens van derden verwerkt",
+        "exampleBoolean": false,
+        "name": "VerwerkendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"
+        },
+        "description": "WijzeVanBlootstellingCodelijst",
+        "exampleBoolean": false,
+        "name": "WijzeVanBlootstellingCodelijst"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "AllergyIntolerance.html",
+          "title": "Allergy Intolerance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "leeswijzer.html",
+          "title": "Leeswijzer",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "obligations.html",
+          "title": "Obligations",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/requirements"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/logicalmodels"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "generated/pagecontent"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "nl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/nl"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "path-liquid-template",
+        "value": "template/liquid"
+      }
+    ]
+  }
+}

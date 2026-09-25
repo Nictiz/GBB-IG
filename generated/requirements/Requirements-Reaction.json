@@ -1,0 +1,240 @@
+{
+  "resourceType": "Requirements",
+  "id": "Reaction",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/Reaction",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-02",
+      "label": "NL-04-02 Tekstuele beschrijving van de reactie",
+      "requirement": "**Omschrijving**: Tekstuele beschrijving van de reactie als geheel.\n\n**Variabiliteit**: Vrije tekst",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-04",
+      "label": "NL-04-04 Vrije tekst over reactie",
+      "requirement": "**Omschrijving**: Tekstuele toelichting op de reactie die niet in één van de andere velden kan worden weergegeven (zib/iS)\n\n**Variabiliteit**: Een vrije ruimte moet het zijn waar iemand eigen vrije tekst kan vullen, gericht op de Reactie",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-06-02",
+      "label": "NL-06-02 Mate zekerheid over reactie",
+      "requirement": "**Omschrijving**: De behoefte om gecodeerd aan te kunnen geven met welke overtuiging de zorgverlener de reactie ziet als horend bij de aandoening\n\n**Variabiliteit**: Code\r\n\r\nSNOMED",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-09",
+      "label": "EU-09 reaction",
+      "requirement": "**Omschrijving**: Adverse reaction events linked to exposure to substance."
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-09-01",
+      "label": "NL-09-01 De omschreven reactie op een stof/groep stoffen of straling (Reactie container)",
+      "requirement": "**Omschrijving**: De behoefte is om gegevens uit te wisselen over de reactie van een persoon die reageert op een stof/groep stoffen/of straling\r\n\r\nEen nadelige klinische respons die mogelijk, waarschijnlijk of bewezen het gevolg is van blootstelling aan een stof, groep van stoffen of straling. (ZIB/IS)\r\n\r\nIn gesprekken met de expertgroep CiO is de behoefte uitgesproken vanuit een aantal zorgprofessionals om voor sommige usecases reacties los uit te kunnen wisselen. Het is wenselijk om de informatie over de reacties en het tijdsbeloop op een later moment in te kunnen zien om herbeoordeling van de reactie mogelijk te maken. Medisch specialisten vinden het wenselijk om verschijnselen gecodeerd te registreren en uit te wisselen.  (memo)\n\n**Variabiliteit**: Een container met gegevens??\r\n\r\nOf losse bouwsteen. (De mogelijkheid om alleen een reactie te beschrijven zonder nog een overgevoeligheid/allergie te moeten beschrijven is klinisch relevant bevonden bij analyse van de ZIB2024).",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-10",
+      "label": "EU-10 reaction.agentOrAllergen",
+      "requirement": "**Omschrijving**: Specific substance or pharmaceutical product considered to be responsible for event\n\n**Variabiliteit**: Code en string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-10-01",
+      "label": "NL-10-01 Hetgeen wat de reactie veroorzaakt (Veroorzaker)",
+      "requirement": "**Omschrijving**: De behoefte is om gecodeerd aan te kunnen geven wat het agens is wat de reactie heeft veroorzaakt met een onderscheid in straling en stoffen\r\n\r\nHet is het agens (straling of stof) dat de reactie heeft uitgelokt (Zib/IS)\n\n**Variabiliteit**: Code\r\n\r\nVeroorzakendeStofAllergeneStoffenCodelijst\r\nList2.png\tVeroorzakendeStofHPKCodelijst\r\nList2.png\tVeroorzakendeStofSNKCodelijst\r\nList2.png\tVeroorzakendeStofThesaurus122Codelijst\r\n\r\nList2.png\tStralingCodelijst",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-11",
+      "label": "EU-11 reaction.manifestation",
+      "requirement": "**Omschrijving**: Description of the clinical manifestation of the allergic reaction. Example: anaphylactic shock, angioedema. (the clinical manifestation also gives information about the severity of the observed reaction).\r\n\r\nBinding Description: (preferred): ICD-10, SNOMED CT\n\n**Variabiliteit**: Code en string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-11-01",
+      "label": "NL-11-01 Omschrijving van een diagnose",
+      "requirement": "**Omschrijving**: De behoefte om de voorkomende reactie als een gecodeerde diagnose aan te geven\r\n\r\nDe term met bijbehorende code die de zorgverlener kiest uit de gebruikte codelijst. (IS/ZIB)\r\n\r\nHet constateren dat een verschijnsel of een symptoom bij een patiënt een reactie ergens op is, is conceptueel equivalent met een diagnose vastleggen over een patiënt. (memo)\n\n**Variabiliteit**: Codelijst SNOMED\r\nICPC-1 NL\r\nDPD",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-11-02",
+      "label": "NL-11-02 Symptomen van de reactie",
+      "requirement": "**Omschrijving**: De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof.\n\n**Variabiliteit**: Gecodeerd (SNOMED CT)",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-12",
+      "label": "EU-12 reaction.severity",
+      "requirement": "**Omschrijving**: Severity of the clinical manifestation of the allergic reaction.\r\n\r\nBinding Description: (preferred): SNOMED CT, HL7 reaction event severity\n\n**Variabiliteit**: Code en string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-12-01",
+      "label": "NL-12-01 Ernst van de reactie",
+      "requirement": "**Omschrijving**: De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof.\n\n**Variabiliteit**: Gecodeerd (SNOMED CT)",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-12-02",
+      "label": "NL-12-02 Ernst van de reactie (Ernst)",
+      "requirement": "**Omschrijving**: De behoefte om gecodeerd aan te geven wat de ernst van de reactie op agens is\r\n\r\nDe mate van ernst van de reactie. (ZIB)\n\n**Variabiliteit**: SNOMED code\r\n\r\nLicht\t255604002\r\nMild 6736007\t\r\nMatige ernst\t24484000",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-13",
+      "label": "EU-13 reaction.onset",
+      "requirement": "**Omschrijving**: Date and time of the onset of the reaction\n\n**Variabiliteit**: DateTime"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-13-02",
+      "label": "NL-13-02 Datum/tijdstip dat een reactie heeft plaatsgevonden",
+      "requirement": "**Omschrijving**: Van de ongewenste reactie kan de datum/tijdstip worden geduid\n\n**Variabiliteit**: Datum/Tijd",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-20",
+      "label": "NL-20 Wijze van blootstelling die de allergie of intolerantie heeft veroorzaakt",
+      "requirement": "**Omschrijving**: Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop de stof toegediend is.\n\n**Variabiliteit**: Gecodeerd (SNOMED CT)",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    }
+  ]
+}

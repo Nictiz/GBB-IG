@@ -1,0 +1,509 @@
+{
+  "resourceType": "Requirements",
+  "id": "AllergyIntolerance",
+  "language": "nl",
+  "url": "http://nictiz.nl/gbb/Requirements/AllergyIntolerance",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-01",
+      "label": "EU-01 header.author[X]",
+      "requirement": "**Omschrijving**: The author of the allergy/intolerance information.\n\n**Variabiliteit**: Zorgverlener, zorgorganisatie, device"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-01-01",
+      "label": "NL-01-01 De zorgverlener die diagnostisch inzicht heeft gehad (Diagnosesteller)",
+      "requirement": "**Omschrijving**: De behoefte om aan te geven welke zorgverlener tot het diagnostisch inzicht van de overgevoeligheid is gekomen\n\n**Variabiliteit**: Een zorgverlener",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-02",
+      "label": "EU-02 header.status",
+      "requirement": "**Omschrijving**: Current status of the allergy or intolerance, for example, whether it is active, in remission, resolved, etc.\n\n**Variabiliteit**: Code uit HL7 en string \r\nActive, inactive en Resolved"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-02-01",
+      "label": "NL-02-01 Status van de allergie",
+      "requirement": "**Omschrijving**: Manier om te duiden of de allergie/overgevoeligheid actief is of niet (achterhaald, foutief)\n\n**Variabiliteit**: Gecodeerd (SNOMED CT)",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-03",
+      "label": "EU-03 agentOrAllergen",
+      "requirement": "**Omschrijving**: Code that identifies the allergy or intolerance\r\nBinding Description: (preferred): ATC, EMA SPOR SMS, SNOMED CT\n\n**Variabiliteit**: Code en string\r\nBinding Description: (preferred): ATC, EMA SPOR SMS, SNOMED CT"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-03-01",
+      "label": "NL-03-01 Allergeen voor niet medicamenteuze allergieën of intoleranties",
+      "requirement": "**Omschrijving**: Gecodeerde allergenen voor niet medicamenteuze allergieën of intoleranties\n\n**Variabiliteit**: SNOMED CT Allergene stoffen",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-03-02",
+      "label": "NL-03-02 Allergeen voor medicamenteuze allergieën of intoleranties",
+      "requirement": "**Omschrijving**: Gecodeerde allergenen voor medicamenteuze allergieën of intoleranties uit de G-standaard\n\n**Variabiliteit**: G-standaard (HPK, SNK, SKK en thesauris 122)",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-03-03",
+      "label": "NL-03-03 Straling als allergeen",
+      "requirement": "**Omschrijving**: De straling waar de patiënt allergisch of overgevoelig voor is\n\n**Variabiliteit**: SNOMED CT StralingCodelijst",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-03-04",
+      "label": "NL-03-04 Ongecodeerde allergeen",
+      "requirement": "**Omschrijving**: De stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is\n\n**Variabiliteit**: ongecodeerd",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-03-05",
+      "label": "NL-03-05 Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen",
+      "requirement": "**Omschrijving**: Vastleggen van relevante allergieën van de vrouw door de veroorzakende stof te kiezen uit een waardelijst Allergies",
+      "source": [
+        {
+          "display": "Heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-04",
+      "label": "EU-04 note",
+      "requirement": "**Omschrijving**: Additional information about the allergy or intolerance\n\n**Variabiliteit**: String"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-01",
+      "label": "NL-04-01 Vrije tekst over overgevoeligheid/intolerantie",
+      "requirement": "**Omschrijving**: Tekstuele toelichting op de overgevoeligheid of intolerantie die niet in één van de andere velden kan worden weergegeve\n\n**Variabiliteit**: Een vrije ruimte moet het zijn waar iemand eigen vrije tekst kan vullen, gericht op de overgevoeligheid/intolerantie",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-03",
+      "label": "NL-04-03 Tekstuele toevoeging voor andere informatie",
+      "requirement": "**Omschrijving**: Alle informatie die niet gedekt worden op een andere manier kunnen kwijt in een tekstveld\n\n**Variabiliteit**: Tekstveld",
+      "source": [
+        {
+          "display": "Reden voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-05",
+      "label": "NL-04-05 Reden voor afsluiten allergie of overgevoeligheid",
+      "requirement": "**Omschrijving**: Reden waarom de allergie of overgvoeligheid niet meer relevant is\n\n**Variabiliteit**: Tekstveld",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-04-06",
+      "label": "NL-04-06 Vrije tekst over allergie/intolerantie",
+      "requirement": "**Omschrijving**: Beschrijving van de allergie in vrije tekst uitwisselen\n\n**Variabiliteit**: String",
+      "source": [
+        {
+          "display": "Reden voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-05",
+      "label": "EU-05 criticality",
+      "requirement": "**Omschrijving**: Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.\r\nBinding Description: (preferred): HL7 allergy intolerance criticality\n\n**Variabiliteit**: Code en string\r\nLow, high, unable to assess risk"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-05-01",
+      "label": "NL-05-01 Mate van kritiek zijn",
+      "requirement": "**Omschrijving**: Mate van kritiek zijn wordt gedefinieerd als \"de potentiële ernst van toekomstige reacties.\"\r\nDit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie.\n\n**Variabiliteit**: Code SNOMED: licht, matig, ernstig, fataal",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-05-02",
+      "label": "NL-05-02 VerwachtRisicoBijBlootstelling  / Mate van kritiek zijn bij hehaalde blootstelling",
+      "requirement": "**Omschrijving**: De behoefte om aan te geven wat mogelijk gaat gebeuren als een persoon opnieuw in aanmerking komt met de stof/straling\n\n**Variabiliteit**: Code SNOMED",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-06",
+      "label": "EU-06 certainty",
+      "requirement": "**Omschrijving**: Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and /or clinical evidence of condition\r\nBinding Description: (preferred): HL7 allergy intolerance verification\n\n**Variabiliteit**: Code en string\r\nUnconfirmed, assumed, confirmed, refuted, entered-in-error"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-06-01",
+      "label": "NL-06-01 Mate zekerheid over gevoeligheid  (ZekerheidStatus)",
+      "requirement": "**Omschrijving**: De behoefte om gecodeerd aan te kunnen geven met welke overtuiging de zorgverlener de gevoeligheid ziet als horend bij de aandoening\r\n\r\nGeeft aan met welke overtuiging de zorgverlener de overgevoeligheid of intolerantie ziet als duiding van de aandoening. (is)\n\n**Variabiliteit**: Code\r\n\r\nSNOMED",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-06-03",
+      "label": "NL-06-03 Plek in het proces van diagnosestelling (Diagnosestatus)",
+      "requirement": "**Omschrijving**: De behoefte om aan te geven waar in het diagnostisch proces (DD, voorlopige, vastgestelde diagnose) de diagnosestelling over de overgeoeligheid is\r\n\r\n\tGeeft aan hoe het staat met het diagnostisch proces. (ZIB)\n\n**Variabiliteit**: codelijst\r\nSNOMED",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-07",
+      "label": "EU-07 onsetDate",
+      "requirement": "**Omschrijving**: When allergy or intolerance was identified\n\n**Variabiliteit**: DateTime"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-07-01",
+      "label": "NL-07-01 Datum/tijdstip van diagnostisch inzicht (DiagnostischInzichtDatum)",
+      "requirement": "**Omschrijving**: De behoefte om datum/tijdstip aan te kunnen geven waarop bekend is geworden wat de diagnose is\r\n\r\nDatum (en tijdstip) waarop de zorgverlener het diagnostisch inzicht heeft verkregen (IS)\r\n\r\nHet nieuwe element DiagnostischInzichtDatum legt het tijdstip vast waarop de zorgverlener het diagnostisch inzicht heeft verkregen. (Memo)\n\n**Variabiliteit**: Datum/tijd",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-08",
+      "label": "EU-08 endDate",
+      "requirement": "**Omschrijving**: Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)\n\n**Variabiliteit**: DateTime"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-08-01",
+      "label": "NL-08-01 Datum voor afsluiten allergie of overgevoeligheid",
+      "requirement": "**Omschrijving**: Datum/tijdstip dat de allergie of overgevoeligheid niet meer releavant is\n\n**Variabiliteit**: Datum/Tijd",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-13-01",
+      "label": "NL-13-01 Datum/tijdstip dat de laatste ongewenste reactie heeft plaatsgevonden",
+      "requirement": "**Omschrijving**: Van de laatste ongewenste reactie kan de datum/tijdstip worden geduid\n\n**Variabiliteit**: Datum/Tijd",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-14",
+      "label": "NL-14 Groepering (Categorie)",
+      "requirement": "**Omschrijving**: De behoefte om aan te kunnen geven tot welke groep de overgevoeligheid of intolerantie hoort (bv. voedselallergie, geneesmiddelallergie, etc.)\n\n**Variabiliteit**: Code\r\n\r\nSNOMED",
+      "source": [
+        {
+          "display": "Relevant voor heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-15",
+      "label": "EU-15 header.identifier",
+      "requirement": "**Omschrijving**: Business identifier for the object, unique within its system. Supporting disambiguation between different contexts (systems/countries).\n\n**Variabiliteit**: Identifier"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-15-01",
+      "label": "NL-15-01 Identificatienummer van de allergie of overgevoeligheid",
+      "requirement": "**Omschrijving**: Identificatienummer van de allergie of overgevoeligheid\n\n**Variabiliteit**: ID",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-15-02",
+      "label": "NL-15-02 Identificatienummer Geneesmiddelovergevoeligheid",
+      "requirement": "**Omschrijving**: De behoefte is om een groep bouwstenen / groep gegevens die bij elkaar horen binnen geneesmiddelovergevoeligheid te identificeren\n\n**Variabiliteit**: Code",
+      "source": [
+        {
+          "display": "Heden"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-16",
+      "label": "EU-16 Header.subject",
+      "requirement": "**Omschrijving**: Patient/subject information\n\n**Variabiliteit**: Verwijzing naar GB Patient",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NL-16-01",
+      "label": "NL-16-01 Patient die de allergie of overgevoeligheid heeft",
+      "requirement": "**Omschrijving**: Informatie over de patient die de allergie of overgevoeligheid heeft",
+      "source": [
+        {
+          "display": "Relevant voor heden en toekomst"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-17",
+      "label": "EU-17 Header.date",
+      "requirement": "**Omschrijving**: date and optionally time of authoring/issuing\n\n**Variabiliteit**: Datum/Tijd"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-18",
+      "label": "EU-18 Header.source",
+      "requirement": "**Omschrijving**: Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.\n\n**Variabiliteit**: Gecodeerd"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "EU-19",
+      "label": "EU-19 Header.language",
+      "requirement": "**Omschrijving**: Language in which the resource is written. Language is expressed by the IETF language tag.\n\n**Variabiliteit**: Gecodeerd (BCP 47)"
+    }
+  ]
+}
