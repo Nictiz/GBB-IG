@@ -69,7 +69,7 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
-      <path value="AllergyIntolerance.language"/>
+      <path value="AllergyIntolerance.language" />
       <mustSupport value="true"/>
       <short value="Language"/>
       <alias value="Taal"/>
