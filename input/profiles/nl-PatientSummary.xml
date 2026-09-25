@@ -854,14 +854,30 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="Condition" />
       <definition value="Health conditions affecting the health of the patient." />
       <alias value="Gezondheidstoestand" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sectionProblems.entry:problem">
+      <path value="Composition.section.entry" />
+      <sliceName value="problem" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+      </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
         <map value="nlps-dataelement-167" />
@@ -1075,14 +1091,30 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="AllergyIntolerance" />
       <definition value="List of structured allergies and intolerances." />
       <alias value="AllergieIntolerantie" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sectionAllergies.entry:allergyOrIntolerance">
+      <path value="Composition.section.entry" />
+      <sliceName value="allergyOrIntolerance" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance" />
+      </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
         <map value="nlps-dataelement-92" />
@@ -1506,14 +1538,30 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="Procedure" />
       <definition value="List of structured procedures." />
       <alias value="Verrichting" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sectionProceduresHx.entry:procedure">
+      <path value="Composition.section.entry" />
+      <sliceName value="procedure" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
+      </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
         <map value="nlps-dataelement-165" />
@@ -1727,14 +1775,30 @@
         </extension>
       </extension>
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="DeviceUse" />
       <definition value="Describes the patient's implanted and external medical devices and equipment that their health status depends on. Includes devices (such as cardiac pacemakers, implantable defibrillator, prothesis, ferromagnetic bone implants etc.) that are important to know by the HP." />
       <alias value="MedischHulpmiddel" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUseStatement" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sectionMedicalDevices.entry:deviceStatement">
+      <path value="Composition.section.entry" />
+      <sliceName value="deviceStatement" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+      </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
         <map value="nlps-dataelement-166" />
