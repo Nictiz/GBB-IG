@@ -4,7 +4,7 @@
    "path" : "http://ig.nictiz.nl/gbb/1.0.0-alpha.1",
    "mode" : "milestone",
    "status" : "release",
-   "sequence" : "Releases",
+   "sequence" : "1.0.0",
    "desc" : "Initial release",
    "first" : true,
    "title" : "Generic Building Block IG NL",
