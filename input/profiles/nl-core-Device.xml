@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Device" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps"/>
+      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps" />
   </extension>
   <text>
     <status value="empty" />
