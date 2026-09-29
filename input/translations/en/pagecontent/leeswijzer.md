@@ -17,7 +17,7 @@ These versions of GBB AllergyIntolerance and SBB Reaction cover information requ
 * Information standard Ketenzorg version 3.0.2 
 * Information standard Huisartswaarneeming version 6.10.1.3 
 * Information standard Geboortezorg version 3.2 
-* Information standard Jeugdgezondheidszorg version 8.0.1 
+* Information standard Jeugdgezondheidszorg version 8.0.1
 * Information standard Vaccinatie-Immunisatie version 2.0.4 
 
 ### Additional bindings
