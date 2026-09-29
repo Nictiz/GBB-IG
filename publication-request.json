@@ -1,0 +1,17 @@
+{
+   "package-id" : "nictiz.nl.gbb",
+   "version" : "1.0.0-alpha.1",
+   "path" : "http://ig.nictiz.nl/gbb/1.0.0-alpha.1",
+   "mode" : "milestone",
+   "status" : "release",
+   "sequence" : "Releases",
+   "desc" : "Initial release",
+   "first" : true,
+   "title" : "Generic Building Block IG NL",
+   "ci-build" : "https://build.fhir.org/ig/Nictiz/GBB-IG",
+   "registry-description" : "Dutch Generic Building Blocks. EHDS First, completed with Dutch additions",
+   "registry-country" : "Netherlands",
+   "registry-authority" : "Nictiz",
+   "category" : "Generic",
+   "introduction" : "Building Blocks for data availability and for larger usecases."
+}
