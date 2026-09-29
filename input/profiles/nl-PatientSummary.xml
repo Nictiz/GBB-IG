@@ -1787,7 +1787,7 @@
       <alias value="MedischHulpmiddel" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
       </type>
       <mustSupport value="true" />
@@ -1797,7 +1797,7 @@
       <sliceName value="deviceStatement" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUseStatement" />
       </type>
       <mapping>
         <identity value="NLPS-PatientSummary-v0.1" />
