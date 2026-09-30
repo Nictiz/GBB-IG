@@ -39,7 +39,6 @@
   <differential>
     <element id="HumanName">
       <path value="HumanName" />
-      <alias value="nl-core-NameInformation" />
       <alias value="Naamgegevens" />
       <constraint>
         <key value="gbb-HumanName-1" />
@@ -54,13 +53,13 @@
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
       </constraint>
       <constraint>
-        <key value="nl-core-NameInformation-01" />
+        <key value="gbb-HumanName-03" />
         <severity value="warning" />
         <human value="If parts of the family name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name. This ensures compatibility with common FHIR usage." />
         <expression value="family.exists() implies text.hasValue()" />
       </constraint>
       <constraint>
-        <key value="nl-core-NameInformation-02" />
+        <key value="gbb-HumanName-04" />
         <severity value="warning" />
         <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
         <expression value="(family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
@@ -151,7 +150,7 @@
       </extension>
       <path value="HumanName.text" />
       <comment value="A representation of the full name, including given names and the family name.\n\nWhen implementing, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept.\n\nIf parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name." />
-      <condition value="nl-core-NameInformation-01" />
+      <condition value="gbb-HumanName-03" />
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-HumanName" />
@@ -178,7 +177,7 @@
       </extension>
       <path value="HumanName.family" />
       <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:\n* If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.\n* If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
-      <condition value="nl-core-NameInformation-02" />
+      <condition value="gbb-HumanName-04" />
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-HumanName" />
