@@ -31,11 +31,6 @@
     <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/HumanName" />
     <name value="Logical model for HumanName" />
   </mapping>
-  <mapping>
-    <identity value="zib-nameinformation-v1.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/NameInformation-v1.1(2020EN)" />
-    <name value="zib NameInformation-v1.1(2020EN)" />
-  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="HumanName" />
@@ -70,36 +65,15 @@
         <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
         <expression value="(family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
       </constraint>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.1" />
-        <comment value="NameInformation" />
-      </mapping>
     </element>
     <element id="HumanName.extension:nameUsage">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="HumanName.extension" />
       <sliceName value="nameUsage" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.extension:nameUsage.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -132,11 +106,6 @@
           </extension>
         </valueSet>
       </binding>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.7" />
-        <comment value="NameUsage" />
-      </mapping>
     </element>
     <element id="HumanName.use">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -185,41 +154,6 @@
       <condition value="nl-core-NameInformation-01" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.4" />
-        <comment value="FirstNames (implicit, main mapping is on .given)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.5" />
-        <comment value="Initials (implicit, main mapping is on .given)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.7" />
-        <comment value="NameUsage (implicit, main mapping is on extension:nameUsage)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.11" />
-        <comment value="Prefix (implicit, main mapping is on .family.extension:prefix)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.10" />
-        <comment value="LastName (implicit, main mapping is on .family.extension:lastName)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.9" />
-        <comment value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.8" />
-        <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
-      </mapping>
-      <mapping>
         <identity value="lm-HumanName" />
         <map value="gbb-dataelement-2" />
         <comment value="FullName" />
@@ -247,60 +181,19 @@
       <condition value="nl-core-NameInformation-02" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.7" />
-        <comment value="NameUsage (implicit, main mapping is on extension:nameUsage)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.11" />
-        <comment value="Prefix (implicit, main mapping is on .family.extension:prefix)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.10" />
-        <comment value="LastName (implicit, main mapping is on .family.extension:lastName)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.9" />
-        <comment value="PartnerPrefix (implicit, main mapping is on .family.extension:partnerPrefix)" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.8" />
-        <comment value="PartnerLastName (implicit, main mapping is on .family.extension:partnerLastName)" />
-      </mapping>
-      <mapping>
         <identity value="lm-HumanName" />
         <map value="gbb-dataelement-3" />
         <comment value="FullFamily" />
       </mapping>
     </element>
     <element id="HumanName.family.extension:humanNameOwnPrefix">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="humanNameOwnPrefix" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -324,29 +217,8 @@
       <definition value="Prefix to the person’s own last name." />
       <alias value="Voorvoegsels" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.11" />
-        <comment value="Prefix" />
-      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNameOwnName">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="humanNameOwnName" />
       <type>
@@ -354,7 +226,7 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
       </type>
       <condition value="zib-NameInformation-1" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -378,36 +250,15 @@
       <definition value="The person’s official last name" />
       <alias value="Achternaam" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.10" />
-        <comment value="LastName" />
-      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNamePartnerPrefix">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="humanNamePartnerPrefix" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -431,29 +282,8 @@
       <definition value="Prefix to the partner’s last name." />
       <alias value="VoorvoegselsPartner" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.9" />
-        <comment value="PartnerPrefix" />
-      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="HumanName.family.extension" />
       <sliceName value="humanNamePartnerName" />
       <type>
@@ -461,7 +291,7 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
       </type>
       <condition value="zib-NameInformation-2" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -485,11 +315,6 @@
       <definition value="Partner’s official last name." />
       <alias value="AchternaamPartner" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.8" />
-        <comment value="PartnerLastName" />
-      </mapping>
     </element>
     <element id="HumanName.given">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -515,16 +340,6 @@
       <alias value="Initiaal" />
       <alias value="Roepnaam" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.4" />
-        <comment value="FirstNames" />
-      </mapping>
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.5" />
-        <comment value="Initials" />
-      </mapping>
     </element>
     <element id="HumanName.prefix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -549,11 +364,6 @@
       <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.12" />
-        <comment value="Titles" />
-      </mapping>
     </element>
     <element id="HumanName.suffix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -578,11 +388,6 @@
       <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-nameinformation-v1.1-2020EN" />
-        <map value="NL-CM:20.4.12" />
-        <comment value="Titles" />
-      </mapping>
     </element>
   </differential>
 </StructureDefinition>
