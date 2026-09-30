@@ -76,6 +76,14 @@
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-ContactPoint" />
+        <map value="CTP-01" />
+        <comment value="System" />
+      </mapping>
+      <mapping>
+        <identity value="lm-ContactPoint" />
+        <map value="ContactPoint.system" />
+        <comment value="Systeem" />
       </mapping>
     </element>
     <element id="ContactPoint.value">
@@ -102,6 +110,14 @@
       <min value="1" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-ContactPoint" />
+        <map value="CTP-02" />
+        <comment value="Value" />
+      </mapping>
+      <mapping>
+        <identity value="lm-ContactPoint" />
+        <map value="ContactPoint.value" />
+        <comment value="Value" />
       </mapping>
     </element>
     <element id="ContactPoint.use">
@@ -127,6 +143,14 @@
       <alias value="Gebruik" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-ContactPoint" />
+        <map value="CTP-03" />
+        <comment value="Use" />
+      </mapping>
+      <mapping>
+        <identity value="lm-ContactPoint" />
+        <map value="ContactPoint.use" />
+        <comment value="Use" />
       </mapping>
     </element>
   </differential>
