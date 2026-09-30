@@ -65,6 +65,14 @@
       <alias value="AdresGebruik" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-01" />
+        <comment value="Use" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.AddressUse" />
+        <comment value="Use" />
       </mapping>
     </element>
     <element id="Address.type">
@@ -89,6 +97,16 @@
       <definition value="The type of address in question, such as a physical address or mailing address." />
       <alias value="Adrestype (post | fysiek)" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-02" />
+        <comment value="Type" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.type" />
+        <comment value="Type" />
+      </mapping>
     </element>
     <element id="Address.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -108,10 +126,20 @@
         </extension>
       </extension>
       <path value="Address.text" />
-      <short value="FullAddress" />
+      <short value="text/FullAddress" />
       <definition value="Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label." />
-      <alias value="VolledigAdres" />
+      <alias value="tekst/VolledigAdres" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-03" />
+        <comment value="text/FullAddress" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.text" />
+        <comment value="text/FullAddress" />
+      </mapping>
     </element>
     <element id="Address.line">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -137,10 +165,20 @@
       <alias value="Adresregel" />
       <max value="1" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-04" />
+        <comment value="Line" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.use" />
+        <comment value="Line" />
+      </mapping>
     </element>
     <element id="Address.line.extension">
       <path value="Address.line.extension" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:streetName">
       <path value="Address.line.extension" />
@@ -150,7 +188,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:streetName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -173,6 +211,17 @@
       <short value="StreetName" />
       <definition value="Name of the street." />
       <alias value="Straatnaam" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-05" />
+        <comment value="StreetName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.streetName" />
+        <comment value="StreetName" />
+      </mapping>
     </element>
     <element id="Address.line.extension:houseNumber">
       <path value="Address.line.extension" />
@@ -182,7 +231,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:houseNumber.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -205,6 +254,17 @@
       <short value="HouseNumber" />
       <definition value="The number of a building, house or lot alongside the street. Also known as &quot;primary street number&quot;. This does not number the street but rather the building." />
       <alias value="Huisnummer" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-06" />
+        <comment value="HouseNumber" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.houseNumber" />
+        <comment value="HouseNumber" />
+      </mapping>
     </element>
     <element id="Address.line.extension:buildingNumberSuffix">
       <path value="Address.line.extension" />
@@ -214,7 +274,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:buildingNumberSuffix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -237,6 +297,17 @@
       <short value="BuildingNumberSuffix" />
       <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number." />
       <alias value="Huisnummerletter" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-07" />
+        <comment value="BuildingNumberSuffix" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.buildingNumberSuffix" />
+        <comment value="BuildingNumberSuffix" />
+      </mapping>
     </element>
     <element id="Address.line.extension:additionalLocator">
       <path value="Address.line.extension" />
@@ -246,7 +317,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:additionalLocator.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -269,6 +340,17 @@
       <short value="AdditionalLocator" />
       <definition value="The indication used for addresses which do not consist of the usual street name and house number. This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)." />
       <alias value="AanduidingBijNummer" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-08" />
+        <comment value="AdditionalLocator" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.additionalLocator" />
+        <comment value="AdditionalLocator" />
+      </mapping>
     </element>
     <element id="Address.line.extension:unitID">
       <path value="Address.line.extension" />
@@ -278,7 +360,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:unitID.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -301,6 +383,17 @@
       <short value="UnitID/AdditionalInformation" />
       <definition value="The number or name of a specific unit contained within a building or complex, as assigned by that building or complex." />
       <alias value="UnitID/AdditioneleInformatie" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-09" />
+        <comment value="UnitID/AdditionalInformation" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.additionalInformation" />
+        <comment value="UnitID/AdditionalInformation" />
+      </mapping>
     </element>
     <element id="Address.line.extension:postBox">
       <path value="Address.line.extension" />
@@ -310,7 +403,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
       <isModifier value="false" />
     </element>
     <element id="Address.line.extension:postBox.value[x]">
@@ -334,10 +427,16 @@
       <short value="Postbox" />
       <definition value="A numbered box located in a post station." />
       <alias value="Postbus" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-10" />
+        <comment value="Postbox" />
+      </mapping>
       <mapping>
         <identity value="lm-Address" />
-        <map value="gbb-dataelement-87" />
-        <comment value="PostBox" />
+        <map value="Address.postbox" />
+        <comment value="Postbox" />
       </mapping>
     </element>
     <element id="Address.city">
@@ -362,6 +461,16 @@
       <definition value="A geographically determined area which forms part of the municipal area. For Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
       <alias value="Woonplaats" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-11" />
+        <comment value="PlaceOfResidence" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.placeOfResidence" />
+        <comment value="PlaceOfResidence" />
+      </mapping>
     </element>
     <element id="Address.district">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -385,6 +494,16 @@
       <definition value="Municipality of residence. For Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14)." />
       <alias value="Gemeente" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-12" />
+        <comment value="Municipality" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.municipality" />
+        <comment value="Municipality" />
+      </mapping>
     </element>
     <element id="Address.postalCode">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -408,6 +527,16 @@
       <definition value="Postcode of the address. In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15)." />
       <alias value="Postcode" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-13" />
+        <comment value="Postcode" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.postcode" />
+        <comment value="Postcode" />
+      </mapping>
     </element>
     <element id="Address.country">
       <path value="Address.country" />
@@ -415,7 +544,7 @@
       <definition value="Country in which the address is located." />
       <comment value="The FHIR datatype does not properly support coding the country using a CodeableConcept or Coding datatype. If the sender supports coded countries, it SHALL send the coded value using the ext-CodeSpecification extension under `Address.country.extension:countryCode`." />
       <alias value="Land" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Address.country.extension:countryCode">
       <path value="Address.country.extension" />
@@ -449,10 +578,21 @@
       <short value="Country" />
       <definition value="Country in which the address is located." />
       <alias value="Land" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.10--20200901000000" />
       </binding>
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-14" />
+        <comment value="Country" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.country" />
+        <comment value="Country" />
+      </mapping>
     </element>
     <element id="Address.period">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -476,6 +616,16 @@
       <definition value="Time period when address was/is in use" />
       <alias value="Gebruiksperiode" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-15" />
+        <comment value="UsablePeriod" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.usablePeriod" />
+        <comment value="UsablePeriod" />
+      </mapping>
     </element>
     <element id="Address.period.start">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
