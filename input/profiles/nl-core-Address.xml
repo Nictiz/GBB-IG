@@ -85,9 +85,9 @@
         </extension>
       </extension>
       <path value="Address.type" />
-      <short value="Type" />
-      <definition value="Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres." />
-      <alias value="AdresSoort" />
+      <short value="Address type (postal | physical)" />
+      <definition value="The type of address in question, such as a physical address or mailing address." />
+      <alias value="Adrestype (post | fysiek)" />
       <mustSupport value="true" />
     </element>
     <element id="Address.text">
@@ -132,49 +132,17 @@
       </extension>
       <path value="Address.line" />
       <short value="AddressLine" />
-      <definition value="AddressLine" />
+      <definition value="(Human-readable representation of the elements underneath) This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information." />
       <comment value="When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line." />
       <alias value="Adresregel" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Address.line.extension" />
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:streetName">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Address.line.extension" />
       <sliceName value="streetName" />
       <max value="1" />
@@ -185,12 +153,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:streetName.value[x]">
-      <path value="Address.line.extension.value[x]" />
-      <short value="StreetName" />
-      <definition value="Street name of the address." />
-      <alias value="Straatnaam" />
-    </element>
-    <element id="Address.line.extension:houseNumber">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -207,6 +169,12 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="StreetName" />
+      <definition value="Name of the street." />
+      <alias value="Straatnaam" />
+    </element>
+    <element id="Address.line.extension:houseNumber">
       <path value="Address.line.extension" />
       <sliceName value="houseNumber" />
       <max value="1" />
@@ -217,12 +185,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:houseNumber.value[x]">
-      <path value="Address.line.extension.value[x]" />
-      <short value="HouseNumber" />
-      <definition value="House number of the address." />
-      <alias value="Huisnummer" />
-    </element>
-    <element id="Address.line.extension:buildingNumberSuffix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -239,6 +201,12 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="HouseNumber" />
+      <definition value="The number of a building, house or lot alongside the street. Also known as &quot;primary street number&quot;. This does not number the street but rather the building." />
+      <alias value="Huisnummer" />
+    </element>
+    <element id="Address.line.extension:buildingNumberSuffix">
       <path value="Address.line.extension" />
       <sliceName value="buildingNumberSuffix" />
       <max value="1" />
@@ -249,12 +217,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:buildingNumberSuffix.value[x]">
-      <path value="Address.line.extension.value[x]" />
-      <short value="BuildingNumberSuffix" />
-      <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number." />
-      <alias value="Huisnummerletter" />
-    </element>
-    <element id="Address.line.extension:additionalLocator">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -271,6 +233,12 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="BuildingNumberSuffix" />
+      <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number." />
+      <alias value="Huisnummerletter" />
+    </element>
+    <element id="Address.line.extension:additionalLocator">
       <path value="Address.line.extension" />
       <sliceName value="additionalLocator" />
       <max value="1" />
@@ -281,12 +249,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:additionalLocator.value[x]">
-      <path value="Address.line.extension.value[x]" />
-      <short value="AdditionalLocator" />
-      <definition value="The indication used for addresses which do not consist of the usual street name and house number. This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)." />
-      <alias value="AanduidingBijNummer" />
-    </element>
-    <element id="Address.line.extension:unitID">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -303,6 +265,12 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="AdditionalLocator" />
+      <definition value="The indication used for addresses which do not consist of the usual street name and house number. This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., '3rd floor, Appt. 342'). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch 't.o.' means 'opposite to' for house boats located across the street facing houses)." />
+      <alias value="AanduidingBijNummer" />
+    </element>
+    <element id="Address.line.extension:unitID">
       <path value="Address.line.extension" />
       <sliceName value="unitID" />
       <max value="1" />
@@ -313,12 +281,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.line.extension:unitID.value[x]">
-      <path value="Address.line.extension.value[x]" />
-      <short value="AdditionalInformation" />
-      <definition value="Extra information such as the building name, building number, entrance, route number." />
-      <alias value="AdditioneleInformatie" />
-    </element>
-    <element id="Address.line.extension:postBox">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -335,6 +297,12 @@
           <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="UnitID/AdditionalInformation" />
+      <definition value="The number or name of a specific unit contained within a building or complex, as assigned by that building or complex." />
+      <alias value="UnitID/AdditioneleInformatie" />
+    </element>
+    <element id="Address.line.extension:postBox">
       <path value="Address.line.extension" />
       <sliceName value="postBox" />
       <max value="1" />
@@ -346,6 +314,22 @@
       <isModifier value="false" />
     </element>
     <element id="Address.line.extension:postBox.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Address.line.extension.value[x]" />
       <short value="Postbox" />
       <definition value="A numbered box located in a post station." />
@@ -426,22 +410,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.country">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Address.country" />
       <short value="Country" />
       <definition value="Country in which the address is located." />
@@ -450,22 +418,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Address.country.extension:countryCode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
       <path value="Address.country.extension" />
       <sliceName value="countryCode" />
       <max value="1" />
@@ -477,6 +429,22 @@
       <isModifier value="false" />
     </element>
     <element id="Address.country.extension:countryCode.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Address.country.extension.value[x]" />
       <short value="Country" />
       <definition value="Country in which the address is located." />
