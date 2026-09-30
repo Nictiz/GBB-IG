@@ -42,13 +42,13 @@
       <alias value="nl-core-NameInformation" />
       <alias value="Naamgegevens" />
       <constraint>
-        <key value="zib-NameInformation-1" />
+        <key value="gbb-HumanName-1" />
         <severity value="error" />
         <human value="If a prefix for a family name is specified, the family name is expected as well" />
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
       </constraint>
       <constraint>
-        <key value="zib-NameInformation-2" />
+        <key value="gbb-HumanName-2" />
         <severity value="error" />
         <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
@@ -225,7 +225,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
       </type>
-      <condition value="zib-NameInformation-1" />
+      <condition value="gbb-HumanName-1" />
       <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnName.value[x]">
@@ -290,7 +290,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
       </type>
-      <condition value="zib-NameInformation-2" />
+      <condition value="gbb-HumanName-2" />
       <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
