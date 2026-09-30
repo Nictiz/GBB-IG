@@ -250,7 +250,7 @@
         <comment value="HouseNumber" />
       </mapping>
     </element>
-    <element id="Address.line.extension:houseNumberSuffix">
+    <element id="Address.line.extension:buildingNumberSuffix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -268,7 +268,7 @@
         </extension>
       </extension>
       <path value="Address.line.extension" />
-      <sliceName value="houseNumberSuffix" />
+      <sliceName value="buildingNumberSuffix" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -276,7 +276,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Address.line.extension:houseNumberSuffix.value[x]">
+    <element id="Address.line.extension:buildingNumberSuffix.value[x]">
       <path value="Address.line.extension.value[x]" />
       <short value="BuildingNumberSuffix" />
       <definition value="A letter following the house number as assigned by the municipal authorities. Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number." />
