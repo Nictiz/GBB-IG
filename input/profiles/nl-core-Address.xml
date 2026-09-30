@@ -543,7 +543,6 @@
       <short value="Country" />
       <definition value="Country in which the address is located." />
       <comment value="The FHIR datatype does not properly support coding the country using a CodeableConcept or Coding datatype. If the sender supports coded countries, it SHALL send the coded value using the ext-CodeSpecification extension under `Address.country.extension:countryCode`." />
-      <alias value="Land" />
       <mustSupport value="false" />
     </element>
     <element id="Address.country.extension:countryCode">
