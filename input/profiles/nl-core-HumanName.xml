@@ -41,13 +41,13 @@
       <path value="HumanName" />
       <alias value="Naamgegevens" />
       <constraint>
-        <key value="gbb-HumanName-1" />
+        <key value="gbb-HumanName-01" />
         <severity value="error" />
         <human value="If a prefix for a family name is specified, the family name is expected as well" />
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
       </constraint>
       <constraint>
-        <key value="gbb-HumanName-2" />
+        <key value="gbb-HumanName-02" />
         <severity value="error" />
         <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
         <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
@@ -98,7 +98,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <description value="Use ConceptMap NaamgebruikCodelijst-to-HumanNameAssemblyOrder to translate terminology from the functional model to profile terminology in ValueSet HumanNameAssemblyOrder." />
+        <description value="A code that represents the preferred display order of the components of this human name." />
         <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1">
           <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
             <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NaamgebruikCodelijst-to-HumanNameAssemblyOrder" />
@@ -124,6 +124,9 @@
         </extension>
       </extension>
       <path value="HumanName.use" />
+      <short value="Use" />
+      <definition value="Identifies the purpose for this name. Allows the appropriate name for a particular context of use to be selected from among a set of names." />
+      <alias value="Gebruik" />
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-HumanName" />
@@ -149,7 +152,10 @@
         </extension>
       </extension>
       <path value="HumanName.text" />
-      <comment value="A representation of the full name, including given names and the family name.\n\nWhen implementing, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept.\n\nIf parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name." />
+      <label value="Weergavenaam" />
+      <short value="Text" />
+      <definition value="A representation of the full name, including given names and the family name. Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts." />
+      <comment value="A representation of the full name, including given names and the family name.&#xD;&#xA;&#xD;&#xA;When implementing, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept&#xD;&#xA;&#xD;&#xA;If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name." />
       <condition value="gbb-HumanName-03" />
       <mustSupport value="true" />
       <mapping>
@@ -176,7 +182,10 @@
         </extension>
       </extension>
       <path value="HumanName.family" />
-      <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:\n* If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.\n* If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
+      <short value="Family name" />
+      <definition value="The family name/surname/last name of a person. The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
+      <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:&#xD;&#xA;&#xD;&#xA;- If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.&#xD;&#xA;- If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
+      <alias value="Achternaam" />
       <condition value="gbb-HumanName-04" />
       <mustSupport value="true" />
       <mapping>
@@ -360,7 +369,6 @@
       <path value="HumanName.prefix" />
       <short value="Titles" />
       <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
-      <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mustSupport value="true" />
     </element>
@@ -384,7 +392,6 @@
       <path value="HumanName.suffix" />
       <short value="Titles" />
       <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
-      <comment value="The zib concept 'titles' is mapped to elements `HumanName.prefix` and `HumanName.suffix`. Semantically this mapping is not complete: the zib uses a single concept that contains all the required information about noble and scientific titles, while FHIR captures the same information in a structured way.\n\n**Export:**\n\nSystems are expected to transform as much as possible to the FHIR datamodel and thereby to be as explicit as possible. Note that in order to mark the type of a prefix, you can use the FHIR standard extension for ISO 21090 EN Qualifiers. Examples include the use of the qualifier _HON_ to indicate honorific prefixes and _AC_ for academic prefixes.\n\nIf it is not possible to breakup the zib concept titles to positioned prefixes and suffixes, the prefix element is used to store all information.\n\n**Import:**\n\nSystems need to expect and be resilient for a broader range of information stored in the prefix element than stated by it's definition." />
       <alias value="Titels" />
       <mustSupport value="true" />
     </element>
