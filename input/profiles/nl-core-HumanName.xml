@@ -72,7 +72,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
       </type>
-      <mustSupport value="false" />
     </element>
     <element id="HumanName.extension:nameUsage.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -105,6 +104,16 @@
           </extension>
         </valueSet>
       </binding>
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-01" />
+        <comment value="Name assembly order" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.nameUsage" />
+        <comment value="Name assembly order" />
+      </mapping>
     </element>
     <element id="HumanName.use">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -129,8 +138,13 @@
       <alias value="Gebruik" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-02" />
+        <comment value="Use" />
+      </mapping>
+      <mapping>
         <identity value="lm-HumanName" />
-        <map value="gbb-dataelement-15" />
+        <map value="HumanName.use" />
         <comment value="Use" />
       </mapping>
     </element>
@@ -159,9 +173,14 @@
       <condition value="gbb-HumanName-03" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-03" />
+        <comment value="Text" />
+      </mapping>
+      <mapping>
         <identity value="lm-HumanName" />
-        <map value="gbb-dataelement-2" />
-        <comment value="FullName" />
+        <map value="HumanName.text" />
+        <comment value="Text" />
       </mapping>
     </element>
     <element id="HumanName.family">
@@ -189,9 +208,14 @@
       <condition value="gbb-HumanName-04" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-04" />
+        <comment value="Name assembly order" />
+      </mapping>
+      <mapping>
         <identity value="lm-HumanName" />
-        <map value="gbb-dataelement-3" />
-        <comment value="FullFamily" />
+        <map value="HumanName.nameUsage" />
+        <comment value="Name assembly order" />
       </mapping>
     </element>
     <element id="HumanName.family.extension:humanNameOwnPrefix">
@@ -201,7 +225,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
       </type>
-      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -225,6 +248,16 @@
       <definition value="Prefix to the person’s own last name." />
       <alias value="Voorvoegsels" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-05" />
+        <comment value="Prefix" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.prefix" />
+        <comment value="Prefix" />
+      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNameOwnName">
       <path value="HumanName.family.extension" />
@@ -233,8 +266,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
       </type>
-      <condition value="gbb-HumanName-1" />
-      <mustSupport value="false" />
+      <condition value="gbb-HumanName-01" />
     </element>
     <element id="HumanName.family.extension:humanNameOwnName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -258,6 +290,16 @@
       <definition value="The person’s official last name" />
       <alias value="Achternaam" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-06" />
+        <comment value="FamilyName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.ownName" />
+        <comment value="FamilyName" />
+      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNamePartnerPrefix">
       <path value="HumanName.family.extension" />
@@ -266,7 +308,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
       </type>
-      <mustSupport value="false" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerPrefix.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -290,6 +331,16 @@
       <definition value="Prefix to the partner’s last name." />
       <alias value="VoorvoegselsPartner" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-07" />
+        <comment value="PartnerPrefix" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.partnerPrefix" />
+        <comment value="PartnerPrefix" />
+      </mapping>
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName">
       <path value="HumanName.family.extension" />
@@ -298,8 +349,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
       </type>
-      <condition value="gbb-HumanName-2" />
-      <mustSupport value="false" />
+      <condition value="gbb-HumanName-02" />
     </element>
     <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -323,6 +373,16 @@
       <definition value="Partner’s official last name." />
       <alias value="AchternaamPartner" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-08" />
+        <comment value="PartnerLastName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.partnerName" />
+        <comment value="PartnerLastName" />
+      </mapping>
     </element>
     <element id="HumanName.given">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -342,12 +402,22 @@
         </extension>
       </extension>
       <path value="HumanName.given" />
-      <short value="FirstName / Initial" />
+      <short value="GivenName" />
       <definition value="Given names (not always 'first'). Includes middle names and/or initials or 'call me' names." />
       <alias value="Voornaam" />
       <alias value="Initiaal" />
       <alias value="Roepnaam" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-09" />
+        <comment value="GivenName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.given" />
+        <comment value="GivenName" />
+      </mapping>
     </element>
     <element id="HumanName.prefix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -371,6 +441,16 @@
       <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
       <alias value="Titels" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-10" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.prefix" />
+        <comment value="Titles" />
+      </mapping>
     </element>
     <element id="HumanName.suffix">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -394,6 +474,16 @@
       <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
       <alias value="Titels" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-12" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.suffix" />
+        <comment value="Titles" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
