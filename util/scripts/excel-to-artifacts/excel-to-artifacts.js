@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const commander = require("commander");
 
+const serverSourceUrl = "https://decor.nictiz.nl";
+//const serverSourceUrl = "http://localhost:8877/exist/apps";
 const translationExtensionUrl = "http://hl7.org/fhir/StructureDefinition/translation";
 
 function normalizeLanguageCode(languageCode) {
@@ -44,6 +46,7 @@ function normalizeTranslationExtensionLanguages(value) {
 
 class TargetFolders {
   static subfolders = {
+    "ActorDefinitions":     "logicalmodels",
     "RequirementResources": "requirements",
     "PageContent":          "pagecontent",
     "LogicalModels":        "logicalmodels",
@@ -68,7 +71,7 @@ class TargetFolders {
 }
 
 class ActorDefinitionDownloader {
-  static actorDefinitionsUrl = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/ActorDefinition?publisher=gbb2026bbr-&_format=json";
+  static actorDefinitionsUrl = serverSourceUrl + "/fhir/4.0/gbb2026bbr-/ActorDefinition?publisher=gbb2026bbr-&_format=json";
 
   constructor(outputFolder) {
     this.outputFolder = outputFolder;
@@ -275,7 +278,7 @@ class ExcelConvertor {
   
   static textADId          = "ART-DECOR-id";
 
-  static adProjectUrl      = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/StructureDefinition";
+  static adProjectUrl      = serverSourceUrl + "/fhir/4.0/gbb2026bbr-/StructureDefinition";
 
   constructor(inputFile, targetFolders, valueSetDownloader) {
     this.inputFile = inputFile;
@@ -297,7 +300,7 @@ class ExcelConvertor {
 
   convertRequirements() {
     const id = this.fileRoot;
-    const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
+    const canonical = "http://ig.nictiz.nl/gbb/Requirements/" + id;
 
     const rows = this.#getRows(ExcelConvertor.sheetRequirements);
     if (rows == null) return;
@@ -390,7 +393,7 @@ class ExcelConvertor {
     try {
       const response = await fetch(`${fetch_url}`);
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+        throw new Error(`HTTP ${response.status} ${response.statusText} - ${ExcelConvertor.adProjectUrl}/${id_parts[0]}--${id_date}?_format=json`);
       }
 
       const body = await response.json();
