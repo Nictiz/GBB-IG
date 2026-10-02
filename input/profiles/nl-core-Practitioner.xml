@@ -5,7 +5,7 @@
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
       human-readable rendering can be found in the implementation guide(s) where this resource is
       used.</div></text>
-  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
   <name value="NlcorePractitioner" />
   <title value="nl core Practitioner" />
   <status value="draft" />
@@ -23,7 +23,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="lm-Practitioner" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Practitioner" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner" />
     <name value="Logical model for Practitioner" />
   </mapping>
   <kind value="resource" />
@@ -56,7 +56,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -64,7 +64,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Practitioner.identifier" />
@@ -124,7 +124,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -132,7 +132,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Practitioner.name" />
@@ -141,7 +141,7 @@
       <alias value="Naamgegevens" />
       <type>
         <code value="HumanName" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -161,7 +161,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -169,7 +169,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Practitioner.telecom" />
@@ -179,7 +179,7 @@
       <alias value="Contactgegevens" />
       <type>
         <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -204,7 +204,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -212,7 +212,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Practitioner.address" />
@@ -221,7 +221,7 @@
       <alias value="Adres" />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -241,7 +241,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -249,7 +249,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Practitioner.gender" />
