@@ -7,7 +7,7 @@
   <text>
     <status value="empty" />
   </text>
-  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
   <version value="0.1.0" />
   <name value="NlcoreCondition" />
   <title value="nl core Condition" />
@@ -27,12 +27,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Condition" />
-    <uri value="http://nictiz.nl/ig/gbb/Requirements/Condition" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Condition" />
     <name value="Information requirements for Condition" />
   </mapping>
   <mapping>
     <identity value="lm-Condition" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Condition" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Condition" />
     <name value="Logical model for Condition" />
   </mapping>
   <kind value="resource" />
@@ -47,7 +47,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -55,7 +55,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.language" />
@@ -76,7 +76,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -84,7 +84,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.extension" />
@@ -104,7 +104,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -112,7 +112,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.extension" />
@@ -137,7 +137,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -145,7 +145,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.identifier" />
@@ -166,7 +166,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -174,7 +174,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.clinicalStatus" />
@@ -208,7 +208,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -216,7 +216,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.verificationStatus" />
@@ -253,7 +253,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -261,7 +261,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.category" />
@@ -282,7 +282,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -290,7 +290,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.severity" />
@@ -310,7 +310,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -318,7 +318,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.code" />
@@ -359,7 +359,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -367,7 +367,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.code.text" />
@@ -387,7 +387,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -395,7 +395,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.bodySite" />
@@ -416,7 +416,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -424,7 +424,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.bodySite.extension" />
@@ -441,7 +441,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -449,7 +449,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.bodySite.extension.value[x]" />
@@ -473,7 +473,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -481,7 +481,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.subject" />
@@ -506,7 +506,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -514,7 +514,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.onset[x]" />
@@ -534,7 +534,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -542,7 +542,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.onset[x]" />
@@ -567,7 +567,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -575,7 +575,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.abatement[x]" />
@@ -595,7 +595,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -603,7 +603,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.abatement[x]" />
@@ -628,7 +628,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -636,7 +636,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.recordedDate" />
@@ -657,7 +657,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -665,7 +665,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.recorder" />
@@ -692,7 +692,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -700,7 +700,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.asserter" />
@@ -728,7 +728,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -736,7 +736,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.stage" />
@@ -749,7 +749,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -757,7 +757,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.stage.summary" />
@@ -778,7 +778,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -786,7 +786,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.stage.type" />
@@ -799,7 +799,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -807,7 +807,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Condition.note" />
