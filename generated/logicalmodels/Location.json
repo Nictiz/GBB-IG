@@ -1,0 +1,1283 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Location",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-25T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Location",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.22"
+    }
+  ],
+  "version": "2026-06-25T00:00:00",
+  "name": "LogicalModelLocation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelLocatie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelLocation",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelLocatie"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.392--20260625101029",
+        "path": "Location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.380--20260625093417",
+        "path": "Location.identifier",
+        "short": "Identifier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.381--20260625094108",
+        "path": "Location.name",
+        "short": "Name of the location as used by humans",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the location as used by humans",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.382--20260625094141",
+        "path": "Location.description",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende details over de locatie die kunnen weergegeven als verdere informatie om de locatie los van zijn naam te identificeren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende details over de locatie die kunnen weergegeven als verdere informatie om de locatie los van zijn naam te identificeren"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Omschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.383--20260625094259",
+        "path": "Location.type",
+        "short": "Type of function performed at the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort functie van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Type of function performed at the location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort functie van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "ServiceDeliveryLocationRoleType",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.386--20260625094557",
+        "path": "Location.address",
+        "short": "Physical location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Fysieke locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Physical location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Fysieke locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.387--20260625094643",
+        "path": "Location.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.388--20260625094755",
+        "path": "Location.managingOrganization",
+        "short": "Organization responsible for provisioning and upkeep of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie verantwoordelijk voor onderhoud en voorzieningen van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organization responsible for provisioning and upkeep of the location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie verantwoordelijk voor onderhoud en voorzieningen van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Beheerorganisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.managingOrganization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.389--20260625094916",
+        "path": "Location.managingOrganization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.managingOrganization.organization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.390--20260625095020",
+        "path": "Location.partOf",
+        "short": "Another location of which this location is physically a part of",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een andere locatie waar deze locatie fysiek deel van uitmaakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Another location of which this location is physically a part of",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een andere locatie waar deze locatie fysiek deel van uitmaakt"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "OnderdeelVan"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.394--20260703081206",
+        "path": "Location.partOf.location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.partOf.location",
+          "min": 1,
+          "max": "1"
+        },
+        "contentReference": "#Location"
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.392--20260625101029",
+        "path": "Location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.380--20260625093417",
+        "path": "Location.identifier",
+        "short": "Identifier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.381--20260625094108",
+        "path": "Location.name",
+        "short": "Name of the location as used by humans",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the location as used by humans",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.382--20260625094141",
+        "path": "Location.description",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende details over de locatie die kunnen weergegeven als verdere informatie om de locatie los van zijn naam te identificeren"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende details over de locatie die kunnen weergegeven als verdere informatie om de locatie los van zijn naam te identificeren"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Omschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.383--20260625094259",
+        "path": "Location.type",
+        "short": "Type of function performed at the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort functie van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Type of function performed at the location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Soort functie van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Location.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "ServiceDeliveryLocationRoleType",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.386--20260625094557",
+        "path": "Location.address",
+        "short": "Physical location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Fysieke locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Physical location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Fysieke locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.387--20260625094643",
+        "path": "Location.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.388--20260625094755",
+        "path": "Location.managingOrganization",
+        "short": "Organization responsible for provisioning and upkeep of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie verantwoordelijk voor onderhoud en voorzieningen van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organization responsible for provisioning and upkeep of the location",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie verantwoordelijk voor onderhoud en voorzieningen van de locatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Beheerorganisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.managingOrganization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.389--20260625094916",
+        "path": "Location.managingOrganization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.managingOrganization.organization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.390--20260625095020",
+        "path": "Location.partOf",
+        "short": "Another location of which this location is physically a part of",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een andere locatie waar deze locatie fysiek deel van uitmaakt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Another location of which this location is physically a part of",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een andere locatie waar deze locatie fysiek deel van uitmaakt"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "OnderdeelVan"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Location.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.394--20260703081206",
+        "path": "Location.partOf.location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Location.partOf.location",
+          "min": 1,
+          "max": "1"
+        },
+        "contentReference": "#Location"
+      }
+    ]
+  }
+}

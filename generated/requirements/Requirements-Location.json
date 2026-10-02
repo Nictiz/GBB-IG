@@ -1,0 +1,121 @@
+{
+  "resourceType": "Requirements",
+  "id": "Location",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Location",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-001",
+      "label": "LOC-001 identifier",
+      "requirement": "**Omschrijving**: Location identifier\n\n**Variabiliteit**: (identifier)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-002",
+      "label": "LOC-002 Name",
+      "requirement": "**Omschrijving**: Name of the location as used by humans\n\n**Variabiliteit**: (string)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSLocation, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-003",
+      "label": "LOC-003 Description",
+      "requirement": "**Omschrijving**: Additional details about the location that could be displayed as further information to identify the location beyond its name\n\n**Variabiliteit**: (string)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-004",
+      "label": "LOC-004 Type",
+      "requirement": "**Omschrijving**: Type of function performed at the location\n\n**Variabiliteit**: (code)\r\nBinding Description: (preferred): HL7 ServiceDeliveryLocationRoleType\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-005",
+      "label": "LOC-005 Address",
+      "requirement": "**Omschrijving**: Physical location\n\n**Variabiliteit**: (ref. GBB-Address)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-006",
+      "label": "LOC-006 ManagingOrganization",
+      "requirement": "**Omschrijving**: Organization responsible for provisioning and upkeep of the location\n\n**Variabiliteit**: (ref. GBB-Organization)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "LOC-007",
+      "label": "LOC-007 PartOf",
+      "requirement": "**Omschrijving**: Another location of which this location is physically a part of\n\n**Variabiliteit**: (ref. GBB-Location)\n\n**Aanwezigheid**: 0..1  If the resource is contained in another resource, it SHALL NOT contain nested Resources. e.g., a department in a hospital cannot be the target of another Location.partOf",
+      "source": [
+        {
+          "display": "EHDSLocation"
+        }
+      ]
+    }
+  ]
+}
