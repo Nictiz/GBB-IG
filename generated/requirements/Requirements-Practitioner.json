@@ -1,0 +1,89 @@
+{
+  "resourceType": "Requirements",
+  "id": "Practitioner",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Practitioner",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-001",
+      "label": "ZVL-001 Identificatienummer - Practitioner.identifier",
+      "requirement": "**Omschrijving**: Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.\r\nIn de Nederlandse situatie worden de volgende nummers gebruikt:\r\n1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.\r\n2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties\r\n3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.\r\n\r\nVoor buitenlandse zorgverleners zijn deze gegevens niet voorhanden.\n\n**Variabiliteit**: identifier\n\n**Aanwezigheid**: 0..* (Indien een identificatienummer als UZI of AGB nummer wordt meegegeven, moeten naam en nummer overeenkomen.)",
+      "source": [
+        {
+          "display": "EHDSPractitioner, zib2020 zorgverlener, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-002",
+      "label": "ZVL-002 Naamgegevens - Practitioner.name",
+      "requirement": "**Omschrijving**: De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling. In het geval dat niet bekend en/of niet relevant is hoe de naamgegevens zijn opgebouwd, kan de subbouwsteen Naamgegevens niet worden gebruikt.\n\n**Variabiliteit**: GBB-HumanName\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSPractitioner, zib2020 zorgverlener, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-003",
+      "label": "ZVL-003 Geslacht - Practitioner.gender",
+      "requirement": "**Omschrijving**: Administratief geslacht van de zorgverlener\n\n**Variabiliteit**: coded\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "zib2020 zorgverlener"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-004",
+      "label": "ZVL-004 Adresgegevens - Practitioner.address",
+      "requirement": "**Omschrijving**: Rol-agnostisch adresinformatie van een zorgverlener (meestal Thuisadres)\n\n**Variabiliteit**: GBB-Adress\n\n**Aanwezigheid**: 0..* (Wordt soms niet gedeeld wegens privacy, maar kan bereikt worden via Zorgaanbieder of ZorgverlenerRol)",
+      "source": [
+        {
+          "display": "EHDSPractitioner, zib2020 zorgverlener, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVL-005",
+      "label": "ZVL-005 Contactgegevens - Practitioner.telecom",
+      "requirement": "**Omschrijving**: Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener.\n\n**Variabiliteit**: GBB-ContactPoint\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSPractitioner, zib2020 zorgverlener, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    }
+  ]
+}

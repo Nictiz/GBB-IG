@@ -1,0 +1,1170 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Practitioner",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-08T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.16"
+    }
+  ],
+  "version": "2026-06-08T00:00:00",
+  "name": "LogicalModelPractitioner",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelZorgverlener"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelPractitioner",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelZorgverlener"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgHealthProfessional-3.5",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.17.1&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.HealthProfessional 3.5"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.148--20260608140005",
+        "path": "Practitioner",
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.1",
+            "comment": "HealthProfessional (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.149--20260608140142",
+        "path": "Practitioner.identifier",
+        "short": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.\n\nThe following numbers are used in the Netherlands:\n1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.\n2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations\n3. BIG-ID. The ID of the health professional listed in the BIG Register.\n\nThis information is not readily available for foreign health professionals.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.\n\nIn de Nederlandse situatie worden de volgende nummers gebruikt:\n1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.\n2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties\n3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.\n\nVoor medisch personeel of verzorgenden die niet in het BIG register zijn opgenomen mogen bij implementaties eventueel andere nummers worden gebruikt. Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "value": "21870932"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.2",
+            "comment": "HealthProfessionalIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.150--20260608140142",
+        "path": "Practitioner.nameInformation",
+        "short": "Health professional’s full name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naamgegevens van de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.nameInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.3",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.188--20260609092207",
+        "path": "Practitioner.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.176--20260608140142",
+        "path": "Practitioner.telecom",
+        "short": "Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice. Er kunnen meerdere telecommunicatieadressen worden opgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.8",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.190--20260609092915",
+        "path": "Practitioner.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.164--20260608140142",
+        "path": "Practitioner.address",
+        "short": "Role-agnostic address information of a healthcare provider (usually their home address).",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Role-agnostic address information of a healthcare provider (usually their home address).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.7",
+            "comment": "AddressInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.189--20260609092738",
+        "path": "Practitioner.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.163--20260608140142",
+        "path": "Practitioner.gender",
+        "short": "Patient’s administrative gender.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s administrative gender.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslacht"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.gender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AdministrativeGender",
+          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.9",
+            "comment": "Gender (SPEC)"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.148--20260608140005",
+        "path": "Practitioner",
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.1",
+            "comment": "HealthProfessional (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.149--20260608140142",
+        "path": "Practitioner.identifier",
+        "short": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.\n\nThe following numbers are used in the Netherlands:\n1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry.\n2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations\n3. BIG-ID. The ID of the health professional listed in the BIG Register.\n\nThis information is not readily available for foreign health professionals.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.\n\nIn de Nederlandse situatie worden de volgende nummers gebruikt:\n1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.\n2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties\n3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.\n\nVoor medisch personeel of verzorgenden die niet in het BIG register zijn opgenomen mogen bij implementaties eventueel andere nummers worden gebruikt. Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "value": "21870932"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.2",
+            "comment": "HealthProfessionalIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.150--20260608140142",
+        "path": "Practitioner.nameInformation",
+        "short": "Health professional’s full name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naamgegevens van de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.nameInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.3",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.188--20260609092207",
+        "path": "Practitioner.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.176--20260608140142",
+        "path": "Practitioner.telecom",
+        "short": "Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice. Er kunnen meerdere telecommunicatieadressen worden opgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.8",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.190--20260609092915",
+        "path": "Practitioner.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.164--20260608140142",
+        "path": "Practitioner.address",
+        "short": "Role-agnostic address information of a healthcare provider (usually their home address).",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Role-agnostic address information of a healthcare provider (usually their home address).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Practitioner.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.7",
+            "comment": "AddressInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.189--20260609092738",
+        "path": "Practitioner.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.163--20260608140142",
+        "path": "Practitioner.gender",
+        "short": "Patient’s administrative gender.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s administrative gender.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de zorgverlener"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslacht"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Practitioner.gender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "AdministrativeGender",
+          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.9",
+            "comment": "Gender (SPEC)"
+          }
+        ]
+      }
+    ]
+  }
+}
