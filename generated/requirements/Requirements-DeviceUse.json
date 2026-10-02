@@ -1,0 +1,393 @@
+{
+  "resourceType": "Requirements",
+  "id": "DeviceUse",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-01",
+      "label": "DEVICEUSE-01 Status van het gebruik",
+      "requirement": "**Omschrijving**: Een plek om aan te geven wat de actuele status is van de registratie van het gebruik van een medisch hulpmiddel door de patiënt, bijvoorbeeld dat het gebruik actief, beëindigd, onderbroken of voorgenomen is.\n\n**Variabiliteit**: HL7 value set Device Statement Status (active, completed, entered-in-error, intended, stopped, on-hold)\n\n**Aanwezigheid**: Verplicht (1..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden",
+      "source": [
+        {
+          "display": "FHIR R4 Resource DeviceUseStatement \r\nEHDS logical model EHDSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-02",
+      "label": "DEVICEUSE-02 De patiënt",
+      "requirement": "**Omschrijving**: Informatie over de patiënt die het medisch hulpmiddel gebruikt, gaat gebruiken of heeft gebruikt.\n\n**Variabiliteit**: Referentie naar informatie over de patiënt\n\n**Aanwezigheid**: Verplicht (1..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "FHIR R4 Resource DeviceUseStatement \r\nEHDS logical model EHDSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-03",
+      "label": "DEVICEUSE-03 Informatie over het product dat gebruikt wordt als medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Geeft informatie over het medisch hulpmiddel die door de patiënt wordt gebruikt, gebruikt gaat worden of was gebruikt\n\n**Variabiliteit**: String\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-03.01",
+      "label": "DEVICEUSE-03.01 Informatie over het product dat gebruikt wordt als medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Informatie over het medische hulpmiddel dat wordt gebruikt, zowel inwendig als uitwendig\n\n**Variabiliteit**: Referentie naar Device\n\n**Aanwezigheid**: Verplicht (1..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-03",
+      "source": [
+        {
+          "display": "FHIR R4 Resource DeviceUseStatement \r\nEHDS logical model EHDSDeviceUse 1.0.0\r\nBasisgegevensset Zorg 2020 (BgZ)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-03.02",
+      "label": "DEVICEUSE-03.02 Informatie van het type product dat gebruikt wordt als medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Het type product dat gebruikt wordt als medisch hulpmiddel\n\n**Variabiliteit**: Codelijsten HIBRProductIDCodelijst, GTINProductIDCodelijst\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-03",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-03.03",
+      "label": "DEVICEUSE-03.03 Informatie van de product ID dat gebruikt wordt als medisch hulpmiddel",
+      "requirement": "**Omschrijving**: ID van het product dat gebruikt wordt als medisch hulpmiddel\n\n**Variabiliteit**: Identifier\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-03",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-03.04",
+      "label": "DEVICEUSE-03.04 Gecodeerde informatie van het product dat niet gebruikt wordt als medisch hulpmiddel",
+      "requirement": "**Omschrijving**: Code van het type product dat niet gebruikt wordt als medisch hulpmiddel\n\n**Variabiliteit**: Codelijst: ProductTypeGeenCodelijst\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-03",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-04",
+      "label": "DEVICEUSE-04 Business identifier",
+      "requirement": "**Omschrijving**: De behoefte aan een uniek, persistent business identifier\n\n**Variabiliteit**: Identifier\n\n**Aanwezigheid**: Optioneel (0..*)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0\r\nMedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-05",
+      "label": "DEVICEUSE-05 Auteur",
+      "requirement": "**Omschrijving**: Degene of hetgene welke de informatie over het concept heeft ingevuld\n\n**Variabiliteit**: Referentie naar zorgverlener, zorgaanbieder of EHDSDevice\n\n**Aanwezigheid**: Optioneel (0..*)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-06",
+      "label": "DEVICEUSE-06 Moment van schrijven",
+      "requirement": "**Omschrijving**: Datum en tijd waarop iemand of iets de informatie over het concept heeft ingevuld\n\n**Variabiliteit**: DateTime\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-07",
+      "label": "DEVICEUSE-07 Bron van de informatie",
+      "requirement": "**Omschrijving**: De bron, bv. Patiënt of vertegenwoordiger. Het kan worden gebruikt wanneer de patiënt de informatie zelf heeft opgesteld of wanneer de auteur informatie heeft ingediend die door de patiënt is verstrekt\n\n**Variabiliteit**: Waardelijst: ontbreekt in EDHSDeviceUse\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-08",
+      "label": "DEVICEUSE-08 Gebruikte taal",
+      "requirement": "**Omschrijving**: De taal waarin het object is ingevuld\n\n**Variabiliteit**: Waardelijst: BCP 47\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-09",
+      "label": "DEVICEUSE-09 Periode van gebruik",
+      "requirement": "**Omschrijving**: De periode waarin het medisch hulpmiddel was geïmplanteerd of het externe apparaat gebruikt is, was of wordt.\n\n**Variabiliteit**: Periode (start- en einddatum/tijd)\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-09.01",
+      "label": "DEVICEUSE-09.01 Startdatum van periode",
+      "requirement": "**Omschrijving**: De startdatum van eerste toepassing of implantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan.\n\n**Variabiliteit**: DateTime\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-09",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-09.02",
+      "label": "DEVICEUSE-09.02 Einddatum van periode",
+      "requirement": "**Omschrijving**: De einddatum van de laatste toepassing of explantatie van het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan.\n\n**Variabiliteit**: DateTime\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-09",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-10",
+      "label": "DEVICEUSE-10 Anatomische locatie",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-10.01",
+      "label": "DEVICEUSE-10.01",
+      "requirement": "**Omschrijving**: De behoefte om te verwijen naar de anatomische locatie. Anatomische locatie waarin het medische hulpmiddel zich bevindt. Dit kan ook lateraliteit bevatten\n\n**Variabiliteit**: Verwijziging naar zib AnatomischeLocatie, Verwijziging naar EHDSBodyStructure\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-10",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL) \r\nMedischHulpmiddel-V3.3.1 (2020)\r\nEHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-11",
+      "label": "DEVICEUSE-11 Reden van gebruik",
+      "requirement": "**Omschrijving**: Reden of justificiatie van het gebruik van het medisch hulpmiddel\n\n**Variabiliteit**: String\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-11.01",
+      "label": "DEVICEUSE-11.01",
+      "requirement": "**Omschrijving**: De behoefte om te kunnen verwijzen naar probleem, diagnose of procedure\n\n**Variabiliteit**: Waardelijst, verwijzing naar EHDCondition, EHDSObservation, EHDSProcedure\n\n**Aanwezigheid**: Optioneel (0..*)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-11",
+      "source": [
+        {
+          "display": "EHDS logical model EDHSDeviceUse 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-11.02",
+      "label": "DEVICEUSE-11.02",
+      "requirement": "**Omschrijving**: De behoefte om te kunnen verwijzen naar de zib diagnose\n\n**Variabiliteit**: Verwijzing naar zib Diagnose\n\n**Aanwezigheid**: Optioneel (0..*)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-11",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-11.03",
+      "label": "DEVICEUSE-11.03",
+      "requirement": "**Omschrijving**: De behoefte om te kunnen verwijzen naar de zib probleem\n\n**Variabiliteit**: Verwijziging naar zib Probleem\n\n**Aanwezigheid**: Optioneel (0..*)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/DeviceUse#DEVICEUSE-11",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-12",
+      "label": "DEVICEUSE-12 Toelichting",
+      "requirement": "**Omschrijving**: Aanvullende informatie over het medisch hulpmiddeld die niet op een andere manier in het concept kan worden geduid. Dit kan ook informatie zijn over de toepassing van het medisch hulpmiddel\n\n**Variabiliteit**: String\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "EHDS logical model EHDSDeviceUse 1.0.0\r\nMedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-13",
+      "label": "DEVICEUSE-13 Zorgverlener",
+      "requirement": "**Omschrijving**: De zorgverlerner die betrokken is bij de indicatiestelling voor het gebruik of implantatie van het hulpmiddel\n\n**Variabiliteit**: Referentie naar zib Zorgverlener\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "DEVICEUSE-14",
+      "label": "DEVICEUSE-14 Zorgaanbieder als locatie",
+      "requirement": "**Omschrijving**: De zorgaanbieder waar het gebruik van het hulpmiddel geïniteerd werd of waar het hulpmiddel geimplanteerd werd\n\n**Variabiliteit**: Referentie naar zib Zorgaanbieder\n\n**Aanwezigheid**: Optioneel (0..1)\n\n**Verleden/heden/toekomst**: Relevant voor heden, verleden en toekomst",
+      "source": [
+        {
+          "display": "MedischHulpmiddel-v5.0(2024NL)\r\nMedischHulpmiddel-V3.3.1 (2020)\r\nMedischHulpmiddel-V3.1 (2017)"
+        }
+      ]
+    }
+  ]
+}

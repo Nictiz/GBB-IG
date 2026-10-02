@@ -1,0 +1,167 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nictiz.nl.gbb",
+  "url": "http://nictiz.nl/gbb/ImplementationGuide/nictiz.nl.gbb",
+  "version": "0.1.0",
+  "name": "GenericBuildingBlockDeviceUse",
+  "status": "draft",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "packageId": "nictiz.nl.gbb",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Requirements/DeviceUse"
+        },
+        "exampleBoolean": false,
+        "name": "DeviceUse"
+      },
+      {
+        "reference": {
+          "reference": "DeviceUseStatement/deviceuse-example"
+        },
+        "description": "Example DeviceUseStatement instance conforming to nl-core-DeviceUse.",
+        "exampleCanonical": "http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse",
+        "name": "Example DeviceUse"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DeviceUse"
+        },
+        "exampleBoolean": false,
+        "name": "LogischModelDeviceUse"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-DeviceUse"
+        },
+        "description": "FHIR R4 profile for the generic building block DeviceUse.",
+        "exampleBoolean": false,
+        "name": "nl core DeviceUse"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ExchangingSystem"
+        },
+        "description": "Systeem dat gegevens ontsluit aan derden",
+        "exampleBoolean": false,
+        "name": "OntsluitendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/RegistrationSystem"
+        },
+        "description": "Bronsysteem voor de registratie",
+        "exampleBoolean": false,
+        "name": "RegistrerendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ConsumingSystem"
+        },
+        "description": "Systeem dat gegevens van derden verwerkt",
+        "exampleBoolean": false,
+        "name": "VerwerkendSysteem"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deviceuse.html",
+          "title": "Deviceuse",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "leeswijzer.html",
+          "title": "Leeswijzer",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "obligations.html",
+          "title": "Obligations",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/requirements"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/logicalmodels"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "generated/pagecontent"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "nl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/nl"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "path-liquid-template",
+        "value": "template/liquid"
+      }
+    ]
+  }
+}
