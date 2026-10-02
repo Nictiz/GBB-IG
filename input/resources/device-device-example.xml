@@ -1,0 +1,45 @@
+<Device xmlns="http://hl7.org/fhir">
+  <id value="device-example" />
+
+  <meta>
+    <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+  </meta>
+
+  <identifier>
+    <system value="http://example.org/device-identifiers" />
+    <value value="DEV-12345" />
+  </identifier>
+
+  <udiCarrier>
+    <deviceIdentifier value="01234567890128" />
+  </udiCarrier>
+
+  <manufacturer value="Example Medical Devices B.V." />
+
+  <manufactureDate value="2026-01-15" />
+
+  <expirationDate value="2031-01-15" />
+
+  <lotNumber value="LOT-2026-001" />
+
+  <serialNumber value="SN-123456" />
+
+  <deviceName>
+    <name value="Example infusion pump" />
+    <type value="manufacturer-name" />
+  </deviceName>
+
+  <modelNumber value="MODEL-1000" />
+
+  <type>
+    <text value="Infusion pump" />
+  </type>
+
+  <version>
+    <value value="1.0" />
+  </version>
+
+  <note>
+    <text value="Example Device instance conforming to nl-core-Device." />
+  </note>
+</Device>
