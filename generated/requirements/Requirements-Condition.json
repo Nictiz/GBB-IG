@@ -1,0 +1,874 @@
+{
+  "resourceType": "Requirements",
+  "id": "Condition",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Condition",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-1",
+      "label": "CON-1 Patient",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-1.1",
+      "label": "CON-1.1",
+      "requirement": "**Omschrijving**: De patiënt waarover de gezondheidstoestand gaat\n\n**Variabiliteit**: Verwijzing naar Patient\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-1",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-1.2",
+      "label": "CON-1.2",
+      "requirement": "**Omschrijving**: De persoon waarnaar in deze evaluatie wordt verwezen, is doorgaans de persoon op wie het medisch dossier betrekking heeft, oftewel de patiënt. In bepaalde omstandigheden kan het echter ook om anderen gaan, bijvoorbeeld een orgaandonor, een foetus of een familielid.\n\n**Variabiliteit**: Vewijzing naar Subject of Care\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-1",
+      "source": [
+        {
+          "display": "openEHR Problem/Diagnosis 1.7.4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-1.3",
+      "label": "CON-1.3",
+      "requirement": "**Omschrijving**: Geeft aan aan welke patiënt of groep het dossier in kader van gezondheidstoestand is gekoppeld.\n\n**Variabiliteit**: Verwijziging naar Patient of Groep\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-1",
+      "source": [
+        {
+          "display": "FHIR R4 resource Condition"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-1.4",
+      "label": "CON-1.4",
+      "requirement": "**Omschrijving**: NL-behoefte vanuit zib-2017:Degene op wie de informatie betrekking heeft. Vaak zal dit de patiënt zijn, maar vooral bij kleine kinderen kan het informatie over de ouder of verzorger zijn. Vooral bij de verpleegkundige overdrachten speelt b.v. bekwaamheid en betrokkenheid van mantelzorgers een rol.\r\nNL-behoefte komt te vervallen in zib- 2020:  impliciet is dit altijd de patiënt. In de sporadische gevallen dat de patiënt niet het onderwerp is, is dit in de betreffende zibs al expliciet gemodelleerd, zoals bijvoorbeeld in FamilieAnamnese.\n\n**Variabiliteit**: Verwijzing naar Patient\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-1",
+      "source": [
+        {
+          "display": "ZIB 2017  (https://www.zibs.nl/images/2/2a/Architectuurdocument_Registratie_aan_de_bron_-_Volume_1_v1.1.pdf) \r\nSpoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-2",
+      "label": "CON-2 Identificatie van object gezondheidstoestand",
+      "requirement": "**Omschrijving**: Om het object uniek te identificeren in systemen"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-2.1",
+      "label": "CON-2.1",
+      "requirement": "**Omschrijving**: Business identifier van het object\n\n**Aanwezigheid**: 0..*",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-2",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-2.2",
+      "label": "CON-2.2",
+      "requirement": "**Omschrijving**: Unieke identificatie van één specifieke episode. De unieke identificatie wordt gebruikt om één specifieke episode te herkennen binnen een lijst met alle episodes van een patiënt.\n\n**Aanwezigheid**: 1..*",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-2",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-3",
+      "label": "CON-3 Auteur",
+      "requirement": "**Omschrijving**: De auteur van de informatie over de gezondheidstoestand.\r\nNL-behoefte voor auteur, informatiebron en vastlegger komt uit 'registratie aan de bron' voor zib2017.\r\nNL-behoefte komt te vervallen in zib2020\n\n**Aanwezigheid**: 0..* Choice of types",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-3.1",
+      "label": "CON-3.1 zorgverlener als auteur",
+      "requirement": "**Omschrijving**: De zorgverlener die de informatie over de conditie invoert/registreert\r\nNL-behoefte: Waarom/meerwaarde vanuit de spoedsamenvatting; om verschil te maken tussen wie registreert en wie is verantwoordelijke dossierhouder; Er kunnen verschillende zorgverleners werken bij dezelfde organisatie -> niet bekend of dit een informatiebehoefte is uit het zorgveld of uit HL7standaard V3 CDA (custiodian en author)\n\n**Variabiliteit**: Verwijziging naar EHDSHealthProfessional",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-3",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0, Zib 2017 (https://www.zibs.nl/images/2/2a/Architectuurdocument_Registratie_aan_de_bron_-_Volume_1_v1.1.pdf) \r\nSpoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-3.2",
+      "label": "CON-3.2 organisatie als auteur",
+      "requirement": "**Omschrijving**: De organisatie waaruit de informatie over de conditie afkomstig is.\r\nNL-behoefte: waarom/meerwaarde vanuit de spoedsamenvatting: om verschil te maken tussen wie registreert en wie is verantwoordelijke dossierhouder; als in er kunnen verschillende zorgverleners werken bij dezelfde organisatie.-> niet bekend of dit een informatiebehoefte is uit het zorgveld of uit  HL7standaard V3 CDA (custiodian en author) \r\n\r\nBij het sturen van verwijzingen, rapportages, logistieke berichten en ambulanceberichten ligt het initiatief voor gegevensuitwisseling bij de brondossierhouder (bron: https://www.nhg.org/wp-content/uploads/2023/02/Richtlijn-Gegevensuitwisseling-acute-zorg-versie-4-2022.pdf ).\n\n**Variabiliteit**: Verwijziging naar EHDSOrganization",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-3",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0\r\nspoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-3.3",
+      "label": "CON-3.3 apparaat als auteur",
+      "requirement": "**Omschrijving**: Het apparaat waar de informatie over de conditie vandaan komt\n\n**Variabiliteit**: Verwijziging naar EHDSDevice",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-3",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-3.4",
+      "label": "CON-3.4 contactpersoon als auteur",
+      "requirement": "**Omschrijving**: NL-behoefte zib2017: Degene die de informatie heeft vastgelegd. Afhankelijk van het informatiesysteem waarin de gegevens vastgelegd zijn kan dit zijn de patiënt, een contactpersoon of de zorgverlener.  Het is  een basiselementen. Deze zijn in de informatiemodellen van de afzonderlijke bouwstenen in de meeste gevallen niet opgenomen, maar worden wel verondersteld aanwezig te zijn. Het betreft concepten die meer technisch van aard zijn, vaak geen of weinig klinische relevantie hebben, maar voor de eenduidigheid en herleidbaarheid van de gegevens noodzakelijk zijn.\r\nNL-behoefte komt te vervallen in zib2020\n\n**Variabiliteit**: Verwijzing naar patient, zorgverlener, contactpersoon",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-3",
+      "source": [
+        {
+          "display": "Zib 2017 (https://www.zibs.nl/images/2/2a/Architectuurdocument_Registratie_aan_de_bron_-_Volume_1_v1.1.pdf)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-4",
+      "label": "CON-4 Datum en evt. tijd van registreren",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-4.1",
+      "label": "CON-4.1",
+      "requirement": "**Omschrijving**: Datum en eventueel tijdstip van opstellen/uitgeven\n\n**Variabiliteit**: DatumTijd\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-4",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-4.2",
+      "label": "CON-4.2",
+      "requirement": "**Omschrijving**: HIS-behoefte: Dit komt overeen met de tijd dat de concern in het patiëntendossier terecht is gekomen. HIS-referentiemodel geeft aan : startdatum episode: DatumTijd=systeemdatum. Datum van het eerste contact van de patiënt met de medisch medewerker over de gezondheidskwestie van de episode. De startdatum betreft de registratie van het eerste item in de episode; cardinaliteit 1\n\n**Variabiliteit**: IVL_TS\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-4",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0 (bron: KEZO Overdracht Concern, 2.16.840.1.113883.2.4.3.11.60.66.10.212)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-5",
+      "label": "CON-5 Status",
+      "requirement": "**Omschrijving**: Status van het object"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-5.1",
+      "label": "CON-5.1 Status",
+      "requirement": "**Omschrijving**: De status beschrijft in welke staat het probleem zich bevindt:\r\nActieve problemen zijn problemen waarbij de patiënt symptomen ervaart of waarvoor bewijs bestaat.\r\nAls de aandoening is afgenomen, moet de klinische status inactief, opgelost of in remissie zijn.\r\nProblemen met de status 'Inactief' verwijzen naar problemen die de patiënt niet langer beïnvloeden of waarvan het bestaan ​​niet langer is aangetoond.\r\nRequirement: eHN Guideline HDR (v1.1): A.2.6.1.7; PS (v3.4) A.2.2.2.1\n\n**Variabiliteit**: Waardelijst (preferred): HL7 Condition Clinical Status Codes (active, recurrence, relapse, inactive, remission, resolved, unknown?) PAT-301\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-5",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-5.2",
+      "label": "CON-5.2",
+      "requirement": "**Omschrijving**: HIS-behoefte: vanuit episode. De status is actief of open, danwel gesloten. bijbehorende problemen worden niet gesloten, maar episode wel. Indien een probleem evolueert, bijvoorbeeld van hoesten naar longontsteking, dan verandert de episodenaam.\r\nZib 2017: De probleemstatus beschrijft de toestand van het probleem: Actuele problemen zijn problemen waar de patiënt symptomen van ondervindt of waar bewijsmateriaal voor is.\r\nProblemen met status 'Niet actueel' verwijzen naar problemen waar de patiënt geen last meer van heeft of waar geen aanwijzingen meer voor zijn.\n\n**Variabiliteit**: spoedsamenvatting: open, gesloten, gesloten met attentiewaarde (= active/remission/resolved; episodes uit het verleden die niet meer actueel zijn, maar die de huisarts toch in beeld wil houden., bijvoorbeeld hartinfact in verleden.)\r\nZIB 2017-ZIB2020: actueel, niet actueel\r\nZIB2024: aandoeningOfGesteldheid:Asymptomatisch, Verbeterd, Verslechterd, Onveranderd, Progressief, Opvlammend, Niet meer aanwezig\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-5",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0; Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-6",
+      "label": "CON-6 Bron",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-6.1",
+      "label": "CON-6.1",
+      "requirement": "**Omschrijving**: De bron van de informatie over de conditie, bijvoorbeeld de patiënt zelf of zijn/haar naaste. Gebruikt in gevallen waarin de patiënt de informatie zelf heeft opgesteld of de auteur door de patiënt verstrekte informatie heeft aangeleverd.\n\n**Variabiliteit**: Gecodeerde concept\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-6",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-6.2",
+      "label": "CON-6.2",
+      "requirement": "**Omschrijving**: Een persoon of instantie die de informatie heeft verstrekt. Dit kan de patiënt zijn; een vertegenwoordiger van de patiënt, bijvoorbeeld een ouder of voogd; de behandelaar of een apparaat/software. Het wordt over het algemeen alleen gebruikt wanneer de informatieverstrekker expliciet moet worden vermeld\n\n**Variabiliteit**: party proxy. referentie na een ID van een:\r\n* the patient\r\n* a patient agent, e.g. parent, guardian\r\n* the clinician\r\n* a device or software\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-6",
+      "source": [
+        {
+          "display": "openEHR Problem/Diagnosis 1.7.4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-6.3",
+      "label": "CON-6.3",
+      "requirement": "**Omschrijving**: NL-behoefte zib 2017: Degene die de informatie heeft verschaft en instaat voor de juistheid ervan. Dit is niet altijd zorgverlener die de gegevens invoert in het informatiesysteem, maar het kan ook de patiënt zijn of een andere betrokkene zoals bv een ouder, mantelzorger of voogd.\r\nNL-behoefte in zib2020 komt te vervallen: niet voor elke zib klinisch relevant, en bovendien niet voor elke zib duidelijk wat hiermee bedoeld wordt, met name in relatie tot het element Auteur.\r\nNL-behoefte zib2024: Indien de vastgelegde informatie niet door de behandelend arts zelf is vastgesteld, kan de bron van de informatie vastgelegd worden. of wijzevanverkrijgen?\r\nGeen behoefte vanuit spoedsamenvatting om de bron vast te leggen; bron van de informatie zoals beschreven in de LIM is mogelijk wat anders dan bronsysteem 'wie is eigenaar van de vastgestelde aandoening'\n\n**Variabiliteit**: zib2017:patient, contactpersoon, zorgverlener\r\nzib2020:geen\r\nzib2024:patient, zorgverlener, contactpersoon of vrije tekst\r\nspoedsamenvatting: geen\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-6",
+      "source": [
+        {
+          "display": "Zib 2017 https://www.zibs.nl/images/2/2a/Architectuurdocument_Registratie_aan_de_bron_-_Volume_1_v1.1.pdf\r\nZIB2020\r\nZIB2024 https://www.zibs.nl/wiki/RegistratieGegevens-v1.1.2(2024NL)\r\nspoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-7",
+      "label": "CON-7 Taal",
+      "requirement": "**Omschrijving**: De taal waarin het object is geschreven.De taal wordt aangegeven met de IETF-taalcode.\n\n**Variabiliteit**: Waardelijst BCP 47\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-8",
+      "label": "CON-8 Naam van de conditie",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-8.1",
+      "label": "CON-8.1",
+      "requirement": "**Omschrijving**: Code die de aandoening, het probleem of de diagnose identificeert\n\n**Variabiliteit**: Waardelijst (preferred): ICD-10, SNOMED CT, ICD-O, Orphacode if rare disease is diagnosed\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-8",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-8.2",
+      "label": "CON-8.2",
+      "requirement": "**Omschrijving**: Identificatie van het probleem of de diagnose, met de naam erbij.\r\n\r\nOpmerking: Codering van de naam van het probleem of de diagnose met een terminologie heeft de voorkeur, indien mogelijk.\n\n**Variabiliteit**: String of waardelijst\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-8",
+      "source": [
+        {
+          "display": "openEHR Problem/Diagnosis 1.7.4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-8.3",
+      "label": "CON-8.3",
+      "requirement": "**Omschrijving**: De probleemnaam definieert het probleem. Afhankelijk van de setting kunnen verschillende codestelsels worden gebruikt. De ProbleemNaamCodelijst geeft een overzicht van de mogelijke codestelsels\n\n**Variabiliteit**: Waardelijst (DHD Diagnosethesaurus; ICD-10, dutch translation; SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst)\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-8",
+      "source": [
+        {
+          "display": "Zib 2017, zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-8.4",
+      "label": "CON-8.4",
+      "requirement": "**Omschrijving**: Beschrijving van het gezondheidsprobleem. Dit kan een door de zorgverlener geformuleerde tekst zijn, danwel de tekstuele omschrijving van de ICPC code. In het HIS-referentiemodel is de \"episode-label\" bij een episode-item beschreven. Dat geeft de episode-titel weer op het moment van vastleggen van het episode-item. Door na te gaan wat de episodelabels waren van de episode-items(=Een gegeven van de patiënt dat mede de toestand van een patiënt op een bepaald moment beschrijft in het kader van een episode), die tot de episode horen, zijn dus de aanpassingen te achterhalen. Dit zit al jaren zo in het HIS-Referentiemodel. De vraag is of HIS’en dit ook op deze manier hebben geïmplementeerd. de episode blijft dezelfde episode bij een aanpassing van de naam; Het haakje / unieke ID van de episode verandert niet. \r\nEen gezondheidskwestie kan zich in de loop der tijd ontwikkelen. Bijvoorbeeld een patiënt met eenvoudige verkoudheid wordt steeds zieker als die verkoudheid zich verder ontwikkelt tot een pneumonie. De huisarts zal de gezondheidskwestie hier aanvankelijk een verkoudheid noemen, maar de klachten later omschrijven als een pneumonie. Hij past de aard (de titel) van de episode in de loop van de tijd aan van verkoudheid naar pneumonie.\n\n**Variabiliteit**: Waardelijst (ICPC) + tekstuele omschrijving\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-8",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0 https://referentiemodel.nhg.org/node/1487/volledig/published"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-9",
+      "label": "CON-9 Begin datum van de conditie",
+      "requirement": "**Omschrijving**: De datum en evt. tijd waarop de gezondheidstoestand  is begonnen\n\n**Verleden/heden/toekomst**: niet toekomst"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-9.1",
+      "label": "CON-9.1",
+      "requirement": "**Omschrijving**: De datum waarop de conditie/probleem is begonnen\n\n**Variabiliteit**: DatumTijd\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-9",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-9.2",
+      "label": "CON-9.2",
+      "requirement": "**Omschrijving**: Begin van de aandoening, waarop het probleem betrekking heeft. Vooral bij klachten waarbij het langer duurt voordat de uiteindelijke diagnose gesteld wordt is het belangrijk niet alleen de diagnosedatum te weten, maar ook sinds wanneer de aandoening al bestaat. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan.\r\nNL-behoefte: ZIB2020 Definitie van concept ProbleemBeginDatum is aangepast om duidelijker te maken dat bij type diagnose het gaat om de datum waarop de diagnose gesteld is en niet om de begindatum van het probleem\r\nNL behoefte zib2024: Uit de analyse van de door de NHG ingebrachte wijzigingsvoorstellen is naar voren gekomen dat er behoefte is om een onderscheid te maken tussen begin-/eind- datum van de diagnose (probleem) en begin-/eind- datum van onderliggend lijden\n\n**Variabiliteit**: Date, Time, DateTime\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-9",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-9.3",
+      "label": "CON-9.3",
+      "requirement": "**Omschrijving**: Bij een episode kan zowel de startdatum van de episode zelf (het begin van de contacten tussen arts en patiënt over een gezondheidskwestie) worden vastgelegd, als de begindatum van de in de episodetitel beschreven aandoening.\r\nBij template kezo-Problemobservation  is De effectiveTime, ook biologisch relevante tijd genoemd, is het tijdstip waarop de waarneming geldt voor de patient. Voor een zorgverlener die een patiënt in de kliniek vandaag ziet en waar een voorgeschiedenis van een hartaanval wordt geconstatterd die vijf jaar geleden heeft plaatsgevonden, is de effectiveTime dus vijf jaar geleden.\n\n**Variabiliteit**: begindatum aandoening:Datumtijd [0..1]\r\nspoedsamenvatting in artdecor geeft aan: IVL_TS (behoefte van deze datatype is onbekend)\n\n**Aanwezigheid**: 1..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-9",
+      "source": [
+        {
+          "display": "HIS-referentiemodel: https://referentiemodel.nhg.org/node/93/volledig/published\r\nSpoedsamenvatting 2.2.0 (https://decor.nictiz.nl/pub/acutezorg/acutezorg-html-20190117T230242/tmp-2.16.840.1.113883.2.4.3.11.60.66.10.213-2015-07-03T000000.html)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-10",
+      "label": "CON-10 Eind datum van de gezondheidstoestand",
+      "requirement": "**Omschrijving**: De datum en evt. tijd waarop de gezondheidstoestand is afgelopen\n\n**Verleden/heden/toekomst**: verleden"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-10.1",
+      "label": "CON-10.1",
+      "requirement": "**Omschrijving**: De datum of geschatte datum waarop de conditie in remissie ging of verdween\n\n**Variabiliteit**: DatumTijd\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-10",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-10.2",
+      "label": "CON-10.2",
+      "requirement": "**Omschrijving**: Datum waarop de aandoening, waarop het probleem betrekking heeft, als niet meer aanwezig wordt beschouwd. Deze datum hoeft niet gelijk te zijn aan de datum waarop de statuswijzinging van het probleem is vastgelegd. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan.\n\n**Variabiliteit**: TS (maar vage datum mag ook)\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-10",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-10.3",
+      "label": "CON-10.3",
+      "requirement": "**Omschrijving**: HIS-behoefte:\r\nVoor het afsluiten van een episode zijn verschillende behoefte:\r\nDe huisarts sluit de episode handmatig af.\r\nDe huisarts legt bij de episode een verwachte einddatum vast. Bij voortschrijdend inzicht over de verwachte duur van de episode past de huisarts de verwachte einddatum aan. De episode sluit automatisch na het verstrijken van de vastgelegde einddatum.\r\nIn de praktijk wordt de keuze gemaakt om te werken met een vast termijn waarna een episode wordt afgesloten. De termijn gaat in vanaf het moment waarop de episode het laatst is gewijzigd. Een wijziging kan zijn een aanpassing van de titel of het toevoegen van gegevens (bijvoorbeeld een SOEP-verslag). Om welke termijn het gaat wordt vastgesteld op praktijkniveau. De episode sluit automatisch na het verstrijken van het termijn.\r\nIndien een episodenaam wijzigt doordat er een andere ICPC-code en naam (handmatig of door episode-item), vanwege dat de aandoening verandert van hoesten naar longontsteking krijgt de oude versie geen einddatum. Huisartsen leggen niet het concept probleem vast, dus er is geen zib-probleemeinddatum)\n\n**Variabiliteit**: DatumTijd\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-10",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0 (https://referentiemodel.nhg.org/node/93/volledig/published)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-11",
+      "label": "CON-11 category",
+      "requirement": "**Omschrijving**: Categorie(ën) van het probleem (bijv. POA - aanwezig bij opname, HAC - in het ziekenhuis opgelopen aandoening, en andere categorisaties. Door de probleemcategorie te kiezen, kunnen aandoeningen die tijdens het ziekenhuisverblijf zijn ontstaan, worden gemarkeerd. Het is een behoefte uit de discharge report. https://health.ec.europa.eu/system/files/2024-01/ehn_hdr_guidelines_en.pdf\n\n**Variabiliteit**: Gecodeerde concept\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-11.1",
+      "label": "CON-11.1",
+      "requirement": "**Omschrijving**: Bij opvragen van de spoedsamenvatting vanuit de huisarts wordt de episodelijst opgevraagd van relevante aandoeningen. dit vertaalt naar de HIS door open episodes en gesloten episode met attentiewaarde\n\n**Variabiliteit**: Gecodeerde concept : problem-list-item\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-11",
+      "source": [
+        {
+          "display": "spoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-11.2",
+      "label": "CON-11.2",
+      "requirement": "**Omschrijving**: ZIB2024: isComplicatie is een element van diagnostischInzicht; Geeft aan of het diagnostisch inzicht wel of niet een complicatie betreft. Relevante achtergrondinformatie staat in de https://demedischspecialist.nl/sites/default/files/2022-07/handreiking_adequate_registratie_in_het_epd.pdf die vorig jaar is opgesteld.\"Het registreren van complicaties is ook onderdeel van de zib probleem. Complicatieregistratie is een relevante registratie die gebruikt wordt voor\r\nin-en externe kwaliteitscontroles en ter verbetering van zorg. \"\n\n**Variabiliteit**: boolean\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-11",
+      "source": [
+        {
+          "display": "ZIB2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-12",
+      "label": "CON-12 resolutionCircumstances",
+      "requirement": "**Omschrijving**: Beschrijft de reden waarom de status van het probleem is veranderd van actueel naar inactief (bijv. chirurgische ingreep, medische behandeling, enz.).\n\n**Variabiliteit**: String\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-13",
+      "label": "CON-13 severity",
+      "requirement": "**Omschrijving**: Een subjectieve beoordeling van de ernst van de aandoening, zoals vastgesteld door de arts.\n\n**Variabiliteit**: Waardelijst (preferred): HL7 Condition/Diagnosis Severity; SNOMED CT\n\n**Aanwezigheid**: 0..1\n\n**Verleden/heden/toekomst**: heden",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-13.1",
+      "label": "CON-13.1",
+      "requirement": "**Omschrijving**: geen NL behoefte van ZIB2017 en ZIB2020 of spoedsamenvatting voor dit element gevonden om gestructureerd te registeren: Huisartsen registreren de ernst in de episodenaam https://www.nhg.org/wp-content/uploads/2026/04/260033_-Herziene-Richtlijn-ADEPD_v4.pdf.",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-13"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-13.2",
+      "label": "CON-13.2",
+      "requirement": "**Omschrijving**: NL behoefte zib2024: element ernst in zib aandoeningofgesteldheid. Duiding van de ernst van de aandoening of gesteldheid. Een aandoening of gesteldheid kan weinig klachten geven en toch ernstig zijn, maar het omgekeerde kan ook. -> Wie deze wens heeft en waarom is niet gevonden in ZIB-project.\n\n**Variabiliteit**: Waardelijst: Licht, Licht tot matig, Matig, Matig tot ernstig, Ernstig, Van levensbedreigende ernst, Levensbedreigend, Fataal\n\n**Aanwezigheid**: 1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-13",
+      "source": [
+        {
+          "display": "ZIB2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-14",
+      "label": "CON-14 bodySite",
+      "requirement": "**Omschrijving**: De anatomische locatie, inclusief de zijde waar deze aandoening zich manifesteert.\n\n**Variabiliteit**: Verwijziging naar EHDSBodyStructure\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-14.1",
+      "label": "CON-14.1",
+      "requirement": "**Omschrijving**: Anatomische locatie die de focus is van de verrichting.\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-14",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-14.2",
+      "label": "CON-14.2",
+      "requirement": "**Omschrijving**: Lateraliteit verbijzondert de anatomische locatie door, indien van toepassing, de zijdigheid vast te leggen, bijvoorbeeld links.\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-14",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-15",
+      "label": "CON-15 stage",
+      "requirement": "**Omschrijving**: Het stadium/de graad wordt doorgaans formeel beoordeeld aan de hand van een specifiek stadium-/gradatiesysteem. Er kunnen meerdere beoordelingssystemen worden gebruikt.\n\n**Variabiliteit**: Waardelijst (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-16",
+      "label": "CON-16 Status van verificatie van de conditie",
+      "requirement": "(geen requirementtekst)"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-16.1",
+      "label": "CON-16.1",
+      "requirement": "**Omschrijving**: Een bewering over de zekerheid die aan een diagnose is verbonden. Diagnostisch en/of klinisch bewijs van een aandoening\n\n**Variabiliteit**: Waardelijst (preferred): HL7 Condition Verification Status (unconfirmed, provisional, differential, confirmed, refuted, entered-in-error )\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-16",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-P16.2",
+      "label": "CON-P16.2",
+      "requirement": "**Omschrijving**: Klinische status van het probleem of de diagnose.\n\n**Variabiliteit**: VerificatieStatusCodelijst\n\n**Aanwezigheid**: 0..1",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Condition#CON-P16",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-17",
+      "label": "CON-17 specialistContact",
+      "requirement": "**Omschrijving**: Een zorgverlener die specifiek betrokken is bij het probleem, als voorkeurscontactpersoon.\n\n**Variabiliteit**: Verwijzing naar de EHDSHealthProfessional\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-18",
+      "label": "CON-18 externalResource",
+      "requirement": "**Omschrijving**: Externe bronnen die specifiek betrekking hebben op het probleem, bijvoorbeeld een link naar een probleem met een zeldzame ziekte en de bijbehorende richtlijnen\n\n**Variabiliteit**: uri\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDS LIM EHDSCondition 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-19",
+      "label": "CON-19 Toelichting",
+      "requirement": "**Omschrijving**: Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt.\n\n**Variabiliteit**: String\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "Zib 2017; zib 2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "CON-20",
+      "label": "CON-20 NadereSpecificatieProbleemNaam",
+      "requirement": "**Omschrijving**: BGZ-MSZ- behoefte: Wat is precies de behoefte van MBZ-MSZ voor een waardelijst als een naderespecificatie\n\n**Variabiliteit**: String en waardelijst",
+      "source": [
+        {
+          "display": "Zib 2020; informatiestandaard BgZ-MSZ"
+        }
+      ]
+    }
+  ]
+}

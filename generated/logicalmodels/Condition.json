@@ -1,0 +1,3125 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Condition-model",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-07-29T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://nictiz.nl/gbb/StructureDefinition/Condition-model",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.30"
+    }
+  ],
+  "version": "2026-07-29T00:00:00",
+  "name": "LogicalModelCondition",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelGezondheidstoestand"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelCondition",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelGezondheidstoestand"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://nictiz.nl/gbb/StructureDefinition/Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.472--20260727114251",
+        "path": "Condition",
+        "short": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een klinische aandoening, probleem, diagnose of andere gebeurtenis, situatie, kwestie of klinisch concept dat aanleiding geeft tot zorg."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een klinische aandoening, probleem, diagnose of andere gebeurtenis, situatie, kwestie of klinisch concept dat aanleiding geeft tot zorg."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gezondheidstoestand"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.471--20260727112751",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.identifier",
+        "short": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Business identifier die door de uitvoerder of andere systemen aan deze gezondheidstoestand zijn toegewezen en die constant blijven wanneer de bron wordt bijgewerkt en van server naar server worden doorgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "*Business identifier* die door de uitvoerder of andere systemen aan deze gezondheidstoestand zijn toegewezen en die constant blijven wanneer de bron wordt bijgewerkt en van server naar server worden doorgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.473--20260727143116",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.clinicalStatus",
+        "short": "The clinical status of the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische status van de gezondheidstoestand.Additional bindings volgens zibs:ProbleemStatusCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The clinical status of the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische status van de gezondheidstoestand.\n\nAdditional bindings volgens zibs:\n\nProbleemStatusCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "KlinischeStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.clinicalStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Condition Clinical Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.474--20260727143203",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.verificationStatus",
+        "short": "The verification status to support the clinical status of the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verificatiestatus ter onderbouwing van de klinische status van de gezondheidstoestand.Additional bindings volgens zibs:VerificatieCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The verification status to support the clinical status of the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verificatiestatus ter onderbouwing van de klinische status van de gezondheidstoestand.\n\nAdditional bindings volgens zibs:\n\nVerificatieCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerificatieStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.verificationStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "ConditionVerificationStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.475--20260727143521",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.category",
+        "short": "A category assigned to the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een categorie die aan de gezondheidstoestand is toegewezen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A category assigned to the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een categorie die aan de gezondheidstoestand is toegewezen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Categorie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.476--20260727143554",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.severity",
+        "short": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een subjectieve beoordeling van de ernst van de gezondheidstoestand, zoals vastgesteld door de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een subjectieve beoordeling van de ernst van de gezondheidstoestand, zoals vastgesteld door de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Ernst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.477--20260727143718",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.code",
+        "short": "Identification of the condition, problem or diagnosis.Additional bindings applied within the Netherlands:DHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de gezondheidstoestand, het probleem of de diagnose.Additional bindings die gelden binnen Nederland:DHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the condition, problem or diagnosis.\n\nAdditional bindings applied within the Netherlands:\n\nDHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de gezondheidstoestand, het probleem of de diagnose.\n\nAdditional bindings die gelden binnen Nederland:\n\nDHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "GezondheidstoestandCodeCodesysteemlijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.30--20260729132018"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.478--20260727143846",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.bodySite",
+        "short": "The anatomical location where this condition manifests itself.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De anatomische locatie waar deze gezondheidstoestand zich manifesteert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The anatomical location where this condition manifests itself.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De anatomische locatie waar deze gezondheidstoestand zich manifesteert."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.bodySite",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.479--20260727143934",
+        "path": "Condition.subject",
+        "short": "Indicates the patient who the condition record is associated with.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan aan welke patiënt de gezondheidstoestand is gekoppeld."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the patient who the condition record is associated with.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan aan welke patiënt de gezondheidstoestand is gekoppeld."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.480--20260727144826",
+        "path": "Condition.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.subject.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.482--20260727144950",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.onset",
+        "short": "Estimated or actual date or date-time the condition began, in the opinion of the clinician.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geschatte of daadwerkelijke datum of tijdstip waarop de gezondheidstoestand begon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Estimated or actual date or date-time the condition began, in the opinion of the clinician.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geschatte of daadwerkelijke datum of tijdstip waarop de gezondheidstoestand begon."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StartDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.485--20260729072956",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.abatement",
+        "short": "The date or estimated date on which the health condition resolved or went into remission.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of geschatte datum waarop de gezondheidstoestand verdween of in remissie ging."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or estimated date on which the health condition resolved or went into remission.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of geschatte datum waarop de gezondheidstoestand verdween of in remissie ging."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.486--20260729074008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.recordedDate",
+        "short": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De registratiedatum geeft aan wanneer deze specifieke gezondheidstoestand in het systeem is aangemaakt; dit is vaak een door het systeem gegenereerde datum."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De registratiedatum geeft aan wanneer deze specifieke gezondheidstoestand in het systeem is aangemaakt; dit is vaak een door het systeem gegenereerde datum."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.recordedDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.492--20260729080258",
+        "path": "Condition.recorder[x]",
+        "short": "De persoon die de gezondheidstoestand heeft vastgelegd en die de verantwoordelijkheid draagt voor de inhoud.",
+        "definition": "De persoon die de gezondheidstoestand heeft vastgelegd en die de verantwoordelijkheid draagt voor de inhoud.",
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.recorder[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Device"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.488--20260729074905",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.asserter",
+        "short": "Individual who is making the condition statement.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoon die de verklaring van de gezondheidstoestand opstelt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Individual who is making the condition statement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoon die de verklaring van de gezondheidstoestand opstelt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Bron"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.asserter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.489--20260729075505",
+        "path": "Condition.stage",
+        "short": "Clinical stage or grade of a condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinisch stadium of graad van een gezondheidstoestand."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical stage or grade of a condition. May include formal severity assessments.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinisch stadium of graad van een gezondheidstoestand. Kan formele beoordelingen van de ernst omvatten."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StadiumOfGraad"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.stage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.497--20260729080828",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.stage.summary",
+        "short": "A simple summary of the stage such as \"Stage 3\".",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een eenvoudige samenvatting van het stadium, zoals 'stadium 3'."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een eenvoudige samenvatting van het stadium, zoals 'stadium 3'. De bepaling van het stadium is ziektespecifiek."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Samenvatting"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.stage.summary",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "description": "GezondheidstoestandStadiumOfGraadCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.31--20260729134908"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.490--20260729075535",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.note",
+        "short": "Additional information about the Condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de gezondheidstoestand."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information about the Condition. This is a general notes/comments entry for description of the Condition, its diagnosis and prognosis.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de gezondheidstoestand. Dit is een veld voor algemene opmerkingen/toelichtingen ter beschrijving van de gezondheidstoestand, de diagnose en de prognose."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.494--20260729080600",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.relatedArtifact",
+        "short": "Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gerelateerde artefacten, zoals aanvullende documentatie, onderbouwing, afhankelijkheden, bibliografische verwijzingen en voorgaande en volgende artefacten."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gerelateerde artefacten, zoals aanvullende documentatie, onderbouwing, afhankelijkheden, bibliografische verwijzingen en voorgaande en volgende artefacten."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GerelateerdArtefact"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.relatedArtifact",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.518--20260803132211",
+        "path": "Condition.language",
+        "short": "Language of the content",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Taal van de inhoud"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Language of the content",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Taal van de inhoud"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Taal"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Common Languages",
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.472--20260727114251",
+        "path": "Condition",
+        "short": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een klinische aandoening, probleem, diagnose of andere gebeurtenis, situatie, kwestie of klinisch concept dat aanleiding geeft tot zorg."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een klinische aandoening, probleem, diagnose of andere gebeurtenis, situatie, kwestie of klinisch concept dat aanleiding geeft tot zorg."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gezondheidstoestand"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.471--20260727112751",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.identifier",
+        "short": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Business identifier die door de uitvoerder of andere systemen aan deze gezondheidstoestand zijn toegewezen en die constant blijven wanneer de bron wordt bijgewerkt en van server naar server worden doorgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "*Business identifier* die door de uitvoerder of andere systemen aan deze gezondheidstoestand zijn toegewezen en die constant blijven wanneer de bron wordt bijgewerkt en van server naar server worden doorgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.473--20260727143116",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.clinicalStatus",
+        "short": "The clinical status of the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische status van de gezondheidstoestand.Additional bindings volgens zibs:ProbleemStatusCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The clinical status of the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische status van de gezondheidstoestand.\n\nAdditional bindings volgens zibs:\n\nProbleemStatusCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "KlinischeStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.clinicalStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Condition Clinical Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.474--20260727143203",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.verificationStatus",
+        "short": "The verification status to support the clinical status of the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verificatiestatus ter onderbouwing van de klinische status van de gezondheidstoestand.Additional bindings volgens zibs:VerificatieCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The verification status to support the clinical status of the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De verificatiestatus ter onderbouwing van de klinische status van de gezondheidstoestand.\n\nAdditional bindings volgens zibs:\n\nVerificatieCodelijst; 2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerificatieStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.verificationStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "ConditionVerificationStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.475--20260727143521",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.category",
+        "short": "A category assigned to the condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een categorie die aan de gezondheidstoestand is toegewezen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A category assigned to the condition.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een categorie die aan de gezondheidstoestand is toegewezen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Categorie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.476--20260727143554",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.severity",
+        "short": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een subjectieve beoordeling van de ernst van de gezondheidstoestand, zoals vastgesteld door de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een subjectieve beoordeling van de ernst van de gezondheidstoestand, zoals vastgesteld door de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Ernst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.477--20260727143718",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.code",
+        "short": "Identification of the condition, problem or diagnosis.Additional bindings applied within the Netherlands:DHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de gezondheidstoestand, het probleem of de diagnose.Additional bindings die gelden binnen Nederland:DHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the condition, problem or diagnosis.\n\nAdditional bindings applied within the Netherlands:\n\nDHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de gezondheidstoestand, het probleem of de diagnose.\n\nAdditional bindings die gelden binnen Nederland:\n\nDHD Diagnosethesaurus; ICD-10 (dutch translation); SNOMED CT; NANDA-I; ICF; ICPC-1 NL; DSM-IV; DSM-5; GGZ Diagnoselijst"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "GezondheidstoestandCodeCodesysteemlijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.30--20260729132018"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.478--20260727143846",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.bodySite",
+        "short": "The anatomical location where this condition manifests itself.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De anatomische locatie waar deze gezondheidstoestand zich manifesteert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The anatomical location where this condition manifests itself.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De anatomische locatie waar deze gezondheidstoestand zich manifesteert."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.bodySite",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.479--20260727143934",
+        "path": "Condition.subject",
+        "short": "Indicates the patient who the condition record is associated with.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan aan welke patiënt de gezondheidstoestand is gekoppeld."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the patient who the condition record is associated with.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan aan welke patiënt de gezondheidstoestand is gekoppeld."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.480--20260727144826",
+        "path": "Condition.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.subject.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.482--20260727144950",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.onset",
+        "short": "Estimated or actual date or date-time the condition began, in the opinion of the clinician.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geschatte of daadwerkelijke datum of tijdstip waarop de gezondheidstoestand begon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Estimated or actual date or date-time the condition began, in the opinion of the clinician.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geschatte of daadwerkelijke datum of tijdstip waarop de gezondheidstoestand begon."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StartDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.onset",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.485--20260729072956",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.abatement",
+        "short": "The date or estimated date on which the health condition resolved or went into remission.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of geschatte datum waarop de gezondheidstoestand verdween of in remissie ging."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or estimated date on which the health condition resolved or went into remission.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of geschatte datum waarop de gezondheidstoestand verdween of in remissie ging."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.abatement",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.486--20260729074008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.recordedDate",
+        "short": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De registratiedatum geeft aan wanneer deze specifieke gezondheidstoestand in het systeem is aangemaakt; dit is vaak een door het systeem gegenereerde datum."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De registratiedatum geeft aan wanneer deze specifieke gezondheidstoestand in het systeem is aangemaakt; dit is vaak een door het systeem gegenereerde datum."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.recordedDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.492--20260729080258",
+        "path": "Condition.recorder[x]",
+        "short": "De persoon die de gezondheidstoestand heeft vastgelegd en die de verantwoordelijkheid draagt voor de inhoud.",
+        "definition": "De persoon die de gezondheidstoestand heeft vastgelegd en die de verantwoordelijkheid draagt voor de inhoud.",
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.recorder[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Device"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.488--20260729074905",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.asserter",
+        "short": "Individual who is making the condition statement.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoon die de verklaring van de gezondheidstoestand opstelt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Individual who is making the condition statement.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoon die de verklaring van de gezondheidstoestand opstelt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Bron"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.asserter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.489--20260729075505",
+        "path": "Condition.stage",
+        "short": "Clinical stage or grade of a condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinisch stadium of graad van een gezondheidstoestand."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Clinical stage or grade of a condition. May include formal severity assessments.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Klinisch stadium of graad van een gezondheidstoestand. Kan formele beoordelingen van de ernst omvatten."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StadiumOfGraad"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.stage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.497--20260729080828",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.stage.summary",
+        "short": "A simple summary of the stage such as \"Stage 3\".",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een eenvoudige samenvatting van het stadium, zoals 'stadium 3'."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een eenvoudige samenvatting van het stadium, zoals 'stadium 3'. De bepaling van het stadium is ziektespecifiek."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Samenvatting"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.stage.summary",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "description": "GezondheidstoestandStadiumOfGraadCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.31--20260729134908"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.490--20260729075535",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.note",
+        "short": "Additional information about the Condition.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de gezondheidstoestand."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information about the Condition. This is a general notes/comments entry for description of the Condition, its diagnosis and prognosis.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de gezondheidstoestand. Dit is een veld voor algemene opmerkingen/toelichtingen ter beschrijving van de gezondheidstoestand, de diagnose en de prognose."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.494--20260729080600",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Condition.relatedArtifact",
+        "short": "Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gerelateerde artefacten, zoals aanvullende documentatie, onderbouwing, afhankelijkheden, bibliografische verwijzingen en voorgaande en volgende artefacten."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Related artifacts such as additional documentation, justification, dependencies, bibliographic references, and predecessor and successor artifacts.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gerelateerde artefacten, zoals aanvullende documentatie, onderbouwing, afhankelijkheden, bibliografische verwijzingen en voorgaande en volgende artefacten."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GerelateerdArtefact"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.relatedArtifact",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.518--20260803132211",
+        "path": "Condition.language",
+        "short": "Language of the content",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Taal van de inhoud"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Language of the content",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Taal van de inhoud"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Taal"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Common Languages",
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      }
+    ]
+  }
+}
