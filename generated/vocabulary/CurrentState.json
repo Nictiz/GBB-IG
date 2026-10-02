@@ -1,0 +1,102 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.32--20261002095921",
+  "meta": {
+    "lastUpdated": "2026-10-02T09:59:21Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-10-02T09:59:21Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.32&effectiveDate=2026-10-02T09:59:21"
+    }
+  ],
+  "url": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.32--20261002095921",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.32"
+    }
+  ],
+  "version": "2026-10-02T09:59:21",
+  "name": "CurrentState",
+  "title": "Current_State",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-02T09:59:21Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "This vocabulary codifies the names of the states in the[ __standard Instruction state machine__ ](https://specifications.openehr.org/releases/RM/latest/ehr.html#_the_standard_instruction_state_machine_ism).",
+  "immutable": false,
+  "purpose": "This vocabulary codifies the names of the states in the standard Instruction state machine.",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.5.1",
+        "concept": [
+          {
+            "code": "524",
+            "display": "Initial"
+          },
+          {
+            "code": "532",
+            "display": "Completed"
+          },
+          {
+            "code": "531",
+            "display": "Aborted"
+          },
+          {
+            "code": "530",
+            "display": "Suspended"
+          },
+          {
+            "code": "245",
+            "display": "Active"
+          },
+          {
+            "code": "529",
+            "display": "Scheduled"
+          },
+          {
+            "code": "528",
+            "display": "Cancelled"
+          },
+          {
+            "code": "527",
+            "display": "Postponed"
+          },
+          {
+            "code": "526",
+            "display": "Planned"
+          }
+        ]
+      }
+    ]
+  }
+}

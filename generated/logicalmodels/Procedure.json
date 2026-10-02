@@ -1,0 +1,2648 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Procedure-model",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-07-15T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://nictiz.nl/gbb/StructureDefinition/Procedure-model",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.28"
+    }
+  ],
+  "version": "2026-07-15T00:00:00",
+  "name": "LogicalModelProcedure",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelVerrichting"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelProcedure",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelVerrichting"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "publisher": "Kerngroep Registratie aan de Bron",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgpartAnatomicalLocation-1.0",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.20.7&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.part.AnatomicalLocation 1.0"
+    },
+    {
+      "identity": "NlzorgProcedure-5.2",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.14.1&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.Procedure 5.2"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://nictiz.nl/gbb/StructureDefinition/Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.1--20260617000000",
+        "path": "Procedure",
+        "short": "Root concept of the Procedure information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Procedure information model. This root concept contains all data elements of the Procedure information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Verrichting. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Verrichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.1",
+            "comment": "Procedure (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.604--20260930122800",
+        "path": "Procedure.identifier",
+        "short": "Business identifier for the object, unique within its system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifier for the object, unique within its system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.444--20260713114047",
+        "path": "Procedure.subject",
+        "short": "The human subject referred to in this Action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze handeling betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The human subject referred to in this Action. This is usually the Subject of the Health Record, that is the patient. However in certain circumstances it may refer to others, for example an organ donor, a fetus, or a family member.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze handeling betrekking heeft. Dit is meestal de betrokkene van het gezondheidsdossier (de patiënt). In specifieke situaties kan dit echter ook een andere persoon zijn, zoals een orgaandonor, een foetus of een familielid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.445--20260714081221",
+        "path": "Procedure.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.subject.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.6--20260617000000",
+        "path": "Procedure.otherParticipations[x]",
+        "short": "Identification of other individuals/parties involved in the Action, the method by which they interacted, and the duration of the interaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van andere personen of partijen die betrokken waren bij de verrichting, de wijze waarop zij hierbij betrokken waren en de duur van deze betrokkenheid."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of other individuals/parties involved in the Action, the method by which they interacted, and the duration of the interaction. Normally not required, but may be appropriate where the Evaluation is reached by another healthcare professional or group, rather than the Composition Author/composer.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van andere personen of partijen die betrokken waren bij de verrichting, de wijze waarop zij hierbij betrokken waren en de duur van deze betrokkenheid. Dit element is doorgaans niet vereist, maar kan relevant zijn wanneer de evaluatie tot stand is gekomen door een andere zorgverlener of een groep zorgverleners dan de auteur/samensteller van de Composition."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Uitvoerder [x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.otherParticipations[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.6",
+            "comment": "Performer (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.443--20260713112536",
+        "path": "Procedure.currentActionState",
+        "short": "The current 'machine state' of the overall ACTION after the step was performed, coded with openEHR 'Instruction states'.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De huidige ‘machinestatus’ van de algehele ACTIE nadat de stap is uitgevoerd, gecodeerd volgens de ‘Instruction states’ van openEHR."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The current 'machine state' of the overall ACTION after the step was performed, coded with openEHR 'Instruction states'. One of: 'planned'; 'postponed'; 'cancelled'; 'scheduled'; 'suspended'; 'aborted'; 'active'; or 'completed'.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De huidige ‘machinestatus’ van de algehele ACTIE nadat de stap is uitgevoerd, gecodeerd volgens de ‘Instruction states’ van openEHR. Een van de volgende waarden: ‘planned’ (gepland), ‘postponed’ (uitgesteld), ‘cancelled’ (geannuleerd), ‘scheduled’ (ingepland), ‘suspended’ (opgeschort), ‘aborted’ (afgebroken), ‘active’ (actief) of ‘completed’ (voltooid)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "HuidigeActieStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.currentActionState",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Current_State",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.32--20261002095921"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.5--20260617000000",
+        "path": "Procedure.healthcareFacility",
+        "short": "The Healthcare Facility or Organisation in which the session/event took place.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorginstelling of zorgorganisatie waar de sessie of gebeurtenis heeft plaatsgevonden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Healthcare Facility or Organisation in which the session/event took place. This is the most specific workgroup or delivery unit within a care delivery enterprise that has an official identifier in the health system, and can be used to ensure medico-legal accountability.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorginstelling of zorgorganisatie waar de sessie of gebeurtenis heeft plaatsgevonden. Dit is de meest specifieke werkeenheid of zorgeenheid binnen een zorgorganisatie die beschikt over een officiële identificatie binnen het zorgstelsel en die kan worden gebruikt om de medisch-juridische verantwoordelijkheid vast te leggen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgLocatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.healthcareFacility",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.5",
+            "comment": "Location (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.584--20260910212438",
+        "path": "Procedure.healthcareFacility.location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.healthcareFacility.location",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Location"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.436--20260713095549",
+        "path": "Procedure.procedureName",
+        "short": "Identification of the procedure by name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de procedure aan de hand van de naam."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the procedure by name. Coding of the specific procedure with a terminology is preferred, where possible.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de procedure aan de hand van de naam. Waar mogelijk heeft codering van de specifieke procedure met behulp van een terminologie de voorkeur."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingNaam"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingNaamSNOMEDCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7--20260619092503"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.455--20260714205651",
+        "path": "Procedure.indication",
+        "short": "The clinical or process-related reason for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische of procesgerelateerde reden voor de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The clinical or process-related reason for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische of procesgerelateerde reden voor de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Indicatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.indication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "IndicatieCodelijstenMainBinding",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27--20260619114424"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.12--20260617000000",
+        "path": "Procedure.method",
+        "short": "Identification of specific method or technique for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de specifieke methode of techniek die voor de procedure is toegepast."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of specific method or technique for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de specifieke methode of techniek die voor de procedure is toegepast."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Methode"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.method",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingMethodeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.12",
+            "comment": "ProcedureMethod (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.13--20260617000000",
+        "path": "Procedure.procedureBodySite",
+        "short": "Identification of the body site for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de anatomische locatie waarop de procedure is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the body site for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de anatomische locatie waarop de procedure is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.procedureBodySite",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAnatomicalLocation-1.0",
+            "map": "NL-CM-20.7.1",
+            "comment": "AnatomicalLocation (SPEC)"
+          },
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.13",
+            "comment": "ProcedureAnatomicalLocation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.7--20260617000000",
+        "path": "Procedure.procedureDetail",
+        "short": "The container contains structured information about the procedure.Proposed temporary name / identifierProcedure Detail – Medical Device (temporary container within the Procedure Generic Building Block).Concept descriptionThis container contains information about medical devices that are used during a procedure or are the target of the procedure, such as implants, prostheses, or diagnostic devices.Source and rationaleBased on the openEHR Procedure model (Procedure Detail), zib Procedure (2024), and XTEHR Procedure (v0.2.1).",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container bevat gestructureerde informatie over de procedure. een eenduidige, voorlopige naam of identifier van het beoogde GBProcedure Detail – Medisch hulpmiddel (tijdelijke container binnen GB Verrichting).een omschrijving van het benodigde concept, inclusief doel en beoogde betekenis;Deze container bevat informatie over medische hulpmiddelen die tijdens een verrichting worden gebruikt of waarop de verrichting is gericht, zoals implantaten, prothesen of diagnostische hulpmiddelen.de bron en aanleiding voor de verwijzing, bijvoorbeeld een use case, zib, informatiestandaard of internationale standaard;Gebaseerd op het openEHR Procedure-model (Procedure Detail), de zib Verrichting (2024) en XTEHR Procedure (v0.2.1)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The container contains structured information about the procedure.\n\n* Proposed temporary name / identifier\n    * Procedure Detail – Medical Device (temporary container within the Procedure Generic Building Block).\n\n* Concept description\n    * This container contains information about medical devices that are used during a procedure or are the target of the procedure, such as implants, prostheses, or diagnostic devices.\n\n* Source and rationale\n    * Based on the openEHR Procedure model ( *Procedure Detail* ), zib Procedure (2024), and XTEHR Procedure (v0.2.1). Included to support the recording of medical devices in the context of procedures.\n\n* Relationship between the current and future GB\n    * This container records the medical devices associated with the procedure. It is a temporary solution and will be replaced by a reference to the future Medical Device Generic Building Block.\n\n* Functional and semantic requirements\n    * The future Generic Building Block shall support the identification of one or more medical devices, both as the target of a procedure and as devices used during the procedure.\n\n* Status\n    * Temporary reference to a Generic Building Block that has not yet been developed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container bevat gestructureerde informatie over de procedure.\n\n* een eenduidige, voorlopige naam of identifier van het beoogde GB\n    * Procedure Detail – Medisch hulpmiddel (tijdelijke container binnen GB Verrichting).\n\n* een omschrijving van het benodigde concept, inclusief doel en beoogde betekenis;\n    * Deze container bevat informatie over medische hulpmiddelen die tijdens een verrichting worden gebruikt of waarop de verrichting is gericht, zoals implantaten, prothesen of diagnostische hulpmiddelen.\n\n* de bron en aanleiding voor de verwijzing, bijvoorbeeld een use case, zib, informatiestandaard of internationale standaard;\n    * Gebaseerd op het openEHR Procedure-model ( *Procedure Detail* ), de zib Verrichting (2024) en XTEHR Procedure (v0.2.1). Opgenomen vanwege de behoefte om medische hulpmiddelen binnen verrichtingen vast te leggen.\n\n* de relatie tussen het bestaande GB en het toekomstige GB;\n    * Medische hulpmiddelen die gebruikt zijn voor de verrichting. Deze container is een tijdelijke voorziening en wordt gevuld met een verwijzing naar het toekomstige generieke bouwblok Medisch hulpmiddel.\n\n* de functionele en semantische requirements die het toekomstige GB moet ondersteunen;\n    * Het toekomstige GB moet ondersteuning bieden voor het identificeren van één of meerdere medische hulpmiddelen, zowel als doel van een verrichting als hulpmiddel dat tijdens de verrichting wordt gebruikt.\n\n* de status ‘tijdelijke verwijzing naar nog te realiseren GB’;\n    * Nog niet ontwikkeld"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingDetail"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.procedureDetail",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.7",
+            "comment": "MedicalDevice (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.582--20260910211628",
+        "path": "Procedure.procedureDetail.deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureDetail.deviceplaceholder",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Device"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.437--20260713104629",
+        "path": "Procedure.outcome",
+        "short": "Outcome of procedure performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De uitkomst van de uitgevoerde procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Outcome of procedure performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De uitkomst van de uitgevoerde procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Uitkomst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.outcome",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "UitkomstSNOMEDCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22--20260619103341"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.460--20260714211953",
+        "path": "Procedure.complication",
+        "short": "Details about any complication arising from the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens over eventuele complicaties die zijn ontstaan als gevolg van de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details about any complication arising from the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens over eventuele complicaties die zijn ontstaan als gevolg van de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Complicatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.complication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ComplicatieCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28--20260619115050"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.2--20260617000000",
+        "path": "Procedure.startDateTime",
+        "short": "The date or datetime when the entire procedure, or the first component of a multicomponent procedure, was first started.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het eerste onderdeel daarvan, is gestart."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime when the entire procedure, or the first component of a multicomponent procedure, was first started.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het eerste onderdeel daarvan, is gestart."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StartDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.startDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueDateTime": "2012-06-05"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.2",
+            "comment": "ProcedureStartDate (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.3--20260617000000",
+        "path": "Procedure.endDateTime",
+        "short": "The date or datetime when the entire procedure, or the last component of a multicomponent procedure, was finished.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het laatste onderdeel daarvan, is voltooid."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime when the entire procedure, or the last component of a multicomponent procedure, was finished.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het laatste onderdeel daarvan, is voltooid."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueDateTime": "2012-07-06"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.3",
+            "comment": "ProcedureEndDate (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.438--20260713110518",
+        "path": "Procedure.scheduledStartDateTime",
+        "short": "The date or datetime on which the procedure is intended to be performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de procedure naar verwachting zal worden uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime on which the procedure is intended to be performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de procedure naar verwachting zal worden uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GeplandeStartDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.scheduledStartDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.605--20261002091436",
+        "path": "Procedure.dateAndTimeActionstepPerformed",
+        "short": "The date and time at which this step of the Action was performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop deze stap van de actie is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which this step of the Action was performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop deze stap van de actie is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "DatumEnTijdActiestapUitgevoerd"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.dateAndTimeActionstepPerformed",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.439--20260713111315",
+        "path": "Procedure.procedureType",
+        "short": "The type of procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De categorie van de verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De categorie van de verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingCategorie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingCatergorieCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.440--20260713111609",
+        "path": "Procedure.comment",
+        "short": "Additional narrative about the procedure or care pathway step not captured in other fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende toelichting op de procedure of stap in het zorgpad die niet in andere gegevensvelden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional narrative about the procedure or care pathway step not captured in other fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende toelichting op de procedure of stap in het zorgpad die niet in andere gegevensvelden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.comment",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.1--20260617000000",
+        "path": "Procedure",
+        "short": "Root concept of the Procedure information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Procedure information model. This root concept contains all data elements of the Procedure information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Verrichting. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Verrichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.1",
+            "comment": "Procedure (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.604--20260930122800",
+        "path": "Procedure.identifier",
+        "short": "Business identifier for the object, unique within its system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifier for the object, unique within its system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.444--20260713114047",
+        "path": "Procedure.subject",
+        "short": "The human subject referred to in this Action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze handeling betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The human subject referred to in this Action. This is usually the Subject of the Health Record, that is the patient. However in certain circumstances it may refer to others, for example an organ donor, a fetus, or a family member.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze handeling betrekking heeft. Dit is meestal de betrokkene van het gezondheidsdossier (de patiënt). In specifieke situaties kan dit echter ook een andere persoon zijn, zoals een orgaandonor, een foetus of een familielid."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.445--20260714081221",
+        "path": "Procedure.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.subject.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.6--20260617000000",
+        "path": "Procedure.otherParticipations[x]",
+        "short": "Identification of other individuals/parties involved in the Action, the method by which they interacted, and the duration of the interaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van andere personen of partijen die betrokken waren bij de verrichting, de wijze waarop zij hierbij betrokken waren en de duur van deze betrokkenheid."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of other individuals/parties involved in the Action, the method by which they interacted, and the duration of the interaction. Normally not required, but may be appropriate where the Evaluation is reached by another healthcare professional or group, rather than the Composition Author/composer.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van andere personen of partijen die betrokken waren bij de verrichting, de wijze waarop zij hierbij betrokken waren en de duur van deze betrokkenheid. Dit element is doorgaans niet vereist, maar kan relevant zijn wanneer de evaluatie tot stand is gekomen door een andere zorgverlener of een groep zorgverleners dan de auteur/samensteller van de Composition."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Uitvoerder [x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.otherParticipations[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.6",
+            "comment": "Performer (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.443--20260713112536",
+        "path": "Procedure.currentActionState",
+        "short": "The current 'machine state' of the overall ACTION after the step was performed, coded with openEHR 'Instruction states'.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De huidige ‘machinestatus’ van de algehele ACTIE nadat de stap is uitgevoerd, gecodeerd volgens de ‘Instruction states’ van openEHR."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The current 'machine state' of the overall ACTION after the step was performed, coded with openEHR 'Instruction states'. One of: 'planned'; 'postponed'; 'cancelled'; 'scheduled'; 'suspended'; 'aborted'; 'active'; or 'completed'.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De huidige ‘machinestatus’ van de algehele ACTIE nadat de stap is uitgevoerd, gecodeerd volgens de ‘Instruction states’ van openEHR. Een van de volgende waarden: ‘planned’ (gepland), ‘postponed’ (uitgesteld), ‘cancelled’ (geannuleerd), ‘scheduled’ (ingepland), ‘suspended’ (opgeschort), ‘aborted’ (afgebroken), ‘active’ (actief) of ‘completed’ (voltooid)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "HuidigeActieStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.currentActionState",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Current_State",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.32--20261002095921"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.5--20260617000000",
+        "path": "Procedure.healthcareFacility",
+        "short": "The Healthcare Facility or Organisation in which the session/event took place.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorginstelling of zorgorganisatie waar de sessie of gebeurtenis heeft plaatsgevonden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The Healthcare Facility or Organisation in which the session/event took place. This is the most specific workgroup or delivery unit within a care delivery enterprise that has an official identifier in the health system, and can be used to ensure medico-legal accountability.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De zorginstelling of zorgorganisatie waar de sessie of gebeurtenis heeft plaatsgevonden. Dit is de meest specifieke werkeenheid of zorgeenheid binnen een zorgorganisatie die beschikt over een officiële identificatie binnen het zorgstelsel en die kan worden gebruikt om de medisch-juridische verantwoordelijkheid vast te leggen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgLocatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.healthcareFacility",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.5",
+            "comment": "Location (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.584--20260910212438",
+        "path": "Procedure.healthcareFacility.location",
+        "short": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional details about the location that could be displayed as further information to identify the location beyond its name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende informatie over de locatie die kan worden weergegeven om deze, naast de naam, beter te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.healthcareFacility.location",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Location"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.436--20260713095549",
+        "path": "Procedure.procedureName",
+        "short": "Identification of the procedure by name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de procedure aan de hand van de naam."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the procedure by name. Coding of the specific procedure with a terminology is preferred, where possible.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de procedure aan de hand van de naam. Waar mogelijk heeft codering van de specifieke procedure met behulp van een terminologie de voorkeur."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingNaam"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingNaamSNOMEDCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7--20260619092503"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.455--20260714205651",
+        "path": "Procedure.indication",
+        "short": "The clinical or process-related reason for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische of procesgerelateerde reden voor de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The clinical or process-related reason for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De klinische of procesgerelateerde reden voor de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Indicatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.indication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "IndicatieCodelijstenMainBinding",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27--20260619114424"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.12--20260617000000",
+        "path": "Procedure.method",
+        "short": "Identification of specific method or technique for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de specifieke methode of techniek die voor de procedure is toegepast."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of specific method or technique for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de specifieke methode of techniek die voor de procedure is toegepast."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Methode"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.method",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingMethodeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.12",
+            "comment": "ProcedureMethod (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.13--20260617000000",
+        "path": "Procedure.procedureBodySite",
+        "short": "Identification of the body site for the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de anatomische locatie waarop de procedure is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of the body site for the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van de anatomische locatie waarop de procedure is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.procedureBodySite",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAnatomicalLocation-1.0",
+            "map": "NL-CM-20.7.1",
+            "comment": "AnatomicalLocation (SPEC)"
+          },
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.13",
+            "comment": "ProcedureAnatomicalLocation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.7--20260617000000",
+        "path": "Procedure.procedureDetail",
+        "short": "The container contains structured information about the procedure.Proposed temporary name / identifierProcedure Detail – Medical Device (temporary container within the Procedure Generic Building Block).Concept descriptionThis container contains information about medical devices that are used during a procedure or are the target of the procedure, such as implants, prostheses, or diagnostic devices.Source and rationaleBased on the openEHR Procedure model (Procedure Detail), zib Procedure (2024), and XTEHR Procedure (v0.2.1).",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container bevat gestructureerde informatie over de procedure. een eenduidige, voorlopige naam of identifier van het beoogde GBProcedure Detail – Medisch hulpmiddel (tijdelijke container binnen GB Verrichting).een omschrijving van het benodigde concept, inclusief doel en beoogde betekenis;Deze container bevat informatie over medische hulpmiddelen die tijdens een verrichting worden gebruikt of waarop de verrichting is gericht, zoals implantaten, prothesen of diagnostische hulpmiddelen.de bron en aanleiding voor de verwijzing, bijvoorbeeld een use case, zib, informatiestandaard of internationale standaard;Gebaseerd op het openEHR Procedure-model (Procedure Detail), de zib Verrichting (2024) en XTEHR Procedure (v0.2.1)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The container contains structured information about the procedure.\n\n* Proposed temporary name / identifier\n    * Procedure Detail – Medical Device (temporary container within the Procedure Generic Building Block).\n\n* Concept description\n    * This container contains information about medical devices that are used during a procedure or are the target of the procedure, such as implants, prostheses, or diagnostic devices.\n\n* Source and rationale\n    * Based on the openEHR Procedure model ( *Procedure Detail* ), zib Procedure (2024), and XTEHR Procedure (v0.2.1). Included to support the recording of medical devices in the context of procedures.\n\n* Relationship between the current and future GB\n    * This container records the medical devices associated with the procedure. It is a temporary solution and will be replaced by a reference to the future Medical Device Generic Building Block.\n\n* Functional and semantic requirements\n    * The future Generic Building Block shall support the identification of one or more medical devices, both as the target of a procedure and as devices used during the procedure.\n\n* Status\n    * Temporary reference to a Generic Building Block that has not yet been developed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De container bevat gestructureerde informatie over de procedure.\n\n* een eenduidige, voorlopige naam of identifier van het beoogde GB\n    * Procedure Detail – Medisch hulpmiddel (tijdelijke container binnen GB Verrichting).\n\n* een omschrijving van het benodigde concept, inclusief doel en beoogde betekenis;\n    * Deze container bevat informatie over medische hulpmiddelen die tijdens een verrichting worden gebruikt of waarop de verrichting is gericht, zoals implantaten, prothesen of diagnostische hulpmiddelen.\n\n* de bron en aanleiding voor de verwijzing, bijvoorbeeld een use case, zib, informatiestandaard of internationale standaard;\n    * Gebaseerd op het openEHR Procedure-model ( *Procedure Detail* ), de zib Verrichting (2024) en XTEHR Procedure (v0.2.1). Opgenomen vanwege de behoefte om medische hulpmiddelen binnen verrichtingen vast te leggen.\n\n* de relatie tussen het bestaande GB en het toekomstige GB;\n    * Medische hulpmiddelen die gebruikt zijn voor de verrichting. Deze container is een tijdelijke voorziening en wordt gevuld met een verwijzing naar het toekomstige generieke bouwblok Medisch hulpmiddel.\n\n* de functionele en semantische requirements die het toekomstige GB moet ondersteunen;\n    * Het toekomstige GB moet ondersteuning bieden voor het identificeren van één of meerdere medische hulpmiddelen, zowel als doel van een verrichting als hulpmiddel dat tijdens de verrichting wordt gebruikt.\n\n* de status ‘tijdelijke verwijzing naar nog te realiseren GB’;\n    * Nog niet ontwikkeld"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingDetail"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.procedureDetail",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.7",
+            "comment": "MedicalDevice (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.582--20260910211628",
+        "path": "Procedure.procedureDetail.deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureDetail.deviceplaceholder",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Device"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.437--20260713104629",
+        "path": "Procedure.outcome",
+        "short": "Outcome of procedure performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De uitkomst van de uitgevoerde procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Outcome of procedure performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De uitkomst van de uitgevoerde procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Uitkomst"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.outcome",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "UitkomstSNOMEDCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22--20260619103341"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.460--20260714211953",
+        "path": "Procedure.complication",
+        "short": "Details about any complication arising from the procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens over eventuele complicaties die zijn ontstaan als gevolg van de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details about any complication arising from the procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens over eventuele complicaties die zijn ontstaan als gevolg van de procedure."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Complicatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Procedure.complication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ComplicatieCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28--20260619115050"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.2--20260617000000",
+        "path": "Procedure.startDateTime",
+        "short": "The date or datetime when the entire procedure, or the first component of a multicomponent procedure, was first started.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het eerste onderdeel daarvan, is gestart."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime when the entire procedure, or the first component of a multicomponent procedure, was first started.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het eerste onderdeel daarvan, is gestart."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "StartDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.startDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueDateTime": "2012-06-05"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.2",
+            "comment": "ProcedureStartDate (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.14.1.3--20260617000000",
+        "path": "Procedure.endDateTime",
+        "short": "The date or datetime when the entire procedure, or the last component of a multicomponent procedure, was finished.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het laatste onderdeel daarvan, is voltooid."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime when the entire procedure, or the last component of a multicomponent procedure, was finished.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de gehele procedure, of bij een procedure die uit meerdere onderdelen bestaat het laatste onderdeel daarvan, is voltooid."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueDateTime": "2012-07-06"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgProcedure-5.2",
+            "map": "NL-CM-14.1.3",
+            "comment": "ProcedureEndDate (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.438--20260713110518",
+        "path": "Procedure.scheduledStartDateTime",
+        "short": "The date or datetime on which the procedure is intended to be performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de procedure naar verwachting zal worden uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date or datetime on which the procedure is intended to be performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum of datum en tijd waarop de procedure naar verwachting zal worden uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GeplandeStartDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.scheduledStartDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.605--20261002091436",
+        "path": "Procedure.dateAndTimeActionstepPerformed",
+        "short": "The date and time at which this step of the Action was performed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop deze stap van de actie is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and time at which this step of the Action was performed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en het tijdstip waarop deze stap van de actie is uitgevoerd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "DatumEnTijdActiestapUitgevoerd"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Procedure.dateAndTimeActionstepPerformed",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.439--20260713111315",
+        "path": "Procedure.procedureType",
+        "short": "The type of procedure.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De categorie van de verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of procedure.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De categorie van de verrichting."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerrichtingCategorie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.procedureType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "VerrichtingCatergorieCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.440--20260713111609",
+        "path": "Procedure.comment",
+        "short": "Additional narrative about the procedure or care pathway step not captured in other fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende toelichting op de procedure of stap in het zorgpad die niet in andere gegevensvelden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional narrative about the procedure or care pathway step not captured in other fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Aanvullende toelichting op de procedure of stap in het zorgpad die niet in andere gegevensvelden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Procedure.comment",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
