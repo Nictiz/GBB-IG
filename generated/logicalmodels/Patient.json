@@ -1,0 +1,3673 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Patient",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-04T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.12"
+    }
+  ],
+  "version": "2026-06-04T00:00:00",
+  "name": "LogicalModelPatient",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelPatient"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelPatient",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelPatient"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgMaritalStatus-3.1",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.7.9&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.MaritalStatus 3.1"
+    },
+    {
+      "identity": "NlzorgHealthcareProvider-3.4",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.17.2&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.HealthcareProvider 3.4"
+    },
+    {
+      "identity": "NlzorgContactPerson-3.4",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.3.1&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.ContactPerson 3.4"
+    },
+    {
+      "identity": "NlzorgPatient-3.2",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.0.1&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.Patient 3.2"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.18--20260529090112",
+        "path": "Patient",
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.1",
+            "comment": "Patient (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.52--20260529090131",
+        "path": "Patient.patientIdentificationNumber",
+        "short": "The patient’s identification number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers, foreign identification numbers and passport numbers.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers, vreemdelingennummers en paspoortnummers."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.patientIdentificationNumber",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+              "value": "111222333"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.7",
+            "comment": "PatientIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.330--20260612082556",
+        "path": "Patient.nameInformation",
+        "short": "Patient name separated in name parts and/or as simple name string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiëntnaam opgedeeld in naamdelen en/of als eenvoudige naamstring."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient name separated in name parts and/or as simple name string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiëntnaam opgedeeld in naamdelen en/of als eenvoudige naamstring."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.nameInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.6",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.352--20260612084307",
+        "path": "Patient.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.331--20260612082650",
+        "path": "Patient.contactInformation",
+        "short": "Patient contact details, such as phone or email.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt contactgegevens waaronder telefoon en e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient contact details, such as phone or email.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt contactgegevens waaronder telefoon en e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.5",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.353--20260612084323",
+        "path": "Patient.contactInformation.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactInformation.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.54--20260529090131",
+        "path": "Patient.gender",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "46098-0",
+            "display": "Sex"
+          }
+        ],
+        "short": "Patient’s administrative gender.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s administrative gender.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslacht"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.gender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "46098-0",
+                  "display": "Sex"
+                }
+              ],
+              "text": "Female"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "GeslachtCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.9",
+            "comment": "Gender (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.17--20260529090058",
+        "path": "Patient.genderIdentity",
+        "short": "The gender with which the person identifies.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gender waar de persoon zich mee identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The gender with which the person identifies.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gender waar de persoon zich mee identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GenderIdentiteit"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.genderIdentity",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Gender identity",
+          "valueSet": "http://hl7.org/fhir/ValueSet/gender-identity"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.578--20260825134111",
+        "path": "Patient.pronouns",
+        "short": "The pronouns to use when communicating about an individual.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoonlijke voornaamwoorden die gebruikt moeten worden in de communicatie met en over een persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoonlijke voornaamwoorden die gebruikt moeten worden in de communicatie met en over een persoon. Waardelijst: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Persoonlijke voornaamwoorden"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.pronouns",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Personal Pronouns",
+          "valueSet": "http://terminology.hl7.org/ValueSet/pronouns"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.579--20260825134236",
+        "path": "Patient.sexParameterForClinicalUse",
+        "short": "Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Instructies over het toepassen van instellingen of referentiewaarden die zijn afgeleid van waarneembare informatie, zoals aanwezige organen, recente hormoonuitslagen, genetisch onderzoek, menstruatiestatus of obstetrische voorgeschiedenis."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Instructies over het toepassen van instellingen of referentiewaarden die zijn afgeleid van waarneembare informatie, zoals aanwezige organen, recente hormoonuitslagen, genetisch onderzoek, menstruatiestatus of obstetrische voorgeschiedenis. Waardelijst: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GeslachtsparameterVoorKlinischGebruik"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.sexParameterForClinicalUse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.53--20260529090131",
+        "path": "Patient.dateOfBirth",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8",
+            "display": "Birth date"
+          }
+        ],
+        "short": "Patient’s date of birth.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geboortedatum van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geboortedatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.dateOfBirth",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.10",
+            "comment": "DateOfBirth (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.333--20260612082814",
+        "path": "Patient.deceased[x]",
+        "short": "Indicates if the individual is deceased or not.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of iemand is overleden of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates if the individual is deceased or not.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of iemand is overleden of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.\nIf a Date of Death is present, you can assume that the patient is deceased. If the Date of Death is known, do not specify a Death Indicator.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Als er geen waarde is, betekent dit dat er geen uitspraak is over of de persoon is overleden. De meeste systemen zullen de afwezigheid van een waarde interpreteren als een teken dat de persoon nog leeft.\nBij aanwezigheid van een DatumOverlijden kan je aannemen dat Patient overleden is. Als DatumOverlijden bekend dan geen Overleidensindicator opgeven."
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het feit dat een patiënt is overleden beïnvloedt het klinisch proces. Ook in communicatie en relatiebeheer is het noodzakelijk te weten of de persoon nog in leven is of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Overleden[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.deceased[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.32",
+            "comment": "DeathIndicator (SPEC)"
+          },
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.33",
+            "comment": "DateOfDeath (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.332--20260612082715",
+        "path": "Patient.address",
+        "short": "Patient address separated in address parts; potentially a simple address string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt adres opgedeeld in adresdelen; eventueel eenvoudige adresstring."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient address separated in address parts; potentially a simple address string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt adres opgedeeld in adresdelen; eventueel eenvoudige adresstring."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.4",
+            "comment": "AddressInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.354--20260612084351",
+        "path": "Patient.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.334--20260612083132",
+        "path": "Patient.multipleBirth[x]",
+        "short": "Whether patient is part of a multiple birth.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of de patiënt deel is van een meerling (boolean) of geeft de werkelijke geboortevolgorde aan van de patiënt binnen de meerling (getal)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of de patiënt deel is van een meerling (boolean) of geeft de werkelijke geboortevolgorde aan van de patiënt binnen de meerling (getal)."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Where the count is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).\nIf a MultipleBirthSequence is present, you can assume that the patient is part of a multiple birth. If the MultipleBirthSequence is known, do not specify a MultipleBirthIndicator.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer een getal wordt gegeven, dan is dit de zoveelste geboorte in de reeks. Bijvoorbeeld de middelste geboorte in een drieling heeft waarde 2, de derde heeft waarde 3. Als een boolean voor een drieling wordt gegeven, dan krijgen alle drie de patiënten de waarde *true* (de volorde is dan niet gegeven).\nBij aanwezigheid van een Meerlingvolgorde kan je aannemen dat Patient meerling is. Als Meerlingvolgorde bekend dan geen MeerlingIndicator opgeven."
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voor het uit elkaar houden van kinderen die deel zijn van een meerling; specifiek relevant wanneer de zorgverlener de patiënt nooit ziet, zoals in laboratoria."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Meerling[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.multipleBirth[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.31",
+            "comment": "MultipleBirthIndicator (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.325--20260611074313",
+        "path": "Patient.contact",
+        "short": "A contact party (e.g., guardian, partner, friend) for the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een contactpartij (bijvoorbeeld voogd, partner, vriend) voor de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A contact party (e.g., guardian, partner, friend) for the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een contactpartij (bijvoorbeeld voogd, partner, vriend) voor de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.\nAt least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omvat alle typen partijen: familieleden, zakelijke contacten, voogden, zorgverleners. Niet van toepassing om vriendschappelijke of familierelaties mee vast te leggen anders dan voor het doel van contactpersoon.\nMinimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "Need to track people you can contact about the patient.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Noodzaak om personen vast te leggen met wie je over de patiënt kunt communiceren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactpersoon"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.1",
+            "comment": "Contact (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.337--20260612083636",
+        "path": "Patient.contact.nameInformation",
+        "short": "Contact person name separated in name parts; potentially a simple name string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon naam opgedeeld in naamdelen; eventueel eenvoudige naamstring"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact person name separated in name parts; potentially a simple name string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon naam opgedeeld in naamdelen; eventueel eenvoudige naamstring"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.nameInformation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.4",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.350--20260612084134",
+        "path": "Patient.contact.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.336--20260612083611",
+        "path": "Patient.contact.contactInformation",
+        "short": "Contact information",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact information",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact.contactInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.6",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.348--20260612084015",
+        "path": "Patient.contact.contactInformation.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.contactInformation.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.328--20260612072912",
+        "path": "Patient.contact.address",
+        "short": "Contact person address separated in address parts; potentially a simple address string.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon adres opgedeeld in adresdelen; eventueel eenvoudige adresstring"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact person address separated in address parts; potentially a simple address string.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon adres opgedeeld in adresdelen; eventueel eenvoudige adresstring"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.5",
+            "comment": "AddressInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.349--20260612084050",
+        "path": "Patient.contact.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.338--20260612083706",
+        "path": "Patient.contact.organization",
+        "short": "Organization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organization",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.1",
+            "comment": "HealthcareProvider (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.351--20260612084217",
+        "path": "Patient.contact.organization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact.organization.organization",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.530--20260813135805",
+        "path": "Patient.maritalStatus",
+        "short": "Last known marital status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Laatst bekende burgerlijke staat"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Last known marital status",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Laatst bekende burgerlijke staat"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "BurgerlijkeStaat"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.maritalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MaritalStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/marital-status"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgMaritalStatus-3.1",
+            "map": "NL-CM-7.9.2",
+            "comment": "MaritalStatus (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.531--20260813135902",
+        "path": "Patient.generalPractitioner[x]",
+        "short": "General practitioner of the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisarts van de patiënt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "General practitioner of the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisarts van de patiënt"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisartsgegevens[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.generalPractitioner[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.18--20260529090112",
+        "path": "Patient",
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.1",
+            "comment": "Patient (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.52--20260529090131",
+        "path": "Patient.patientIdentificationNumber",
+        "short": "The patient’s identification number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers, foreign identification numbers and passport numbers.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers, vreemdelingennummers en paspoortnummers."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Patient.patientIdentificationNumber",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+              "value": "111222333"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.7",
+            "comment": "PatientIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.330--20260612082556",
+        "path": "Patient.nameInformation",
+        "short": "Patient name separated in name parts and/or as simple name string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiëntnaam opgedeeld in naamdelen en/of als eenvoudige naamstring."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient name separated in name parts and/or as simple name string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiëntnaam opgedeeld in naamdelen en/of als eenvoudige naamstring."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.nameInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.6",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.352--20260612084307",
+        "path": "Patient.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.331--20260612082650",
+        "path": "Patient.contactInformation",
+        "short": "Patient contact details, such as phone or email.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt contactgegevens waaronder telefoon en e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient contact details, such as phone or email.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt contactgegevens waaronder telefoon en e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contactInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.5",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.353--20260612084323",
+        "path": "Patient.contactInformation.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contactInformation.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.54--20260529090131",
+        "path": "Patient.gender",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "46098-0",
+            "display": "Sex"
+          }
+        ],
+        "short": "Patient’s administrative gender.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s administrative gender.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Administratief geslacht van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslacht"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.gender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "46098-0",
+                  "display": "Sex"
+                }
+              ],
+              "text": "Female"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "GeslachtCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.9",
+            "comment": "Gender (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.17--20260529090058",
+        "path": "Patient.genderIdentity",
+        "short": "The gender with which the person identifies.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gender waar de persoon zich mee identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The gender with which the person identifies.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gender waar de persoon zich mee identificeert."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GenderIdentiteit"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.genderIdentity",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Gender identity",
+          "valueSet": "http://hl7.org/fhir/ValueSet/gender-identity"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.578--20260825134111",
+        "path": "Patient.pronouns",
+        "short": "The pronouns to use when communicating about an individual.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoonlijke voornaamwoorden die gebruikt moeten worden in de communicatie met en over een persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De persoonlijke voornaamwoorden die gebruikt moeten worden in de communicatie met en over een persoon. Waardelijst: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Persoonlijke voornaamwoorden"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.pronouns",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Personal Pronouns",
+          "valueSet": "http://terminology.hl7.org/ValueSet/pronouns"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.579--20260825134236",
+        "path": "Patient.sexParameterForClinicalUse",
+        "short": "Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Instructies over het toepassen van instellingen of referentiewaarden die zijn afgeleid van waarneembare informatie, zoals aanwezige organen, recente hormoonuitslagen, genetisch onderzoek, menstruatiestatus of obstetrische voorgeschiedenis."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Instructies over het toepassen van instellingen of referentiewaarden die zijn afgeleid van waarneembare informatie, zoals aanwezige organen, recente hormoonuitslagen, genetisch onderzoek, menstruatiestatus of obstetrische voorgeschiedenis. Waardelijst: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GeslachtsparameterVoorKlinischGebruik"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.sexParameterForClinicalUse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.53--20260529090131",
+        "path": "Patient.dateOfBirth",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8",
+            "display": "Birth date"
+          }
+        ],
+        "short": "Patient’s date of birth.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geboortedatum van de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geboortedatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.dateOfBirth",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.10",
+            "comment": "DateOfBirth (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.333--20260612082814",
+        "path": "Patient.deceased[x]",
+        "short": "Indicates if the individual is deceased or not.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of iemand is overleden of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates if the individual is deceased or not.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of iemand is overleden of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.\nIf a Date of Death is present, you can assume that the patient is deceased. If the Date of Death is known, do not specify a Death Indicator.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Als er geen waarde is, betekent dit dat er geen uitspraak is over of de persoon is overleden. De meeste systemen zullen de afwezigheid van een waarde interpreteren als een teken dat de persoon nog leeft.\nBij aanwezigheid van een DatumOverlijden kan je aannemen dat Patient overleden is. Als DatumOverlijden bekend dan geen Overleidensindicator opgeven."
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het feit dat een patiënt is overleden beïnvloedt het klinisch proces. Ook in communicatie en relatiebeheer is het noodzakelijk te weten of de persoon nog in leven is of niet."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Overleden[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.deceased[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.32",
+            "comment": "DeathIndicator (SPEC)"
+          },
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.33",
+            "comment": "DateOfDeath (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.332--20260612082715",
+        "path": "Patient.address",
+        "short": "Patient address separated in address parts; potentially a simple address string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt adres opgedeeld in adresdelen; eventueel eenvoudige adresstring."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient address separated in address parts; potentially a simple address string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Patiënt adres opgedeeld in adresdelen; eventueel eenvoudige adresstring."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.4",
+            "comment": "AddressInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.354--20260612084351",
+        "path": "Patient.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.334--20260612083132",
+        "path": "Patient.multipleBirth[x]",
+        "short": "Whether patient is part of a multiple birth.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of de patiënt deel is van een meerling (boolean) of geeft de werkelijke geboortevolgorde aan van de patiënt binnen de meerling (getal)."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft aan of de patiënt deel is van een meerling (boolean) of geeft de werkelijke geboortevolgorde aan van de patiënt binnen de meerling (getal)."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Where the count is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).\nIf a MultipleBirthSequence is present, you can assume that the patient is part of a multiple birth. If the MultipleBirthSequence is known, do not specify a MultipleBirthIndicator.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer een getal wordt gegeven, dan is dit de zoveelste geboorte in de reeks. Bijvoorbeeld de middelste geboorte in een drieling heeft waarde 2, de derde heeft waarde 3. Als een boolean voor een drieling wordt gegeven, dan krijgen alle drie de patiënten de waarde *true* (de volorde is dan niet gegeven).\nBij aanwezigheid van een Meerlingvolgorde kan je aannemen dat Patient meerling is. Als Meerlingvolgorde bekend dan geen MeerlingIndicator opgeven."
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voor het uit elkaar houden van kinderen die deel zijn van een meerling; specifiek relevant wanneer de zorgverlener de patiënt nooit ziet, zoals in laboratoria."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Meerling[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.multipleBirth[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgPatient-3.2",
+            "map": "NL-CM-0.1.31",
+            "comment": "MultipleBirthIndicator (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.325--20260611074313",
+        "path": "Patient.contact",
+        "short": "A contact party (e.g., guardian, partner, friend) for the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een contactpartij (bijvoorbeeld voogd, partner, vriend) voor de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A contact party (e.g., guardian, partner, friend) for the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een contactpartij (bijvoorbeeld voogd, partner, vriend) voor de patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.\nAt least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Omvat alle typen partijen: familieleden, zakelijke contacten, voogden, zorgverleners. Niet van toepassing om vriendschappelijke of familierelaties mee vast te leggen anders dan voor het doel van contactpersoon.\nMinimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": "Need to track people you can contact about the patient.",
+        "_requirements": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Noodzaak om personen vast te leggen met wie je over de patiënt kunt communiceren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactpersoon"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.1",
+            "comment": "Contact (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.337--20260612083636",
+        "path": "Patient.contact.nameInformation",
+        "short": "Contact person name separated in name parts; potentially a simple name string",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon naam opgedeeld in naamdelen; eventueel eenvoudige naamstring"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact person name separated in name parts; potentially a simple name string",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon naam opgedeeld in naamdelen; eventueel eenvoudige naamstring"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.nameInformation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.4",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.350--20260612084134",
+        "path": "Patient.contact.nameInformation.humanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.nameInformation.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.336--20260612083611",
+        "path": "Patient.contact.contactInformation",
+        "short": "Contact information",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact information",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact.contactInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.6",
+            "comment": "ContactInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.348--20260612084015",
+        "path": "Patient.contact.contactInformation.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.contactInformation.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.328--20260612072912",
+        "path": "Patient.contact.address",
+        "short": "Contact person address separated in address parts; potentially a simple address string.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon adres opgedeeld in adresdelen; eventueel eenvoudige adresstring"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact person address separated in address parts; potentially a simple address string.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactpersoon adres opgedeeld in adresdelen; eventueel eenvoudige adresstring"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgContactPerson-3.4",
+            "map": "NL-CM-3.1.5",
+            "comment": "AddressInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.349--20260612084050",
+        "path": "Patient.contact.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.338--20260612083706",
+        "path": "Patient.contact.organization",
+        "short": "Organization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organization",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "At least one of the four fields must be filled in: Address, Telecom, Name, or Organization",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Minimaal een van de 4 onderdelen moeten gevuld zijn: Adres, Contactgegevens, Naam of Organisatie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.contact.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.1",
+            "comment": "HealthcareProvider (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.351--20260612084217",
+        "path": "Patient.contact.organization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.contact.organization.organization",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.530--20260813135805",
+        "path": "Patient.maritalStatus",
+        "short": "Last known marital status",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Laatst bekende burgerlijke staat"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Last known marital status",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Laatst bekende burgerlijke staat"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "BurgerlijkeStaat"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Patient.maritalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "MaritalStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/marital-status"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgMaritalStatus-3.1",
+            "map": "NL-CM-7.9.2",
+            "comment": "MaritalStatus (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.531--20260813135902",
+        "path": "Patient.generalPractitioner[x]",
+        "short": "General practitioner of the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisarts van de patiënt"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "General practitioner of the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisarts van de patiënt"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisartsgegevens[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Patient.generalPractitioner[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      }
+    ]
+  }
+}

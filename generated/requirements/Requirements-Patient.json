@@ -1,0 +1,417 @@
+{
+  "resourceType": "Requirements",
+  "id": "Patient",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Patient",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-01",
+      "label": "PAT-01 identifier",
+      "requirement": "**Omschrijving**: An identifier of the patient that is unique within a defined scope (typically a national patient identifier, but it can also be a temporary identifier issued by the EHR). Other number systems can be used, such as internal hospital patient numbers for example. Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z).\n\n**Variabiliteit**: string + codesystem\n\n**Aanwezigheid**: minimaal 1 identifier is verwacht (Xt-EHR), mag er zo geen opgeven als je wil",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-02",
+      "label": "PAT-02 identifier - BSN",
+      "requirement": "**Omschrijving**: Use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z).\n\n**Variabiliteit**: string van BSN met exact aantal cijfers + juiste codesystem\n\n**Aanwezigheid**: maximaal 1 BSN, 0..1",
+      "source": [
+        {
+          "display": "Wbsn-z, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-03",
+      "label": "PAT-03 identifier - others",
+      "requirement": "**Omschrijving**: Other number systems can be used, such as internal hospital patient numbers for example.\n\n**Variabiliteit**: string +  codesystem (OID bijvoorbeeld)\n\n**Aanwezigheid**: zo veel andere identifiers als je wil 0..*",
+      "source": [
+        {
+          "display": "EHDSPatient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-04",
+      "label": "PAT-04 name",
+      "requirement": "**Omschrijving**: A name associated with the patient. Need to be able to track the patient by multiple names. Examples are your official name and a partner name. A patient may have multiple names with different uses.\n\n**Variabiliteit**: GBB NL-core HumanName\n\n**Aanwezigheid**: multiple names need to be tracked. (0..*)",
+      "source": [
+        {
+          "display": "FHIR R4 Patient, zib2020 patient, Spoedsamenvatting 2.0.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-05",
+      "label": "PAT-05 name",
+      "requirement": "**Omschrijving**: EHDS eis: Constraints: eu-pat-1  given, family, text or a data-absent-reason extension SHALL be present\n\n**Variabiliteit**: GBB NL-core HumanName\n\n**Aanwezigheid**: given, family, text or a data-absent-reason extension SHALL be present",
+      "source": [
+        {
+          "display": "EHDSPatient"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-06",
+      "label": "PAT-06 telecom",
+      "requirement": "**Omschrijving**: A contact detail for the individual\n\n**Variabiliteit**: GBB NL-core Telecom\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-07",
+      "label": "PAT-07 gender",
+      "requirement": "**Omschrijving**: Patient's administrative gender.\n\n**Variabiliteit**: FHIR valueset Administrative gender: male | female | other | unknown\r\nZib heeft een andere waardelijst hiervoor. Hoe mee om te gaan?\n\n**Aanwezigheid**: optioneel in basismodel, 0..1",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, Spoedsamenvatting 2.0.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-08",
+      "label": "PAT-08 genderIdentity",
+      "requirement": "**Omschrijving**: The gender with which the person identifies. An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else.\n\n**Variabiliteit**: http://terminology.hl7.org/ValueSet/gender-identity\r\nVan zib 2026 is er ook nog: GenderIdentityCodelist Valueset OID: 2.16.840.1.113883.2.4.3.11.60.40.2.0.1.2\n\n**Aanwezigheid**: zoveel identities als je wil, in FHIR kan je hier periodes en commentaar bij opgeven. Zib 2026 heeft 0..1. Wij verbreden deze kardinaliteit naar 0..*",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2026"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-09",
+      "label": "PAT-09 birthdate",
+      "requirement": "**Omschrijving**: Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.\n\n**Variabiliteit**: alleen jaar, jaar+maand, jaar+maand+dag. Tijd kan er niet bij.\n\n**Aanwezigheid**: optioneel in basismodel, 0..1",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, Spoedsamenvatting 2.2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-10",
+      "label": "PAT-10 deceased",
+      "requirement": "**Omschrijving**: An indication stating whether the patient has died. OR The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.\n\n**Variabiliteit**: Wanneer bekend is wat tijdstip overlijden is, wordt deceasedDateTime gevuld. Indien patient overleden en tijdstip onbekend gebruik deceasedBoolean met \"true\". Patiënt in leven gebruik deceasedBoolean met 'false'. Indien geen value gegeven betekent het dat er geen uitspraak gedaan is of de patient in leven is of niet.\n\n**Aanwezigheid**: maximaal een waarde: OF dateTime OF indicator. Liever de dateTime als je die hebt.",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-11",
+      "label": "PAT-11 address",
+      "requirement": "**Variabiliteit**: GBB NL-core Address\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "zib2020, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-12",
+      "label": "PAT-12 multipleBirth.boolean",
+      "requirement": "**Variabiliteit**: Boolean\n\n**Aanwezigheid**: maximaal een van de twee multiple birth, liever de integer",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-13",
+      "label": "PAT-13 multipleBirth.integer",
+      "requirement": "**Omschrijving**: The birthnumber of a multiple birth\n\n**Variabiliteit**: integer\n\n**Aanwezigheid**: maximaal een van de twee multiple birth, liever de integer",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2026"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14",
+      "label": "PAT-14 Contactpersoon",
+      "requirement": "**Omschrijving**: A contact party (e.g. guardian, partner, friend) for the patient\n\n**Aanwezigheid**: Base FHIR constraint: \"pat-1 constraint/Rule: SHALL at least contain a contact's details or a reference to an organization\"\r\nin specifiek bij contact\"name, telecom, address or organization\"",
+      "source": [
+        {
+          "display": "zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.1",
+      "label": "PAT-14.1 Contactpersoon.name",
+      "requirement": "**Omschrijving**: A name associated with the contact person\n\n**Variabiliteit**: GBB NL-core HumanName\n\n**Aanwezigheid**: Rule: SHALL at least contain a contact's details or a reference to an organization",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.2",
+      "label": "PAT-14.2 Contactpersoon.telecom",
+      "requirement": "**Omschrijving**: A contact detail for the person\n\n**Variabiliteit**: GBB NL-core Telecom\n\n**Aanwezigheid**: Rule: SHALL at least contain a contact's details or a reference to an organization",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.3",
+      "label": "PAT-14.3 Contactpersoon.address",
+      "requirement": "**Omschrijving**: Address for the contact person\n\n**Variabiliteit**: GBB NL-core Address\n\n**Aanwezigheid**: Rule: SHALL at least contain a contact's details or a reference to an organization",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "EHDSPatient, zib2020 Patient, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.4",
+      "label": "PAT-14.4 Contactpersoon.organization",
+      "requirement": "**Omschrijving**: Organization that is associated with the contact\n\n**Variabiliteit**: referentie naar organization\n\n**Aanwezigheid**: Rule: SHALL at least contain a contact's details or a reference to an organization",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.5",
+      "label": "PAT-14.5 Contactpersoon.Rol",
+      "requirement": "**Omschrijving**: Definieert de rol van de contactpersoon in relatie tot de patiënt.\n\n**Variabiliteit**: code RolCodelijst\n\n**Aanwezigheid**: 0..*",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-14.6",
+      "label": "PAT-14.6 Contactpersoon.relatie",
+      "requirement": "**Omschrijving**: Definieert de familiaire relatie van de contactpersoon tot de patiënt\n\n**Variabiliteit**: code RelatieCodelijst\n\n**Aanwezigheid**: 0..*",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-14",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-15",
+      "label": "PAT-15 Huisartsgegevens",
+      "requirement": "**Omschrijving**: Aangezien de huisarts de dossierhouder is binnen Nederland, zal het nodig zijn informatie over de huisarts moeten worden gedeelt worden. Denk aan contactinformatie en identificatiegegevens. De beschikbare administratiegegevens van de huisarts worden uitgewisseld. Concreet kunnen deze gegevens van meerdere huisartsen als onderdeel van de patiëntgegevens worden uitgewisseld.\n\n**Variabiliteit**: Keuze uit referentie naar Zorgverlener, zorgverlenerrol of organisatie(choice type)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "FHIR R4, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-15.1",
+      "label": "PAT-15.1 Huisartsgegevens.organisatie",
+      "requirement": "**Omschrijving**: referentie naar de praktijk waar de huisarts onderdeel van is. Nodig voor als de specifieke huisarts niet bekend is, maar de huisartspraktijk wel.\n\n**Variabiliteit**: referentie naar Zorgaanbieder/Organisatie",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-15",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-15.2",
+      "label": "PAT-15.2 Huisartsgegevens.zorgverlener",
+      "requirement": "**Omschrijving**: referentie naar de huisarts van de patient\n\n**Variabiliteit**: referentie naar een Zorgverlener of ZorgverlenerRol.",
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/Patient#PAT-15",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0 (geen practitionerrole)"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-16",
+      "label": "PAT-16 burgerlijke staat",
+      "requirement": "**Omschrijving**: Laatst bekende burgerlijke staat\n\n**Variabiliteit**: coded\n\n**Aanwezigheid**: optioneel",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "PAT-17",
+      "label": "PAT-17 Geboorteplaats",
+      "requirement": "**Omschrijving**: officiele plaats van geboorte\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: optioneel",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0"
+        }
+      ]
+    }
+  ]
+}
