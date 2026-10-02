@@ -1,0 +1,157 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nictiz.nl.gbb",
+  "url": "http://nictiz.nl/gbb/ImplementationGuide/nictiz.nl.gbb",
+  "version": "0.1.0",
+  "name": "GenericBuildingBlocks",
+  "status": "draft",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "packageId": "nictiz.nl.gbb",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/Organization"
+        },
+        "exampleBoolean": false,
+        "name": "LogicalModelOrganization"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-Organization"
+        },
+        "description": "A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.",
+        "exampleBoolean": false,
+        "name": "nl core Organization"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ExchangingSystem"
+        },
+        "description": "Systeem dat gegevens ontsluit aan derden",
+        "exampleBoolean": false,
+        "name": "OntsluitendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        },
+        "description": "OrganisatieTypeCodelijst",
+        "exampleBoolean": false,
+        "name": "OrganisatieTypeCodelijst"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/Organization"
+        },
+        "exampleBoolean": false,
+        "name": "Organization"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/RegistrationSystem"
+        },
+        "description": "Bronsysteem voor de registratie",
+        "exampleBoolean": false,
+        "name": "RegistrerendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ConsumingSystem"
+        },
+        "description": "Systeem dat gegevens van derden verwerkt",
+        "exampleBoolean": false,
+        "name": "VerwerkendSysteem"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "obligations.html",
+          "title": "Obligations",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/requirements"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/logicalmodels"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "generated/pagecontent"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "nl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/nl"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "path-liquid-template",
+        "value": "template/liquid"
+      }
+    ]
+  }
+}

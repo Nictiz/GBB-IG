@@ -1,0 +1,137 @@
+{
+  "resourceType": "Requirements",
+  "id": "Organization",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Organization",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-001",
+      "label": "ORG-001 Identifier",
+      "requirement": "**Omschrijving**: The organization’s identification number.\n\n**Variabiliteit**: (identifier)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSOrganization"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-002",
+      "label": "ORG-002 Identifier",
+      "requirement": "**Omschrijving**: The organization’s identification number.\n\n**Variabiliteit**: (identifier)\r\nSHOULD For Dutch healthcare providers, the URA number or the AGB number is used, if possible.\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "Zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-003",
+      "label": "ORG-003 OrganizationType",
+      "requirement": "**Omschrijving**: The type of healthcare provider, such as general hospital, or nursing home.\n\n**Variabiliteit**: (coded; binding: extensible; codelist: selection of RoleCodeNL)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "Zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-004",
+      "label": "ORG-004 OrganizationType",
+      "requirement": "**Omschrijving**: Type of organization, such as insurance company, healthcare provider etc.\n\n**Variabiliteit**: Binding Description: (preferred): HL7 organisation_type\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSOrganization"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-005",
+      "label": "ORG-005 OrganizationName",
+      "requirement": "**Omschrijving**: Name of the organization.\n\n**Variabiliteit**: (string)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSOrganization, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-006",
+      "label": "ORG-006 Contact.Address",
+      "requirement": "**Omschrijving**: An address for a contact within the organization\n\n**Variabiliteit**: (ref. GBB-Address)\r\nSHALL An address of an organization can never be of use 'home'\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSOrganization, Spoedsamenvatting 2.2.0, BgZ MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-007",
+      "label": "ORG-007 Contact.Telecom",
+      "requirement": "**Omschrijving**: Contact information to contact a person within the organization with.\n\n**Variabiliteit**: (ref. GBB-ContactPoint)\r\nSHALL The telecom of an organization can never be of use 'home'\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSOrganization, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ORG-008",
+      "label": "ORG-008 PartOf",
+      "requirement": "**Omschrijving**: (Reference to) The organization of which this organization forms a part. Needed to be able to track the hierarchy of organizations within an organization.\n\n**Variabiliteit**: (ref. GBB-Organization)\n\n**Aanwezigheid**: 0..1  If the resource is contained in another resource, it SHALL NOT contain nested Resources. e.g., a department in a hospital cannot be the target of another Organization.partOf",
+      "source": [
+        {
+          "display": "EHDSOrganization, BgZ-MSZ 2.0"
+        }
+      ]
+    }
+  ]
+}

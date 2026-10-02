@@ -1,0 +1,1392 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Organization",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-24T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.20"
+    }
+  ],
+  "version": "2026-06-24T00:00:00",
+  "name": "LogicalModelOrganization",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelOrganisatie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelOrganization",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelOrganisatie"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgHealthcareProvider-3.4",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.17.2&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.HealthcareProvider 3.4"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.281--20260611062640",
+        "path": "Organization",
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.1",
+            "comment": "HealthcareProvider (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.282--20260611062800",
+        "path": "Organization.identifier",
+        "short": "The organization’s identification number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "value": "21870932"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.2",
+            "comment": "HealthcareProviderIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800",
+        "path": "Organization.type",
+        "short": "The type of healthcare provider, such as general hospital, or nursing home.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+                  "code": "Z4",
+                  "display": "Zelfstandig behandelcentrum"
+                }
+              ],
+              "text": "Zelfstandig behandelcentrum"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.4",
+            "comment": "OrganizationType (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding",
+        "path": "Organization.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "-",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding:OrganisatieTypeCodelijst",
+        "path": "Organization.type.coding",
+        "sliceName": "OrganisatieTypeCodelijst",
+        "definition": "-",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "binding": {
+          "strength": "extensible",
+          "description": "OrganisatieTypeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding:OrganizationType",
+        "path": "Organization.type.coding",
+        "sliceName": "OrganizationType",
+        "definition": "This example value set defines a set of codes that can be used to indicate a type of organization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "binding": {
+          "strength": "preferred",
+          "description": "Organization type",
+          "valueSet": "http://hl7.org/fhir/ValueSet/organization-type"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.283--20260611062800",
+        "path": "Organization.name",
+        "short": "Name of the organization.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Erasmus Universitair Medisch Centrum"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.3",
+            "comment": "OrganizationName (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.371--20260624125205",
+        "path": "Organization.address",
+        "short": "Mailing or office addresses of the organization.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mail of kantoor adressen van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Mailing or office addresses of the organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mail of kantoor adressen van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.374--20260624125759",
+        "path": "Organization.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Organization.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.372--20260624125239",
+        "path": "Organization.telecom",
+        "short": "Telecommunication contact information (addresses) associated with an organisation, such as phone number, email, or messaging service.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatie contact informatie (addressen) geassocieerd met een organisatie, zoals telefoonnummer, e-mail of berichtservice."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telecommunication contact information (addresses) associated with an organisation, such as phone number, email, or messaging service.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatie contact informatie (addressen) geassocieerd met een organisatie, zoals telefoonnummer, e-mail of berichtservice."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.375--20260624125918",
+        "path": "Organization.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Organization.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.377--20260624130253",
+        "path": "Organization.partOf",
+        "short": "The organization of which this organization forms a part.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De organisatie waarvan deze organisatie een deel is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The organization of which this organization forms a part. Needed to be able to track the hierarchy of organizations within an organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De organisatie waarvan deze organisatie een deel is. Nodig om de hiërarchie van organisaties binnen een organisatie bij te houden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "OnderdeelVan"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.378--20260624130332",
+        "path": "Organization.partOf.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.partOf.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "contentReference": "#Organization"
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.281--20260611062640",
+        "path": "Organization",
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.1",
+            "comment": "HealthcareProvider (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.282--20260611062800",
+        "path": "Organization.identifier",
+        "short": "The organization’s identification number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. Depending on the context other ID's are also possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Afhankelijk van de context zijn ook andere ID's mogelijk. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueIdentifier": {
+              "value": "21870932"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.2",
+            "comment": "HealthcareProviderIdentificationNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800",
+        "path": "Organization.type",
+        "short": "The type of healthcare provider, such as general hospital, or nursing home.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+                  "code": "Z4",
+                  "display": "Zelfstandig behandelcentrum"
+                }
+              ],
+              "text": "Zelfstandig behandelcentrum"
+            }
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.4",
+            "comment": "OrganizationType (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding",
+        "path": "Organization.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "-",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding:OrganisatieTypeCodelijst",
+        "path": "Organization.type.coding",
+        "sliceName": "OrganisatieTypeCodelijst",
+        "definition": "-",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "binding": {
+          "strength": "extensible",
+          "description": "OrganisatieTypeCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.306--20260611062800.coding:OrganizationType",
+        "path": "Organization.type.coding",
+        "sliceName": "OrganizationType",
+        "definition": "This example value set defines a set of codes that can be used to indicate a type of organization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "binding": {
+          "strength": "preferred",
+          "description": "Organization type",
+          "valueSet": "http://hl7.org/fhir/ValueSet/organization-type"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.283--20260611062800",
+        "path": "Organization.name",
+        "short": "Name of the organization.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Erasmus Universitair Medisch Centrum"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthcareProvider-3.4",
+            "map": "NL-CM-17.2.3",
+            "comment": "OrganizationName (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.371--20260624125205",
+        "path": "Organization.address",
+        "short": "Mailing or office addresses of the organization.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mail of kantoor adressen van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Mailing or office addresses of the organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Mail of kantoor adressen van de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adres"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.374--20260624125759",
+        "path": "Organization.address.addressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Organization.address.addressInformation",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://nictiz.nl/gbb/StructureDefinition/Address-model"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.372--20260624125239",
+        "path": "Organization.telecom",
+        "short": "Telecommunication contact information (addresses) associated with an organisation, such as phone number, email, or messaging service.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatie contact informatie (addressen) geassocieerd met een organisatie, zoals telefoonnummer, e-mail of berichtservice."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Telecommunication contact information (addresses) associated with an organisation, such as phone number, email, or messaging service.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Telecommunicatie contact informatie (addressen) geassocieerd met een organisatie, zoals telefoonnummer, e-mail of berichtservice."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Organization.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.375--20260624125918",
+        "path": "Organization.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Organization.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.377--20260624130253",
+        "path": "Organization.partOf",
+        "short": "The organization of which this organization forms a part.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De organisatie waarvan deze organisatie een deel is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The organization of which this organization forms a part. Needed to be able to track the hierarchy of organizations within an organization.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De organisatie waarvan deze organisatie een deel is. Nodig om de hiërarchie van organisaties binnen een organisatie bij te houden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "OnderdeelVan"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.378--20260624130332",
+        "path": "Organization.partOf.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Organization.partOf.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "contentReference": "#Organization"
+      }
+    ]
+  }
+}
