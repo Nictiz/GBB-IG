@@ -1,0 +1,626 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ContactPoint",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-03T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.2"
+    }
+  ],
+  "version": "2026-06-03T00:00:00",
+  "name": "LogicalModelContactPoint",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelContactgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelContactPoint",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelContactgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgpartContactInformation-1.2",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.20.6&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.part.ContactInformation 1.2"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115",
+        "path": "ContactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ContactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.1",
+            "comment": "ContactInformation (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.3",
+            "comment": "EmailAddresses (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.2",
+            "comment": "TelephoneNumbers (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.102--20260604124823",
+        "path": "ContactPoint.system",
+        "short": "The type of telecommunications system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type telecommunicatiesysteem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of telecommunications system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type telecommunicatiesysteem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Soort"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.system",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ContactPointSystem",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.5",
+            "comment": "TelecomType (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.103--20260604125631",
+        "path": "ContactPoint.value",
+        "short": "The actual contact details that can be used to make contact via the specified telecommunications system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De daadwerkelijke contactgegevens waarmee contact kan worden opgenomen via het aangegeven telecommunicatiesysteem"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The actual contact details that can be used to make contact via the specified telecommunications system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De daadwerkelijke contactgegevens waarmee contact kan worden opgenomen via het aangegeven telecommunicatiesysteem"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Waarde"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.4",
+            "comment": "TelephoneNumber (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.7",
+            "comment": "EmailAddress (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.101--20260604124521",
+        "path": "ContactPoint.use",
+        "short": "The purpose of use of the contact detail.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gebruiksdoel van het contactgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The purpose of use of the contact detail.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gebruiksdoel van het contactgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ContactPointUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.8",
+            "comment": "EmailAddressType (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.6",
+            "comment": "NumberType (ADAPT)"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.91--20260602124115",
+        "path": "ContactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ContactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.1",
+            "comment": "ContactInformation (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.3",
+            "comment": "EmailAddresses (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.2",
+            "comment": "TelephoneNumbers (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.102--20260604124823",
+        "path": "ContactPoint.system",
+        "short": "The type of telecommunications system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type telecommunicatiesysteem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of telecommunications system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het type telecommunicatiesysteem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Soort"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.system",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ContactPointSystem",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.5",
+            "comment": "TelecomType (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.103--20260604125631",
+        "path": "ContactPoint.value",
+        "short": "The actual contact details that can be used to make contact via the specified telecommunications system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De daadwerkelijke contactgegevens waarmee contact kan worden opgenomen via het aangegeven telecommunicatiesysteem"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The actual contact details that can be used to make contact via the specified telecommunications system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De daadwerkelijke contactgegevens waarmee contact kan worden opgenomen via het aangegeven telecommunicatiesysteem"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Waarde"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.4",
+            "comment": "TelephoneNumber (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.7",
+            "comment": "EmailAddress (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.101--20260604124521",
+        "path": "ContactPoint.use",
+        "short": "The purpose of use of the contact detail.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gebruiksdoel van het contactgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The purpose of use of the contact detail.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het gebruiksdoel van het contactgegeven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ContactPoint.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "ContactPointUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.8",
+            "comment": "EmailAddressType (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartContactInformation-1.2",
+            "map": "NL-CM-20.6.6",
+            "comment": "NumberType (ADAPT)"
+          }
+        ]
+      }
+    ]
+  }
+}
