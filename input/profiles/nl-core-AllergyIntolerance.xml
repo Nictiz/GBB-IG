@@ -79,7 +79,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.taal" />
+        <map value="AllergyIntolerance.language" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.extension:abatement">
@@ -142,7 +142,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.identificatienummer" />
+        <map value="AllergyIntolerance.identifier" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.clinicalStatus">
@@ -181,7 +181,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.actieveInactieveStatus" />
+        <map value="AllergyIntolerance.activeInactiveStatus" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.verificationStatus">
@@ -219,7 +219,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.verificatieStatus" />
+        <map value="AllergyIntolerance.verificationStatus" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.category">
@@ -249,7 +249,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.categorie" />
+        <map value="AllergyIntolerance.category" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.criticality">
@@ -287,7 +287,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.mateVanKritiekZijn" />
+        <map value="AllergyIntolerance.criticality" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.code">
@@ -354,7 +354,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.veroorzakendeStof" />
+        <map value="AllergyIntolerance.causativeAgent" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
@@ -392,7 +392,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.patient" />
+        <map value="AllergyIntolerance.subject.patient" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.onset[x]">
@@ -445,7 +445,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.zorgverlener" />
+        <map value="AllergyIntolerance.author[x]" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.asserter">
@@ -482,7 +482,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.bron" />
+        <map value="AllergyIntolerance.source" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.lastOccurrence">
@@ -512,7 +512,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.laatsteReactieDatumTijd" />
+        <map value="AllergyIntolerance.lastReactionDateTime" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.note.text">
@@ -555,7 +555,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.toelichting" />
+        <map value="AllergyIntolerance.comment" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction">
@@ -589,7 +589,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.reactie" />
+        <map value="AllergyIntolerance.reaction" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.extension:certainty">
@@ -632,7 +632,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.mateVanZekerheid" />
+        <map value="Reaction.certainty" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.substance">
@@ -680,7 +680,7 @@
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
-        <map value="AllergieIntolerantie.reaction.specifiekeStof" />
+        <map value="Reaction.specificSubstance" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
@@ -734,7 +734,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.manifestatieVanReactie" />
+        <map value="Reaction.manifestation" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.description">
@@ -764,7 +764,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.reactieBeschrijving" />
+        <map value="Reaction.reactionDescription" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.onset">
@@ -798,7 +798,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.reactieDatumTijd" />
+        <map value="Reaction.reactionDateTime" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.severity">
@@ -836,7 +836,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.ernst" />
+        <map value="Reaction.severity" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute">
@@ -880,7 +880,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.wijzeVanBlootstelling" />
+        <map value="Reaction.routeOfExposure" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.note.text">
@@ -911,7 +911,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
-        <map value="AllergieIntolerantie.reactie.opmerking" />
+        <map value="Reaction.note" />
       </mapping>
     </element>
   </differential>
