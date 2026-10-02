@@ -3,23 +3,6 @@ The base model selected for GBB AllergyIntolerance, the openEHR archetype Advers
 
 In the case of Reaction, there is no need for a separate implementation artefact, because the FHIR Resource type AllergyIntolerance can represent both concepts in a single artifact, and because the Reaction sub-building block may only be used in combination with GBB AllergyIntolerance (for the time being).
 
-### Sources of information requirements
-These versions of GBB AllergyIntolerance and SBB Reaction cover information requirements from the following sources:
-* Logical information model EHDSAllergyIntolerance version 1.0.0,   
-* Mandatory elements from FHIR R4 AllergyIntolerance 
-* Mandatory elements from openEHR archetype Adverse Reaction Risk version 2.0.2 and openEHR archetype Adverse Reaction Event version 1.0.2 
-* 2017 publication of Zib AllergyIntolerance
-* 2020 publication of Zib AllergyIntolerance
-* Information standard BgZ-MSZ version 2.0.2 
-* Information standard eOverdracht version 4.0.17 
-* Information standard Eerstelijnszorg
-* Information standard Acute Zorg version 2.2.0 inclusive usecase Spoedsamenvatting 
-* Information standard Ketenzorg version 3.0.2 
-* Information standard Huisartswaarneeming version 6.10.1.3 
-* Information standard Geboortezorg version 3.2 
-* Information standard Jeugdgezondheidszorg version 8.0.1
-* Information standard Vaccinatie-Immunisatie version 2.0.4 
-
 ### Additional bindings
 At this moment in time, no additional bindings have been added to the functional model in ART-DECOR, despite the specifications in the Excel file. For some elements, this is because the main binding cannot yet be specified; for other, it is because it is unclear which value set should be used as the additional binding. This affects the following data elements in the model:
 * AllergyIntolerance.Substance
