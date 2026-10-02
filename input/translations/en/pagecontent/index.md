@@ -1,3 +1,2 @@
-# Generic building blocks
-
-This FHIR IG contains the generic building blocks.
+### Obligations on the registering system
+In the model in ART-DECOR, obligations are specified for each data element with respect to three different actors: the registering system, the exchanging system and the processing system. The obligations on the exchanging and processing systems have been incorporated into the FHIR profile using the FHIR extension: [Obligation Extension](http://hl7.org/fhir/StructureDefinition/obligation). Data elements with a minimum cardinality of 1 have a SHALL:able-to-populate obligation for the registering system. These obligations have not been included in FHIR, as FHIR is intended for data exchange and not for data storage.

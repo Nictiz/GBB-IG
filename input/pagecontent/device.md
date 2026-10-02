@@ -36,8 +36,6 @@ Het type device wordt vastgelegd in `Device.type`.
 
 FHIR R4 ondersteunt voor `Device.type` maximaal één `CodeableConcept`. Dit wijkt af van modellen waarin meerdere device-types kunnen worden opgenomen.
 
-Voor de codering van het type worden onder andere SNOMED CT en EMDN genoemd. De verdere afstemming met bestaande Nederlandse producttypelijsten is nog onderwerp van uitwerking.
-
 ### Niet-geprofileerde elementen
 
 FHIR-elementen waarvoor binnen de huidige informatiebehoefte geen aanvullende implementatieafspraken nodig zijn, worden niet verder beperkt in het profiel. De standaard FHIR R4-definitie blijft voor deze elementen van toepassing.
