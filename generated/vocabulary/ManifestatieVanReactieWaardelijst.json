@@ -1,0 +1,71 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754",
+  "meta": {
+    "lastUpdated": "2026-06-30T08:47:54Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-30T08:47:54Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.29&effectiveDate=2026-06-30T08:47:54"
+    }
+  ],
+  "url": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.29"
+    }
+  ],
+  "version": "2026-06-30T08:47:54",
+  "name": "ManifestatieVanReactieWaardelijst",
+  "title": "ManifestatieVanReactieWaardelijst",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-30T08:47:54Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "Waardelijst behorend bij het data-element ManifestatieVanReactie in generieke bouwblok AllergieIntolerantie",
+  "immutable": false,
+  "copyright": "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "404684003"
+          }
+        ]
+      }
+    ]
+  }
+}

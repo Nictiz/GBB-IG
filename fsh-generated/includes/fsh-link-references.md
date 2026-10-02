@@ -1,0 +1,10 @@
+[AllergyIntolerance]: Requirements-AllergyIntolerance.html
+[LogicalModelAllergyIntolerance]: StructureDefinition-AllergyIntolerance.html
+[LogicalModelpartReaction]: StructureDefinition-Reaction.html
+[ManifestatieVanReactieWaardelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754.html
+[NlcoreAllergyIntolerance]: StructureDefinition-nl-core-AllergyIntolerance.html
+[OntsluitendSysteem]: ActorDefinition-ExchangingSystem.html
+[Reaction]: Requirements-Reaction.html
+[RegistrerendSysteem]: ActorDefinition-RegistrationSystem.html
+[VerwerkendSysteem]: ActorDefinition-ConsumingSystem.html
+[WijzeVanBlootstellingCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000.html
