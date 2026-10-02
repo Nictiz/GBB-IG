@@ -1,0 +1,276 @@
+{
+  "resourceType": "Requirements",
+  "id": "HumanName",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/HumanName",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-01",
+      "label": "NAA-01 Naamopbouw",
+      "requirement": "**Omschrijving**: A code that represents the preferred display order of the components of this human name.\n\n**Variabiliteit**: code (ValueSet: HumanNameAssemblyOrder: NL1 = Eigen naam, NL2 = Partnernaam, NL3 = Partnernaam, gevolgd door eigen naam, NL4 = Eigen naam, gevolgd door partnernaam)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "FHIR extensions, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-02",
+      "label": "NAA-02 use",
+      "requirement": "**Omschrijving**: Identifies the purpose for this name. Allows the appropriate name for a particular context of use to be selected from among a set of names.\n\n**Variabiliteit**: usual | official | temp | nickname | anonymous | old | maiden\n\n**Aanwezigheid**: GBB-HumanName kan hergebruikt worden door andere bouwblokken (denk aan Zorgverlener, Patient etc..). Mogelijke usecase specifieke wensen zoals \"ik wil minimaal/maximaal 1 official name\" moeten niet in dit bouwblok, maar in het andere bouwblok gedefinieerd worden.",
+      "source": [
+        {
+          "display": "EHDSHumanName, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-03",
+      "label": "NAA-03 tekst (WeergaveNaam)",
+      "requirement": "**Omschrijving**: Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: Contraints staan beschreven in tekst: \"If parts of the name are specified using one or more of the structured elements, the .text element SHOULD be populated with a rendered version of the full name.\"",
+      "source": [
+        {
+          "display": "EHDSHumanName, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-04",
+      "label": "NAA-04 family (volledige achtenaam)",
+      "requirement": "**Omschrijving**: De volledige achternaam inclusief achternaam van de partner. Het deel van een naam dat aansluit bij de stamboom. In sommige culturen (bijvoorbeeld in Eritrea) is de achternaam van een zoon de voornaam van zijn vader.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: Obligations op gebruik: \"If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name.\" dus als extentions gebruikt worden, dan opbouwen in dit element.",
+      "source": [
+        {
+          "display": "EHDSHumanName, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-05",
+      "label": "NAA-05 family.ownPrefix",
+      "requirement": "**Omschrijving**: The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: als gevuld, dan ook ownname vullen. constraint in FHIR",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-06",
+      "label": "NAA-06 family.ownName",
+      "requirement": "**Omschrijving**: The portion of the family name that is derived from the person's own surname, as distinguished from any portion that is derived from the surname of the person's partner or spouse.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-07",
+      "label": "NAA-07 family.partnerPrefix",
+      "requirement": "**Omschrijving**: The prefix portion (e.g. voorvoegsel) of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: als gevuld, dan ook partnername vullen, constraint in FHIR",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-08",
+      "label": "NAA-08 family.partnerName",
+      "requirement": "**Omschrijving**: The portion of the family name that is derived from the person's partner's surname, as distinguished from any portion that is derived from the surname of the person's own name.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09",
+      "label": "NAA-09 given",
+      "requirement": "**Omschrijving**: Given names (not always 'first'). Includes middle names and/or initials. Optionally in case of \"usual\" name, also the name normally used to address the person.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: optioneel, mag zo veel je wil. Mogen voornamen, middle names en initialen zijn.",
+      "source": [
+        {
+          "display": "EHDSHumanName,\r\nhttps://nictiz.atlassian.net/browse/ZIB-1435 \"Relatie initialen en voornamen\",\r\nspoedsamenvatting 2.2.0\r\nBgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09-1",
+      "label": "NAA-09-1 given",
+      "requirement": "**Omschrijving**: in combination with name.use = usual, the given name may include \"The name normally used to address the person.\". (Additionaly, the extension on given may be used to qualify this given name as CL (callme name))\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: The name normally used to address the person.",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09-2",
+      "label": "NAA-09-2 given",
+      "requirement": "**Omschrijving**: When combined with name.use = official, the given name may include \"first and middle names.\" (Additionally, the extension on given may be used to qualify this given name as BR)\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09-3",
+      "label": "NAA-09-3 given",
+      "requirement": "**Omschrijving**: in combination with name.use = official, the given name may include \"initials\" (Additionally, the extension on given may be used to qualify this given name as IN)\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09-4",
+      "label": "NAA-09-4 given",
+      "requirement": "**Omschrijving**: all given names: first and middle names may be entered together in one .given entry, seperated by spaces.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-09-5",
+      "label": "NAA-09-5 given",
+      "requirement": "**Omschrijving**: Initials may only be communicated if the first name is not known. Because initials can be derived from the full name\n\n**Variabiliteit**: string"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-10",
+      "label": "NAA-10 given. Onderscheidbaar",
+      "requirement": "**Omschrijving**: Het is mogelijk om onderscheid te kunnen maken tussen voornamen, initialen en roepnamen. Mogelijk zou dit ment Entity Name Qualifier kunnen. \"A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.\"\n\n**Variabiliteit**: coded, EN-qualifiers? \"A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.\"\n\n**Aanwezigheid**: Dit is verplicht om aan te geven (nl-core R4)",
+      "source": [
+        {
+          "display": "nl-core 2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-11",
+      "label": "NAA-11 prefix",
+      "requirement": "**Omschrijving**: Noble and scientific titles. These can assist in formulating oral and formal addressing titles.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "EHDSHumanName, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "NAA-12",
+      "label": "NAA-12 suffix",
+      "requirement": "**Omschrijving**: Noble and scientific titles. These can assist in formulating oral and formal addressing titles.\n\n**Variabiliteit**: string",
+      "source": [
+        {
+          "display": "EHDSHumanName, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    }
+  ]
+}

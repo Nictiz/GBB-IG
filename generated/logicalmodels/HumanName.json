@@ -1,0 +1,1938 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HumanName",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-03T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.6"
+    }
+  ],
+  "version": "2026-06-03T00:00:00",
+  "name": "LogicalModelNameInformation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelNaamgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelNameInformation",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelNaamgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgpartNameInformation-1.1",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.20.4&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.part.NameInformation 1.1"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000",
+        "path": "HumanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.1",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.7--20260501000000",
+        "path": "HumanName.nameUsage",
+        "short": "This concept indicates the last name or order of last names with which the person is to be addressed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "This concept indicates the last name or order of last names with which the person is to be addressed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.nameUsage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4",
+                  "code": "NL3",
+                  "display": "Geslachtsnaam partner gevolgd door eigen geslachtsnaam"
+                }
+              ],
+              "text": "Geslachtsnaam partner gevolgd door eigen geslachtsnaam"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NaamgebruikCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.4.1--20260501000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.7",
+            "comment": "NameUsage (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.15--20260528092701",
+        "path": "HumanName.use",
+        "short": "Identifies the purpose for this name and allows the appropriate name for a particular context of use to be selected from among a set of names.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het doel van deze naam aan en maakt het mogelijk om uit meerdere namen de juiste naam voor een specifieke gebruikscontext te selecteren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifies the purpose for this name and allows the appropriate name for a particular context of use to be selected from among a set of names.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het doel van deze naam aan en maakt het mogelijk om uit meerdere namen de juiste naam voor een specifieke gebruikscontext te selecteren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Doel"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NameUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/name-use"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.2--20260511100125",
+        "path": "HumanName.displayName",
+        "short": "Specifies the entire name as it should be displayed, for example on an application UI.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bevat de gehele naam zoals deze moet worden weergegeven bijvoorbeeld in een applicatie UI."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Specifies the entire name as it should be displayed, for example on an application UI. This may be provided instead of or as well as the specific parts.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bevat de gehele naam zoals deze moet worden weergegeven bijvoorbeeld in een applicatie UI. Deze representatie kan worden gespecificeerd in plaats van of naast de naamdelen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "WeergaveNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.displayName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.4",
+            "comment": "FirstNames (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.5",
+            "comment": "Initials (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.6",
+            "comment": "GivenName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.14--20260528092503",
+        "path": "HumanName.family",
+        "short": "Family name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De volledige achternaam inclusief achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Family name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De volledige achternaam inclusief achternaam van de partner. Het deel van een naam dat aansluit bij de stamboom. In sommige culturen (bijvoorbeeld in Eritrea) is de achternaam van een zoon de voornaam van zijn vader."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.3--20260511100313",
+        "path": "HumanName.family.fullFamily",
+        "short": "The part of a name that links to the genealogy.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het deel van de naam dat deze verbindt met de genealogie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het deel van de naam dat deze verbindt met de genealogie. In sommige culturen (bijv. Eritrea) is de familienaam van een zoon, de eerste naam van de vader."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Achternamen mogen, naast de volledige weergave, via de extensie-concepten ook in naamdelen worden opgebroken (gebruikelijk Duitse, Nederlandse, Spaanse en andere culuturen)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VolledigeAchternaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.fullFamily",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.11--20260501000000",
+        "path": "HumanName.family.prefixLastName",
+        "short": "Prefix to the person’s own last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de eigen achternaam behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the person’s own last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de eigen achternaam behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselsGeslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.prefixLastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "van"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.10--20260501000000",
+        "path": "HumanName.family.lastName",
+        "short": "The person’s official last name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The person’s official last name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchternaamGeslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.lastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Putten"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.9--20260501000000",
+        "path": "HumanName.family.partnerPrefix",
+        "short": "Prefix to the partner’s last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de achternaam van de partner behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the partner’s last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de achternaam van de partner behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselsPartner"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.partnerPrefix",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "van der"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.8--20260501000000",
+        "path": "HumanName.family.partnerLastName",
+        "short": "Partner’s official last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Partner’s official last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchternaamPartner"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.partnerLastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Giessen"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.58--20260529091504",
+        "path": "HumanName.given",
+        "short": "Given names or initialen if the given name is not known or relevant (not always 'first').",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voornamen of, indien niet geheel bekend of relevant, de initialen, niet noodzakelijk alleen de eerste voornaam."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Given names or initialen if the given name is not known or relevant (not always 'first'). Includes middle names. This repeating element order: Given Names appear in the correct order for presenting the name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voornamen of, indien niet geheel bekend of relevant, de initialen, niet noodzakelijk alleen de eerste voornaam. Inclusief een *middle name* . In volgorde van het herhalende element: voornamen komen in de juiste volgorde voor naamweergave."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations. This element is not called \"first name\" since given names do not always come first.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": ""
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "middle name",
+          "first name",
+          "Voornaam"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.given",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.4",
+            "comment": "FirstNames (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.5",
+            "comment": "Initials (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.6",
+            "comment": "GivenName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.12--20260501000000",
+        "path": "HumanName.prefixTitle",
+        "short": "Noble and scientific titles.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Noble and scientific titles. These can assist in formulating oral and formal addresing titles.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselTitel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.prefixTitle",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.12",
+            "comment": "Titles (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.4--20260528090938",
+        "path": "HumanName.suffixTitle",
+        "short": "Noble and scientific titles.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Noble and scientific titles. These can assist in formulating oral and formal addresing titles.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchtervoegselTitel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.suffixTitle",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.12",
+            "comment": "Titles (ADAPT)"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.1--20260501000000",
+        "path": "HumanName",
+        "short": "Name of a human or other living entity - parts and usage",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of a human or other living entity - parts and usage",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Naam van een mens of andere levende entiteit - naamdelen en gebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.1",
+            "comment": "NameInformation (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.7--20260501000000",
+        "path": "HumanName.nameUsage",
+        "short": "This concept indicates the last name or order of last names with which the person is to be addressed.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "This concept indicates the last name or order of last names with which the person is to be addressed.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dit concept geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Naamgebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.nameUsage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.2.4.3.11.60.101.5.4",
+                  "code": "NL3",
+                  "display": "Geslachtsnaam partner gevolgd door eigen geslachtsnaam"
+                }
+              ],
+              "text": "Geslachtsnaam partner gevolgd door eigen geslachtsnaam"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NaamgebruikCodelijst",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.4.1--20260501000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.7",
+            "comment": "NameUsage (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.15--20260528092701",
+        "path": "HumanName.use",
+        "short": "Identifies the purpose for this name and allows the appropriate name for a particular context of use to be selected from among a set of names.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het doel van deze naam aan en maakt het mogelijk om uit meerdere namen de juiste naam voor een specifieke gebruikscontext te selecteren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifies the purpose for this name and allows the appropriate name for a particular context of use to be selected from among a set of names.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft het doel van deze naam aan en maakt het mogelijk om uit meerdere namen de juiste naam voor een specifieke gebruikscontext te selecteren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Doel"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.use",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "NameUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/name-use"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.2--20260511100125",
+        "path": "HumanName.displayName",
+        "short": "Specifies the entire name as it should be displayed, for example on an application UI.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bevat de gehele naam zoals deze moet worden weergegeven bijvoorbeeld in een applicatie UI."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Specifies the entire name as it should be displayed, for example on an application UI. This may be provided instead of or as well as the specific parts.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bevat de gehele naam zoals deze moet worden weergegeven bijvoorbeeld in een applicatie UI. Deze representatie kan worden gespecificeerd in plaats van of naast de naamdelen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "WeergaveNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.displayName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.4",
+            "comment": "FirstNames (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.5",
+            "comment": "Initials (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.6",
+            "comment": "GivenName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.14--20260528092503",
+        "path": "HumanName.family",
+        "short": "Family name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De volledige achternaam inclusief achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Family name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De volledige achternaam inclusief achternaam van de partner. Het deel van een naam dat aansluit bij de stamboom. In sommige culturen (bijvoorbeeld in Eritrea) is de achternaam van een zoon de voornaam van zijn vader."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Geslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.3--20260511100313",
+        "path": "HumanName.family.fullFamily",
+        "short": "The part of a name that links to the genealogy.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het deel van de naam dat deze verbindt met de genealogie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het deel van de naam dat deze verbindt met de genealogie. In sommige culturen (bijv. Eritrea) is de familienaam van een zoon, de eerste naam van de vader."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Achternamen mogen, naast de volledige weergave, via de extensie-concepten ook in naamdelen worden opgebroken (gebruikelijk Duitse, Nederlandse, Spaanse en andere culuturen)."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VolledigeAchternaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.fullFamily",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.11--20260501000000",
+        "path": "HumanName.family.prefixLastName",
+        "short": "Prefix to the person’s own last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de eigen achternaam behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the person’s own last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de eigen achternaam behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselsGeslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.prefixLastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "van"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.11",
+            "comment": "Prefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.10--20260501000000",
+        "path": "HumanName.family.lastName",
+        "short": "The person’s official last name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The person’s official last name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de persoon."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchternaamGeslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.lastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Putten"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.10",
+            "comment": "LastName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.9--20260501000000",
+        "path": "HumanName.family.partnerPrefix",
+        "short": "Prefix to the partner’s last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de achternaam van de partner behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Prefix to the partner’s last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bij de achternaam van de partner behorende voorvoegsels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselsPartner"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.partnerPrefix",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "van der"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.9",
+            "comment": "PartnerPrefix (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.8--20260501000000",
+        "path": "HumanName.family.partnerLastName",
+        "short": "Partner’s official last name.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Partner’s official last name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Officiële achternaam van de partner."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchternaamPartner"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "HumanName.family.partnerLastName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Giessen"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.8",
+            "comment": "PartnerLastName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.58--20260529091504",
+        "path": "HumanName.given",
+        "short": "Given names or initialen if the given name is not known or relevant (not always 'first').",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voornamen of, indien niet geheel bekend of relevant, de initialen, niet noodzakelijk alleen de eerste voornaam."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Given names or initialen if the given name is not known or relevant (not always 'first'). Includes middle names. This repeating element order: Given Names appear in the correct order for presenting the name",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Voornamen of, indien niet geheel bekend of relevant, de initialen, niet noodzakelijk alleen de eerste voornaam. Inclusief een *middle name* . In volgorde van het herhalende element: voornamen komen in de juiste volgorde voor naamweergave."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations. This element is not called \"first name\" since given names do not always come first.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": ""
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "middle name",
+          "first name",
+          "Voornaam"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.given",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.4",
+            "comment": "FirstNames (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.5",
+            "comment": "Initials (ADAPT)"
+          },
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.6",
+            "comment": "GivenName (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.20.4.12--20260501000000",
+        "path": "HumanName.prefixTitle",
+        "short": "Noble and scientific titles.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Noble and scientific titles. These can assist in formulating oral and formal addresing titles.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VoorvoegselTitel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.prefixTitle",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.12",
+            "comment": "Titles (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.4--20260528090938",
+        "path": "HumanName.suffixTitle",
+        "short": "Noble and scientific titles.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Noble and scientific titles. These can assist in formulating oral and formal addresing titles.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adellijke en wetenschappelijke titels. Deze kunnen behulpzaam zijn bij het formuleren van aanspreek- en aanschrijftitels."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AchtervoegselTitel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "HumanName.suffixTitle",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartNameInformation-1.1",
+            "map": "NL-CM-20.4.12",
+            "comment": "Titles (ADAPT)"
+          }
+        ]
+      }
+    ]
+  }
+}
