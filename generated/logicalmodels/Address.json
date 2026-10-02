@@ -1,0 +1,2437 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Address-model",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-04T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://nictiz.nl/gbb/StructureDefinition/Address-model",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.10"
+    }
+  ],
+  "version": "2026-06-04T00:00:00",
+  "name": "LogicalModelAddressInformation",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelAdresgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelAddressInformation",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelAdresgegevens"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgpartAddressInformation-1.1",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.20.5&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.part.AddressInformation 1.1"
+    },
+    {
+      "identity": "Address",
+      "uri": "http://nictiz.nl/gbb/Requirements/Address",
+      "name": "Address"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://nictiz.nl/gbb/StructureDefinition/AddressInformation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834",
+        "path": "AddressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AddressInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.1",
+            "comment": "AddressInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.88--20260601135223",
+        "path": "AddressInformation.addressUse",
+        "short": "Purpose of this address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doel van dit adres"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Purpose of this address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doel van dit adres"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressUse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "AddressUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/address-use"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.8",
+            "comment": "AddressType (ADAPT)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-01"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.86--20260601134924",
+        "path": "AddressInformation.type",
+        "short": "The type of address in question, such as a home address or mailing address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of address in question, such as a home address or mailing address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AdresSoort"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "text": "Officieel adres"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "AddressType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/address-type"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.8",
+            "comment": "AddressType (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.104--20260605063730",
+        "path": "AddressInformation.fullAddress",
+        "short": "Text representation of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele weergave van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele weergave van het adres. Geeft het hele adres zoals deze zou moeten worden weergegevens op bijvoorbeeld adreslabel."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VolledigAdres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.fullAddress",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-03"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.105--20260605093950",
+        "path": "AddressInformation.addressLine",
+        "short": "AddressLine",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresregel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "AddressLine",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresregel"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresregel"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-04"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.76--20260601134924",
+        "path": "AddressInformation.addressLine.streetName",
+        "short": "Street name of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Straatnaam van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Street name of the address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Straatnaam van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Straatnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.streetName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "1e Jacob van Campenstr"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.2",
+            "comment": "Street (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.77--20260601134924",
+        "path": "AddressInformation.addressLine.houseNumber",
+        "short": "House number of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisnummer van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "House number of the address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisnummer van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.houseNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "15"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.12",
+            "comment": "HouseNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.78--20260601134924",
+        "path": "AddressInformation.addressLine.buildingNumberSuffix",
+        "short": "A letter following the house number as assigned by the municipal authorities.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A letter following the house number as assigned by the municipal authorities.\nAny alphabetic character, fraction or other text that may appear after the numeric portion of a building number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisnummerletter"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.buildingNumberSuffix",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "E"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.11",
+            "comment": "HouseNumberLetter (SPEC)"
+          },
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.10",
+            "comment": "HouseNumberAddition (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.80--20260601134924",
+        "path": "AddressInformation.addressLine.additionalLocator",
+        "short": "The indication used for addresses which do not consist of the usual street name and house number.This can be a unit designator, such as apartment number, suite number, or floor.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The indication used for addresses which do not consist of the usual street name and house number.\nThis can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., \"3rd floor, Appt. 342\"). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch \"t.o.\" means \"opposite to\" for house boats located across the street facing houses).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AanduidingBijNummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.additionalLocator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.9",
+            "comment": "HouseNumberIndication (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.85--20260601134924",
+        "path": "AddressInformation.addressLine.additionalInformation",
+        "short": "Extra information such as the building name, building number, entrance, route number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Extra information such as the building name, building number, entrance, route number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AdditioneleInformatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.additionalInformation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Huis Zon en Licht"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.7",
+            "comment": "AdditionalInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.87--20260601135009",
+        "path": "AddressInformation.addressLine.postbox",
+        "short": "A numbered box located in a post station.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een genummerde brievenbus/postvakje in een postkantoor."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A numbered box located in a post station.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een genummerde brievenbus/postvakje in een postkantoor."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Postbus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.postbox",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.82--20260601134924",
+        "path": "AddressInformation.placeOfResidence",
+        "short": "A geographically determined area which forms part of the municipal area.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A geographically determined area which forms part of the municipal area.\nFor Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.\nBij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Woonplaats"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.placeOfResidence",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Hoogmade"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.3",
+            "comment": "PlaceOfResidence (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-11"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.81--20260601134924",
+        "path": "AddressInformation.postcode",
+        "short": "Postcode of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Postcode van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Postcode of the address.\nIn Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Postcode van het adres.\nBij Nederlandse adressen bij voorkeur de postcode uit de Postcodetabel (OID: 2.16.840.1.113883.2.4.4.15) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.postcode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "1012 NX"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.6",
+            "comment": "Postcode (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-13"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.83--20260601134924",
+        "path": "AddressInformation.municipality",
+        "short": "Municipality of residence.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gemeente van inschrijving."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Municipality of residence.\nFor Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gemeente van inschrijving.\nBij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gemeente"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.municipality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Kaag en Braassem"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.4",
+            "comment": "Municipality (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.84--20260601134924",
+        "path": "AddressInformation.country",
+        "short": "Country in which the address is located.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Land waar het adres zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Country in which the address is located.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Land waar het adres zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Land"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.country",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "text": "Nederland"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "LandCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.10--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.5",
+            "comment": "Country (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-14"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.527--20260813134532",
+        "path": "AddressInformation.usablePeriod",
+        "short": "Time period when address was/is in use",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Periode waarin het adres in gebruik was/is"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Time period when address was/is in use",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Periode waarin het adres in gebruik was/is"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gebruiksperiode"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-15"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.528--20260813134627",
+        "path": "AddressInformation.usablePeriod.start",
+        "short": "Start usable period",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Start gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Start usable period",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Start gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod.start",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.529--20260813134720",
+        "path": "AddressInformation.usablePeriod.eind",
+        "short": "End usable period",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Eind gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "End usable period",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Eind gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod.eind",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.75--20260601134834",
+        "path": "AddressInformation",
+        "short": "Root concept of the AddressInformation partial information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AddressInformation partial information model. This root concept contains all data elements of the AddressInformation partial information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de subbouwsteen Adresgegevens. Dit rootconcept bevat alle gegevenselementen van de subbouwsteen Adresgegevens."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AddressInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.1",
+            "comment": "AddressInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.88--20260601135223",
+        "path": "AddressInformation.addressUse",
+        "short": "Purpose of this address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doel van dit adres"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Purpose of this address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Doel van dit adres"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresgebruik"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressUse",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "AddressUse",
+          "valueSet": "http://hl7.org/fhir/ValueSet/address-use"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.8",
+            "comment": "AddressType (ADAPT)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-01"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.86--20260601134924",
+        "path": "AddressInformation.type",
+        "short": "The type of address in question, such as a home address or mailing address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The type of address in question, such as a home address or mailing address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort adres waarvan sprake is, bijvoorbeeld woonadres, postadres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AdresSoort"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "text": "Officieel adres"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "AddressType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/address-type"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.8",
+            "comment": "AddressType (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-02"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.104--20260605063730",
+        "path": "AddressInformation.fullAddress",
+        "short": "Text representation of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele weergave van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele weergave van het adres. Geeft het hele adres zoals deze zou moeten worden weergegevens op bijvoorbeeld adreslabel."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VolledigAdres"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.fullAddress",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-03"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.105--20260605093950",
+        "path": "AddressInformation.addressLine",
+        "short": "AddressLine",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresregel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "AddressLine",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresregel"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Adresregel"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-04"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.76--20260601134924",
+        "path": "AddressInformation.addressLine.streetName",
+        "short": "Street name of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Straatnaam van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Street name of the address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Straatnaam van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Straatnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.streetName",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "1e Jacob van Campenstr"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.2",
+            "comment": "Street (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.77--20260601134924",
+        "path": "AddressInformation.addressLine.houseNumber",
+        "short": "House number of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisnummer van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "House number of the address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huisnummer van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.houseNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "15"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.12",
+            "comment": "HouseNumber (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.78--20260601134924",
+        "path": "AddressInformation.addressLine.buildingNumberSuffix",
+        "short": "A letter following the house number as assigned by the municipal authorities.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A letter following the house number as assigned by the municipal authorities.\nAny alphabetic character, fraction or other text that may appear after the numeric portion of a building number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Huisnummerletter"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.buildingNumberSuffix",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "E"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.11",
+            "comment": "HouseNumberLetter (SPEC)"
+          },
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.10",
+            "comment": "HouseNumberAddition (ADAPT)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.80--20260601134924",
+        "path": "AddressInformation.addressLine.additionalLocator",
+        "short": "The indication used for addresses which do not consist of the usual street name and house number.This can be a unit designator, such as apartment number, suite number, or floor.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The indication used for addresses which do not consist of the usual street name and house number.\nThis can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., \"3rd floor, Appt. 342\"). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch \"t.o.\" means \"opposite to\" for house boats located across the street facing houses).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AanduidingBijNummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.additionalLocator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.9",
+            "comment": "HouseNumberIndication (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.85--20260601134924",
+        "path": "AddressInformation.addressLine.additionalInformation",
+        "short": "Extra information such as the building name, building number, entrance, route number.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Extra information such as the building name, building number, entrance, route number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AdditioneleInformatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.additionalInformation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Huis Zon en Licht"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.7",
+            "comment": "AdditionalInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.87--20260601135009",
+        "path": "AddressInformation.addressLine.postbox",
+        "short": "A numbered box located in a post station.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een genummerde brievenbus/postvakje in een postkantoor."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A numbered box located in a post station.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een genummerde brievenbus/postvakje in een postkantoor."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Postbus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.addressLine.postbox",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.82--20260601134924",
+        "path": "AddressInformation.placeOfResidence",
+        "short": "A geographically determined area which forms part of the municipal area.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A geographically determined area which forms part of the municipal area.\nFor Dutch places of residence, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.\nBij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Woonplaats"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.placeOfResidence",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Hoogmade"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.3",
+            "comment": "PlaceOfResidence (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-11"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.81--20260601134924",
+        "path": "AddressInformation.postcode",
+        "short": "Postcode of the address.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Postcode van het adres."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Postcode of the address.\nIn Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Postcode van het adres.\nBij Nederlandse adressen bij voorkeur de postcode uit de Postcodetabel (OID: 2.16.840.1.113883.2.4.4.15) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.postcode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "1012 NX"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.6",
+            "comment": "Postcode (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-13"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.83--20260601134924",
+        "path": "AddressInformation.municipality",
+        "short": "Municipality of residence.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gemeente van inschrijving."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Municipality of residence.\nFor Dutch municipalities, preferably use the name from the GBA, table 33 (OID: 2.16.840.1.113883.2.4.6.14).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gemeente van inschrijving.\nBij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gemeente"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.municipality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueString": "Kaag en Braassem"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.4",
+            "comment": "Municipality (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.84--20260601134924",
+        "path": "AddressInformation.country",
+        "short": "Country in which the address is located.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Land waar het adres zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Country in which the address is located.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Land waar het adres zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Land"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.country",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "text": "Nederland"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "LandCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.10--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgpartAddressInformation-1.1",
+            "map": "NL-CM-20.5.5",
+            "comment": "Country (SPEC)"
+          },
+          {
+            "identity": "Address",
+            "map": "ADD-14"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.527--20260813134532",
+        "path": "AddressInformation.usablePeriod",
+        "short": "Time period when address was/is in use",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Periode waarin het adres in gebruik was/is"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Time period when address was/is in use",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Periode waarin het adres in gebruik was/is"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Gebruiksperiode"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "Address",
+            "map": "ADD-15"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.528--20260813134627",
+        "path": "AddressInformation.usablePeriod.start",
+        "short": "Start usable period",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Start gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Start usable period",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Start gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod.start",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.529--20260813134720",
+        "path": "AddressInformation.usablePeriod.eind",
+        "short": "End usable period",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Eind gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "End usable period",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Eind gebruiksperiode"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AddressInformation.usablePeriod.eind",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

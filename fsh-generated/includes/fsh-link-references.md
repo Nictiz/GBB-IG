@@ -1,0 +1,9 @@
+[Address]: Requirements-Address.html
+[LandCodelijsten]: ValueSet-2.16.840.1.113883.2.4.3.11.60.121.11.10--20200901000000.html
+[LandGBACodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.40.2.20.5.1--20200901000000.html
+[LandISOCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.40.2.20.5.2--20200901000000.html
+[LogicalModelAddressInformation]: StructureDefinition-Address-model.html
+[NlcoreAddress]: StructureDefinition-nl-core-Address.html
+[OntsluitendSysteem]: ActorDefinition-ExchangingSystem.html
+[RegistrerendSysteem]: ActorDefinition-RegistrationSystem.html
+[VerwerkendSysteem]: ActorDefinition-ConsumingSystem.html

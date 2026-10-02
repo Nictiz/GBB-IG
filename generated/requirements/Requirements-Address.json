@@ -1,0 +1,249 @@
+{
+  "resourceType": "Requirements",
+  "id": "Address",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/Address",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-01",
+      "label": "ADD-01 use",
+      "requirement": "**Omschrijving**: home | work | temp | old | billing - purpose of this address\n\n**Variabiliteit**: code (required)\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-02",
+      "label": "ADD-02 type",
+      "requirement": "**Omschrijving**: The type of address in question, such as a home address or mailing address.\n\n**Variabiliteit**: code (required)\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-03",
+      "label": "ADD-03 text/FullAddress",
+      "requirement": "**Omschrijving**: Text representation of the address. Specifies the entire address as it should be displayed e.g. on a postal label.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: Process: Can provide both a text representation and parts. Applications updating an address SHALL ensure that when both text and parts are present, no content is included in the text that isn't found in a part.",
+      "source": [
+        {
+          "display": "https://nictiz.atlassian.net/browse/ZIB-3032\r\n\r\nEn Xt-EHR"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-04",
+      "label": "ADD-04 line",
+      "requirement": "**Omschrijving**: (Human-readable representatie van de onderliggende elementen) This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: The elements of Address stored in the address-part extensions will be ignored by applications that do not support them, so any information in them should also be duplicated in the Address.line to which they are attached. The value of Address.line should be populated with a complete string representation of all the separate extension values, like: \"[Street] [HouseNumberIndication] [HouseNumber] [HouseNumberLetter] [HouseNumberAddition]\".\r\n\r\nEU-Core: When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line.",
+      "source": [
+        {
+          "display": "FHIR R4"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-05",
+      "label": "ADD-05 streetName",
+      "requirement": "**Omschrijving**: This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-06",
+      "label": "ADD-06 houseNumber",
+      "requirement": "**Omschrijving**: The number of a building, house or lot alongside the street. Also known as \"primary street number\". This does not number the street but rather the building.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-07",
+      "label": "ADD-07 buildingNumberSuffix",
+      "requirement": "**Omschrijving**: Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-08",
+      "label": "ADD-08 additionalLocator",
+      "requirement": "**Omschrijving**: This can be a unit designator, such as apartment number, suite number, or floor. There may be several unit designators in an address (e.g., \"3rd floor, Appt. 342\"). This can also be a designator pointing away from the location, rather than specifying a smaller location within some larger one (e.g., Dutch \"t.o.\" means \"opposite to\" for house boats located across the street facing houses).\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-09",
+      "label": "ADD-09 unitID/AdditionalInformation",
+      "requirement": "**Omschrijving**: The number or name of a specific unit contained within a building or complex, as assigned by that building or complex.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-10",
+      "label": "ADD-10 postBox",
+      "requirement": "**Omschrijving**: A numbered box located in a post station.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-11",
+      "label": "ADD-11 city/PlaceOfRecidency",
+      "requirement": "**Omschrijving**: The name of the city, town, suburb, village or other community or delivery center.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-12",
+      "label": "ADD-12 district/municipality/county",
+      "requirement": "**Omschrijving**: The name of the administrative area (county). In the netherlands this refers to Municipality.\r\nBij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken.\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-13",
+      "label": "ADD-13 postalCode",
+      "requirement": "**Omschrijving**: A postal code designating a region defined by the postal service.  In Dutch addresses, preferably use the postcode from the Postcode table (OID: 2.16.840.1.113883.2.4.4.15).\n\n**Variabiliteit**: string\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-14",
+      "label": "ADD-14 country",
+      "requirement": "**Omschrijving**: Country - a nation as commonly understood or generally accepted.\n\n**Variabiliteit**: code (required) Codesystem = ISO 3166-1 alpha-2 of GBA tabel 34 Landen (2.16.840.1.113883.2.4.4.16.34)\n\n**Aanwezigheid**: -",
+      "source": [
+        {
+          "display": "EHDSAddress, zib2020, Spoedsamenvatting"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ADD-15",
+      "label": "ADD-15 gebruiksperiode",
+      "requirement": "**Omschrijving**: Het element useablePeriod duidt de periode aan waarin dit adres 'in gebruik'/geldig is/was.\n\n**Variabiliteit**: Het element useablePeriod duidt de periode aan waarin dit adres 'in gebruik'/geldig is/was. De opties zijn:\r\nEr is geen useablePeriod element: het betreffende adres is in principe onbeperkt geldig.\r\nEr is een onder- en een bovengrens: het adres was geldig in de aangeduide periode.\r\nEr is alleen een ondergrens: het adres is geldig sinds de aangeduide datum.\r\nEr is alleen een bovengrens: het adres was geldig t/m de aangeduide datum.\n\n**Aanwezigheid**: In elke situatie waar één of meer adressen worden doorgegeven, moet minimaal het adres worden aangeduid dat op het moment van verzenden geldig/actueel is. Vervallen adressen kunnen dus alleen worden doorgegeven als het betreffende berichtelement herhalend is (dus met cardinaliteit > 1). Adressen mogen ook in de toekomst geldig worden of vervallen als bijvoorbeeld verhuizing reeds bekend is.",
+      "source": [
+        {
+          "display": "Spoedsamenvatting"
+        }
+      ]
+    }
+  ]
+}
