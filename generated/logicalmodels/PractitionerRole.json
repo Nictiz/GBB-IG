@@ -1,0 +1,1178 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PractitionerRole",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-11T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.18"
+    }
+  ],
+  "version": "2026-06-11T00:00:00",
+  "name": "LogicalModelPractitionerRole",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelZorgverlenerRol"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelPractitionerRole",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelZorgverlenerRol"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgHealthProfessional-3.5",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.17.1&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.HealthProfessional 3.5"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.235--20260610052643",
+        "path": "PractitionerRole",
+        "short": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerRol"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.1",
+            "comment": "HealthProfessional (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.356--20260615115502",
+        "path": "PractitionerRole.code",
+        "short": "ZVL-013 Health professional role.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De rol van een zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-013\n\nHealth professional role. Multiple roles could be provided.\n\nBinding Description: (preferred): ISCO, SNOMED CT. De ISCO waardenlijst bevat \"occupations\" e.g. Nursing professional, Specialist Medical Practitioners.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De rol van een zorgverlener. Er kunnen meerdere rollen worden opgegeven. Omschrijving waarden: (voorkeur): ISCO, SNOMED CT. De ISCO waardenlijst bevat \"beroepen\" bijv. Verpleegkundige, Medisch specialist."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.code",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.326--20260611084753",
+        "path": "PractitionerRole.practitioner",
+        "short": "ZVL-014 Practitioner that provides services for the organization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener die diensten verleent voor de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-014 Practitioner that provides services for the organization",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener die diensten verleent voor de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.practitioner",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.276--20260610134438",
+        "path": "PractitionerRole.practitioner.practitioner",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.practitioner.practitioner",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.327--20260611084912",
+        "path": "PractitionerRole.organization",
+        "short": "ZVL-009 Organization where the healthcare provider works",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie waar de zorgverlener werkzaam is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-009 Organization where the healthcare provider works",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie waar de zorgverlener werkzaam is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.310--20260611063311",
+        "path": "PractitionerRole.organization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.organization.organization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.249--20260610052902",
+        "path": "PractitionerRole.specialty",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394658006",
+            "display": "klinisch specialisme"
+          }
+        ],
+        "short": "ZVL-004 Health professional’s medical specialty.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medisch specialisme van de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-004 Health professional’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act. For example general practitioner or cardiologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Specialisme"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.specialty",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394658006",
+                  "display": "klinisch specialisme"
+                }
+              ],
+              "text": "Cardioloog"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "SpecialismeCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.4",
+            "comment": "Specialty (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.263--20260610052902",
+        "path": "PractitionerRole.telecom",
+        "short": "Role-specific contact details of a healthcare provider, such as phone number(s) or email address(es) associated with a particular role, location, or specialty.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rolgebonden contactgegevens van een zorgverlener, zoals telefoonnummer(s) of e-mailadres(sen) voor een specifieke functie, locatie of specialisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Role-specific contact details of a healthcare provider, such as phone number(s) or email address(es) associated with a particular role, location, or specialty. This may also include a phone number for communication between healthcare professionals.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rolgebonden contactgegevens van een zorgverlener, zoals telefoonnummer(s) of e-mailadres(sen) voor een specifieke functie, locatie of specialisatie. Dit kan ook een intercollegiaal telefoonnummer zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.8",
+            "comment": "ContactInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.278--20260610135020",
+        "path": "PractitionerRole.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.235--20260610052643",
+        "path": "PractitionerRole",
+        "short": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerRol"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.1",
+            "comment": "HealthProfessional (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.356--20260615115502",
+        "path": "PractitionerRole.code",
+        "short": "ZVL-013 Health professional role.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De rol van een zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-013\n\nHealth professional role. Multiple roles could be provided.\n\nBinding Description: (preferred): ISCO, SNOMED CT. De ISCO waardenlijst bevat \"occupations\" e.g. Nursing professional, Specialist Medical Practitioners.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De rol van een zorgverlener. Er kunnen meerdere rollen worden opgegeven. Omschrijving waarden: (voorkeur): ISCO, SNOMED CT. De ISCO waardenlijst bevat \"beroepen\" bijv. Verpleegkundige, Medisch specialist."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.code",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.326--20260611084753",
+        "path": "PractitionerRole.practitioner",
+        "short": "ZVL-014 Practitioner that provides services for the organization",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener die diensten verleent voor de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-014 Practitioner that provides services for the organization",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zorgverlener die diensten verleent voor de organisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.practitioner",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.276--20260610134438",
+        "path": "PractitionerRole.practitioner.practitioner",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.practitioner.practitioner",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.327--20260611084912",
+        "path": "PractitionerRole.organization",
+        "short": "ZVL-009 Organization where the healthcare provider works",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie waar de zorgverlener werkzaam is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-009 Organization where the healthcare provider works",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organisatie waar de zorgverlener werkzaam is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.310--20260611063311",
+        "path": "PractitionerRole.organization.organization",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "257622000",
+            "display": "zorginstelling"
+          }
+        ],
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een formeel of informeel erkende groep van personen of organisaties die is opgericht met het doel een of andere vorm van collectieve actie te ondernemen. Dit omvat bedrijven, instituten, corporaties, afdelingen, communtity groepen, zorg uitvoeringsgroepen, betaler/verzekeraar etc.."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Organisatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.organization.organization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.249--20260610052902",
+        "path": "PractitionerRole.specialty",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394658006",
+            "display": "klinisch specialisme"
+          }
+        ],
+        "short": "ZVL-004 Health professional’s medical specialty.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medisch specialisme van de zorgverlener."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "ZVL-004 Health professional’s medical specialty. This refers to the recognized medical specialties as stated in the BIG Act. For example general practitioner or cardiologist.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Specialisme"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.specialty",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "example": [
+          {
+            "label": "1",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "394658006",
+                  "display": "klinisch specialisme"
+                }
+              ],
+              "text": "Cardioloog"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "SpecialismeCodelijsten",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.4",
+            "comment": "Specialty (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.263--20260610052902",
+        "path": "PractitionerRole.telecom",
+        "short": "Role-specific contact details of a healthcare provider, such as phone number(s) or email address(es) associated with a particular role, location, or specialty.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rolgebonden contactgegevens van een zorgverlener, zoals telefoonnummer(s) of e-mailadres(sen) voor een specifieke functie, locatie of specialisatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Role-specific contact details of a healthcare provider, such as phone number(s) or email address(es) associated with a particular role, location, or specialty. This may also include a phone number for communication between healthcare professionals.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rolgebonden contactgegevens van een zorgverlener, zoals telefoonnummer(s) of e-mailadres(sen) voor een specifieke functie, locatie of specialisatie. Dit kan ook een intercollegiaal telefoonnummer zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "PractitionerRole.telecom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "NlzorgHealthProfessional-3.5",
+            "map": "NL-CM-17.1.8",
+            "comment": "ContactInformation (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.278--20260610135020",
+        "path": "PractitionerRole.telecom.contactPoint",
+        "short": "Contact details for telecommunications.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details for telecommunications.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Contactgegevens voor telecommunicatie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Contactgegevens"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "PractitionerRole.telecom.contactPoint",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/model/StructureDefinition/ContactPoint"
+          }
+        ]
+      }
+    ]
+  }
+}

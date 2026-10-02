@@ -1,0 +1,157 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nictiz.nl.gbb",
+  "url": "http://nictiz.nl/gbb/ImplementationGuide/nictiz.nl.gbb",
+  "version": "0.1.0",
+  "name": "GenericBuildingBlocks",
+  "status": "draft",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "packageId": "nictiz.nl.gbb",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/PractitionerRole"
+        },
+        "exampleBoolean": false,
+        "name": "LogicalModelPractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/nl-core-PractitionerRole"
+        },
+        "description": "A health professional is a person who is authorized to perform actions in the field of individual healthcare.",
+        "exampleBoolean": false,
+        "name": "nl core PractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ExchangingSystem"
+        },
+        "description": "Systeem dat gegevens ontsluit aan derden",
+        "exampleBoolean": false,
+        "name": "OntsluitendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/PractitionerRole"
+        },
+        "exampleBoolean": false,
+        "name": "PractitionerRole"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/RegistrationSystem"
+        },
+        "description": "Bronsysteem voor de registratie",
+        "exampleBoolean": false,
+        "name": "RegistrerendSysteem"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000"
+        },
+        "description": "Value set combining the distinct value sets that the zib HealthProfessional binds to for NL-CM:17.1.4 Specialty. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time",
+        "exampleBoolean": false,
+        "name": "SpecialismeCodelijsten"
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ConsumingSystem"
+        },
+        "description": "Systeem dat gegevens van derden verwerkt",
+        "exampleBoolean": false,
+        "name": "VerwerkendSysteem"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "obligations.html",
+          "title": "Obligations",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/requirements"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/logicalmodels"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "generated/pagecontent"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "nl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/nl"
+      },
+      {
+        "code": "logging",
+        "value": "progress"
+      },
+      {
+        "code": "path-liquid-template",
+        "value": "template/liquid"
+      }
+    ]
+  }
+}

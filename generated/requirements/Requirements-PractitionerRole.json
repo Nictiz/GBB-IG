@@ -1,0 +1,121 @@
+{
+  "resourceType": "Requirements",
+  "id": "PractitionerRole",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/PractitionerRole",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-001",
+      "label": "ZVR-001 Specialisme - PractitionerRole.specialty",
+      "requirement": "**Omschrijving**: Erkende medische specialismen ->AGB of UZI(DEZI) specialismecodes \r\nHet betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG. Bijvoorbeeld huisarts of cardioloog.\n\n**Variabiliteit**: coded, AGB en UZI zijn geprefereerde codesystemen voor nederlandse zorgverleners. Binding: Vektis-codelijst\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-002",
+      "label": "ZVR-002 Specialisme - PractitionerRole.specialty",
+      "requirement": "**Omschrijving**: Andere codes dan AGB of UZI(DEZI) specialismecodes\n\n**Variabiliteit**: (coded) Binding: SNOMED-CT (preferred)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSHealthProfessional, Afwijkingenregister eOverdracht"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-003",
+      "label": "ZVR-003 Contactgegevens - PractitionerRole.telecom",
+      "requirement": "**Omschrijving**: Voor een specifieke rol e.g., werknemer-, locatie-, of specialiteit-email\r\nTelefoonnummer(s) of e-mailadres(sen), kan ook intercollegiaal telefoonnummer\n\n**Variabiliteit**: (reference GBB-ContactPoint)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSHealthProfessional, zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-004",
+      "label": "ZVR-004 Zorgaanbieder - PractitionerRole.organization",
+      "requirement": "**Omschrijving**: Organisatie waarbij de zorgverlener werkzaam is\n\n**Variabiliteit**: (reference GBB-Organization)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSHealthProfessional, zib2020, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-005",
+      "label": "ZVR-005 ProfessionalRole.Role - PractitionerRole.Code",
+      "requirement": "**Omschrijving**: Een functietitel zoals verpleegkundige of arts, geen medisch specialisme (bv. Geriatrie) of zorgteamrol (bv. hoofdbehandelaar)\r\nBinding Description: (preferred): ISCO, SNOMED CT.\n\n**Variabiliteit**: (coded)\n\n**Aanwezigheid**: 0..*",
+      "source": [
+        {
+          "display": "EHDSHealthProfessional, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-006",
+      "label": "ZVR-006 Practitioner - verwijzing naar Practitioner profiel",
+      "requirement": "**Omschrijving**: Zorgverlener die diensten verleent aan de organisatie\n\n**Variabiliteit**: (reference GBB-Practitioner)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "EHDSHealthProfessional, Zib2020 PractitionerRole profiel, Spoedsamenvatting 2.2.0, BgZ-MSZ 2.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "ZVR-007",
+      "label": "ZVR-007 TimeInRole",
+      "requirement": "**Omschrijving**: Tijdstip of periode waarop de zorgverlener in diens rol was/is\n\n**Variabiliteit**: periode (start-eindtijden)\n\n**Aanwezigheid**: 0..1",
+      "source": [
+        {
+          "display": "Spoedsamenvatting 2.2.0"
+        }
+      ]
+    }
+  ]
+}
