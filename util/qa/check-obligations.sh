@@ -51,7 +51,7 @@ else
 fi
 
 cd $work_dir
-node $so_dir/sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder $lm_folder --suppressions known-issues.yml $@
+node $so_dir/sync-obligations.js --actor http://ig.nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder $lm_folder --suppressions known-issues.yml $@
 if [ $? -ne 0 ]; then
     exit_code=1
 fi

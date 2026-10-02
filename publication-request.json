@@ -8,7 +8,7 @@
    "desc" : "Initial release",
    "first" : true,
    "title" : "Generic Building Block IG NL",
-   "ci-build" : "https://build.fhir.org/ig/Nictiz/GBB-IG",
+   "ci-build" : "http://build.fhir.org/ig/Nictiz/GBB-IG",
    "registry-description" : "Dutch Generic Building Blocks. EHDS First, completed with Dutch additions",
    "registry-country" : "Netherlands",
    "registry-authority" : "Nictiz",
