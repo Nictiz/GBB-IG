@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Practitioner" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
+      human-readable rendering can be found in the implementation guide(s) where this resource is
+      used.</div></text>
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+  <name value="NlcorePractitioner" />
+  <title value="nl core Practitioner" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <purpose value="This profile is the FHIR implementation of the general building block [Practitioner](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/Practitioner)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="lm-Practitioner" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner" />
+    <name value="Logical model for Practitioner" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Practitioner">
+      <path value="Practitioner" />
+      <short value="Practitioner" />
+      <definition value="Details of a natural person who provides professional healthcare services." />
+      <alias value="Zorgverlener" />
+      <constraint>
+        <key value="name-or-identifier" />
+        <severity value="error" />
+        <human value="identifier or name SHALL be present" />
+        <expression value="identifier.exists() or name.exists()" />
+        <source value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu" />
+      </constraint>
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.1" />
+        <comment value="HealthProfessional" />
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Practitioner.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Identifier" />
+      <definition value="The healthcare provider identification number is a number that uniquely identifies the healthcare provider. &#xD;&#xA;                        &#xD;The following numbers are used in the Netherlands: &#xD;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry. &#xD;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations &#xD;3. BIG-ID. The ID of the health professional listed in the BIG Register. &#xD;&#xA;                        &#xD;This information is not readily available for foreign health professionals." />
+      <alias value="ZorgverlenerIdentificatienummer" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.2" />
+        <comment value="HealthProfessionalIdentificationNumber" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Practitioner" />
+        <map value="Practitioner.identifier" />
+        <comment value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.&#xD;&#xA;&#xD;&#xA;In de Nederlandse situatie worden de volgende nummers gebruikt:&#xD;&#xA;1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.&#xD;&#xA;2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties&#xD;&#xA;3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.&#xD;&#xA;&#xD;&#xA;Voor medisch personeel of verzorgenden die niet in het BIG register zijn opgenomen mogen bij implementaties eventueel andere nummers worden gebruikt. Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden.&quot;/&gt;&#xD;&#xA;      &lt;alias value=&quot;ZorgverlenerIdentificatienummer" />
+      </mapping>
+    </element>
+    <element id="Practitioner.identifier:big">
+      <path value="Practitioner.identifier" />
+      <sliceName value="big" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/big" />
+      </patternIdentifier>
+    </element>
+    <element id="Practitioner.identifier:agb">
+      <path value="Practitioner.identifier" />
+      <sliceName value="agb" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
+      </patternIdentifier>
+    </element>
+    <element id="Practitioner.identifier:dezi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="dezi" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/dezi" />
+      </patternIdentifier>
+    </element>
+    <element id="Practitioner.identifier:uzi">
+      <path value="Practitioner.identifier" />
+      <sliceName value="uzi" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
+      </patternIdentifier>
+    </element>
+    <element id="Practitioner.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Practitioner.name" />
+      <short value="NameInformation" />
+      <definition value="Health professional’s full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center." />
+      <alias value="Naamgegevens" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.3" />
+        <comment value="NameInformation" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Practitioner" />
+        <map value="Practitioner.nameInformation" />
+        <comment value="De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling." />
+      </mapping>
+    </element>
+    <element id="Practitioner.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Practitioner.telecom" />
+      <short value="Telecom" />
+      <definition value="Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided." />
+      <comment value="The cardinality mismatch between the zib (`0..1`) and FHIR (`0..*`) is explained by the containers TelephoneNumbers (`0..*`) and EmailAddresses (`0..*`) inside the ContactInformation model. The FHIR datatype ContactPoint does not have these containers." />
+      <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.8" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="zib-contactinformation-v1.2-2020EN" />
+        <map value="NL-CM:20.6.1" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Practitioner" />
+        <map value="Practitioner.telecom" />
+        <comment value="Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice. Er kunnen meerdere telecommunicatieadressen worden opgegeven." />
+      </mapping>
+    </element>
+    <element id="Practitioner.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Practitioner.address" />
+      <short value="Address" />
+      <definition value="Role-agnostic address information of a healthcare provider (usually their home address)." />
+      <alias value="Adres" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.7" />
+        <comment value="AddressInformation" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Practitioner" />
+        <map value="Practitioner.address" />
+        <comment value="Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)." />
+      </mapping>
+    </element>
+    <element id="Practitioner.gender">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Practitioner.gender" />
+      <short value="Gender" />
+      <definition value="Practitioner’s administrative gender." />
+      <alias value="Geslacht" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-healthprofessional-v3.5-2020EN" />
+        <map value="NL-CM:17.1.9" />
+        <comment value="Gender" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Practitioner" />
+        <map value="Practitioner.gender" />
+        <comment value="Administratief geslacht van de zorgverlener" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
