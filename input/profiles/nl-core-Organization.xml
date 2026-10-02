@@ -3,7 +3,7 @@
   <id value="nl-core-Organization" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
   <name value="NlCoreOrganization" />
   <title value="nl core Organization" />
   <status value="draft" />
@@ -22,12 +22,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Organization" />
-    <uri value="http://nictiz.nl/ig/gbb/Requirements/Organization" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Organization" />
     <name value="Information requirements for Organization" />
   </mapping>
   <mapping>
     <identity value="lm-Organization" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Organization" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization" />
     <name value="Logical model for Organization" />
   </mapping>
   <mapping>
@@ -58,7 +58,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -66,7 +66,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.identifier" />
@@ -107,7 +107,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -115,7 +115,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.type" />
@@ -157,7 +157,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -165,7 +165,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.name" />
@@ -185,7 +185,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -193,7 +193,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.telecom" />
@@ -202,7 +202,7 @@
       <alias value="Telecom" />
       <type>
         <code value="ContactPoint" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -217,7 +217,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -225,7 +225,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.address" />
@@ -234,7 +234,7 @@
       <alias value="Adres" />
       <type>
         <code value="Address" />
-        <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -249,7 +249,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -257,7 +257,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Organization.partOf" />
@@ -266,7 +266,7 @@
       <alias value="OnderdeelVan" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mustSupport value="true" />
       <mapping>
