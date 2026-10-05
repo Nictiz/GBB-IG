@@ -98,11 +98,7 @@
       <binding>
         <strength value="required" />
         <description value="A code that represents the preferred display order of the components of this human name." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/NaamgebruikCodelijst-to-HumanNameAssemblyOrder" />
-          </extension>
-        </valueSet>
+        <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1"/>
       </binding>
       <mapping>
         <identity value="requirements-HumanName" />
