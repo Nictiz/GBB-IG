@@ -91,6 +91,35 @@
         <map value="Procedure.Method" />
       </mapping>
     </element>
+    <element id="Procedure.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.identifier" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="0" />
+        <comment value="Identificatienummer" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.Identifier" />
+      </mapping>
+    </element>
     <element id="Procedure.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
