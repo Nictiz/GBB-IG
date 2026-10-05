@@ -286,12 +286,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="Procedure.performed[x]:performedDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -404,7 +403,7 @@
     <element id="Procedure.performed[x]:performedString">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:able-to-populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
