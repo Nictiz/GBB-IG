@@ -33,7 +33,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Device" />
-    <uri value="http://ig.nictiz.nl/ig/gbb/model/StructureDefinition/Device" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice" />
     <name value="Logical model for Device" />
   </mapping>
   <kind value="resource" />
