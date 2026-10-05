@@ -109,7 +109,7 @@ menu:
     MedischHulpmiddel:
       Overzicht: deviceuse.html
       Requirements: Requirements-DeviceUse.html
-      Afsprakenmodel: StructureDefinition-DeviceUse.html
+      Afsprakenmodel: StructureDefinition-LogicalModelDeviceUse.html
       FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
   Artefacten: artifacts.html
 
