@@ -23,7 +23,7 @@
     </telecom>
   </contact>
   <description value="Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites." />
-  <purpose value="This profile is the FHIR implementation of the general building block [AllergyIntolerance](https://build.fhir.org/ig/Nictiz/GBB-IG/branches/_generated_AllergyIntolerance/en/)." />
+  <purpose value="This profile is the FHIR implementation of the general building block [AllergyIntolerance](https://ig.nictiz.nl/gbb/AllergyIntolerance/)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>

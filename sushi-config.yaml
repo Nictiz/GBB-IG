@@ -106,7 +106,6 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
-  Artefacten: artifacts.html
   Bouwblokken:
     AllergieIntolerantie:
       Overzicht: AllergyIntolerance.html
@@ -117,6 +116,8 @@ menu:
       Overzicht: Reaction.html
       Requirements: Requirements-Reaction.html
       Afsprakenmodel: StructureDefinition-LogicalModelReaction.html
+
+  Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
