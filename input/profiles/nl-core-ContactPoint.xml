@@ -41,16 +41,6 @@
       <short value="TelecomInformation" />
       <definition value="Contact details for telecommunications." />
       <alias value="TelecomInformatie" />
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.2" />
-        <comment value="TelephoneNumbers" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.3" />
-        <comment value="EmailAddresses" />
-      </mapping>
     </element>
     <element id="ContactPoint.system">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
