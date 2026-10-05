@@ -38,12 +38,12 @@
   </mapping>
   <mapping>
     <identity value="lm-AllergyIntolerance" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/AllergyIntolerance" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelAllergyIntolerance" />
     <name value="Logical model for AllergyIntolerance" />
   </mapping>
   <mapping>
     <identity value="lm-Reaction" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Reaction" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelReaction" />
     <name value="Logical model for Reaction" />
   </mapping>
   <kind value="resource" />
