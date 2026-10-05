@@ -23,7 +23,7 @@
     </telecom>
   </contact>
   <description value="The concept contains the properties of a variety of implants, devices and aids that are patient-related and support the healthcare process. It covers medical and non-medical devices, ranging from simple aids and implants to equipment and software." />
-  <purpose value="This profile is the FHIR implementation of the general building block [Device](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.11)." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Device](https://build.fhir.org/ig/Nictiz/GBB-IG/branches/_generated_Device/en/)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
