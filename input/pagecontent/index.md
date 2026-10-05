@@ -1,3 +1,6 @@
-# Generieke bouwblokken
-
-Deze FHIR IG bevat de generieke bouwblokken.
+### Overige relevante informatie over versie 1.0.0-alpha.1
+* DeviceUse.timing wordt in FHIR R4 beperkt tot Period. De start- en einddatum uit de Nederlandse zib kunnen daarmee binnen één periode worden uitgewisseld; beide onderdelen blijven afzonderlijk optioneel.
+* Expliciet het kunnen uitwisselen dat een device 'geen hulpmiddel' is, wordt niet meegenomen. Expliciete afwezigheid hoort niet als producttype in DeviceUse te worden vastgelegd.
+* De reden voor gebruik van een medisch hulpmiddel is nog niet volledig implementeerbaar zoals het EHDS-model deze beschrijft. De relatie met een diagnose, verrichting of aanvraag en het gebruik van reason, derivedFrom en basedOn moeten verder worden uitgewerkt.
+* De registrerende bron is iets anders dan de zorgverlener die een hulpmiddel voorschrijft, verstrekt, implanteert of verwijdert. De beschrijvingen en mappings moeten dit onderscheid expliciet maken; voor de uitvoerende zorgverlener wordt aansluiting op EHDSProcedure onderzocht.
+* Informatiebehoefte van andere informatiestandaarden zullen in de toekomst worden geanalyseerd. 
