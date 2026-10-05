@@ -70,7 +70,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.identificatienummer" />
+        <map value="Device.identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier">
@@ -168,7 +168,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.uniquedeviceidentifierUDI.identificatie" />
+        <map value="Device.uniquedeviceidentifierUDI.identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.issuer">
@@ -217,7 +217,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie" />
+        <map value="Device.uniquedeviceidentifierUDI.issuer" />
       </mapping>
     </element>
     <element id="Device.manufacturer">
@@ -246,7 +246,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.fabrikant" />
+        <map value="Device.manufacturer" />
       </mapping>
     </element>
     <element id="Device.manufactureDate">
@@ -275,7 +275,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.productieDatumTijd" />
+        <map value="Device.manufacturerDate" />
       </mapping>
     </element>
     <element id="Device.expirationDate">
@@ -304,7 +304,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.vervaldatum" />
+        <map value="Device.expirationDate" />
       </mapping>
     </element>
     <element id="Device.lotNumber">
@@ -333,7 +333,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.lotnummer" />
+        <map value="Device.lotNumber" />
       </mapping>
     </element>
     <element id="Device.serialNumber">
@@ -377,7 +377,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.serienummer" />
+        <map value="Device.serialNumber" />
       </mapping>
     </element>
     <element id="Device.deviceName">
@@ -411,7 +411,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType" />
+        <map value="Device.deviceName" />
       </mapping>
     </element>
     <element id="Device.deviceName.name">
@@ -445,7 +445,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType.naam" />
+        <map value="Device.deviceName.name" />
       </mapping>
     </element>
     <element id="Device.deviceName.type">
@@ -474,7 +474,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType.type" />
+        <map value="Device.deviceName.type" />
       </mapping>
     </element>
     <element id="Device.modelNumber">
@@ -503,7 +503,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.modelnummer" />
+        <map value="Device.modelNumber" />
       </mapping>
     </element>
     <element id="Device.type">
@@ -586,7 +586,7 @@
       <path value="Device.version" />
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.versie" />
+        <map value="Device.version" />
       </mapping>
     </element>
     <element id="Device.version.value">
@@ -615,7 +615,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.versie.versie" />
+        <map value="Device.version.value" />
       </mapping>
     </element>
     <element id="Device.note.text">
@@ -649,7 +649,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.toelichting" />
+        <map value="Device.note" />
       </mapping>
     </element>
   </differential>
