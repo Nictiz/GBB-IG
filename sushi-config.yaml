@@ -97,7 +97,7 @@ menu:
     Device:
       Overzicht: device.html
       Requirements: Requirements-Device.html
-      Afsprakenmodel: StructureDefinition-Device.html
+      Afsprakenmodel: StructureDefinition-LogicalModelDevice.html
       FHIR-profiel: StructureDefinition-nl-core-Device.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
