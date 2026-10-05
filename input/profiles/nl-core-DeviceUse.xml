@@ -23,7 +23,7 @@
     </telecom>
   </contact>
   <description value="FHIR R4 profile for the generic building block DeviceUse." />
-  <purpose value="This profile is the FHIR implementation of the general building block [DeviceUse](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.12)." />
+  <purpose value="This profile is the FHIR implementation of the general building block [DeviceUse](https://build.fhir.org/ig/Nictiz/GBB-IG/branches/_generated_DeviceUse/en/)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
