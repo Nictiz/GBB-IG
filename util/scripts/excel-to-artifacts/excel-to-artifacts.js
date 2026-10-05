@@ -471,9 +471,9 @@ class ExcelConvertor {
   #convertBaseModelConsiderations(language) {
     const struct = ExcelConvertor.structBaseModelConsiderations[this.templateVersion][language];
     const sheetTitle = struct.sheet;
-    if (!sheetTitle) return;
+    if (!sheetTitle) return "";
     const rows = this.#getRows(sheetTitle);
-    if (rows == null) return;
+    if (rows == null) return "";
 
     const colField      = struct.col.field;
     const colDefinition = struct.col.description;
