@@ -308,6 +308,41 @@ class ExcelConvertor {
     }
   }
 
+  static structBaseModelConsiderations = {
+    v1: {
+      nl: {
+        sheet: null,
+      },
+      en: {
+        sheet: null
+      }
+    },
+    v2: {
+      nl: {
+        sheet: "Overwegingen kiezen basismodel",
+        title: "Gebruikt basismodel",
+        col: {
+          field: "Veld",
+          description: "Invulling"
+        },
+        key: {
+          considerations: "Overwegingen"
+        }
+      },
+      en: {
+        sheet: "Base model considerations (ENG)",
+        title: "Base model used",
+        col: {
+          field: "Field",
+          description: "Input"
+        },
+        key: {
+          considerations: "Considerations"
+        }
+      }
+    }
+  }
+
   static structRequirements = {
     v1: {
       nl: {
@@ -413,11 +448,11 @@ class ExcelConvertor {
 
     const colField      = struct.col.field;
     const colDefinition = struct.col.description;
-    let markdown = rows
+    let markdown = this.#convertKeyValueToMDDefinition(rows
       .filter(row => this.#cell(row, colField) != struct.key.ADId)
       .filter(row => this.#cell(row, colField) != struct.key.code)
-      .map(row => { return this.#cell(row, colField) + "\n: " + this.#cell(row, colDefinition); })
-      .join("\n\n");
+      .filter(row => this.#cell(row, colField) != struct.col.field), // Empty rows are populated in the rows array with the title of the column
+     colField, colDefinition);
 
     if (this.templateVersion == "v2" && Object.keys(this.sources).length > 0) {
       markdown += "\n\n" + struct.title.sources + "\n:\n";
@@ -426,9 +461,47 @@ class ExcelConvertor {
         .join("\n");
     }
 
+    markdown += this.#convertBaseModelConsiderations(language);
+
     const outputFile = path.join(this.targetFolders.get("PageContent"), `${this.fileRoot}-Concept-${language}.md`);
     fs.writeFileSync(outputFile, markdown, "utf8");
     console.log(`Wrote ${outputFile}`);
+  }
+
+  #convertBaseModelConsiderations(language) {
+    const struct = ExcelConvertor.structBaseModelConsiderations[this.templateVersion][language];
+    const sheetTitle = struct.sheet;
+    if (!sheetTitle) return;
+    const rows = this.#getRows(sheetTitle);
+    if (rows == null) return;
+
+    const colField      = struct.col.field;
+    const colDefinition = struct.col.description;
+    let markdown = this.#convertKeyValueToMDDefinition(rows
+      .filter(row => this.#cell(row, colField) != struct.key.considerations)
+      .filter(row => this.#cell(row, colField) != struct.col.field),  // Empty rows are populated in the rows array with the title of the column
+      colField, colDefinition);
+    markdown += rows
+      .filter(row => this.#cell(row, colField) == struct.key.considerations)
+      .map(row => "\n" + this.#cell(row, colDefinition))[0];
+
+    if (markdown.length > 0) {
+      markdown = `\n#### ${struct.title}\n${markdown}`
+    }
+    return markdown;
+  }
+
+  #convertKeyValueToMDDefinition(rows, keyCol, valCol) {
+    const markdown = rows
+      .map(row => { 
+        let lines = this.#cell(row, valCol).split("\n");
+        let output = this.#cell(row, keyCol) + "\n";
+        output += ": " + lines[0] + "\n";
+        output += lines.slice(1).map(line => "   " + line).join("\n");
+        return output;
+      }).join("\n\n");
+
+    return markdown;
   }
 
   convertRequirements() {
