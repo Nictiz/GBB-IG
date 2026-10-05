@@ -111,12 +111,12 @@ menu:
     AllergieIntolerantie:
       Overzicht: AllergyIntolerance.html
       Requirements: Requirements-AllergyIntolerance.html
-      Afsprakenmodel: StructureDefinition-AllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-LogicalModelAllergyIntolerance.html
       FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
     Reactie:
       Overzicht: Reaction.html
       Requirements: Requirements-Reaction.html
-      Afsprakenmodel: StructureDefinition-Reaction.html
+      Afsprakenmodel: StructureDefinition-LogicalModelReaction.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
