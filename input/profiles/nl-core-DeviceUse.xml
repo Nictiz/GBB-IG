@@ -9,7 +9,7 @@
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
-  <url value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
   <name value="NlcoreDeviceUse" />
   <title value="nl core DeviceUse" />
   <status value="draft" />
@@ -28,7 +28,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-DeviceUse" />
-    <uri value="http://nictiz.nl/ig/gbb/Requirements/DeviceUse" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/DeviceUse" />
     <name value="Information requirements for DeviceUse" />
   </mapping>
   <mapping>
@@ -48,7 +48,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -56,7 +56,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.language" />
@@ -72,7 +72,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -80,7 +80,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.identifier" />
@@ -100,7 +100,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -108,7 +108,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.status" />
@@ -128,7 +128,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -136,13 +136,13 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
       <mustSupport value="true" />
@@ -161,7 +161,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -169,7 +169,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.timing[x]" />
@@ -197,7 +197,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -205,7 +205,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.recordedOn" />
@@ -225,7 +225,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -233,15 +233,15 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.source" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <mustSupport value="true" />
@@ -256,7 +256,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -264,13 +264,13 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.device" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -300,7 +300,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -308,7 +308,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.reasonCode" />
@@ -328,7 +328,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -336,14 +336,14 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.reasonReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
@@ -373,7 +373,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -381,7 +381,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.bodySite" />
@@ -415,7 +415,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -423,7 +423,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="DeviceUseStatement.note.text" />

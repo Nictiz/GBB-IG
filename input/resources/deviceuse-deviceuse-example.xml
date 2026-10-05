@@ -2,7 +2,7 @@
   <id value="deviceuse-example" />
 
   <meta>
-    <profile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
+    <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
   </meta>
 
   <contained>
