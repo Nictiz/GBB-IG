@@ -65,7 +65,7 @@ To add information requirements, place the Excel file in the "input/requirements
 
 When building the IG, the preprocessor script will generate a file called "[English building block name]-Concept.md" (which is to be included in the landing page, see section above).
 
-It will also generate a FHIR Requirements resource. This can be used to refer to each requirement using its canonical resource, which will be: `http://nictiz.nl/gbb/Requirements/[English building block name]`.
+It will also generate a FHIR Requirements resource. This can be used to refer to each requirement using its canonical resource, which will be: `http://ig.nictiz.nl/gbb/Requirements/[English building block name]`.
 
 ### Afsprakenmodel
 The "afsprakenmodel" is authored using ART-DECOR. The id of the relevant transaction should be noted in the Exel template, using the "ART-DECOR-id" row in the Concept tab.
@@ -162,12 +162,12 @@ To use the script for syncing, you need to use the command line. First, make sur
 The script than needs to know a few things:
 
 1. Where the logical models reside. This is normally in the folder "generated\logicalmodels". (Run `_genonce.bat/sh` first to populate or refresh this folder.)
-2. Which actors to consider. For FHIR, these are the actors `http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem` and `http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem`.
+2. Which actors to consider. For FHIR, these are the actors `http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem` and `http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem`.
 3. Which profiles to change.
 
 To full command becomes (adjust slashes according to the OS you're using):
 
-    node util\scripts\sync-obligations\sync-obligations.js --actor http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem --actor http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated\logicalmodels --suppressions known-issues.yml input\profiles\[profile 1.xml] input\profiles\[profile 2.xml] ...
+    node util\scripts\sync-obligations\sync-obligations.js --actor http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem --actor http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder generated\logicalmodels --suppressions known-issues.yml input\profiles\[profile 1.xml] input\profiles\[profile 2.xml] ...
 
 As said before, sometimes mismatches between the logical model and the profile are intentional. Once it has been decided that there is a valid reason, the script should not flag these known deviations. This can be done using the `known-issues.yml` file used in the QA tooling. The format for marking deviations here is:
 

@@ -433,7 +433,7 @@ class ExcelConvertor {
 
   convertRequirements() {
     const id = this.fileRoot;
-    const canonical = "http://nictiz.nl/gbb/Requirements/" + id;
+    const canonical = "http://ig.nictiz.nl/gbb/Requirements/" + id;
 
     const requirements = {
       resourceType: "Requirements",
