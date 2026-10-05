@@ -91,7 +91,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.identificatienummer" />
+        <map value="DeviceUse.identificationNumber" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.status">
@@ -119,7 +119,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.status" />
+        <map value="DeviceUse.status" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.subject">
@@ -152,7 +152,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.patient" />
+        <map value="DeviceUse.patient" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.timing[x]">
@@ -188,7 +188,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.periode" />
+        <map value="DeviceUse.period" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.recordedOn">
@@ -216,7 +216,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.registratieDatumTijd" />
+        <map value="DeviceUse.registrationDateTime" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.source">
@@ -291,7 +291,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.device" />
+        <map value="DeviceUse.device" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
@@ -319,7 +319,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.redenVanGebruik" />
+        <map value="DeviceUse.reasonForUse" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
@@ -364,7 +364,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.motivatieVanGebruik[x]" />
+        <map value="DeviceUse.justificationForUse[x]" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
@@ -406,7 +406,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.anatomischeLocatie" />
+        <map value="DeviceUse.anatomicalLocation" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.note.text">
@@ -434,7 +434,7 @@
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="MedischHulpmiddel.toelichting" />
+        <map value="DeviceUse.comment" />
       </mapping>
     </element>
   </differential>
