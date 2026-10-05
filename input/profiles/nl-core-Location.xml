@@ -30,16 +30,6 @@
     <uri value="http://ig.nictiz.nl//gbb/model/StructureDefinition/Location" />
     <name value="Logical model for Location" />
   </mapping>
-  <mapping>
-    <identity value="zib-healthcareprovider-v3.4-2020EN" />
-    <uri value="https://zibs.nl/wiki/HealthcareProvider-v3.4(2020EN)" />
-    <name value="zib HealthcareProvider-v3.4(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactinformation-v1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
-    <name value="zib ContactInformation-v1.2(2020EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Location" />
@@ -51,17 +41,7 @@
       <short value="Location" />
       <definition value="Location" />
       <alias value="Locatie" />
-      <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.1" />
-        <comment value="HealthcareProvider" />
-      </mapping>
-      <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.9" />
-        <comment value="OrganizationLocation" />
-      </mapping>
-    </element>
+                </element>
     <element id="Location.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -86,8 +66,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-Location" />
-        <map value="gbb-dataelement-380" />
-        <comment value="LocationIdentifier" />
+        <map value="Location.identifier" />
+        <comment value="Location identifier" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-001" />
+        <comment value="Location identifier" />
       </mapping>
     </element>
     <element id="Location.name">
@@ -113,9 +98,14 @@
       <alias value="Naam" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.8" />
-        <comment value="LocationName" />
+        <identity value="lm-Location" />
+        <map value="Location.name" />
+        <comment value="Name" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-002" />
+        <comment value="Name" />
       </mapping>
     </element>
     <element id="Location.description">
@@ -142,7 +132,12 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-Location" />
-        <map value="gbb-dataelement-382" />
+        <map value="Location.description" />
+        <comment value="Description" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-003" />
         <comment value="Description" />
       </mapping>
     </element>
@@ -170,7 +165,12 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-Location" />
-        <map value="gbb-dataelement-383" />
+        <map value="Location.type" />
+        <comment value="Type" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-004" />
         <comment value="Type" />
       </mapping>
     </element>
@@ -201,9 +201,14 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthcareprovider-v3.4-2020EN" />
-        <map value="NL-CM:17.2.5" />
-        <comment value="AddressInformation" />
+        <identity value="lm-Location" />
+        <map value="Location.address" />
+        <comment value="Address" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-005" />
+        <comment value="Address" />
       </mapping>
     </element>
     <element id="Location.managingOrganization">
@@ -234,7 +239,12 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-Location" />
-        <map value="gbb-dataelement-389" />
+        <map value="Location.managingOrganization" />
+        <comment value="ManagingOrganization" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-006" />
         <comment value="ManagingOrganization" />
       </mapping>
     </element>
@@ -266,7 +276,12 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="lm-Location" />
-        <map value="gbb-dataelement-391" />
+        <map value="Location.partOf" />
+        <comment value="PartOf (Organization)" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Location" />
+        <map value="LOC-007" />
         <comment value="PartOf (Organization)" />
       </mapping>
     </element>
