@@ -132,6 +132,11 @@
       <definition value="The gender with which the person identifies." />
       <alias value="GenderIdentiteit" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.genderIdentity" />
+        <comment value="GenderIdentity" />
+      </mapping>
     </element>
     <element id="Patient.extension:pronouns">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -223,6 +228,11 @@
       <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html" />
       <alias value="Persoonlijke voornaamwoorden" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.pronouns" />
+        <comment value="pronouns" />
+      </mapping>
     </element>
     <element id="Patient.extension:patSexParameterForClinicalUse">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -297,6 +307,11 @@
       <definition value="Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html" />
       <alias value="GeslachtsparameterVoorKlinischGebruik" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.sexParameterForClinicalUse" />
+        <comment value="patSexParameterForClinicalUse" />
+      </mapping>
     </element>
     <element id="Patient.extension:patSexParameterForClinicalUse.extension:patSexParameterForClinicalUse">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -350,6 +365,16 @@
       <alias value="Identificatienummer" />
       <min value="1" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-01" />
+        <comment value="identifier" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.patientIdentificationNumber" />
+        <comment value="patientIdentificationNumber" />
+      </mapping>
     </element>
     <element id="Patient.identifier:bsn">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -375,6 +400,16 @@
         <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
       </patternIdentifier>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-02" />
+        <comment value="identifier - BSN" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.patientIdentificationNumber" />
+        <comment value="patientIdentificationNumber" />
+      </mapping>
     </element>
     <element id="Patient.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -402,6 +437,16 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-05" />
+        <comment value="name" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.nameInformation" />
+        <comment value="NameInformation" />
+      </mapping>
     </element>
     <element id="Patient.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -429,6 +474,16 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-06" />
+        <comment value="Telecom" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.contactInformation" />
+        <comment value="ContactInformation" />
+      </mapping>
     </element>
     <element id="Patient.gender">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -452,15 +507,16 @@
       <definition value="Patient’s administrative gender." />
       <alias value="Geslacht" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Patient's administrative gender." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
-          </extension>
-        </valueSet>
-      </binding>
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-07" />
+        <comment value="Gender" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.gender" />
+        <comment value="Gender" />
+      </mapping>
     </element>
     <element id="Patient.birthDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -484,6 +540,16 @@
       <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
       <alias value="Geboortedatum" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-09" />
+        <comment value="DateOfBirth" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.dateOfBirth" />
+        <comment value="DateOfBirth" />
+      </mapping>
     </element>
     <element id="Patient.deceased[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -513,6 +579,16 @@
       <short value="Deceased[x]" />
       <alias value="Overleden[x]" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased" />
+        <comment value="deceased" />
+      </mapping>
     </element>
     <element id="Patient.deceased[x]:deceasedBoolean">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -540,6 +616,16 @@
         <code value="boolean" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased[x]:deceasedBoolean" />
+        <comment value="deceased" />
+      </mapping>
     </element>
     <element id="Patient.deceased[x]:deceasedDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -567,6 +653,16 @@
         <code value="dateTime" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased[x]:deceasedDateTime" />
+        <comment value="deceased" />
+      </mapping>
     </element>
     <element id="Patient.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -594,6 +690,16 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-11" />
+        <comment value="Address" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.address" />
+        <comment value="Address" />
+      </mapping>
     </element>
     <element id="Patient.maritalStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -617,6 +723,16 @@
       <definition value="Last known marital status" />
       <alias value="BurgerlijkeStaat" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-16" />
+        <comment value="MaritalStatus" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.MaritalStatus" />
+        <comment value="MaritalStatus" />
+      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -647,6 +763,11 @@
       <definition value="Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)." />
       <alias value="Meerling[x]" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth" />
+        <comment value="multipleBirth" />
+      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -674,6 +795,16 @@
         <code value="boolean" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-12" />
+        <comment value="multipleBirthBoolean" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth.boolean" />
+        <comment value="multipleBirthBoolean" />
+      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]:multipleBirthInteger">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -701,6 +832,16 @@
         <code value="integer" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-13" />
+        <comment value="multipleBirthInteger" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth.integer" />
+        <comment value="multipleBirthInteger" />
+      </mapping>
     </element>
     <element id="Patient.contact">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -724,6 +865,16 @@
       <definition value="A contact party (e.g., guardian, partner, friend) for the patient." />
       <alias value="Contactpersoon" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14" />
+        <comment value="Contactpersoon" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon" />
+        <comment value="Contactpersoon" />
+      </mapping>
     </element>
     <element id="Patient.contact.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -743,7 +894,7 @@
         </extension>
       </extension>
       <path value="Patient.contact.name" />
-      <short value="NameInformation" />
+      <short value="Name" />
       <definition value="Contact person name separated in name parts; potentially a simple name string" />
       <alias value="Naamgegevens" />
       <type>
@@ -751,6 +902,16 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.1" />
+        <comment value="Contactpersoon.name" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.name" />
+        <comment value="Contactpersoon.name" />
+      </mapping>
     </element>
     <element id="Patient.contact.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -770,14 +931,24 @@
         </extension>
       </extension>
       <path value="Patient.contact.telecom" />
-      <short value="ContactInformation" />
+      <short value="Telecom" />
       <definition value="Contact information" />
-      <alias value="Contactgegevens" />
+      <alias value="Telecom" />
       <type>
         <code value="ContactPoint" />
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.2" />
+        <comment value="Contactpersoon.telecom" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.telecom" />
+        <comment value="Contactpersoon.telecom" />
+      </mapping>
     </element>
     <element id="Patient.contact.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -805,6 +976,16 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.3" />
+        <comment value="Contactpersoon.address" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.address" />
+        <comment value="Contactpersoon.address" />
+      </mapping>
     </element>
     <element id="Patient.contact.organization">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -833,9 +1014,14 @@
       </type>
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.4" />
+        <comment value="Contactpersoon.Organization" />
+      </mapping>
+      <mapping>
         <identity value="lm-Patient" />
-        <map value="gbb-dataelement-351" />
-        <comment value="Organisatie" />
+        <map value="Patient.Contactpersoon.organization" />
+        <comment value="Contactpersoon.Organization" />
       </mapping>
     </element>
     <element id="Patient.generalPractitioner">
@@ -866,6 +1052,16 @@
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
       </type>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-15" />
+        <comment value="General Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.generalPractitioner" />
+        <comment value="General Practitioner" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
