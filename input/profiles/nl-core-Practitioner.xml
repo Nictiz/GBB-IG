@@ -45,9 +45,9 @@
       <constraint>
         <key value="name-or-identifier" />
         <severity value="error" />
-        <human value="identifier or name SHALL be present" />
+        <human value="identifier or name SHALL be present (from http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu)" />
         <expression value="identifier.exists() or name.exists()" />
-        <source value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu" />
+        <source value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier">
