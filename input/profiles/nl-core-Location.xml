@@ -22,12 +22,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Location" />
-    <uri value="http://ig.nictiz.nl//gbb/Requirements/Location" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Location" />
     <name value="Information requirements for Location" />
   </mapping>
   <mapping>
     <identity value="lm-Location" />
-    <uri value="http://ig.nictiz.nl//gbb/model/StructureDefinition/Location" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Location" />
     <name value="Logical model for Location" />
   </mapping>
   <kind value="resource" />
