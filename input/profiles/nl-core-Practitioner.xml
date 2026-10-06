@@ -22,6 +22,11 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
+    <identity value="requirements-Practitioner" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Practitioner" />
+    <name value="Information requirements for Practitioner" />
+  </mapping>
+  <mapping>
     <identity value="lm-Practitioner" />
     <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Practitioner" />
     <name value="Logical model for Practitioner" />
@@ -44,11 +49,6 @@
         <expression value="identifier.exists() or name.exists()" />
         <source value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu" />
       </constraint>
-      <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.1" />
-        <comment value="HealthProfessional" />
-      </mapping>
     </element>
     <element id="Practitioner.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -80,14 +80,14 @@
       <alias value="ZorgverlenerIdentificatienummer" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.2" />
-        <comment value="HealthProfessionalIdentificationNumber" />
+        <identity value="requirements-practitioner" />
+        <map value="ZVL-001" />
+        <comment value="Identifier" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
         <map value="Practitioner.identifier" />
-        <comment value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert.&#xD;&#xA;&#xD;&#xA;In de Nederlandse situatie worden de volgende nummers gebruikt:&#xD;&#xA;1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.&#xD;&#xA;2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties&#xD;&#xA;3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener.&#xD;&#xA;&#xD;&#xA;Voor medisch personeel of verzorgenden die niet in het BIG register zijn opgenomen mogen bij implementaties eventueel andere nummers worden gebruikt. Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden.&quot;/&gt;&#xD;&#xA;      &lt;alias value=&quot;ZorgverlenerIdentificatienummer" />
+        <comment value="Identifier" />
       </mapping>
     </element>
     <element id="Practitioner.identifier:big">
@@ -145,14 +145,14 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.3" />
+        <identity value="requirements-Practitioner" />
+        <map value="ZVL-002" />
         <comment value="NameInformation" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
         <map value="Practitioner.nameInformation" />
-        <comment value="De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling." />
+        <comment value="NameInformation" />
       </mapping>
     </element>
     <element id="Practitioner.telecom">
@@ -183,19 +183,14 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.8" />
-        <comment value="ContactInformation" />
-      </mapping>
-      <mapping>
-        <identity value="zib-contactinformation-v1.2-2020EN" />
-        <map value="NL-CM:20.6.1" />
-        <comment value="ContactInformation" />
+        <identity value="requirements-Practitioner" />
+        <map value="ZVL-005" />
+        <comment value="Telecom" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
         <map value="Practitioner.telecom" />
-        <comment value="Telecommunicatiecontactgegevens (adressen) die aan een persoon zijn gekoppeld, zoals een telefoonnummer, e-mailadres of berichtenservice. Er kunnen meerdere telecommunicatieadressen worden opgegeven." />
+        <comment value="Telecom" />
       </mapping>
     </element>
     <element id="Practitioner.address">
@@ -225,14 +220,14 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.7" />
-        <comment value="AddressInformation" />
+        <identity value="requirements-Practitioner" />
+        <map value="ZVL-004" />
+        <comment value="Address" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
         <map value="Practitioner.address" />
-        <comment value="Rol-agnostische adresinformatie van een zorgverlener (meestal het thuisadres)." />
+        <comment value="Address" />
       </mapping>
     </element>
     <element id="Practitioner.gender">
@@ -266,14 +261,14 @@
         </valueSet>
       </binding>
       <mapping>
-        <identity value="zib-healthprofessional-v3.5-2020EN" />
-        <map value="NL-CM:17.1.9" />
+        <identity value="requirements-Practitioner" />
+        <map value="ZVL-003" />
         <comment value="Gender" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
         <map value="Practitioner.gender" />
-        <comment value="Administratief geslacht van de zorgverlener" />
+        <comment value="Gender" />
       </mapping>
     </element>
   </differential>
