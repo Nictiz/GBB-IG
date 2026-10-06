@@ -30,36 +30,6 @@
     <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient" />
     <name value="Logical model for Patient" />
   </mapping>
-  <mapping>
-    <identity value="zib-patient-v3.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/Patient-v3.2(2020EN)" />
-    <name value="zib Patient-v3.2(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-patient-v4.3-2026EN" />
-    <uri value="https://zibs.nl/wiki/Patient-v4.3(2026-1EN)" />
-    <name value="zib Patient-v4.3(2026EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-maritalstatus-v3.1-2020EN" />
-    <uri value="https://zibs.nl/wiki/MaritalStatus-v3.1(2020EN)" />
-    <name value="zib MaritalStatus-v3.1(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-languageproficiency-v3.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/LanguageProficiency-v3.2(2020EN)" />
-    <name value="zib LanguageProficiency-v3.2(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactinformation-v1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactInformation-v1.2(2020EN)" />
-    <name value="zib ContactInformation-v1.2(2020EN)" />
-  </mapping>
-  <mapping>
-    <identity value="zib-contactperson-v3.4-2020EN" />
-    <uri value="https://zibs.nl/wiki/ContactPerson-v3.4(2020EN)" />
-    <name value="zib ContactPerson-v3.4(2020EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
@@ -71,11 +41,6 @@
       <short value="Patient" />
       <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model." />
       <alias value="Patient" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.1" />
-        <comment value="Patient" />
-      </mapping>
     </element>
     <element id="Patient.extension:genderIdentity">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -167,11 +132,6 @@
       <definition value="The gender with which the person identifies." />
       <alias value="GenderIdentiteit" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v4.3-2026EN" />
-        <map value="NL-CM:0.1.34" />
-        <comment value="GenderIdentity" />
-      </mapping>
     </element>
     <element id="Patient.extension:pronouns">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -390,11 +350,6 @@
       <alias value="Identificatienummer" />
       <min value="1" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.7" />
-        <comment value="PatientIdentificationNumber" />
-      </mapping>
     </element>
     <element id="Patient.identifier:bsn">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -447,11 +402,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.6" />
-        <comment value="NameInformation" />
-      </mapping>
     </element>
     <element id="Patient.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -479,11 +429,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.5" />
-        <comment value="ContactInformation" />
-      </mapping>
     </element>
     <element id="Patient.gender">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -516,11 +461,6 @@
           </extension>
         </valueSet>
       </binding>
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.9" />
-        <comment value="Gender" />
-      </mapping>
     </element>
     <element id="Patient.birthDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -544,11 +484,6 @@
       <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
       <alias value="Geboortedatum" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.10" />
-        <comment value="DateOfBirth" />
-      </mapping>
     </element>
     <element id="Patient.deceased[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -605,11 +540,6 @@
         <code value="boolean" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.32" />
-        <comment value="DeathIndicator" />
-      </mapping>
     </element>
     <element id="Patient.deceased[x]:deceasedDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -637,11 +567,6 @@
         <code value="dateTime" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.33" />
-        <comment value="DateOfDeath" />
-      </mapping>
     </element>
     <element id="Patient.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -669,11 +594,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.4" />
-        <comment value="AddressInformation" />
-      </mapping>
     </element>
     <element id="Patient.maritalStatus">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -697,11 +617,6 @@
       <definition value="Last known marital status" />
       <alias value="BurgerlijkeStaat" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-maritalstatus-v3.1-2020EN" />
-        <map value="NL-CM:7.9.2" />
-        <comment value="MaritalStatus" />
-      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -759,11 +674,6 @@
         <code value="boolean" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v3.2-2020EN" />
-        <map value="NL-CM:0.1.31" />
-        <comment value="MultipleBirthIndicator" />
-      </mapping>
     </element>
     <element id="Patient.multipleBirth[x]:multipleBirthInteger">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -791,11 +701,6 @@
         <code value="integer" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-patient-v4.3-2026EN" />
-        <map value="NL-CM:0.1.35" />
-        <comment value="MultipleBirthSequence" />
-      </mapping>
     </element>
     <element id="Patient.contact">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -820,11 +725,6 @@
       <comment value="Whereas the zib ContactPerson includes all (non-healthcare professional) persons that are involved in the care for a patient, FHIR distinguishes two use cases for these persons:&#xD;&#xA;&#xD;&#xA;* The RelatedPerson resource is used to capture information about any person that is related to the patient, using the profile &lt;http://nictiz.nl/fhir/StructureDefinition/zib-ContactPerson&gt;.&#xD;&#xA;* Information about persons that should be _contacted_ regarding the care for the patient is captured using the `Patient.contact` resource.&#xD;&#xA;&#xD;&#xA;If a person is both a related person and a contact person, then some data duplication is inevitable. The zib-ContactPerson can be referenced using the extension in `contact:contactPerson`." />
       <alias value="Contactpersoon" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
-        <map value="NL-CM:3.1.1" />
-        <comment value="Contact" />
-      </mapping>
     </element>
     <element id="Patient.contact.name">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -852,11 +752,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
-        <map value="NL-CM:3.1.4" />
-        <comment value="NameInformation" />
-      </mapping>
     </element>
     <element id="Patient.contact.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -884,11 +779,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
-        <map value="NL-CM:3.1.6" />
-        <comment value="ContactInformation" />
-      </mapping>
     </element>
     <element id="Patient.contact.address">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -916,11 +806,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="zib-contactperson-v3.4-2020EN" />
-        <map value="NL-CM:3.1.5" />
-        <comment value="AddressInformation" />
-      </mapping>
     </element>
     <element id="Patient.contact.organization">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
