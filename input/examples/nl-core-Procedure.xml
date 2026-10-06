@@ -2,7 +2,7 @@
 <Procedure xmlns="http://hl7.org/fhir">
   <id value="nl-core-Procedure-02" />
   <meta>
-    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure" />
+    <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
   </meta>
   <text>
     <status value="generated" />
