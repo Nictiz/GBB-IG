@@ -239,7 +239,7 @@
       <alias value="Adres" />
       <type>
         <code value="Address" />
-        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-AdressInformation" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
       <mapping>
