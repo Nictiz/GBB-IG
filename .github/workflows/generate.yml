@@ -38,6 +38,12 @@ jobs:
         run: |
           npm -g install fsh-sushi
           sushi .
+      - name: Translate menu
+        run: |
+          cd util/scripts/translate-menu
+          npm install
+          cd ../../../
+          node util/scripts/translate-menu/translate-menu.js --lang en
       - name: Commit generated artifacts
         run: |
           git config --global user.name 'Nictiz FHIR IG artifacts generator'
