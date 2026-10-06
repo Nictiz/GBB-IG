@@ -40,7 +40,7 @@
     <element id="Practitioner">
       <path value="Practitioner" />
       <short value="Practitioner" />
-      <definition value="Details of a natural person who provides professional healthcare services." />
+      <definition value="Details of a natural person who provides professional healthcare services. (NEN7540:2024)" />
       <alias value="Zorgverlener" />
       <constraint>
         <key value="name-or-identifier" />
