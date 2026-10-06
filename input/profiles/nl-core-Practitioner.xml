@@ -48,7 +48,6 @@
         <severity value="error" />
         <human value="identifier or name SHALL be present (from http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu)" />
         <expression value="identifier.exists() or name.exists()" />
-        <source value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier">
@@ -81,7 +80,7 @@
       <alias value="ZorgverlenerIdentificatienummer" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-practitioner" />
+        <identity value="requirements-Practitioner" />
         <map value="ZVL-001" />
         <comment value="Identifier" />
       </mapping>
@@ -252,14 +251,6 @@
       <definition value="Practitioner’s administrative gender." />
       <alias value="Geslacht" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1">
-          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
-            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/GeslachtCodelijst-to-AdministrativeGender" />
-          </extension>
-        </valueSet>
-      </binding>
       <mapping>
         <identity value="requirements-Practitioner" />
         <map value="ZVL-003" />
