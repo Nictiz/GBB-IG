@@ -106,11 +106,12 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   # Building blocks:
-  Building blocks:
+  Bouwblokken:
     ContactPoint:
-      Overview: ContactPoint.html
+      Overzicht: ContactPoint.html
       Requirements: Requirements-ContactPoint.html
-      Agreement model: StructureDefinition-ContactPoint-model.html
+      Afsprakenmodel: StructureDefinition-ContactPoint.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
