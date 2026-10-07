@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Achtergrondinformatie"
+msgstr "Background"
+
+msgid "Obligations"
+msgstr ""
+
+msgid "Artefacten"
+msgstr "Artifacts"
