@@ -105,11 +105,12 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  Building blocks:
-    Practitioner:
-      Overview: Practitioner.html
+  Bouwblokken:
+    Zorgverlener:
+      Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html
-      Agreement model: StructureDefinition-Practitioner-model.html
+      Afsprakenmodel: StructureDefinition-Practitioner.html
+      FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
