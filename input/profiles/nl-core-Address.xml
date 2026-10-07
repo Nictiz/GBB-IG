@@ -22,12 +22,12 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Address" />
-    <uri value="http://nictiz.nl/ig/gbb/Requirements/Address" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Address" />
     <name value="Information requirements for Address" />
   </mapping>
   <mapping>
     <identity value="lm-Address" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Address" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Address" />
     <name value="Logical model for Address" />
   </mapping>
   <kind value="complex-type" />
