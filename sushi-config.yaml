@@ -105,11 +105,12 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  Building blocks:
+  Bouwblokken:
     Address:
-      Overview: Address.html
+      Overzicht: Address.html
       Requirements: Requirements-Address.html
-      Agreement model: StructureDefinition-Address-model.html
+      Afsprakenmodel: StructureDefinition-Address.html
+      FHIR-profiel: StructureDefinition-nl-core-Address.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
