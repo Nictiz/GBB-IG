@@ -106,7 +106,7 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Bouwblokken:
-    Organization:
+    Organisatie:
       Overzicht: Organization.html
       Requirements: Requirements-Organization.html
       Afsprakenmodel: StructureDefinition-Organization.html
