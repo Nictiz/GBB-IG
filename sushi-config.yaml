@@ -106,7 +106,7 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Bouwblokken:
-    HumanName:
+    Naam:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
       Afsprakenmodel: StructureDefinition-HumanName.html
