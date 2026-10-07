@@ -1,0 +1,9 @@
+{
+  "name": "yaml-po-xml-translator",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "commander": "^15.0.0"
+  }
+}
