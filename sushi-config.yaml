@@ -105,11 +105,12 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  Building blocks:
-    Patient:
-      Overview: Patient.html
+  Bouwblokken:
+    Patiënt:
+      Overzicht: Patient.html
       Requirements: Requirements-Patient.html
-      Agreement model: StructureDefinition-Patient-model.html
+      Afsprakenmodel: StructureDefinition-Patient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
