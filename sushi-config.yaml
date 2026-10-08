@@ -131,6 +131,11 @@ menu:
       Requirements: Requirements-Practitioner.html
       Afsprakenmodel: StructureDefinition-Practitioner.html
       FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
+    ZorgverlenerRol:
+      Overzicht: PractitionerRole.html
+      Requirements: Requirements-PractitionerRole.html
+      Afsprakenmodel: StructureDefinition-PractitionerRole.html
+      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

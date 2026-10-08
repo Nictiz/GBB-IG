@@ -96,6 +96,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogicalModelPractitionerRole"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "NaamgebruikCodelijst"
 msgstr ""
 
@@ -159,6 +164,16 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core PractitionerRole"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "A health professional is a person who is authorized to perform actions in the field of individual healthcare."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
@@ -179,12 +194,47 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "PractitionerRole"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "RegistrerendSysteem"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Bronsysteem voor de registratie"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "SpecialismeAGBCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "COD016-VEKT (Vektis AGB-medische specialismen) - Alle waarden"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "SpecialismeCodelijsten"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Value set combining the distinct value sets that the zib HealthProfessional binds to for NL-CM:17.1.4 Specialty. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "SpecialismeUZICodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "RoleCodeNL (Zorgverlenertype (personen)) - Alle waarden"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -236,4 +286,9 @@ msgstr "Patiënt"
 #: ImplementationGuide.definition.page.title
 msgid "Practitioner"
 msgstr "Zorgverlener"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Practitioner Role"
+msgstr "ZorgverlenerRol"
 
