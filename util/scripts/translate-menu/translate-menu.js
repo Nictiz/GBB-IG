@@ -23,17 +23,17 @@ function collectMenuKeys(menu) {
         throw new Error('The YAML file must contain a mapping named "menu".');
     }
 
-    const keys = [];
+    const keys = new Set();
     function visit(mapping) {
         for (const [key, value] of Object.entries(mapping)) {
-            keys.push(key);
+            keys.add(key);
             if (value && typeof value === 'object' && !Array.isArray(value)) {
                 visit(value);
             }
         }
     }
     visit(menu);
-    return keys;
+    return Array.from(keys);
 }
 
 // PO quoted strings use the same common escapes as JSON, plus octal escapes.

@@ -106,11 +106,41 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Bouwblokken:
+    Adres:
+      Overzicht: Address.html
+      Requirements: Requirements-Address.html
+      Afsprakenmodel: StructureDefinition-Address.html
+      FHIR-profiel: StructureDefinition-nl-core-Address.html
+    Contactgegevens:
+      Overzicht: ContactPoint.html
+      Requirements: Requirements-ContactPoint.html
+      Afsprakenmodel: StructureDefinition-ContactPoint.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
     Locatie:
       Overzicht: Location.html
       Requirements: Requirements-Location.html
       Afsprakenmodel: StructureDefinition-Location.html
       FHIR-profiel: StructureDefinition-nl-core-Location.html
+    Naam:
+      Overzicht: HumanName.html
+      Requirements: Requirements-HumanName.html
+      Afsprakenmodel: StructureDefinition-HumanName.html
+      FHIR-profiel: StructureDefinition-nl-core-HumanName.html
+    Patiënt:
+      Overzicht: Patient.html
+      Requirements: Requirements-Patient.html
+      Afsprakenmodel: StructureDefinition-Patient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
+    Zorgverlener:
+      Overzicht: Practitioner.html
+      Requirements: Requirements-Practitioner.html
+      Afsprakenmodel: StructureDefinition-Practitioner.html
+      FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
+    ZorgverlenerRol:
+      Overzicht: PractitionerRole.html
+      Requirements: Requirements-PractitionerRole.html
+      Afsprakenmodel: StructureDefinition-PractitionerRole.html
+      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
