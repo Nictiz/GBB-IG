@@ -86,6 +86,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogicalModelOrganization"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "LogicalModelPatient"
 msgstr ""
 
@@ -141,6 +146,16 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core Organization"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "nl core Patient"
 msgstr ""
 
@@ -180,6 +195,21 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Systeem dat gegevens ontsluit aan derden"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "OrganisatieTypeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "OrganisatieTypeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Organization"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -276,6 +306,11 @@ msgstr "Naam"
 #: ImplementationGuide.definition.page.title
 msgid "Obligations"
 msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Organization"
+msgstr "Organisatie"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
