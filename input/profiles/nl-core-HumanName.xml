@@ -5,7 +5,7 @@
       human-readable rendering can be found in the implementation guide(s) where this resource is
       used.</div></text>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
-  <name value="NlCoreHumanName" />
+  <name value="NlcoreHumanName" />
   <title value="nl core HumanName" />
   <status value="draft" />
   <publisher value="Nictiz" />
