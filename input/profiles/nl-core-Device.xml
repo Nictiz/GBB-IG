@@ -538,6 +538,9 @@
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-deviceType" />
+          </extension>
           <extension url="purpose">
             <valueCode value="minimum"/>
           </extension>
