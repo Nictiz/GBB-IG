@@ -21,6 +21,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "AllergyIntolerance"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "ContactPoint"
 msgstr ""
 
@@ -132,6 +137,16 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Address information includes data where a person resides (temporarily, permanently) or where a building is located."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core AllergyIntolerance"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -249,6 +264,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Reaction"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "RegistrerendSysteem"
 msgstr ""
 
@@ -314,6 +334,11 @@ msgstr "Adres"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
+msgid "Allergy Intolerance"
+msgstr "AllergieIntolerantie"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
 msgid "Contact Point"
 msgstr "Contactgegevens"
 
@@ -351,4 +376,9 @@ msgstr "Zorgverlener"
 #: ImplementationGuide.definition.page.title
 msgid "Practitioner Role"
 msgstr "ZorgverlenerRol"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Reaction"
+msgstr "Reactie"
 
