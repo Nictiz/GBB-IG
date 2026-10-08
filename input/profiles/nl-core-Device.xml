@@ -1,14 +1,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Device" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps" />
-  </extension>
   <text>
     <status value="empty" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps" />
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
   <name value="NlcoreDevice" />
   <title value="nl core Device" />
@@ -60,8 +60,8 @@
         </extension>
       </extension>
       <path value="Device.identifier" />
-      <mustSupport value="true" />
       <short value="Instance identifier" />
+      <mustSupport value="true" />
       <definition value="An identifier used to identify an instance of a Device." />
       <mapping>
         <identity value="requirements-Device" />
@@ -71,6 +71,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.identifier" />
+        <comment value="Identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier">
@@ -119,6 +120,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.uniquedeviceidentifierUDI" />
+        <comment value="Unieke device identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.deviceIdentifier">
@@ -169,6 +171,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.uniquedeviceidentifierUDI.identifier" />
+        <comment value="Unieke device identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.issuer">
@@ -218,6 +221,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.uniquedeviceidentifierUDI.issuer" />
+        <comment value="UDI Issuer" />
       </mapping>
     </element>
     <element id="Device.manufacturer">
@@ -247,6 +251,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.manufacturer" />
+        <comment value="Manufacturer" />
       </mapping>
     </element>
     <element id="Device.manufactureDate">
@@ -276,6 +281,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.manufacturerDate" />
+        <comment value="Production datetime" />
       </mapping>
     </element>
     <element id="Device.expirationDate">
@@ -305,6 +311,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.expirationDate" />
+        <comment value="Expiration datetime" />
       </mapping>
     </element>
     <element id="Device.lotNumber">
@@ -334,6 +341,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.lotNumber" />
+        <comment value="Lot number" />
       </mapping>
     </element>
     <element id="Device.serialNumber">
@@ -378,6 +386,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.serialNumber" />
+        <comment value="Serial number" />
       </mapping>
     </element>
     <element id="Device.deviceName">
@@ -412,6 +421,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.deviceName" />
+        <comment value="Device name" />
       </mapping>
     </element>
     <element id="Device.deviceName.name">
@@ -446,6 +456,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.deviceName.name" />
+        <comment value="Device name" />
       </mapping>
     </element>
     <element id="Device.deviceName.type">
@@ -475,6 +486,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.deviceName.type" />
+        <comment value="Device name type" />
       </mapping>
     </element>
     <element id="Device.modelNumber">
@@ -504,6 +516,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.modelNumber" />
+        <comment value="Model number" />
       </mapping>
     </element>
     <element id="Device.type">
@@ -564,6 +577,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.type" />
+        <comment value="Device type" />
       </mapping>
     </element>
     <element id="Device.version">
@@ -587,6 +601,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.version" />
+        <comment value="Device version" />
       </mapping>
     </element>
     <element id="Device.version.value">
@@ -616,6 +631,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.version.value" />
+        <comment value="Device version" />
       </mapping>
     </element>
     <element id="Device.note.text">
@@ -650,6 +666,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.note" />
+        <comment value="Comment" />
       </mapping>
     </element>
   </differential>
