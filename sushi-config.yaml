@@ -111,6 +111,11 @@ menu:
       Requirements: Requirements-Address.html
       Afsprakenmodel: StructureDefinition-Address.html
       FHIR-profiel: StructureDefinition-nl-core-Address.html
+    AllergieIntolerantie:
+      Overzicht: AllergyIntolerance.html
+      Requirements: Requirements-AllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-LogicalModelAllergyIntolerance.html
+      FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
     Contactgegevens:
       Overzicht: ContactPoint.html
       Requirements: Requirements-ContactPoint.html
@@ -146,6 +151,10 @@ menu:
       Requirements: Requirements-Patient.html
       Afsprakenmodel: StructureDefinition-Patient.html
       FHIR-profiel: StructureDefinition-nl-core-Patient.html
+    Reactie:
+      Overzicht: Reaction.html
+      Requirements: Requirements-Reaction.html
+      Afsprakenmodel: StructureDefinition-LogicalModelReaction.h
     Zorgverlener:
       Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html

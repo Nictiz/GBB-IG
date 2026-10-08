@@ -28,6 +28,9 @@ msgstr "Agreement model"
 msgid "FHIR-profiel"
 msgstr "FHIR profile"
 
+msgid "AllergieIntolerantie"
+msgstr "AllergyIntolerance"
+
 msgid "Contactgegevens"
 msgstr "ContactPoint"
 
@@ -45,6 +48,9 @@ msgstr "Organization"
 
 msgid "Patiënt"
 msgstr "Patient"
+
+msgid "Reactie"
+msgstr ""
 
 msgid "Zorgverlener"
 msgstr "Practitioner"
