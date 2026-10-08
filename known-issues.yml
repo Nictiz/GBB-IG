@@ -11,3 +11,8 @@ issues should occur: true
 
 issues should occur: false
 
+"*":
+  ignored issues:
+    "*.extension[*].extension[*].value.ofType(canonical)":
+      - message: "The Profile 'http://hl7.org/fhir/StructureDefinition/obligation|5.3.0' definition allows for the type uri but found type canonical"
+        reason: This is an error in the tooling regarding the Obligations extensions. The tooling seems to load the STU3 version of the extension, where the type shoud be uri.

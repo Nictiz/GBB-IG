@@ -37,6 +37,9 @@ msgstr "Location"
 msgid "Naam"
 msgstr "HumanName"
 
+msgid "Organisatie"
+msgstr "Organization"
+
 msgid "Patiënt"
 msgstr "Patient"
 
