@@ -16,6 +16,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "ContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "GeslachtCodelijst"
 msgstr ""
 
@@ -28,6 +33,11 @@ msgstr ""
 #: ImplementationGuide.definition.resource.name
 msgid "HumanName"
 msgstr "Naam"
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelContactPoint"
+msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
@@ -47,6 +57,16 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "NaamgebruikCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core ContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Contact information includes a person's telephone numbers and e-mail addresses."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -116,6 +136,11 @@ msgstr ""
 #: ImplementationGuide.definition.page.title
 msgid "Home"
 msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Contact Point"
+msgstr "Contactgegevens"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
