@@ -40,5 +40,8 @@ msgstr "Patient"
 msgid "Zorgverlener"
 msgstr "Practitioner"
 
+msgid "ZorgverlenerRol"
+msgstr PractitionerRole""
+
 msgid "Artefacten"
 msgstr "Artifacts"
