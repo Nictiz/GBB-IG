@@ -985,7 +985,7 @@
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="NL-04-04" />
-        <comment value="Note" />
+        <comment value="Toelichting" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
