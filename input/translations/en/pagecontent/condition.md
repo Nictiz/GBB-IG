@@ -1,3 +1,4 @@
+{% include_relative Condition-Concept.md %}
 ### Information sources
 This version of this generic building block (GBB) covers information requirements from the following sources:
 * EHDSCondition Logical Information Model, version 1.0.0
