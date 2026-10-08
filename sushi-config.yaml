@@ -106,6 +106,26 @@ menu:
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
   Bouwblokken:
+    Adres:
+      Overzicht: Address.html
+      Requirements: Requirements-Address.html
+      Afsprakenmodel: StructureDefinition-Address.html
+      FHIR-profiel: StructureDefinition-nl-core-Address.html
+    Contactgegevens:
+      Overzicht: ContactPoint.html
+      Requirements: Requirements-ContactPoint.html
+      Afsprakenmodel: StructureDefinition-ContactPoint.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
+    Naam:
+      Overzicht: HumanName.html
+      Requirements: Requirements-HumanName.html
+      Afsprakenmodel: StructureDefinition-HumanName.html
+      FHIR-profiel: StructureDefinition-nl-core-HumanName.html
+    Patiënt:
+      Overzicht: Patient.html
+      Requirements: Requirements-Patient.html
+      Afsprakenmodel: StructureDefinition-Patient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
     Zorgverlener:
       Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html
