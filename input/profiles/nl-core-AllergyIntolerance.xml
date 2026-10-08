@@ -333,6 +333,9 @@
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-allergies-intolerance-ips" />
+          </extension>
           <extension url="purpose">
             <valueCode value="extensible"/>
           </extension>
@@ -405,7 +408,7 @@
       <alias value="Patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
       </type>
       <mustSupport value="true" />
       <mapping>
@@ -459,10 +462,10 @@
       <alias value="Zorgverlener" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <mustSupport value="true" />
@@ -504,9 +507,9 @@
       <alias value="Bron" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <mustSupport value="true" />
@@ -706,6 +709,9 @@
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-ehdsi-allergen-no-drug" />
+          </extension>
           <extension url="purpose">
             <valueCode value="extensible"/>
           </extension>
@@ -757,6 +763,9 @@
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-allergy-reaction-uv-ips" />
+          </extension>
           <extension url="purpose">
             <valueCode value="extensible"/>
           </extension>
@@ -926,6 +935,9 @@
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-route-van-exposure" />
+          </extension>
           <extension url="purpose">
             <valueCode value="current"/>
           </extension>
