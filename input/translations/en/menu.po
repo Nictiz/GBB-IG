@@ -34,6 +34,12 @@ msgstr "AllergyIntolerance"
 msgid "Contactgegevens"
 msgstr "ContactPoint"
 
+msgid "Device"
+msgstr "Device"
+
+msgid "Gezondheidstoestand"
+msgstr "Condition"
+
 msgid "Locatie"
 msgstr "Location"
 
