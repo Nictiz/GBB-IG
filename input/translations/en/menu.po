@@ -13,8 +13,8 @@ msgstr ""
 msgid "Bouwblokken"
 msgstr "Building blocks"
 
-msgid "Contactgegevens"
-msgstr "ContactPoint"
+msgid "Adres"
+msgstr "Address"
 
 msgid "Overzicht"
 msgstr "Overview"
@@ -27,6 +27,9 @@ msgstr "Agreement model"
 
 msgid "FHIR-profiel"
 msgstr "FHIR profile"
+
+msgid "Contactgegevens"
+msgstr "ContactPoint"
 
 msgid "Naam"
 msgstr "HumanName"
