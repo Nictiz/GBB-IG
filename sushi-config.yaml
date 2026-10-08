@@ -126,6 +126,11 @@ menu:
       Requirements: Requirements-Location.html
       Afsprakenmodel: StructureDefinition-Location.html
       FHIR-profiel: StructureDefinition-nl-core-Location.html
+    MedischHulpmiddel:
+      Overzicht: DeviceUse.html
+      Requirements: Requirements-DeviceUse.html
+      Afsprakenmodel: StructureDefinition-LogicalModelDeviceUse.html
+      FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
     Naam:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
