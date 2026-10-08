@@ -141,8 +141,8 @@
         </extension>
       </extension>
       <path value="Device.udiCarrier.deviceIdentifier" />
-      <mustSupport value="true" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-02" />
@@ -536,6 +536,7 @@
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Device.type" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -552,7 +553,6 @@
         <description value="Codes to identify medical devices."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/device-type|4.0.1"/>
       </binding>
-      <path value="Device.type" />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
