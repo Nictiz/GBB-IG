@@ -64,6 +64,7 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-08" />
+        <comment value="Gebruikte taal" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.identifier">
@@ -88,10 +89,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-04" />
+        <comment value="Business identifier" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.identificationNumber" />
+        <comment value="Identifier" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.status">
@@ -116,10 +119,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-01" />
+        <comment value="Status van het gebruik" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.status" />
+        <comment value="Status" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.subject">
@@ -149,10 +154,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-02" />
+        <comment value="Patiënt" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.patient" />
+        <comment value="Patient" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.timing[x]">
@@ -177,18 +184,22 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09" />
+        <comment value="Periode van gebruik" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09.01" />
+        <comment value="Startdatum van periode" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09.02" />
+        <comment value="Einddatum van periode" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.period" />
+        <comment value="Period" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.recordedOn">
@@ -213,10 +224,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-06" />
+        <comment value="Moment van schrijven" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.registrationDateTime" />
+        <comment value="Registration date and time" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.source">
@@ -248,6 +261,7 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-07" />
+        <comment value="Bron van de informatie" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.device">
@@ -276,22 +290,27 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.01" />
+        <comment value="Informatie over het product dat gebruikt wordt als medisch hulpmiddel" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.02" />
+        <comment value="Informatie van het type product dat gebruikt wordt als medisch hulpmiddel" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.03" />
+        <comment value="Informatie van de product ID dat gebruikt wordt als medisch hulpmiddel" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.04" />
+        <comment value="Gecodeerde informatie van het product dat niet gebruikt wordt als medisch hulpmiddel" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.device" />
+        <comment value="Device" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
@@ -316,10 +335,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11" />
+        <comment value="Reden van gebruik" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.reasonForUse" />
+        <comment value="Reden van gebruik" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
@@ -353,18 +374,22 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.01" />
+        <comment value="Reden van gebruik" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.02" />
+        <comment value="Reden van gebruik" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.03" />
+        <comment value="Reden van gebruik" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.justificationForUse[x]" />
+        <comment value="Motivation" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
@@ -399,14 +424,17 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-10" />
+        <comment value="Anatomische locatie" />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-10.01" />
+        <comment value="Anatomische locatie" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.anatomicalLocation" />
+        <comment value="Anatomical location" />
       </mapping>
     </element>
     <element id="DeviceUseStatement.note.text">
@@ -431,10 +459,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-12" />
+        <comment value="Toelichting" />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
         <map value="DeviceUse.comment" />
+        <comment value="Comment" />
       </mapping>
     </element>
   </differential>
