@@ -58,6 +58,9 @@ msgstr "Patient"
 msgid "Reactie"
 msgstr ""
 
+msgid "Verrichting"
+msgstr "Procedure"
+
 msgid "Zorgverlener"
 msgstr "Practitioner"
 

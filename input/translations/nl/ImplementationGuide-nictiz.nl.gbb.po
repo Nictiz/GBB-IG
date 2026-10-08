@@ -472,3 +472,7 @@ msgstr "ZorgverlenerRol"
 msgid "Reaction"
 msgstr "Reactie"
 
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Procedure"
+msgstr "Verrichting"
