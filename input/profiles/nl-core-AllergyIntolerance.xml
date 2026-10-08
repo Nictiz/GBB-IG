@@ -329,6 +329,7 @@
       <path value="AllergyIntolerance.code" />
       <short value="Substance" />
       <alias value="VeroorzakendeStof" />
+      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
@@ -346,7 +347,6 @@
         <valueSet
           value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"/>
       </binding>
-      <min value="1" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-03" />
@@ -403,7 +403,6 @@
       <path value="AllergyIntolerance.patient" />
       <short value="Patient" />
       <alias value="Patient" />
-      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
@@ -458,7 +457,6 @@
       <path value="AllergyIntolerance.recorder" />
       <short value="Author" />
       <alias value="Zorgverlener" />
-      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -467,6 +465,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-01" />
@@ -503,7 +502,6 @@
       <path value="AllergyIntolerance.asserter" />
       <short value="Source" />
       <alias value="Bron" />
-      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -511,6 +509,7 @@
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-18" />
