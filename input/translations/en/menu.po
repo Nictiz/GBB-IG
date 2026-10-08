@@ -41,7 +41,7 @@ msgid "Zorgverlener"
 msgstr "Practitioner"
 
 msgid "ZorgverlenerRol"
-msgstr PractitionerRole""
+msgstr "PractitionerRole"
 
 msgid "Artefacten"
 msgstr "Artifacts"
