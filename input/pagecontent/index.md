@@ -3,7 +3,7 @@ Deze gids bevat de generieke bouwblokken voor informatiestandaarden in het Neder
 
 Op het moment is de methodiek om tot generieke bouwblokken te komen nog in beweging. Meer informatie over de methodiek is te vinden op de [Confluence-omgeving van Nictiz](https://nictiz.atlassian.net/wiki/spaces/GBBS/pages/1106149454/Leeswijzer).
 
-Vragen en wijzigingsverzoeken kunnen ingediend worden via [de service desk van Nictiz](https://nictiz.atlassian.net/servicedesk/customer/portal/1/group/-1).
+Vragen en wijzigingsverzoeken kunnen ingediend worden via [de servicedesk van Nictiz](https://nictiz.atlassian.net/servicedesk/customer/portal/1/group/-1).
 
 ### Afhankelijkheden
 {% include dependency-table-short.xhtml %}
