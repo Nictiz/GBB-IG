@@ -57,8 +57,8 @@
         </extension>
       </extension>
       <path value="Device.identifier" />
-      <definition value="An identifier used to identify an instance of a Device." />
       <short value="Instance identifier" />
+      <definition value="An identifier used to identify an instance of a Device." />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
@@ -596,6 +596,7 @@
         </extension>
       </extension>
       <path value="Device.version" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.version" />
