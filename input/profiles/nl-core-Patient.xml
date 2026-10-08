@@ -1,0 +1,1067 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-Patient" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+  <name value="NlCorePatient" />
+  <title value="nl core Patient" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.&#xD;&#xA;Nationality is used as an indication of the country of citizenship. &#xD;&#xA;Marital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.&#xD;&#xA;Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Patient](http://ig.nictiz.nl/gbb/Patient)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-Patient" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Patient" />
+    <name value="Information requirements for Patient" />
+  </mapping>
+  <mapping>
+    <identity value="lm-Patient" />
+    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient" />
+    <name value="Logical model for Patient" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <short value="Patient" />
+      <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model." />
+      <alias value="Patient" />
+    </element>
+    <element id="Patient.extension:genderIdentity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension" />
+      <sliceName value="genderIdentity" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:genderIdentity.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="GenderIdentity" />
+      <definition value="The gender with which the person identifies." />
+      <alias value="GenderIdentiteit" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.genderIdentity" />
+        <comment value="GenderIdentity" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:pronouns">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension" />
+      <sliceName value="pronouns" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:pronouns.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Pronouns" />
+      <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html" />
+      <alias value="Persoonlijke voornaamwoorden" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.pronouns" />
+        <comment value="pronouns" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension" />
+      <sliceName value="patSexParameterForClinicalUse" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse.extension">
+      <path value="Patient.extension.extension" />
+      <min value="2" />
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="SexParameterForClinicalUse" />
+      <definition value="Guidance on how a recipient should apply settings or reference ranges that are derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. Valueset: https://terminology.hl7.org/7.1.0/en/ValueSet-sex-parameter-for-clinical-use.html" />
+      <alias value="GeslachtsparameterVoorKlinischGebruik" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.sexParameterForClinicalUse" />
+        <comment value="patSexParameterForClinicalUse" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:patSexParameterForClinicalUse.extension:patSexParameterForClinicalUse">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="patSexParameterForClinicalUse" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="PatientIdentificationNumber" />
+      <definition value="The patient’s identification number. In Dutch transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers, foreign identification numbers and passport numbers." />
+      <alias value="Identificatienummer" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-01" />
+        <comment value="identifier" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.patientIdentificationNumber" />
+        <comment value="patientIdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier:bsn">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.identifier" />
+      <sliceName value="bsn" />
+      <max value="1" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+      </patternIdentifier>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-02" />
+        <comment value="identifier - BSN" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.patientIdentificationNumber" />
+        <comment value="patientIdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Patient.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.name" />
+      <short value="NameInformation" />
+      <definition value="Patient name separated in name parts and/or as simple name string" />
+      <alias value="Naamgegevens" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-05" />
+        <comment value="name" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.nameInformation" />
+        <comment value="NameInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.telecom" />
+      <short value="ContactInformation" />
+      <definition value="Patient contact details, such as phone or email." />
+      <alias value="Contactgegevens" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-06" />
+        <comment value="Telecom" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.contactInformation" />
+        <comment value="ContactInformation" />
+      </mapping>
+    </element>
+    <element id="Patient.gender">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.gender" />
+      <short value="Gender" />
+      <definition value="Patient’s administrative gender." />
+      <alias value="Geslacht" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-07" />
+        <comment value="Gender" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.gender" />
+        <comment value="Gender" />
+      </mapping>
+    </element>
+    <element id="Patient.birthDate">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.birthDate" />
+      <short value="DateOfBirth" />
+      <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
+      <alias value="Geboortedatum" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-09" />
+        <comment value="DateOfBirth" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.dateOfBirth" />
+        <comment value="DateOfBirth" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Deceased[x]" />
+      <alias value="Overleden[x]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased" />
+        <comment value="deceased" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <short value="DeathIndicator" />
+      <definition value="An indication stating whether the patient has died." />
+      <alias value="OverlijdensIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased[x]:deceasedBoolean" />
+        <comment value="deceased" />
+      </mapping>
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <short value="DateOfDeath" />
+      <definition value="The date on which the patient died. A ‘vague’ date, such as only the year, is permitted." />
+      <alias value="DatumOverlijden" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-10" />
+        <comment value="deceased" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.deceased[x]:deceasedDateTime" />
+        <comment value="deceased" />
+      </mapping>
+    </element>
+    <element id="Patient.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.address" />
+      <short value="Address" />
+      <definition value="Patient address separated in address parts; potentially a simple address string" />
+      <alias value="Adres" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-11" />
+        <comment value="Address" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.address" />
+        <comment value="Address" />
+      </mapping>
+    </element>
+    <element id="Patient.maritalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.maritalStatus" />
+      <short value="MaritalStatus" />
+      <definition value="Last known marital status" />
+      <alias value="BurgerlijkeStaat" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-16" />
+        <comment value="MaritalStatus" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.MaritalStatus" />
+        <comment value="MaritalStatus" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.multipleBirth[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="MultipleBirth[x]" />
+      <definition value="Whether patient is part of a multiple birth. Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)." />
+      <alias value="Meerling[x]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth" />
+        <comment value="multipleBirth" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthBoolean">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthBoolean" />
+      <short value="MultipleBirthIndicator" />
+      <definition value="An indication stating whether the patient is of a multiple birth." />
+      <alias value="MeerlingIndicator" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-12" />
+        <comment value="multipleBirthBoolean" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth.boolean" />
+        <comment value="multipleBirthBoolean" />
+      </mapping>
+    </element>
+    <element id="Patient.multipleBirth[x]:multipleBirthInteger">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.multipleBirth[x]" />
+      <sliceName value="multipleBirthInteger" />
+      <short value="MultipleBirthSequence The birth number in the sequence of a multiple birth. The first birth is given value 1. The middle birth in a triplet birth would be given value 2 and the third birth would have value 3. If multiple birth order is filled then the MultipleIndicator can be assumed 'True' but is not communicated." />
+      <definition value="MultipleBirthSequence" />
+      <alias value="Meerlingvolgorde" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-13" />
+        <comment value="multipleBirthInteger" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.multipleBirth.integer" />
+        <comment value="multipleBirthInteger" />
+      </mapping>
+    </element>
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.contact" />
+      <short value="Contact" />
+      <definition value="A contact party (e.g., guardian, partner, friend) for the patient." />
+      <alias value="Contactpersoon" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14" />
+        <comment value="Contactpersoon" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon" />
+        <comment value="Contactpersoon" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.contact.name" />
+      <short value="Name" />
+      <definition value="Contact person name separated in name parts; potentially a simple name string" />
+      <alias value="Naamgegevens" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.1" />
+        <comment value="Contactpersoon.name" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.name" />
+        <comment value="Contactpersoon.name" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.telecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.contact.telecom" />
+      <short value="Telecom" />
+      <definition value="Contact information" />
+      <alias value="Telecom" />
+      <type>
+        <code value="ContactPoint" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-ContactPoint" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.2" />
+        <comment value="Contactpersoon.telecom" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.telecom" />
+        <comment value="Contactpersoon.telecom" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.contact.address" />
+      <short value="Address" />
+      <definition value="Contact person address separated in address parts; potentially a simple address string." />
+      <alias value="Adres" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.3" />
+        <comment value="Contactpersoon.address" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.address" />
+        <comment value="Contactpersoon.address" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.organization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.contact.organization" />
+      <short value="Organization" />
+      <definition value="Organization" />
+      <alias value="Organisatie" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-14.4" />
+        <comment value="Contactpersoon.Organization" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.Contactpersoon.organization" />
+        <comment value="Contactpersoon.Organization" />
+      </mapping>
+    </element>
+    <element id="Patient.generalPractitioner">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.generalPractitioner" />
+      <short value="GeneralPractitioner[x]" />
+      <definition value="General practitioner of the patient." />
+      <alias value="Huisartsgegevens[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="PAT-15" />
+        <comment value="General Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.generalPractitioner" />
+        <comment value="General Practitioner" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
