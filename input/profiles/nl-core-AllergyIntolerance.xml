@@ -68,8 +68,8 @@
       </extension>
       <path value="AllergyIntolerance.language" />
       <short value="Language"/>
-      <mustSupport value="true"/>
       <alias value="Taal"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-19" />
@@ -126,8 +126,8 @@
       </extension>
       <path value="AllergyIntolerance.identifier"/>
       <short value="Identifier"/>
-      <mustSupport value="true"/>
       <alias value="Identificatienummer"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-15" />
@@ -168,9 +168,9 @@
       </extension>
       <path value="AllergyIntolerance.clinicalStatus" />
       <short value="Active/inactive status" />
-      <mustSupport value="true" />
       <alias value="ActieveInactieveStatus" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-02" />
@@ -211,8 +211,8 @@
       </extension>
       <path value="AllergyIntolerance.verificationStatus" />
       <short value="Verification status" />
-      <mustSupport value="true" />
       <alias value="VerificatieStatus" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-06" />
@@ -253,8 +253,8 @@
       </extension>
       <path value="AllergyIntolerance.category" />
       <short value="Category" />
-      <mustSupport value="true" />
       <alias value="Categorie" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="NL-14" />
@@ -285,8 +285,8 @@
       </extension>
       <path value="AllergyIntolerance.criticality" />
       <short value="Criticality" />
-      <mustSupport value="true" />
       <alias value="MateVanKritiekZijn" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-05" />
@@ -327,8 +327,8 @@
       </extension>
       <path value="AllergyIntolerance.code" />
       <short value="Substance" />
-      <mustSupport value="true" />
       <alias value="VeroorzakendeStof" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -401,8 +401,8 @@
       </extension>
       <path value="AllergyIntolerance.patient" />
       <short value="Patient" />
-      <mustSupport value="true" />
       <alias value="Patient" />
+      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
@@ -456,8 +456,8 @@
       </extension>
       <path value="AllergyIntolerance.recorder" />
       <short value="Author" />
-      <mustSupport value="true" />
       <alias value="Zorgverlener" />
+      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -501,8 +501,8 @@
       </extension>
       <path value="AllergyIntolerance.asserter" />
       <short value="Source" />
-      <mustSupport value="true" />
       <alias value="Bron" />
+      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
@@ -540,8 +540,8 @@
       </extension>
       <path value="AllergyIntolerance.lastOccurrence" />
       <short value="Onset of last reaction" />
-      <mustSupport value="true" />
       <alias value="LaatsteReactieDatumTijd" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="NL-13-01" />
@@ -571,10 +571,10 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.note.text" />
-      <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
       <short value="Comment" />
-      <mustSupport value="true" />
+      <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
       <alias value="Toelichting" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-04" />
@@ -620,8 +620,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction" />
       <short value="Reaction event summary" />
-      <mustSupport value="true" />
       <alias value="Reactie" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="EU-09" />
@@ -665,8 +665,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.extension.value[x]" />
       <short value="Certainty" />
-      <mustSupport value="true" />
       <alias value="MateVanZekerheid" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="The degree of clinical certainty that the manifestation in this reaction event was caused by exposure to the identified substance." />
@@ -702,8 +702,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.substance" />
       <short value="Specific substance" />
-      <mustSupport value="true" />
       <alias value="SpecifiekeStof" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -753,8 +753,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.manifestation" />
       <short value="Manifestation" />
-      <mustSupport value="true" />
       <alias value="ManifestatieVanReactie" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -811,8 +811,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.description" />
       <short value="Reaction description" />
-      <mustSupport value="true" />
       <alias value="ReactieBeschrijving" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="NL-04-02" />
@@ -843,8 +843,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.onset" />
       <short value="Onset of reaction" />
-      <mustSupport value="true" />
       <alias value="ReactieDatumTijd" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="EU-13" />
@@ -880,8 +880,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.severity" />
       <short value="Severity of reaction" />
-      <mustSupport value="true" />
       <alias value="Ernst" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="EU-12" />
@@ -922,8 +922,8 @@
       </extension>
       <path value="AllergyIntolerance.reaction.exposureRoute" />
       <short value="Route of exposure" />
-      <mustSupport value="true" />
       <alias value="WijzeVanBlootstelling" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -967,10 +967,10 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.reaction.note.text" />
-      <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
       <short value="Comment" />
-      <mustSupport value="true" />
+      <definition value="Textual description of the undesired reaction and/or additional information on the undesired reaction for as far as not covered in more specific fields." />
       <alias value="Opmerking" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="NL-04-04" />
