@@ -21,6 +21,36 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "ComplicatieCodelijsten"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieCodelijsten"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "ComplicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "ComplicatieSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "ContactPoint"
 msgstr ""
 
@@ -38,6 +68,46 @@ msgstr ""
 #: ImplementationGuide.definition.resource.name
 msgid "HumanName"
 msgstr "Naam"
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "IndicatieCodelijstenMainBinding"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "IndicatieCodelijstenMainBinding"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "IndicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "IndicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "IndicatieOrphacodeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "IndicatieOrphacodeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "IndicatieSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "IndicatieSNOMEDCodelijst"
+msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
@@ -112,6 +182,11 @@ msgstr ""
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "LogicalModelPractitionerRole"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelProcedure"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -209,6 +284,21 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core Procedure"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "The concept Procedure describes therapeutic or diagnostic procedure undergone by the patient or which the patient will undergo. The concept can describe in the right context historical, future as well as advised procedures.A procedure can be a simple blood pressure measurement, but also a complex heart surgery.In some care settings, the term treatment t is used instead of the term procedure."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl-core-Procedure-02"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
@@ -249,6 +339,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Procedure"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "RegistrerendSysteem"
 msgstr ""
 
@@ -285,6 +380,46 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "RoleCodeNL (Zorgverlenertype (personen)) - Alle waarden"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "UitkomstSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "UitkomstSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "VerrichtingCatergorieCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "VerrichtingCatergorieCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "VerrichtingMethodeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "VerrichtingMethodeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "VerrichtingNaamSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "VerrichtingNaamSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -352,3 +487,7 @@ msgstr "Zorgverlener"
 msgid "Practitioner Role"
 msgstr "ZorgverlenerRol"
 
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Procedure"
+msgstr "Verrichting"

@@ -43,6 +43,9 @@ msgstr "Organization"
 msgid "Patiënt"
 msgstr "Patient"
 
+msgid "Verrichting"
+msgstr "Procedure"
+
 msgid "Zorgverlener"
 msgstr "Practitioner"
 
