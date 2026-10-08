@@ -158,7 +158,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.CurrentState" />
+        <map value="Procedure.CurrentActionState" />
       </mapping>
     </element>
     <element id="Procedure.category">
@@ -344,6 +344,10 @@
         <map value="1.1.1" />
         <comment value="DatumTijdUitvoering" />
       </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.DateAndTimeActionstepPerformed" />
+      </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod">
       <path value="Procedure.performed[x]" />
@@ -429,50 +433,6 @@
         <map value="Procedure.EndDateTime" />
       </mapping>
     </element>
-    <element id="Procedure.performed[x]:performedString">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Procedure.performed[x]" />
-      <sliceName value="performedString" />
-      <type>
-        <code value="string" />
-      </type>
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.1.3" />
-        <comment value="Einddatum" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.1.1" />
-        <comment value="DatumTijdUitvoering" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.1.2" />
-        <comment value="PeriodeUitvoering" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.2" />
-        <comment value="StartdatumTijdNietAfgerondeVerrichting" />
-      </mapping>
-    </element>
     <element id="Procedure.performer.actor">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -526,6 +486,10 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.OtherParticipations.Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.OtherParticipations.PractitionerRole" />
       </mapping>
     </element>
     <element id="Procedure.performer.onBehalfOf">
