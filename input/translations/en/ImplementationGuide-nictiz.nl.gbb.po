@@ -16,12 +16,95 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "ContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "GeslachtCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "GeslachtCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "HumanName"
+msgstr "Naam"
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelNameInformation"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelPatient"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "NaamgebruikCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "NaamgebruikCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core ContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Contact information includes a person's telephone numbers and e-mail addresses."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core HumanName"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "A person's official name information, including given names, last name and possibly the partner's last name."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core Patient"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "A person who receives medical, psychological, paramedical or nursing care. In some care settings, the term client or participant is used instead of the term patient.
+Nationality is used as an indication of the country of citizenship. 
+Marital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.
+Linguistic proficiency is the ability to express oneself in a certain language and understand statements made in that language. This includes both oral and written communication."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Systeem dat gegevens ontsluit aan derden"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Patient"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -56,6 +139,21 @@ msgstr ""
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
+msgid "Contact Point"
+msgstr "Contactgegevens"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Human Name"
+msgstr "Naam"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
 msgid "Obligations"
 msgstr ""
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Patient"
+msgstr "Patiënt"
 

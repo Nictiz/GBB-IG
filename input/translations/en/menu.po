@@ -10,5 +10,29 @@ msgstr "Background"
 msgid "Obligations"
 msgstr ""
 
+msgid "Bouwblokken"
+msgstr "Building blocks"
+
+msgid "Contactgegevens"
+msgstr "ContactPoint"
+
+msgid "Overzicht"
+msgstr "Overview"
+
+msgid "Requirements"
+msgstr ""
+
+msgid "Afsprakenmodel"
+msgstr "Agreement model"
+
+msgid "FHIR-profiel"
+msgstr "FHIR profile"
+
+msgid "Naam"
+msgstr "HumanName"
+
+msgid "Patiënt"
+msgstr "Patient"
+
 msgid "Artefacten"
 msgstr "Artifacts"
