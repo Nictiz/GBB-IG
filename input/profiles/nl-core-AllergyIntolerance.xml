@@ -78,6 +78,7 @@
       <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.language" />
+        <comment value="Language" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.extension:abatement">
