@@ -31,6 +31,16 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "DeviceUse"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "deviceuse-example"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "GeslachtCodelijst"
 msgstr ""
 
@@ -121,6 +131,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogischModelDeviceUse"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "NaamgebruikCodelijst"
 msgstr ""
 
@@ -157,6 +172,16 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Contact information includes a person's telephone numbers and e-mail addresses."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core DeviceUse"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "FHIR R4 profile for the generic building block DeviceUse."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -341,6 +366,11 @@ msgstr "AllergieIntolerantie"
 #: ImplementationGuide.definition.page.title
 msgid "Contact Point"
 msgstr "Contactgegevens"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Device Use"
+msgstr "MedischHulpmiddel"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title

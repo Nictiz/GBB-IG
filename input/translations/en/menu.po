@@ -37,6 +37,9 @@ msgstr "ContactPoint"
 msgid "Locatie"
 msgstr "Location"
 
+msgid "MedischHulpmiddel"
+msgstr "DeviceUseStatement"
+
 msgid "Naam"
 msgstr "HumanName"
 
