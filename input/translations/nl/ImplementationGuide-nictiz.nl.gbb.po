@@ -71,12 +71,22 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Location"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "LogicalModelAddressInformation"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "LogicalModelContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelLocation"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -137,6 +147,16 @@ msgstr ""
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "A person's official name information, including given names, last name and possibly the partner's last name."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core Location"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "A location includes both temporary locations (a place used for healthcare without prior designation or authorisation) and special, formally designated locations. Locations may be private, public, mobile or fixed, and vary in size from small freezers to entire hospital buildings or multi-storey car parks."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -271,6 +291,11 @@ msgstr "Contactgegevens"
 #: ImplementationGuide.definition.page.title
 msgid "Human Name"
 msgstr "Naam"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Location"
+msgstr "Locatie"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
