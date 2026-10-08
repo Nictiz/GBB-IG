@@ -1,13 +1,4 @@
 {% include_relative Condition-Concept.md %}
-### Informatiebronnen
-Deze versie van dit generieke bouwblok (GBB) dekt informatiebehoefte uit de volgende bronnen: 
-* Logisch informatie model EHDSCondition versie 1.0.0
-* Verplichte elementen uit FHIR R4 Condition 
-* Verplichte elementen uit openEHR Problem / Diagnosis versie 1.7.4 
-* Zib Probleem uit publicatie 2017 
-* Zib Probleem uit publicatie 2020 
-* Informatiestandaard BgZ-MSZ versie 2.0.2 
-* Usecase Spoedsamenvatting van informatiestandaard Acute Zorg versie 2.2.0 
 
 ### Afwijking van EHDS in het implementatie-artefact 
 De informatiebehoefte afkomstig uit het logische model van EHDSCondition zijn verwerkt in het afsprakenmodel van deze GBB. Echter, EHDSCondition is moeilijk volledig te implementeren in FHIR. Het dataelement header.author[x] is volgens het logische model een herhalend element, maar het meest relevante resourcetype van FHIR, Condition, hanteert strengere kardinaliteit (0..1), waardoor niet aan de EHDS-richtlijnen kan worden voldaan. Voor dit probleem is een Jira-ticket aangemaakt op het [HL7 Jira bord](https://jira.hl7.org/browse/FHIR-58077).
