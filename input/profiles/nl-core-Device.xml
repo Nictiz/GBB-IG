@@ -57,9 +57,9 @@
         </extension>
       </extension>
       <path value="Device.identifier" />
+      <definition value="An identifier used to identify an instance of a Device." />
       <short value="Instance identifier" />
       <mustSupport value="true" />
-      <definition value="An identifier used to identify an instance of a Device." />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-01" />
@@ -89,6 +89,7 @@
         </extension>
       </extension>
       <path value="Device.udiCarrier" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-02" />
@@ -534,6 +535,7 @@
         </extension>
       </extension>
       <path value="Device.type" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="purpose">
@@ -550,7 +552,6 @@
         <description value="Codes to identify medical devices."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/device-type|4.0.1"/>
       </binding>
-      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-12" />
