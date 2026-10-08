@@ -25,7 +25,7 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Device" />
-    <uri value="http://ig.nictiz.nl/ig/gbb/Requirements/Device" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Device" />
     <name value="Information requirements for Device" />
   </mapping>
   <mapping>
