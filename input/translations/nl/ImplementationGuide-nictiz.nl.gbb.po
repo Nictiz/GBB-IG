@@ -21,32 +21,12 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "ComplicatieCodelijsten"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "ComplicatieCodelijsten"
+msgid "AllergyIntolerance"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "ComplicatieICD10Codelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "ComplicatieICD10Codelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "ComplicatieSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "ComplicatieSNOMEDCodelijst"
+msgid "Condition"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -56,57 +36,47 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Device"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "DeviceUse"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "GeslachtCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "GeslachtCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "GezondheidstoestandCodeCodesysteemlijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "This is a list of code systems that can be used to populate the Code data element."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "GezondheidstoestandStadiumOfGraadCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Dit is een lijst van codesystemen die gebruikt kunnen worden voor het vullen van het data-element StadiumOfGraad.Samenvatting."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "HumanName"
-msgstr "Naam"
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "IndicatieCodelijstenMainBinding"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "IndicatieCodelijstenMainBinding"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "IndicatieICD10Codelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "IndicatieICD10Codelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "IndicatieOrphacodeCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "IndicatieOrphacodeCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "IndicatieSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "IndicatieSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -151,6 +121,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogicalModelCondition"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "LogicalModelContactPoint"
 msgstr ""
 
@@ -186,7 +161,12 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "LogicalModelProcedure"
+msgid "LogischModelDevice"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogischModelDeviceUse"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -211,12 +191,47 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core AllergyIntolerance"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Clinical assessment of an individual's propensity to experience a harmful or adverse physiological reaction upon exposure, or repeated exposure, to a substance. Substances include, among others, a therapeutic substance administered correctly and in the appropriate dosage for the individual (side effects); food; material derived from plants or animals; or venom from insect bites."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core Condition"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "nl core ContactPoint"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Contact information includes a person's telephone numbers and e-mail addresses."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core Device"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "The concept contains the properties of a variety of implants, devices and aids that are patient-related and support the healthcare process. It covers medical and non-medical devices, ranging from simple aids and implants to equipment and software."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl core DeviceUse"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "FHIR R4 profile for the generic building block DeviceUse."
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -284,21 +299,6 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "nl core Procedure"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "The concept Procedure describes therapeutic or diagnostic procedure undergone by the patient or which the patient will undergo. The concept can describe in the right context historical, future as well as advised procedures.A procedure can be a simple blood pressure measurement, but also a complex heart surgery.In some care settings, the term treatment t is used instead of the term procedure."
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "nl-core-Procedure-02"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "Procedure"
+msgid "Reaction"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -384,46 +384,6 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "UitkomstSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "UitkomstSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "VerrichtingCatergorieCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "VerrichtingCatergorieCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "VerrichtingMethodeCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "VerrichtingMethodeCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "VerrichtingNaamSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "VerrichtingNaamSNOMEDCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
 msgid "VerwerkendSysteem"
 msgstr ""
 
@@ -449,8 +409,28 @@ msgstr "Adres"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
+msgid "Allergy Intolerance"
+msgstr "AllergieIntolerantie"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Condition"
+msgstr "Gezondheidstoestand"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
 msgid "Contact Point"
 msgstr "Contactgegevens"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Device"
+msgstr "Device"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Device Use"
+msgstr "MedischHulpmiddel"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
@@ -486,6 +466,11 @@ msgstr "Zorgverlener"
 #: ImplementationGuide.definition.page.title
 msgid "Practitioner Role"
 msgstr "ZorgverlenerRol"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Reaction"
+msgstr "Reactie"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title

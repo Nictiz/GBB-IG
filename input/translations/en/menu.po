@@ -28,11 +28,23 @@ msgstr "Agreement model"
 msgid "FHIR-profiel"
 msgstr "FHIR profile"
 
+msgid "AllergieIntolerantie"
+msgstr "AllergyIntolerance"
+
 msgid "Contactgegevens"
 msgstr "ContactPoint"
 
+msgid "Device"
+msgstr "Device"
+
+msgid "Gezondheidstoestand"
+msgstr "Condition"
+
 msgid "Locatie"
 msgstr "Location"
+
+msgid "MedischHulpmiddel"
+msgstr "DeviceUseStatement"
 
 msgid "Naam"
 msgstr "HumanName"
@@ -42,6 +54,9 @@ msgstr "Organization"
 
 msgid "Patiënt"
 msgstr "Patient"
+
+msgid "Reactie"
+msgstr ""
 
 msgid "Verrichting"
 msgstr "Procedure"
