@@ -91,6 +91,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogicalModelPractitioner"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "NaamgebruikCodelijst"
 msgstr ""
 
@@ -144,6 +149,16 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core Practitioner"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent (NEN7540:2024)"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
@@ -155,6 +170,11 @@ msgstr ""
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "Patient"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "Practitioner"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -211,4 +231,9 @@ msgstr ""
 #: ImplementationGuide.definition.page.title
 msgid "Patient"
 msgstr "Patiënt"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Practitioner"
+msgstr "Zorgverlener"
 
