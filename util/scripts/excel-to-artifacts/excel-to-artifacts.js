@@ -145,6 +145,7 @@ class ActorDefinitionDownloader {
 }
 
 class ValueSetDownloader {
+  static searchUrl = "https://decor.nictiz.nl/fhir/4.0/gbb2026bbr-/ValueSet";
   static skippedCanonicalPrefixes = [
     "http://hl7.org",
     "http://terminology.hl7.org"
@@ -196,7 +197,17 @@ class ValueSetDownloader {
         throw new Error(`HTTP ${response.status} ${response.statusText}`);
       }
 
-      const valueSet = await response.json();
+      const bundle = await response.json();
+      if (bundle.resourceType != "Bundle") {
+        throw new Error(`Expected Bundle, got ${bundle.resourceType ?? "unknown resource"}`);
+      }
+      if (bundle.total < 1) {
+        console.warn(`Couldn't download ValueSet ${canonical}`);
+        return;
+      } else if (bundle.total > 1) {
+        console.warn(`Multiple ValueSets are present with canonical ${canonical}. Downloading the first one.`);
+      }
+      const valueSet = bundle.entry[0].resource;
       if (valueSet.resourceType != "ValueSet") {
         throw new Error(`Expected ValueSet, got ${valueSet.resourceType ?? "unknown resource"}`);
       }
@@ -249,8 +260,10 @@ class ValueSetDownloader {
 
   #toDownloadUrl(canonical) {
     const resourceUrl = new URL(canonical.split("|")[0]);
-    resourceUrl.searchParams.set("_format", "json");
-    return resourceUrl.toString();
+    const searchUrl = new URL(ValueSetDownloader.searchUrl);
+    searchUrl.searchParams.set("url", resourceUrl);
+    searchUrl.searchParams.set("_format", "json");
+    return searchUrl.toString();
   }
 
   #fallbackName(canonical) {
