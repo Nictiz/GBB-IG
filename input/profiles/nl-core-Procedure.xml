@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Procedure" />
-    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/Procedure-model" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelProcedure" />
     <name value="Logical model for Procedure" />
   </mapping>
   <kind value="resource" />

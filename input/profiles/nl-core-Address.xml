@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Address" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Address" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelAddress" />
     <name value="Logical model for Address" />
   </mapping>
   <kind value="complex-type" />

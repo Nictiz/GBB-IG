@@ -28,7 +28,7 @@
   </mapping>
   <mapping>
     <identity value="lm-HumanName" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/HumanName" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelHumanName" />
     <name value="Logical model for HumanName" />
   </mapping>
   <kind value="complex-type" />

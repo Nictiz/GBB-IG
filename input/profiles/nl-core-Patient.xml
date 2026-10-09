@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Patient" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Patient" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient" />
     <name value="Logical model for Patient" />
   </mapping>
   <kind value="resource" />

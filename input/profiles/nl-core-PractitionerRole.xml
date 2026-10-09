@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-PractitionerRole" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/PractitionerRole" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole" />
     <name value="Logical model for PractitionerRole" />
   </mapping>
   <kind value="resource" />

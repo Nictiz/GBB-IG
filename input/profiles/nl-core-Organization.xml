@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Organization" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Organization" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelOrganization" />
     <name value="Logical model for Organization" />
   </mapping>
   <kind value="resource" />

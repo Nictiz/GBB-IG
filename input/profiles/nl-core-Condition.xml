@@ -32,7 +32,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Condition" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Condition" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelCondition" />
     <name value="Logical model for Condition" />
   </mapping>
   <kind value="resource" />

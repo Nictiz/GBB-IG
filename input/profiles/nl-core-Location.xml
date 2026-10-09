@@ -27,7 +27,7 @@
   </mapping>
   <mapping>
     <identity value="lm-Location" />
-    <uri value="http://ig.nictiz.nl/gbb/model/StructureDefinition/Location" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelLocation" />
     <name value="Logical model for Location" />
   </mapping>
   <kind value="resource" />
