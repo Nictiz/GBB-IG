@@ -187,7 +187,7 @@
       <max value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22" />
       </binding>
       <mapping>
         <identity value="requirements-PractitionerRole" />
