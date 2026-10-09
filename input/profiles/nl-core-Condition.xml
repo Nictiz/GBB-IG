@@ -187,7 +187,7 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2"/>
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2--20200901000000"/>
           </extension>
         </extension>
         <strength value="required" />
@@ -228,7 +228,7 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4"/>
+              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4--20200901000000"/>
           </extension>
         </extension>
         <strength value="required" />
