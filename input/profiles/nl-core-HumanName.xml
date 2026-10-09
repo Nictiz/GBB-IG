@@ -1,0 +1,485 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-HumanName" />
+  <text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
+      human-readable rendering can be found in the implementation guide(s) where this resource is
+      used.</div></text>
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HumanName" />
+  <name value="NlcoreHumanName" />
+  <title value="nl core HumanName" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A person's official name information, including given names, last name and possibly the partner's last name." />
+  <purpose value="This profile is the FHIR implementation of the general building block [HumanName](http://ig.nictiz.nl/gbb/HumanName)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-HumanName" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/HumanName" />
+    <name value="Information requirements for HumanName" />
+  </mapping>
+  <mapping>
+    <identity value="lm-HumanName" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelHumanName" />
+    <name value="Logical model for HumanName" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HumanName">
+      <path value="HumanName" />
+      <alias value="Naamgegevens" />
+      <constraint>
+        <key value="gbb-HumanName-01" />
+        <severity value="error" />
+        <human value="If a prefix for a family name is specified, the family name is expected as well" />
+        <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').empty().not()" />
+      </constraint>
+      <constraint>
+        <key value="gbb-HumanName-02" />
+        <severity value="error" />
+        <human value="If the prefix for a partner family name is specified, the partner family name is expected as well" />
+        <expression value="family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').empty().not() implies family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').empty().not()" />
+      </constraint>
+      <constraint>
+        <key value="gbb-HumanName-03" />
+        <severity value="warning" />
+        <human value="If parts of the family name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name. This ensures compatibility with common FHIR usage." />
+        <expression value="family.exists() implies text.hasValue()" />
+      </constraint>
+      <constraint>
+        <key value="gbb-HumanName-04" />
+        <severity value="warning" />
+        <human value="If parts of the family name are specified using the extensions in .family, the .family element SHOULD be populated with the full family name as well. This ensures compatibility with common FHIR usage." />
+        <expression value="(family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-own-name').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix').exists() or family.extension('http://hl7.org/fhir/StructureDefinition/humanname-partner-name').exists()) implies $this.hasValue()" />
+      </constraint>
+    </element>
+    <element id="HumanName.extension:nameUsage">
+      <path value="HumanName.extension" />
+      <sliceName value="nameUsage" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
+      </type>
+    </element>
+    <element id="HumanName.extension:nameUsage.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.extension.value[x]" />
+      <short value="NameUsage" />
+      <definition value="This concept indicates the last name or order of last names with which the person is to be addressed." />
+      <alias value="Naamgebruik" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="A code that represents the preferred display order of the components of this human name." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order|4.0.1"/>
+      </binding>
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-01" />
+        <comment value="Name assembly order" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.nameUsage" />
+        <comment value="Name assembly order" />
+      </mapping>
+    </element>
+    <element id="HumanName.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.use" />
+      <short value="Use" />
+      <definition value="Identifies the purpose for this name. Allows the appropriate name for a particular context of use to be selected from among a set of names." />
+      <alias value="Gebruik" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-02" />
+        <comment value="Use" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.use" />
+        <comment value="Use" />
+      </mapping>
+    </element>
+    <element id="HumanName.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.text" />
+      <label value="Weergavenaam" />
+      <short value="Text" />
+      <definition value="A representation of the full name, including given names and the family name. Specifies the entire name as it should be displayed e.g. on an application UI. This may be provided instead of or as well as the specific parts." />
+      <comment value="A representation of the full name, including given names and the family name.&#xD;&#xA;&#xD;&#xA;When implementing, this representation should include the FirstNames or Initials and the family name constructed according to the NameUsage concept&#xD;&#xA;&#xD;&#xA;If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name." />
+      <condition value="gbb-HumanName-03" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-03" />
+        <comment value="Text" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.text" />
+        <comment value="Text" />
+      </mapping>
+    </element>
+    <element id="HumanName.family">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.family" />
+      <short value="Family name" />
+      <definition value="The family name/surname/last name of a person. The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
+      <comment value="This representation should be constructed from the Prefix, LastName, PartnerPrefix and/or PartnerLastName concepts according to the NameUsage concept.&#xD;&#xA;&#xD;&#xA;Systems that need to work in a Dutch context SHOULD support the extensions as specified in `.family` and `.extension:nameUsage`. In addition, systems SHOULD use the core elements according to the FHIR specifications to provide compatibility outside Dutch contexts. This means that:&#xD;&#xA;&#xD;&#xA;- If parts of the name are specified using one or more of the structured elements, the `.text` element SHOULD be populated with a rendered version of the full name.&#xD;&#xA;- If parts of the family name are specified using the extensions in `.family`, the `.family` element SHOULD be populated with the full family name." />
+      <alias value="Achternaam" />
+      <condition value="gbb-HumanName-04" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-04" />
+        <comment value="Name assembly order" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.nameUsage" />
+        <comment value="Name assembly order" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:humanNameOwnPrefix">
+      <path value="HumanName.family.extension" />
+      <sliceName value="humanNameOwnPrefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:humanNameOwnPrefix.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="Prefix" />
+      <definition value="Prefix to the person’s own last name." />
+      <alias value="Voorvoegsels" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-05" />
+        <comment value="Prefix" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.prefix" />
+        <comment value="Prefix" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:humanNameOwnName">
+      <path value="HumanName.family.extension" />
+      <sliceName value="humanNameOwnName" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
+      </type>
+      <condition value="gbb-HumanName-01" />
+    </element>
+    <element id="HumanName.family.extension:humanNameOwnName.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="LastName" />
+      <definition value="The person’s official last name" />
+      <alias value="Achternaam" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-06" />
+        <comment value="FamilyName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.ownName" />
+        <comment value="FamilyName" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:humanNamePartnerPrefix">
+      <path value="HumanName.family.extension" />
+      <sliceName value="humanNamePartnerPrefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
+      </type>
+    </element>
+    <element id="HumanName.family.extension:humanNamePartnerPrefix.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="PartnerPrefix" />
+      <definition value="Prefix to the partner’s last name." />
+      <alias value="VoorvoegselsPartner" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-07" />
+        <comment value="PartnerPrefix" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.partnerPrefix" />
+        <comment value="PartnerPrefix" />
+      </mapping>
+    </element>
+    <element id="HumanName.family.extension:humanNamePartnerName">
+      <path value="HumanName.family.extension" />
+      <sliceName value="humanNamePartnerName" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
+      </type>
+      <condition value="gbb-HumanName-02" />
+    </element>
+    <element id="HumanName.family.extension:humanNamePartnerName.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.family.extension.value[x]" />
+      <short value="PartnerLastName" />
+      <definition value="Partner’s official last name." />
+      <alias value="AchternaamPartner" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-08" />
+        <comment value="PartnerLastName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.family.partnerName" />
+        <comment value="PartnerLastName" />
+      </mapping>
+    </element>
+    <element id="HumanName.given">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.given" />
+      <short value="GivenName" />
+      <definition value="Given names (not always 'first'). Includes middle names and/or initials or 'call me' names." />
+      <alias value="Voornaam" />
+      <alias value="Initiaal" />
+      <alias value="Roepnaam" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-09" />
+        <comment value="GivenName" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.given" />
+        <comment value="GivenName" />
+      </mapping>
+    </element>
+    <element id="HumanName.prefix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.prefix" />
+      <short value="Titles" />
+      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <alias value="Titels" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-10" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.prefix" />
+        <comment value="Titles" />
+      </mapping>
+    </element>
+    <element id="HumanName.suffix">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="HumanName.suffix" />
+      <short value="Titles" />
+      <definition value="Noble and scientific titles. These can assist in formulating oral and formal addresing titles." />
+      <alias value="Titels" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-HumanName" />
+        <map value="NAA-12" />
+        <comment value="Titles" />
+      </mapping>
+      <mapping>
+        <identity value="lm-HumanName" />
+        <map value="HumanName.suffix" />
+        <comment value="Titles" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

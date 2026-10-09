@@ -10,5 +10,62 @@ msgstr "Background"
 msgid "Obligations"
 msgstr ""
 
+msgid "Bouwblokken"
+msgstr "Building blocks"
+
+msgid "Adres"
+msgstr "Address"
+
+msgid "Overzicht"
+msgstr "Overview"
+
+msgid "Requirements"
+msgstr ""
+
+msgid "Afsprakenmodel"
+msgstr "Agreement model"
+
+msgid "FHIR-profiel"
+msgstr "FHIR profile"
+
+msgid "AllergieIntolerantie"
+msgstr "AllergyIntolerance"
+
+msgid "Contactgegevens"
+msgstr "ContactPoint"
+
+msgid "Device"
+msgstr "Device"
+
+msgid "Gezondheidstoestand"
+msgstr "Condition"
+
+msgid "Locatie"
+msgstr "Location"
+
+msgid "MedischHulpmiddel"
+msgstr "DeviceUseStatement"
+
+msgid "Naam"
+msgstr "HumanName"
+
+msgid "Organisatie"
+msgstr "Organization"
+
+msgid "Patiënt"
+msgstr "Patient"
+
+msgid "Reactie"
+msgstr ""
+
+msgid "Verrichting"
+msgstr "Procedure"
+
+msgid "Zorgverlener"
+msgstr "Practitioner"
+
+msgid "ZorgverlenerRol"
+msgstr "PractitionerRole"
+
 msgid "Artefacten"
 msgstr "Artifacts"

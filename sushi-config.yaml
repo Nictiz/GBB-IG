@@ -4,15 +4,15 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: nictiz.nl.gbb
-canonical: http://nictiz.nl/gbb
+canonical: http://ig.nictiz.nl/gbb
 name: GenericBuildingBlocks
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
-version: 0.1.0
+status: active # draft | active | retired | unknown
+version: 1.0.0-alpha.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
-releaseLabel: ci-build
+releaseLabel: STU1 #
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
@@ -24,7 +24,11 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
-# dependencies:
+dependencies:
+  hl7.fhir.uv.extensions.r4: 5.3.0
+  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  hl7.fhir.eu.extensions.r4: 1.3.0
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -105,8 +109,76 @@ menu:
   # |     FHIR-profiel: StructureDefinition-nl-core-[English building block name].html              |
   # | Other entries may be added if desired, or entries may be left out if they are not ready yet.   |
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-  # Building blocks:
-
+  Bouwblokken:
+    Adres:
+      Overzicht: Address.html
+      Requirements: Requirements-Address.html
+      Afsprakenmodel: StructureDefinition-LogicalModelAddress.html
+      FHIR-profiel: StructureDefinition-nl-core-Address.html
+    AllergieIntolerantie:
+      Overzicht: AllergyIntolerance.html
+      Requirements: Requirements-AllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-LogicalModelAllergyIntolerance.html
+      FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
+    Contactgegevens:
+      Overzicht: ContactPoint.html
+      Requirements: Requirements-ContactPoint.html
+      Afsprakenmodel: StructureDefinition-LogicalModelContactPoint.html
+      FHIR-profiel: StructureDefinition-nl-core-ContactPoint.html
+    Device:
+      Overzicht: Device.html
+      Requirements: Requirements-Device.html
+      Afsprakenmodel: StructureDefinition-LogicalModelDevice.html
+      FHIR-profiel: StructureDefinition-nl-core-Device.html
+    Gezondheidstoestand:
+      Overzicht: Condition.html
+      Requirements: Requirements-Condition.html
+      Afsprakenmodel: StructureDefinition-LogicalModelCondition.html
+      FHIR-profiel: StructureDefinition-nl-core-Condition.html
+    Locatie:
+      Overzicht: Location.html
+      Requirements: Requirements-Location.html
+      Afsprakenmodel: StructureDefinition-LogicalModelLocation.html
+      FHIR-profiel: StructureDefinition-nl-core-Location.html
+    MedischHulpmiddel:
+      Overzicht: DeviceUse.html
+      Requirements: Requirements-DeviceUse.html
+      Afsprakenmodel: StructureDefinition-LogicalModelDeviceUse.html
+      FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
+    Naam:
+      Overzicht: HumanName.html
+      Requirements: Requirements-HumanName.html
+      Afsprakenmodel: StructureDefinition-LogicalModelHumanName.html
+      FHIR-profiel: StructureDefinition-nl-core-HumanName.html
+    Organisatie:
+      Overzicht: Organization.html
+      Requirements: Requirements-Organization.html
+      Afsprakenmodel: StructureDefinition-LogicalModelOrganization.html
+      FHIR-profiel: StructureDefinition-nl-core-Organization.html
+    Patiënt:
+      Overzicht: Patient.html
+      Requirements: Requirements-Patient.html
+      Afsprakenmodel: StructureDefinition-LogicalModelPatient.html
+      FHIR-profiel: StructureDefinition-nl-core-Patient.html
+    Reactie:
+      Overzicht: Reaction.html
+      Requirements: Requirements-Reaction.html
+      Afsprakenmodel: StructureDefinition-LogicalModelReaction.html
+    Verrichting:
+      Overzicht: Procedure.html
+      Requirements: Requirements-Procedure.html
+      Afsprakenmodel: StructureDefinition-LogicalModelProcedure.html
+      FHIR-profiel: StructureDefinition-nl-core-Procedure.html
+    Zorgverlener:
+      Overzicht: Practitioner.html
+      Requirements: Requirements-Practitioner.html
+      Afsprakenmodel: StructureDefinition-LogicalModelPractitioner.html
+      FHIR-profiel: StructureDefinition-nl-core-Practitioner.html
+    ZorgverlenerRol:
+      Overzicht: PractitionerRole.html
+      Requirements: Requirements-PractitionerRole.html
+      Afsprakenmodel: StructureDefinition-LogicalModelPractitionerRole.html
+      FHIR-profiel: StructureDefinition-nl-core-PractitionerRole.html
   Artefacten: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
