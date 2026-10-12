@@ -75,11 +75,11 @@
             <valueCode value="current" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21--20260619103221" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.21" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -191,11 +191,11 @@
             <valueCode value="current" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25--20260619103637" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -238,11 +238,11 @@
             <valueCode value="current" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.6--20260619092106" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.6" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7--20260619092503" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -611,11 +611,11 @@
             <valueCode value="extensible" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.19--20260619114014" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.19" />
           </extension>
         </extension>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27--20260619114424" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -739,7 +739,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22--20260619103341" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -774,7 +774,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28--20260619115050" />
+        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28" />
       </binding>
       <mapping>
         <identity value="requirements-Procedure" />

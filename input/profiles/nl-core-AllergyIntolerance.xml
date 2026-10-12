@@ -770,7 +770,7 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29--20260630084754"/>
+              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
           </extension>
         </extension>
         <strength value="preferred"/>
