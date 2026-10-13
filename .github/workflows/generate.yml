@@ -31,7 +31,7 @@ jobs:
       - name: Install IG tooling
         run: npm install -g github:Nictiz/Nictiz-tooling-for-IGs
       - name: Generate artifacts
-        run: excel-to-artifacts input/requirements generated
+        run: excel-to-artifacts input generated
       - name: Run sushi
         run: |
           npm -g install fsh-sushi
