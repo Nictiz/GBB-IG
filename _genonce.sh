@@ -2,6 +2,12 @@
 set -euo pipefail
 publisher_jar=publisher.jar
 input_cache_path=./input-cache/
+
+if ! [ -x "$(command -v excel-to-artifacts)" ]; then
+	echo Installing Nictiz-tooling-for-IGs
+    npm install -g github:Nictiz/Nictiz-tooling-for-IGs
+fi
+
 echo Checking internet connection...
 curl -sSf tx.fhir.org > /dev/null
 
@@ -16,12 +22,7 @@ fi
 echo "$txoption"
 
 # Run the script to convert and download the content based on the Excel input.
-if [[ ! -d util/scripts/excel-to-artifacts/node_modules ]]; then
-	cd util/scripts/excel-to-artifacts
-	npm install
-	cd ../../..
-fi
-node util/scripts/excel-to-artifacts/excel-to-artifacts.js input/requirements generated
+excel-to-artifacts input generated
 
 # Sushi is run automatically by the publisher if the folder input/fsh exists. We're not guaranteed to have this
 # folder, but Sushi needs to run to handle sushi-config.yaml -- and besides, we need to do some post-processing.
@@ -40,12 +41,7 @@ sushi .
 # However, this is only picked up if both the original menu.xml and the translated menu.xml files are placed in the
 # input folder, where normally the checked-in, non-generated content resides. So the files are copied there just before
 # calling the IG Publisher and are excluded from git.
-if [[ ! -d util/scripts/translate-menu/node_modules ]]; then
-	cd util/scripts/translate-menu
-	npm install
-	cd ../../..
-fi
-node util/scripts/translate-menu/translate-menu.js --lang en
+translate-menu --lang en
 
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
 

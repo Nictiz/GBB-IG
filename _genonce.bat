@@ -2,6 +2,13 @@
 SET publisher_jar=publisher.jar
 SET input_cache_path=%CD%\input-cache
 
+where.exe excel-to-artifacts >nul 2>&1
+if errorlevel 1 (
+    echo Installing Nictiz-tooling-for-IGs
+    call npm install -g github:Nictiz/Nictiz-tooling-for-IGs
+    if errorlevel 1 exit /b 1
+)
+
 ECHO Checking internet connection...
 powershell -Command "try { $r=[System.Net.WebRequest]::Create('https://tx.fhir.org/r4/metadata'); $r.Timeout=4000; $r.GetResponse().Close(); exit 0 } catch { exit 1 }"
 IF %ERRORLEVEL% EQU 0 GOTO isonline
@@ -14,12 +21,7 @@ ECHO We're online
 SET txoption=
 
 REM Run the script to convert and download the content based on the Excel input.
-IF NOT EXIST util\scripts\excel-to-artifacts\node_modules (
-	CD util\scripts\excel-to-artifacts
-	CALL npm install
-	CD ..\..\..
-)
-node util\scripts\excel-to-artifacts\excel-to-artifacts.js input\requirements generated
+call excel-to-artifacts input generated
 if errorlevel 1 exit /b %errorlevel%
 
 :igpublish
@@ -41,12 +43,7 @@ REM We 'solve' this using a custom script that translates the menu.xml generated
 REM However, this is only picked up if both the original menu.xml and the translated menu.xml files are placed in the
 REM input folder, where normally the checked-in, non-generated content resides. So the files are copied there just before
 REM calling the IG Publisher and are excluded from git.
-IF NOT EXIST util\scripts\translate-menu\node_modules (
-	CD util\scripts\translate-menu
-	CALL npm install
-	CD ..\..\..
-)
-node util\scripts\translate-menu\translate-menu.js --lang en
+call translate-menu --lang en
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 

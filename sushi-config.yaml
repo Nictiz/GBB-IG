@@ -315,3 +315,6 @@ instanceOptions:
   # if InstanceOf references a profile:
   #
   # setId: always # always | standalone-only
+
+nictizIgConfig:
+  ad-project: gbb2026bbr-
