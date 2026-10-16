@@ -4,6 +4,11 @@
 msgid "GenericBuildingBlocks"
 msgstr ""
 
+# ImplementationGuide.title
+#: ImplementationGuide.title
+msgid "Generic Building Blocks"
+msgstr "Generieke bouwblokken"
+
 # ImplementationGuide.publisher
 #: ImplementationGuide.publisher
 msgid "Nictiz"
@@ -22,6 +27,36 @@ msgstr ""
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "AllergyIntolerance"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "ComplicatieCodelijsten"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieCodelijsten"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "ComplicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieICD10Codelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "ComplicatieSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "ComplicatieSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -46,17 +81,7 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "GeslachtCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "GeslachtCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "GezondheidstoestandCodeCodesysteemlijst"
+msgid "GezondheidstoestandCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
@@ -81,32 +106,12 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "LandCodelijsten"
+msgid "Instruction States"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Value set combining the distinct value sets that the zib AddressInformation binds to for NL-CM:20.5.5 Country. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "LandGBACodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "GBA Tabel 34 (Landentabel) - Alle waarden"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "LandISOCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "ISO 3166-1 (alpha-2) - Alle waarden"
+msgid "Instruction States"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -116,7 +121,12 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "LogicalModelAddressInformation"
+msgid "LogicalModelAddress"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelAllergyIntolerance"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -127,6 +137,16 @@ msgstr ""
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
 msgid "LogicalModelContactPoint"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelDevice"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "LogicalModelDeviceUse"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -146,6 +166,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "LogicalModelpart.Reaction"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "LogicalModelPatient"
 msgstr ""
 
@@ -161,12 +186,17 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "LogischModelDevice"
+msgid "LogicalModelProcedure"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "LogischModelDeviceUse"
+msgid "ManifestatieVanReactieWaardelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "Waardelijst behorend bij het data-element ManifestatieVanReactie in generieke bouwblok AllergieIntolerantie"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -299,22 +329,27 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "nl core Procedure"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "The concept Procedure describes therapeutic or diagnostic procedure undergone by the patient or which the patient will undergo. The concept can describe in the right context historical, future as well as advised procedures.A procedure can be a simple blood pressure measurement, but also a complex heart surgery.In some care settings, the term treatment t is used instead of the term procedure."
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "nl-core-Procedure-02"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "OntsluitendSysteem"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
 msgid "Systeem dat gegevens ontsluit aan derden"
-msgstr ""
-
-# ImplementationGuide.definition.resource.name
-#: ImplementationGuide.definition.resource.name
-msgid "OrganisatieTypeCodelijst"
-msgstr ""
-
-# ImplementationGuide.definition.resource.description
-#: ImplementationGuide.definition.resource.description
-msgid "OrganisatieTypeCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -339,6 +374,11 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
+msgid "Procedure"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
 msgid "Reaction"
 msgstr ""
 
@@ -354,32 +394,42 @@ msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "SpecialismeAGBCodelijst"
+msgid "UitkomstSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "COD016-VEKT (Vektis AGB-medische specialismen) - Alle waarden"
+msgid "UitkomstSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "SpecialismeCodelijsten"
+msgid "VerrichtingCategorieCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "Value set combining the distinct value sets that the zib HealthProfessional binds to for NL-CM:17.1.4 Specialty. This value set as such does not exist in the zib but facilitates referencing all these value sets at the same time"
+msgid "VerrichtingCategorieCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
 #: ImplementationGuide.definition.resource.name
-msgid "SpecialismeUZICodelijst"
+msgid "VerrichtingMethodeCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.description
 #: ImplementationGuide.definition.resource.description
-msgid "RoleCodeNL (Zorgverlenertype (personen)) - Alle waarden"
+msgid "VerrichtingMethodeCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.name
+#: ImplementationGuide.definition.resource.name
+msgid "VerrichtingNaamSNOMEDCodelijst"
+msgstr ""
+
+# ImplementationGuide.definition.resource.description
+#: ImplementationGuide.definition.resource.description
+msgid "VerrichtingNaamSNOMEDCodelijst"
 msgstr ""
 
 # ImplementationGuide.definition.resource.name
@@ -421,6 +471,11 @@ msgstr "Gezondheidstoestand"
 #: ImplementationGuide.definition.page.title
 msgid "Contact Point"
 msgstr "Contactgegevens"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Dependencies"
+msgstr "Afhankelijkheden"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
@@ -469,10 +524,10 @@ msgstr "ZorgverlenerRol"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
-msgid "Reaction"
-msgstr "Reactie"
+msgid "Procedure"
+msgstr "Verrichting"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
-msgid "Procedure"
-msgstr "Verrichting"
+msgid "Reaction"
+msgstr "Reactie"
