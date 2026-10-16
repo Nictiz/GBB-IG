@@ -6,7 +6,7 @@ Op het moment is de methodiek om tot generieke bouwblokken te komen nog in beweg
 Vragen en wijzigingsverzoeken kunnen ingediend worden via [de servicedesk van Nictiz](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12).
 
 <div class='stu-note' markdown='1'>
-Dit is een alpha-versie van de generieke-bouwblokkengids. Deze publicatie is bedoeld om de huidige situatie van de ontwikkeling te delen, en om feedback te verzamelen waarmee de bouwblokken en deze gids verbeteren kunnen worden. We willen je daarom verzoeken om alle issues [bij Nictiz te melden](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12).
+Dit is een alpha-versie van de generieke-bouwblokkengids. Deze publicatie is bedoeld om de huidige situatie van de ontwikkeling te delen, en om feedback te verzamelen waarmee de bouwblokken en deze gids verbeterd kunnen worden. We willen je daarom verzoeken om alle issues [bij Nictiz te melden](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12). Op de overzichtspagina's van elk bouwblok staat een lijst met bekende problemen die nog aangepakt moeten worden.
 
 Deze versie is niet bedoeld voor productiedoeleinden.
 

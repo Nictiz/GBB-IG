@@ -6,7 +6,7 @@ At the moment, the methodology for creating generic building blocks is still in 
 For questions and change requests, the [Nictiz service desk can be used](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12).
 
 <div class='stu-note' markdown='1'>
-This is an alpha version of the generic building block IG. The purpose of this publication is to share the current state of development and collect feedback to improve the building blocks and this associated IG. Please be so kind as to [submit a change request](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12) for all issues you may encounter.
+This is an alpha version of the generic building block IG. The purpose of this publication is to share the current state of development and collect feedback to improve the building blocks and this associated IG. Please be so kind as to [submit a change request](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12) for all issues you may encounter. The overview page of each building block lists the known issues that have to be addressed.
 
 This version is not meant for production use.
 
