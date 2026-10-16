@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Procedure" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
   </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
@@ -117,7 +117,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.Identifier" />
+        <map value="Procedure.FeederAuditOriginatingSystemItemIds" />
       </mapping>
     </element>
     <element id="Procedure.status">
@@ -433,6 +433,22 @@
         <map value="Procedure.EndDateTime" />
       </mapping>
     </element>
+    <element id="Procedure.recorder">
+      <path value="Procedure.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.InformationProvider.Practitioner" />
+      </mapping>
+    </element>
     <element id="Procedure.performer.actor">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -456,6 +472,8 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
@@ -481,15 +499,15 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.OtherParticipations.Patient" />
+        <map value="Procedure.Participations.Performer.Patient" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.OtherParticipations.Practitioner" />
+        <map value="Procedure.Participations.Performer.Practitioner" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.OtherParticipations.PractitionerRole" />
+        <map value="Procedure.Participations.Performer.PractitionerRole" />
       </mapping>
     </element>
     <element id="Procedure.performer.onBehalfOf">
@@ -538,11 +556,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.HealthcareFacility.Organization" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Procedure" />
-        <map value="Procedure.HealthcareFacility.AddressInformation" />
+        <map value="Procedure.HealthcareFacility.location" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode">
@@ -637,10 +651,6 @@
         <map value="7.2" />
         <comment value="Reden" />
       </mapping>
-      <mapping>
-        <identity value="lm-Procedure" />
-        <map value="Procedure.Indication" />
-      </mapping>
     </element>
     <element id="Procedure.bodySite">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -675,9 +685,18 @@
         <map value="6" />
         <comment value="AnatomischeLocatie" />
       </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension:bodyStructureReference">
+      <path value="Procedure.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
+      <isModifier value="false" />
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureBodySite" />
+        <map value="Procedure.ProcedureDetail.BodySite" />
       </mapping>
     </element>
     <element id="Procedure.outcome">
