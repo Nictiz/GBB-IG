@@ -1,0 +1,1975 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "LogicalModelDevice",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-08-17T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.33"
+    }
+  ],
+  "version": "2026-08-17T00:00:00",
+  "name": "LogicalModelDevice",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelDevice"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelDevice",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelDevice"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/StructureDefinition/Deviceplaceholder",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.432--20260710062216",
+        "path": "Deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.535--20260817124439",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.identifier",
+        "short": "Om een instantie van een device te identificeren.",
+        "definition": "Om een instantie van een device te identificeren.",
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.551--20260817130211",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI",
+        "short": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device.",
+        "definition": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device. Merk op dat het device meerdere UDI's kan bevatten, aangezien het ofwel alleen de UDI voor het rechtsgebied van verkoop kan omvatten, ofwel UDI voor meerdere rechtsgebieden waar het verkocht had kunnen worden.",
+        "alias": [
+          "Unique device identifier (UDI) "
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.552--20260819075654",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI.identifier",
+        "short": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "definition": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "alias": [
+          "Identificatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI.identifier",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.554--20260819092154",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI.issuer",
+        "short": "UitgevendeOrganisatie (string (uri))Organisatie die belast is met de uitgifte van UDI's voor devices.",
+        "definition": "UitgevendeOrganisatie (string (uri))\n\nOrganisatie die belast is met de uitgifte van UDI's voor devices.",
+        "alias": [
+          "UitgevendeOrganisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.536--20260817124629",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.manufacturer",
+        "short": "De naam van de fabrikant.",
+        "definition": "De naam van de fabrikant.",
+        "alias": [
+          "Fabrikant"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.537--20260817124739",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.manufacturerDate",
+        "short": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "definition": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "alias": [
+          "ProductieDatum/Tijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.manufacturerDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.538--20260817124843",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.expirationDate",
+        "short": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "definition": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "alias": [
+          "Vervaldatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.539--20260817124910",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.lotNumber",
+        "short": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "definition": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "alias": [
+          "Lotnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.lotNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.540--20260817124933",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.serialNumber",
+        "short": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "definition": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "alias": [
+          "Serienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.serialNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.541--20260817125008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName",
+        "short": "De naam en het type van het device.",
+        "definition": "De naam en het type van het device.",
+        "alias": [
+          "DeviceNaamType"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.deviceName",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.543--20260817125137",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName.type",
+        "short": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "definition": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.deviceName.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceNameType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-nametype"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.542--20260817125043",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName.name",
+        "short": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "definition": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "alias": [
+          "Naam"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.deviceName.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.544--20260817125218",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.modelNumber",
+        "short": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "definition": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "alias": [
+          "Modelnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.modelNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.545--20260817125311",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.type",
+        "short": "The kind or type of device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort of type device.Aanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The kind or type of device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort of type device.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.547--20260817125557",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.version",
+        "short": "Ontwerp- of softwareversie",
+        "definition": "Ontwerp- of softwareversie",
+        "alias": [
+          "Versie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.version",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.548--20260817125842",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.version.value",
+        "short": "De ontwerp- of softwareversie van het device",
+        "definition": "De ontwerp- of softwareversie van het device",
+        "alias": [
+          "Versie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.version.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.550--20260817130028",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.note",
+        "short": "Notitie of opmerking over device.",
+        "definition": "Notitie of opmerking over device.",
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.432--20260710062216",
+        "path": "Deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.535--20260817124439",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.identifier",
+        "short": "Om een instantie van een device te identificeren.",
+        "definition": "Om een instantie van een device te identificeren.",
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.551--20260817130211",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI",
+        "short": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device.",
+        "definition": "Een unieke identificatiecode (UDI) die is toegekend aan het etiket of de verpakking van het device. Merk op dat het device meerdere UDI's kan bevatten, aangezien het ofwel alleen de UDI voor het rechtsgebied van verkoop kan omvatten, ofwel UDI voor meerdere rechtsgebieden waar het verkocht had kunnen worden.",
+        "alias": [
+          "Unique device identifier (UDI) "
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.552--20260819075654",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI.identifier",
+        "short": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "definition": "Een plek om het Unique Device Identifier (UDI) te noteren.",
+        "alias": [
+          "Identificatie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI.identifier",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.554--20260819092154",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.uniquedeviceidentifierUDI.issuer",
+        "short": "UitgevendeOrganisatie (string (uri))Organisatie die belast is met de uitgifte van UDI's voor devices.",
+        "definition": "UitgevendeOrganisatie (string (uri))\n\nOrganisatie die belast is met de uitgifte van UDI's voor devices.",
+        "alias": [
+          "UitgevendeOrganisatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.uniquedeviceidentifierUDI.issuer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.536--20260817124629",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.manufacturer",
+        "short": "De naam van de fabrikant.",
+        "definition": "De naam van de fabrikant.",
+        "alias": [
+          "Fabrikant"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.537--20260817124739",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.manufacturerDate",
+        "short": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "definition": "De datum en tijd waarop het device is geproduceerd door de fabrikant.",
+        "alias": [
+          "ProductieDatum/Tijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.manufacturerDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.538--20260817124843",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.expirationDate",
+        "short": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "definition": "De datum en tijd waarna het device niet meer gebruikt zou moeten worden of niet meer geldig is.",
+        "alias": [
+          "Vervaldatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.539--20260817124910",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.lotNumber",
+        "short": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "definition": "Een unieke identificatiecode (partijcode) meegeven die verwijst naar een specifieke productiebatch zodat aangegeven kan worden in welke ronde of groep identieke producten het Device is gemaakt.",
+        "alias": [
+          "Lotnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.lotNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.540--20260817124933",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.serialNumber",
+        "short": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "definition": "De door de fabrikant toegekende code van cijfers en/of letters voor één specifiek exemplaar van een device meegeven.",
+        "alias": [
+          "Serienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.serialNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.541--20260817125008",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName",
+        "short": "De naam en het type van het device.",
+        "definition": "De naam en het type van het device.",
+        "alias": [
+          "DeviceNaamType"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.deviceName",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.543--20260817125137",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName.type",
+        "short": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "definition": "Een vereenvoudigde, gemakkelijk en universeel herkenbare gecodeerde naam.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.deviceName.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceNameType",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-nametype"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.542--20260817125043",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.deviceName.name",
+        "short": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "definition": "Een voor de fabrikant en/of patiënt herkenbare naam voor het device.",
+        "alias": [
+          "Naam"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.deviceName.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.544--20260817125218",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.modelNumber",
+        "short": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "definition": "Een nummer om aan te geven welk specifiek model het betreft in de reeks.",
+        "alias": [
+          "Modelnummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.modelNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.545--20260817125311",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.type",
+        "short": "The kind or type of device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort of type device.Aanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The kind or type of device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Het soort of type device.\n\nAanvullende associaties van waardenlijsten die gebruikt kunnen worden binnen Nederland zijn ProductTypeCodelijst SNOMED en ProductTypeImplantatenCodelijst SNOMED."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.547--20260817125557",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.version",
+        "short": "Ontwerp- of softwareversie",
+        "definition": "Ontwerp- of softwareversie",
+        "alias": [
+          "Versie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.version",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.548--20260817125842",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.version.value",
+        "short": "De ontwerp- of softwareversie van het device",
+        "definition": "De ontwerp- of softwareversie van het device",
+        "alias": [
+          "Versie"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Deviceplaceholder.version.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.550--20260817130028",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "Deviceplaceholder.note",
+        "short": "Notitie of opmerking over device.",
+        "definition": "Notitie of opmerking over device.",
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Deviceplaceholder.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

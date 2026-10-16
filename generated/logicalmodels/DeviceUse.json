@@ -1,0 +1,1699 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "LogicalModelDeviceUse",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-08-20T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDeviceUse",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.35"
+    }
+  ],
+  "version": "2026-08-20T00:00:00",
+  "name": "LogicalModelDeviceUse",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelDeviceUse"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelDeviceUse",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelDeviceUse"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/StructureDefinition/DeviceUse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.469--20260727070559",
+        "path": "DeviceUse",
+        "short": "DeviceUse",
+        "definition": "DeviceUse",
+        "alias": [
+          "MedischHulpmiddel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.555--20260820060309",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.identificationNumber",
+        "short": "To identify an instance of a medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Om een instantie van een device te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "To identify an instance of a medical device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Om een instantie van een device te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.identificationNumber",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.556--20260820060612",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.status",
+        "short": "Indicates the status of the patient’s use of the medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft de status van het gebruik van het medisch hulpmiddel aan."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the status of the patient’s use of the medical device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft de status van het gebruik van het medisch hulpmiddel aan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceUseStatementStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-statement-status"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.565--20260820064702",
+        "path": "DeviceUse.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.558--20260820061231",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.period",
+        "short": "The period or timing during which the medical device is used.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De periode of timing van het gebruik van het medisch hulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The period or timing during which the medical device is used. Currently, only the period is included in this dataset.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De periode of timing van het gebruik van het medisch hulpmiddel. Momenteel is alleen de periode meegenomen in deze dataset."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Periode"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.period",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Duration"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.560--20260820061907",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.registrationDateTime",
+        "short": "Date and time when the information about the medical device was recorded.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Registratie DatumTijd van het medisch hulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time when the information about the medical device was recorded.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Registratie DatumTijd van het medisch hulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.registrationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.571--20260820084658",
+        "path": "DeviceUse.author[x]",
+        "short": "Auteur van de informatie van het medisch hulpmiddel.",
+        "definition": "Auteur van de informatie van het medisch hulpmiddel. RelatedPerson moet hier nog aan worden toegevoegd.",
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.author[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.564--20260820064542",
+        "path": "DeviceUse.deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.deviceplaceholder",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.561--20260820062613",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.reasonForUse",
+        "short": "The reason why the medical device is used by the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De reden waarom het medisch hulpmiddel door de patiënt wordt gebruikt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The reason why the medical device is used by the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De reden waarom het medisch hulpmiddel door de patiënt wordt gebruikt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RedenVanGebruik"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.reasonForUse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.570--20260820084125",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.justificationForUse[x]",
+        "short": "Another reason or explanation supporting the use of the medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MotivatieVanGebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Another reason or explanation supporting the use of the medical device. This element must reference one of the following resources: Observation, Condition, DiagnosticReport, DocumentReference, or Media. These reference options still need to be added here.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MotivatieVanGebruik. Een andere reden of uitleg om de motivatie van het gebruik van het medisch hulpmiddel aan te tonen.\n\nHier moet een verwijzing komen naar:\n- Observation\n- Condition\n- Diagnostic report\n- Document reference\n- Media"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MotivatieVanGebruik[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.justificationForUse[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.562--20260820062718",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.anatomicalLocation",
+        "short": "Describes the anatomical location on or in the patient’s body where the medical device is used or situated.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beschrijft de anatomische locatie waar het medisch hulpmiddel gebruikt is/zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Describes the anatomical location on or in the patient’s body where the medical device is used or situated.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beschrijft de anatomische locatie waar het medisch hulpmiddel gebruikt is/zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.anatomicalLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "SNOMED CT Body Structures",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.563--20260820062916",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.comment",
+        "short": "Additional information about the use of the medical device that cannot be recorded in another element.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting over het gebruik van het medisch hulpmiddel wat niet in op een andere plek genoteerd kan worden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information about the use of the medical device that cannot be recorded in another element. This may be a comment, instruction, or other note.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting over het gebruik van het medisch hulpmiddel wat niet in op een andere plek genoteerd kan worden. Kan een toelichting, instructie of overige notitie zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.comment",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.469--20260727070559",
+        "path": "DeviceUse",
+        "short": "DeviceUse",
+        "definition": "DeviceUse",
+        "alias": [
+          "MedischHulpmiddel"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.555--20260820060309",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.identificationNumber",
+        "short": "To identify an instance of a medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Om een instantie van een device te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "To identify an instance of a medical device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Om een instantie van een device te identificeren."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.identificationNumber",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.556--20260820060612",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.status",
+        "short": "Indicates the status of the patient’s use of the medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft de status van het gebruik van het medisch hulpmiddel aan."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Indicates the status of the patient’s use of the medical device.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Geeft de status van het gebruik van het medisch hulpmiddel aan."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "DeviceUseStatementStatus",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-statement-status"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.565--20260820064702",
+        "path": "DeviceUse.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.558--20260820061231",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.period",
+        "short": "The period or timing during which the medical device is used.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De periode of timing van het gebruik van het medisch hulpmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The period or timing during which the medical device is used. Currently, only the period is included in this dataset.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De periode of timing van het gebruik van het medisch hulpmiddel. Momenteel is alleen de periode meegenomen in deze dataset."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Periode"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.period",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Duration"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.560--20260820061907",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.registrationDateTime",
+        "short": "Date and time when the information about the medical device was recorded.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Registratie DatumTijd van het medisch hulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and time when the information about the medical device was recorded.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Registratie DatumTijd van het medisch hulpmiddel"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.registrationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.571--20260820084658",
+        "path": "DeviceUse.author[x]",
+        "short": "Auteur van de informatie van het medisch hulpmiddel.",
+        "definition": "Auteur van de informatie van het medisch hulpmiddel. RelatedPerson moet hier nog aan worden toegevoegd.",
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.author[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.564--20260820064542",
+        "path": "DeviceUse.deviceplaceholder",
+        "short": "Device",
+        "definition": "Device",
+        "alias": [
+          "Device"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.deviceplaceholder",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.561--20260820062613",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.reasonForUse",
+        "short": "The reason why the medical device is used by the patient.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De reden waarom het medisch hulpmiddel door de patiënt wordt gebruikt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The reason why the medical device is used by the patient.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De reden waarom het medisch hulpmiddel door de patiënt wordt gebruikt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RedenVanGebruik"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.reasonForUse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.570--20260820084125",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.justificationForUse[x]",
+        "short": "Another reason or explanation supporting the use of the medical device.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MotivatieVanGebruik."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Another reason or explanation supporting the use of the medical device. This element must reference one of the following resources: Observation, Condition, DiagnosticReport, DocumentReference, or Media. These reference options still need to be added here.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "MotivatieVanGebruik. Een andere reden of uitleg om de motivatie van het gebruik van het medisch hulpmiddel aan te tonen.\n\nHier moet een verwijzing komen naar:\n- Observation\n- Condition\n- Diagnostic report\n- Document reference\n- Media"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MotivatieVanGebruik[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.justificationForUse[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.562--20260820062718",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.anatomicalLocation",
+        "short": "Describes the anatomical location on or in the patient’s body where the medical device is used or situated.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beschrijft de anatomische locatie waar het medisch hulpmiddel gebruikt is/zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Describes the anatomical location on or in the patient’s body where the medical device is used or situated.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Beschrijft de anatomische locatie waar het medisch hulpmiddel gebruikt is/zich bevindt."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DeviceUse.anatomicalLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "SNOMED CT Body Structures",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.563--20260820062916",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "DeviceUse.comment",
+        "short": "Additional information about the use of the medical device that cannot be recorded in another element.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting over het gebruik van het medisch hulpmiddel wat niet in op een andere plek genoteerd kan worden."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Additional information about the use of the medical device that cannot be recorded in another element. This may be a comment, instruction, or other note.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Toelichting over het gebruik van het medisch hulpmiddel wat niet in op een andere plek genoteerd kan worden. Kan een toelichting, instructie of overige notitie zijn."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DeviceUse.comment",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.1937.777.102.11.15--20240822000000",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2024-08-22T00:00:00Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=ad8bbr-&version=&id=2.16.840.1.113883.3.1937.777.102.11.15&effectiveDate=2024-08-22T00:00:00"
+    }
+  ],
+  "url": "https://specifications.openehr.org/fhir/valueset-instruction_states",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.3.1937.777.102.11.15"
+    }
+  ],
+  "version": "0.1.0-snapshot",
+  "name": "Instruction_states",
+  "title": "Instruction States",
+  "status": "active",
+  "experimental": false,
+  "publisher": "openEHR + HL7",
+  "contact": [
+    {
+      "name": "openEHR + HL7",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openehr.org"
+        }
+      ]
+    }
+  ],
+  "description": "Instruction States",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.1937.777.102.5.17"
+      }
+    ]
+  }
+}
