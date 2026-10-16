@@ -1,0 +1,15 @@
+[ComplicatieCodelijsten]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.28.html
+[ComplicatieICD10Codelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.24.html
+[ComplicatieSNOMEDCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.23.html
+[LogicalModelProcedure]: StructureDefinition-LogicalModelProcedure.html
+[NlcoreProcedure]: StructureDefinition-nl-core-Procedure.html
+[nl-core-Procedure-02]: Procedure-nl-core-Procedure-02.html
+[OntsluitendSysteem]: ActorDefinition-ExchangingSystem.html
+[OpenEhrCurrentState_to_FhirProcedureStatus]: ConceptMap-openehr-currentstate-to-fhir-procedure-status.html
+[Procedure]: Requirements-Procedure.html
+[RegistrerendSysteem]: ActorDefinition-RegistrationSystem.html
+[UitkomstSNOMEDCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.22.html
+[VerrichtingCategorieCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.25.html
+[VerrichtingMethodeCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.21.html
+[VerrichtingNaamSNOMEDCodelijst]: ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.7.html
+[VerwerkendSysteem]: ActorDefinition-ConsumingSystem.html

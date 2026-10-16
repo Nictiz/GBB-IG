@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.28",
+  "meta": {
+    "lastUpdated": "2026-06-19T11:50:50Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"nl\" lang=\"nl\"><hr/><p><b>Dutch</b></p><hr/><p class=\"res-header-id\"><b>Gegenereerde narrative: ValueSet 2.16.840.1.113883.2.4.3.11.60.153.11.28</b></p><a name=\"2.16.840.1.113883.2.4.3.11.60.153.11.28\"> </a><a name=\"hc2.16.840.1.113883.2.4.3.11.60.153.11.28\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Laatste update: 2026-06-19 11:50:50+0000</p><p style=\"margin-bottom: 0px\">Profiel: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p><p style=\"margin-bottom: 0px\">Tag: <a href=\"http://hl7.org/fhir/R4/codesystem-FHIR-version.html\">4.0.1 (Details: FHIRVersion code 4.0.1)</a></p></div><p>Deze waardelijst includeert codes gebaseerd op de volgende regels:</p><ul><li>Importeer alle codes die staan in <a href=\"ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.24.html\">ComplicatieICD10Codelijst</a></li><li>Importeer alle codes die staan in <a href=\"ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.23.html\">ComplicatieSNOMEDCodelijst</a></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet 2.16.840.1.113883.2.4.3.11.60.153.11.28</b></p><a name=\"en-2.16.840.1.113883.2.4.3.11.60.153.11.28\"> </a><a name=\"en-hc2.16.840.1.113883.2.4.3.11.60.153.11.28\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2026-06-19 11:50:50+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p><p style=\"margin-bottom: 0px\">Tag: <a href=\"http://hl7.org/fhir/R4/codesystem-FHIR-version.html\">4.0.1 (Details: FHIRVersion code 4.0.1)</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.24.html\">ComplicatieICD10Codelijst</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-2.16.840.1.113883.2.4.3.11.60.153.11.23.html\">ComplicatieSNOMEDCodelijst</a></li></ul></div></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-19T11:50:50Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.28&effectiveDate=2026-06-19T11:50:50"
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.28"
+    }
+  ],
+  "version": "1.0.0-alpha.1",
+  "name": "ComplicatieCodelijsten",
+  "title": "ComplicatieCodelijsten",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-19T11:50:50Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "ComplicatieCodelijsten",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.24"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.23"
+        ]
+      }
+    ]
+  }
+}
