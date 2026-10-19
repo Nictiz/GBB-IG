@@ -36,6 +36,38 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.language" />
+      <short value="Language" />
+      <alias value="Taal" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="22" />
+        <comment value="language" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.language" />
+        <comment value="Language" />
+      </mapping>
+    </element>
     <element id="Procedure.extension:method">
       <path value="Procedure.extension" />
       <sliceName value="method" />
@@ -434,6 +466,22 @@
       </mapping>
     </element>
     <element id="Procedure.recorder">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
       <path value="Procedure.recorder" />
       <type>
         <code value="Reference" />
@@ -444,9 +492,54 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.InformationProvider.Practitioner" />
+        <map value="Procedure.Author.Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="21" />
+        <comment value="Author" />
+      </mapping>
+    </element>
+    <element id="Procedure.asserter">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="20" />
+        <comment value="Source" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.InformationProvider" />
       </mapping>
     </element>
     <element id="Procedure.performer.actor">
@@ -696,7 +789,7 @@
       <isModifier value="false" />
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureDetail.BodySite" />
+        <map value="Procedure.ProcedureDetail.AnatomicalLocation" />
       </mapping>
     </element>
     <element id="Procedure.outcome">
