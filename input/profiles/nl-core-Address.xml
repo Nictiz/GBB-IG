@@ -582,8 +582,9 @@
       <alias value="Land" />
       <mustSupport value="true" />
       <binding>
-        <strength value="required" />
-        <valueSet value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.10" />
+        <strength value="preferred" />
+        <description value="This value set defines the ISO 3166 Part 1 2-letter codes"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
       </binding>
       <mapping>
         <identity value="requirements-Address" />
