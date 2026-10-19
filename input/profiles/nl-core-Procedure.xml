@@ -437,7 +437,7 @@
       <path value="Procedure.recorder" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
@@ -471,7 +471,7 @@
       <alias value="Uitvoerder" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
@@ -514,7 +514,7 @@
       <path value="Procedure.performer.onBehalfOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
@@ -632,7 +632,7 @@
       <alias value="Indicatie" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Problem" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
@@ -773,7 +773,7 @@
       <path value="Procedure.complicationDetail" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Problem" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
     </element>
@@ -869,7 +869,7 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PharmaceuticalProduct" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
       </type>
       <mustSupport value="true" />
