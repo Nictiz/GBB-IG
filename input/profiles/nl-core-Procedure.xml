@@ -123,6 +123,43 @@
         <map value="Procedure.Method" />
       </mapping>
     </element>
+    <element id="Procedure.extension:extensionProcedureRecorded">
+      <path value="Procedure.extension" />
+      <sliceName value="extensionProcedureRecorded" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded" />
+      </type>
+    </element>
+    <element id="Procedure.extension:extensionProcedureRecorded.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.extension.value[x]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.6" />
+        <comment value="header.date" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.DateAndTimeActionstepPerformed" />
+      </mapping>
+    </element>
     <element id="Procedure.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
