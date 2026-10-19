@@ -11,3 +11,7 @@ Opmerking2
 
 Opmerking3
 : Het element DatumEnTijdActiestapUitgevoerd wordt gemapt op FHIR Procedure.performedDateTime indien de HuidigeActieStatus active of completed is en er geen StartDatumTijd of EindDatumTijd is vastgelegd. Als de StartDatumTijd is vastgelegd, maar er is geen EindDatumTijd, dan wordt DatumEnTijdActiestapUitgevoerd (indien de HuidigeActieStatus is active of completed) gemapt op Procedure.performedPeriod.end.
+
+Opmerking4
+:Er zijn verschillen tussen het logische model van EHDS en het FHIR-profiel, waardoor het EHDS model op dit moment nog niet volledig kan worden toegepast. Dit heeft gevolgen voor het gegevenselement Procedure.recorde in het FHIR-profiel
+(EHDS LIM verwacht dat header.author een herhalend element zal zijn. Dit is onrealiseerbaar op dit moment vanwege beperkte kardinaliteit van recorder in het basis resource van Procedure)

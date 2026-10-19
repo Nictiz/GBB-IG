@@ -686,7 +686,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.HealthcareFacility.location" />
+        <map value="Procedure.EventContextHealthcareFacility.location" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode">
@@ -780,6 +780,14 @@
         <identity value="requirements-Procedure" />
         <map value="7.2" />
         <comment value="Reden" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.IndicationReference.Condition" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.IndicationReference.Procedure" />
       </mapping>
     </element>
     <element id="Procedure.bodySite">
@@ -972,7 +980,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureDetail.Device" />
+        <map value="Procedure.ProcedureDetail.FocalDevice.Device" />
       </mapping>
     </element>
     <element id="Procedure.usedReference">
@@ -1010,7 +1018,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureDetail.Device" />
+        <map value="Procedure.ProcedureDetail.DeviceUsed.Device" />
       </mapping>
     </element>
   </differential>
