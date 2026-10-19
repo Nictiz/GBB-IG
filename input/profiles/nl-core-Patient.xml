@@ -265,7 +265,6 @@
     </element>
     <element id="Patient.extension:patSexParameterForClinicalUse.extension">
       <path value="Patient.extension.extension" />
-      <min value="2" />
     </element>
     <element id="Patient.extension:patSexParameterForClinicalUse.extension:value">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -315,28 +314,6 @@
         <map value="Patient.sexParameterForClinicalUse" />
         <comment value="patSexParameterForClinicalUse" />
       </mapping>
-    </element>
-    <element id="Patient.extension:patSexParameterForClinicalUse.extension:patSexParameterForClinicalUse">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.extension.extension" />
-      <sliceName value="patSexParameterForClinicalUse" />
-      <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Patient.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
