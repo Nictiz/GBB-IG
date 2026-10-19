@@ -1,1 +1,0 @@
-{% include_relative Organization-Concept.md %}
