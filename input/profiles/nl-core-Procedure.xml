@@ -121,6 +121,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Method" />
+        <comment value="Method" />
       </mapping>
     </element>
     <element id="Procedure.extension:extensionProcedureRecorded">
@@ -158,6 +159,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.DateAndTimeActionstepPerformed" />
+        <comment value="DateAndTimeActionstepPerformed" />
       </mapping>
     </element>
     <element id="Procedure.identifier">
@@ -187,6 +189,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.FeederAuditOriginatingSystemItemIds" />
+        <comment value="identifier" />
       </mapping>
     </element>
     <element id="Procedure.status">
@@ -228,6 +231,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.CurrentActionState" />
+        <comment value="CurrentActionState" />
       </mapping>
     </element>
     <element id="Procedure.category">
@@ -274,6 +278,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureType" />
+        <comment value="ProcedureType" />
       </mapping>
     </element>
     <element id="Procedure.code">
@@ -326,6 +331,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureName" />
+        <comment value="ProcedureName" />
       </mapping>
     </element>
     <element id="Procedure.subject">
@@ -373,6 +379,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Subject.Patient" />
+        <comment value="Subject.Patient" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]">
@@ -416,6 +423,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.DateAndTimeActionstepPerformed" />
+        <comment value="DateAndTimeActionstepPerformed" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod">
@@ -465,10 +473,12 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.StartDateTime" />
+        <comment value="StartDateTime" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ScheduledStartDateTime" />
+        <comment value="ScheduledStartDateTime" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod.end">
@@ -500,6 +510,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.EndDateTime" />
+        <comment value="EndDateTime" />
       </mapping>
     </element>
     <element id="Procedure.recorder">
@@ -533,6 +544,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Author.Practitioner" />
+        <comment value="Author.Practitioner" />
       </mapping>
       <mapping>
         <identity value="requirements-Procedure" />
@@ -577,6 +589,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.InformationProvider" />
+        <comment value="InformationProvider" />
       </mapping>
     </element>
     <element id="Procedure.performer.actor">
@@ -630,14 +643,17 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Participations.Performer.Patient" />
+        <comment value="Performer.Patient" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Participations.Performer.Practitioner" />
+        <comment value="Performer.Practitioner" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Participations.Performer.PractitionerRole" />
+        <comment value="Performer.PractitionerRole" />
       </mapping>
     </element>
     <element id="Procedure.performer.onBehalfOf">
@@ -687,6 +703,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.EventContextHealthcareFacility.location" />
+        <comment value="Location" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode">
@@ -738,6 +755,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Indication" />
+        <comment value="Indication" />
       </mapping>
     </element>
     <element id="Procedure.reasonReference">
@@ -784,10 +802,12 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.IndicationReference.Condition" />
+        <comment value="IndicationReference.Condition" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.IndicationReference.Procedure" />
+        <comment value="IndicationReference.Procedure" />
       </mapping>
     </element>
     <element id="Procedure.bodySite">
@@ -835,6 +855,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureDetail.AnatomicalLocation" />
+        <comment value="AnatomicalLocation" />
       </mapping>
     </element>
     <element id="Procedure.outcome">
@@ -870,6 +891,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Outcome" />
+        <comment value="Outcome" />
       </mapping>
     </element>
     <element id="Procedure.complication">
@@ -905,6 +927,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Complication" />
+        <comment value="Complication" />
       </mapping>
     </element>
     <element id="Procedure.complicationDetail">
@@ -981,6 +1004,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureDetail.FocalDevice.Device" />
+        <comment value="FocalDevice" />
       </mapping>
     </element>
     <element id="Procedure.usedReference">
@@ -1019,6 +1043,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureDetail.DeviceUsed.Device" />
+        <comment value="DeviceUsed" />
       </mapping>
     </element>
   </differential>
