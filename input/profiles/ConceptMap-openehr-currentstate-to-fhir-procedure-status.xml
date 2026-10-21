@@ -3,11 +3,12 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
         <valueBoolean value="false"/>
     </extension>
-    <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure"/>
+    <url value="http://ig.nictiz.nl/gbb/ConceptMap/openehr-currentstate-to-fhir-procedure-status"/>
     <version value="1.0.0"/>
     <name value="OpenEhrCurrentState_to_FhirProcedureStatus"/>
     <title value="Open EHR current state to FHIR Procedure status"/>
     <status value="draft"/>
+    <experimental value="false"/>
     <publisher value="Nictiz"/>
     <contact>
       <name value="Nictiz"/>
@@ -22,6 +23,8 @@
     <sourceCanonical value="https://specifications.openehr.org/fhir/valueset-instruction_states"/>
     <targetCanonical value="http://hl7.org/fhir/ValueSet/event-status"/>
     <group>
+        <source value="https://specifications.openehr.org/fhir/codesystem-instruction_states"/>
+        <target value="http://hl7.org/fhir/event-status"/>
         <element>
             <code value="524"/>
             <display value="initial" />
