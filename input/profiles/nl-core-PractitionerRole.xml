@@ -189,6 +189,28 @@
       <alias value="Specialisme" />
       <max value="1" />
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-practitionerroleSpeciality-1" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.56--20261019121449" />
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-practitionerroleSpeciality-2" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.55--20261019121443" />
+          </extension>
+        </extension>
         <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000" />
       </binding>
