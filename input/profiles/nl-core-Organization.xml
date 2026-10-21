@@ -127,7 +127,7 @@
             <valueId value="gbb-organizationType" />
           </extension>
           <extension url="purpose">
-            <valueCode value="extensible" />
+            <valueCode value="component" />
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.34--20261019071818" />
