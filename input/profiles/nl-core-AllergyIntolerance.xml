@@ -947,10 +947,6 @@
       <short value="Severity of reaction" />
       <alias value="Ernst" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/reaction-event-severity" />
-      </binding>
       <mapping>
         <identity value="requirements-Reaction" />
         <map value="EU-12" />
