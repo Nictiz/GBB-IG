@@ -599,6 +599,11 @@
         <comment value="Country" />
       </mapping>
       <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-16" />
+        <comment value="Country GBA" />
+      </mapping>
+      <mapping>
         <identity value="lm-Address" />
         <map value="Address.country" />
         <comment value="Country" />
