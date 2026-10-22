@@ -73,6 +73,11 @@
       <short value="Language"/>
       <alias value="Taal"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred" />
+        <description value="Language of the allergy or intolerance content" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
+      </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-19" />
