@@ -1,4 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/AllergyIntolerance-eu-core" />
+  </extension>
   <id value="nl-core-AllergyIntolerance" />
   <text>
     <status value="empty" />

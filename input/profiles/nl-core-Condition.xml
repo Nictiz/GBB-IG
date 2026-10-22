@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Condition" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-      <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core"/>
   </extension>
   <language value="en" />
   <text>
@@ -181,15 +181,6 @@
       <mustSupport value="true"/>
       <definition value="The problem status describes the condition of the problem:                                       1. Active problems are problems of which the patient experiences symptoms or for which evidence exists.                                       2. If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.                                        3. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore." />
       <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="purpose">
-            <valueCode value="extensible"/>
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2--20200901000000"/>
-          </extension>
-        </extension>
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-clinical" />
       </binding>
@@ -222,15 +213,6 @@
       <path value="Condition.verificationStatus" />
       <mustSupport value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="purpose">
-            <valueCode value="extensible"/>
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.4--20200901000000"/>
-          </extension>
-        </extension>
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-ver-status" />
       </binding>

@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Procedure" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
   </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
