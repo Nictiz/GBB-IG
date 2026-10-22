@@ -18,3 +18,11 @@ Belangrijk om te vermelden dat het vanwege de huidige versie van ART-DECOR de tr
 ### Bekende toekomstige ontwikkelpunten
 Deze versie van GBB Gezondheidstoestand is volop in ontwikkeling. In de volgende iteratie worden minstens Nederlandse informatiebehoefte uit de zibs Diagnose en AandoeningOfGesteldheid uit de publicatie van 2024 geanalyseerd, welke goed kunnen aansluiten bij bestaande modellering van de huidige versDeie van deze GBB of kunnen resulteren in aanvullende data-elementen.  
 Daarnaast zal in een toekomstige versie van ART-DECOR het mogelijk worden om obligations per data-element per systeemrol te duiden en additionele bindings in terminologie te koppelen. Informatiebehoefte van andere informatiestandaarden zullen in de toekomst worden geanalyseerd.
+
+### Bekende problemen
+* [GBB-Condition: Voldoen aan DAGIM-spelregels versie 1.0.0-alpha.4] (LINK ONTBREEKT)
+* [GBB-Condition: Waardelijsten toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
+* [GBB-Condition: Obligations toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
+* [GBB-Condition: Formuleren van informatie-requirements volgens DAGIM-spelregels] (LINK ONTBREEKT)
+* [GBB-Condition: Toevoegen van EU/NL traceability] (LINK ONTBREEKT)
+* [GBB-Condition: Ontbrekende additional bindings van FHIR EU Core profile Condition] (LINK ONTBREEKT)
