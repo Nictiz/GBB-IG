@@ -20,6 +20,7 @@ Deze versie van GBB Gezondheidstoestand is volop in ontwikkeling. In de volgende
 Daarnaast zal in een toekomstige versie van ART-DECOR het mogelijk worden om obligations per data-element per systeemrol te duiden en additionele bindings in terminologie te koppelen. Informatiebehoefte van andere informatiestandaarden zullen in de toekomst worden geanalyseerd.
 
 ### Bekende problemen
+* [GBB-Condition: assertedDate in het HL7 Europe FHIR EU Core Condition-profiel heeft geen mapping naar het LIM EHDSCondition, wat een foutmelding geeft. Dit is gemeld bij HL7 Europe] (https://nictiz.atlassian.net/browse/GBB-6)
 * [GBB-Condition: Voldoen aan DAGIM-spelregels versie 1.0.0-alpha.4] (LINK ONTBREEKT)
 * [GBB-Condition: Waardelijsten toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
 * [GBB-Condition: Obligations toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
