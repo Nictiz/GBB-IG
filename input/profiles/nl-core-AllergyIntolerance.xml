@@ -344,7 +344,7 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000"/>
+              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2"/>
           </extension>
         </extension>
         <strength value="preferred"/>
@@ -719,7 +719,7 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2--20200901000000"/>
+              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.2"/>
           </extension>
         </extension>
         <strength value="example"/>
@@ -945,12 +945,12 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical
-              value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"/>
+              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12"/>
           </extension>
         </extension>
         <strength value="required"/>
         <valueSet
-          value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12--20200901000000"/>
+          value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.8.2.12"/>
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
