@@ -46,7 +46,7 @@ msgstr "Location"
 msgid "MedischHulpmiddel"
 msgstr "DeviceUseStatement"
 
-msgid "Naam"
+msgid "Persoonsnaam"
 msgstr "HumanName"
 
 msgid "Organisatie"
