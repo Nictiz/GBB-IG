@@ -4,6 +4,7 @@ igs:
   - input/
   # - vocabulary
   - util/qa
+  - hl7.fhir.uv.extensions.r4#5.3.0
 script dir: util/qa
 
 patterns:

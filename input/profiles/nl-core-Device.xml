@@ -1,14 +1,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-Device" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
-      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps"/>
-  </extension>
   <text>
     <status value="empty" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+      <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps"/>
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
   <name value="NlcoreDevice" />
   <title value="nl core Device" />
@@ -23,17 +23,17 @@
     </telecom>
   </contact>
   <description value="The concept contains the properties of a variety of implants, devices and aids that are patient-related and support the healthcare process. It covers medical and non-medical devices, ranging from simple aids and implants to equipment and software." />
-  <purpose value="This profile is the FHIR implementation of the general building block [Device](https://decor.nictiz.nl/ad/#/gbb2026bbr-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.153.1.11)." />
+  <purpose value="This profile is the FHIR implementation of the general building block [Device](https://build.fhir.org/ig/Nictiz/GBB-IG/branches/_generated_Device/en/)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="requirements-Device" />
-    <uri value="http://nictiz.nl/ig/gbb/Requirements/Device" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/Device" />
     <name value="Information requirements for Device" />
   </mapping>
   <mapping>
     <identity value="lm-Device" />
-    <uri value="http://nictiz.nl/ig/gbb/model/StructureDefinition/Device" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice" />
     <name value="Logical model for Device" />
   </mapping>
   <kind value="resource" />
@@ -48,7 +48,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -56,13 +56,13 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.identifier" />
-      <mustSupport value="true" />
       <short value="Instance identifier" />
       <definition value="An identifier used to identify an instance of a Device." />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-01" />
@@ -70,7 +70,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.identificatienummer" />
+        <map value="Device.identifier" />
+        <comment value="Identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier">
@@ -79,7 +80,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -87,10 +88,11 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.udiCarrier" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-02" />
@@ -119,6 +121,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.uniquedeviceidentifierUDI" />
+        <comment value="Unieke device identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.deviceIdentifier">
@@ -127,7 +130,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -135,12 +138,12 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.udiCarrier.deviceIdentifier" />
-      <mustSupport value="true" />
       <min value="1" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-02" />
@@ -168,7 +171,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.uniquedeviceidentifierUDI.identificatie" />
+        <map value="Device.uniquedeviceidentifierUDI.identifier" />
+        <comment value="Unieke device identifier" />
       </mapping>
     </element>
     <element id="Device.udiCarrier.issuer">
@@ -177,7 +181,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -185,7 +189,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.udiCarrier.issuer" />
@@ -217,7 +221,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.uniquedeviceidentifierUDI.uitgevendeOrganisatie" />
+        <map value="Device.uniquedeviceidentifierUDI.issuer" />
+        <comment value="UDI Issuer" />
       </mapping>
     </element>
     <element id="Device.manufacturer">
@@ -226,7 +231,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -234,7 +239,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.manufacturer" />
@@ -246,7 +251,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.fabrikant" />
+        <map value="Device.manufacturer" />
+        <comment value="Manufacturer" />
       </mapping>
     </element>
     <element id="Device.manufactureDate">
@@ -255,7 +261,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -263,7 +269,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.manufactureDate" />
@@ -275,7 +281,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.productieDatumTijd" />
+        <map value="Device.manufacturerDate" />
+        <comment value="Production datetime" />
       </mapping>
     </element>
     <element id="Device.expirationDate">
@@ -284,7 +291,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -292,7 +299,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.expirationDate" />
@@ -304,7 +311,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.vervaldatum" />
+        <map value="Device.expirationDate" />
+        <comment value="Expiration datetime" />
       </mapping>
     </element>
     <element id="Device.lotNumber">
@@ -313,7 +321,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -321,7 +329,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.lotNumber" />
@@ -333,7 +341,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.lotnummer" />
+        <map value="Device.lotNumber" />
+        <comment value="Lot number" />
       </mapping>
     </element>
     <element id="Device.serialNumber">
@@ -342,7 +351,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -350,7 +359,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.serialNumber" />
@@ -377,7 +386,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.serienummer" />
+        <map value="Device.serialNumber" />
+        <comment value="Serial number" />
       </mapping>
     </element>
     <element id="Device.deviceName">
@@ -386,7 +396,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -394,7 +404,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.deviceName" />
@@ -411,7 +421,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType" />
+        <map value="Device.deviceName" />
+        <comment value="Device name" />
       </mapping>
     </element>
     <element id="Device.deviceName.name">
@@ -420,7 +431,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -428,7 +439,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.deviceName.name" />
@@ -445,7 +456,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType.naam" />
+        <map value="Device.deviceName.name" />
+        <comment value="Device name" />
       </mapping>
     </element>
     <element id="Device.deviceName.type">
@@ -454,7 +466,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -462,7 +474,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.deviceName.type" />
@@ -474,7 +486,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.deviceNaamType.type" />
+        <map value="Device.deviceName.type" />
+        <comment value="Device name type" />
       </mapping>
     </element>
     <element id="Device.modelNumber">
@@ -483,7 +496,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -491,7 +504,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.modelNumber" />
@@ -503,7 +516,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.modelnummer" />
+        <map value="Device.modelNumber" />
+        <comment value="Model number" />
       </mapping>
     </element>
     <element id="Device.type">
@@ -512,7 +526,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -520,9 +534,11 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
+      <path value="Device.type" />
+      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DeviceType"/>
@@ -531,8 +547,6 @@
         <description value="Codes to identify medical devices."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/device-type|4.0.1"/>
       </binding>
-      <path value="Device.type" />
-      <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Device" />
         <map value="DEVICE-12" />
@@ -556,6 +570,7 @@
       <mapping>
         <identity value="lm-Device" />
         <map value="Device.type" />
+        <comment value="Device type" />
       </mapping>
     </element>
     <element id="Device.version">
@@ -564,7 +579,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -572,13 +587,15 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.version" />
+      <mustSupport value="true" />
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.versie" />
+        <map value="Device.version" />
+        <comment value="Device version" />
       </mapping>
     </element>
     <element id="Device.version.value">
@@ -587,7 +604,7 @@
           <valueCode value="SHALL:populate" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -595,7 +612,7 @@
           <valueCode value="SHALL:handle" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.version.value" />
@@ -607,7 +624,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.versie.versie" />
+        <map value="Device.version.value" />
+        <comment value="Device version" />
       </mapping>
     </element>
     <element id="Device.note.text">
@@ -616,7 +634,7 @@
           <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -624,7 +642,7 @@
           <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
-          <valueCanonical value="http://nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
       <path value="Device.note.text" />
@@ -641,7 +659,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Device" />
-        <map value="Device.toelichting" />
+        <map value="Device.note" />
+        <comment value="Comment" />
       </mapping>
     </element>
   </differential>

@@ -28,22 +28,24 @@ jobs:
           git branch -f "$generated_branch" "$current_branch"
           git switch "$generated_branch"
           echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
+      - name: Install IG tooling
+        run: npm install -g github:Nictiz/Nictiz-tooling-for-IGs
       - name: Generate artifacts
-        run: |
-          cd util/scripts/excel-to-artifacts
-          npm install
-          cd ../../..
-          node util/scripts/excel-to-artifacts/excel-to-artifacts.js input/requirements generated
+        run: excel-to-artifacts input generated
       - name: Run sushi
         run: |
           npm -g install fsh-sushi
           sushi .
+      - name: Translate menu
+        run: translate-menu --lang en
       - name: Commit generated artifacts
         run: |
           git config --global user.name 'Nictiz FHIR IG artifacts generator'
           git config --global user.email 'github@noreply.github.com'
           git add -f generated
           git add -f fsh-generated
+          git add -f input/includes/menu.xml
+          git add -f input/translations/en/includes/menu.xml
           git commit -m "Check in generated artifacts"
           git push --force --set-upstream origin ${{ steps.create-branch.outputs.generated_branch }}
       - name: Start IG Build
