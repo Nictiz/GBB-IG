@@ -1,7 +1,7 @@
 {
    "package-id" : "nictiz.nl.gbb",
-   "version" : "1.0.0-alpha.1",
-   "path" : "http://ig.nictiz.nl/gbb/1.0.0-alpha.1",
+   "version" : "1.0.0-alpha.2",
+   "path" : "http://ig.nictiz.nl/gbb/1.0.0-alpha.2",
    "mode" : "milestone",
    "status" : "release",
    "sequence" : "1.0.0",
