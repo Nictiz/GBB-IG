@@ -14,5 +14,5 @@ More information about versions and their meaning can be found in the [IG explai
 </div>
 
 <div class='dragon' markdown='1'>
-Not all parts of the development and publication methodology are finalized. In areas like translations, mappings and value set bindings, inconsistency's are to be expected. These will be addressed in subsequent versions of this guide.
+Not all parts of the development and publication methodology are finalized. In areas like translations, mappings, value set bindings and traceability to the EHDS specifications, inconsistency's are to be expected. These will be addressed in subsequent versions of this guide.
 </div>

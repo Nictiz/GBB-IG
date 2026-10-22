@@ -14,5 +14,5 @@ Voor meer informatie over versies en hun betekenis, zie de [IG-leeswijzer](https
 </div>
 
 <div class='dragon' markdown='1'>
-Niet alle onderdelen van de ontwikkelmethode zijn volledig uitgekristalliseerd. Met name op gebied van vertalingen, mappings en waardelijstkoppelingen kunnen er inconsistenties in deze gids voorkomen. Deze worden in een volgende versie geadresseerd.
+Niet alle onderdelen van de ontwikkelmethode zijn volledig uitgekristalliseerd. Met name op gebied van vertalingen, mappings, waardelijstkoppelingen en traceability naar de EHDS-specificaties kunnen er inconsistenties in deze gids voorkomen. Deze worden in een volgende versie geadresseerd.
 </div>
