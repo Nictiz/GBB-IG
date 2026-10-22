@@ -146,7 +146,7 @@ menu:
       Requirements: Requirements-DeviceUse.html
       Afsprakenmodel: StructureDefinition-LogicalModelDeviceUse.html
       FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
-    Naam:
+    Persoonsnaam:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
       Afsprakenmodel: StructureDefinition-LogicalModelHumanName.html
