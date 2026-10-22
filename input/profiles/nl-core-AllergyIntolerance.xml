@@ -93,6 +93,7 @@
     </element>
     <element id="AllergyIntolerance.extension:abatement.value[x]">
       <path value="AllergyIntolerance.extension.value[x]" />
+      <short value="When the allergy or intolerance resolved" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="EU-08" />
