@@ -5,4 +5,4 @@
 
 * [GBB-Device: Terminologie voor Device.type nog niet vastgesteld. Afstemming van SNOMED CT, EMDN en de Europese MVC-waardelijst is nog nodig.](https://nictiz.atlassian.net/browse/GBB-149)
 * [GBB-Device: Kardinaliteit van Type wijkt af tussen EHDSDevice (0..*) en FHIR R4 Device.type (0..1). Meerdere typen zijn momenteel niet ondersteund.](https://nictiz.atlassian.net/browse/GBB-150)
-* [GBB-Device: UDI-obligation uit EHDS is binnen FHIR R4 alleen toegepast op Device.udiCarrier.deviceIdentifier. Overige UDI-elementen hebben geen SHALL:populate-verplichting.]
+* [GBB-Device: UDI-obligation uit EHDS is binnen FHIR R4 alleen toegepast op Device.udiCarrier.deviceIdentifier. Overige UDI-elementen hebben geen SHALL:populate-verplichting.](https://nictiz.atlassian.net/browse/GBB-157)
