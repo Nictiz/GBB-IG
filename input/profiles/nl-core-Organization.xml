@@ -121,6 +121,23 @@
       <definition value="Het type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is." />
       <alias value="Type" />
       <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-organizationType" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.34" />
+          </extension>
+          <extension url="documentation">
+            <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+      </binding>
       <mapping>
         <identity value="requirements-Organization" />
         <map value="ORG-003" />
