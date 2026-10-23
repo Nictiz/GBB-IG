@@ -5,6 +5,9 @@
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
       human-readable rendering can be found in the implementation guide(s) where this resource is
       used.</div></text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core" />
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
   <name value="NlcorePractitioner" />
   <title value="nl core Practitioner" />
