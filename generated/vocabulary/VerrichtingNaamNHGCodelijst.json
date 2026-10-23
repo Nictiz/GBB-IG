@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.4",
+  "meta": {
+    "lastUpdated": "2026-06-19T10:42:26Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-19T09:17:55Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.4&effectiveDate=2026-06-19T09:17:55"
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.4",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.4"
+    }
+  ],
+  "version": "2026-06-19T09:17:55",
+  "name": "VerrichtingNaamNHGCodelijst",
+  "title": "VerrichtingNaamNHGCodelijst",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-19T10:42:26Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "NHG tabel 49 Ingrepen en behandelingen - Alle waarden",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "https://referentiemodel.nhg.org/tabellen/nhg-tabel-49-ingrepen-en-behandelingen"
+      }
+    ]
+  }
+}
