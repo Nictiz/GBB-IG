@@ -82,6 +82,7 @@ parameters:
   - 'input/translations/en'
   - 'input/translations/nl'
   logging: 'progress'
+  display-warnings: true
   path-liquid-template: 'template/liquid'
 
 #   validation: [allow-any-extensions, no-broken-links]
