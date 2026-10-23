@@ -128,7 +128,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value=" Condition.relatedArtifact"/>
+        <map value="Condition.relatedArtifact"/>
       </mapping>
     </element>
     <element id="Condition.identifier">
@@ -309,6 +309,9 @@
       <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-conditionCode" />
+          </extension>
           <extension url="purpose">
             <valueCode value="preferred" />
           </extension>
@@ -601,7 +604,7 @@
       </mapping>
       <mapping>
         <identity value="lm-Condition"/>
-        <map value=" Condition.abatement"/>
+        <map value="Condition.abatement"/>
       </mapping>
     </element>
     <element id="Condition.recordedDate">
