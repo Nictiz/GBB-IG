@@ -594,6 +594,7 @@
           </extension>
         </extension>
         <strength value="preferred" />
+        <description value="This value set defines the ISO 3166 Part 1 2-letter codes"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
       </binding>
       <mapping>
