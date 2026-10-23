@@ -814,7 +814,7 @@
             <valueId value="gbb-allergyIntoleranceReactionManifestation" />
           </extension>
           <extension url="purpose">
-            <valueCode value="extensible"/>
+            <valueCode value="component"/>
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
