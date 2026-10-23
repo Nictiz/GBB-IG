@@ -3,7 +3,16 @@ This guide contains the generic building blocks for information standards in the
 
 At the moment, the methodology for creating generic building blocks is still in development. More information can be found in the [Nictiz Confluence pages](https://nictiz.atlassian.net/wiki/spaces/GBBS/pages/1106149454/Leeswijzer) (in Dutch).
 
-For questions and change requests, the [Nictiz service desk can be used](https://nictiz.atlassian.net/servicedesk/customer/portal/4).
+For questions and change requests, the [Nictiz service desk can be used](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12).
 
-### Dependencies
-{% include dependency-table-short.xhtml %}
+<div class='stu-note' markdown='1'>
+This is an alpha version of the generic building block IG. The purpose of this publication is to share the current state of development and collect feedback to improve the building blocks and this associated IG. Please be so kind as to [submit a change request](https://nictiz.atlassian.net/servicedesk/customer/portal/4/group/12) for all issues you may encounter. The overview page of each building block lists the known issues that have to be addressed.
+
+This version is not meant for production use.
+
+More information about versions and their meaning can be found in the [IG explainer (in Dutch)](https://ig.nictiz.nl/readme.html).
+</div>
+
+<div class='dragon' markdown='1'>
+Not all parts of the development and publication methodology are finalized. In areas like translations, mappings, value set bindings and traceability to the EHDS specifications, inconsistency's are to be expected. These will be addressed in subsequent versions of this guide.
+</div>
