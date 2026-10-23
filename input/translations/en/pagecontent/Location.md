@@ -6,3 +6,7 @@
 * [Review and update the GBBs according to the rules for terminology and value sets](http://nictiz.atlassian.net/browse/GBB-113)
 * [Add obligations](http://nictiz.atlassian.net/browse/GBB-120)
 * [Information requirements are not yet adequately formulated in accordance with the DAGIM rules](http://nictiz.atlassian.net/browse/GBB-138)
+
+### Release notes version 1.0.0-alpha.2
+
+* [GBB-16 - Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure](http://nictiz.atlassian.net/browse/GBB-16)
