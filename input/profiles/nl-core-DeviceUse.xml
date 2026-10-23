@@ -6,6 +6,9 @@
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
     </div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile">
+    <valueCanonical value="http://hl7.eu/fhir/eps/StructureDefinition/deviceUseStatement-eu-eps"/>
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse" />
   <name value="NlcoreDeviceUse" />
   <title value="nl core DeviceUse" />
@@ -61,7 +64,7 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-08" />
-        <comment value="Gebruikte taal" />
+        <comment value="FHIR element mapped to information requirement DEVICEUSE-08." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.identifier">
@@ -86,12 +89,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-04" />
-        <comment value="Business identifier" />
+        <comment value="Mapping to information requirement DEVICEUSE-04." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.identificationNumber" />
-        <comment value="Identifier" />
+        <map value="MedischHulpmiddel.identificatienummer" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.identificatienummer." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.status">
@@ -116,12 +119,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-01" />
-        <comment value="Status van het gebruik" />
+        <comment value="Mapping to information requirement DEVICEUSE-01." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.status" />
-        <comment value="Status" />
+        <map value="MedischHulpmiddel.status" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.status." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.subject">
@@ -151,12 +154,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-02" />
-        <comment value="Patiënt" />
+        <comment value="Mapping to information requirement DEVICEUSE-02." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.patient" />
-        <comment value="Patient" />
+        <map value="MedischHulpmiddel.patient" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.patient." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.timing[x]">
@@ -181,22 +184,22 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09" />
-        <comment value="Periode van gebruik" />
+        <comment value="Mapping to information requirement DEVICEUSE-09." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09.01" />
-        <comment value="Startdatum van periode" />
+        <comment value="Mapping to information requirement DEVICEUSE-09.01." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-09.02" />
-        <comment value="Einddatum van periode" />
+        <comment value="Mapping to information requirement DEVICEUSE-09.02." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.period" />
-        <comment value="Period" />
+        <map value="MedischHulpmiddel.periode" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.periode." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.recordedOn">
@@ -221,12 +224,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-06" />
-        <comment value="Moment van schrijven" />
+        <comment value="Mapping to information requirement DEVICEUSE-06." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.registrationDateTime" />
-        <comment value="Registration date and time" />
+        <map value="MedischHulpmiddel.registratieDatumTijd" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.registratieDatumTijd." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.source">
@@ -258,7 +261,7 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-07" />
-        <comment value="Bron van de informatie" />
+        <comment value="Mapping to information requirement DEVICEUSE-07." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.device">
@@ -287,27 +290,27 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.01" />
-        <comment value="Informatie over het product dat gebruikt wordt als medisch hulpmiddel" />
+        <comment value="Mapping to information requirement DEVICEUSE-03.01." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.02" />
-        <comment value="Informatie van het type product dat gebruikt wordt als medisch hulpmiddel" />
+        <comment value="Mapping to information requirement DEVICEUSE-03.02." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.03" />
-        <comment value="Informatie van de product ID dat gebruikt wordt als medisch hulpmiddel" />
+        <comment value="Mapping to information requirement DEVICEUSE-03.03." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-03.04" />
-        <comment value="Gecodeerde informatie van het product dat niet gebruikt wordt als medisch hulpmiddel" />
+        <comment value="Mapping to information requirement DEVICEUSE-03.04." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.device" />
-        <comment value="Device" />
+        <map value="MedischHulpmiddel.device" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.device." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonCode">
@@ -332,12 +335,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11" />
-        <comment value="Reden van gebruik" />
+        <comment value="Mapping to information requirement DEVICEUSE-11." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.reasonForUse" />
-        <comment value="Reden van gebruik" />
+        <map value="MedischHulpmiddel.redenVanGebruik" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.redenVanGebruik." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.reasonReference">
@@ -361,9 +364,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
       </type>
@@ -371,22 +372,22 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.01" />
-        <comment value="Reden van gebruik" />
+        <comment value="Traceability only: DEVICEUSE-11.01 requires a Procedure reference, which is not supported by DeviceUseStatement.reasonReference in FHIR R4. This requirement is not fully implemented." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.02" />
-        <comment value="Reden van gebruik" />
+        <comment value="Mapping to information requirement DEVICEUSE-11.02." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-11.03" />
-        <comment value="Reden van gebruik" />
+        <comment value="Mapping to information requirement DEVICEUSE-11.03." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.justificationForUse[x]" />
-        <comment value="Motivation" />
+        <map value="MedischHulpmiddel.motivatieVanGebruik[x]" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.motivatieVanGebruik[x]." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.bodySite">
@@ -411,26 +412,27 @@
       <binding>
         <extension
                    url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="BodySite" />
+          <valueString value="BodySite"/>
         </extension>
-        <strength value="preferred" />
-        <description value="Codes describing anatomical locations. May include laterality." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/body-site|4.0.1" />
+        <strength value="preferred"/>
+        <description
+                     value="Codes describing anatomical locations. May include laterality."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/body-site|4.0.1"/>
       </binding>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-10" />
-        <comment value="Anatomische locatie" />
+        <comment value="Mapping to information requirement DEVICEUSE-10." />
       </mapping>
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-10.01" />
-        <comment value="Anatomische locatie" />
+        <comment value="Mapping to information requirement DEVICEUSE-10.01." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.anatomicalLocation" />
-        <comment value="Anatomical location" />
+        <map value="MedischHulpmiddel.anatomischeLocatie" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.anatomischeLocatie." />
       </mapping>
     </element>
     <element id="DeviceUseStatement.note.text">
@@ -455,12 +457,12 @@
       <mapping>
         <identity value="requirements-DeviceUse" />
         <map value="DEVICEUSE-12" />
-        <comment value="Toelichting" />
+        <comment value="Mapping to information requirement DEVICEUSE-12." />
       </mapping>
       <mapping>
         <identity value="lm-DeviceUse" />
-        <map value="DeviceUse.comment" />
-        <comment value="Comment" />
+        <map value="MedischHulpmiddel.toelichting" />
+        <comment value="Mapping to logical model element MedischHulpmiddel.toelichting." />
       </mapping>
     </element>
   </differential>
