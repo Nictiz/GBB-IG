@@ -1,5 +1,22 @@
 {% include_relative AllergyIntolerance-Concept.md %}
 
+### Known Issue
+* [(GBB AllergyIntolerance) Missing reference to RelatedPerson](http://nictiz.atlassian.net/browse/GBB-74)
+* [(GBB AllergyIntolerance and SBB Reaction) Missing additional bindings from FHIR EU Core AllergyIntolerance](http://nictiz.atlassian.net/browse/GBB-75)
+* [(GBB AllergyIntolerance) Missing additional binding from EU Core for AllergyIntolerance.language](http://nictiz.atlassian.net/browse/GBB-77)
+* [Remove information standards from the usage scenarios for the AllergyIntolerance concept](http://nictiz.atlassian.net/browse/GBB-78)
+* [Add EU/NL traceability to all components of the GBBs](http://nictiz.atlassian.net/browse/GBB-90)
+* [Comply with the DAGIM rules, version 1.0.0-alpha.4](http://nictiz.atlassian.net/browse/GBB-103)
+* [Review and update the GBBs according to the rules for terminology and value sets](http://nictiz.atlassian.net/browse/GBB-118)
+* [Add obligations](http://nictiz.atlassian.net/browse/GBB-130)
+* [Information requirements are not yet adequately formulated in accordance with the DAGIM rules](http://nictiz.atlassian.net/browse/GBB-144)
+
+### Release notes version 1.0.0-alpha.2
+
+* [GBB-14 - Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure](http://nictiz.atlassian.net/browse/GBB-14)
+* [GBB-30 - Replaced value sets from the zib in the FHIR profile for GBB-AllergyIntolerance, which contains Reaction, with value sets from GBB.](http://nictiz.atlassian.net/browse/GBB-30)
+* [GBB-69 - All value lists with a dependency on zib2020 have been unlinked and added, without this dependency, to the data elements CausativeAgent, Category, ActiveInactiveStatus, VerificationStatus, and Criticality in the logical model. The data type of the element Source has been changed from a coded element to a folder containing references to Patient, Practitioner and Practicioner Role, in accordance with the FHIR EU Core profile.](http://nictiz.atlassian.net/browse/GBB-69)
+
 ### Splitting SBB Reactie and GBB AllergieIntolerantie
 The base model selected for GBB AllergyIntolerance, the openEHR archetype Adverse Reaction Risk, contains a reusable underlying openEHR archetype, Adverse Reaction Event, which cannot be used independently. This archetype leads to its own informatie requirements and model definition. It was therefore decided to separate Reaction from AllergyIntolerance. For building blocks such as Reaction, which have no independent application in information standards, the term "sub-building block" is used.
 
