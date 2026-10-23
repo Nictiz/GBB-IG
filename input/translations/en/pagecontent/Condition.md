@@ -1,13 +1,4 @@
 {% include_relative Condition-Concept.md %}
-### Information sources
-This version of this generic building block (GBB) covers information requirements from the following sources:
-* EHDSCondition Logical Information Model, version 1.0.0
-* Mandatory elements from FHIR R4 Condition
-* Mandatory elements from openEHR archetype Problem/Diagnosis, version 1.7.4
-* HCIM Problem from the 2017 publication
-* HCIM Problem from the 2020 publication
-* BgZ-MSZ Information Standard, version 2.0.2
-* Emergency Summary use case from the Acute Zorg Information Standard, version 2.2.0
 
 ### Deviation from EHDS in the implementation artifact
 The information requirements from the EHDSCondition logical model have been incorporated into the specification model of this GBB. However, EHDSCondition is difficult to implement fully in FHIR. According to the logical model, the header.author[x] data element is repeatable, but the most relevant FHIR resource type, Condition, applies a stricter cardinality (0..1). Consequently, the EHDS guidelines cannot be met. A Jira ticket has been created for this issue on the [HL7 Jira board](https://jira.hl7.org/browse/FHIR-58077).

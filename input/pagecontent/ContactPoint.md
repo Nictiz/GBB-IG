@@ -1,0 +1,1 @@
+{% include_relative ContactPoint-Concept.md %}
