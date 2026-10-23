@@ -130,7 +130,7 @@
             <valueCode value="component" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.34--20261019071818" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.34" />
           </extension>
           <extension url="documentation">
             <valueMarkdown value="The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code." />
