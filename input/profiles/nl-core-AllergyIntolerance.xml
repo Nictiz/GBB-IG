@@ -190,7 +190,7 @@
         </extension>
         <strength value="required" />
         <description value="Status of the allergy or intolerance condition" />
-        <valueSet value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-clinical" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -248,7 +248,7 @@
         </extension>
         <strength value="required" />
         <description value="Status of the allergy or intolerance condition" />
-        <valueSet value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -307,7 +307,7 @@
         </extension>
         <strength value="required" />
         <description value="Category of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy." />
-        <valueSet value="http://hl7.org/fhir/allergy-intolerance-type" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -355,7 +355,7 @@
         </extension>
         <strength value="required" />
         <description value="Status of the allergy or intolerance condition" />
-        <valueSet value="http://hl7.org/fhir/allergy-intolerance-criticality" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
