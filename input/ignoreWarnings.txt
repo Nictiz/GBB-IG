@@ -13,3 +13,7 @@ Resource heeft een taal (en) en XHTML heeft een taal (lang) (nl), maar deze kome
 
 # The policy regarding canonical pinning is to be determined
 %Het is mogelijk een goed idee om de juiste versie te koppelen om de kans op selectie van een verkeerde versie door een implementatie/implementer te verminderen%
+
+# The narrative in Requirements resources is generated twice, in Dutch and English, so everything is duplicated. This makes sense in the context of one translation, but not in the context of the entire resource.
+De XHTML in de resource bevat meer dan één node voor elk van de volgende node-ids en anchor-namen:%
+%leidt naar meerdere doelen%
