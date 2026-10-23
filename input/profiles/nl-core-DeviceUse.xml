@@ -180,6 +180,9 @@
         </extension>
       </extension>
       <path value="DeviceUseStatement.timing[x]" />
+      <type>
+        <code value="Period" />
+      </type>
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-DeviceUse" />
