@@ -39,7 +39,7 @@
   <differential>
     <element id="HumanName">
       <path value="HumanName" />
-      <alias value="Naamgegevens" />
+      <alias value="Persoonsnaam" />
       <constraint>
         <key value="gbb-HumanName-01" />
         <severity value="error" />

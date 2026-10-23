@@ -435,7 +435,7 @@ msgstr "MedischHulpmiddel"
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
 msgid "Human Name"
-msgstr "Naam"
+msgstr "Persoonsnaam"
 
 # ImplementationGuide.definition.page.title
 #: ImplementationGuide.definition.page.title
