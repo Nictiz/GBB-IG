@@ -582,6 +582,17 @@
       <alias value="Land" />
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-addressCountry-GBA" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.35" />
+          </extension>
+        </extension>
         <strength value="preferred" />
         <description value="This value set defines the ISO 3166 Part 1 2-letter codes"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
@@ -590,6 +601,11 @@
         <identity value="requirements-Address" />
         <map value="ADD-14" />
         <comment value="Country" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-16" />
+        <comment value="Country GBA" />
       </mapping>
       <mapping>
         <identity value="lm-Address" />

@@ -36,6 +36,38 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
+    <element id="Procedure.language">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.language" />
+      <short value="Language" />
+      <alias value="Taal" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="22" />
+        <comment value="language" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.language" />
+        <comment value="Language" />
+      </mapping>
+    </element>
     <element id="Procedure.extension:method">
       <path value="Procedure.extension" />
       <sliceName value="method" />
@@ -89,6 +121,45 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Method" />
+        <comment value="Method" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:extensionProcedureRecorded">
+      <path value="Procedure.extension" />
+      <sliceName value="extensionProcedureRecorded" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded" />
+      </type>
+    </element>
+    <element id="Procedure.extension:extensionProcedureRecorded.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.extension.value[x]" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="1.6" />
+        <comment value="header.date" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.DateAndTimeActionstepPerformed" />
+        <comment value="DateAndTimeActionstepPerformed" />
       </mapping>
     </element>
     <element id="Procedure.identifier">
@@ -117,7 +188,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.Identifier" />
+        <map value="Procedure.FeederAuditOriginatingSystemItemIds" />
+        <comment value="identifier" />
       </mapping>
     </element>
     <element id="Procedure.status">
@@ -158,7 +230,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.CurrentState" />
+        <map value="Procedure.CurrentActionState" />
+        <comment value="CurrentActionState" />
       </mapping>
     </element>
     <element id="Procedure.category">
@@ -205,6 +278,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureType" />
+        <comment value="ProcedureType" />
       </mapping>
     </element>
     <element id="Procedure.code">
@@ -257,6 +331,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ProcedureName" />
+        <comment value="ProcedureName" />
       </mapping>
     </element>
     <element id="Procedure.subject">
@@ -304,6 +379,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Subject.Patient" />
+        <comment value="Subject.Patient" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]">
@@ -343,6 +419,11 @@
         <identity value="requirements-Procedure" />
         <map value="1.1.1" />
         <comment value="DatumTijdUitvoering" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.DateAndTimeActionstepPerformed" />
+        <comment value="DateAndTimeActionstepPerformed" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod">
@@ -392,10 +473,12 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.StartDateTime" />
+        <comment value="StartDateTime" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.ScheduledStartDateTime" />
+        <comment value="ScheduledStartDateTime" />
       </mapping>
     </element>
     <element id="Procedure.performed[x]:performedPeriod.end">
@@ -427,9 +510,10 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.EndDateTime" />
+        <comment value="EndDateTime" />
       </mapping>
     </element>
-    <element id="Procedure.performed[x]:performedString">
+    <element id="Procedure.recorder">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHOULD:populate-if-known" />
@@ -446,31 +530,66 @@
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
         </extension>
       </extension>
-      <path value="Procedure.performed[x]" />
-      <sliceName value="performedString" />
+      <path value="Procedure.recorder" />
       <type>
-        <code value="string" />
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.Author.Practitioner" />
+        <comment value="Author.Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Procedure" />
+        <map value="21" />
+        <comment value="Author" />
+      </mapping>
+    </element>
+    <element id="Procedure.asserter">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Procedure.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
       </type>
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Procedure" />
-        <map value="1.1.3" />
-        <comment value="Einddatum" />
+        <map value="20" />
+        <comment value="Source" />
       </mapping>
       <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.1.1" />
-        <comment value="DatumTijdUitvoering" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.1.2" />
-        <comment value="PeriodeUitvoering" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Procedure" />
-        <map value="1.2" />
-        <comment value="StartdatumTijdNietAfgerondeVerrichting" />
+        <identity value="lm-Procedure" />
+        <map value="Procedure.InformationProvider" />
+        <comment value="InformationProvider" />
       </mapping>
     </element>
     <element id="Procedure.performer.actor">
@@ -495,7 +614,9 @@
       <alias value="Uitvoerder" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
@@ -521,18 +642,25 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.OtherParticipations.Patient" />
+        <map value="Procedure.Participations.Performer.Patient" />
+        <comment value="Performer.Patient" />
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.OtherParticipations.Practitioner" />
+        <map value="Procedure.Participations.Performer.Practitioner" />
+        <comment value="Performer.Practitioner" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.Participations.Performer.PractitionerRole" />
+        <comment value="Performer.PractitionerRole" />
       </mapping>
     </element>
     <element id="Procedure.performer.onBehalfOf">
       <path value="Procedure.performer.onBehalfOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
     </element>
@@ -574,11 +702,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.HealthcareFacility.Organization" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Procedure" />
-        <map value="Procedure.HealthcareFacility.AddressInformation" />
+        <map value="Procedure.EventContextHealthcareFacility.location" />
+        <comment value="Location" />
       </mapping>
     </element>
     <element id="Procedure.reasonCode">
@@ -630,6 +755,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Indication" />
+        <comment value="Indication" />
       </mapping>
     </element>
     <element id="Procedure.reasonReference">
@@ -654,7 +780,7 @@
       <alias value="Indicatie" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Problem" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
@@ -675,7 +801,13 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.Indication" />
+        <map value="Procedure.IndicationReference.Condition" />
+        <comment value="IndicationReference.Condition" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Procedure" />
+        <map value="Procedure.IndicationReference.Procedure" />
+        <comment value="IndicationReference.Procedure" />
       </mapping>
     </element>
     <element id="Procedure.bodySite">
@@ -711,9 +843,19 @@
         <map value="6" />
         <comment value="AnatomischeLocatie" />
       </mapping>
+    </element>
+    <element id="Procedure.bodySite.extension:bodyStructureReference">
+      <path value="Procedure.bodySite.extension" />
+      <sliceName value="bodyStructureReference" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
+      </type>
+      <isModifier value="false" />
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureBodySite" />
+        <map value="Procedure.ProcedureDetail.AnatomicalLocation" />
+        <comment value="AnatomicalLocation" />
       </mapping>
     </element>
     <element id="Procedure.outcome">
@@ -749,6 +891,7 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Outcome" />
+        <comment value="Outcome" />
       </mapping>
     </element>
     <element id="Procedure.complication">
@@ -784,13 +927,14 @@
       <mapping>
         <identity value="lm-Procedure" />
         <map value="Procedure.Complication" />
+        <comment value="Complication" />
       </mapping>
     </element>
     <element id="Procedure.complicationDetail">
       <path value="Procedure.complicationDetail" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Problem" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
       </type>
     </element>
@@ -859,7 +1003,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureDetail.Device" />
+        <map value="Procedure.ProcedureDetail.FocalDevice.Device" />
+        <comment value="FocalDevice" />
       </mapping>
     </element>
     <element id="Procedure.usedReference">
@@ -886,7 +1031,7 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
-        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PharmaceuticalProduct" />
+        <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
       </type>
       <mustSupport value="true" />
@@ -897,7 +1042,8 @@
       </mapping>
       <mapping>
         <identity value="lm-Procedure" />
-        <map value="Procedure.ProcedureDetail.Device" />
+        <map value="Procedure.ProcedureDetail.DeviceUsed.Device" />
+        <comment value="DeviceUsed" />
       </mapping>
     </element>
   </differential>
