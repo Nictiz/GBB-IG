@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.20",
+  "meta": {
+    "lastUpdated": "2026-06-19T10:30:30Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-19T10:30:30Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.20&effectiveDate=2026-06-19T10:30:30"
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.20",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.20"
+    }
+  ],
+  "version": "2026-06-19T10:30:30",
+  "name": "IndicatieGGZDiagnoseCodelijst",
+  "title": "IndicatieGGZDiagnoseCodelijst",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-19T10:30:30Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "IndicatieGGZDiagnoseCodelijst",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.3210.14.2.2.35"
+      }
+    ]
+  }
+}
