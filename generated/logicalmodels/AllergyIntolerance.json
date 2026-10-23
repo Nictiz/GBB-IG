@@ -1,0 +1,3628 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "LogicalModelAllergyIntolerance",
+  "language": "en",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-29T00:00:00Z"
+      }
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelAllergyIntolerance",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.4.24"
+    }
+  ],
+  "version": "2026-06-29T00:00:00",
+  "name": "LogicalModelAllergyIntolerance",
+  "_name": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelAllergieIntolerantie"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "LogicalModelAllergyIntolerance",
+  "_title": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "nl"
+          },
+          {
+            "url": "content",
+            "valueString": "LogischModelAllergieIntolerantie"
+          }
+        ]
+      }
+    ]
+  },
+  "status": "draft",
+  "publisher": "Kerngroep Registratie aan de Bron",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "NlzorgAllergyIntolerance-3.3",
+      "uri": "http://decor.nictiz.nl/decor/services/RetrieveDataSet?prefix=zib2020bbr-&version=&language=en-US&id=2.16.840.1.113883.2.4.3.11.60.40.3.8.2&effectiveDate=2020-09-01T00:00:00",
+      "name": "nl.zorg.AllergyIntolerance 3.3"
+    },
+    {
+      "identity": "AllergyIntolerance",
+      "uri": "http://nictiz.nl/gbb/Requirements/AllergyIntolerance",
+      "name": "AllergyIntolerance"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://ig.nictiz.nl/gbb/StructureDefinition/AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.1--20260615000000",
+        "path": "AllergyIntolerance",
+        "short": "Root concept of the AllergyIntolerance information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de het generieke bouwblok AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AllergieIntolerantie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.1",
+            "comment": "AllergyIntolerance (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.587--20260921061144",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.identifier",
+        "short": "Business identifier for the object, unique within its system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifier for the object, unique within its system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.625--20261019084122",
+        "path": "AllergyIntolerance.source",
+        "short": "Source of information (e.g.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bron van de informatie (bijv."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bron van de informatie (bijv. patiënt, vertegenwoordiger van de patiënt). Wordt gebruikt wanneer de patiënt de informatie zelf heeft opgesteld of wanneer de auteur door de patiënt verstrekte informatie heeft ingediend."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Bron"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.source",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.626--20261019084215",
+        "path": "AllergyIntolerance.source.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.627--20261019084230",
+        "path": "AllergyIntolerance.source.relatedPersonplaceholder",
+        "short": "RelatedPerson (placeholder)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GerelateerdPersoon (placeholder)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "RelatedPerson (placeholder)",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GerelateerdPersoon (placeholder)"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GerelateerdPersoon (placeholder)"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.source.relatedPersonplaceholder",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.521--20260806105830"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.628--20261019084326",
+        "path": "AllergyIntolerance.source.practitioner",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.practitioner",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.629--20261019084344",
+        "path": "AllergyIntolerance.source.practitionerRole",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerRol"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.practitionerRole",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.589--20260921061324",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.language",
+        "short": "Language in which the resource is written.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De taal waarin de informatie is geschreven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Language in which the resource is written.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De taal waarin de informatie is geschreven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Taal"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Common Languages",
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.603--20260929125946",
+        "path": "AllergyIntolerance.recordedDateTime",
+        "short": "Date and optionally time of authoring/issuing",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en eventueel tijdstip van opstellen van het object of het uitwisselen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and optionally time of authoring/issuing",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en eventueel tijdstip van opstellen van het object of het uitwisselen"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.recordedDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.465--20260721090422",
+        "path": "AllergyIntolerance.subject",
+        "short": "The natural person to whom this allergy or intolerance relates.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze allergie of intolerantie betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The natural person to whom this allergy or intolerance relates.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze allergie of intolerantie betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.358--20260622111440",
+        "path": "AllergyIntolerance.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.subject.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.466--20260721091935",
+        "path": "AllergyIntolerance.author[x]",
+        "short": "Author of the allergy or intolerance",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Auteur van de allergie of intolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Author of the allergy or intolerance",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Auteur van de allergie of intolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.author[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelOrganization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.causativeAgent",
+        "short": "Identification of a substance, or class of substances, that is assumed to pose a risk to the person of causing an adverse reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van een stof, of stofklasse, waarvan wordt aangenomen dat deze voor de persoon een risico vormt op het optreden van een ongewenste reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of a substance, or class of substances, that is assumed to pose a risk to the person of causing an adverse reaction. Both an individual substance and a class of substances are valid values ​​for ‘CausativeAgent’. A substance can be a combination of simpler substances, for example a medicinal product.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van een stof, of stofklasse, waarvan wordt aangenomen dat deze voor de persoon een risico vormt op het optreden van een ongewenste reactie. Zowel een individuele stof als een stofklasse zijn geldige waarden voor ‘VeroorzakendeStof’. Een stof kan een samenstelling zijn van eenvoudigere stoffen, bijvoorbeeld een geneesmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VeroorzakendeStof"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.causativeAgent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "1faab810-18ec-47e2-aab8-1018ec57e2a2"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.42"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "a8262a07-72e1-4ae6-a62a-0772e17ae654"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.40"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "ac88fe5b-73a4-479a-88fe-5b73a4379ab6"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.41"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "78fba4b6-9f95-45c8-bba4-b69f9595c828"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.39"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "b47cd248-1a80-4fc7-bcd2-481a801fc760"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.38"
+                }
+              ]
+            }
+          ],
+          "strength": "preferred",
+          "description": "Allergies & Intolerances - IPS",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.2",
+            "comment": "CausativeAgent (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.4--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.category",
+        "short": "Category of the identified ‘CausativeAgent', for example medication or food.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Categorie van de geïdentificeerde ‘VeroorzakendeStof’, bijvoorbeeld medicatie of voedsel."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Category of the identified ‘CausativeAgent', for example medication or food. This data element is included because it is currently recorded in some clinical systems. When coding systems are used, this data can be derived from the CausativeAgent; in that situation, it is effectively redundant.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Categorie van de geïdentificeerde ‘VeroorzakendeStof’, bijvoorbeeld medicatie of voedsel. Dit gegevenselement is opgenomen omdat het momenteel in sommige klinische systemen wordt vastgelegd. Wanneer coderingssystemen worden gebruikt, kan dit gegeven worden afgeleid uit de VeroorzakendeStof; in die situatie is het feitelijk redundant"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Categorie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "1cb67315-541a-4540-b673-15541ab54022"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntoleranceCategory",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergy-intolerance-category"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.4",
+            "comment": "AllergyCategory (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.5--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.activeInactiveStatus",
+        "short": "Current status of the allergy or intolerance, whether it is active or inactive.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huidige status van de allergie of intolerantie of deze actief of inactief is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Current status of the allergy or intolerance, whether it is active or inactive.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huidige status van de allergie of intolerantie of deze actief of inactief is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ActieveInactieveStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.activeInactiveStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "f2d93e11-310b-4881-993e-11310b388186"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.37"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntolerance Clinical Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.5",
+            "comment": "AllergyStatus (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.360--20260622113510",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.verificationStatus",
+        "short": "Statement on the level of certainty of propensity of, or potential future risk of a reaction caused by the identified substance.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitspraak over de mate van zekerheid van de aanleg voor, of het potentiële toekomstige risico van, de geïdentificeerde stof om een reactie te veroorzaken."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Statement on the level of certainty of propensity of, or potential future risk of a reaction caused by the identified substance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitspraak over de mate van zekerheid van de aanleg voor, of het potentiële toekomstige risico van, de geïdentificeerde stof om een reactie te veroorzaken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerificatieStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.verificationStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "0f24bfa3-2201-4bc5-a4bf-a32201ebc5f1"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.44"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntolerance Verification Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.7--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.criticality",
+        "short": "An indication of the likelihood of critical damage to organ systems or life-threatening consequences.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een indicatie van de kans op kritieke schade aan orgaansystemen of levensbedreigende gevolgen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "An indication of the likelihood of critical damage to organ systems or life-threatening consequences. This can be considered a predictive assessment of a ‘worst-case scenario’. In most contexts, ‘Low’ is considered the default value.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een indicatie van de kans op kritieke schade aan orgaansystemen of levensbedreigende gevolgen. Dit kan worden beschouwd als een voorspellende beoordeling van een ‘worstcasescenario’. In de meeste contexten wordt ‘Laag’ beschouwd als de standaardwaarde."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MateVanKritiekZijn"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.criticality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "59c6a7bb-d104-454c-86a7-bbd104f54c7e"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.43"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntoleranceCriticality",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.7",
+            "comment": "Criticality (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.601--20260929122302",
+        "path": "AllergyIntolerance.onsetDateTime",
+        "short": "When allergy or intolerance was identified",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer er sprake bleek te zijn van een allergie of intolerantie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "When allergy or intolerance was identified",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer er sprake bleek te zijn van een allergie of intolerantie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "BeginDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.onsetDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.602--20260929122327",
+        "path": "AllergyIntolerance.endDateTime",
+        "short": "Date of resolution of the allergy (e.g.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop de allergie is verdwenen (bijv."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop de allergie is verdwenen (bijv. toen de arts oordeelde dat het niet langer nodig was om de onderliggende aandoening te volgen)"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.8--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.lastReactionDateTime",
+        "short": "The date and/or time of the start of the last known occurrence of a response.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en/of tijd van de aanvang van het laatste bekende optreden van een reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and/or time of the start of the last known occurrence of a response. For example: the actual date and/or time of start; the time interval in which the start occurred; the age of the person at the time of start; or the duration since the start. A partial date is permitted, where the Date data type is used to record only a year.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en/of tijd van de aanvang van het laatste bekende optreden van een reactie. Bijvoorbeeld: de daadwerkelijke datum en/of tijd van aanvang; het tijdsinterval waarin de aanvang plaatsvond; de leeftijd van de persoon op het moment van aanvang; of de tijdsduur sinds de aanvang. Een gedeeltelijke datum is toegestaan, waarbij het datatype Date wordt gebruikt om alleen een jaar vast te leggen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "LaatsteReactieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.lastReactionDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.8",
+            "comment": "LastReactionDateTime (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.9--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.comment",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "48767-8",
+            "display": "Annotation comment Imp"
+          }
+        ],
+        "short": "Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de allergie of intolerantie en/of aanvullende vrije tekst over de allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de allergie of intolerantie en/of aanvullende vrije tekst over de allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.comment",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.9",
+            "comment": "Comment (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.599--20260924065756",
+        "path": "AllergyIntolerance.reaction",
+        "short": "Root concept of the Reaction sub information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Reaction sub information model. This root concept contains all data elements of the Reaction. This sub building block can solely be used with the general building block AllergyIntolerance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie. Dit rootconcept bevat alle gegevenselementen van de reactie welke horen bij het bovenliggende generieke bouwblok AllergieIntolerantie. Dit subbouwblok mag alleen gebruikt worden in combinatie met het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Reactie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.reaction",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelReaction"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.1--20260615000000",
+        "path": "AllergyIntolerance",
+        "short": "Root concept of the AllergyIntolerance information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de het generieke bouwblok AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "AllergieIntolerantie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance",
+          "min": 0,
+          "max": "*"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.1",
+            "comment": "AllergyIntolerance (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.587--20260921061144",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.identifier",
+        "short": "Business identifier for the object, unique within its system.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Business identifier for the object, unique within its system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatienummer voor het object, uniek binnen het betreffende systeem."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Identificatienummer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.625--20261019084122",
+        "path": "AllergyIntolerance.source",
+        "short": "Source of information (e.g.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bron van de informatie (bijv."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Source of information (e.g. patient, patient's proxy). Used in case the patient has authored the information or the author has submitted patient-stated information.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Bron van de informatie (bijv. patiënt, vertegenwoordiger van de patiënt). Wordt gebruikt wanneer de patiënt de informatie zelf heeft opgesteld of wanneer de auteur door de patiënt verstrekte informatie heeft ingediend."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Bron"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.source",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.626--20261019084215",
+        "path": "AllergyIntolerance.source.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.patient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.627--20261019084230",
+        "path": "AllergyIntolerance.source.relatedPersonplaceholder",
+        "short": "RelatedPerson (placeholder)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GerelateerdPersoon (placeholder)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "RelatedPerson (placeholder)",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "GerelateerdPersoon (placeholder)"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "GerelateerdPersoon (placeholder)"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.source.relatedPersonplaceholder",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://decor.nictiz.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.153.2.1.521--20260806105830"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.628--20261019084326",
+        "path": "AllergyIntolerance.source.practitioner",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "Details of a natural person who provides professional healthcare services.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Details of a natural person who provides professional healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.practitioner",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.629--20261019084344",
+        "path": "AllergyIntolerance.source.practitionerRole",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "223366009",
+            "display": "gezondheidszorgpersoneel"
+          }
+        ],
+        "short": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een specifieke set van rollen/locaties/specialismen/diensten die een zorgverlener binnen een organisatie binnen een bepaalde periode kan vervullen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ZorgverlenerRol"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.source.practitionerRole",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.589--20260921061324",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.language",
+        "short": "Language in which the resource is written.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De taal waarin de informatie is geschreven."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Language in which the resource is written.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De taal waarin de informatie is geschreven."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Taal"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Common Languages",
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.603--20260929125946",
+        "path": "AllergyIntolerance.recordedDateTime",
+        "short": "Date and optionally time of authoring/issuing",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en eventueel tijdstip van opstellen van het object of het uitwisselen"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date and optionally time of authoring/issuing",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum en eventueel tijdstip van opstellen van het object of het uitwisselen"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "RegistratieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.recordedDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.465--20260721090422",
+        "path": "AllergyIntolerance.subject",
+        "short": "The natural person to whom this allergy or intolerance relates.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze allergie of intolerantie betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The natural person to whom this allergy or intolerance relates.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De natuurlijke persoon waarop deze allergie of intolerantie betrekking heeft."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.subject",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Base"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.358--20260622111440",
+        "path": "AllergyIntolerance.subject.patient",
+        "code": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "116154003",
+            "display": "patiënt"
+          }
+        ],
+        "short": "Root concept of the Patient information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.subject.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPatient"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.466--20260721091935",
+        "path": "AllergyIntolerance.author[x]",
+        "short": "Author of the allergy or intolerance",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Auteur van de allergie of intolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Author of the allergy or intolerance",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Auteur van de allergie of intolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Auteur[x]"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.author[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitionerRole"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelDevice"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelPractitioner"
+          },
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelOrganization"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.2--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.causativeAgent",
+        "short": "Identification of a substance, or class of substances, that is assumed to pose a risk to the person of causing an adverse reaction.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van een stof, of stofklasse, waarvan wordt aangenomen dat deze voor de persoon een risico vormt op het optreden van een ongewenste reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identification of a substance, or class of substances, that is assumed to pose a risk to the person of causing an adverse reaction. Both an individual substance and a class of substances are valid values ​​for ‘CausativeAgent’. A substance can be a combination of simpler substances, for example a medicinal product.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identificatie van een stof, of stofklasse, waarvan wordt aangenomen dat deze voor de persoon een risico vormt op het optreden van een ongewenste reactie. Zowel een individuele stof als een stofklasse zijn geldige waarden voor ‘VeroorzakendeStof’. Een stof kan een samenstelling zijn van eenvoudigere stoffen, bijvoorbeeld een geneesmiddel."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VeroorzakendeStof"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.causativeAgent",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "1faab810-18ec-47e2-aab8-1018ec57e2a2"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.42"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "a8262a07-72e1-4ae6-a62a-0772e17ae654"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.40"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "ac88fe5b-73a4-479a-88fe-5b73a4379ab6"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.41"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "78fba4b6-9f95-45c8-bba4-b69f9595c828"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.39"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "b47cd248-1a80-4fc7-bcd2-481a801fc760"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.38"
+                }
+              ]
+            }
+          ],
+          "strength": "preferred",
+          "description": "Allergies & Intolerances - IPS",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.2",
+            "comment": "CausativeAgent (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.4--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.category",
+        "short": "Category of the identified ‘CausativeAgent', for example medication or food.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Categorie van de geïdentificeerde ‘VeroorzakendeStof’, bijvoorbeeld medicatie of voedsel."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Category of the identified ‘CausativeAgent', for example medication or food. This data element is included because it is currently recorded in some clinical systems. When coding systems are used, this data can be derived from the CausativeAgent; in that situation, it is effectively redundant.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Categorie van de geïdentificeerde ‘VeroorzakendeStof’, bijvoorbeeld medicatie of voedsel. Dit gegevenselement is opgenomen omdat het momenteel in sommige klinische systemen wordt vastgelegd. Wanneer coderingssystemen worden gebruikt, kan dit gegeven worden afgeleid uit de VeroorzakendeStof; in die situatie is het feitelijk redundant"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Categorie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "1cb67315-541a-4540-b673-15541ab54022"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntoleranceCategory",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergy-intolerance-category"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.4",
+            "comment": "AllergyCategory (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.5--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:able-to-populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/RegistrationSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.activeInactiveStatus",
+        "short": "Current status of the allergy or intolerance, whether it is active or inactive.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huidige status van de allergie of intolerantie of deze actief of inactief is."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Current status of the allergy or intolerance, whether it is active or inactive.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Huidige status van de allergie of intolerantie of deze actief of inactief is."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "ActieveInactieveStatus"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.activeInactiveStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "f2d93e11-310b-4881-993e-11310b388186"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.37"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntolerance Clinical Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.5",
+            "comment": "AllergyStatus (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.360--20260622113510",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.verificationStatus",
+        "short": "Statement on the level of certainty of propensity of, or potential future risk of a reaction caused by the identified substance.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitspraak over de mate van zekerheid van de aanleg voor, of het potentiële toekomstige risico van, de geïdentificeerde stof om een reactie te veroorzaken."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Statement on the level of certainty of propensity of, or potential future risk of a reaction caused by the identified substance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Uitspraak over de mate van zekerheid van de aanleg voor, of het potentiële toekomstige risico van, de geïdentificeerde stof om een reactie te veroorzaken."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "VerificatieStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.verificationStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "0f24bfa3-2201-4bc5-a4bf-a32201ebc5f1"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.44"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntolerance Verification Status Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+        }
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.7--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.criticality",
+        "short": "An indication of the likelihood of critical damage to organ systems or life-threatening consequences.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een indicatie van de kans op kritieke schade aan orgaansystemen of levensbedreigende gevolgen."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "An indication of the likelihood of critical damage to organ systems or life-threatening consequences. This can be considered a predictive assessment of a ‘worst-case scenario’. In most contexts, ‘Low’ is considered the default value.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Een indicatie van de kans op kritieke schade aan orgaansystemen of levensbedreigende gevolgen. Dit kan worden beschouwd als een voorspellende beoordeling van een ‘worstcasescenario’. In de meeste contexten wordt ‘Laag’ beschouwd als de standaardwaarde."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "MateVanKritiekZijn"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.criticality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "59c6a7bb-d104-454c-86a7-bbd104f54c7e"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "component"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.43"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "AllergyIntoleranceCriticality",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality"
+        },
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.7",
+            "comment": "Criticality (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.601--20260929122302",
+        "path": "AllergyIntolerance.onsetDateTime",
+        "short": "When allergy or intolerance was identified",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer er sprake bleek te zijn van een allergie of intolerantie"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "When allergy or intolerance was identified",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Wanneer er sprake bleek te zijn van een allergie of intolerantie"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "BeginDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.onsetDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.602--20260929122327",
+        "path": "AllergyIntolerance.endDateTime",
+        "short": "Date of resolution of the allergy (e.g.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop de allergie is verdwenen (bijv."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Date of resolution of the allergy (e.g. when the clinician deemed there is no longer any need to track the underlying condition)",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Datum waarop de allergie is verdwenen (bijv. toen de arts oordeelde dat het niet langer nodig was om de onderliggende aandoening te volgen)"
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "EindDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.8--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.lastReactionDateTime",
+        "short": "The date and/or time of the start of the last known occurrence of a response.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en/of tijd van de aanvang van het laatste bekende optreden van een reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "The date and/or time of the start of the last known occurrence of a response. For example: the actual date and/or time of start; the time interval in which the start occurred; the age of the person at the time of start; or the duration since the start. A partial date is permitted, where the Date data type is used to record only a year.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "De datum en/of tijd van de aanvang van het laatste bekende optreden van een reactie. Bijvoorbeeld: de daadwerkelijke datum en/of tijd van aanvang; het tijdsinterval waarin de aanvang plaatsvond; de leeftijd van de persoon op het moment van aanvang; of de tijdsduur sinds de aanvang. Een gedeeltelijke datum is toegestaan, waarbij het datatype Date wordt gebruikt om alleen een jaar vast te leggen."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "LaatsteReactieDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "AllergyIntolerance.lastReactionDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.8",
+            "comment": "LastReactionDateTime (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.40.1.8.2.9--20260615000000",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHOULD:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:no-error"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem"
+              }
+            ]
+          }
+        ],
+        "path": "AllergyIntolerance.comment",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "48767-8",
+            "display": "Annotation comment Imp"
+          }
+        ],
+        "short": "Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de allergie of intolerantie en/of aanvullende vrije tekst over de allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Tekstuele omschrijving van de allergie of intolerantie en/of aanvullende vrije tekst over de allergie of intolerantie, voor zover deze niet in andere velden is vastgelegd."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Toelichting"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.comment",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "NlzorgAllergyIntolerance-3.3",
+            "map": "NL-CM-8.2.9",
+            "comment": "Comment (SPEC)"
+          }
+        ]
+      },
+      {
+        "id": "2.16.840.1.113883.2.4.3.11.60.153.2.1.599--20260924065756",
+        "path": "AllergyIntolerance.reaction",
+        "short": "Root concept of the Reaction sub information model.",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie."
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Root concept of the Reaction sub information model. This root concept contains all data elements of the Reaction. This sub building block can solely be used with the general building block AllergyIntolerance.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "nl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rootconcept van het subbouwblok Reactie. Dit rootconcept bevat alle gegevenselementen van de reactie welke horen bij het bovenliggende generieke bouwblok AllergieIntolerantie. Dit subbouwblok mag alleen gebruikt worden in combinatie met het generieke bouwblok AllergieIntolerantie."
+                }
+              ]
+            }
+          ]
+        },
+        "alias": [
+          "Reactie"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "AllergyIntolerance.reaction",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelReaction"
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

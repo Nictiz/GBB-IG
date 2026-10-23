@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.2.4.3.11.60.153.11.13",
+  "meta": {
+    "lastUpdated": "2026-06-19T10:11:40Z",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ],
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2026-06-19T10:11:40Z"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/web-source",
+      "valueUrl": "http://decor.nictiz.nl/decor/services/RetrieveValueSet?prefix=gbb2026bbr-&version=&id=2.16.840.1.113883.2.4.3.11.60.153.11.13&effectiveDate=2026-06-19T10:11:40"
+    }
+  ],
+  "url": "http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.13",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.4.3.11.60.153.11.13"
+    }
+  ],
+  "version": "2026-06-19T10:11:40",
+  "name": "IndicatieICPC_1Codelijst",
+  "title": "IndicatieICPC-1Codelijst",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-06-19T10:11:40Z",
+  "publisher": "Nictiz",
+  "contact": [
+    {
+      "name": "Nictiz",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://nictiz.nl"
+        }
+      ]
+    }
+  ],
+  "description": "IndicatieICPC-1Codelijst",
+  "immutable": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icpc-1-nl"
+      }
+    ]
+  }
+}
