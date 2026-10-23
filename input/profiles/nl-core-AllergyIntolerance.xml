@@ -828,15 +828,12 @@
             <valueCode value="extensible"/>
           </extension>
           <extension url="valueSet">
-            <valueCanonical
-              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
           </extension>
         </extension>
         <strength value="preferred"/>
-        <description
-          value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU"/>
-        <valueSet
-          value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
+        <description value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU"/>
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
