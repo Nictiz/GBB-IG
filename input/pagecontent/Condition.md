@@ -20,10 +20,9 @@ Deze versie van GBB Gezondheidstoestand is volop in ontwikkeling. In de volgende
 Daarnaast zal in een toekomstige versie van ART-DECOR het mogelijk worden om obligations per data-element per systeemrol te duiden en additionele bindings in terminologie te koppelen. Informatiebehoefte van andere informatiestandaarden zullen in de toekomst worden geanalyseerd.
 
 ### Bekende problemen
-* [GBB-Condition: assertedDate in het HL7 Europe FHIR EU Core Condition-profiel heeft geen mapping naar het LIM EHDSCondition, wat een foutmelding geeft. Dit wordt gemeld bij HL7 Europe] (https://nictiz.atlassian.net/browse/GBB-6)
-* [GBB-Condition: Voldoen aan DAGIM-spelregels versie 1.0.0-alpha.4] (LINK ONTBREEKT)
-* [GBB-Condition: Waardelijsten toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
-* [GBB-Condition: Obligations toevoegen volgens regels en handleiding] (LINK ONTBREEKT)
-* [GBB-Condition: Formuleren van informatie-requirements volgens DAGIM-spelregels] (LINK ONTBREEKT)
-* [GBB-Condition: Toevoegen van EU/NL traceability] (LINK ONTBREEKT)
-* [GBB-Condition: Ontbrekende additional bindings van FHIR EU Core profile Condition] (LINK ONTBREEKT)
+* [GBB-Condition:FHIR-profiel niet conform eu-profiel: element assertedDate](https://nictiz.atlassian.net/browse/GBB-6)
+* [GBB-Condition:Voldoen aan DAGIM-spelregels versie 1.0.0-alpha.4](https://nictiz.atlassian.net/browse/GBB-97)
+* [GBB-Condition:Waardelijsten toevoegen volgens regels en handleiding](https://nictiz.atlassian.net/browse/GBB-106)
+* [GBB-Condition:Formuleren van informatie-requirements volgens DAGIM-spelregels](https://nictiz.atlassian.net/browse/GBB-134)
+* [GBB-Condition:Toevoegen van EU/NL traceability](https://nictiz.atlassian.net/browse/GBB-84)
+* [GBB-Condition:Ontbrekende additional bindings van FHIR EU Core profile Condition](https://nictiz.atlassian.net/browse/GBB-148)
