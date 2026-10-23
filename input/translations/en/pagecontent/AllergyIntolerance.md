@@ -1,5 +1,16 @@
 {% include_relative AllergyIntolerance-Concept.md %}
 
+### Known Issue
+* [(GBB AllergyIntolerance) Missing reference to RelatedPerson](http://nictiz.atlassian.net/browse/GBB-74)
+* [(GBB AllergyIntolerance and SBB Reaction) Missing additional bindings from FHIR EU Core AllergyIntolerance](http://nictiz.atlassian.net/browse/GBB-75)
+* [(GBB AllergyIntolerance) Missing additional binding from EU Core for AllergyIntolerance.language](http://nictiz.atlassian.net/browse/GBB-77)
+* [Remove information standards from the usage scenarios for the AllergyIntolerance concept](http://nictiz.atlassian.net/browse/GBB-78)
+* [Add EU/NL traceability to all components of the GBBs](http://nictiz.atlassian.net/browse/GBB-90)
+* [Comply with the DAGIM rules, version 1.0.0-alpha.4](http://nictiz.atlassian.net/browse/GBB-103)
+* [Review and update the GBBs according to the rules for terminology and value sets](http://nictiz.atlassian.net/browse/GBB-118)
+* [Add obligations](http://nictiz.atlassian.net/browse/GBB-130)
+* [Information requirements are not yet adequately formulated in accordance with the DAGIM rules](http://nictiz.atlassian.net/browse/GBB-144)
+
 ### Splitting SBB Reactie and GBB AllergieIntolerantie
 The base model selected for GBB AllergyIntolerance, the openEHR archetype Adverse Reaction Risk, contains a reusable underlying openEHR archetype, Adverse Reaction Event, which cannot be used independently. This archetype leads to its own informatie requirements and model definition. It was therefore decided to separate Reaction from AllergyIntolerance. For building blocks such as Reaction, which have no independent application in information standards, the term "sub-building block" is used.
 
