@@ -423,17 +423,15 @@
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.40" />
           </extension>
         </extension>
-        <extension>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-            <extension url="key">
-              <valueId value="gbb-allergyIntoleranceSubstance-SSK" />
-            </extension>
-            <extension url="purpose">
-              <valueCode value="component" />
-            </extension>
-            <extension url="valueSet">
-              <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.41" />
-            </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-allergyIntoleranceSubstance-SSK" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.41" />
           </extension>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
