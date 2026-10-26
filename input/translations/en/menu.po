@@ -10,6 +10,12 @@ msgstr "Background"
 msgid "Obligations"
 msgstr ""
 
+msgid "Afhankelijkheden"
+msgstr "Dependencies"
+
+msgid "Release notes en known issues"
+msgstr "Release notes and known issues"
+
 msgid "Bouwblokken"
 msgstr "Building blocks"
 
@@ -46,7 +52,7 @@ msgstr "Location"
 msgid "MedischHulpmiddel"
 msgstr "DeviceUseStatement"
 
-msgid "Naam"
+msgid "Persoonsnaam"
 msgstr "HumanName"
 
 msgid "Organisatie"

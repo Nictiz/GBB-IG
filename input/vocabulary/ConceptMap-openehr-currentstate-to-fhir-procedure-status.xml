@@ -1,0 +1,116 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="openehr-currentstate-to-fhir-procedure-status"/>
+    <text>
+        <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    </text>
+    <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+        <valueBoolean value="false"/>
+    </extension>
+    <url value="http://ig.nictiz.nl/gbb/ConceptMap/openehr-currentstate-to-fhir-procedure-status"/>
+    <version value="1.0.0"/>
+    <name value="OpenEhrCurrentState_to_FhirProcedureStatus"/>
+    <title value="Open EHR current state to FHIR Procedure status"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <contact>
+      <name value="Nictiz"/>
+      <telecom>
+        <system value="url" />
+        <value value="https://www.nictiz.nl" />
+        <use value="work"/>
+      </telecom>
+    </contact>
+    <description value="Maps open EHR current state codes to Procedure.status codes as found in FHIR R4 (value set http://hl7.org/fhir/ValueSet/event-status)."/>
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <sourceCanonical value="https://specifications.openehr.org/fhir/valueset-instruction_states"/>
+    <targetCanonical value="http://hl7.org/fhir/ValueSet/event-status"/>
+    <group>
+        <source value="https://specifications.openehr.org/fhir/codesystem-instruction_states"/>
+        <target value="http://hl7.org/fhir/event-status"/>
+        <element>
+            <code value="524"/>
+            <display value="initial" />
+            <target>
+                <equivalence value="unmatched"/>
+            </target>
+        </element>
+        <element>
+            <code value="526"/>
+            <display value="planned" />
+            <target>
+                <code value="preparation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="527"/>
+            <display value="postponed" />
+            <target>
+                <code value="not-done"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="258"/>
+            <display value="cancelled" />
+            <target>
+                <code value="not-done"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="529"/>
+            <display value="scheduled" />
+            <target>
+                <code value="preparation"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="245"/>
+            <display value="active" />
+            <target>
+                <code value="in-progress"/>
+                <equivalence value="specializes"/>
+                <comment value="active maps to in-progress when endDate is not populated"/>
+            </target>
+            <target>
+                <code value="completed"/>
+                <equivalence value="specializes"/>
+                <comment value="active maps to completed when endDate is populated"/>
+            </target>
+        </element>
+        <element>
+            <code value="530"/>
+            <display value="suspended" />
+            <target>
+                <code value="on-hold"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="531"/>
+            <display value="aborted" />
+            <target>
+                <code value="stopped"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="532"/>
+            <display value="completed" />
+            <target>
+                <code value="completed"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="533"/>
+            <display value="expired" />
+            <target>
+                <equivalence value="unmatched"/>
+            </target>
+        </element>
+    </group>
+</ConceptMap>

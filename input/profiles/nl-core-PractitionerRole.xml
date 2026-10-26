@@ -3,6 +3,9 @@
   <id value="nl-core-PractitionerRole" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu-core" />
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
   <name value="NlcorePractitionerRole" />
   <title value="nl core PractitionerRole" />
@@ -186,8 +189,30 @@
       <alias value="Specialisme" />
       <max value="1" />
       <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000" />
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-practitionerroleSpeciality-AGB" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.56" />
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
+          <extension url="key">
+            <valueId value="gbb-practitionerroleSpeciality-UZI" />
+          </extension>
+          <extension url="purpose">
+            <valueCode value="component" />
+          </extension>
+          <extension url="valueSet">
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.55" />
+          </extension>
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
       </binding>
       <mapping>
         <identity value="requirements-PractitionerRole" />

@@ -5,6 +5,9 @@
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A
       human-readable rendering can be found in the implementation guide(s) where this resource is
       used.</div></text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
+    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core" />
+  </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner" />
   <name value="NlcorePractitioner" />
   <title value="nl core Practitioner" />
@@ -18,7 +21,16 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent (NEN7540:2024)" />
+  <description value="Details of a natural person who provides professional healthcare services. (NEN7540:2024)">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="nl"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent (NEN7540:2024)"/>
+      </extension>
+    </extension>
+  </description>
   <purpose value="This profile is the FHIR implementation of the general building block [Practitioner](http://ig.nictiz.nl/gbb/Practitioner)." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
@@ -41,7 +53,16 @@
     <element id="Practitioner">
       <path value="Practitioner" />
       <short value="Practitioner" />
-      <definition value="Details of a natural person who provides professional healthcare services. (NEN7540:2024)" />
+      <definition value="Details of a natural person who provides professional healthcare services. (NEN7540:2024)" >
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="nl"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Gegevens van een natuurlijke persoon die beroepsmatig zorg verleent (NEN7540:2024)"/>
+          </extension>
+        </extension>
+      </definition>
       <alias value="Zorgverlener" />
       <constraint>
         <key value="name-or-identifier" />
@@ -76,7 +97,7 @@
         <rules value="open" />
       </slicing>
       <short value="Identifier" />
-      <definition value="The healthcare provider identification number is a number that uniquely identifies the healthcare provider. &#xD;&#xA;                        &#xD;The following numbers are used in the Netherlands: &#xD;1. UZI Health Professionals. Identification of health professionals (people) in the Dutch healthcare industry. &#xD;2. VEKTIS AGB-Z. Identifies health professionals and healthcare organizations &#xD;3. BIG-ID. The ID of the health professional listed in the BIG Register. &#xD;&#xA;                        &#xD;This information is not readily available for foreign health professionals." />
+      <definition value="The healthcare provider identification number is a number that uniquely identifies the healthcare provider.&#xA;&#xD;The following numbers are used in the Netherlands: &#xA;&#xD;1. UZI Health Professionals. The ID of the health professional listed in the [UZI Registry](https://www.uziregister.nl/).&#xA;&#xD;2. VEKTIS AGB-Z. The ID of the health professional listed in the [AGB-Z Registry](https://www.vektis.nl/agb-register).&#xA;&#xD;3. BIG-ID. The ID of the health professional listed in the [BIG Registry](https://www.bigregister.nl/).&#xA;&#xD;4. Dezi. The ID of the health professional listed in the [Dezi Registry](https://www.dezi.nl/).&#xA;&#xD;This information is not readily available for foreign health professionals." />
       <alias value="ZorgverlenerIdentificatienummer" />
       <mustSupport value="true" />
       <mapping>
@@ -90,11 +111,11 @@
         <comment value="Identifier" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier:big">
+    <element id="Practitioner.identifier:uzi">
       <path value="Practitioner.identifier" />
-      <sliceName value="big" />
+      <sliceName value="uzi" />
       <patternIdentifier>
-        <system value="http://fhir.nl/fhir/NamingSystem/big" />
+        <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
       </patternIdentifier>
     </element>
     <element id="Practitioner.identifier:agb">
@@ -104,18 +125,18 @@
         <system value="http://fhir.nl/fhir/NamingSystem/agb-z" />
       </patternIdentifier>
     </element>
+    <element id="Practitioner.identifier:big">
+      <path value="Practitioner.identifier" />
+      <sliceName value="big" />
+      <patternIdentifier>
+        <system value="http://fhir.nl/fhir/NamingSystem/big" />
+      </patternIdentifier>
+    </element>
     <element id="Practitioner.identifier:dezi">
       <path value="Practitioner.identifier" />
       <sliceName value="dezi" />
       <patternIdentifier>
         <system value="http://fhir.nl/fhir/NamingSystem/dezi" />
-      </patternIdentifier>
-    </element>
-    <element id="Practitioner.identifier:uzi">
-      <path value="Practitioner.identifier" />
-      <sliceName value="uzi" />
-      <patternIdentifier>
-        <system value="http://fhir.nl/fhir/NamingSystem/uzi-nr-pers" />
       </patternIdentifier>
     </element>
     <element id="Practitioner.name">

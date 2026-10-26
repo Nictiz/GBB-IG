@@ -26,10 +26,10 @@ publisher:
 #
 dependencies:
   hl7.fhir.uv.extensions.r4: 5.3.0
-  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.eu.base: 2.0.1
+  hl7.fhir.eu.extensions.r4: 1.3.1
+  hl7.fhir.eu.eps: 1.0.0-ballot
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  hl7.fhir.eu.extensions.r4: 1.3.0
-  nictiz.fhir.nl.r4.nl-core: 0.12.1-beta.1
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -82,6 +82,7 @@ parameters:
   - 'input/translations/en'
   - 'input/translations/nl'
   logging: 'progress'
+  display-warnings: true
   path-liquid-template: 'template/liquid'
 
 #   validation: [allow-any-extensions, no-broken-links]
@@ -98,6 +99,8 @@ menu:
   Home: index.html
   Achtergrondinformatie:
     Obligations: obligations.html
+    Afhankelijkheden: dependencies.html
+    Release notes en known issues: releasenotes.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |
@@ -146,7 +149,7 @@ menu:
       Requirements: Requirements-DeviceUse.html
       Afsprakenmodel: StructureDefinition-LogicalModelDeviceUse.html
       FHIR-profiel: StructureDefinition-nl-core-DeviceUse.html
-    Naam:
+    Persoonsnaam:
       Overzicht: HumanName.html
       Requirements: Requirements-HumanName.html
       Afsprakenmodel: StructureDefinition-LogicalModelHumanName.html

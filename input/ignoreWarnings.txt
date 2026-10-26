@@ -3,3 +3,17 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# The IG Publisher adds an extra extension which it subsequently doesn't recognize
+Dit element komt niet overeen met een bekende slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+Dit element komt niet overeen met een bekende slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.4.0 (mogelijk geen probleem, maar controleer of dat mogelijk toch de bedoeling was)
+
+# The XHTML fragment is generated in both languages by the publisher, so this warning is incorrect
+Resource heeft een taal (en) en XHTML heeft een taal (lang) (nl), maar deze komen niet overeen
+
+# The policy regarding canonical pinning is to be determined
+%Het is mogelijk een goed idee om de juiste versie te koppelen om de kans op selectie van een verkeerde versie door een implementatie/implementer te verminderen%
+
+# The narrative in Requirements resources is generated twice, in Dutch and English, so everything is duplicated. This makes sense in the context of one translation, but not in the context of the entire resource.
+De XHTML in de resource bevat meer dan één node voor elk van de volgende node-ids en anchor-namen:%
+%leidt naar meerdere doelen%
