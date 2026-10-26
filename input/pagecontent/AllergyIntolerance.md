@@ -25,7 +25,7 @@
 
   Alle waardelijsten met een afhankelijkheid naar zib2020 zijn losgekoppeld en zonder deze afhankelijkheid toegevoegd aan de data-elementen VeroorzakendeStof, Categorie, ActieveInactieveStatus, VerificatieStatus en MateVanKritiekZijn in het afspraken model
 
-  Data-type van element Bron is gewijzigd van gecodeerd element naar folder met referenties naar Patient, Zorgverlener, ZorgverlenerRol conform FHIR EU Core profiel"
+  Data-type van element Bron is gewijzigd van gecodeerd element naar folder met referenties naar Patient, Zorgverlener, ZorgverlenerRol conform FHIR EU Core profiel
 
 ### Splitsing van SBB Reactie af van GBB AllergieIntolerantie
 Gekozen basismodel voor GBB AllergieIntolerantie, openEHR archetype Adverse Reaction Risk, bevat een herbruikbaar onderliggend openEHR archetype, Adverse Reaction Event, dat niet zelfstandig kan worden toegepast. Dit archetype leidt tot eigen informatiebehoefte en modeldefinitie. Er is daarom gekozen om Reactie af te splitsen van AllergieIntolerantie. Voor bouwblokken zoals Reactie, die geen zelfstandige toepassing in informatiestandaarden hebben, wordt de term subbouwblok gebruikt.
