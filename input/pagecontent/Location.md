@@ -1,8 +1,9 @@
 {% include_relative Location-Concept.md %}
 
 ### Bekende problemen
-* [Toevoegen van EU/NL traceability op alle onderdelen van de GBB's](http://nictiz.atlassian.net/browse/GBB-82)
-* [Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4](http://nictiz.atlassian.net/browse/GBB-94)
-* [GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten](http://nictiz.atlassian.net/browse/GBB-113)
-* [Obligations toevoegen](http://nictiz.atlassian.net/browse/GBB-120)
-* [Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels](http://nictiz.atlassian.net/browse/GBB-138)
+
+* [GBB-82](https://nictiz.atlassian.net/browse/GBB-82): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
+* [GBB-94](https://nictiz.atlassian.net/browse/GBB-94): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
+* [GBB-113](https://nictiz.atlassian.net/browse/GBB-113): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
+* [GBB-120](https://nictiz.atlassian.net/browse/GBB-120): Obligations toevoegen
+* [GBB-138](https://nictiz.atlassian.net/browse/GBB-138): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels

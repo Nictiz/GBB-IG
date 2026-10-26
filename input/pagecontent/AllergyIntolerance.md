@@ -1,15 +1,16 @@
 {% include_relative AllergyIntolerance-Concept.md %}
 
 ### Bekende problemen
-* [(GBB AllergieIntolerantie) Ontbrekende referentie naar RelatedPerson](http://nictiz.atlassian.net/browse/GBB-74)
-* [(GBB AllergieIntolerantie en SBB Reactie) Ontbrekende additional bindings van FHIR EU Core AllergyIntolerance](http://nictiz.atlassian.net/browse/GBB-75)
-* [(GBB AllergieIntolerantie) Ontbrekende additional binding uit EU core bij AllergyIntolerance.language](http://nictiz.atlassian.net/browse/GBB-77)
-* [Verwijderen informatiestandaarden bij gebruiksscenario's van concept AllergieIntolerantie](http://nictiz.atlassian.net/browse/GBB-78)
-* [Toevoegen van EU/NL traceability op alle onderdelen van de GBB's](http://nictiz.atlassian.net/browse/GBB-90)
-* [Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4](http://nictiz.atlassian.net/browse/GBB-103)
-* [GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten](http://nictiz.atlassian.net/browse/GBB-118)
-* [Obligations toevoegen](http://nictiz.atlassian.net/browse/GBB-130)
-* [Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels](http://nictiz.atlassian.net/browse/GBB-144)
+
+* [GBB-74](http://nictiz.atlassian.net/browse/GBB-74): (GBB AllergieIntolerantie) Ontbrekende referentie naar RelatedPerson
+* [GBB-75](http://nictiz.atlassian.net/browse/GBB-75): (GBB AllergieIntolerantie en SBB Reactie) Ontbrekende additional bindings van FHIR EU Core AllergyIntolerance
+* [GBB-77](http://nictiz.atlassian.net/browse/GBB-77): (GBB AllergieIntolerantie) Ontbrekende additional binding uit EU core bij AllergyIntolerance.language
+* [GBB-78](http://nictiz.atlassian.net/browse/GBB-78): Verwijderen informatiestandaarden bij gebruiksscenario's van concept AllergieIntolerantie
+* [GBB-90](http://nictiz.atlassian.net/browse/GBB-90): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
+* [GBB-103](http://nictiz.atlassian.net/browse/GBB-103): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
+* [GBB-118](http://nictiz.atlassian.net/browse/GBB-118): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
+* [GBB-130](http://nictiz.atlassian.net/browse/GBB-130): Obligations toevoegen
+* [GBB-144](http://nictiz.atlassian.net/browse/GBB-144): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
 
 ### Splitsing van SBB Reactie af van GBB AllergieIntolerantie
 Gekozen basismodel voor GBB AllergieIntolerantie, openEHR archetype Adverse Reaction Risk, bevat een herbruikbaar onderliggend openEHR archetype, Adverse Reaction Event, dat niet zelfstandig kan worden toegepast. Dit archetype leidt tot eigen informatiebehoefte en modeldefinitie. Er is daarom gekozen om Reactie af te splitsen van AllergieIntolerantie. Voor bouwblokken zoals Reactie, die geen zelfstandige toepassing in informatiestandaarden hebben, wordt de term subbouwblok gebruikt.

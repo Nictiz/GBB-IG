@@ -1,9 +1,10 @@
 {% include_relative Reaction-Concept.md %}
 
 ### Bekende problemen
-* [Ontbrekend aparte weergave voor FHIR-profiel van SBB Reactie](http://nictiz.atlassian.net/browse/GBB-76)
-* [Toevoegen van EU/NL traceability op alle onderdelen van de GBB's](http://nictiz.atlassian.net/browse/GBB-91)
-* [Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4](http://nictiz.atlassian.net/browse/GBB-105)
-* [GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten](http://nictiz.atlassian.net/browse/GBB-116)
-* [Obligations toevoegen](http://nictiz.atlassian.net/browse/GBB-132)
-* [Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels](http://nictiz.atlassian.net/browse/GBB-146)
+
+* [GBB-76](https://nictiz.atlassian.net/browse/GBB-76): Ontbrekend aparte weergave voor FHIR-profiel van SBB Reactie
+* [GBB-91](https://nictiz.atlassian.net/browse/GBB-91): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
+* [GBB-105](https://nictiz.atlassian.net/browse/GBB-105): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
+* [GBB-116](https://nictiz.atlassian.net/browse/GBB-116): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
+* [GBB-132](https://nictiz.atlassian.net/browse/GBB-132): Obligations toevoegen
+* [GBB-146](https://nictiz.atlassian.net/browse/GBB-146): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
