@@ -10,3 +10,9 @@
 * [GBB-156](https://nictiz.atlassian.net/browse/GBB-156): RelatedPerson is als referentietype ondersteund in FHIR R4, maar de bijbehorende modellering in ART-DECOR is nog niet afgerond.
 * [GBB-11](https://nictiz.atlassian.net/browse/GBB-11): Motivatievangebruik is niet volledig uitgewerkt. Verwijzingen naar andere GBB's ontbreken nog en een Procedure-referentie wordt niet ondersteund via DeviceUseStatement.reasonReference in FHIR R4.
 * [GBB-9](https://nictiz.atlassian.net/browse/GBB-9): Timing (DEVICEUSE-09) wordt momenteel niet volledig ondersteund. De beperking tot Period wordt afzonderlijk verwerkt in GBB-9.
+
+### Release notes versie 1.0.0-alpha.2
+
+* [GBB-9](http://bits.nictiz.nl/browse/GBB-9): DeviceUseStatement.timing[x] beperkt tot datatype Period, zodat begin- en einddatum correct kunnen worden vastgelegd. Bestaande mapping en obligations behouden.
+* [GBB-12](http://bits.nictiz.nl/browse/GBB-12): Transactiebouwblokken toegevoegd in de transactie.
+* [GBB-22](http://bits.nictiz.nl/browse/GBB-22): De transacties voor Device en DeviceUse zijn nu “LogischModelDevice” en “LogischModelDeviceUse”. Deze zijn nu ook vertaald in het engels.

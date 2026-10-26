@@ -14,3 +14,10 @@
   * Procedure.recorder (EHDS LIM verwacht dat header.author een EHDSHealthProfessional, EHDSOrganisation of EHDSDevice zal zijn. Dit is onrealiseerbaar op dit moment, recorder in het basis resource van Procedure refereert alleen naar Patient, RelatedPerson, Practitioner of PractitionerRole.)
   * [GBB-62](https://nictiz.atlassian.net/browse/GBB-62): Procedure.asserter (EHDS LIM verwacht dat header.source een codeableConcept zal zijn. Deze wordt gemapt naar Procedure.asserter. Dit gegevenselement in het basis resource van Procedure is een Reference.)
 * [GBB-63](https://nictiz.atlassian.net/browse/GBB-63): In het logisch model van EHDS is er context over een Device mbt tot DeviceUsed en FocalDevice. In OpenEHR wordt informatie over gebruikte en toegepaste devices onder procedure detail geplaatst. OpenEHR kan pas betekenis geven aan het concepten in templates. Voor nu is er in het logisch model Procedure wel onderscheid gegeven aan de verschillende manier van Device gebruik.
+
+### Release notes versie 1.0.0-alpha.2
+
+* [GBB-53](http://bits.nictiz.nl/browse/GBB-53):
+  Extensie “impose-profile“ toegevoegd in GBB profielen nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner en -PractitionerRole 
+
+  Extensie “complies-with“ aangepast naar “impose-profile“ in GBB profielen nl-core-Condition en -Procedure

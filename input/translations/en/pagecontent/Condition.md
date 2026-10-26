@@ -15,3 +15,10 @@ In addition, a future version of ART-DECOR will make it possible to specify obli
 * [GBB-134](https://nictiz.atlassian.net/browse/GBB-134): Formulate information requirements according to the DAGIM rules
 * [GBB-84](https://nictiz.atlassian.net/browse/GBB-84): Add EU/NL traceability
 * [GBB-148](https://nictiz.atlassian.net/browse/GBB-148): Missing additional bindings in the FHIR EU Core Condition profile
+
+### Release notes version 1.0.0-alpha.2
+
+* [GBB-52](http://bits.nictiz.nl/browse/GBB-52):
+  Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
+
+  Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure

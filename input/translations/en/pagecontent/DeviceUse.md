@@ -10,3 +10,9 @@
 * [GBB-156](https://nictiz.atlassian.net/browse/GBB-156): RelatedPerson is supported as a reference type in FHIR R4, but the corresponding modelling in ART-DECOR has not yet been completed.
 * [GBB-11](https://nictiz.atlassian.net/browse/GBB-11): Reason for use has not been fully elaborated. References to other GBBs are still missing, and a Procedure reference is not supported through DeviceUseStatement.reasonReference in FHIR R4.
 * [GBB-9](https://nictiz.atlassian.net/browse/GBB-9): Timing (DEVICEUSE-09) is currently not fully supported. The restriction to Period is being addressed separately in GBB-9.
+
+### Release notes version 1.0.0-alpha.2
+
+* [GBB-9](http://bits.nictiz.nl/browse/GBB-9): DeviceUseStatement.timing[x] is restricted to the Period data type, so that the start and end dates can be recorded correctly. Existing mappings and obligations are retained.
+* [GBB-12](http://bits.nictiz.nl/browse/GBB-12): TBB inserted in the transaction.
+* [GBB-22](http://bits.nictiz.nl/browse/GBB-22): The transactions for ‘Device’ and ‘DeviceUse’ are now ‘LogicalModelDevice’ and ‘LogicalModelDeviceUse’. These have now also been translated into English.

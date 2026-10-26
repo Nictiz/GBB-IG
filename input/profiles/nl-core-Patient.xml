@@ -6,7 +6,7 @@
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core" />
   </extension>
   <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
-  <name value="NlcorePatient" />
+  <name value="Nlc  orePatient" />
   <title value="nl core Patient" />
   <status value="draft" />
   <experimental value="false" />

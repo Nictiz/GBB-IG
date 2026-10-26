@@ -6,3 +6,5 @@
 * [GBB-119)](https://nictiz.atlassian.net/browse/GBB-119): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
 * [GBB-133)](https://nictiz.atlassian.net/browse/GBB-133): Obligations toevoegen
 * [GBB-145)](https://nictiz.atlassian.net/browse/GBB-145): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
+
+### Release notes versie 1.0.0-alpha.2

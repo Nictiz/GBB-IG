@@ -14,3 +14,10 @@
   * Procedure.recorder (reference types): The EHDS LIM expects header.author to support EHDSHealthProfessional, EHDSOrganisation, or EHDSDevice. This cannot currently be fully implemented because recorder in the base FHIR Procedure resource can only reference Patient, RelatedPerson, Practitioner, or PractitionerRole.
   * [GBB-62](https://nictiz.atlassian.net/browse/GBB-62) Procedure.asserter (data type): The EHDS LIM expects header.source to be a CodeableConcept, which is mapped to Procedure.asserter. However, Procedure.asserter is defined as a Reference in the base FHIR Procedure resource.
 * [GBB-63](https://nictiz.atlassian.net/browse/GBB-63): The EHDS Logical Model provides contextual information about devices through DeviceUsed and FocalDevice. In openEHR, information about devices used or applied during a procedure is represented within the procedure details. However, openEHR can only assign specific meaning to these concepts through templates. For now, the Procedure Logical Model distinguishes between the different ways in which devices may be used.
+
+### Release notes version 1.0.0-alpha.2
+
+* [GBB-53](http://bits.nictiz.nl/browse/GBB-53):
+  Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
+
+  Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
