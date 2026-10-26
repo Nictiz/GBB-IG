@@ -3,10 +3,6 @@
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
   </text>
-  <language value="en" />
-  <text>
-    <status value="empty" />
-  </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core" />
   </extension>
@@ -22,7 +18,8 @@
     <name value="Nictiz" />
     <telecom>
       <system value="url" />
-      <value value="https://nictiz.nl" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
     </telecom>
   </contact>
   <purpose value="This profile is the FHIR implementation of the general building block [Condition](http://ig.nictiz.nl/gbb/en/Condition)." />
@@ -62,8 +59,8 @@
         </extension>
       </extension>
       <path value="Condition.language" />
-      <mustSupport value="true"/>
       <short value="Language of the condition content" />
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-7" />
@@ -91,7 +88,6 @@
         </extension>
       </extension>
       <path value="Condition.extension" />
-      <mustSupport value="true"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -100,6 +96,7 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.extension:relatedArtifact">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -119,12 +116,12 @@
         </extension>
       </extension>
       <path value="Condition.extension" />
-      <mustSupport value="true"/>
       <sliceName value="relatedArtifact" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-18" />
@@ -152,8 +149,8 @@
         </extension>
       </extension>
       <path value="Condition.identifier" />
-      <mustSupport value="true"/>
       <definition value="Globally unique identifier of this problem which remain constant as the resource is updated and propagates from server to server." />
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-2" />
@@ -181,8 +178,8 @@
         </extension>
       </extension>
       <path value="Condition.clinicalStatus" />
-      <mustSupport value="true"/>
       <definition value="The problem status describes the condition of the problem:                                       1. Active problems are problems of which the patient experiences symptoms or for which evidence exists.                                       2. If condition is abated, then clinicalStatus must be either inactive, resolved, or remission.                                        3. Problems with the status 'Inactive' refer to problems that don't affect the patient anymore or that of which there is no evidence of existence anymore." />
+      <mustSupport value="true"/>
       <binding>
         <strength value="required" />
         <valueSet value="http://hl7.org/fhir/ValueSet/condition-clinical" />
@@ -250,8 +247,8 @@
         </extension>
       </extension>
       <path value="Condition.category" />
-      <mustSupport value="true"/>
       <short value="Category" />
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-11" />
@@ -307,9 +304,9 @@
         </extension>
       </extension>
       <path value="Condition.code" />
-      <mustSupport value="true"/>
       <definition value="The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems." />
       <min value="1" />
+      <mustSupport value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
           <extension url="key">
@@ -387,13 +384,13 @@
         </extension>
       </extension>
       <path value="Condition.bodySite" />
-      <mustSupport value="true"/>
       <constraint>
         <key value="eu-bodysite-1" />
         <severity value="error" />
         <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both." />
         <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()" />
       </constraint>
+      <mustSupport value="true"/>
       <binding>
         <strength value="preferred" />
       </binding>
@@ -416,12 +413,12 @@
         </extension>
       </extension>
       <path value="Condition.bodySite.extension" />
-      <mustSupport value="true"/>
       <sliceName value="bodySite" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.bodySite.extension:bodySite.value[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -441,11 +438,11 @@
         </extension>
       </extension>
       <path value="Condition.bodySite.extension.value[x]" />
-      <mustSupport value="true"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.eu/fhir/base/StructureDefinition/bodyStructure-eu-core" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-14" />
@@ -473,12 +470,12 @@
         </extension>
       </extension>
       <path value="Condition.subject" />
-      <mustSupport value="true"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-1" />
@@ -506,7 +503,6 @@
         </extension>
       </extension>
       <path value="Condition.onset[x]" />
-      <mustSupport value="true"/>
       <slicing>
         <discriminator>
           <type value="type" />
@@ -515,6 +511,7 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -534,12 +531,12 @@
         </extension>
       </extension>
       <path value="Condition.onset[x]" />
-      <mustSupport value="true"/>
       <sliceName value="onsetDateTime" />
       <definition value="Onset of the symptom, complaint, functional limitation, complication or date of diagnosis. A ‘vague’ date, such as only the year or the month and the year, is permitted." />
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-9" />
@@ -567,7 +564,6 @@
         </extension>
       </extension>
       <path value="Condition.abatement[x]" />
-      <mustSupport value="true"/>
       <slicing>
         <discriminator>
           <type value="type" />
@@ -576,6 +572,7 @@
         <ordered value="false" />
         <rules value="open" />
       </slicing>
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.abatement[x]:abatementDateTime">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -595,12 +592,12 @@
         </extension>
       </extension>
       <path value="Condition.abatement[x]" />
-      <mustSupport value="true"/>
       <sliceName value="abatementDateTime" />
       <definition value="The date or estimated date that the condition resolved or went into remission. A ‘vague’ date, such as only the year or the month and the year, is permitted" />
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-10" />
@@ -628,8 +625,8 @@
         </extension>
       </extension>
       <path value="Condition.recordedDate" />
-      <mustSupport value="true"/>
       <short value="Date when the condition record was created" />
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-4" />
@@ -657,7 +654,6 @@
         </extension>
       </extension>
       <path value="Condition.recorder" />
-      <mustSupport value="true"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole" />
@@ -665,6 +661,7 @@
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-3" />
@@ -692,7 +689,6 @@
         </extension>
       </extension>
       <path value="Condition.asserter" />
-      <mustSupport value="true"/>
       <short value="Who asserted the condition" />
       <type>
         <code value="Reference" />
@@ -701,6 +697,7 @@
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-6" />
@@ -728,8 +725,8 @@
         </extension>
       </extension>
       <path value="Condition.stage" />
-      <mustSupport value="true"/>
       <short value="Stage/grade" />
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.stage.summary">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -749,8 +746,8 @@
         </extension>
       </extension>
       <path value="Condition.stage.summary" />
-      <mustSupport value="true"/>
       <short value="Most recent Stage Group" />
+      <mustSupport value="true"/>
       <mapping>
         <identity value="requirements-Condition" />
         <map value="CON-15" />
@@ -778,8 +775,8 @@
         </extension>
       </extension>
       <path value="Condition.stage.type" />
-      <mustSupport value="true"/>
       <short value="Staging system used." />
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.note">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -799,8 +796,8 @@
         </extension>
       </extension>
       <path value="Condition.note" />
-      <mustSupport value="true"/>
       <definition value="Comment by the one who determined or updated the Problem." />
+      <mustSupport value="true"/>
     </element>
     <element id="Condition.note.text">
       <path value="Condition.note.text" />
