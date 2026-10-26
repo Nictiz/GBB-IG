@@ -13,6 +13,9 @@ msgstr ""
 msgid "Afhankelijkheden"
 msgstr "Dependencies"
 
+msgid "Release notes en known issues"
+msgstr "Release notes and known issues"
+
 msgid "Bouwblokken"
 msgstr "Building blocks"
 

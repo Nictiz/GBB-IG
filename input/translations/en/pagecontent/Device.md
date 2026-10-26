@@ -10,7 +10,8 @@
 ### Release notes version 1.0.0-alpha.2
 
 * [GBB-5](http://bits.nictiz.nl/browse/GBB-5): 
-* [GBB-8](http://bits.nictiz.nl/browse/GBB-8): 
+* [GBB-8](http://bits.nictiz.nl/browse/GBB-8):
+
   Device
   EN: Device
   NL MedischHulpmiddel

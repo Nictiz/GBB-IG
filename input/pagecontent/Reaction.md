@@ -12,6 +12,7 @@
 ### Release notes versie 1.0.0-alpha.2
 
 * [GBB-29](http://bits.nictiz.nl/browse/GBB-29):
+
   Wijzigingen aan *SpecifiekeStof*:
 
   * value set eHDSIAllergenNoDrug toegevoegd als main binding en binding strength example conform FHIR EU core profile

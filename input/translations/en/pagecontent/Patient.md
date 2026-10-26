@@ -12,8 +12,7 @@
 ### Release notes version 1.0.0-alpha.2
 
 * [GBB-18](http://bits.nictiz.nl/browse/GBB-18):
-  Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
-
-  Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
+  * Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
+  * Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
 * [GBB-27](http://bits.nictiz.nl/browse/GBB-27): The zib value sets have been removed from the logical model of GBB-Patient, and the bindings have been added in accordance with the EU Core FHIR profile.
 * [GBB-54](http://bits.nictiz.nl/browse/GBB-54): Removed Patient.extension:patSexParameterForClinicalUse.extension:patSexParameterForClinicalUse from the FHIR profile

@@ -16,11 +16,11 @@
 
 * [GBB-13](http://bits.nictiz.nl/browse/GBB-13): 
 * [GBB-14](http://bits.nictiz.nl/browse/GBB-14):
-  Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
-
-  Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
+  * Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
+  * Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
 * [GBB-30](http://bits.nictiz.nl/browse/GBB-30): Replaced value sets from the zib in the FHIR profile for GBB-AllergyIntolerance, which contains Reaction, with value sets from GBB.
 * [GBB-69](http://bits.nictiz.nl/browse/GBB-69):
+
   All value lists with a dependency on zib2020 have been unlinked and added, without this dependency, to the data elements CausativeAgent, Category, ActiveInactiveStatus, VerificationStatus, and Criticality in the logical model.
   
   The data type of the element Source has been changed from a coded element to a folder containing references to Patient, Practitioner and Practicioner Role, in accordance with the FHIR EU Core profile.

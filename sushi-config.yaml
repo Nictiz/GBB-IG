@@ -101,6 +101,7 @@ menu:
   Achtergrondinformatie:
     Obligations: obligations.html
     Afhankelijkheden: dependencies.html
+    Release notes en known issues: releasenotes.html
   
   # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
   # | Each building block gets a heading within "Building blocks". Within each building block, the   |

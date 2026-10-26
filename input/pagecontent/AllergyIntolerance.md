@@ -16,11 +16,14 @@
 
 * [GBB-13](http://bits.nictiz.nl/browse/GBB-13): 
 * [GBB-14](http://bits.nictiz.nl/browse/GBB-14):
+
   Extensie “impose-profile“ toegevoegd in GBB profielen nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner en -PractitionerRole 
 
   Extensie “complies-with“ aangepast naar “impose-profile“ in GBB profielen nl-core-Condition en -Procedure
 * [GBB-30](http://bits.nictiz.nl/browse/GBB-30): De waardelijsten van zib uit FHIR-profiel voor GBB-AllergieIntolerantie, die Reactie bevat, vervangen door waardelijsten van de GBB.
-* [GBB-69](http://bits.nictiz.nl/browse/GBB-69): Alle waardelijsten met een afhankelijkheid naar zib2020 zijn losgekoppeld en zonder deze afhankelijkheid toegevoegd aan de data-elementen VeroorzakendeStof, Categorie, ActieveInactieveStatus, VerificatieStatus en MateVanKritiekZijn in het afspraken model
+* [GBB-69](http://bits.nictiz.nl/browse/GBB-69):
+
+  Alle waardelijsten met een afhankelijkheid naar zib2020 zijn losgekoppeld en zonder deze afhankelijkheid toegevoegd aan de data-elementen VeroorzakendeStof, Categorie, ActieveInactieveStatus, VerificatieStatus en MateVanKritiekZijn in het afspraken model
 
   Data-type van element Bron is gewijzigd van gecodeerd element naar folder met referenties naar Patient, Zorgverlener, ZorgverlenerRol conform FHIR EU Core profiel"
 

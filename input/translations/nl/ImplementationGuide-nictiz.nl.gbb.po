@@ -108,3 +108,8 @@ msgstr "Verrichting"
 #: ImplementationGuide.definition.page.title
 msgid "Reaction"
 msgstr "Reactie"
+
+# ImplementationGuide.definition.page.title
+#: ImplementationGuide.definition.page.title
+msgid "Releasenotes"
+msgstr "Release notes"

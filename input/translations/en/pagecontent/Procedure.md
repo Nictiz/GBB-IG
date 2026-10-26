@@ -18,6 +18,5 @@
 ### Release notes version 1.0.0-alpha.2
 
 * [GBB-53](http://bits.nictiz.nl/browse/GBB-53):
-  Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
-
-  Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
+  * Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
+  * Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
