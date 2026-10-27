@@ -2,24 +2,24 @@
 
 ### Known issues
 
-* [GBB-74](https://nictiz.atlassian.net/browse/GBB-74): (GBB AllergyIntolerance) Missing reference to RelatedPerson
-* [GBB-75](https://nictiz.atlassian.net/browse/GBB-75): (GBB AllergyIntolerance and SBB Reaction) Missing additional bindings from FHIR EU Core AllergyIntolerance
-* [GBB-77](https://nictiz.atlassian.net/browse/GBB-77): (GBB AllergyIntolerance) Missing additional binding from EU Core for AllergyIntolerance.language
-* [GBB-78](https://nictiz.atlassian.net/browse/GBB-78): Remove information standards from the usage scenarios for the AllergyIntolerance concept
-* [GBB-90](https://nictiz.atlassian.net/browse/GBB-90): Add EU/NL traceability to all components of the GBBs
-* [GBB-103](https://nictiz.atlassian.net/browse/GBB-103): Comply with the DAGIM rules, version 1.0.0-alpha.4
-* [GBB-118](https://nictiz.atlassian.net/browse/GBB-118): Review and update the GBBs according to the rules for terminology and value sets
-* [GBB-130](https://nictiz.atlassian.net/browse/GBB-130): Add obligations
-* [GBB-144](https://nictiz.atlassian.net/browse/GBB-144): Information requirements are not yet adequately formulated in accordance with the DAGIM rules
+* [GBB-74](https://bits.nictiz.nl/browse/GBB-74): (GBB AllergyIntolerance) Missing reference to RelatedPerson
+* [GBB-75](https://bits.nictiz.nl/browse/GBB-75): (GBB AllergyIntolerance and SBB Reaction) Missing additional bindings from FHIR EU Core AllergyIntolerance
+* [GBB-77](https://bits.nictiz.nl/browse/GBB-77): (GBB AllergyIntolerance) Missing additional binding from EU Core for AllergyIntolerance.language
+* [GBB-78](https://bits.nictiz.nl/browse/GBB-78): Remove information standards from the usage scenarios for the AllergyIntolerance concept
+* [GBB-90](https://bits.nictiz.nl/browse/GBB-90): Add EU/NL traceability to all components of the GBBs
+* [GBB-103](https://bits.nictiz.nl/browse/GBB-103): Comply with the DAGIM rules, version 1.0.0-alpha.4
+* [GBB-118](https://bits.nictiz.nl/browse/GBB-118): Review and update the GBBs according to the rules for terminology and value sets
+* [GBB-130](https://bits.nictiz.nl/browse/GBB-130): Add obligations
+* [GBB-144](https://bits.nictiz.nl/browse/GBB-144): Information requirements are not yet adequately formulated in accordance with the DAGIM rules
 
 ### Release notes version 1.0.0-alpha.2
 
-* [GBB-13](http://bits.nictiz.nl/browse/GBB-13): 
-* [GBB-14](http://bits.nictiz.nl/browse/GBB-14):
+* [GBB-13](https://bits.nictiz.nl/browse/GBB-13): 
+* [GBB-14](https://bits.nictiz.nl/browse/GBB-14):
   * Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
   * Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
-* [GBB-30](http://bits.nictiz.nl/browse/GBB-30): Replaced value sets from the zib in the FHIR profile for GBB-AllergyIntolerance, which contains Reaction, with value sets from GBB.
-* [GBB-69](http://bits.nictiz.nl/browse/GBB-69):
+* [GBB-30](https://bits.nictiz.nl/browse/GBB-30): Replaced value sets from the zib in the FHIR profile for GBB-AllergyIntolerance, which contains Reaction, with value sets from GBB.
+* [GBB-69](https://bits.nictiz.nl/browse/GBB-69):
 
   All value lists with a dependency on zib2020 have been unlinked and added, without this dependency, to the data elements CausativeAgent, Category, ActiveInactiveStatus, VerificationStatus, and Criticality in the logical model.
   

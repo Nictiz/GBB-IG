@@ -2,16 +2,16 @@
 
 ### Bekende problemen
 
-* [GBB-76](https://nictiz.atlassian.net/browse/GBB-76): Ontbrekend aparte weergave voor FHIR-profiel van SBB Reactie
-* [GBB-91](https://nictiz.atlassian.net/browse/GBB-91): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
-* [GBB-105](https://nictiz.atlassian.net/browse/GBB-105): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
-* [GBB-116](https://nictiz.atlassian.net/browse/GBB-116): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
-* [GBB-132](https://nictiz.atlassian.net/browse/GBB-132): Obligations toevoegen
-* [GBB-146](https://nictiz.atlassian.net/browse/GBB-146): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
+* [GBB-76](https://bits.nictiz.nl/browse/GBB-76): Ontbrekend aparte weergave voor FHIR-profiel van SBB Reactie
+* [GBB-91](https://bits.nictiz.nl/browse/GBB-91): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
+* [GBB-105](https://bits.nictiz.nl/browse/GBB-105): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
+* [GBB-116](https://bits.nictiz.nl/browse/GBB-116): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
+* [GBB-132](https://bits.nictiz.nl/browse/GBB-132): Obligations toevoegen
+* [GBB-146](https://bits.nictiz.nl/browse/GBB-146): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
 
 ### Release notes versie 1.0.0-alpha.2
 
-* [GBB-29](http://bits.nictiz.nl/browse/GBB-29):
+* [GBB-29](https://bits.nictiz.nl/browse/GBB-29):
 
   Wijzigingen aan *SpecifiekeStof*:
 
@@ -31,4 +31,4 @@
   Wijzigingen aan *Ernst* en *WijzeVanBlootstelling:* 
 
   * Waardelijsten met afhankelijkheid van zib2020 losgekoppeld van data-element vanwege inhoudelijk overlap met waardelijsten die als main binding is gekoppeld
-* [GBB-68](http://bits.nictiz.nl/browse/GBB-68): De waardelijsten van zib uit FHIR-profiel voor GBB-AllergieIntolerantie, die Reactie bevat, vervangen door waardelijsten van de GBB.
+* [GBB-68](https://bits.nictiz.nl/browse/GBB-68): De waardelijsten van zib uit FHIR-profiel voor GBB-AllergieIntolerantie, die Reactie bevat, vervangen door waardelijsten van de GBB.
