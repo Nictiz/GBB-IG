@@ -115,7 +115,7 @@ menu:
     AllergieIntolerantie:
       Overzicht: AllergyIntolerance.html
       Requirements: Requirements-AllergyIntolerance.html
-      Afsprakenmodel: StructureDefinition-LogicalModelAllergyIntolerance.html
+      Afsprakenmodel: StructureDefinition-AllergyIntolerance.html
       FHIR-profiel: StructureDefinition-nl-core-AllergyIntolerance.html
     Contactgegevens:
       Overzicht: ContactPoint.html
@@ -145,7 +145,7 @@ menu:
     Reactie:
       Overzicht: Reaction.html
       Requirements: Requirements-Reaction.html
-      Afsprakenmodel: StructureDefinition-LogicalModelReaction.h
+      Afsprakenmodel: StructureDefinition-Reaction.html
     Zorgverlener:
       Overzicht: Practitioner.html
       Requirements: Requirements-Practitioner.html
