@@ -102,7 +102,7 @@
       </binding>
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-01" />
+        <map value="NL:NAA1" />
         <comment value="Name assembly order" />
       </mapping>
       <mapping>
@@ -135,7 +135,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-02" />
+        <map value="EU:NAA2" />
         <comment value="Use" />
       </mapping>
       <mapping>
@@ -170,7 +170,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-03" />
+        <map value="EU:NAA3" />
         <comment value="Text" />
       </mapping>
       <mapping>
@@ -205,7 +205,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-04" />
+        <map value="EU:NAA4" />
         <comment value="Name assembly order" />
       </mapping>
       <mapping>
@@ -246,7 +246,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-05" />
+        <map value="NL:NAA6" />
         <comment value="Prefix" />
       </mapping>
       <mapping>
@@ -288,7 +288,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-06" />
+        <map value="NL:NAA7" />
         <comment value="FamilyName" />
       </mapping>
       <mapping>
@@ -329,7 +329,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-07" />
+        <map value="NL:NAA8" />
         <comment value="PartnerPrefix" />
       </mapping>
       <mapping>
@@ -371,7 +371,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-08" />
+        <map value="NL:NAA9" />
         <comment value="PartnerLastName" />
       </mapping>
       <mapping>
@@ -406,7 +406,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-09" />
+        <map value="EU:NAA10" />
         <comment value="GivenName" />
       </mapping>
       <mapping>
@@ -439,7 +439,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-10" />
+        <map value="EU:NAA11" />
         <comment value="Titles" />
       </mapping>
       <mapping>
@@ -472,7 +472,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NAA-12" />
+        <map value="EU:NAA12" />
         <comment value="Titles" />
       </mapping>
       <mapping>
