@@ -170,7 +170,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-04" />
+        <map value="EU:ADD4" />
         <comment value="Line" />
       </mapping>
       <mapping>
@@ -389,7 +389,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-09" />
+        <map value="NL:ADD9" />
         <comment value="UnitID/AdditionalInformation" />
       </mapping>
       <mapping>
