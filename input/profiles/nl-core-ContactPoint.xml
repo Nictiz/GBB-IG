@@ -67,7 +67,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-ContactPoint" />
-        <map value="CTP-01" />
+        <map value="EU:CTP1" />
         <comment value="System" />
       </mapping>
       <mapping>
@@ -101,7 +101,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-ContactPoint" />
-        <map value="CTP-02" />
+        <map value="EU:CTP3" />
         <comment value="Value" />
       </mapping>
       <mapping>
@@ -134,7 +134,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-ContactPoint" />
-        <map value="CTP-03" />
+        <map value="EU:CTP6" />
         <comment value="Use" />
       </mapping>
       <mapping>

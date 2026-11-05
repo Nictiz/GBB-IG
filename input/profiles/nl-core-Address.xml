@@ -69,7 +69,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-01" />
+        <map value="EU:ADD1" />
         <comment value="Use" />
       </mapping>
       <mapping>
@@ -102,7 +102,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-02" />
+        <map value="EU:ADD2" />
         <comment value="Type" />
       </mapping>
       <mapping>
@@ -135,7 +135,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-03" />
+        <map value="EU:ADD3" />
         <comment value="text/FullAddress" />
       </mapping>
       <mapping>
@@ -170,7 +170,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-04" />
+        <map value="EU:ADD4" />
         <comment value="Line" />
       </mapping>
       <mapping>
@@ -217,7 +217,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-05" />
+        <map value="EU:ADD5" />
         <comment value="StreetName" />
       </mapping>
       <mapping>
@@ -260,7 +260,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-06" />
+        <map value="EU:ADD6" />
         <comment value="HouseNumber" />
       </mapping>
       <mapping>
@@ -303,7 +303,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-07" />
+        <map value="NL:ADD7" />
         <comment value="BuildingNumberSuffix" />
       </mapping>
       <mapping>
@@ -346,7 +346,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-08" />
+        <map value="NL:ADD8" />
         <comment value="AdditionalLocator" />
       </mapping>
       <mapping>
@@ -389,7 +389,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-09" />
+        <map value="NL:ADD9" />
         <comment value="UnitID/AdditionalInformation" />
       </mapping>
       <mapping>
@@ -433,7 +433,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-10" />
+        <map value="EU:ADD10" />
         <comment value="Postbox" />
       </mapping>
       <mapping>
@@ -466,7 +466,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-11" />
+        <map value="NL:ADD11" />
         <comment value="PlaceOfResidence" />
       </mapping>
       <mapping>
@@ -499,7 +499,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-12" />
+        <map value="NL:ADD13" />
         <comment value="Municipality" />
       </mapping>
       <mapping>
@@ -532,7 +532,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-13" />
+        <map value="EU:ADD14" />
         <comment value="Postcode" />
       </mapping>
       <mapping>
@@ -599,12 +599,12 @@
       </binding>
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-14" />
+        <map value="EU:ADD15" />
         <comment value="Country" />
       </mapping>
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-16" />
+        <map value="NL:ADD16" />
         <comment value="Country GBA" />
       </mapping>
       <mapping>
@@ -637,7 +637,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-15" />
+        <map value=" NL:ADD17" />
         <comment value="UsablePeriod" />
       </mapping>
       <mapping>

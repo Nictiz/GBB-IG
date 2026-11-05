@@ -76,7 +76,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-001" />
+        <map value="EU:ORG1" />
         <comment value="Identifier" />
       </mapping>
       <mapping>
@@ -140,7 +140,7 @@
       </binding>
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-003" />
+        <map value="EU:ORG2" />
         <comment value="Type" />
       </mapping>
       <mapping>
@@ -173,7 +173,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-005" />
+        <map value="EU:ORG5" />
         <comment value="Name" />
       </mapping>
       <mapping>
@@ -210,7 +210,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-007" />
+        <map value="EU:ORG4" />
         <comment value="Telecom" />
       </mapping>
       <mapping>
@@ -247,7 +247,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-005" />
+        <map value="EU:ORG3" />
         <comment value="Address" />
       </mapping>
       <mapping>
@@ -284,7 +284,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Organization" />
-        <map value="ORG-008" />
+        <map value="EU:ORG6" />
         <comment value="PartOf" />
       </mapping>
       <mapping>
