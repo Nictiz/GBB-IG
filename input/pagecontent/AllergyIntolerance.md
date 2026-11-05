@@ -2,26 +2,26 @@
 
 ### Bekende problemen
 
-* [GBB-74](http://nictiz.atlassian.net/browse/GBB-74): (GBB AllergieIntolerantie) Ontbrekende referentie naar RelatedPerson
-* [GBB-75](http://nictiz.atlassian.net/browse/GBB-75): (GBB AllergieIntolerantie en SBB Reactie) Ontbrekende additional bindings van FHIR EU Core AllergyIntolerance
-* [GBB-77](http://nictiz.atlassian.net/browse/GBB-77): (GBB AllergieIntolerantie) Ontbrekende additional binding uit EU core bij AllergyIntolerance.language
-* [GBB-78](http://nictiz.atlassian.net/browse/GBB-78): Verwijderen informatiestandaarden bij gebruiksscenario's van concept AllergieIntolerantie
-* [GBB-90](http://nictiz.atlassian.net/browse/GBB-90): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
-* [GBB-103](http://nictiz.atlassian.net/browse/GBB-103): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
-* [GBB-118](http://nictiz.atlassian.net/browse/GBB-118): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
-* [GBB-130](http://nictiz.atlassian.net/browse/GBB-130): Obligations toevoegen
-* [GBB-144](http://nictiz.atlassian.net/browse/GBB-144): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
+* [GBB-74](https://bits.nictiz.nl/browse/GBB-74): (GBB AllergieIntolerantie) Ontbrekende referentie naar RelatedPerson
+* [GBB-75](https://bits.nictiz.nl/browse/GBB-75): (GBB AllergieIntolerantie en SBB Reactie) Ontbrekende additional bindings van FHIR EU Core AllergyIntolerance
+* [GBB-77](https://bits.nictiz.nl/browse/GBB-77): (GBB AllergieIntolerantie) Ontbrekende additional binding uit EU core bij AllergyIntolerance.language
+* [GBB-78](https://bits.nictiz.nl/browse/GBB-78): Verwijderen informatiestandaarden bij gebruiksscenario's van concept AllergieIntolerantie
+* [GBB-90](https://bits.nictiz.nl/browse/GBB-90): Toevoegen van EU/NL traceability op alle onderdelen van de GBB's
+* [GBB-103](https://bits.nictiz.nl/browse/GBB-103): Voldoen aan de DAGIM-spelregels versie 1.0.0-alpha.4
+* [GBB-118](https://bits.nictiz.nl/browse/GBB-118): GBB's controleren en aanpassen volgens de regels voor terminologie en waardelijsten
+* [GBB-130](https://bits.nictiz.nl/browse/GBB-130): Obligations toevoegen
+* [GBB-144](https://bits.nictiz.nl/browse/GBB-144): Informatie-requirements zijn nog onvoldoende geformuleerd volgens de DAGIM-spelregels
 
 ### Release notes versie 1.0.0-alpha.2
 
-* [GBB-13](http://bits.nictiz.nl/browse/GBB-13): 
-* [GBB-14](http://bits.nictiz.nl/browse/GBB-14):
+* [GBB-13](https://bits.nictiz.nl/browse/GBB-13): 
+* [GBB-14](https://bits.nictiz.nl/browse/GBB-14):
 
   Extensie “impose-profile“ toegevoegd in GBB profielen nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner en -PractitionerRole 
 
   Extensie “complies-with“ aangepast naar “impose-profile“ in GBB profielen nl-core-Condition en -Procedure
-* [GBB-30](http://bits.nictiz.nl/browse/GBB-30): De waardelijsten van zib uit FHIR-profiel voor GBB-AllergieIntolerantie, die Reactie bevat, vervangen door waardelijsten van de GBB.
-* [GBB-69](http://bits.nictiz.nl/browse/GBB-69):
+* [GBB-30](https://bits.nictiz.nl/browse/GBB-30): De waardelijsten van zib uit FHIR-profiel voor GBB-AllergieIntolerantie, die Reactie bevat, vervangen door waardelijsten van de GBB.
+* [GBB-69](https://bits.nictiz.nl/browse/GBB-69):
 
   Alle waardelijsten met een afhankelijkheid naar zib2020 zijn losgekoppeld en zonder deze afhankelijkheid toegevoegd aan de data-elementen VeroorzakendeStof, Categorie, ActieveInactieveStatus, VerificatieStatus en MateVanKritiekZijn in het afspraken model
 

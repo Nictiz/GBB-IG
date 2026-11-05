@@ -9,15 +9,15 @@ In addition, a future version of ART-DECOR will make it possible to specify obli
 
 ### Known issues
 
-* [GBB-6](https://nictiz.atlassian.net/browse/GBB-6): FHIR profile not conformant with the EU profile: assertedDate element
-* [GBB-97](https://nictiz.atlassian.net/browse/GBB-97): Comply with DAGIM rules version 1.0.0-alpha.4
-* [GBB-106](https://nictiz.atlassian.net/browse/GBB-106): Add value sets according to the rules and guidelines
-* [GBB-134](https://nictiz.atlassian.net/browse/GBB-134): Formulate information requirements according to the DAGIM rules
-* [GBB-84](https://nictiz.atlassian.net/browse/GBB-84): Add EU/NL traceability
-* [GBB-148](https://nictiz.atlassian.net/browse/GBB-148): Missing additional bindings in the FHIR EU Core Condition profile
+* [GBB-6](https://bits.nictiz.nl/browse/GBB-6): FHIR profile not conformant with the EU profile: assertedDate element
+* [GBB-97](https://bits.nictiz.nl/browse/GBB-97): Comply with DAGIM rules version 1.0.0-alpha.4
+* [GBB-106](https://bits.nictiz.nl/browse/GBB-106): Add value sets according to the rules and guidelines
+* [GBB-134](https://bits.nictiz.nl/browse/GBB-134): Formulate information requirements according to the DAGIM rules
+* [GBB-84](https://bits.nictiz.nl/browse/GBB-84): Add EU/NL traceability
+* [GBB-148](https://bits.nictiz.nl/browse/GBB-148): Missing additional bindings in the FHIR EU Core Condition profile
 
 ### Release notes version 1.0.0-alpha.2
 
-* [GBB-52](http://bits.nictiz.nl/browse/GBB-52):
+* [GBB-52](https://bits.nictiz.nl/browse/GBB-52):
   * Added extension “impose-profile“ in GBB profiles nl-core-Address, -AllergyIntolerance, -Location, -Organization, -Patient, -Practitioner, and -PractitionerRole 
   * Changed extension “complies-with“ to “impose-profile“ in GBB profiles nl-core-Condition, and -Procedure
