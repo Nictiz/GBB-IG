@@ -44,7 +44,7 @@ else
 fi
 
 cd $work_dir
-sync-obligations --actor http://ig.nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder $lm_folder --suppressions known-issues.yml $@
+sync-profiles --card --bindings --actor http://ig.nictiz.nl/gbb/ActorDefinition/SendingSystem --actor http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem --lm-folder $lm_folder --suppressions known-issues.yml $@
 if [ $? -ne 0 ]; then
     exit_code=1
 fi
