@@ -1,11 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Patient" />
+  <id value="nl-core-Patient-on-eu-core" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
-    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core" />
-  </extension>
-  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient-on-eu-core" />
   <name value="Nlc  orePatient" />
   <title value="nl core Patient" />
   <status value="draft" />
@@ -36,7 +33,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <baseDefinition value="http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient">
@@ -44,6 +41,114 @@
       <short value="Patient" />
       <definition value="Root concept of the Patient information model. This root concept contains all data elements of the Patient information model." />
       <alias value="Patient" />
+    </element>
+    <element id="Patient.extension:sex-for-clinical-use">
+      <path value="Patient.extension" />
+      <sliceName value="sex-for-clinical-use" />
+    </element>
+    <element id="Patient.extension:sex-for-clinical-use.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:gender-identity">
+      <path value="Patient.extension" />
+      <sliceName value="gender-identity" />
+    </element>
+    <element id="Patient.extension:gender-identity.extension">
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+    </element>
+    <element id="Patient.extension:pronouns">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension" />
+      <sliceName value="pronouns" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Patient.extension:pronouns.extension">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension" />
+      <sliceName value="value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:pronouns.extension:value.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:handle" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Patient.extension.extension.value[x]" />
+      <short value="Pronouns" />
+      <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html" />
+      <alias value="Persoonlijke voornaamwoorden" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="lm-Patient" />
+        <map value="Patient.pronouns" />
+        <comment value="pronouns" />
+      </mapping>
     </element>
     <element id="Patient.extension:genderIdentity">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -139,102 +244,6 @@
         <identity value="lm-Patient" />
         <map value="Patient.genderIdentity" />
         <comment value="GenderIdentity" />
-      </mapping>
-    </element>
-    <element id="Patient.extension:pronouns">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.extension" />
-      <sliceName value="pronouns" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/individual-pronouns" />
-      </type>
-      <mustSupport value="true" />
-      <isModifier value="false" />
-    </element>
-    <element id="Patient.extension:pronouns.extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.extension.extension" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.extension:pronouns.extension:value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.extension.extension" />
-      <sliceName value="value" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.extension:pronouns.extension:value.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:populate" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:handle" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Patient.extension.extension.value[x]" />
-      <short value="Pronouns" />
-      <definition value="The pronouns to use when communicating about an individual. Valueset: https://terminology.hl7.org/7.3.0/en/ValueSet-pronouns.html" />
-      <alias value="Persoonlijke voornaamwoorden" />
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="lm-Patient" />
-        <map value="Patient.pronouns" />
-        <comment value="pronouns" />
       </mapping>
     </element>
     <element id="Patient.extension:patSexParameterForClinicalUse">
@@ -663,7 +672,6 @@
       </extension>
       <path value="Patient.address" />
       <definition value="Patient address separated in address parts; potentially a simple address string" />
-      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
@@ -947,7 +955,6 @@
       </extension>
       <path value="Patient.contact.address" />
       <definition value="Contact person address separated in address parts; potentially a simple address string." />
-      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />

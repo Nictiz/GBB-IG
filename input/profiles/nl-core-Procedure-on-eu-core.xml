@@ -1,12 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Procedure" />
+  <id value="nl-core-Procedure-on-eu-core" />
   <text>
-    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
-    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
-  </extension>
-  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure" />
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure-on-eu-core" />
   <name value="NlcoreProcedure" />
   <title value="nl core Procedure" />
   <status value="draft" />
@@ -36,7 +32,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Procedure" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <baseDefinition value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
   <derivation value="constraint" />
   <differential>
     <element id="Procedure.language">
@@ -304,7 +300,6 @@
       <path value="Procedure.code" />
       <short value="ProcedureName" />
       <alias value="VerrichtingNaam" />
-      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
@@ -833,13 +828,6 @@
       <path value="Procedure.bodySite" />
       <short value="ProcedureBodySite" />
       <alias value="AnatomischeLocatie" />
-      <constraint>
-        <key value="eu-bodysite-1" />
-        <severity value="error" />
-        <human value="Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both." />
-        <expression value="(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()" />
-        <source value="http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core" />
-      </constraint>
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Procedure" />

@@ -1,11 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Address" />
+  <id value="nl-core-Address-on-eu-core" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
-    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/Address-eu" />
-  </extension>
-  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address-on-eu-core" />
   <version value="0.0.1" />
   <name value="NlcoreAddress" />
   <title value="nl core Address" />
@@ -36,7 +33,7 @@
   <kind value="complex-type" />
   <abstract value="false" />
   <type value="Address" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <baseDefinition value="http://hl7.eu/fhir/base/StructureDefinition/Address-eu" />
   <derivation value="constraint" />
   <differential>
     <element id="Address">
@@ -96,7 +93,6 @@
         </extension>
       </extension>
       <path value="Address.type" />
-      <short value="Address type (postal | physical)" />
       <definition value="The type of address in question, such as a physical address or mailing address." />
       <alias value="Adrestype (post | fysiek)" />
       <mustSupport value="true" />
@@ -164,7 +160,6 @@
       <path value="Address.line" />
       <short value="AddressLine" />
       <definition value="(Human-readable representation of the elements underneath) This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information." />
-      <comment value="When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line." />
       <alias value="Adresregel" />
       <max value="1" />
       <mustSupport value="true" />
@@ -187,10 +182,6 @@
       <path value="Address.line.extension" />
       <sliceName value="streetName" />
       <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
-      </type>
       <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:streetName.value[x]">
@@ -230,10 +221,6 @@
       <path value="Address.line.extension" />
       <sliceName value="houseNumber" />
       <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
-      </type>
       <mustSupport value="false" />
     </element>
     <element id="Address.line.extension:houseNumber.value[x]">
@@ -267,6 +254,46 @@
         <identity value="lm-Address" />
         <map value="Address.houseNumber" />
         <comment value="HouseNumber" />
+      </mapping>
+    </element>
+    <element id="Address.line.extension:postBox">
+      <path value="Address.line.extension" />
+      <sliceName value="postBox" />
+      <max value="1" />
+      <mustSupport value="false" />
+      <isModifier value="false" />
+    </element>
+    <element id="Address.line.extension:postBox.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHOULD:populate-if-known" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error" />
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
+        </extension>
+      </extension>
+      <path value="Address.line.extension.value[x]" />
+      <short value="Postbox" />
+      <definition value="A numbered box located in a post station." />
+      <alias value="Postbus" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Address" />
+        <map value="ADD-10" />
+        <comment value="Postbox" />
+      </mapping>
+      <mapping>
+        <identity value="lm-Address" />
+        <map value="Address.postbox" />
+        <comment value="Postbox" />
       </mapping>
     </element>
     <element id="Address.line.extension:buildingNumberSuffix">
@@ -398,50 +425,6 @@
         <comment value="UnitID/AdditionalInformation" />
       </mapping>
     </element>
-    <element id="Address.line.extension:postBox">
-      <path value="Address.line.extension" />
-      <sliceName value="postBox" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
-      </type>
-      <mustSupport value="false" />
-      <isModifier value="false" />
-    </element>
-    <element id="Address.line.extension:postBox.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHOULD:populate-if-known" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
-        <extension url="code">
-          <valueCode value="SHALL:no-error" />
-        </extension>
-        <extension url="actor">
-          <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
-        </extension>
-      </extension>
-      <path value="Address.line.extension.value[x]" />
-      <short value="Postbox" />
-      <definition value="A numbered box located in a post station." />
-      <alias value="Postbus" />
-      <mustSupport value="true" />
-      <mapping>
-        <identity value="requirements-Address" />
-        <map value="ADD-10" />
-        <comment value="Postbox" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Address" />
-        <map value="Address.postbox" />
-        <comment value="Postbox" />
-      </mapping>
-    </element>
     <element id="Address.city">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
@@ -551,11 +534,6 @@
     <element id="Address.country.extension:countryCode">
       <path value="Address.country.extension" />
       <sliceName value="countryCode" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-codedString" />
-      </type>
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
@@ -594,8 +572,7 @@
           </extension>
         </extension>
         <strength value="preferred" />
-        <description value="This value set defines the ISO 3166 Part 1 2-letter codes"/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/iso3166-1-2" />
+        <description value="This value set defines the ISO 3166 Part 1 2-letter codes" />
       </binding>
       <mapping>
         <identity value="requirements-Address" />

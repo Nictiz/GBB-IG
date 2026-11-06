@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Location" />
+  <id value="nl-core-Location-on-eu-core" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
-    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/location-eu-core" />
-  </extension>
-  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Location" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Location-on-eu-core" />
   <name value="NlcoreLocation" />
   <title value="nl core Location" />
   <status value="draft" />
@@ -36,7 +33,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Location" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
+  <baseDefinition value="http://hl7.eu/fhir/base/StructureDefinition/location-eu-core" />
   <derivation value="constraint" />
   <differential>
     <element id="Location">
@@ -195,9 +192,7 @@
         </extension>
       </extension>
       <path value="Location.address" />
-      <short value="Address" />
       <definition value="Physical location" />
-      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />

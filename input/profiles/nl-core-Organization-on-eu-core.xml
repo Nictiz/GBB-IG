@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="nl-core-Organization" />
+  <id value="nl-core-Organization-on-eu-core" />
   <text>
     <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
-   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
-    <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
-  </extension>
-  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization-on-eu-core" />
   <name value="NlcoreOrganization" />
   <title value="nl core Organization" />
   <status value="draft" />
@@ -36,7 +33,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <baseDefinition value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
@@ -237,9 +234,7 @@
         </extension>
       </extension>
       <path value="Organization.address" />
-      <short value="Address" />
       <definition value="Mail of kantoor adressen van de organisatie." />
-      <alias value="Adres" />
       <type>
         <code value="Address" />
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
