@@ -21,8 +21,8 @@ ECHO We're online
 SET txoption=
 
 REM Run the script to convert and download the content based on the Excel input.
-call excel-to-artifacts input generated
-if errorlevel 1 exit /b %errorlevel%
+REM call excel-to-artifacts input generated
+REM if errorlevel 1 exit /b %errorlevel%
 
 :igpublish
 
