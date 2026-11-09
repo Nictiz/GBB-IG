@@ -1,0 +1,11 @@
+{
+    "name" : "nictiz.template",
+    "type" : "fhir.template",
+    "license" : "CC0-1.0",
+    "description" : "Nictiz FHIR IG Template",
+    "base" : "fhir2.base.template",
+    "dependencies" : {
+      "fhir2.base.template" : "current"
+    },
+    "version" : "0.1.0"
+  }
