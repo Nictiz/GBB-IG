@@ -98,6 +98,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  eu-core diff: eu-core-diff.html
   Achtergrondinformatie:
     Obligations: obligations.html
     Afhankelijkheden: dependencies.html
