@@ -134,7 +134,7 @@
     <element id="Condition.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -142,7 +142,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -485,7 +485,7 @@
     <element id="Condition.onset[x]">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -493,7 +493,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
@@ -607,7 +607,7 @@
     <element id="Condition.recordedDate">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:populate" />
+          <valueCode value="SHOULD:populate-if-known" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ExchangingSystem" />
@@ -615,7 +615,7 @@
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
-          <valueCode value="SHALL:handle" />
+          <valueCode value="SHALL:no-error" />
         </extension>
         <extension url="actor">
           <valueCanonical value="http://ig.nictiz.nl/gbb/ActorDefinition/ConsumingSystem" />
