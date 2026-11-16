@@ -734,17 +734,6 @@
       <alias value="MateVanZekerheid" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="key">
-            <valueId value="gbb-allergyintoleranceCertainty" />
-          </extension>
-          <extension url="purpose">
-            <valueCode value="component" />
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.44" />
-          </extension>
-        </extension>
         <strength value="required" />
         <description value="The degree of clinical certainty that the manifestation in this reaction event was caused by exposure to the identified substance." />
         <valueSet value="http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1" />
@@ -824,17 +813,6 @@
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.49" />
-          </extension>
-        </extension>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/additional-binding">
-          <extension url="key">
-            <valueId value="gbb-allergyIntoleranceReactionSubstance-AllergenenStoffen" />
-          </extension>
-          <extension url="purpose">
-            <valueCode value="component" />
-          </extension>
-          <extension url="valueSet">
-            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.47" />
           </extension>
         </extension>
         <strength value="example"/>
@@ -1047,7 +1025,7 @@
       <alias value="WijzeVanBlootstelling" />
       <mustSupport value="true" />
       <binding>
-        <strength value="preferred" />
+        <strength value="example" />
         <valueSet value="http://hl7.org/fhir/ValueSet/route-codes" />
       </binding>
       <mapping>
