@@ -106,7 +106,6 @@
       <alias value="Organisatie" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mustSupport value="true" />
