@@ -74,7 +74,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-006" />
+        <map value="EU:PROLE7" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
@@ -112,8 +112,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-004" />
-        <comment value="Organization" />
+        <map value="EU:PROLE5" />
+        <comment value="Healthcare provider" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -145,8 +145,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-005" />
-        <comment value="Code" />
+        <map value="EU:PROLE6" />
+        <comment value="Professional role" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -216,13 +216,18 @@
       </binding>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-001" />
-        <comment value="Specialty" />
+        <map value="EU:PROLE1" />
+        <comment value="Practitioner specialty" />
       </mapping>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-002" />
-        <comment value="Specialty" />
+        <map value="NL:PROLE2" />
+        <comment value="Practitioner specialty AGB" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-PractitionerRole" />
+        <map value="NL:PROLE3" />
+        <comment value="Practitioner specialty UZI" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -258,8 +263,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-003" />
-        <comment value="Telecom" />
+        <map value="EU:PROLE4" />
+        <comment value="Contact details" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
