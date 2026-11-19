@@ -714,11 +714,6 @@
         <comment value="Reaction event summary" />
       </mapping>
       <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="REA-09-01" />
-        <comment value="Reactie" />
-      </mapping>
-      <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.reaction" />
         <comment value="Reaction" />
@@ -771,8 +766,8 @@
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-06-02" />
-        <comment value="Mate zekerheid over reactie" />
+        <map value="NL:REA37" />
+        <comment value="Certainty" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -862,13 +857,48 @@
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-10" />
-        <comment value="agent or allergen" />
+        <map value="EU:REA1" />
+        <comment value="Agent or allergen causing the reaction" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-10-01" />
-        <comment value="SpecifiekeStof" />
+        <map value="NL:REA13" />
+        <comment value="Causative substance SNOMED CT" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA14" />
+        <comment value="Causative substance SNOMED CT NL non-drug" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA15" />
+        <comment value="Causative substance G-standaard HPK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA16" />
+        <comment value="Causative substance G-standaard SNK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA17" />
+        <comment value="Causative substance G-standaard SKK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA18" />
+        <comment value="Causative substance G-standaard Thesaurus122" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA31" />
+        <comment value="Causative substance – SNOMED CT NL without medication" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA32" />
+        <comment value="Causative substance – radiation" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -915,18 +945,33 @@
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-11" />
-        <comment value="Manifestation" />
+        <map value="EU:REA2" />
+        <comment value="Reaction manifestation" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-11-01" />
-        <comment value="Omschrijving van een diagnose" />
+        <map value="EU:REA3" />
+        <comment value="Manifestation – ICD-10" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-11-02" />
-        <comment value="Symptomen van een reactie" />
+        <map value="EU:REA4" />
+        <comment value="Manifestation – SNOMED CT" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="EU:REA5" />
+        <comment value="Manifestation – Allergen Reaction IPS" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="EU:REA6" />
+        <comment value="Manifestation – eHDSI Reaction Allergy" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="EU:REA7" />
+        <comment value="Manifestation – SNOMED CT Clinical Findings" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -957,7 +1002,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-04-02" />
+        <map value="NL:REA19" />
         <comment value="Tekstuele beschrijving van de reactie" />
       </mapping>
       <mapping>
@@ -989,13 +1034,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-13" />
-        <comment value="Onset" />
+        <map value="EU:REA11" />
+        <comment value="Reaction onset date and, if applicable, time" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-13-02" />
-        <comment value="Datum/tijdstip dat een reactie heeft plaatsgevonden" />
+        <map value="NL:REA22" />
+        <comment value="Time of reaction" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1026,18 +1071,23 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-12" />
-        <comment value="Severity" />
+        <map value="EU:REA8" />
+        <comment value="Reaction severity" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-12-01" />
-        <comment value="Ernst" />
+        <map value="EU:REA9" />
+        <comment value="Reaction severity – SNOMED CT" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-12-02" />
-        <comment value="Ernst" />
+        <map value="EU:REA10" />
+        <comment value="Reaction severity – HL7 reaction event severity" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA20" />
+        <comment value="Reaction severity – SNOMED CT NL" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1072,8 +1122,13 @@
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-20" />
+        <map value="NL:REA21" />
         <comment value="Route of exposure" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="NL:REA33" />
+        <comment value="Route of exposure – G-Standard" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1105,8 +1160,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="REA-04-04" />
-        <comment value="Toelichting" />
+        <map value="NL:REA35" />
+        <comment value="Note with additional information" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
