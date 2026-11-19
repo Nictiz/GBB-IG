@@ -69,7 +69,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-01" />
+        <map value="EU:ADDR1" />
         <comment value="Use" />
       </mapping>
       <mapping>
@@ -102,7 +102,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-02" />
+        <map value="EU:ADDR2" />
         <comment value="Type" />
       </mapping>
       <mapping>
@@ -135,7 +135,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-03" />
+        <map value="EU:ADDR3" />
         <comment value="text/FullAddress" />
       </mapping>
       <mapping>
@@ -168,11 +168,6 @@
       <alias value="Adresregel" />
       <max value="1" />
       <mustSupport value="true" />
-      <mapping>
-        <identity value="requirements-Address" />
-        <map value="ADD-04" />
-        <comment value="Line" />
-      </mapping>
       <mapping>
         <identity value="lm-Address" />
         <map value="Address.use" />
@@ -217,7 +212,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-05" />
+        <map value="EU:ADDR5" />
         <comment value="StreetName" />
       </mapping>
       <mapping>
@@ -260,7 +255,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-06" />
+        <map value="EU:ADDR6" />
         <comment value="HouseNumber" />
       </mapping>
       <mapping>
@@ -303,7 +298,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-07" />
+        <map value="NL:ADDR7" />
         <comment value="BuildingNumberSuffix" />
       </mapping>
       <mapping>
@@ -346,7 +341,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-08" />
+        <map value="NL:ADDR8" />
         <comment value="AdditionalLocator" />
       </mapping>
       <mapping>
@@ -388,11 +383,6 @@
       <alias value="UnitID/AdditioneleInformatie" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-Address" />
-        <map value="ADD-09" />
-        <comment value="UnitID/AdditionalInformation" />
-      </mapping>
-      <mapping>
         <identity value="lm-Address" />
         <map value="Address.additionalInformation" />
         <comment value="UnitID/AdditionalInformation" />
@@ -433,7 +423,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-10" />
+        <map value="EU:ADDR10" />
         <comment value="Postbox" />
       </mapping>
       <mapping>
@@ -466,7 +456,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-11" />
+        <map value="NL:ADDR11" />
         <comment value="PlaceOfResidence" />
       </mapping>
       <mapping>
@@ -499,7 +489,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-12" />
+        <map value="NL:ADDR13" />
         <comment value="Municipality" />
       </mapping>
       <mapping>
@@ -532,7 +522,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-13" />
+        <map value="EU:ADDR14" />
         <comment value="Postcode" />
       </mapping>
       <mapping>
@@ -599,12 +589,12 @@
       </binding>
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-14" />
+        <map value="EU:ADDR15" />
         <comment value="Country" />
       </mapping>
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-16" />
+        <map value="NL:ADDR16" />
         <comment value="Country GBA" />
       </mapping>
       <mapping>
@@ -637,7 +627,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
-        <map value="ADD-15" />
+        <map value=" NL:ADDR17" />
         <comment value="UsablePeriod" />
       </mapping>
       <mapping>

@@ -102,8 +102,28 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Practitioner" />
-        <map value="ZVL-001" />
-        <comment value="Identifier" />
+        <map value="EU:PRACT1" />
+        <comment value="Identification code" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Practitioner" />
+        <map value="NL:PRACT2" />
+        <comment value="UZI identification code" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Practitioner" />
+        <map value="NL:PRACT3" />
+        <comment value="AGB identification code" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Practitioner" />
+        <map value="NL:PRACT4" />
+        <comment value="BIG-ID identification code" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Practitioner" />
+        <map value="NL:PRACT5" />
+        <comment value="Dezi identification code" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
@@ -167,8 +187,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Practitioner" />
-        <map value="ZVL-002" />
-        <comment value="NameInformation" />
+        <map value="EU:PRACT6" />
+        <comment value="Practitioner’s name" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
@@ -204,8 +224,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Practitioner" />
-        <map value="ZVL-005" />
-        <comment value="Telecom" />
+        <map value="EU:PRACT9" />
+        <comment value="Contact details" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
@@ -241,8 +261,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Practitioner" />
-        <map value="ZVL-004" />
-        <comment value="Address" />
+        <map value="EU:PRACT8" />
+        <comment value="Address details" />
       </mapping>
       <mapping>
         <identity value="lm-Practitioner" />
@@ -274,7 +294,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Practitioner" />
-        <map value="ZVL-003" />
+        <map value="NL:PRACT7" />
         <comment value="Gender" />
       </mapping>
       <mapping>

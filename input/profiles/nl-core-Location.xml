@@ -74,7 +74,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-001" />
+        <map value="EU:LOC1" />
         <comment value="Location identifier" />
       </mapping>
     </element>
@@ -107,7 +107,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-002" />
+        <map value="EU:LOC2" />
         <comment value="Name" />
       </mapping>
     </element>
@@ -140,7 +140,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-003" />
+        <map value="EU:LOC3" />
         <comment value="Description" />
       </mapping>
     </element>
@@ -173,7 +173,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-004" />
+        <map value="EU:LOC4" />
         <comment value="Type" />
       </mapping>
     </element>
@@ -210,7 +210,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-005" />
+        <map value="EU:LOC5" />
         <comment value="Address" />
       </mapping>
     </element>
@@ -247,7 +247,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-006" />
+        <map value="EU:LOC6" />
         <comment value="ManagingOrganization" />
       </mapping>
     </element>
@@ -284,7 +284,7 @@
       </mapping>
       <mapping>
         <identity value="requirements-Location" />
-        <map value="LOC-007" />
+        <map value="EU:LOC7" />
         <comment value="PartOf (Organization)" />
       </mapping>
     </element>
