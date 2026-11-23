@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-FunctionalStatus" />
+  <url value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-FunctionalStatus" />
+  <name value="NlcoreFunctionalStatus" />
+  <title value="nl core FunctionalStatus" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="[TODO]" />
+  <purpose value="This profile is the FHIR implementation of the general building block [FunctionalStatus](http://ig.nictiz.nl/gbb/FunctionalStatus)." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="requirements-FunctionalStatus" />
+    <uri value="http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus" />
+    <name value="Information requirements for FunctionalStatus" />
+  </mapping>
+  <mapping>
+    <identity value="lm-FunctionalStatus" />
+    <uri value="http://ig.nictiz.nl/gbb/StructureDefinition/LogicalModelFunctionalStatus" />
+    <name value="Logical model for FunctionalStatus" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="FunctionalStatus" />
+      <alias value="FunctioneleStatus" />
+    </element>
+  </differential>
+</StructureDefinition>

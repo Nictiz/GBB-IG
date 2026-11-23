@@ -134,6 +134,11 @@ menu:
       Requirements: Requirements-Device.html
       Afsprakenmodel: StructureDefinition-LogicalModelDevice.html
       FHIR-profiel: StructureDefinition-nl-core-Device.html
+    FunctioneleStatus:
+      Overzicht: FunctionalStatus.html
+      Requirements: Requirements-FunctionalStatus.html
+      Afsprakenmodel: StructureDefinition-LogicalModelFunctionalStatus.html
+      FHIR-profiel: StructureDefinition-nl-core-FunctionalStatus.html
     Gezondheidstoestand:
       Overzicht: Condition.html
       Requirements: Requirements-Condition.html
