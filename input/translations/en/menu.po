@@ -43,6 +43,9 @@ msgstr "ContactPoint"
 msgid "Device"
 msgstr "Device"
 
+msgid "FunctioneleStatus"
+msgstr "FunctionalStatus"
+
 msgid "Gezondheidstoestand"
 msgstr "Condition"
 
