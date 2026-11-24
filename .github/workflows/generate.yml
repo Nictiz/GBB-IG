@@ -31,7 +31,7 @@ jobs:
       - name: Install IG tooling
         run: npm install -g github:Nictiz/Nictiz-tooling-for-IGs
       - name: Generate artifacts
-        run: excel-to-artifacts input/requirements generated
+        run: excel-to-artifacts input/requirements generated --overview
         # Note: downloading from ART-DECOR is broken at the moment. When this is fixed, this script should
         # be updated.
       - name: Run sushi
