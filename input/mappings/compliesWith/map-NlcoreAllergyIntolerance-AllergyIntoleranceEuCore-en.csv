@@ -1,0 +1,8 @@
+[NlcoreAllergyIntolerance](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-AllergyIntolerance)
+[AllergyIntoleranceEuCore](http://hl7.eu/fhir/base/StructureDefinition/allergyIntolerance-eu-core)
+NlcoreAllergyIntolerance,Differential,AllergyIntoleranceEuCore,
+Element,Differences,Element,Notes
+AllergyIntolerance.reaction.extension:certainty,* New extension: certainty,,
+AllergyIntolerance.language,* Binding strength: required versus preferred,AllergyIntolerance.language,
+AllergyIntolerance.clinicalStatus,* Cardinality: 1..1 versus 0..1,AllergyIntolerance.clinicalStatus,
+AllergyIntolerance.reaction.exposureRoute,* Binding strength: preferred versus example,AllergyIntolerance.reaction.exposureRoute,

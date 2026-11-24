@@ -1,0 +1,4 @@
+[NlcoreCondition](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Condition)
+[ConditionEuCore](http://hl7.eu/fhir/base/StructureDefinition/condition-eu-core)
+NlcoreCondition,Differential,ConditionEuCore,
+Element,Differences,Element,Notes

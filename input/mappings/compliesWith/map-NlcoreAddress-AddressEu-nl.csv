@@ -1,0 +1,11 @@
+[NlcoreAddress](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address),,,
+[AddressEu](http://hl7.eu/fhir/base/StructureDefinition/Address-eu),,,
+NlcoreAddress,Differential,AddressEu,
+Element,Verschillen,Element,Opmerkingen
+Address.line.extension:unitID,* Nieuwe extensie: unitID,,
+Address.line.extension:postBox,* Kardinaliteit: 0..1 versus 0..*,Address.line.extension:postBox,
+Address.line.extension:streetName,* Kardinaliteit: 0..1 versus 0..*,Address.line.extension:streetName,
+Address.line.extension:houseNumber,* Kardinaliteit: 0..1 versus 0..*,Address.line.extension:houseNumber,
+Address.line.extension:additionalLocator,* Nieuwe extensie: additionalLocator,,
+Address.line.extension:buildingNumberSuffix,* Nieuwe extensie: buildingNumberSuffix,,Huisnummertoevoeging is een vereiste vanuit de zib.
+Address.line,* Kardinaliteit: 0..1 versus 0..*,Address.line,

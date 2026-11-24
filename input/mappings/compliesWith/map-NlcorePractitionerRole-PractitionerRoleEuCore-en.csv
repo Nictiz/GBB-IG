@@ -1,0 +1,5 @@
+[NlcorePractitionerRole](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-PractitionerRole)
+[PractitionerRoleEuCore](http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu-core)
+NlcorePractitionerRole,Differential,PractitionerRoleEuCore,
+Element,Differences,Element,Notes
+PractitionerRole.specialty:specialty,* Cardinality: 0..1 versus 0..*,PractitionerRole.specialty,

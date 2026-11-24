@@ -1,0 +1,5 @@
+[NlcoreDeviceUse](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-DeviceUse)
+[DeviceUseStatementEuEps](http://hl7.eu/fhir/eps/StructureDefinition/deviceUseStatement-eu-eps)
+NlcoreDeviceUse,Differential,DeviceUseStatementEuEps,
+Element,Differences,Element,Notes
+DeviceUseStatement.timing[x],* Cardinality: 0..1 versus 1..1,DeviceUseStatement.timing[x],

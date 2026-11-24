@@ -1,0 +1,7 @@
+[NlcoreDevice](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Device)
+[DeviceEuEps](http://hl7.eu/fhir/eps/StructureDefinition/device-eu-eps)
+NlcoreDevice,Differential,DeviceEuEps,
+Element,Verschillen,Element,Opmerkingen
+Device.udiCarrier.deviceIdentifier,* Kardinaliteit: 1..1 versus 0..1,Device.udiCarrier.deviceIdentifier,
+Device.type,"* Waardelijst: http://hl7.org/fhir/ValueSet/device-type|4.0.1 versus http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips
+* Bindingssterkte: example versus preferred",Device.type,

@@ -1,0 +1,18 @@
+[NlcoreProcedure](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Procedure)
+[ProcedureEuCore](http://hl7.eu/fhir/base/StructureDefinition/procedure-eu-core)
+NlcoreProcedure,Differential,ProcedureEuCore,
+Element,Verschillen,Element,Opmerkingen
+Procedure.extension:method,* Nieuwe extensie: method,,
+Procedure.extension:extensionProcedureRecorded,* Nieuwe extensie: extensionProcedureRecorded,,
+Procedure.bodySite.extension:bodyStructureReference,* Nieuwe extensie: bodyStructureReference,,
+Procedure.category,"* Waardelijst: http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.25 versus http://hl7.org/fhir/ValueSet/procedure-category|4.0.1
+* Bindingssterkte: preferred versus example",Procedure.category,
+Procedure.code,* Waardelijst: http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.7 versus http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips,Procedure.code,
+Procedure.performed[x],* Kardinaliteit: 0..1 versus 1..1,Procedure.performed[x],
+Procedure.reasonCode,"* Waardelijst: http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.27 versus http://hl7.org/fhir/ValueSet/procedure-reason|4.0.1
+* Bindingssterkte: preferred versus example",Procedure.reasonCode,
+Procedure.bodySite,* Bindingssterkte: example versus preferred,Procedure.bodySite,
+Procedure.outcome,"* Waardelijst: http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.22 versus http://hl7.org/fhir/ValueSet/procedure-outcome|4.0.1
+* Bindingssterkte: preferred versus example",Procedure.outcome,
+Procedure.complication,"* Waardelijst: http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.28 versus http://hl7.org/fhir/ValueSet/condition-code|4.0.1
+* Bindingssterkte: preferred versus example",Procedure.complication,

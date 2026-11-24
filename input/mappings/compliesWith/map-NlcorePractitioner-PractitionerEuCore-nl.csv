@@ -1,0 +1,5 @@
+[NlcorePractitioner](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Practitioner)
+[PractitionerEuCore](http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core)
+NlcorePractitioner,Differential,PractitionerEuCore,
+Element,Verschillen,Element,Opmerkingen
+Practitioner.name,* Kardinaliteit: 0..* versus 1..*,Practitioner.name,

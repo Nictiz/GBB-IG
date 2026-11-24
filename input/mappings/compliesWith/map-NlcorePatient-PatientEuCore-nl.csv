@@ -1,0 +1,10 @@
+[NlcorePatient](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Patient)
+[PatientEuCore](http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core)
+NlcorePatient,Differential,PatientEuCore,
+Element,Verschillen,Element,Opmerkingen
+Patient.extension:genderIdentity,* Nieuwe extensie: genderIdentity,,
+Patient.extension:patSexParameterForClinicalUse,* Nieuwe extensie: patSexParameterForClinicalUse,,
+Patient.identifier,* Kardinaliteit: 1..* versus 0..*,Patient.identifier,
+Patient.identifier:bsn,* Kardinaliteit: 0..1 versus 1..*,Patient.identifier,
+Patient.name,* Kardinaliteit: 0..* versus 1..*,Patient.name,
+Patient.birthDate,* Kardinaliteit: 0..1 versus 1..1,Patient.birthDate,

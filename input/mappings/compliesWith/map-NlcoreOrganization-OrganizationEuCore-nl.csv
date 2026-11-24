@@ -1,0 +1,6 @@
+[NlcoreOrganization](http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization)
+[OrganizationEuCore](http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core)
+NlcoreOrganization,Differential,OrganizationEuCore,
+Element,Verschillen,Element,Opmerkingen
+Organization.type,* Bindingssterkte: preferred versus example,Organization.type,
+Organization.name,* Kardinaliteit: 0..1 versus 1..1,Organization.name,
