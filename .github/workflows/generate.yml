@@ -34,6 +34,10 @@ jobs:
         run: excel-to-artifacts input/requirements generated
         # Note: downloading from ART-DECOR is broken at the moment. When this is fixed, this script should
         # be updated.
+      - name: Generate compliesWith mapping tables
+        run: csv-to-mapping --outputFolder generated/pagecontent input/mappings/compliesWith/*.csv
+        # Note: for this demo branch, the mapping tables are not actually regenerated, only rendered.
+        # On deployment, the CSV generator should be added, including the caching mechanisme.
       - name: Run sushi
         run: |
           npm -g install fsh-sushi

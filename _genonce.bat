@@ -28,7 +28,13 @@ REM Convert content from Excel files
 call excel-to-artifacts input\requirements generated
 if errorlevel 1 exit /b %errorlevel%
 REM Download content from ART-DECOR
-call get-from-ad --actors --lm input\requirements\ --profile-artifacts input\profiles\ --cache-folder temp\ad-cache generated
+REM call get-from-ad --actors --lm input\requirements\ --profile-artifacts input\profiles\ --cache-folder temp\ad-cache generated
+if errorlevel 1 exit /b %errorlevel%
+
+REM Generate differential tables for compliesWithProfile extensions
+call profile-differences --snapshot-cache temp\snapshot-cache --language en --language nl --csv-reports input\mappings\compliesWith input\profiles\*.xml
+if errorlevel 1 exit /b %errorlevel%
+call csv-to-mapping --outputFolder generated\pagecontent input\mappings\compliesWith\*.csv
 if errorlevel 1 exit /b %errorlevel%
 
 :igpublish

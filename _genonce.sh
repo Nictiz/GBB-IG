@@ -30,6 +30,10 @@ excel-to-artifacts input/requirements generated
 # Download content from ART-DECOR
 get-from-ad --actors --lm input/requirements/ --profile-artifacts input/profiles/ --cache-folder temp/ad-cache generated
 
+# Generate differential tables for compliesWithProfile extensions
+profile-differences --snapshot-cache temp/snapshot-cache --language en --language nl --csv-reports input/mappings/compliesWith input/profiles/*.xml
+csv-to-mapping --outputFolder generated/pagecontent input/mappings/compliesWith/*.csv
+
 # Sushi is run automatically by the publisher if the folder input/fsh exists. We're not guaranteed to have this
 # folder, but Sushi needs to run to handle sushi-config.yaml -- and besides, we need to do some post-processing.
 # So it's called here explicitly, and suppressed from the validator.jar call.
