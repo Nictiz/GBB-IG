@@ -102,7 +102,7 @@
       </binding>
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NL:NAME1" />
+        <map value="1" />
         <comment value="Name assembly order" />
       </mapping>
       <mapping>
@@ -135,7 +135,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME2" />
+        <map value="2" />
         <comment value="Use" />
       </mapping>
       <mapping>
@@ -170,7 +170,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME3" />
+        <map value="3" />
         <comment value="Text" />
       </mapping>
       <mapping>
@@ -205,7 +205,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME4" />
+        <map value="4" />
         <comment value="Name assembly order" />
       </mapping>
       <mapping>
@@ -246,7 +246,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NL:NAME6" />
+        <map value="6" />
         <comment value="Prefix" />
       </mapping>
       <mapping>
@@ -288,7 +288,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NL:NAME7" />
+        <map value="7" />
         <comment value="FamilyName" />
       </mapping>
       <mapping>
@@ -329,7 +329,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NL:NAME8" />
+        <map value="8" />
         <comment value="PartnerPrefix" />
       </mapping>
       <mapping>
@@ -371,7 +371,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="NL:NAME9" />
+        <map value="9" />
         <comment value="PartnerLastName" />
       </mapping>
       <mapping>
@@ -406,7 +406,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME10" />
+        <map value="10" />
         <comment value="GivenName" />
       </mapping>
       <mapping>
@@ -439,7 +439,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME11" />
+        <map value="11" />
         <comment value="Titles" />
       </mapping>
       <mapping>
@@ -472,7 +472,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-HumanName" />
-        <map value="EU:NAME12" />
+        <map value="12" />
         <comment value="Titles" />
       </mapping>
       <mapping>

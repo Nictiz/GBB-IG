@@ -74,7 +74,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="EU:PROLE7" />
+        <map value="7" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
@@ -112,7 +112,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="EU:PROLE5" />
+        <map value="5" />
         <comment value="Healthcare provider" />
       </mapping>
       <mapping>
@@ -145,7 +145,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="EU:PROLE6" />
+        <map value="6" />
         <comment value="Professional role" />
       </mapping>
       <mapping>
@@ -216,17 +216,17 @@
       </binding>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="EU:PROLE1" />
+        <map value="1" />
         <comment value="Practitioner specialty" />
       </mapping>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="NL:PROLE2" />
+        <map value="2" />
         <comment value="Practitioner specialty AGB" />
       </mapping>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="NL:PROLE3" />
+        <map value="3" />
         <comment value="Practitioner specialty UZI" />
       </mapping>
       <mapping>
@@ -263,7 +263,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="EU:PROLE4" />
+        <map value="4" />
         <comment value="Contact details" />
       </mapping>
       <mapping>

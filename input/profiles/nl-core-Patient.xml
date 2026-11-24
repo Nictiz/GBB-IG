@@ -137,7 +137,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT17" />
+        <map value="17" />
         <comment value="Gender identity" />
       </mapping>
       <mapping>
@@ -238,7 +238,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT16" />
+        <map value="16" />
         <comment value="Personal pronouns" />
       </mapping>
       <mapping>
@@ -322,7 +322,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT17" />
+        <map value="17" />
         <comment value="Sex paramater for clinical use" />
       </mapping>
       <mapping>
@@ -363,7 +363,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT1" />
+        <map value="1" />
         <comment value="Patient identifier" />
       </mapping>
       <mapping>
@@ -398,7 +398,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT2" />
+        <map value="2" />
         <comment value="Patient identifier - BSN" />
       </mapping>
     </element>
@@ -429,7 +429,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT9" />
+        <map value="9" />
         <comment value="Naam - FHIR EU core" />
       </mapping>
       <mapping>
@@ -466,7 +466,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT8" />
+        <map value="8" />
         <comment value="Telecom" />
       </mapping>
       <mapping>
@@ -499,7 +499,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT6" />
+        <map value="6" />
         <comment value="Administrative sex" />
       </mapping>
       <mapping>
@@ -532,7 +532,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT10" />
+        <map value="10" />
         <comment value="Date of birth - FHIR EU Core" />
       </mapping>
       <mapping>
@@ -603,7 +603,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT5" />
+        <map value="5" />
         <comment value="Death indicator" />
       </mapping>
       <mapping>
@@ -640,7 +640,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT5" />
+        <map value="5" />
         <comment value="Death indicator" />
       </mapping>
       <mapping>
@@ -676,7 +676,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="EU:PAT7" />
+        <map value="7" />
         <comment value="Address" />
       </mapping>
       <mapping>
@@ -709,7 +709,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT15" />
+        <map value="15" />
         <comment value="MaritalStatus" />
       </mapping>
       <mapping>
@@ -781,7 +781,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT11" />
+        <map value="11" />
         <comment value="Multiple birth indicator" />
       </mapping>
       <mapping>
@@ -818,7 +818,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT12" />
+        <map value="12" />
         <comment value="Multiple birth sequence" />
       </mapping>
       <mapping>
@@ -851,7 +851,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT13" />
+        <map value="13" />
         <comment value="Contact person" />
       </mapping>
       <mapping>
@@ -1016,7 +1016,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="NL:PAT14" />
+        <map value="14" />
         <comment value="General practioner information" />
       </mapping>
       <mapping>
