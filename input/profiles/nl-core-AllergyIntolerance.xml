@@ -103,7 +103,7 @@
       <short value="When the allergy or intolerance resolved" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="23" />
+        <map value="21" />
         <comment value="End date and, if applicable, time" />
       </mapping>
     </element>
@@ -181,11 +181,6 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="8" />
         <comment value="Status" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="19" />
-        <comment value="Certainty" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -280,16 +275,6 @@
         <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category" />
       </binding>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="31" />
-        <comment value="Category – Allergy Category Code List" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="32" />
-        <comment value="Category – Category Code List" />
-      </mapping>
-      <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.category" />
         <comment value="Category" />
@@ -341,16 +326,6 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="34" />
         <comment value="Mate van kritiek zijn" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="42" />
-        <comment value="Expected risk upon exposure" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="43" />
-        <comment value="Condition severity" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -471,9 +446,37 @@
         <comment value="Agent or allergen - eHDSI Allergen No Drug" />
       </mapping>
       <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="25" />
+        <comment value="Causative substance G-standaard HPK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="26" />
+        <comment value="Causative substance G-standaard SNK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="27" />
+        <comment value="Causative substance G-standaard SKK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="28" />
+        <comment value="Causative substance G-standaard Thesaurus122" />
+      </mapping>
+      <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.causativeAgent" />
         <comment value="Causative agent" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.code.text">
+      <path value="AllergyIntolerance.code.text" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="23" />
+        <comment value="Substance - text field" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
@@ -597,11 +600,6 @@
         <comment value="Source" />
       </mapping>
       <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="36" />
-        <comment value="Diagnosing practitioner" />
-      </mapping>
-      <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.source" />
         <comment value="source" />
@@ -630,7 +628,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="37" />
+        <map value="35" />
         <comment value="Date and, if applicable, time of last reaction" />
       </mapping>
       <mapping>
@@ -665,11 +663,6 @@
         <identity value="requirements-AllergyIntolerance" />
         <map value="17" />
         <comment value="Note with additional information" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="23" />
-        <comment value="Substance – text field" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -711,7 +704,7 @@
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
         <map value="22" />
-        <comment value="Reaction event summary" />
+        <comment value="Reaction(s)" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
