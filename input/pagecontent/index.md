@@ -16,3 +16,6 @@ Voor meer informatie over versies en hun betekenis, zie de [IG-leeswijzer](https
 <div class='dragon' markdown='1'>
 Niet alle onderdelen van de ontwikkelmethode zijn volledig uitgekristalliseerd. Met name op gebied van vertalingen, mappings, waardelijstkoppelingen en traceability naar de EHDS-specificaties kunnen er inconsistenties in deze gids voorkomen. Deze worden in een volgende versie geadresseerd.
 </div>
+
+#### Overzicht
+{% include_relative overview.xml conceptNL="Naam (NL)" conceptEN="Naam (EN)" conceptCode="Unieke bouwblokcode" %}

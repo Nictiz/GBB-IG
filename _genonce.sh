@@ -26,7 +26,7 @@ if [[ -d generated ]]; then
 	rm -r generated
 fi
 # Convert content from Excel files
-excel-to-artifacts input/requirements generated
+excel-to-artifacts input/requirements generated --overview
 # Download content from ART-DECOR
 get-from-ad --actors --lm input/requirements/ --profile-artifacts input/profiles/ --cache-folder temp/ad-cache generated
 

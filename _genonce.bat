@@ -25,7 +25,7 @@ IF EXIST generated (
  	RMDIR /S /Q generated
 )
 REM Convert content from Excel files
-call excel-to-artifacts input\requirements generated
+call excel-to-artifacts input\requirements generated --overview
 if errorlevel 1 exit /b %errorlevel%
 REM Download content from ART-DECOR
 call get-from-ad --actors --lm input\requirements\ --profile-artifacts input\profiles\ --cache-folder temp\ad-cache generated
