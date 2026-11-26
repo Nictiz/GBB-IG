@@ -96,9 +96,9 @@
         </extension>
       </extension>
       <path value="Address.type" />
-      <short value="Address type (postal | physical)" />
+      <short value="Type" />
       <definition value="The type of address in question, such as a physical address or mailing address." />
-      <alias value="Adrestype (post | fysiek)" />
+      <alias value="AdresSoort" />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Address" />
