@@ -66,6 +66,11 @@
         <map value="DEVICEUSE-08" />
         <comment value="FHIR element mapped to information requirement DEVICEUSE-08." />
       </mapping>
+      <mapping>
+        <identity value="lm-DeviceUse" />
+        <map value="DeviceUseStatement.language" />
+        <comment value="Mapping to logical model element DeviceUseStatement.language." />
+      </mapping>
     </element>
     <element id="DeviceUseStatement.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
