@@ -21,8 +21,14 @@ fi
 
 echo "$txoption"
 
-# Run the script to convert and download the content based on the Excel input.
-excel-to-artifacts input generated
+# Run the custom scripts to convert/download/generate all content apart from Sushi
+if [[ -d generated ]]; then
+	rm -r generated
+fi
+# Convert content from Excel files
+excel-to-artifacts input/requirements generated
+# Download content from ART-DECOR
+get-from-ad --actors --lm input/requirements/ --profile-artifacts input/profiles/ --cache-folder temp/ad-cache generated
 
 # Sushi is run automatically by the publisher if the folder input/fsh exists. We're not guaranteed to have this
 # folder, but Sushi needs to run to handle sushi-config.yaml -- and besides, we need to do some post-processing.
