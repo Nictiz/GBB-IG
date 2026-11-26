@@ -1,11 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-AllergyIntolerance" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
-    </div>
-  </text>
+    </div></text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/allergyIntolerance-eu-core" />
   </extension>
@@ -70,13 +68,12 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.language" />
-      <short value="Language"/>
-      <alias value="Taal"/>
-      <mustSupport value="true"/>
+      <short value="Language" />
+      <alias value="Taal" />
+      <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
         <description value="Language of the allergy or intolerance content" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -266,8 +263,7 @@
             <valueCode value="component" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical
-              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36" />
           </extension>
         </extension>
         <strength value="required" />
@@ -361,7 +357,7 @@
             <valueId value="gbb-allergyIntoleranceSubstance-Thesaurus122" />
           </extension>
           <extension url="purpose">
-            <valueCode value="component"/>
+            <valueCode value="component" />
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.42" />
@@ -411,9 +407,9 @@
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.38" />
           </extension>
         </extension>
-        <strength value="preferred"/>
-        <description value="Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy."/>
-        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"/>
+        <strength value="preferred" />
+        <description value="Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy." />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
@@ -657,6 +653,7 @@
       <path value="AllergyIntolerance.note.text" />
       <short value="Comment" />
       <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
+      <comment value="Reason for closure" />
       <alias value="Toelichting" />
       <mustSupport value="true" />
       <mapping>
@@ -845,8 +842,8 @@
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.47" />
           </extension>
         </extension>
-        <strength value="example"/>
-        <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug"/>
+        <strength value="example" />
+        <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
@@ -906,15 +903,15 @@
             <valueId value="gbb-allergyIntoleranceReactionManifestation" />
           </extension>
           <extension url="purpose">
-            <valueCode value="component"/>
+            <valueCode value="component" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29" />
           </extension>
         </extension>
-        <strength value="preferred"/>
-        <description value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU"/>
-        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
+        <strength value="preferred" />
+        <description value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU" />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
@@ -1081,7 +1078,6 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/route-codes" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
