@@ -136,6 +136,11 @@
       <alias value="GenderIdentiteit" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-Patient" />
+        <map value="18" />
+        <comment value="Gender identity" />
+      </mapping>
+      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.genderIdentity" />
         <comment value="GenderIdentity" />
@@ -232,6 +237,11 @@
       <alias value="Persoonlijke voornaamwoorden" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-Patient" />
+        <map value="16" />
+        <comment value="Personal pronouns" />
+      </mapping>
+      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.pronouns" />
         <comment value="pronouns" />
@@ -311,6 +321,11 @@
       <alias value="GeslachtsparameterVoorKlinischGebruik" />
       <mustSupport value="true" />
       <mapping>
+        <identity value="requirements-Patient" />
+        <map value="17" />
+        <comment value="Sex parameter for clinical use" />
+      </mapping>
+      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.sexParameterForClinicalUse" />
         <comment value="patSexParameterForClinicalUse" />
@@ -348,8 +363,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-01" />
-        <comment value="identifier" />
+        <map value="1" />
+        <comment value="Patient identifier" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -383,13 +398,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-02" />
-        <comment value="identifier - BSN" />
-      </mapping>
-      <mapping>
-        <identity value="lm-Patient" />
-        <map value="Patient.patientIdentificationNumber" />
-        <comment value="patientIdentificationNumber" />
+        <map value="2" />
+        <comment value="Patient identifier - BSN" />
       </mapping>
     </element>
     <element id="Patient.name">
@@ -419,8 +429,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-05" />
-        <comment value="name" />
+        <map value="9" />
+        <comment value="Name - FHIR EU core" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -456,8 +466,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-06" />
-        <comment value="Telecom" />
+        <map value="8" />
+        <comment value="Telecom information" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -489,8 +499,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-07" />
-        <comment value="Gender" />
+        <map value="6" />
+        <comment value="Administrative sex" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -522,8 +532,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-09" />
-        <comment value="DateOfBirth" />
+        <map value="10" />
+        <comment value="Date of birth - FHIR EU Core" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -560,11 +570,6 @@
       <alias value="Overleden[x]" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-Patient" />
-        <map value="PAT-10" />
-        <comment value="deceased" />
-      </mapping>
-      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.deceased" />
         <comment value="deceased" />
@@ -598,8 +603,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-10" />
-        <comment value="deceased" />
+        <map value="5" />
+        <comment value="Death indicator" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -635,8 +640,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-10" />
-        <comment value="deceased" />
+        <map value="5" />
+        <comment value="Death indicator" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -671,7 +676,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-11" />
+        <map value="7" />
         <comment value="Address" />
       </mapping>
       <mapping>
@@ -704,8 +709,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-16" />
-        <comment value="MaritalStatus" />
+        <map value="15" />
+        <comment value="Marital status" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -776,8 +781,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-12" />
-        <comment value="multipleBirthBoolean" />
+        <map value="11" />
+        <comment value="Multiple birth indicator" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -813,8 +818,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-13" />
-        <comment value="multipleBirthInteger" />
+        <map value="12" />
+        <comment value="Multiple birth sequence" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -846,8 +851,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-14" />
-        <comment value="Contactpersoon" />
+        <map value="13" />
+        <comment value="Contact person" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -881,11 +886,6 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-Patient" />
-        <map value="PAT-14.1" />
-        <comment value="Contactpersoon.name" />
-      </mapping>
-      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.Contactpersoon.name" />
         <comment value="Contactpersoon.name" />
@@ -918,11 +918,6 @@
       </type>
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-Patient" />
-        <map value="PAT-14.2" />
-        <comment value="Contactpersoon.telecom" />
-      </mapping>
-      <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.Contactpersoon.telecom" />
         <comment value="Contactpersoon.telecom" />
@@ -953,11 +948,6 @@
         <profile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Address" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="requirements-Patient" />
-        <map value="PAT-14.3" />
-        <comment value="Contactpersoon.address" />
-      </mapping>
       <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.Contactpersoon.address" />
@@ -990,11 +980,6 @@
         <targetProfile value="http://ig.nictiz.nl/gbb/StructureDefinition/nl-core-Organization" />
       </type>
       <mustSupport value="true" />
-      <mapping>
-        <identity value="requirements-Patient" />
-        <map value="PAT-14.4" />
-        <comment value="Contactpersoon.Organization" />
-      </mapping>
       <mapping>
         <identity value="lm-Patient" />
         <map value="Patient.Contactpersoon.organization" />
@@ -1031,8 +1016,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="PAT-15" />
-        <comment value="General Practitioner" />
+        <map value="14" />
+        <comment value="General practioner information" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />

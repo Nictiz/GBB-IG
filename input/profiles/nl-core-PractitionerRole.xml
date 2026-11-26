@@ -74,7 +74,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-006" />
+        <map value="7" />
         <comment value="Practitioner" />
       </mapping>
       <mapping>
@@ -112,8 +112,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-004" />
-        <comment value="Organization" />
+        <map value="5" />
+        <comment value="Healthcare provider" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -145,8 +145,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-005" />
-        <comment value="Code" />
+        <map value="6" />
+        <comment value="Professional role" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -216,13 +216,18 @@
       </binding>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-001" />
-        <comment value="Specialty" />
+        <map value="1" />
+        <comment value="Practitioner specialty" />
       </mapping>
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-002" />
-        <comment value="Specialty" />
+        <map value="2" />
+        <comment value="Practitioner specialty AGB" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-PractitionerRole" />
+        <map value="3" />
+        <comment value="Practitioner specialty UZI" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />
@@ -258,8 +263,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-PractitionerRole" />
-        <map value="ZVR-003" />
-        <comment value="Telecom" />
+        <map value="4" />
+        <comment value="Contact details" />
       </mapping>
       <mapping>
         <identity value="lm-PractitionerRole" />

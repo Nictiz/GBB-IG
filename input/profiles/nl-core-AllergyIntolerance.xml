@@ -1,11 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="nl-core-AllergyIntolerance" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">
       No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.
-    </div>
-  </text>
+    </div></text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile">
     <valueCanonical value="http://hl7.eu/fhir/base/StructureDefinition/allergyIntolerance-eu-core" />
   </extension>
@@ -70,18 +68,17 @@
         </extension>
       </extension>
       <path value="AllergyIntolerance.language" />
-      <short value="Language"/>
-      <alias value="Taal"/>
-      <mustSupport value="true"/>
+      <short value="Language" />
+      <alias value="Taal" />
+      <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
         <description value="Language of the allergy or intolerance content" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-19" />
-        <comment value="Header.language" />
+        <map value="10" />
+        <comment value="Language" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -103,13 +100,8 @@
       <short value="When the allergy or intolerance resolved" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-08" />
-        <comment value="endDate" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-08-01" />
-        <comment value="Datum voor afsluiten allergie of overgevoeligheid" />
+        <map value="21" />
+        <comment value="End date and, if applicable, time" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.identifier">
@@ -135,18 +127,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-15" />
-        <comment value="header.identifier" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-15-01" />
-        <comment value="Identificatienummer" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-15-02" />
-        <comment value="Identificatienummer" />
+        <map value="2" />
+        <comment value="Object identification" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -194,18 +176,8 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-02" />
-        <comment value="header.status" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-06" />
-        <comment value="certainty" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-02-01" />
-        <comment value="Status van de allergie" />
+        <map value="8" />
+        <comment value="Status" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -252,18 +224,8 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-06" />
-        <comment value="certainty" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-06-01" />
-        <comment value="ZekerheidStatus" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-06-03" />
-        <comment value="Diagnosestatus" />
+        <map value="19" />
+        <comment value="Certainty" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -301,19 +263,13 @@
             <valueCode value="component" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical
-              value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36" />
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.36" />
           </extension>
         </extension>
         <strength value="required" />
         <description value="Category of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy." />
         <valueSet value="http://hl7.org/fhir/ValueSet/allergy-intolerance-category" />
       </binding>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-14" />
-        <comment value="Categorie" />
-      </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.category" />
@@ -359,17 +315,12 @@
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-05" />
+        <map value="18" />
         <comment value="Criticality" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-05-01" />
-        <comment value="Mate van kritiek zijn" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-05-02" />
+        <map value="34" />
         <comment value="Mate van kritiek zijn" />
       </mapping>
       <mapping>
@@ -406,7 +357,7 @@
             <valueId value="gbb-allergyIntoleranceSubstance-Thesaurus122" />
           </extension>
           <extension url="purpose">
-            <valueCode value="component"/>
+            <valueCode value="component" />
           </extension>
           <extension url="valueSet">
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.42" />
@@ -456,44 +407,72 @@
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.38" />
           </extension>
         </extension>
-        <strength value="preferred"/>
-        <description value="Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy."/>
-        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips"/>
+        <strength value="preferred" />
+        <description value="Type of the substance/product, allergy or intolerance condition or a code for absent/unknown allergy." />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips" />
       </binding>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-03" />
-        <comment value="agentOrAllergen" />
+        <map value="11" />
+        <comment value="Agent or allergen" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-03-01" />
-        <comment value="Allergeen voor niet medicamenteuze allergieën of intoleranties" />
+        <map value="12" />
+        <comment value="Agent or allergen - SNOMED CT" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-03-02" />
-        <comment value="Allergeen voor medicamenteuze allergieën of intoleranties" />
+        <map value="13" />
+        <comment value="Agent or allergen - ATC" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-03-03" />
-        <comment value="Straling als allergeen" />
+        <map value="14" />
+        <comment value="Agent or allergen - EMA SPOR SMS" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-03-04" />
-        <comment value="Ongecodeerde allergeen" />
+        <map value="15" />
+        <comment value="Agent or allergen - Allergies and Intolerances IPS" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-03-05" />
-        <comment value="Vastleggen van vastgestelde allergieën op stof/groep stoffen bij zwangere vrouwen" />
+        <map value="16" />
+        <comment value="Agent or allergen - eHDSI Allergen No Drug" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="25" />
+        <comment value="Causative substance G-standaard HPK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="26" />
+        <comment value="Causative substance G-standaard SNK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="27" />
+        <comment value="Causative substance G-standaard SKK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="28" />
+        <comment value="Causative substance G-standaard Thesaurus122" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
         <map value="AllergyIntolerance.causativeAgent" />
         <comment value="Causative agent" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.code.text">
+      <path value="AllergyIntolerance.code.text" />
+      <mapping>
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="23" />
+        <comment value="Substance - text field" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
@@ -522,12 +501,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-16" />
-        <comment value="header.subject" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-16-01" />
+        <map value="1" />
         <comment value="Patient" />
       </mapping>
       <mapping>
@@ -540,13 +514,8 @@
       <path value="AllergyIntolerance.onset[x]" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-07" />
-        <comment value="onsetDate" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-07-01" />
-        <comment value="DiagnostischInzichtDatum" />
+        <map value="20" />
+        <comment value="Start date and, if applicable, time" />
       </mapping>
     </element>
     <element id="AllergyIntolerance.recorder">
@@ -579,13 +548,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-01" />
-        <comment value="header.author[x]" />
+        <map value="3" />
+        <comment value="Author" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-01-01" />
-        <comment value="Zorgverlener" />
+        <map value="4" />
+        <comment value="Healthcare professional as author" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -623,8 +592,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-18" />
-        <comment value="header.source" />
+        <map value="9" />
+        <comment value="Source" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -655,8 +624,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-13-01" />
-        <comment value="LaatsteReactieDatumTijd" />
+        <map value="35" />
+        <comment value="Date and, if applicable, time of last reaction" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -684,27 +653,23 @@
       <path value="AllergyIntolerance.note.text" />
       <short value="Comment" />
       <definition value="Textual description of the allergy or intolerance and/or additional free text regarding the allergy or intolerance, insofar as this is not recorded in other fields." />
+      <comment value="Reason for closure" />
       <alias value="Toelichting" />
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="EU-04" />
-        <comment value="note" />
+        <map value="17" />
+        <comment value="Note with additional information" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-04-01" />
-        <comment value="Toelichting" />
+        <map value="45" />
+        <comment value="Reason for closure" />
       </mapping>
       <mapping>
         <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-04-03" />
-        <comment value="Tekstuele toevoeging voor andere informatie" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-AllergyIntolerance" />
-        <map value="NL-04-05" />
-        <comment value="Reden voor afsluiten allergie of overgevoeligheid" />
+        <map value="46" />
+        <comment value="Textual description" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -734,14 +699,9 @@
       <alias value="Reactie" />
       <mustSupport value="true" />
       <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="EU-09" />
-        <comment value="Reaction event summary" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="NL-09-01" />
-        <comment value="Reactie" />
+        <identity value="requirements-AllergyIntolerance" />
+        <map value="22" />
+        <comment value="Reaction(s)" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -796,8 +756,8 @@
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-06-02" />
-        <comment value="Mate zekerheid over reactie" />
+        <map value="37" />
+        <comment value="Certainty" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -882,18 +842,33 @@
             <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.47" />
           </extension>
         </extension>
-        <strength value="example"/>
-        <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug"/>
+        <strength value="example" />
+        <valueSet value="http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="EU-10" />
-        <comment value="reaction.agentOrAllergen" />
+        <map value="1" />
+        <comment value="Agent or allergen causing the reaction" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-10-01" />
-        <comment value="SpecifiekeStof" />
+        <map value="15" />
+        <comment value="Causative substance G-standaard HPK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="16" />
+        <comment value="Causative substance G-standaard SNK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="17" />
+        <comment value="Causative substance G-standaard SKK" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="18" />
+        <comment value="Causative substance G-standaard Thesaurus122" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -928,30 +903,45 @@
             <valueId value="gbb-allergyIntoleranceReactionManifestation" />
           </extension>
           <extension url="purpose">
-            <valueCode value="component"/>
+            <valueCode value="component" />
           </extension>
           <extension url="valueSet">
-            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29"/>
+            <valueCanonical value="http://ig.nictiz.nl/gbb/ValueSet/2.16.840.1.113883.2.4.3.11.60.153.11.29" />
           </extension>
         </extension>
-        <strength value="preferred"/>
-        <description value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU"/>
-        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips"/>
+        <strength value="preferred" />
+        <description value="Type of allergy or intolerance reaction expected to be used in MyHealth@EU" />
+        <valueSet value="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="EU-11" />
-        <comment value="Manifestation" />
+        <map value="2" />
+        <comment value="Reaction manifestation" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-11-01" />
-        <comment value="Omschrijving van een diagnose" />
+        <map value="3" />
+        <comment value="Manifestation – ICD-10" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-11-02" />
-        <comment value="Symptomen van een reactie" />
+        <map value="4" />
+        <comment value="Manifestation – SNOMED CT" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="5" />
+        <comment value="Manifestation – Allergen Reaction IPS" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="7" />
+        <comment value="Manifestation – SNOMED CT Clinical Findings" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Reaction" />
+        <map value="12" />
+        <comment value="Symptom – SNOMED CT" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -982,7 +972,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-04-02" />
+        <map value="19" />
         <comment value="Tekstuele beschrijving van de reactie" />
       </mapping>
       <mapping>
@@ -1014,13 +1004,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="EU-13" />
-        <comment value="Onset" />
+        <map value="11" />
+        <comment value="Reaction onset date and, if applicable, time" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-13-02" />
-        <comment value="Datum/tijdstip dat een reactie heeft plaatsgevonden" />
+        <map value="22" />
+        <comment value="Time of reaction" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1051,18 +1041,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="EU-12" />
-        <comment value="Severity" />
+        <map value="8" />
+        <comment value="Reaction severity" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-12-01" />
-        <comment value="Ernst" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="NL-12-02" />
-        <comment value="Ernst" />
+        <map value="10" />
+        <comment value="Reaction severity – HL7 reaction event severity" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1093,11 +1078,10 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/route-codes" />
       </binding>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-20" />
+        <map value="21" />
         <comment value="Route of exposure" />
       </mapping>
       <mapping>
@@ -1130,8 +1114,8 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="NL-04-04" />
-        <comment value="Toelichting" />
+        <map value="35" />
+        <comment value="Note with additional information" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
