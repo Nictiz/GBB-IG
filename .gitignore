@@ -14,3 +14,5 @@ Thumbs.db
 # order for the translation to be picked up, so we have to exclude the from
 # git here.
 **/menu.xml
+
+Requirements-fromNarrative.json
