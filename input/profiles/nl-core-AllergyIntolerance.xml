@@ -855,16 +855,6 @@
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="13" />
-        <comment value="Causative substance SNOMED CT" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="14" />
-        <comment value="Causative substance SNOMED CT NL non-drug" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
         <map value="15" />
         <comment value="Causative substance G-standaard HPK" />
       </mapping>
@@ -882,16 +872,6 @@
         <identity value="requirements-Reaction" />
         <map value="18" />
         <comment value="Causative substance G-standaard Thesaurus122" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="31" />
-        <comment value="Causative substance – SNOMED CT NL without medication" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="32" />
-        <comment value="Causative substance – radiation" />
       </mapping>
       <mapping>
         <identity value="lm-AllergyIntolerance" />
@@ -958,13 +938,13 @@
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="6" />
-        <comment value="Manifestation – eHDSI Reaction Allergy" />
+        <map value="7" />
+        <comment value="Manifestation – SNOMED CT Clinical Findings" />
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="7" />
-        <comment value="Manifestation – SNOMED CT Clinical Findings" />
+        <map value="12" />
+        <comment value="Symptom – SNOMED CT" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1069,18 +1049,8 @@
       </mapping>
       <mapping>
         <identity value="requirements-Reaction" />
-        <map value="9" />
-        <comment value="Reaction severity – SNOMED CT" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
         <map value="10" />
         <comment value="Reaction severity – HL7 reaction event severity" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="20" />
-        <comment value="Reaction severity – SNOMED CT NL" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
@@ -1117,11 +1087,6 @@
         <identity value="requirements-Reaction" />
         <map value="21" />
         <comment value="Route of exposure" />
-      </mapping>
-      <mapping>
-        <identity value="requirements-Reaction" />
-        <map value="33" />
-        <comment value="Route of exposure – G-Standard" />
       </mapping>
       <mapping>
         <identity value="lm-Reaction" />
