@@ -137,7 +137,7 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
-        <map value="17" />
+        <map value="18" />
         <comment value="Gender identity" />
       </mapping>
       <mapping>
@@ -429,8 +429,13 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="requirements-Patient" />
+        <map value="3" />
+        <comment value="Name" />
+      </mapping>
+      <mapping>
+        <identity value="requirements-Patient" />
         <map value="9" />
-        <comment value="Naam - FHIR EU core" />
+        <comment value="Name - FHIR EU core" />
       </mapping>
       <mapping>
         <identity value="lm-Patient" />
@@ -530,6 +535,11 @@
       <definition value="Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted." />
       <alias value="Geboortedatum" />
       <mustSupport value="true" />
+      <mapping>
+        <identity value="requirements-Patient" />
+        <map value="4" />
+        <comment value="Date of birth" />
+      </mapping>
       <mapping>
         <identity value="requirements-Patient" />
         <map value="10" />
