@@ -1,4 +1,5 @@
 {% include_relative Procedure-Concept.md %}
+<img src="lm-mindmap-Procedure.svg" alt="Vaccinatie icoon" width="100%">
 
 ### Bekende problemen
 

@@ -1,0 +1,2079 @@
+{
+  "resourceType": "Requirements",
+  "id": "FunctionalStatus",
+  "language": "nl",
+  "url": "http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus",
+  "status": "active",
+  "statement": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "1",
+      "label": "EU: OBSFA Onderwerp van zorg",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Subject of care"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Patiënt als onderwerp van zorg, van wie een functioneel vermogen wordt beoordeeld.\n* *Variabiliteit*: ref GBB-Patient\n* *Aanwezigheid*: 1..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Patient whose functional ability is being assessed.\n* *Variability*: ref GBB-Patient\n* *Presence*: 1..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        },
+        {
+          "reference": "https://ckm.openehr.org/ckm/archetypes/1013.1.5017",
+          "display": "OpenEHR Functional ability archetype 0.0.1-alpha"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "2",
+      "label": "EU: OBSFA Identificatiecode",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Identificationcode"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Unieke identificatiecode van het functinele vermogen binnen een bepaald systeem.\n* *Onderbouwing*: Nodig om onderscheid te maken tussen dezelfde of vergelijkbare objecten in verschillende systemen of landen.\n* *Variabiliteit*: identifier\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Unique identificationcode within a system.\n* *Rationale*: Necessary to distinguish between identical or similar objects in different systems or countries.\n* *Variability*: identifier\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "3",
+      "label": "EU: OBSFA Auteur",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Author"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De verantwoordelijken voor de gegeven informatie.\n* *Variabiliteit*: ref GBB-Practitioner, GBB-PractitionerRole, GBB-Organization, GBB-Device\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The parties responsible for the provided information.\n* *Variability*: ref GBB-Practitioner, GBB-PractitionerRole, GBB-Organization, GBB-Device\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "4",
+      "label": "EU: OBSFA Datum",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Date"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De datum en optioneel de tijd waarop de informatie is samengesteld of verstrekt.\n* *Variabiliteit*: datumtijd, datum\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The date and, optionally, the time when the information was compiled or provided.\n* *Variability*: datumtijd\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "5",
+      "label": "EU: OBSFA Status",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Status"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De status van de informatie\n* *Variabiliteit*: (preferred): HL7 valueset Observation status\n* *Aanwezigheid*: 1..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The status of the information.\n* *Rationale*: Required to determine the validity of the data.\n* *Variability*: (preferred): HL7 valueset Observation status\n* *Presence*: 1..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "6",
+      "label": "EU: OBSFA Bron",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Source"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Bron van de informatie (bijvoorbeeld de patiënt of diens vertegenwoordiger).\n* *Variabiliteit*: codeableconcept\n* *Aanwezigheid*: 0..1\n* *Context voor toepassing*: Dit wordt gebruikt wanneer de patiënt de informatie zelf heeft opgesteld of wanneer de auteur door de patiënt verstrekte informatie heeft ingediend.",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Source of the information (e.g. the patient or their representative).\n* *Variability*: codeableconcept\n* *Presence*: 0..1\n* *Context for use*: This is used when the patient has prepared the information themselves or when the author has submitted information provided by the patient."
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "7",
+      "label": "EU: OBSFA Taal",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Language"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Taal van de observatie.\n* *Variabiliteit*: codeableconcept\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Language in which the resource is written.\n* *Variability*: codeableconcept\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "8",
+      "label": "EU: OBSFA Directe onderwerp",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Direct subject"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Het directe onderwerp van de observatie wanneer het niet gaat om de patient als onderwerp van de zorg.\n* *Variabiliteit*: ref GBB-Patient, GBB-Location, GBB-Device, GBB-Practitioner, GBB-PractitionerRole, GBBOrganization, GBB-Procedure\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The direct subject of the observation when the patient is not the subject of care.\n* *Variability*: ref GBB-Patient, GBB-Location, GBB-Device, GBB-Practitioner, GBB-PractitionerRole, GBBOrganization, GBB-Procedure\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "9",
+      "label": "EU: OBSFA Observatiedatum",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Observation date"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Klinisch relevante tijd of periode van de observatie.\n* *Variabiliteit*: datetime of GBB-Period\n* *Aanwezigheid*: 1..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Clinically relevant time or period of the observation.\n* *Variability*: datetime of GBB-Period\n* *Presence*: 1..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        },
+        {
+          "reference": "https://ckm.openehr.org/ckm/archetypes/1013.1.5017",
+          "display": "OpenEHR Functional ability archetype 0.0.1-alpha"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "10",
+      "label": "EU: OBSFA Observatietype",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Observation type"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Code en naam van het type observatie.\n* *Variabiliteit*: (preferred): LOINC, SNOMED CT\n* *Aanwezigheid*: 1..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Code and name of the observation type.\n* *Variability*: (preferred): LOINC, SNOMED CT\n* *Presence*: 1..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "11",
+      "label": "EU: OBSFA Oorspronkelijke naam",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Original name"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De oorspronkelijke naam zoals die gebruikt is in een lokaal laboratorium of klinisch systeem.\n* *Variabiliteit*: string\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The original name as used in a local laboratory or clinical system.\n* *Variability*: string\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "12",
+      "label": "EU: OBSFA Methode",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Method"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Observatiemethode\n* *Variabiliteit*: codeableconcept\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Method of observation.\n* *Variability*: codeableconcept\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "13",
+      "label": "EU: OBSFA Monster",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Sample"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Monster dat gebruikt is voor de observatie.\n* *Variabiliteit*: ref EHDSSpecimen\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Sample used for the observation.\n* *Variability*: ref EHDSSpecimen\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "14",
+      "label": "EU: OBSFA Opdracht",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Order"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De opdracht en opdrachtgever voor deze observatie.\n* *Variabiliteit*: ref EHDSServiceRequest\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The assignment and the client for this observation.\n* *Variability*: ref EHDSServiceRequest\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "15",
+      "label": "EU: OBSFA Uitvoerder",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Performer"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Performer of the observation. Some test could be performed by the patient himself or by a care giver. Those are in the scope of this deliverable under specified conditions.\n* *Variabiliteit*: ref GBB-Organization, GBB-Practitioner, GBB-PractitionerRole, GBB-Patient, GBB-RelatedPerson\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Performer of the observation. Some tests may be performed by the patient or by a caregiver. These are included in the scope of this deliverable under specified conditions.\n* *Variability*: ref GBB-Organization, GBB-Practitioner, GBB-PractitionerRole, GBB-Patient, GBB-RelatedPerson\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "16",
+      "label": "EU: OBSFA Lichaamslocatie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Body location"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Anatomische locatie en lateraliteit waar de observatie is uitgevoerd.\n* *Variabiliteit*: EHDSBodyStructure\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Anatomical location and side on which the observation was performed.\n* *Variability*: EHDSBodyStructure\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "17",
+      "label": "EU: OBSFA Resultaat",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Resultaat van de observatie uitgedrukt in waarde en onzekerheid\n* *Variabiliteit*: waarde en onzekerheid\n* *Aanwezigheid*: 1..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Result of the observation expressed as a value and uncertainty.\n* *Variability*: waarde en onzekerheid\n* *Presence*: 1..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "18",
+      "label": ": OBSFA Resultaatwaarde",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": ": OBSFA Resultaatwaarde"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De uitslag van de observatie. Constraint: Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided.",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: De uitslag van de observatie. Constraint: Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text. For Quantity, Range and Ratio, result units of the measurement should be provided."
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "19",
+      "label": "EU: OBSFA Resultaatwaarde (tekst)",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result value (text)"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De waarde van het resultaat in tekst. Text result value should be used only if coded result value is not expected otherwise use valueCodeableConcept.text.\n* *Variabiliteit*: string\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The value of the result in text.\n* *Variability*: string\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "20",
+      "label": "EU: OBSFA Resultaatwaarde (kwantiteit)",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result value (quantity)"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De waarde van het resultaat als kwantiteit.  Result units of the measurement should be provided.\n* *Variabiliteit*: quantity\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The value of the result as a quantity.\n* *Variability*: quantity\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "21",
+      "label": "EU: OBSFA Resultaatwaarde (bereik)",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result value (range)"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De waarde van het resultaat in bereik.  Result units of the measurement should be provided.\n* *Variabiliteit*: range\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The value of the result as a range.\n* *Variability*: range\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "22",
+      "label": "EU: OBSFA Resultaatwaarde (ratio)",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result value (ratio)"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De waarde van het resultaat in ratio. Result units of the measurement should be provided.\n* *Variabiliteit*: ratio\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The value of the result as a ratio.\n* *Variability*: ratio\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "23",
+      "label": "EU: OBSFA Resultaatwaarde (code)",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Result value (code)"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De waarde van het resultaat als code.\n* *Variabiliteit*: codableconcept\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The value of the result as a code.\n* *Variability*: codableconcept\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "24",
+      "label": "EU: OBSFA Onzekerheid",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Uncertainty"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De mate van onzekerheid gegeven in een type onzekerheid en  numerieke waarde\n* *Variabiliteit*: waarde en type\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The degree of uncertainty, specified as a type of uncertainty and a numerical value\n* *Variability*: waarde en type\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "25",
+      "label": "EU: OBSFA Reden voor afwezigheid resultaat",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Reason for missing result"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Een reden voor het ontbreken van het verplichte resultaat.\n* *Variabiliteit*: (preferred): HL7 Data absent reason\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: A reason for the absence of the required result.\n* *Variability*: (preferred): HL7 Data absent reason\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "26",
+      "label": "EU: OBSFA Referentiebereik",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Reference range"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Een referentiebereik om de resultaten beter te kunnne interpreteren.\n* *Variabiliteit*: quantity, codableconcept, range, string\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: A reference range to facilitate better interpretation of the results.\n* *Variability*: quantity, codableconcept, range, string\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "27",
+      "label": "EU: OBSFA Interpretatie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Interpretation"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Informatie over referentie intervallen en interpretatie van resultaat\n* *Variabiliteit*: codeableconcept\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Information about reference intervals and interpretation of the result\n* *Variability*: codeableconcept\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "28",
+      "label": "EU: OBSFA Notitie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Note"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Commentaar en de textuele representatie van het resultaat en bevindingen\n* *Variabiliteit*: string\n* *Aanwezigheid*: 0..1",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Comments and a textual description of the result and findings\n* *Variability*: string\n* *Presence*: 0..1"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "29",
+      "label": "EU: OBSFA Component",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Component"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Component in het geval dat een observatie bestaat uit meerdere sub-observaties.\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: Component in cases where an observation consists of multiple sub-observations.\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "30",
+      "label": "EU: OBSFA Onderliggende bron",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Underlying source"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De onderliggende bron van waaruit de observatie is gemaakt, bijv. een berekende meting.\n* *Variabiliteit*: ref EHDSObservation, EHDSLaboratoryObservation, EHDSImagingStudy\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The underlying source from which the observation was made, e.g., a calculated measurement.\n* *Variability*: ref EHDSObservation, EHDSLaboratoryObservation, EHDSImagingStudy\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "31",
+      "label": "EU: OBSFA Groepsobservatieonderdeel",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "EU: OBSFA Group observation component"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De onderdelen van de observatie, bijv. de testen die onderdeel zijn van een testpaneel\n* *Variabiliteit*: ref EHDSLaboratoryObservation, EHDSObservation\n* *Aanwezigheid*: 0..*",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "* *Description*: The components of the observation, e.g., the tests that are part of a test panel\n* *Variability*: ref EHDSLaboratoryObservation, EHDSObservation\n* *Presence*: 0..*"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSObservation.html",
+          "display": "Xt-EHR LIM EHDSObservation 1.0.0"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "32",
+      "label": "NL: OBSFA Type fysieke of mentale functie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Type fysieke of mentale functie"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De zorgverlener wil weten welke fysieke of mentale functie in kaart wordt gebracht\n* *Onderbouwing*: Om een patiënt goed te kunnen verzorgen/behandelen is het belangrijk om in kaart te brengen met welke mate van zelfstandigheid hij/zij specifieke fysieke en mentale functies kan uitvoeren al dan niet met hulpmiddelen of menselijke hulp.\n* *Variabiliteit*: Keuze uit een gestandaardiseerde waardelijst.\n* *Aanwezigheid*: 1..1\n\nAanscherping van requirement [#10](#10)",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "\n\nRefinement of requirement [#10](#10)"
+              }
+            ]
+          }
+        ]
+      },
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus#10",
+      "source": [
+        {
+          "reference": "VermogenTot alle 9 zibs",
+          "display": " "
+        },
+        {
+          "reference": "FunctioneleOfMentaleStatus-v4.0.1",
+          "display": "Zib FunctioneleOfMentaleStatus 2024"
+        },
+        {
+          "reference": "Mobiliteit-v3.3.1",
+          "display": "Zib Mobiliteit 2024"
+        },
+        {
+          "reference": "FunctieZien-v4.0",
+          "display": "Zib FunctieZien 2024"
+        },
+        {
+          "reference": "FunctieHoren-v3.4",
+          "display": "Zib FunctieHoren 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "33",
+      "label": "NL: OBSFA Evaluatiemoment van fysieke of mentale functie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Evaluatiemoment van fysieke of mentale functie"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De zorgverlener wil weten wanneer de fysieke of mentale functie is geëvalueerd\n* *Onderbouwing*: De zorgverlener kan aan de hand van het evaluatiemoment bepalen of het nodig is om een herevaluatie te doen.\n* *Variabiliteit*: datumtijd\n* *Aanwezigheid*: 0..1 (wenselijk)\n\nAanscherping van requirement [#9](#9)",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "\n\nRefinement of requirement [#9](#9)"
+              }
+            ]
+          }
+        ]
+      },
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus#9",
+      "source": [
+        {
+          "reference": "FunctioneleOfMentaleStatus-v4.0.1",
+          "display": "Zib FunctioneleOfMentaleStatus 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "34",
+      "label": "NL: OBSFA Hulpmiddel bij fysieke of mentale functie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Hulpmiddel bij fysieke of mentale functie"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De zorgverlener wil weten welk(e) hulpmiddel(en) de patient ondersteunen/nodig zijn bij het uitvoeren van de fysieke of mentale functie\n* *Onderbouwing*: De zorgverlener kan op basis van dit gegeven bepalen of, en zo ja, welk(e) hulpmiddel(en) hij voor de patiënt beschikbaar moet maken en of menselijke hulp een hulpmiddel zo nodig (tijdelijk) kan vervangen.\n* *Variabiliteit*: ref ZibMedischHulpmiddel/GBB-Device(use)\n* *Aanwezigheid*: 0..* (bij voorkeur ingevuld)",
+      "source": [
+        {
+          "reference": "FunctioneleOfMentaleStatus-v4.0.1",
+          "display": "Zib FunctioneleOfMentaleStatus 2024"
+        },
+        {
+          "reference": "Mobiliteit-v3.3.1",
+          "display": "Zib Mobiliteit 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "35",
+      "label": "NL: OBSFA Vermogen tot zelfstandig uitvoeren van fysieke of mentale functie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Vermogen tot zelfstandig uitvoeren van fysieke of mentale functie"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De zorgverlener wil weten of de functie voor de patient zelfstandig uitvoerbaar is\n* *Onderbouwing*: Op basis van dit gegeven kan de zorgverlener bepalen of aanvullende of volledige menselijke hulp voor de patiënt beschikbaar moet zijn.\n* *Variabiliteit*: Keuze uit een gestandaardiseerde waardelijst. Bv: Onafhankelijk, Gedeeltelijk afhankelijk, Volledig afhankelijk | 371148001 (interpretatiewaarde voor vermogen)\n* *Aanwezigheid*: 1..1\n\nAanscherping van requirement [#22](#22)",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "\n\nRefinement of requirement [#22](#22)"
+              }
+            ]
+          }
+        ]
+      },
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus#22",
+      "source": [
+        {
+          "reference": "FunctioneleOfMentaleStatus-v4.0.1",
+          "display": "Zib FunctioneleOfMentaleStatus 2024"
+        },
+        {
+          "reference": "VermogenTot alle 9 zibs",
+          "display": " "
+        },
+        {
+          "reference": "Mobiliteit-v3.3.1",
+          "display": "Zib Mobiliteit 2024"
+        },
+        {
+          "reference": "FunctieZien-v4.0",
+          "display": "Zib FunctieZien 2024"
+        },
+        {
+          "reference": "FunctieHoren-v3.4",
+          "display": "Zib FunctieHoren 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "36",
+      "label": "NL: OBSFA Toelichting",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Toelichting"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De zorgverlener wil graag de mogelijkheid hebben om tekstueel aanvullende gegevens te specificeren die niet gedekt worden door de andere informatie requirements.\n* *Onderbouwing*: Voor het goed behandelen of verzorgen van de patiënt kan aanvullende informatie nodig zijn in aanvulling op de specifiek genoemde informatie requirements.\n* *Variabiliteit*: Vrije tekst (string)\n* *Aanwezigheid*: 0..1",
+      "source": [
+        {
+          "reference": "FunctioneleOfMentaleStatus-v4.0.1",
+          "display": "Zib FunctioneleOfMentaleStatus 2024"
+        },
+        {
+          "reference": "FunctieHoren-v3.4",
+          "display": "Zib FunctieHoren 2024"
+        },
+        {
+          "reference": "FunctieZien-v4.0",
+          "display": "Zib FunctieZien 2024"
+        },
+        {
+          "reference": "Mobiliteit-v3.3.1",
+          "display": "Zib Mobiliteit 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "37",
+      "label": "NL: OBSFA Overig hulpmiddel",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Overig hulpmiddel"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Als de patient gebruik maakt van meer dan één hulpmiddel die niet direct nodig zijn voor het uitvoeren van de functie\n* *Onderbouwing*: De zorgverlener heeft dit gegeven nodig om een goed beeld te krijgen van wat het uitvoeren van de functie inhoudt en te kunnen bepalen of, en zo ja, welke ondersteuning voor het uitvoeren van de functie nodig is.\n* *Variabiliteit*: Keuze uit een gestandaardiseerde waardelijst\n* *Aanwezigheid*: 0..*\n\n**Niet-opgenomen informatiebehoefte**",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "null\n\n**Excluded information requirement**"
+              }
+            ]
+          }
+        ]
+      },
+      "source": [
+        {
+          "reference": "VermogenTotMondverzorging-v3.1",
+          "display": "Zib VermogenTotMondverzorging 2024"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "38",
+      "label": "NL: OBSFA Activiteitnaam",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Activiteitnaam"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De naam van de activiteit die beoordeeld wordt.\n* *Variabiliteit*: (tekst/coded tekst)\n* *Aanwezigheid*: 1..1\n\nAanscherping van requirement [#10](#10)",
+      "_requirement": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueMarkdown": "null\n\nRefinement of requirement [#10](#10)"
+              }
+            ]
+          }
+        ]
+      },
+      "parent": "http://ig.nictiz.nl/gbb/Requirements/FunctionalStatus#10",
+      "source": [
+        {
+          "reference": "https://ckm.openehr.org/ckm/archetypes/1013.1.5017",
+          "display": "OpenEHR Functional ability archetype 0.0.1-alpha"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "39",
+      "label": "NL: OBSFA Startdatum/tijd",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Startdatum/tijd"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: De begindatum/tijd van de observatie.\n* *Variabiliteit*: datetime\n* *Aanwezigheid*: 1..1",
+      "source": [
+        {
+          "reference": "https://ckm.openehr.org/ckm/archetypes/1013.1.5017",
+          "display": "OpenEHR Functional ability archetype 0.0.1-alpha"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "40",
+      "label": "NL: OBSFA Statuscategorie",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Statuscategorie"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Onderscheid in categorie: functioneel of mentaal\n* *Onderbouwing*: ?\n* *Variabiliteit*: StatusCategorieCodelijst:\r\n- bevinding betreffende functioneren \r\n- bevinding betreffende mentale toestand, gedrag en/of psychosociaal functioneren\n* *Aanwezigheid*: 1..*",
+      "source": [
+        {
+          "reference": "",
+          "display": "Basisgegevensset Zorg Medisch-specialistische Zorg "
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": false
+        }
+      ],
+      "key": "41",
+      "label": "NL: OBSFA Lichaamsdeel waarop functie betrekking heeft",
+      "_label": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/translation",
+            "extension": [
+              {
+                "url": "lang",
+                "valueCode": "en"
+              },
+              {
+                "url": "content",
+                "valueString": "NL: OBSFA Lichaamsdeel waarop functie betrekking heeft"
+              }
+            ]
+          }
+        ]
+      },
+      "requirement": "* *Omschrijving*: Als het uitvoeren van een functie betrekking heeft op specifieke lichaamsdelen dan wil de zorgverlener weten voor welke lichaamsdelen de patiënt de functie kan uitvoeren.\n* *Onderbouwing*: De zorgverlener heeft dit gegeven nodig om te kunnen bepalen voor welke lichaamsdelen de patiënt bij het uitvoeren van de functie (deels) hulp nodig heeft\n* *Variabiliteit*: Keuze uit een gestandaardiseerde waardelijst.\n* *Aanwezigheid*: 0..1",
+      "source": [
+        {
+          "reference": "VermogenTotZichKleden-v3.1.1",
+          "display": "Zib FunctieHorenZichKleden 2024"
+        },
+        {
+          "reference": "VermogenTotZichWassen-v3.1.1",
+          "display": "Zib VermogenTotZichWassen 2024"
+        }
+      ]
+    }
+  ]
+}

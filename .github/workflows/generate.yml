@@ -29,9 +29,9 @@ jobs:
           git switch "$generated_branch"
           echo "generated_branch=$generated_branch" >> "$GITHUB_OUTPUT"
       - name: Install IG tooling
-        run: npm install -g github:Nictiz/Nictiz-tooling-for-IGs
-      - name: Generate artifacts
-        run: excel-to-artifacts input/requirements generated
+        run: npm install -g github:Nictiz/Nictiz-tooling-for-IGs#LMMapping
+      - name: Generate mindmaps
+        run: lm-mindmap --requirements generated/requirements --output-folder generated/pagecontent generated/logicalmodels/*
         # Note: downloading from ART-DECOR is broken at the moment. When this is fixed, this script should
         # be updated.
       - name: Run sushi
